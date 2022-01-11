@@ -16,6 +16,6 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
-juice_logo_name = "Juice"
-juice_logo_path = "juice.svg"
+juice_logo_name = ""
+juice_logo_path = "logo.png"
 juice_extra_menu = []
