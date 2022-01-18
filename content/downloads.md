@@ -4,7 +4,6 @@ description = "OrientDB Community Downloads"
 weight = 2
 +++
 
-# Downloads
 
 ## OrientDB v 3.2.4
 
