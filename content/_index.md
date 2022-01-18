@@ -2,6 +2,7 @@
 title = "Index"
 description = "OrientDB Community"
 weight = 2
+insert_anchor_links = "none"
 +++
 
 # OrientDB, the First Multi-Model Database
