@@ -57,6 +57,13 @@ main() {
     echo Building with flags: ${BUILD_FLAGS:+"$BUILD_FLAGS"}
     zola build ${BUILD_FLAGS:+$BUILD_FLAGS}
 
+    git clone https://github.com/orientechnologies/orientdb-docs.git orientdb-docs
+    cd orientdb-docs
+    git checkout mdbook
+    mdbook build
+    mkdir ../public/docs/
+    mv orientdb-book/ ../public/docs/3.1.x/
+
     if ${BUILD_ONLY}; then
         echo "Build complete. Deployment skipped by request"
         exit 0
