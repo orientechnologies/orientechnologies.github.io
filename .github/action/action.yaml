@@ -1,0 +1,9 @@
+name: 'OrientDB website deploy'
+description: 'OrientDB website deploy'
+author: 'Tglman'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'zap'  
+  color: 'green'
