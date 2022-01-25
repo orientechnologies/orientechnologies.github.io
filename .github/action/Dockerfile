@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y wget git
 
 RUN git clone https://github.com/getzola/zola.git zola
 
-RUN cd zola && git switch v0.15.2 && cargo install --path .
+RUN cd zola && git checkout v0.15.2 && cargo install --path .
 
 RUN cd ..
 

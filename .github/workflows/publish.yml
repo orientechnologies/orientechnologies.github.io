@@ -2,11 +2,11 @@ on: push
 name: Build and deploy on push
 jobs:
   build:
-    name: shalzz/zola-deploy-action
+    name: deploy
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: 'custom deply'
+    - name: 'custom deploy'
       uses: './.github/action/'
       env:
         PAGES_BRANCH: gh-pages
