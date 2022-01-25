@@ -63,6 +63,7 @@ main() {
     mdbook build
     mkdir ../public/docs/
     mv orientdb-book/ ../public/docs/3.1.x/
+    cd ../
 
     if ${BUILD_ONLY}; then
         echo "Build complete. Deployment skipped by request"
