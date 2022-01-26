@@ -62,6 +62,7 @@ main() {
     git checkout mdbook
     mdbook build
     mkdir ../public/docs/
+    rm orientdb-book/.git -rf 
     mv orientdb-book/ ../public/docs/3.1.x/
     cd ../
 
