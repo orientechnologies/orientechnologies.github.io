@@ -13,6 +13,7 @@ weight = 2
 - [OrientDB Zip for any OS](https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.2.4/orientdb-3.2.4.zip)
 - [OrientDB with Gremlin Server - zip](https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.2.4/orientdb-tp3-3.2.4.zip)
 - [OrientDB with Gremlin Server - tar.gz](https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.2.4/orientdb-tp3-3.2.4.tar.gz)
+- [OrientDB Enterprise Agent](https://repo1.maven.org/maven2/com/orientechnologies/agent/3.2.4/agent-3.2.4.jar )
 
 
 
