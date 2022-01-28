@@ -57,17 +57,18 @@ main() {
     echo Building with flags: ${BUILD_FLAGS:+"$BUILD_FLAGS"}
     zola build ${BUILD_FLAGS:+$BUILD_FLAGS}
 
+    mkdir ../public/docs/
+    
     git clone https://github.com/orientechnologies/orientdb-docs.git orientdb-docs
     cd orientdb-docs
+    
     git checkout mdbook
     mdbook build
-    mkdir ../public/docs/
     rm orientdb-book/.git -rf 
     mv orientdb-book/ ../public/docs/3.1.x/
 
     git checkout mdbook_3.2.x
     mdbook build
-    mkdir ../public/docs/
     rm orientdb-book/.git -rf 
     mv orientdb-book/ ../public/docs/3.2.x/
 
