@@ -58,8 +58,8 @@ main() {
     zola build ${BUILD_FLAGS:+$BUILD_FLAGS}
 
     echo "building docs"
-    rm -rf ../public/docs/
-    mkdir ../public/docs/
+    ls
+    mkdir public/docs/
     
     git clone https://github.com/orientechnologies/orientdb-docs.git orientdb-docs
     cd orientdb-docs
