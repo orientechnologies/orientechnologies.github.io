@@ -64,6 +64,13 @@ main() {
     mkdir ../public/docs/
     rm orientdb-book/.git -rf 
     mv orientdb-book/ ../public/docs/3.1.x/
+
+    git checkout mdbook_3.2.x
+    mdbook build
+    mkdir ../public/docs/
+    rm orientdb-book/.git -rf 
+    mv orientdb-book/ ../public/docs/3.2.x/
+
     cd ../
 
     if ${BUILD_ONLY}; then
