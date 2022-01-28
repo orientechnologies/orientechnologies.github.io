@@ -17,4 +17,6 @@ highlight_code = true
 # Put all your custom variables here
 juice_logo_name = ""
 juice_logo_path = "logo.png"
-juice_extra_menu = []
+juice_extra_menu = [
+  { title = "Docs", link = "/docs/3.2.x/index.html"}
+]
