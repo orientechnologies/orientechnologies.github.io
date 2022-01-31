@@ -59,7 +59,7 @@ main() {
 
     echo "building docs"
     ls
-    mkdir public/docs/
+    mkdir -p public/docs/
     
     git clone https://github.com/orientechnologies/orientdb-docs.git orientdb-docs
     cd orientdb-docs
