@@ -64,14 +64,20 @@ main() {
     git clone https://github.com/orientechnologies/orientdb-docs.git orientdb-docs
     cd orientdb-docs
     
+    echo "building docs for 3.0.x"    
+    git switch 3.0.x
+    mdbook build
+    rm orientdb-book/.git -rf 
+    mv orientdb-book/ ../public/docs/3.0.x/
+
     echo "building docs for 3.1.x"    
-    git checkout mdbook
+    git switch 3.1.x
     mdbook build
     rm orientdb-book/.git -rf 
     mv orientdb-book/ ../public/docs/3.1.x/
 
     echo "building docs for 3.2.x"    
-    git checkout mdbook_3.2.x
+    git switch 3.2.x
     mdbook build
     rm orientdb-book/.git -rf 
     mv orientdb-book/ ../public/docs/3.2.x/
