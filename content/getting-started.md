@@ -2,6 +2,8 @@
 title = "Getting Started"
 description = "Getting Started"
 weight = 2
+[extra]
+menu = true
 +++
 
 ## Running OrientDB the First Time

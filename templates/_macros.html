@@ -9,7 +9,9 @@
 
 <nav>
     {% for page in section.pages %}
-    <a class="nav-item subtitle-text" href="{{ page.permalink }}">{{ page.title }}</a>
+        {% if page.extra.menu %}
+            <a class="nav-item subtitle-text" href="{{ page.permalink }}">{{ page.title }}</a>
+        {% endif %}
     {% endfor %}
     {% if config.extra.juice_extra_menu %}
         {% for menu in config.extra.juice_extra_menu %}
