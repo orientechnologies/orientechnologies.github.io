@@ -25,7 +25,7 @@ The provision of <strong>maintenance</strong> for SAP Enterprise OrientDB by SAP
 
 SAP purposely opted for a <strong>transition path</strong> that is most smooth and <strong>non-disruptive</strong> for our installed base customers, and as such there is <strong>no technical preparation or migration activities</strong> incurred on your side. In case you are already running productively on a local installation of SAP Enterprise OrientDB, <strong>you can just proceed</strong> to do so. 
 
-Installed base customers can continue to refer to the technical <a href="http://orientdb.org/docs/3.2.x/admin/installation/">installation</a> and <a href="https://orientdb.org/docs/3.2.x/release/Upgrade.html">upgrade</a> guides for updates, <strong>release-cycles and packaging</strong>.  
+Installed base customers can continue to refer to the technical <a href="/docs/3.2.x/admin/installation/">installation</a> and <a href="https://orientdb.org/docs/3.2.x/release/Upgrade.html">upgrade</a> guides for updates, <strong>release-cycles and packaging</strong>.  
 
 With SAP <strong>maintenance ending on 31.12.2023</strong> existing subscription contracts will not be renewed. Exceptional cases may be considered until maximum this date if required – please reach out to your Account Executive in case.   
 
@@ -36,7 +36,7 @@ With SAP <strong>maintenance ending on 31.12.2023</strong> existing subscription
 
 Further References:
 
-- [https://orientdb.org/docs/3.2.x/misc/Contribute-to-OrientDB.html](https://orientdb.org/docs/3.2.x/misc/Contribute-to-OrientDB.html)
+- [docs/3.2.x/misc/Contribute-to-OrientDB.html](docs/3.2.x/misc/Contribute-to-OrientDB.html)
 - [https://github.com/orientechnologies/orientdb/discussions"](https://github.com/orientechnologies/orientdb/discussions)
 
 

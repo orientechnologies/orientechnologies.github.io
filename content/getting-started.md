@@ -16,6 +16,6 @@ menu = true
 
 If you’re new to OrientDB, we recommend taking a look at the following links:
 
-[Introduction to the NoSQL world](https://orientdb.org/docs/3.2.x/gettingstarted/)  
-[SQL reference](https://orientdb.org/docs/3.2.x/sql/)  
-[Graph Pattern Matching](https://orientdb.org/docs/3.2.x/sql/SQL-Match.html)  
+[Introduction to the NoSQL world](/docs/3.2.x/gettingstarted/)  
+[SQL reference](/docs/3.2.x/sql/)  
+[Graph Pattern Matching](/docs/3.2.x/sql/SQL-Match.html)  
