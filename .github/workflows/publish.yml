@@ -13,4 +13,4 @@ jobs:
       env:
         PAGES_BRANCH: gh-pages
         BUILD_THEMES: false
-        GITHUB_TOKEN: ${{ secrets.token }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
