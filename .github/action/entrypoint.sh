@@ -84,6 +84,27 @@ main() {
 
     cd ../
 
+    mkdir -p public/javadocs/
+    git clone https://github.com/orientechnologies/orientdb.git orientdb
+    cd orientdb
+
+    echo "building javadocs for 3.0.x"    
+    git switch 3.0.43
+    mvn clean javadoc:aggregate
+    mv target/site/apidocs/ ../public/javadocs/3.0.x/
+
+    echo "building javadocs for 3.1.x"    
+    git switch 3.1.20
+    mvn clean javadoc:aggregate
+    mv target/site/apidocs/ ../public/javadocs/3.1.x/
+
+    echo "building javadocs for 3.2.x"    
+    git switch 3.2.19
+    mvn clean javadoc:aggregate
+    mv target/site/apidocs/ ../public/javadocs/3.2.x/
+
+    cd ../
+
     if ${BUILD_ONLY}; then
         echo "Build complete. Deployment skipped by request"
         exit 0

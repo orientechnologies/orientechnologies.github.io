@@ -11,7 +11,7 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-RUN apt-get update && apt-get install -y wget git
+RUN apt-get update && apt-get install -y wget git openjdk-11-jdk maven
 
 RUN git clone https://github.com/getzola/zola.git zola
 
