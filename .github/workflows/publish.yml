@@ -2,6 +2,7 @@ on:
   push:
   workflow_dispatch:
 name: Build and deploy on push
+permissions: write-all
 jobs:
   build:
     name: deploy
