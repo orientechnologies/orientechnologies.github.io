@@ -15,11 +15,11 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget git
 
 RUN git clone https://github.com/getzola/zola.git zola
 
-RUN cd zola && git checkout v0.15.2 && cargo install --path .
+RUN cd zola && git checkout v0.15.2 && cargo install --path . --locked
 
 RUN cd ..
 
-RUN cargo install mdbook && cargo install mdbook-variables
+RUN cargo install mdbook --locked && cargo install mdbook-variables --locked
 
 COPY entrypoint.sh /entrypoint.sh
 
