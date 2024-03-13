@@ -7,15 +7,15 @@ menu = true
 +++
 
 
-## OrientDB v 3.2.18
+## OrientDB v 3.2.29
 
-- [OrientDB for Microsoft Windows](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.18/orientdb-community-3.2.18.zip)
-- [OrientDB for Linux and any other *NIX system](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.18/orientdb-community-3.2.18.tar.gz)
-- [OrientDB for Mac OSX](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.18/orientdb-community-3.2.18.tar.gz)
-- [OrientDB Zip for any OS](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.18/orientdb-community-3.2.18.zip)
-- [OrientDB with Gremlin Server - zip](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.2.18/orientdb-tp3-3.2.18.zip)
-- [OrientDB with Gremlin Server - tar.gz](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.2.18/orientdb-tp3-3.2.18.tar.gz)
-- [OrientDB Enterprise Agent](https://repo1.maven.org/maven2/com/orientechnologies/agent/3.2.18/agent-3.2.18.jar)
+- [OrientDB for Microsoft Windows](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.29/orientdb-community-3.2.29.zip)
+- [OrientDB for Linux and any other *NIX system](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.29/orientdb-community-3.2.29.tar.gz)
+- [OrientDB for Mac OSX](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.29/orientdb-community-3.2.29.tar.gz)
+- [OrientDB Zip for any OS](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.29/orientdb-community-3.2.29.zip)
+- [OrientDB with Gremlin Server - zip](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.2.29/orientdb-tp3-3.2.29.zip)
+- [OrientDB with Gremlin Server - tar.gz](https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.2.29/orientdb-tp3-3.2.29.tar.gz)
+- [OrientDB Enterprise Agent](https://repo1.maven.org/maven2/com/orientechnologies/agent/3.2.29/agent-3.2.29.jar)
 
 
 ## OrientDB v 3.1.19
