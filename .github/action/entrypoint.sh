@@ -83,6 +83,7 @@ main() {
     mv orientdb-book/ ../public/docs/3.2.x/
 
     cd ../
+    export JAVA_HOME=/usr/lib/jvm/default-java/
 
     mkdir -p public/javadocs/
     git clone https://github.com/orientechnologies/orientdb.git orientdb
