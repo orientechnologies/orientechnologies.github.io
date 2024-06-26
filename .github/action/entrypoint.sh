@@ -89,11 +89,6 @@ main() {
     git clone https://github.com/orientechnologies/orientdb.git orientdb
     cd orientdb
 
-    echo "building javadocs for 3.1.x"    
-    git checkout 3.1.20
-    mvn clean javadoc:aggregate
-    mv target/site/apidocs/ ../public/javadocs/3.1.x/
-
     echo "building javadocs for 3.2.x"    
     git checkout 3.2.31
     mvn clean javadoc:aggregate
