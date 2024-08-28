@@ -90,7 +90,7 @@ main() {
     cd orientdb
 
     echo "building javadocs for 3.2.x"    
-    git checkout 3.2.32
+    git checkout 3.2.33
     mvn clean javadoc:aggregate
     mv target/site/apidocs/ ../public/javadocs/3.2.x/
 
