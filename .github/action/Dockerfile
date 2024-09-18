@@ -15,7 +15,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget git
 
 RUN git clone https://github.com/getzola/zola.git zola
 
-RUN cd zola && git checkout v0.15.2 && cargo install --path . --locked
+RUN cd zola && git checkout v0.19.2 && cargo install --path . --locked
 
 RUN cd ..
 
