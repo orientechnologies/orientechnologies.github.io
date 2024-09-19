@@ -17,6 +17,8 @@ highlight_code = true
 # Put all your custom variables here
 juice_logo_name = ""
 juice_logo_path = "logo.png"
+# maybe find a proper way for news subsection
 juice_extra_menu = [
+  { title = "News", link = "/news/"},
   { title = "Docs", link = "/docs/3.2.x/index.html"}
 ]

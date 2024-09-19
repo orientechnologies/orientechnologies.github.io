@@ -9,7 +9,7 @@ menu = true
 ## Running OrientDB the First Time
 
 
-- First, [Download](downloads.md) and extract OrientDB by selecting the appropriate package provided in our download page(click here for additional installation methods).
+- First, [Download](/downloads/) and extract OrientDB by selecting the appropriate package provided in our download page(click here for additional installation methods).
 - Start the server by running the `server.sh` or `server.bat` scripts located in the bin folder.
 - Once OrientDB is running, enter the following URL in a browser window: http://localhost:2480. This is Studio, the most advanced Web tool for Databases.
 

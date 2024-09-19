@@ -1,0 +1,22 @@
+{% import "_macros.html" as macros %}
+{% extends "index.html" %}
+
+{% block title %}{{ section.title }} | {{ super() }} {% endblock title %}
+
+{% block header %}
+<header class="box-shadow">
+    {{ macros::render_header() }}
+</header>
+{% endblock header %}
+
+{%block content%}
+    <h1 class="heading-text" >{{ section.title }}</h1>
+
+    <ul>
+        {% for page in paginator.pages %}
+        <li><a href="{{ page.permalink }}">{{page.title}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content%}
+
