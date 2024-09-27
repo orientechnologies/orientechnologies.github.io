@@ -2,7 +2,7 @@
 title = "A New Chapter: SAP Enterprise OrientDB joining the Open-Source Community!"
 description = "A New Chapter: SAP Enterprise OrientDB joining the Open-Source Community! "
 insert_anchor_links = "none"
-weight = 3
+date="2022-01-10"
 [extra]
 menu = false
 +++

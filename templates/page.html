@@ -11,5 +11,6 @@
 
 {% block content %}
 <div class="heading-text">{{ page.description }}</div>
+{{ page.date| safe }}
 {{ page.content | safe }}
 {% endblock content %}
