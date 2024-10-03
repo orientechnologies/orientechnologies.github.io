@@ -50,7 +50,9 @@ The work itself is quite long, because is need to support different discovery al
     - Use new java features like records, that may give performance and memory benefits in some use cases
 
     It would have been nice actually to go directly on java 22 that will allow us to use the full power of memory arenas, but for now we are conservatively aiming to java 17, if the next major comes quite late, than we may consider targeting the java 22.
-    
+
+- Lucene integration improvements  
+  As today the integration of lucene in the engine is limited, it does not have durability guarantee, and does not have complete backup/restore operations support and as well is not integrated properly in the distributed environment, all of this will be worked on to make support of lucene index at the same level of native indexes    
 - Review of data types trying to remove redundant one potentially adding new types  
     There are a number of data types, that are more a description of implementation and behavior than a data type itself, I refer mainly to EMBEDDEDLIST,EMBEDDESET, LINKLIST,LINKSET, that are all describing an array with different constraint, like element uniqueness (SET) and content type like 'LINK' this does not logically make sense, so it would be more appropriate to have a generic array type with constraints. These are not the only thing that in long term would be beneficial to change in terms of typing, having a more generic base typing detached from the internal implementation would allow more evolution in the implementations and a more stable APIs, work on this would happen though mostly after the release of the next major version. 
 - Add & Complete server commands  
