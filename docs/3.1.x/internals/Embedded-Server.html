@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Embedding the Server - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="embed-the-server"><a class="header" href="#embed-the-server">Embed the Server</a></h1>
+<p>Embedding an OrientDB Server inside a Java application has several advantages and interesting features:</p>
+<ul>
+<li>Java application that runs embedded with the server can bypass the remote connection and use the database directly with <a href="../datamodeling/Concepts.html#database-url">local mode</a>. local and remote connections against the same database can work in concurrency: OrientDB will synchronize the access.</li>
+<li>You can use the <a href="../console/README.html">Console</a> to control it</li>
+<li>You can use the <a href="../studio/README.html">OrientDB Studio</a></li>
+<li>You can replicate the database across distributed standalone or embedded servers</li>
+</ul>
+<p>To embed an OrientDB Server inside a Java application you have to create the <a href="../java/ref/OServer.html"><code>OServer</code></a> object and use a valid configuration for it.</p>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
+<p>In order to embed the server you need to include the following jar files in the classpath:</p>
+<ul>
+<li><code>orientdb-client-**.jar</code></li>
+<li><code>orientdb-core-**.jar</code></li>
+<li><code>orientdb-server-**.jar</code></li>
+<li><code>orientdb-tools-**.jar</code></li>
+<li><code>concurrentlinkedhashmap-lru-**.jar</code></li>
+<li><code>jna-**.jar</code></li>
+<li><code>lz4-java-**.jar</code></li>
+</ul>
+<p>Starting from version 2.2, please set the <code>MaxDirectMemorySize</code> parameter. Setting this parameter is required. You can set it to a very high value, e.g. 512g (JVM setting):</p>
+<pre><code>-XX:MaxDirectMemorySize=512g
+</code></pre>
+<p>Setting <code>MaxDirectMemorySize</code> to a very high value should not concern you as it does not mean that OrientDB will consume all 512GB of memory. The size of direct memory consumed by OrientDB is limited by the size of the disk cache (variable <a href="../admin/Configuration.html"><code>storage.diskCache.bufferSize</code></a>).</p>
+<p>When you start the Server using the provided <code>server.sh</code> or <code>server.bat</code> scripts, <code>MaxDirectMemorySize</code> is set already by those scripts. But when you embed the Server it is required that you set <code>MaxDirectMemorySize</code> manually.</p>
+<p>Note: if you are using a pom file, you may set <code>MaxDirectMemorySize</code> inside your pom in the following way:</p>
+<pre><code>&lt;properties&gt;
+   &lt;argLine&gt;-XX:MaxDirectMemorySize=512g&lt;/argLine&gt;
+&lt;/properties&gt;
+</code></pre>
+<p>If you start an embedded Server without setting this variable you will get a WARNING message similar to the following:</p>
+<pre><code>MaxDirectMemorySize JVM option is not set or has invalid value, that may cause out of memory errors
+</code></pre>
+<h2 id="include-the-commands-you-need"><a class="header" href="#include-the-commands-you-need">Include the commands you need</a></h2>
+<p>Even if most of the HTTP commands are auto registered assure to have all the commands you need. For example the static content must be registered. This is fundamental if you want to use OrientDB as Web Server providing static content like the Studio app:</p>
+<pre><code class="language-xml">&lt;listener protocol="http" port-range="2480-2490" ip-address="0.0.0.0"&gt;
+  &lt;commands&gt;
+    &lt;command implementation="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStaticContent" pattern="GET|www GET|studio/ GET| GET|*.htm GET|*.html GET|*.xml GET|*.jpeg GET|*.jpg GET|*.png GET|*.gif GET|*.js GET|*.css GET|*.swf GET|*.ico GET|*.txt GET|*.otf GET|*.pjs GET|*.svg"&gt;
+      &lt;parameters&gt;
+        &lt;entry value="Cache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache" name="http.cache:*.htm *.html"/&gt;
+        &lt;entry value="Cache-Control: max-age=120" name="http.cache:default"/&gt;
+      &lt;/parameters&gt;
+    &lt;/command&gt;
+  &lt;/commands&gt;
+&lt;/listener&gt;
+</code></pre>
+<h2 id="use-an-embedded-configuration"><a class="header" href="#use-an-embedded-configuration">Use an embedded configuration</a></h2>
+<pre><code class="language-java">import com.orientechnologies.orient.server.OServerMain;
+
+public class OrientDBEmbeddable {
+
+ public static void main(String[] args) throws Exception {
+  OServer server = OServerMain.create();
+  server.startup(
+   "&lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?&gt;"
+   + "&lt;orient-server&gt;"
+   + "&lt;network&gt;"
+   + "&lt;protocols&gt;"
+   + "&lt;protocol name=\"binary\" implementation=\"com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary\"/&gt;"
+   + "&lt;protocol name=\"http\" implementation=\"com.orientechnologies.orient.server.network.protocol.http.ONetworkProtocolHttpDb\"/&gt;"
+   + "&lt;/protocols&gt;"
+   + "&lt;listeners&gt;"
+   + "&lt;listener ip-address=\"0.0.0.0\" port-range=\"2424-2430\" protocol=\"binary\"/&gt;"
+   + "&lt;listener ip-address=\"0.0.0.0\" port-range=\"2480-2490\" protocol=\"http\"/&gt;"
+   + "&lt;/listeners&gt;"
+   + "&lt;/network&gt;"
+   + "&lt;users&gt;"
+   + "&lt;user name=\"root\" password=\"ThisIsA_TEST\" resources=\"*\"/&gt;"
+   + "&lt;/users&gt;"
+   + "&lt;properties&gt;"
+   + "&lt;entry name=\"orientdb.www.path\" value=\"C:/work/dev/orientechnologies/orientdb/releases/1.0rc1-SNAPSHOT/www/\"/&gt;"
+   + "&lt;entry name=\"orientdb.config.file\" value=\"C:/work/dev/orientechnologies/orientdb/releases/1.0rc1-SNAPSHOT/config/orientdb-server-config.xml\"/&gt;"
+   + "&lt;entry name=\"server.cache.staticResources\" value=\"false\"/&gt;"
+   + "&lt;entry name=\"log.console.level\" value=\"info\"/&gt;"
+   + "&lt;entry name=\"log.file.level\" value=\"fine\"/&gt;"
+   //The following is required to eliminate an error or warning "Error on resolving property: ORIENTDB_HOME"
+   + "&lt;entry name=\"plugin.dynamic\" value=\"false\"/&gt;"
+   + "&lt;/properties&gt;" + "&lt;/orient-server&gt;");
+  server.activate();
+  }
+}
+</code></pre>
+<p>Once the embedded server is running, clients can connect using the remote connection method.  For example in the console, you can connect with:</p>
+<pre><code>connect remote:localhost:{port}/{db} {user} {password}
+where:
+  port     : the port that the binary server listens on
+             (first free port from 2424-2430 according to the configuration above)
+  db       : the database name to connect to (defaults to "db" and can be set using &lt;entry name="server.database.path" value="db"/&gt; in the configuration
+  user     : the user to connect with (this is NOT the same as root user in the configuration)
+  password : the user to connect with (this is NOT the same as root password in the configuration)
+</code></pre>
+<h2 id="use-custom-file-for-configuration"><a class="header" href="#use-custom-file-for-configuration">Use custom file for configuration</a></h2>
+<p>Use a regular <code>File</code>:</p>
+<pre><code class="language-java">public class OrientDBEmbeddable {
+  public static void main(String[] args) throws Exception {
+      OServer server = OServerMain.create();
+      server.startup(new File("/usr/local/temp/db.config"));
+      server.activate();
+  }
+}
+</code></pre>
+<h2 id="use-a-stream-for-configuration"><a class="header" href="#use-a-stream-for-configuration">Use a stream for configuration</a></h2>
+<p>Use an <code>InputStream</code> from the class loader:</p>
+<pre><code class="language-java">public class OrientDBEmbeddable {
+  public static void main(String[] args) throws Exception {
+      OServer server = OServerMain.create();
+      server.startup(getClass().getResourceAsStream("db.config"));
+      server.activate();
+  }
+}
+</code></pre>
+<h2 id="use-a-oserverconfiguration-object-for-configuration"><a class="header" href="#use-a-oserverconfiguration-object-for-configuration">Use a OServerConfiguration object for configuration</a></h2>
+<p>Or an <code>InputStream</code> from the class loader:</p>
+<pre><code class="language-java">public class OrientDBEmbeddable {
+  public static void main(String[] args) throws Exception {
+      OServer server = OServerMain.create();
+      OServerConfiguration cfg = new OServerConfiguration();
+      // FILL THE OServerConfiguration OBJECT
+      server.startup(cfg);
+      server.activate();
+  }
+}
+</code></pre>
+<h2 id="shutdown"><a class="header" href="#shutdown">Shutdown</a></h2>
+<p>OrientDB Server creates some threads internally as non-daemon, so they run even if the main application exits. Use the <a href="../java/ref/OServer/shutdown.html"><code>OServer.shutdown()</code></a> method to shutdown the server in soft way:</p>
+<pre><code class="language-java">import com.orientechnologies.orient.server.OServerMain;
+
+public class OrientDBEmbeddable {
+
+  public static void main(String[] args) throws Exception {
+    OServer server = OServerMain.create();
+    server.startup(new File("/usr/local/temp/db.config"));
+    server.activate();
+    ...
+    server.shutdown();
+  }
+}
+</code></pre>
+<h2 id="setting-orientdb_home"><a class="header" href="#setting-orientdb_home">Setting ORIENTDB_HOME</a></h2>
+<p>Some functionality will not work properly if the system property 'ORIENTDB_HOME' is not set. You can set it programmatically like this:</p>
+<pre><code class="language-java">import com.orientechnologies.orient.server.OServerMain;
+
+public class OrientDBEmbeddable {
+
+  public static void main(String[] args) throws Exception {
+    String orientdbHome = new File("").getAbsolutePath(); //Set OrientDB home to current directory
+    System.setProperty("ORIENTDB_HOME", orientdbHome);
+
+    OServer server = OServerMain.create();
+    server.startup(cfg);
+    server.activate();
+  }
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../internals/Transactions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../plugins/Extend-Server.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../internals/Transactions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../plugins/Extend-Server.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

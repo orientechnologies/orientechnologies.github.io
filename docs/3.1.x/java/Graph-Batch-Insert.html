@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Graph Batch Insert - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="graph-batch-insert"><a class="header" href="#graph-batch-insert">Graph Batch Insert</a></h1>
+<p>Creating big graphs in OrientDB is a common operation, so OrientDB provides some APIs to make it fast and easy.</p>
+<h2 id="basic-use-case"><a class="header" href="#basic-use-case">Basic use case</a></h2>
+<p>For a basic use case, where your graph fits in the following constraints:</p>
+<ul>
+<li>a single vertex class</li>
+<li>a single edge class</li>
+<li>vertices are identified by a numeric (Long) id</li>
+<li>no properties on vertices and edges</li>
+</ul>
+<p>OrientDB provides an API called <a href="/com/orientechnologies/orient/graph/batch/OGraphBatchInsertBasic.html">OGraphBatchInsertBasic</a>.</p>
+<p>This API is designed for fast batch import of simple graphs, starting from an empty (or non existing) DB.</p>
+<p>These limitations are intended to have best performance on a very simple use case. If these limitations do not fit your requirements you can rely on other implementations.</p>
+<h3 id="typical-usage"><a class="header" href="#typical-usage">Typical usage:</a></h3>
+<pre><code>   OGraphBatchInsertSimple batch = new OGraphBatchInsertSimple("plocal:your/db", "admin", "admin");
+   batch.begin();
+   batch.createEdge(0L, 1L);
+   batch.createEdge(0L, 2L);
+   ...
+   batch.end();
+</code></pre>
+<p>There is no need to create vertices before connecting them:</p>
+<pre><code>   batch.createVertex(0L);
+   batch.createVertex(1L);
+   batch.createEdge(0L, 1L);
+</code></pre>
+<p>is equivalent to (but less performing than):</p>
+<pre><code>   batch.createEdge(0L, 1L);
+</code></pre>
+<p><code>batch.createVertex()</code> is needed only if you want to create unconnected vertices.</p>
+<h2 id="slightly-more-complex-use-case"><a class="header" href="#slightly-more-complex-use-case">Slightly more complex use case</a></h2>
+<p>For a use case, where your graph fits in the following constraints:</p>
+<ul>
+<li>a single vertex class</li>
+<li>a single edge class</li>
+<li>vertices are identified by a numeric (Long) id</li>
+<li>edges and/or vertices have properties</li>
+</ul>
+<p>OrientDB provides an API called <a href="/com/orientechnologies/orient/graph/batch/OGraphBatchInsert.html">OGraphBatchInsert</a>.</p>
+<p>This API is designed for fast batch import of simple graphs, starting from an empty (or non existing) DB.</p>
+<p>This batch insert procedure is made of four phases, that have to be executed in the correct order:</p>
+<ol>
+<li>begin(): initializes the database</li>
+<li>create edges (with or without properties) and vertices</li>
+<li>set properties on vertices</li>
+<li>end(): flushes data to db</li>
+</ol>
+<h3 id="typical-usage-1"><a class="header" href="#typical-usage-1">Typical usage:</a></h3>
+<pre><code>OGraphBatchInsert batch = new OGraphBatchInsert("plocal:your/db", "admin", "admin");
+ 
+//phase 1: begin
+batch.begin();
+  
+//phase 2: create edges
+Map&lt;String, Object&gt; edgeProps = new HashMap&lt;String, Object&gt;();
+edgeProps.put("foo", "bar");
+batch.createEdge(0L, 1L, edgeProps);
+batch.createVertex(2L);
+batch.createEdge(3L, 4L, null);
+...
+  
+//phase 3: set properties on vertices, THIS CAN BE DONE ONLY AFTER EDGE AND VERTEX CREATION
+Map&lt;String, Object&gt; vertexProps = new HashMap&lt;String, Object&gt;();
+ vertexProps.put("foo", "bar");
+batch.setVertexProperties(0L, vertexProps);
+...
+  
+//phase 4: end
+batch.end();
+</code></pre>
+<p>There is no need to create vertices before connecting them:</p>
+<pre><code>    batch.createVertex(0L);
+    batch.createVertex(1L);
+    batch.createEdge(0L, 1L, props);
+</code></pre>
+<p>is equivalent to (but less performing than):</p>
+<pre><code>    batch.createEdge(0L, 1L, props);
+</code></pre>
+<p><code>batch.createVertex(Long)</code> is needed only if you want to create unconnected vertices.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Lightweight-Edges.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../tinkerpop3/OrientDB-TinkerPop3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Lightweight-Edges.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../tinkerpop3/OrientDB-TinkerPop3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
