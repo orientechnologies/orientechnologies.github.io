@@ -1,0 +1,1703 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Configuration - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="configuration"><a class="header" href="#configuration">Configuration</a></h1>
+<p>OrientDB can be configured in several ways.</p>
+<h2 id="getting-settings"><a class="header" href="#getting-settings">Getting settings</a></h2>
+<h3 id="from-java"><a class="header" href="#from-java">From Java</a></h3>
+<p>To retrieve the default or current value of a setting you can use the methods <code>getDefValue()</code> and <code>getValue()</code> of the java enumerator <code>OGlobalConfiguration</code>.</p>
+<p>Example:</p>
+<ul>
+<li>get the default value of the setting <code>USE_WAL</code>: <code>OGlobalConfiguration.USE_WAL.getDefValue();</code></li>
+<li>get the current value of the setting <code>USE_WAL</code>: <code>OGlobalConfiguration.USE_WAL.getValue());</code></li>
+</ul>
+<h3 id="from-the-console"><a class="header" href="#from-the-console">From the Console</a></h3>
+<p>To retrieve the full list of current settings from the <a href="../console/README.html">Console</a> you can use the <a href="../console/Console-Command-Config.html"><code>CONFIG</code></a> command:</p>
+<pre><code>orientdb&gt; CONFIG
+
+LOCAL SERVER CONFIGURATION
++----+----------------------------------------------+--------------+
+|#   |NAME                                          |VALUE         |
++----+----------------------------------------------+--------------+
+|0   |environment.dumpCfgAtStartup                  |false         |
+|1   |environment.concurrent                        |true          |
+|2   |environment.lockManager.concurrency.level     |32            |
+|3   |environment.allowJVMShutdown                  |true          |
+|4   |script.pool.maxSize                           |20            |
+...
+|219 |client.channel.minPool                        |1             |
+|220 |storage.keepOpen                              |true          |
+|221 |cache.local.enabled                           |true          |
++----+----------------------------------------------+--------------+
+</code></pre>
+<p>To retrieve the value of a specific setting, you can use the <a href="../console/Console-Command-Config-Get.html"><code>CONFIG GET</code></a> command.</p>
+<p>Example:</p>
+<pre><code>orientdb&gt; CONFIG GET tx.log.fileType
+
+Remote configuration: tx.log.fileType = classic
+</code></pre>
+<h2 id="changing-settings"><a class="header" href="#changing-settings">Changing settings</a></h2>
+<h3 id="by-command-line"><a class="header" href="#by-command-line">By command line</a></h3>
+<p>You can pass settings via command line when the JVM is launched. This is typically stored inside <code>server.sh</code> (or <code>server.bat</code> on Windows):</p>
+<pre><code>java -Dcache.size=10000 -Dstorage.keepOpen=true ...
+</code></pre>
+<h3 id="by-server-configuration"><a class="header" href="#by-server-configuration">By server configuration</a></h3>
+<p>Put in the <code>&lt;properties&gt;</code> section of the file <strong>orientdb-server-config.xml</strong> (or orientdb-dserver-config.xml) the entries to configure.</p>
+<p>Example:</p>
+<pre><code class="language-xml">  ...
+  &lt;properties&gt;
+    &lt;entry name="cache.size" value="10000" /&gt;
+    &lt;entry name="storage.keepOpen" value="true" /&gt;
+  &lt;/properties&gt;
+  ...
+</code></pre>
+<h3 id="at-run-time"><a class="header" href="#at-run-time">At run-time</a></h3>
+<p>Some settings can be changed at run-time.</p>
+<h4 id="from-java-1"><a class="header" href="#from-java-1">From Java</a></h4>
+<p>To change at run-time a setting from java you can use the <code>setValue()</code> method of the java enumerator <code>OGlobalConfiguration</code>.</p>
+<p>Example:</p>
+<pre><code class="language-java">OGlobalConfiguration.MVRBTREE_NODE_PAGE_SIZE.setValue(2048);
+</code></pre>
+<h4 id="from-the-console-1"><a class="header" href="#from-the-console-1">From the Console</a></h4>
+<p>To change at run-time a setting from the <a href="../console/README.html">Console</a> you can use the <a href="../console/Console-Command-Config-Set.html"><code>CONFIG SET</code></a> command.</p>
+<p>Example:</p>
+<pre><code>orientdb&gt; CONFIG SET tx.autoRetry 5
+</code></pre>
+<h2 id="dump-the-configuration"><a class="header" href="#dump-the-configuration">Dump the configuration</a></h2>
+<p>To dump the OrientDB configuration you can set a parameter at JVM launch:</p>
+<pre><code>java -Denvironment.dumpCfgAtStartup=true ...
+</code></pre>
+<p>Or via API at any time:</p>
+<pre><code class="language-java">OGlobalConfiguration.dumpConfiguration(System.out);
+</code></pre>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<p>To know more look at the Java enumeration: <a href="https://github.com/nuvolabase/orientdb/blob/master/core/src/main/java/com/orientechnologies/orient/core/config/OGlobalConfiguration.java">OGlobalConfiguration.java</a>. NOTE: <em>The documentation below is auto-generated by parsing the OGlobalConfiguration.java class. Please do not edit the parameters here, but rather edit the documentation in the java class</em>.</p>
+<hr />
+<h3 id="environment"><a class="header" href="#environment">Environment</a></h3>
+<h5 id="environmentdumpcfgatstartup"><a class="header" href="#environmentdumpcfgatstartup">environment.dumpCfgAtStartup</a></h5>
+<p>Dumps the configuration during application startup.</p>
+<pre><code>Setting name...: environment.dumpCfgAtStartup
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="environmentconcurrent"><a class="header" href="#environmentconcurrent">environment.concurrent</a></h5>
+<p>Specifies if running in multi-thread environment. Setting this to false turns off the internal lock management.</p>
+<pre><code>Setting name...: environment.concurrent
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="environmentlockmanagerconcurrencylevel"><a class="header" href="#environmentlockmanagerconcurrencylevel">environment.lockManager.concurrency.level</a></h5>
+<p>Concurrency level of lock manager.</p>
+<pre><code>Setting name...: environment.lockManager.concurrency.level
+Default value..: 64
+Set at run-time: false
+</code></pre>
+<h5 id="environmentallowjvmshutdown"><a class="header" href="#environmentallowjvmshutdown">environment.allowJVMShutdown</a></h5>
+<p>Allows the shutdown of the JVM, if needed/requested.</p>
+<pre><code>Setting name...: environment.allowJVMShutdown
+Default value..: true
+Set at run-time: true
+</code></pre>
+<hr />
+<h3 id="script"><a class="header" href="#script">Script</a></h3>
+<h5 id="scriptpoolmaxsize"><a class="header" href="#scriptpoolmaxsize">script.pool.maxSize</a></h5>
+<p>Maximum number of instances in the pool of script engines.</p>
+<pre><code>Setting name...: script.pool.maxSize
+Default value..: 20
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="memory"><a class="header" href="#memory">Memory</a></h3>
+<h5 id="memoryuseunsafe"><a class="header" href="#memoryuseunsafe">memory.useUnsafe</a></h5>
+<p>Indicates whether Unsafe will be used, if it is present.</p>
+<pre><code>Setting name...: memory.useUnsafe
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="memorychunksize"><a class="header" href="#memorychunksize">memory.chunk.size</a></h5>
+<p>Size of single memory chunk (in bytes) which will be preallocated by OrientDB.</p>
+<pre><code>Setting name...: memory.chunk.size
+Default value..: 2147483647
+Set at run-time: false
+</code></pre>
+<h5 id="memorydirectmemorysafemode"><a class="header" href="#memorydirectmemorysafemode">memory.directMemory.safeMode</a></h5>
+<p>Indicates whether to perform a range check before each direct memory update. It is true by default, but usually it can be safely set to false. It should only be to true after dramatic changes have been made in the storage structures.</p>
+<pre><code>Setting name...: memory.directMemory.safeMode
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="memorydirectmemorytrackmode"><a class="header" href="#memorydirectmemorytrackmode">memory.directMemory.trackMode</a></h5>
+<p>Activates the direct memory pool <a href="../troubleshooting/Leak-Detector.html">leak detector</a>. This detector causes a large overhead and should be used for debugging purposes only. It's also a good idea to pass the -Djava.util.logging.manager=com.orientechnologies.common.log.OLogManager$DebugLogManager switch to the JVM, if you use this mode, this will enable the logging from JVM shutdown hooks..</p>
+<pre><code>Setting name...: memory.directMemory.trackMode
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="memorydirectmemoryonlyalignedmemoryaccess"><a class="header" href="#memorydirectmemoryonlyalignedmemoryaccess">memory.directMemory.onlyAlignedMemoryAccess</a></h5>
+<p>Some architectures do not allow unaligned memory access or may suffer from speed degradation. For such platforms, this flag should be set to true.</p>
+<pre><code>Setting name...: memory.directMemory.onlyAlignedMemoryAccess
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="jvm"><a class="header" href="#jvm">Jvm</a></h3>
+<h5 id="jvmgcdelayforoptimize"><a class="header" href="#jvmgcdelayforoptimize">jvm.gc.delayForOptimize</a></h5>
+<p>Minimal amount of time (in seconds), since the last System.gc(), when called after tree optimization.</p>
+<pre><code>Setting name...: jvm.gc.delayForOptimize
+Default value..: 600
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="storage"><a class="header" href="#storage">Storage</a></h3>
+<h5 id="storageopenfileslimit"><a class="header" href="#storageopenfileslimit">storage.openFiles.limit</a></h5>
+<p>Limit of amount of files which may be open simultaneously.</p>
+<pre><code>Setting name...: storage.openFiles.limit
+Default value..: 512
+Set at run-time: false
+</code></pre>
+<h5 id="storagecomponentslockcache"><a class="header" href="#storagecomponentslockcache">storage.componentsLock.cache</a></h5>
+<p>Amount of cached locks is used for component lock to avoid constant creation of new lock instances.</p>
+<pre><code>Setting name...: storage.componentsLock.cache
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachepinnedpages"><a class="header" href="#storagediskcachepinnedpages">storage.diskCache.pinnedPages</a></h5>
+<p>Maximum amount of pinned pages which may be contained in cache, if this percent is reached next pages will be left in unpinned state. You can not set value more than 50.</p>
+<pre><code>Setting name...: storage.diskCache.pinnedPages
+Default value..: 20
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachebuffersize"><a class="header" href="#storagediskcachebuffersize">storage.diskCache.bufferSize</a></h5>
+<p>Size of disk buffer in megabytes, disk size may be changed at runtime, but if does not enough to contain all pinned pages exception will be thrown.</p>
+<pre><code>Setting name...: storage.diskCache.bufferSize
+Default value..: 4096
+Set at run-time: true
+</code></pre>
+<h5 id="storagediskcachewritecachepart"><a class="header" href="#storagediskcachewritecachepart">storage.diskCache.writeCachePart</a></h5>
+<p>Percentage of disk cache, which is used as write cache.</p>
+<pre><code>Setting name...: storage.diskCache.writeCachePart
+Default value..: 15
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachewritecachepagettl"><a class="header" href="#storagediskcachewritecachepagettl">storage.diskCache.writeCachePageTTL</a></h5>
+<p>Max time until a page will be flushed from write cache (in seconds).</p>
+<pre><code>Setting name...: storage.diskCache.writeCachePageTTL
+Default value..: 86400
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachewritecachepageflushinterval"><a class="header" href="#storagediskcachewritecachepageflushinterval">storage.diskCache.writeCachePageFlushInterval</a></h5>
+<p>Interval between flushing of pages from write cache (in ms).</p>
+<pre><code>Setting name...: storage.diskCache.writeCachePageFlushInterval
+Default value..: 25
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachewritecacheflushinactivityinterval"><a class="header" href="#storagediskcachewritecacheflushinactivityinterval">storage.diskCache.writeCacheFlushInactivityInterval</a></h5>
+<p>Interval between 2 writes to the disk cache, if writes are done with an interval more than provided, all files will be fsynced before the next write, which allows a data restore after a server crash (in ms).</p>
+<pre><code>Setting name...: storage.diskCache.writeCacheFlushInactivityInterval
+Default value..: 60000
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachewritecacheflushlocktimeout"><a class="header" href="#storagediskcachewritecacheflushlocktimeout">storage.diskCache.writeCacheFlushLockTimeout</a></h5>
+<p>Maximum amount of time the write cache will wait before a page flushes (in ms, -1 to disable).</p>
+<pre><code>Setting name...: storage.diskCache.writeCacheFlushLockTimeout
+Default value..: -1
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachediskfreespacecheckinterval"><a class="header" href="#storagediskcachediskfreespacecheckinterval">storage.diskCache.diskFreeSpaceCheckInterval</a></h5>
+<p>The interval (in seconds), after which the storage periodically checks whether the amount of free disk space is enough to work in write mode.</p>
+<pre><code>Setting name...: storage.diskCache.diskFreeSpaceCheckInterval
+Default value..: 5
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachediskfreespacecheckintervalinpages"><a class="header" href="#storagediskcachediskfreespacecheckintervalinpages">storage.diskCache.diskFreeSpaceCheckIntervalInPages</a></h5>
+<p>The interval (how many new pages should be added before free space will be checked), after which the storage periodically checks whether the amount of free disk space is enough to work in write mode.</p>
+<pre><code>Setting name...: storage.diskCache.diskFreeSpaceCheckIntervalInPages
+Default value..: 2048
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachekeepstate"><a class="header" href="#storagediskcachekeepstate">storage.diskCache.keepState</a></h5>
+<p>Keep disk cache state between moment when storage is closed and moment when it is opened again. true by default.</p>
+<pre><code>Setting name...: storage.diskCache.keepState
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="storageconfigurationsynconupdate"><a class="header" href="#storageconfigurationsynconupdate">storage.configuration.syncOnUpdate</a></h5>
+<p>Indicates a force sync should be performed for each update on the storage configuration.</p>
+<pre><code>Setting name...: storage.configuration.syncOnUpdate
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="storagecompressionmethod"><a class="header" href="#storagecompressionmethod">storage.compressionMethod</a></h5>
+<p>Record compression method used in storage Possible values : gzip, nothing, snappy, snappy-native. Default is 'nothing' that means no compression.</p>
+<pre><code>Setting name...: storage.compressionMethod
+Default value..: nothing
+Set at run-time: false
+</code></pre>
+<h5 id="storageencryptionmethod"><a class="header" href="#storageencryptionmethod">storage.encryptionMethod</a></h5>
+<p>Record encryption method used in storage Possible values : 'aes' and 'des'. Default is 'nothing' for no encryption.</p>
+<pre><code>Setting name...: storage.encryptionMethod
+Default value..: nothing
+Set at run-time: false
+</code></pre>
+<h5 id="storageencryptionkey"><a class="header" href="#storageencryptionkey">storage.encryptionKey</a></h5>
+<p>Contains the storage encryption key. This setting is hidden.</p>
+<pre><code>Setting name...: storage.encryptionKey
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="storagemakefullcheckpointaftercreate"><a class="header" href="#storagemakefullcheckpointaftercreate">storage.makeFullCheckpointAfterCreate</a></h5>
+<p>Indicates whether a full checkpoint should be performed, if storage was created.</p>
+<pre><code>Setting name...: storage.makeFullCheckpointAfterCreate
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="storagemakefullcheckpointafteropen"><a class="header" href="#storagemakefullcheckpointafteropen">storage.makeFullCheckpointAfterOpen</a></h5>
+<p>Indicates whether a full checkpoint should be performed, if storage was opened. It is needed so fuzzy checkpoints can work properly.</p>
+<pre><code>Setting name...: storage.makeFullCheckpointAfterOpen
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="storagemakefullcheckpointafterclustercreate"><a class="header" href="#storagemakefullcheckpointafterclustercreate">storage.makeFullCheckpointAfterClusterCreate</a></h5>
+<p>Indicates whether a full checkpoint should be performed, if storage was opened.</p>
+<pre><code>Setting name...: storage.makeFullCheckpointAfterClusterCreate
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="storagetrackchangedrecordsinwal"><a class="header" href="#storagetrackchangedrecordsinwal">storage.trackChangedRecordsInWAL</a></h5>
+<p>If this flag is set metadata which contains rids of changed records is added at the end of each atomic operation.</p>
+<pre><code>Setting name...: storage.trackChangedRecordsInWAL
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="storageusewal"><a class="header" href="#storageusewal">storage.useWAL</a></h5>
+<p>Whether WAL should be used in paginated storage.</p>
+<pre><code>Setting name...: storage.useWAL
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalsynconpageflush"><a class="header" href="#storagewalsynconpageflush">storage.wal.syncOnPageFlush</a></h5>
+<p>Indicates whether a force sync should be performed during WAL page flush.</p>
+<pre><code>Setting name...: storage.wal.syncOnPageFlush
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalcachesize"><a class="header" href="#storagewalcachesize">storage.wal.cacheSize</a></h5>
+<p>Maximum size of WAL cache (in amount of WAL pages, each page is 64k) If set to 0, caching will be disabled.</p>
+<pre><code>Setting name...: storage.wal.cacheSize
+Default value..: 3000
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalfileautocloseinterval"><a class="header" href="#storagewalfileautocloseinterval">storage.wal.fileAutoCloseInterval</a></h5>
+<p>Interval in seconds after which WAL file will be closed if there is no any IO operations on this file (in seconds), default value is 10.</p>
+<pre><code>Setting name...: storage.wal.fileAutoCloseInterval
+Default value..: 10
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalmaxsegmentsize"><a class="header" href="#storagewalmaxsegmentsize">storage.wal.maxSegmentSize</a></h5>
+<p>Maximum size of single WAL segment (in megabytes).</p>
+<pre><code>Setting name...: storage.wal.maxSegmentSize
+Default value..: 128
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalmaxsize"><a class="header" href="#storagewalmaxsize">storage.wal.maxSize</a></h5>
+<p>Maximum size of WAL on disk (in megabytes).</p>
+<pre><code>Setting name...: storage.wal.maxSize
+Default value..: 4096
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalcommittimeout"><a class="header" href="#storagewalcommittimeout">storage.wal.commitTimeout</a></h5>
+<p>Maximum interval between WAL commits (in ms.).</p>
+<pre><code>Setting name...: storage.wal.commitTimeout
+Default value..: 1000
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalshutdowntimeout"><a class="header" href="#storagewalshutdowntimeout">storage.wal.shutdownTimeout</a></h5>
+<p>Maximum wait interval between events, when the background flush threadreceives a shutdown command and when the background flush will be stopped (in ms.).</p>
+<pre><code>Setting name...: storage.wal.shutdownTimeout
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalfuzzycheckpointinterval"><a class="header" href="#storagewalfuzzycheckpointinterval">storage.wal.fuzzyCheckpointInterval</a></h5>
+<p>Interval between fuzzy checkpoints (in seconds).</p>
+<pre><code>Setting name...: storage.wal.fuzzyCheckpointInterval
+Default value..: 300
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalreportafteroperationsduringrestore"><a class="header" href="#storagewalreportafteroperationsduringrestore">storage.wal.reportAfterOperationsDuringRestore</a></h5>
+<p>Amount of processed log operations, after which status of data restore procedure will be printed (0 or a negative value, disables the logging).</p>
+<pre><code>Setting name...: storage.wal.reportAfterOperationsDuringRestore
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalrestorebatchsize"><a class="header" href="#storagewalrestorebatchsize">storage.wal.restore.batchSize</a></h5>
+<p>Amount of WAL records, which are read at once in a single batch during a restore procedure.</p>
+<pre><code>Setting name...: storage.wal.restore.batchSize
+Default value..: 1000
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalreadcachesize"><a class="header" href="#storagewalreadcachesize">storage.wal.readCacheSize</a></h5>
+<p>Size of WAL read cache in amount of pages.</p>
+<pre><code>Setting name...: storage.wal.readCacheSize
+Default value..: 1000
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalfuzzycheckpointshutdownwait"><a class="header" href="#storagewalfuzzycheckpointshutdownwait">storage.wal.fuzzyCheckpointShutdownWait</a></h5>
+<p>The amount of time the DB should wait until it shuts down (in seconds).</p>
+<pre><code>Setting name...: storage.wal.fuzzyCheckpointShutdownWait
+Default value..: 600
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalfullcheckpointshutdowntimeout"><a class="header" href="#storagewalfullcheckpointshutdowntimeout">storage.wal.fullCheckpointShutdownTimeout</a></h5>
+<p>The amount of time the DB will wait, until a checkpoint is finished, during a DB shutdown (in seconds).</p>
+<pre><code>Setting name...: storage.wal.fullCheckpointShutdownTimeout
+Default value..: 600
+Set at run-time: false
+</code></pre>
+<h5 id="storagewalpath"><a class="header" href="#storagewalpath">storage.wal.path</a></h5>
+<p>Path to the WAL file on the disk. By default, it is placed in the DB directory, but it is highly recommended to use a separate disk to store log operations.</p>
+<pre><code>Setting name...: storage.wal.path
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachepagesize"><a class="header" href="#storagediskcachepagesize">storage.diskCache.pageSize</a></h5>
+<p>Size of page of disk buffer (in kilobytes). !!! NEVER CHANGE THIS VALUE !!!.</p>
+<pre><code>Setting name...: storage.diskCache.pageSize
+Default value..: 64
+Set at run-time: false
+</code></pre>
+<h5 id="storagediskcachediskfreespacelimit"><a class="header" href="#storagediskcachediskfreespacelimit">storage.diskCache.diskFreeSpaceLimit</a></h5>
+<p>Minimum amount of space on disk, which, when exceeded, will cause the database to switch to read-only mode (in megabytes).</p>
+<pre><code>Setting name...: storage.diskCache.diskFreeSpaceLimit
+Default value..: 256
+Set at run-time: false
+</code></pre>
+<h5 id="storagelowestfreelistbound"><a class="header" href="#storagelowestfreelistbound">storage.lowestFreeListBound</a></h5>
+<p>The least amount of free space (in kb) in a page, which is tracked in paginated storage.</p>
+<pre><code>Setting name...: storage.lowestFreeListBound
+Default value..: 16
+Set at run-time: false
+</code></pre>
+<h5 id="storagelocktimeout"><a class="header" href="#storagelocktimeout">storage.lockTimeout</a></h5>
+<p>Maximum amount of time (in ms) to lock the storage.</p>
+<pre><code>Setting name...: storage.lockTimeout
+Default value..: 0
+Set at run-time: false
+</code></pre>
+<h5 id="storagerecordlocktimeout"><a class="header" href="#storagerecordlocktimeout">storage.record.lockTimeout</a></h5>
+<p>Maximum of time (in ms) to lock a shared record.</p>
+<pre><code>Setting name...: storage.record.lockTimeout
+Default value..: 2000
+Set at run-time: false
+</code></pre>
+<h5 id="storageusetombstones"><a class="header" href="#storageusetombstones">storage.useTombstones</a></h5>
+<p>When a record is deleted, the space in the cluster will not be freed, but rather tombstoned.</p>
+<pre><code>Setting name...: storage.useTombstones
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="storageclusterusecrc32"><a class="header" href="#storageclusterusecrc32">storage.cluster.usecrc32</a></h5>
+<p>Indicates whether crc32 should be used for each record to check record integrity.</p>
+<pre><code>Setting name...: storage.cluster.usecrc32
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="storagekeepopen"><a class="header" href="#storagekeepopen">storage.keepOpen</a></h5>
+<p>Deprecated.</p>
+<pre><code>Setting name...: storage.keepOpen
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="record"><a class="header" href="#record">Record</a></h3>
+<h5 id="recorddownsizingenabled"><a class="header" href="#recorddownsizingenabled">record.downsizing.enabled</a></h5>
+<p>On updates, if the record size is lower than before, this reduces the space taken accordingly. If enabled this could increase defragmentation, but it reduces the used disk space.</p>
+<pre><code>Setting name...: record.downsizing.enabled
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="object"><a class="header" href="#object">Object</a></h3>
+<h5 id="objectsaveonlydirty"><a class="header" href="#objectsaveonlydirty">object.saveOnlyDirty</a></h5>
+<p>Object Database only! It saves objects bound to dirty records.</p>
+<pre><code>Setting name...: object.saveOnlyDirty
+Default value..: false
+Set at run-time: true
+</code></pre>
+<hr />
+<h3 id="db"><a class="header" href="#db">Db</a></h3>
+<h5 id="dbpoolmin"><a class="header" href="#dbpoolmin">db.pool.min</a></h5>
+<p>Default database pool minimum size.</p>
+<pre><code>Setting name...: db.pool.min
+Default value..: 1
+Set at run-time: false
+</code></pre>
+<h5 id="dbpoolmax"><a class="header" href="#dbpoolmax">db.pool.max</a></h5>
+<p>Default database pool maximum size.</p>
+<pre><code>Setting name...: db.pool.max
+Default value..: 100
+Set at run-time: false
+</code></pre>
+<h5 id="dbpoolidletimeout"><a class="header" href="#dbpoolidletimeout">db.pool.idleTimeout</a></h5>
+<p>Timeout for checking for free databases in the pool.</p>
+<pre><code>Setting name...: db.pool.idleTimeout
+Default value..: 0
+Set at run-time: false
+</code></pre>
+<h5 id="dbpoolidlecheckdelay"><a class="header" href="#dbpoolidlecheckdelay">db.pool.idleCheckDelay</a></h5>
+<p>Delay time on checking for idle databases.</p>
+<pre><code>Setting name...: db.pool.idleCheckDelay
+Default value..: 0
+Set at run-time: false
+</code></pre>
+<h5 id="dbmvccthrowfast"><a class="header" href="#dbmvccthrowfast">db.mvcc.throwfast</a></h5>
+<p>Use fast-thrown exceptions for MVCC OConcurrentModificationExceptions. No context information will be available. Set to true, when these exceptions are thrown, but the details are not necessary.</p>
+<pre><code>Setting name...: db.mvcc.throwfast
+Default value..: false
+Set at run-time: true
+</code></pre>
+<h5 id="dbvalidation"><a class="header" href="#dbvalidation">db.validation</a></h5>
+<p>Enables or disables validation of records.</p>
+<pre><code>Setting name...: db.validation
+Default value..: true
+Set at run-time: true
+</code></pre>
+<h5 id="dbdocumentserializer"><a class="header" href="#dbdocumentserializer">db.document.serializer</a></h5>
+<p>The default record serializer used by the document database.</p>
+<pre><code>Setting name...: db.document.serializer
+Default value..: ORecordSerializerBinary
+Set at run-time: false
+</code></pre>
+<h5 id="dbmakefullcheckpointonindexchange"><a class="header" href="#dbmakefullcheckpointonindexchange">db.makeFullCheckpointOnIndexChange</a></h5>
+<p>When index metadata is changed, a full checkpoint is performed.</p>
+<pre><code>Setting name...: db.makeFullCheckpointOnIndexChange
+Default value..: true
+Set at run-time: true
+</code></pre>
+<h5 id="dbmakefullcheckpointonschemachange"><a class="header" href="#dbmakefullcheckpointonschemachange">db.makeFullCheckpointOnSchemaChange</a></h5>
+<p>When index schema is changed, a full checkpoint is performed.</p>
+<pre><code>Setting name...: db.makeFullCheckpointOnSchemaChange
+Default value..: true
+Set at run-time: true
+</code></pre>
+<h5 id="dbmvcc"><a class="header" href="#dbmvcc">db.mvcc</a></h5>
+<p>Deprecated, MVCC cannot be disabled anymore.</p>
+<pre><code>Setting name...: db.mvcc
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="dbusedistributedversion"><a class="header" href="#dbusedistributedversion">db.use.distributedVersion</a></h5>
+<p>Deprecated, distributed version is not used anymore.</p>
+<pre><code>Setting name...: db.use.distributedVersion
+Default value..: false
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="nontx"><a class="header" href="#nontx">NonTX</a></h3>
+<h5 id="nontxrecordupdatesynch"><a class="header" href="#nontxrecordupdatesynch">nonTX.recordUpdate.synch</a></h5>
+<p>Executes a sync against the file-system for every record operation. This slows down record updates, but guarantees reliability on unreliable drives.</p>
+<pre><code>Setting name...: nonTX.recordUpdate.synch
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="nontxclusterssyncimmediately"><a class="header" href="#nontxclusterssyncimmediately">nonTX.clusters.sync.immediately</a></h5>
+<p>List of clusters to sync immediately after update (separated by commas). Can be useful for a manual index.</p>
+<pre><code>Setting name...: nonTX.clusters.sync.immediately
+Default value..: manindex
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="tx"><a class="header" href="#tx">Tx</a></h3>
+<h5 id="txtrackatomicoperations"><a class="header" href="#txtrackatomicoperations">tx.trackAtomicOperations</a></h5>
+<p>This setting is used only for debug purposes. It creates a stack trace of methods, when an atomic operation is started.</p>
+<pre><code>Setting name...: tx.trackAtomicOperations
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="txcommitsynch"><a class="header" href="#txcommitsynch">tx.commit.synch</a></h5>
+<p>Synchronizes the storage after transaction commit.</p>
+<pre><code>Setting name...: tx.commit.synch
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="txautoretry"><a class="header" href="#txautoretry">tx.autoRetry</a></h5>
+<p>Maximum number of automatic retry if some resource has been locked in the middle of the transaction (Timeout exception).</p>
+<pre><code>Setting name...: tx.autoRetry
+Default value..: 1
+Set at run-time: false
+</code></pre>
+<h5 id="txlogfiletype"><a class="header" href="#txlogfiletype">tx.log.fileType</a></h5>
+<p>File type to handle transaction logs: mmap or classic.</p>
+<pre><code>Setting name...: tx.log.fileType
+Default value..: classic
+Set at run-time: false
+</code></pre>
+<h5 id="txlogsynch"><a class="header" href="#txlogsynch">tx.log.synch</a></h5>
+<p>Executes a synch against the file-system at every log entry. This slows down transactions but guarantee transaction reliability on unreliable drives.</p>
+<pre><code>Setting name...: tx.log.synch
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="txuselog"><a class="header" href="#txuselog">tx.useLog</a></h5>
+<p>Transactions use log file to store temporary data to be rolled back in case of crash.</p>
+<pre><code>Setting name...: tx.useLog
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="index"><a class="header" href="#index">Index</a></h3>
+<h5 id="indexembeddedtosbtreebonsaithreshold"><a class="header" href="#indexembeddedtosbtreebonsaithreshold">index.embeddedToSbtreeBonsaiThreshold</a></h5>
+<p>Amount of values, after which the index implementation will use an sbtree as a values container. Set to -1, to disable and force using an sbtree.</p>
+<pre><code>Setting name...: index.embeddedToSbtreeBonsaiThreshold
+Default value..: 40
+Set at run-time: true
+</code></pre>
+<h5 id="indexsbtreebonsaitoembeddedthreshold"><a class="header" href="#indexsbtreebonsaitoembeddedthreshold">index.sbtreeBonsaiToEmbeddedThreshold</a></h5>
+<p>Amount of values, after which index implementation will use an embedded values container (disabled by default).</p>
+<pre><code>Setting name...: index.sbtreeBonsaiToEmbeddedThreshold
+Default value..: -1
+Set at run-time: true
+</code></pre>
+<h5 id="indexautosynchronousautorebuild"><a class="header" href="#indexautosynchronousautorebuild">index.auto.synchronousAutoRebuild</a></h5>
+<p>Synchronous execution of auto rebuilding of indexes, in case of a DB crash.</p>
+<pre><code>Setting name...: index.auto.synchronousAutoRebuild
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="indexautolazyupdates"><a class="header" href="#indexautolazyupdates">index.auto.lazyUpdates</a></h5>
+<p>Configure the TreeMaps for automatic indexes, as buffered or not. -1 means buffered until tx.commit() or db.close() are called.</p>
+<pre><code>Setting name...: index.auto.lazyUpdates
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="indexflushaftercreate"><a class="header" href="#indexflushaftercreate">index.flushAfterCreate</a></h5>
+<p>Flush storage buffer after index creation.</p>
+<pre><code>Setting name...: index.flushAfterCreate
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="indexmanuallazyupdates"><a class="header" href="#indexmanuallazyupdates">index.manual.lazyUpdates</a></h5>
+<p>Configure the TreeMaps for manual indexes as buffered or not. -1 means buffered until tx.commit() or db.close() are called.</p>
+<pre><code>Setting name...: index.manual.lazyUpdates
+Default value..: 1
+Set at run-time: false
+</code></pre>
+<h5 id="indexdurableinnontxmode"><a class="header" href="#indexdurableinnontxmode">index.durableInNonTxMode</a></h5>
+<p>Indicates whether index implementation for plocal storage will be durable in non-Tx mode (true by default).</p>
+<pre><code>Setting name...: index.durableInNonTxMode
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="indexignorenullvaluesdefault"><a class="header" href="#indexignorenullvaluesdefault">index.ignoreNullValuesDefault</a></h5>
+<p>Controls whether null values will be ignored by default by newly created indexes or not (false by default).</p>
+<pre><code>Setting name...: index.ignoreNullValuesDefault
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="indextxmode"><a class="header" href="#indextxmode">index.txMode</a></h5>
+<p>Indicates the index durability level in TX mode. Can be ROLLBACK_ONLY or FULL (ROLLBACK_ONLY by default).</p>
+<pre><code>Setting name...: index.txMode
+Default value..: FULL
+Set at run-time: false
+</code></pre>
+<h5 id="indexcursorprefetchsize"><a class="header" href="#indexcursorprefetchsize">index.cursor.prefetchSize</a></h5>
+<p>Default prefetch size of index cursor.</p>
+<pre><code>Setting name...: index.cursor.prefetchSize
+Default value..: 500000
+Set at run-time: false
+</code></pre>
+<h5 id="indexautorebuildafternotsoftclose"><a class="header" href="#indexautorebuildafternotsoftclose">index.auto.rebuildAfterNotSoftClose</a></h5>
+<p>Auto rebuild all automatic indexes after upon database open when wasn't closed properly.</p>
+<pre><code>Setting name...: index.auto.rebuildAfterNotSoftClose
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="hashtable"><a class="header" href="#hashtable">HashTable</a></h3>
+<h5 id="hashtableslitbucketsbufferlength"><a class="header" href="#hashtableslitbucketsbufferlength">hashTable.slitBucketsBuffer.length</a></h5>
+<p>Length of buffer (in pages), where buckets that were split, but not flushed to the disk, are kept. This buffer is used to minimize random IO overhead.</p>
+<pre><code>Setting name...: hashTable.slitBucketsBuffer.length
+Default value..: 1500
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="sbtree"><a class="header" href="#sbtree">Sbtree</a></h3>
+<h5 id="sbtreemaxdepth"><a class="header" href="#sbtreemaxdepth">sbtree.maxDepth</a></h5>
+<p>Maximum depth of sbtree, which will be traversed during key look up until it will be treated as broken (64 by default).</p>
+<pre><code>Setting name...: sbtree.maxDepth
+Default value..: 64
+Set at run-time: false
+</code></pre>
+<h5 id="sbtreemaxkeysize"><a class="header" href="#sbtreemaxkeysize">sbtree.maxKeySize</a></h5>
+<p>Maximum size of a key, which can be put in the SBTree in bytes (10240 by default).</p>
+<pre><code>Setting name...: sbtree.maxKeySize
+Default value..: 10240
+Set at run-time: false
+</code></pre>
+<h5 id="sbtreemaxembeddedvaluesize"><a class="header" href="#sbtreemaxembeddedvaluesize">sbtree.maxEmbeddedValueSize</a></h5>
+<p>Maximum size of value which can be put in an SBTree without creation link to a standalone page in bytes (40960 by default).</p>
+<pre><code>Setting name...: sbtree.maxEmbeddedValueSize
+Default value..: 40960
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="sbtreebonsai"><a class="header" href="#sbtreebonsai">Sbtreebonsai</a></h3>
+<h5 id="sbtreebonsaibucketsize"><a class="header" href="#sbtreebonsaibucketsize">sbtreebonsai.bucketSize</a></h5>
+<p>Size of bucket in OSBTreeBonsai (in kB). Contract: bucketSize &lt; storagePageSize, storagePageSize % bucketSize == 0.</p>
+<pre><code>Setting name...: sbtreebonsai.bucketSize
+Default value..: 2
+Set at run-time: false
+</code></pre>
+<h5 id="sbtreebonsailinkbagcachesize"><a class="header" href="#sbtreebonsailinkbagcachesize">sbtreebonsai.linkBagCache.size</a></h5>
+<p>Amount of LINKBAG collections to be cached, to avoid constant reloading of data.</p>
+<pre><code>Setting name...: sbtreebonsai.linkBagCache.size
+Default value..: 100000
+Set at run-time: false
+</code></pre>
+<h5 id="sbtreebonsailinkbagcacheevictionsize"><a class="header" href="#sbtreebonsailinkbagcacheevictionsize">sbtreebonsai.linkBagCache.evictionSize</a></h5>
+<p>The number of cached LINKBAG collections, which will be removed, when the cache limit is reached.</p>
+<pre><code>Setting name...: sbtreebonsai.linkBagCache.evictionSize
+Default value..: 1000
+Set at run-time: false
+</code></pre>
+<h5 id="sbtreebonsaifreespacereusetrigger"><a class="header" href="#sbtreebonsaifreespacereusetrigger">sbtreebonsai.freeSpaceReuseTrigger</a></h5>
+<p>How much free space should be in an sbtreebonsai file, before it will be reused during the next allocation.</p>
+<pre><code>Setting name...: sbtreebonsai.freeSpaceReuseTrigger
+Default value..: 0.5
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="ridbag"><a class="header" href="#ridbag">RidBag</a></h3>
+<h5 id="ridbagembeddeddefaultsize"><a class="header" href="#ridbagembeddeddefaultsize">ridBag.embeddedDefaultSize</a></h5>
+<p>Size of embedded RidBag array, when created (empty).</p>
+<pre><code>Setting name...: ridBag.embeddedDefaultSize
+Default value..: 4
+Set at run-time: false
+</code></pre>
+<h5 id="ridbagembeddedtosbtreebonsaithreshold"><a class="header" href="#ridbagembeddedtosbtreebonsaithreshold">ridBag.embeddedToSbtreeBonsaiThreshold</a></h5>
+<p>Amount of values after which a LINKBAG implementation will use sbtree as values container. Set to -1 to always use an sbtree.</p>
+<pre><code>Setting name...: ridBag.embeddedToSbtreeBonsaiThreshold
+Default value..: 40
+Set at run-time: true
+</code></pre>
+<h5 id="ridbagsbtreebonsaitoembeddedtothreshold"><a class="header" href="#ridbagsbtreebonsaitoembeddedtothreshold">ridBag.sbtreeBonsaiToEmbeddedToThreshold</a></h5>
+<p>Amount of values, after which a LINKBAG implementation will use an embedded values container (disabled by default).</p>
+<pre><code>Setting name...: ridBag.sbtreeBonsaiToEmbeddedToThreshold
+Default value..: -1
+Set at run-time: true
+</code></pre>
+<hr />
+<h3 id="collections"><a class="header" href="#collections">Collections</a></h3>
+<h5 id="collectionsprefersbtreeset"><a class="header" href="#collectionsprefersbtreeset">collections.preferSBTreeSet</a></h5>
+<p>This configuration setting is experimental.</p>
+<pre><code>Setting name...: collections.preferSBTreeSet
+Default value..: false
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="file"><a class="header" href="#file">File</a></h3>
+<h5 id="filetrackfileclose"><a class="header" href="#filetrackfileclose">file.trackFileClose</a></h5>
+<p>Log all the cases when files are closed. This is needed only for internal debugging purposes.</p>
+<pre><code>Setting name...: file.trackFileClose
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="filelock"><a class="header" href="#filelock">file.lock</a></h5>
+<p>Locks files when used. Default is true.</p>
+<pre><code>Setting name...: file.lock
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="filedeletedelay"><a class="header" href="#filedeletedelay">file.deleteDelay</a></h5>
+<p>Delay time (in ms) to wait for another attempt to delete a locked file.</p>
+<pre><code>Setting name...: file.deleteDelay
+Default value..: 10
+Set at run-time: false
+</code></pre>
+<h5 id="filedeleteretry"><a class="header" href="#filedeleteretry">file.deleteRetry</a></h5>
+<p>Number of retries to delete a locked file.</p>
+<pre><code>Setting name...: file.deleteRetry
+Default value..: 50
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="security"><a class="header" href="#security">Security</a></h3>
+<h5 id="securityuserpasswordsaltiterations"><a class="header" href="#securityuserpasswordsaltiterations">security.userPasswordSaltIterations</a></h5>
+<p>Number of iterations to generate the salt or user password. Changing this setting does not affect stored passwords.</p>
+<pre><code>Setting name...: security.userPasswordSaltIterations
+Default value..: 65536
+Set at run-time: false
+</code></pre>
+<h5 id="securityuserpasswordsaltcachesize"><a class="header" href="#securityuserpasswordsaltcachesize">security.userPasswordSaltCacheSize</a></h5>
+<p>Cache size of hashed salt passwords. The cache works as LRU. Use 0 to disable the cache.</p>
+<pre><code>Setting name...: security.userPasswordSaltCacheSize
+Default value..: 500
+Set at run-time: false
+</code></pre>
+<h5 id="securityuserpassworddefaultalgorithm"><a class="header" href="#securityuserpassworddefaultalgorithm">security.userPasswordDefaultAlgorithm</a></h5>
+<p>Default encryption algorithm used for passwords hashing.</p>
+<pre><code>Setting name...: security.userPasswordDefaultAlgorithm
+Default value..: PBKDF2WithHmacSHA256
+Set at run-time: false
+</code></pre>
+<h5 id="securitycreatedefaultusers"><a class="header" href="#securitycreatedefaultusers">security.createDefaultUsers</a></h5>
+<p>Indicates whether default database users should be created.</p>
+<pre><code>Setting name...: security.createDefaultUsers
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="network"><a class="header" href="#network">Network</a></h3>
+<h5 id="networkmaxconcurrentsessions"><a class="header" href="#networkmaxconcurrentsessions">network.maxConcurrentSessions</a></h5>
+<p>Maximum number of concurrent sessions.</p>
+<pre><code>Setting name...: network.maxConcurrentSessions
+Default value..: 1000
+Set at run-time: true
+</code></pre>
+<h5 id="networksocketbuffersize"><a class="header" href="#networksocketbuffersize">network.socketBufferSize</a></h5>
+<p>TCP/IP Socket buffer size.</p>
+<pre><code>Setting name...: network.socketBufferSize
+Default value..: 32768
+Set at run-time: true
+</code></pre>
+<h5 id="networklocktimeout"><a class="header" href="#networklocktimeout">network.lockTimeout</a></h5>
+<p>Timeout (in ms) to acquire a lock against a channel.</p>
+<pre><code>Setting name...: network.lockTimeout
+Default value..: 15000
+Set at run-time: true
+</code></pre>
+<h5 id="networksockettimeout"><a class="header" href="#networksockettimeout">network.socketTimeout</a></h5>
+<p>TCP/IP Socket timeout (in ms).</p>
+<pre><code>Setting name...: network.socketTimeout
+Default value..: 15000
+Set at run-time: true
+</code></pre>
+<h5 id="networkrequesttimeout"><a class="header" href="#networkrequesttimeout">network.requestTimeout</a></h5>
+<p>Request completion timeout (in ms).</p>
+<pre><code>Setting name...: network.requestTimeout
+Default value..: 3600000
+Set at run-time: true
+</code></pre>
+<h5 id="networkretry"><a class="header" href="#networkretry">network.retry</a></h5>
+<p>Number of attempts to connect to the server on failure.</p>
+<pre><code>Setting name...: network.retry
+Default value..: 5
+Set at run-time: true
+</code></pre>
+<h5 id="networkretrydelay"><a class="header" href="#networkretrydelay">network.retryDelay</a></h5>
+<p>The time (in ms) the client must wait, before reconnecting to the server on failure.</p>
+<pre><code>Setting name...: network.retryDelay
+Default value..: 500
+Set at run-time: true
+</code></pre>
+<h5 id="networkbinaryloadbalancingenabled"><a class="header" href="#networkbinaryloadbalancingenabled">network.binary.loadBalancing.enabled</a></h5>
+<p>Asks for DNS TXT record, to determine if load balancing is supported.</p>
+<pre><code>Setting name...: network.binary.loadBalancing.enabled
+Default value..: false
+Set at run-time: true
+</code></pre>
+<h5 id="networkbinaryloadbalancingtimeout"><a class="header" href="#networkbinaryloadbalancingtimeout">network.binary.loadBalancing.timeout</a></h5>
+<p>Maximum time (in ms) to wait for the answer from DNS about the TXT record for load balancing.</p>
+<pre><code>Setting name...: network.binary.loadBalancing.timeout
+Default value..: 2000
+Set at run-time: true
+</code></pre>
+<h5 id="networkbinarymaxlength"><a class="header" href="#networkbinarymaxlength">network.binary.maxLength</a></h5>
+<p>TCP/IP max content length (in KB) of BINARY requests.</p>
+<pre><code>Setting name...: network.binary.maxLength
+Default value..: 16384
+Set at run-time: true
+</code></pre>
+<h5 id="networkbinaryreadresponsemaxtimes"><a class="header" href="#networkbinaryreadresponsemaxtimes">network.binary.readResponse.maxTimes</a></h5>
+<p>Maximum attempts, until a response can be read. Otherwise, the response will be dropped from the channel.</p>
+<pre><code>Setting name...: network.binary.readResponse.maxTimes
+Default value..: 20
+Set at run-time: true
+</code></pre>
+<h5 id="networkbinarydebug"><a class="header" href="#networkbinarydebug">network.binary.debug</a></h5>
+<p>Debug mode: print all data incoming on the binary channel.</p>
+<pre><code>Setting name...: network.binary.debug
+Default value..: false
+Set at run-time: true
+</code></pre>
+<h5 id="networkhttpinstalldefaultcommands"><a class="header" href="#networkhttpinstalldefaultcommands">network.http.installDefaultCommands</a></h5>
+<p>Installs the default HTTP commands.</p>
+<pre><code>Setting name...: network.http.installDefaultCommands
+Default value..: true
+Set at run-time: true
+</code></pre>
+<h5 id="networkhttpserverinfo"><a class="header" href="#networkhttpserverinfo">network.http.serverInfo</a></h5>
+<p>Server info to send in HTTP responses. Change the default if you want to hide it is a OrientDB Server.</p>
+<pre><code>Setting name...: network.http.serverInfo
+Default value..: OrientDB Server v.2.2.12-SNAPSHOT
+Set at run-time: true
+</code></pre>
+<h5 id="networkhttpmaxlength"><a class="header" href="#networkhttpmaxlength">network.http.maxLength</a></h5>
+<p>TCP/IP max content length (in bytes) for HTTP requests.</p>
+<pre><code>Setting name...: network.http.maxLength
+Default value..: 1000000
+Set at run-time: true
+</code></pre>
+<h5 id="networkhttpstreaming"><a class="header" href="#networkhttpstreaming">network.http.streaming</a></h5>
+<p>Enable Http chunked streaming for json responses.</p>
+<pre><code>Setting name...: network.http.streaming
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="networkhttpcharset"><a class="header" href="#networkhttpcharset">network.http.charset</a></h5>
+<p>Http response charset.</p>
+<pre><code>Setting name...: network.http.charset
+Default value..: utf-8
+Set at run-time: true
+</code></pre>
+<h5 id="networkhttpjsonresponseerror"><a class="header" href="#networkhttpjsonresponseerror">network.http.jsonResponseError</a></h5>
+<p>Http response error in json.</p>
+<pre><code>Setting name...: network.http.jsonResponseError
+Default value..: true
+Set at run-time: true
+</code></pre>
+<h5 id="networkhttpjsonp"><a class="header" href="#networkhttpjsonp">network.http.jsonp</a></h5>
+<p>Enable the usage of JSONP, if requested by the client. The parameter name to use is 'callback'.</p>
+<pre><code>Setting name...: network.http.jsonp
+Default value..: false
+Set at run-time: true
+</code></pre>
+<h5 id="networkhttpsessionexpiretimeout"><a class="header" href="#networkhttpsessionexpiretimeout">network.http.sessionExpireTimeout</a></h5>
+<p>Timeout, after which an http session is considered to have expired (in seconds).</p>
+<pre><code>Setting name...: network.http.sessionExpireTimeout
+Default value..: 300
+Set at run-time: false
+</code></pre>
+<h5 id="networkhttpusetoken"><a class="header" href="#networkhttpusetoken">network.http.useToken</a></h5>
+<p>Enable Token based sessions for http.</p>
+<pre><code>Setting name...: network.http.useToken
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="networktokensecretkey"><a class="header" href="#networktokensecretkey">network.token.secretKey</a></h5>
+<p>Network token sercret key.</p>
+<pre><code>Setting name...: network.token.secretKey
+Default value..: 
+Set at run-time: false
+</code></pre>
+<h5 id="networktokenencryptionalgorithm"><a class="header" href="#networktokenencryptionalgorithm">network.token.encryptionAlgorithm</a></h5>
+<p>Network token algorithm.</p>
+<pre><code>Setting name...: network.token.encryptionAlgorithm
+Default value..: HmacSHA256
+Set at run-time: false
+</code></pre>
+<h5 id="networktokenexpiretimeout"><a class="header" href="#networktokenexpiretimeout">network.token.expireTimeout</a></h5>
+<p>Timeout, after which a binary session is considered to have expired (in minutes).</p>
+<pre><code>Setting name...: network.token.expireTimeout
+Default value..: 60
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="profiler"><a class="header" href="#profiler">Profiler</a></h3>
+<h5 id="profilerenabled"><a class="header" href="#profilerenabled">profiler.enabled</a></h5>
+<p>Enables the recording of statistics and counters.</p>
+<pre><code>Setting name...: profiler.enabled
+Default value..: false
+Set at run-time: true
+</code></pre>
+<h5 id="profilerconfig"><a class="header" href="#profilerconfig">profiler.config</a></h5>
+<p>Configures the profiler as <seconds-for-snapshot>,<archive-snapshot-size>,<summary-size>.</p>
+<pre><code>Setting name...: profiler.config
+Default value..: null
+Set at run-time: true
+</code></pre>
+<h5 id="profilerautodumpinterval"><a class="header" href="#profilerautodumpinterval">profiler.autoDump.interval</a></h5>
+<p>Dumps the profiler values at regular intervals (in seconds).</p>
+<pre><code>Setting name...: profiler.autoDump.interval
+Default value..: 0
+Set at run-time: true
+</code></pre>
+<h5 id="profilermaxvalues"><a class="header" href="#profilermaxvalues">profiler.maxValues</a></h5>
+<p>Maximum values to store. Values are managed in a LRU.</p>
+<pre><code>Setting name...: profiler.maxValues
+Default value..: 200
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="sequence"><a class="header" href="#sequence">Sequence</a></h3>
+<h5 id="sequencemaxretry"><a class="header" href="#sequencemaxretry">sequence.maxRetry</a></h5>
+<p>Maximum number of retries between attempt to change a sequence in concurrent mode.</p>
+<pre><code>Setting name...: sequence.maxRetry
+Default value..: 100
+Set at run-time: false
+</code></pre>
+<h5 id="sequenceretrydelay"><a class="header" href="#sequenceretrydelay">sequence.retryDelay</a></h5>
+<p>Maximum number of ms to wait between concurrent modification exceptions. The value is computed as random between 1 and this number.</p>
+<pre><code>Setting name...: sequence.retryDelay
+Default value..: 200
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="storageprofiler"><a class="header" href="#storageprofiler">StorageProfiler</a></h3>
+<h5 id="storageprofilerintervalbetweensnapshots"><a class="header" href="#storageprofilerintervalbetweensnapshots">storageProfiler.intervalBetweenSnapshots</a></h5>
+<p>Interval between snapshots of profiler state in milliseconds.</p>
+<pre><code>Setting name...: storageProfiler.intervalBetweenSnapshots
+Default value..: 100
+Set at run-time: false
+</code></pre>
+<h5 id="storageprofilercleanupinterval"><a class="header" href="#storageprofilercleanupinterval">storageProfiler.cleanUpInterval</a></h5>
+<p>Interval between time series in milliseconds.</p>
+<pre><code>Setting name...: storageProfiler.cleanUpInterval
+Default value..: 5000
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="log"><a class="header" href="#log">Log</a></h3>
+<h5 id="logconsolelevel"><a class="header" href="#logconsolelevel">log.console.level</a></h5>
+<p>Console logging level.</p>
+<pre><code>Setting name...: log.console.level
+Default value..: info
+Set at run-time: true
+</code></pre>
+<h5 id="logfilelevel"><a class="header" href="#logfilelevel">log.file.level</a></h5>
+<p>File logging level.</p>
+<pre><code>Setting name...: log.file.level
+Default value..: info
+Set at run-time: true
+</code></pre>
+<h5 id="logconsoleansi"><a class="header" href="#logconsoleansi">log.console.ansi</a></h5>
+<p>ANSI Console support. 'auto' means automatic check if it is supported, 'true' to force using ANSI, 'false' to avoid using ANSI.</p>
+<pre><code>Setting name...: log.console.ansi
+Default value..: auto
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="class"><a class="header" href="#class">Class</a></h3>
+<h5 id="classminimumclusters"><a class="header" href="#classminimumclusters">class.minimumClusters</a></h5>
+<p>Minimum clusters to create when a new class is created. 0 means Automatic.</p>
+<pre><code>Setting name...: class.minimumClusters
+Default value..: 0
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="cache"><a class="header" href="#cache">Cache</a></h3>
+<h5 id="cachelocalimpl"><a class="header" href="#cachelocalimpl">cache.local.impl</a></h5>
+<p>Local Record cache implementation.</p>
+<pre><code>Setting name...: cache.local.impl
+Default value..: com.orientechnologies.orient.core.cache.ORecordCacheWeakRefs
+Set at run-time: false
+</code></pre>
+<h5 id="cachelocalenabled"><a class="header" href="#cachelocalenabled">cache.local.enabled</a></h5>
+<p>Deprecated, Level1 cache cannot be disabled anymore.</p>
+<pre><code>Setting name...: cache.local.enabled
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="command"><a class="header" href="#command">Command</a></h3>
+<h5 id="commandtimeout"><a class="header" href="#commandtimeout">command.timeout</a></h5>
+<p>Default timeout for commands (in ms).</p>
+<pre><code>Setting name...: command.timeout
+Default value..: 0
+Set at run-time: true
+</code></pre>
+<h5 id="commandcacheenabled"><a class="header" href="#commandcacheenabled">command.cache.enabled</a></h5>
+<p>Enable command cache.</p>
+<pre><code>Setting name...: command.cache.enabled
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="commandcacheevictstrategy"><a class="header" href="#commandcacheevictstrategy">command.cache.evictStrategy</a></h5>
+<p>Command cache strategy between: [INVALIDATE_ALL,PER_CLUSTER].</p>
+<pre><code>Setting name...: command.cache.evictStrategy
+Default value..: PER_CLUSTER
+Set at run-time: false
+</code></pre>
+<h5 id="commandcacheminexecutiontime"><a class="header" href="#commandcacheminexecutiontime">command.cache.minExecutionTime</a></h5>
+<p>Minimum execution time to consider caching the result set.</p>
+<pre><code>Setting name...: command.cache.minExecutionTime
+Default value..: 10
+Set at run-time: false
+</code></pre>
+<h5 id="commandcachemaxresultsetsize"><a class="header" href="#commandcachemaxresultsetsize">command.cache.maxResultsetSize</a></h5>
+<p>Maximum resultset time to consider caching result set.</p>
+<pre><code>Setting name...: command.cache.maxResultsetSize
+Default value..: 500
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="query"><a class="header" href="#query">Query</a></h3>
+<h5 id="queryparallelauto"><a class="header" href="#queryparallelauto">query.parallelAuto</a></h5>
+<p>Auto enable parallel query, if requirements are met.</p>
+<pre><code>Setting name...: query.parallelAuto
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="queryparallelminimumrecords"><a class="header" href="#queryparallelminimumrecords">query.parallelMinimumRecords</a></h5>
+<p>Minimum number of records to activate parallel query automatically.</p>
+<pre><code>Setting name...: query.parallelMinimumRecords
+Default value..: 300000
+Set at run-time: false
+</code></pre>
+<h5 id="queryparallelresultqueuesize"><a class="header" href="#queryparallelresultqueuesize">query.parallelResultQueueSize</a></h5>
+<p>Size of the queue that holds results on parallel execution. The queue is blocking, so in case the queue is full, the query threads will be in a wait state.</p>
+<pre><code>Setting name...: query.parallelResultQueueSize
+Default value..: 20000
+Set at run-time: false
+</code></pre>
+<h5 id="queryscanprefetchpages"><a class="header" href="#queryscanprefetchpages">query.scanPrefetchPages</a></h5>
+<p>Pages to prefetch during scan. Setting this value higher makes scans faster, because it reduces the number of I/O operations, though it consumes more memory. (Use 0 to disable).</p>
+<pre><code>Setting name...: query.scanPrefetchPages
+Default value..: 20
+Set at run-time: false
+</code></pre>
+<h5 id="queryscanbatchsize"><a class="header" href="#queryscanbatchsize">query.scanBatchSize</a></h5>
+<p>Scan clusters in blocks of records. This setting reduces the lock time on the cluster during scans. A high value mean a faster execution, but also a lower concurrency level. Set to 0 to disable batch scanning. Disabling batch scanning is suggested for read-only databases only.</p>
+<pre><code>Setting name...: query.scanBatchSize
+Default value..: 1000
+Set at run-time: false
+</code></pre>
+<h5 id="queryscanthresholdtip"><a class="header" href="#queryscanthresholdtip">query.scanThresholdTip</a></h5>
+<p>If the total number of records scanned in a query exceeds this setting, then a warning is given. (Use 0 to disable).</p>
+<pre><code>Setting name...: query.scanThresholdTip
+Default value..: 50000
+Set at run-time: false
+</code></pre>
+<h5 id="querylimitthresholdtip"><a class="header" href="#querylimitthresholdtip">query.limitThresholdTip</a></h5>
+<p>If the total number of returned records exceeds this value, then a warning is given. (Use 0 to disable).</p>
+<pre><code>Setting name...: query.limitThresholdTip
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="querylivesupport"><a class="header" href="#querylivesupport">query.live.support</a></h5>
+<p>Enable/Disable the support of live query. (Use false to disable).</p>
+<pre><code>Setting name...: query.live.support
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="statement"><a class="header" href="#statement">Statement</a></h3>
+<h5 id="statementcachesize"><a class="header" href="#statementcachesize">statement.cacheSize</a></h5>
+<p>Number of parsed SQL statements kept in cache.</p>
+<pre><code>Setting name...: statement.cacheSize
+Default value..: 100
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="sql"><a class="header" href="#sql">Sql</a></h3>
+<h5 id="sqlgraphconsistencymode"><a class="header" href="#sqlgraphconsistencymode">sql.graphConsistencyMode</a></h5>
+<p>Consistency mode for graphs. It can be 'tx' (default), 'notx_sync_repair' and 'notx_async_repair'. 'tx' uses transactions to maintain consistency. Instead both 'notx_sync_repair' and 'notx_async_repair' do not use transactions, and the consistency, in case of JVM crash, is guaranteed by a database repair operation that run at startup. With 'notx_sync_repair' the repair is synchronous, so the database comes online after the repair is ended, while with 'notx_async_repair' the repair is a background process.</p>
+<pre><code>Setting name...: sql.graphConsistencyMode
+Default value..: tx
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="client"><a class="header" href="#client">Client</a></h3>
+<h5 id="clientchannelmaxpool"><a class="header" href="#clientchannelmaxpool">client.channel.maxPool</a></h5>
+<p>Maximum size of pool of network channels between client and server. A channel is a TCP/IP connection.</p>
+<pre><code>Setting name...: client.channel.maxPool
+Default value..: 100
+Set at run-time: false
+</code></pre>
+<h5 id="clientconnectionpoolwaittimeout"><a class="header" href="#clientconnectionpoolwaittimeout">client.connectionPool.waitTimeout</a></h5>
+<p>Maximum time, where the client should wait for a connection from the pool, when all connections busy.</p>
+<pre><code>Setting name...: client.connectionPool.waitTimeout
+Default value..: 5000
+Set at run-time: true
+</code></pre>
+<h5 id="clientchanneldbreleasewaittimeout"><a class="header" href="#clientchanneldbreleasewaittimeout">client.channel.dbReleaseWaitTimeout</a></h5>
+<p>Delay (in ms), after which a data modification command will be resent, if the DB was frozen.</p>
+<pre><code>Setting name...: client.channel.dbReleaseWaitTimeout
+Default value..: 10000
+Set at run-time: true
+</code></pre>
+<h5 id="clientsslenabled"><a class="header" href="#clientsslenabled">client.ssl.enabled</a></h5>
+<p>Use SSL for client connections.</p>
+<pre><code>Setting name...: client.ssl.enabled
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="clientsslkeystore"><a class="header" href="#clientsslkeystore">client.ssl.keyStore</a></h5>
+<p>Use SSL for client connections.</p>
+<pre><code>Setting name...: client.ssl.keyStore
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="clientsslkeystorepass"><a class="header" href="#clientsslkeystorepass">client.ssl.keyStorePass</a></h5>
+<p>Use SSL for client connections.</p>
+<pre><code>Setting name...: client.ssl.keyStorePass
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="clientssltruststore"><a class="header" href="#clientssltruststore">client.ssl.trustStore</a></h5>
+<p>Use SSL for client connections.</p>
+<pre><code>Setting name...: client.ssl.trustStore
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="clientssltruststorepass"><a class="header" href="#clientssltruststorepass">client.ssl.trustStorePass</a></h5>
+<p>Use SSL for client connections.</p>
+<pre><code>Setting name...: client.ssl.trustStorePass
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="clientkrb5config"><a class="header" href="#clientkrb5config">client.krb5.config</a></h5>
+<p>Location of the Kerberos configuration file.</p>
+<pre><code>Setting name...: client.krb5.config
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="clientkrb5ccname"><a class="header" href="#clientkrb5ccname">client.krb5.ccname</a></h5>
+<p>Location of the Kerberos client ticketcache.</p>
+<pre><code>Setting name...: client.krb5.ccname
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="clientkrb5ktname"><a class="header" href="#clientkrb5ktname">client.krb5.ktname</a></h5>
+<p>Location of the Kerberos client keytab.</p>
+<pre><code>Setting name...: client.krb5.ktname
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="clientcredentialinterceptor"><a class="header" href="#clientcredentialinterceptor">client.credentialinterceptor</a></h5>
+<p>The name of the CredentialInterceptor class.</p>
+<pre><code>Setting name...: client.credentialinterceptor
+Default value..: null
+Set at run-time: false
+</code></pre>
+<h5 id="clientsessiontokenbased"><a class="header" href="#clientsessiontokenbased">client.session.tokenBased</a></h5>
+<p>Request a token based session to the server.</p>
+<pre><code>Setting name...: client.session.tokenBased
+Default value..: true
+Set at run-time: false
+</code></pre>
+<h5 id="clientchannelminpool"><a class="header" href="#clientchannelminpool">client.channel.minPool</a></h5>
+<p>Minimum pool size.</p>
+<pre><code>Setting name...: client.channel.minPool
+Default value..: 1
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="server"><a class="header" href="#server">Server</a></h3>
+<h5 id="serveropenalldatabasesatstartup"><a class="header" href="#serveropenalldatabasesatstartup">server.openAllDatabasesAtStartup</a></h5>
+<p>If true, the server opens all the available databases at startup. Available since 2.2.</p>
+<pre><code>Setting name...: server.openAllDatabasesAtStartup
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="serverchannelcleandelay"><a class="header" href="#serverchannelcleandelay">server.channel.cleanDelay</a></h5>
+<p>Time in ms of delay to check pending closed connections.</p>
+<pre><code>Setting name...: server.channel.cleanDelay
+Default value..: 5000
+Set at run-time: false
+</code></pre>
+<h5 id="servercachestaticfile"><a class="header" href="#servercachestaticfile">server.cache.staticFile</a></h5>
+<p>Cache static resources upon loading.</p>
+<pre><code>Setting name...: server.cache.staticFile
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="serverlogdumpclientexceptionlevel"><a class="header" href="#serverlogdumpclientexceptionlevel">server.log.dumpClientExceptionLevel</a></h5>
+<p>Logs client exceptions. Use any level supported by Java java.util.logging.Level class: OFF, FINE, CONFIG, INFO, WARNING, SEVERE.</p>
+<pre><code>Setting name...: server.log.dumpClientExceptionLevel
+Default value..: FINE
+Set at run-time: false
+</code></pre>
+<h5 id="serverlogdumpclientexceptionfullstacktrace"><a class="header" href="#serverlogdumpclientexceptionfullstacktrace">server.log.dumpClientExceptionFullStackTrace</a></h5>
+<p>Dumps the full stack trace of the exception sent to the client.</p>
+<pre><code>Setting name...: server.log.dumpClientExceptionFullStackTrace
+Default value..: false
+Set at run-time: true
+</code></pre>
+<h5 id="serversecurityfile"><a class="header" href="#serversecurityfile">server.security.file</a></h5>
+<p>Location of the OrientDB security.json configuration file.</p>
+<pre><code>Setting name...: server.security.file
+Default value..: null
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="distributed"><a class="header" href="#distributed">Distributed</a></h3>
+<h5 id="distributedcrudtasktimeout"><a class="header" href="#distributedcrudtasktimeout">distributed.crudTaskTimeout</a></h5>
+<p>Maximum timeout (in ms) to wait for CRUD remote tasks.</p>
+<pre><code>Setting name...: distributed.crudTaskTimeout
+Default value..: 3000
+Set at run-time: true
+</code></pre>
+<h5 id="distributedcommandtasktimeout"><a class="header" href="#distributedcommandtasktimeout">distributed.commandTaskTimeout</a></h5>
+<p>Maximum timeout (in ms) to wait for command distributed tasks.</p>
+<pre><code>Setting name...: distributed.commandTaskTimeout
+Default value..: 120000
+Set at run-time: true
+</code></pre>
+<h5 id="distributedcommandquicktasktimeout"><a class="header" href="#distributedcommandquicktasktimeout">distributed.commandQuickTaskTimeout</a></h5>
+<p>Maximum timeout (in ms) to wait for quick command distributed tasks.</p>
+<pre><code>Setting name...: distributed.commandQuickTaskTimeout
+Default value..: 5000
+Set at run-time: true
+</code></pre>
+<h5 id="distributedcommandlongtasktimeout"><a class="header" href="#distributedcommandlongtasktimeout">distributed.commandLongTaskTimeout</a></h5>
+<p>Maximum timeout (in ms) to wait for Long-running distributed tasks.</p>
+<pre><code>Setting name...: distributed.commandLongTaskTimeout
+Default value..: 86400000
+Set at run-time: true
+</code></pre>
+<h5 id="distributeddeploydbtasktimeout"><a class="header" href="#distributeddeploydbtasktimeout">distributed.deployDbTaskTimeout</a></h5>
+<p>Maximum timeout (in ms) to wait for database deployment.</p>
+<pre><code>Setting name...: distributed.deployDbTaskTimeout
+Default value..: 1200000
+Set at run-time: true
+</code></pre>
+<h5 id="distributeddeploychunktasktimeout"><a class="header" href="#distributeddeploychunktasktimeout">distributed.deployChunkTaskTimeout</a></h5>
+<p>Maximum timeout (in ms) to wait for database chunk deployment.</p>
+<pre><code>Setting name...: distributed.deployChunkTaskTimeout
+Default value..: 15000
+Set at run-time: true
+</code></pre>
+<h5 id="distributeddeploydbtaskcompression"><a class="header" href="#distributeddeploydbtaskcompression">distributed.deployDbTaskCompression</a></h5>
+<p>Compression level (between 0 and 9) to use in backup for database deployment.</p>
+<pre><code>Setting name...: distributed.deployDbTaskCompression
+Default value..: 7
+Set at run-time: true
+</code></pre>
+<h5 id="distributedasynchqueuesize"><a class="header" href="#distributedasynchqueuesize">distributed.asynchQueueSize</a></h5>
+<p>Queue size to handle distributed asynchronous operations. The bigger is the queue, the more operation are buffered, but also more memory it's consumed. 0 = dynamic allocation, which means up to 2^31-1 entries.</p>
+<pre><code>Setting name...: distributed.asynchQueueSize
+Default value..: 0
+Set at run-time: false
+</code></pre>
+<h5 id="distributedasynchresponsestimeout"><a class="header" href="#distributedasynchresponsestimeout">distributed.asynchResponsesTimeout</a></h5>
+<p>Maximum timeout (in ms) to collect all the asynchronous responses from replication. After this time the operation is rolled back (through an UNDO).</p>
+<pre><code>Setting name...: distributed.asynchResponsesTimeout
+Default value..: 15000
+Set at run-time: false
+</code></pre>
+<h5 id="distributedpurgeresponsestimerdelay"><a class="header" href="#distributedpurgeresponsestimerdelay">distributed.purgeResponsesTimerDelay</a></h5>
+<p>Maximum timeout (in ms) to collect all the asynchronous responses from replication. This is the delay the purge thread uses to check asynchronous requests in timeout.</p>
+<pre><code>Setting name...: distributed.purgeResponsesTimerDelay
+Default value..: 15000
+Set at run-time: false
+</code></pre>
+<h5 id="distributedconflictresolverrepairerchain"><a class="header" href="#distributedconflictresolverrepairerchain">distributed.conflictResolverRepairerChain</a></h5>
+<p>Chain of conflict resolver implementation to use.</p>
+<pre><code>Setting name...: distributed.conflictResolverRepairerChain
+Default value..: majority,content,version
+Set at run-time: false
+</code></pre>
+<h5 id="distributedconflictresolverrepairercheckevery"><a class="header" href="#distributedconflictresolverrepairercheckevery">distributed.conflictResolverRepairerCheckEvery</a></h5>
+<p>Time (in ms) when the conflict resolver auto-repairer checks for records/cluster to repair.</p>
+<pre><code>Setting name...: distributed.conflictResolverRepairerCheckEvery
+Default value..: 5000
+Set at run-time: true
+</code></pre>
+<h5 id="distributedconflictresolverrepairerbatch"><a class="header" href="#distributedconflictresolverrepairerbatch">distributed.conflictResolverRepairerBatch</a></h5>
+<p>Number of record to repair in batch.</p>
+<pre><code>Setting name...: distributed.conflictResolverRepairerBatch
+Default value..: 100
+Set at run-time: true
+</code></pre>
+<h5 id="distributedtxalivetimeout"><a class="header" href="#distributedtxalivetimeout">distributed.txAliveTimeout</a></h5>
+<p>Maximum timeout (in ms) a distributed transaction can be alive. This timeout is to rollback pending transactions after a while.</p>
+<pre><code>Setting name...: distributed.txAliveTimeout
+Default value..: 30000
+Set at run-time: true
+</code></pre>
+<h5 id="distributedrequestchannels"><a class="header" href="#distributedrequestchannels">distributed.requestChannels</a></h5>
+<p>Number of network channels used to send requests.</p>
+<pre><code>Setting name...: distributed.requestChannels
+Default value..: 1
+Set at run-time: false
+</code></pre>
+<h5 id="distributedresponsechannels"><a class="header" href="#distributedresponsechannels">distributed.responseChannels</a></h5>
+<p>Number of network channels used to send responses.</p>
+<pre><code>Setting name...: distributed.responseChannels
+Default value..: 1
+Set at run-time: false
+</code></pre>
+<h5 id="distributedheartbeattimeout"><a class="header" href="#distributedheartbeattimeout">distributed.heartbeatTimeout</a></h5>
+<p>Maximum time in ms to wait for the heartbeat. If the server does not respond in time, it is put offline.</p>
+<pre><code>Setting name...: distributed.heartbeatTimeout
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="distributedcheckhealthcanofflineserver"><a class="header" href="#distributedcheckhealthcanofflineserver">distributed.checkHealthCanOfflineServer</a></h5>
+<p>In case a server does not respond to the heartbeat message, it is set offline.</p>
+<pre><code>Setting name...: distributed.checkHealthCanOfflineServer
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="distributedcheckhealthevery"><a class="header" href="#distributedcheckhealthevery">distributed.checkHealthEvery</a></h5>
+<p>Time in ms to check the cluster health. Set to 0 to disable it.</p>
+<pre><code>Setting name...: distributed.checkHealthEvery
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="distributedautoremoveofflineservers"><a class="header" href="#distributedautoremoveofflineservers">distributed.autoRemoveOfflineServers</a></h5>
+<p>This is the amount of time (in ms) the server has to be OFFLINE, before it is automatically removed from the distributed configuration. -1 = never, 0 = immediately, &gt;0 the actual time to wait.</p>
+<pre><code>Setting name...: distributed.autoRemoveOfflineServers
+Default value..: -1
+Set at run-time: true
+</code></pre>
+<h5 id="distributedpublishnodestatusevery"><a class="header" href="#distributedpublishnodestatusevery">distributed.publishNodeStatusEvery</a></h5>
+<p>Time in ms to publish the node status on distributed map. Set to 0 to disable such refresh of node configuration.</p>
+<pre><code>Setting name...: distributed.publishNodeStatusEvery
+Default value..: 5000
+Set at run-time: true
+</code></pre>
+<h5 id="distributedlocalqueuesize"><a class="header" href="#distributedlocalqueuesize">distributed.localQueueSize</a></h5>
+<p>Size of the intra-thread queue for distributed messages.</p>
+<pre><code>Setting name...: distributed.localQueueSize
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="distributeddbworkerthreads"><a class="header" href="#distributeddbworkerthreads">distributed.dbWorkerThreads</a></h5>
+<p>Number of parallel worker threads per database that process distributed messages.</p>
+<pre><code>Setting name...: distributed.dbWorkerThreads
+Default value..: 8
+Set at run-time: false
+</code></pre>
+<h5 id="distributedqueuemaxsize"><a class="header" href="#distributedqueuemaxsize">distributed.queueMaxSize</a></h5>
+<p>Maximum queue size to mark a node as stalled. If the number of messages in queue are more than this values, the node is restarted with a remote command (0 = no maximum, which means up to 2^31-1 entries).</p>
+<pre><code>Setting name...: distributed.queueMaxSize
+Default value..: 10000
+Set at run-time: false
+</code></pre>
+<h5 id="distributedbackupdirectory"><a class="header" href="#distributedbackupdirectory">distributed.backupDirectory</a></h5>
+<p>Directory where the copy of an existent database is saved, before it is downloaded from the cluster. Leave it empty to avoid the backup..</p>
+<pre><code>Setting name...: distributed.backupDirectory
+Default value..: ../backup/databases
+Set at run-time: false
+</code></pre>
+<h5 id="distributedconcurrenttxmaxautoretry"><a class="header" href="#distributedconcurrenttxmaxautoretry">distributed.concurrentTxMaxAutoRetry</a></h5>
+<p>Maximum attempts the transaction coordinator should execute a transaction automatically, if records are locked. (Minimum is 1 = no attempts).</p>
+<pre><code>Setting name...: distributed.concurrentTxMaxAutoRetry
+Default value..: 10
+Set at run-time: true
+</code></pre>
+<h5 id="distributedatomiclocktimeout"><a class="header" href="#distributedatomiclocktimeout">distributed.atomicLockTimeout</a></h5>
+<p>Timeout (in ms) to acquire a distributed lock on a record. (0=infinite).</p>
+<pre><code>Setting name...: distributed.atomicLockTimeout
+Default value..: 300
+Set at run-time: true
+</code></pre>
+<h5 id="distributedconcurrenttxautoretrydelay"><a class="header" href="#distributedconcurrenttxautoretrydelay">distributed.concurrentTxAutoRetryDelay</a></h5>
+<p>Delay (in ms) between attempts on executing a distributed transaction, which had failed because of locked records. (0=no delay).</p>
+<pre><code>Setting name...: distributed.concurrentTxAutoRetryDelay
+Default value..: 100
+Set at run-time: true
+</code></pre>
+<h5 id="distributedqueuetimeout"><a class="header" href="#distributedqueuetimeout">distributed.queueTimeout</a></h5>
+<p>Maximum timeout (in ms) to wait for the response in replication.</p>
+<pre><code>Setting name...: distributed.queueTimeout
+Default value..: 500000
+Set at run-time: true
+</code></pre>
+<hr />
+<h3 id="jna"><a class="header" href="#jna">Jna</a></h3>
+<h5 id="jnadisablesystemlibrary"><a class="header" href="#jnadisablesystemlibrary">jna.disable.system.library</a></h5>
+<p>This property disables using JNA, should it be installed on your system. (Default true) To use JNA bundled with database.</p>
+<pre><code>Setting name...: jna.disable.system.library
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="oauth2"><a class="header" href="#oauth2">Oauth2</a></h3>
+<h5 id="oauth2secretkey"><a class="header" href="#oauth2secretkey">oauth2.secretkey</a></h5>
+<p>Http OAuth2 secret key.</p>
+<pre><code>Setting name...: oauth2.secretkey
+Default value..: 
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="lazyset"><a class="header" href="#lazyset">Lazyset</a></h3>
+<h5 id="lazysetworkonstream"><a class="header" href="#lazysetworkonstream">lazyset.workOnStream</a></h5>
+<p>Deprecated, now BINARY serialization is used in place of CSV.</p>
+<pre><code>Setting name...: lazyset.workOnStream
+Default value..: true
+Set at run-time: false
+</code></pre>
+<hr />
+<h3 id="mvrbtree"><a class="header" href="#mvrbtree">Mvrbtree</a></h3>
+<h5 id="mvrbtreetimeout"><a class="header" href="#mvrbtreetimeout">mvrbtree.timeout</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.timeout
+Default value..: 0
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreenodepagesize"><a class="header" href="#mvrbtreenodepagesize">mvrbtree.nodePageSize</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.nodePageSize
+Default value..: 256
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeloadfactor"><a class="header" href="#mvrbtreeloadfactor">mvrbtree.loadFactor</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.loadFactor
+Default value..: 0.7
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeoptimizethreshold"><a class="header" href="#mvrbtreeoptimizethreshold">mvrbtree.optimizeThreshold</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.optimizeThreshold
+Default value..: 100000
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeentrypoints"><a class="header" href="#mvrbtreeentrypoints">mvrbtree.entryPoints</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.entryPoints
+Default value..: 64
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeoptimizeentrypointsfactor"><a class="header" href="#mvrbtreeoptimizeentrypointsfactor">mvrbtree.optimizeEntryPointsFactor</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.optimizeEntryPointsFactor
+Default value..: 1.0
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeentrykeysinmemory"><a class="header" href="#mvrbtreeentrykeysinmemory">mvrbtree.entryKeysInMemory</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.entryKeysInMemory
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeentryvaluesinmemory"><a class="header" href="#mvrbtreeentryvaluesinmemory">mvrbtree.entryValuesInMemory</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.entryValuesInMemory
+Default value..: false
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeridbinarythreshold"><a class="header" href="#mvrbtreeridbinarythreshold">mvrbtree.ridBinaryThreshold</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.ridBinaryThreshold
+Default value..: -1
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeridnodepagesize"><a class="header" href="#mvrbtreeridnodepagesize">mvrbtree.ridNodePageSize</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.ridNodePageSize
+Default value..: 64
+Set at run-time: false
+</code></pre>
+<h5 id="mvrbtreeridnodesavememory"><a class="header" href="#mvrbtreeridnodesavememory">mvrbtree.ridNodeSaveMemory</a></h5>
+<p>Deprecated, MVRBTREE IS NOT USED ANYMORE IN FAVOR OF SBTREE AND HASHINDEX.</p>
+<pre><code>Setting name...: mvrbtree.ridNodeSaveMemory
+Default value..: false
+Set at run-time: false
+</code></pre>
+<p><em>NOTE: On 64-bit systems you have not the limitation of 32-bit systems with memory.</em></p>
+<h2 id="logging"><a class="header" href="#logging">Logging</a></h2>
+<p>Logging is configured in a separate file, look at <a href="Logging.html">Logging</a> for more information.</p>
+<h2 id="storage-configuration"><a class="header" href="#storage-configuration">Storage configuration</a></h2>
+<p>OrientDB allows modifications to the storage configuration. Even though this will be supported with high level commands, for now it's pretty "internal" using Java API.</p>
+<p>To get the storage configuration for the current database:</p>
+<pre><code>OStorageConfiguration cfg = db.getStorage().getConfiguration();
+</code></pre>
+<p>Look at <code><a href="https://github.com/nuvolabase/orientdb/blob/master/core/src/main/java/com/orientechnologies/orient/core/config/OStorageConfiguration.java">OStorageConfiguration</a></code> to discover all the properties you can change. To change the configuration of a cluster get it by ID;</p>
+<pre><code>OStoragePhysicalClusterConfigurationLocal clusterCfg = (OStoragePhysicalClusterConfigurationLocal) cfg.clusters.get(3);
+</code></pre>
+<p>To change the default settings for new clusters get the file template object. In this example we change the initial file size from the default 500Kb down to 10Kb:</p>
+<pre><code>OStorageSegmentConfiguration defaultCfg = (OStorageSegmentConfiguration) cfg.fileTemplate;
+defaultCfg.fileStartSize = "10Kb";
+</code></pre>
+<p>After changes call <code>OStorageConfiguration.update()</code>:</p>
+<pre><code>cfg.update();
+</code></pre>
+<h2 id="distributed-configuration"><a class="header" href="#distributed-configuration">Distributed Configuration</a></h2>
+<p>For information about the Distributed Configuration, please refer to the section <a href="../distributed/Distributed-Configuration.html">Distributed Configuration</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../admin/Docker-Home.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../release/Upgrade.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../admin/Docker-Home.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../release/Upgrade.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
