@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Java - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="troubleshooting-using-java-api"><a class="header" href="#troubleshooting-using-java-api">Troubleshooting using Java API</a></h1>
+<h2 id="oconcurrentmodificationexception-cannot-update-record-xy-in-storage-z-because-the-version-is-not-the-latest-probably-you-are-updating-an-old-record-or-it-has-been-modified-by-another-user-dbva-yourvb"><a class="header" href="#oconcurrentmodificationexception-cannot-update-record-xy-in-storage-z-because-the-version-is-not-the-latest-probably-you-are-updating-an-old-record-or-it-has-been-modified-by-another-user-dbva-yourvb">OConcurrentModificationException: Cannot update record #X:Y in storage 'Z' because the version is not the latest. Probably you are updating an old record or it has been modified by another user (db=vA your=vB)</a></h2>
+<p>This exception happens because you're running in a Multi Version Control Check (MVCC) system and another thread/user has updated the record you're saving. For more information about this topic look at <a href="../general/Concurrency.html">Concurrency</a>. To fix this problem you can:</p>
+<ul>
+<li>Change the Graph <a href="../java/Graph-Consistency.html">consistency level</a> to don't use transactions.</li>
+<li>Or write code concurrency proof.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-java">for (int retry = 0; retry &lt; maxRetries; ++retry) {
+  try {
+    // APPLY CHANGES
+    document.field(name, "Luca");
+
+    document.save();
+    break;
+  } catch(ONeedRetryException e) {
+    // RELOAD IT TO GET LAST VERSION
+    document.reload();
+  }
+}
+</code></pre>
+<p>The same in transactions:</p>
+<pre><code class="language-java">for (int retry = 0; retry &lt; maxRetries; ++retry) {
+  db.begin();
+  try {
+    // CREATE A NEW ITEM
+    ODocument invoiceItem = new ODocument("InvoiceItem");
+    invoiceItem.field(price, 213231);
+    invoiceItem.save();
+
+    // ADD IT TO THE INVOICE
+    Collection&lt;ODocument&gt; items = invoice.field(items);
+    items.add(invoiceItem);
+    invoice.save();
+
+    db.commit();
+    break;
+  } catch (OTransactionException e) {
+    // RELOAD IT TO GET LAST VERSION
+    invoice.reload();
+  }
+}
+</code></pre>
+<p>Where <code>maxRetries</code> is the maximum number of attempt of reloading.</p>
+<h2 id="run-in-osgi-context"><a class="header" href="#run-in-osgi-context">Run in OSGi context</a></h2>
+<p>(by Raman Gupta)
+OrientDB uses <a href="http://docs.oracle.com/javase/7/docs/api/javax/imageio/spi/ServiceRegistry.html">ServiceRegistry</a> to load OIndexFactory and some OSGi containers might not work with it.</p>
+<p>One solution is to set the TCCL so that the <a href="http://docs.oracle.com/javase/7/docs/api/javax/imageio/spi/ServiceRegistry.html">ServiceRegistry</a> lookup works inside of OSGi:</p>
+<pre><code class="language-java">ODatabaseObjectTx db = null;
+ClassLoader origClassLoader = Thread.currentThread().getContextClassLoader();
+try {
+  ClassLoader orientClassLoader = OIndexes.class.getClassLoader();
+  Thread.currentThread().setContextClassLoader(orientClassLoader);
+  db = objectConnectionPool.acquire(dbUrl, username, password);
+} finally {
+  Thread.currentThread().setContextClassLoader(origClassLoader);
+}
+</code></pre>
+<p>Because the <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html">ServiceLoader</a> uses the thread context classloader, you can configure it to use the classloader of the OrientDB bundle so that it finds the entries in META-INF/services.</p>
+<p>Another way is to embed the dependencies in configuration in the Maven pom.xml file under plugin(maven-bundle-plugin)/configuration/instructions:</p>
+<pre><code class="language-xml">&lt;Embed-Dependency&gt;
+  orientdb-client,
+  orient-commons,
+  orientdb-core,
+  orientdb-enterprise,
+  orientdb-object,
+  javassist
+&lt;/Embed-Dependency&gt;
+</code></pre>
+<p>Including only the jars you need. Look at <a href="../java/Java-API.html">Supported Libraries</a></p>
+<h2 id="database-instance-has-been-released-to-the-pool-get-another-database-instance-from-the-pool-with-the-right-username-and-password"><a class="header" href="#database-instance-has-been-released-to-the-pool-get-another-database-instance-from-the-pool-with-the-right-username-and-password">Database instance has been released to the pool. Get another database instance from the pool with the right username and password</a></h2>
+<p>This is a generic error telling that the database has been found closed while using it.</p>
+<p>Check the stack trace to find the reason of it:</p>
+<h2 id="olazyobjectiterator"><a class="header" href="#olazyobjectiterator">OLazyObjectIterator</a></h2>
+<p>This is the case when you're working with <a href="../java/Object-Database.html">Object Database API</a> and a field contains a collection or a map loaded in lazy. On iteration it needs an open database to fetch linked records.</p>
+<p>Solutions:</p>
+<ul>
+<li>assure to leave the database open while browsing the field</li>
+<li>or early load all the instances (just iterate the items)</li>
+<li>define a fetch-plan to load the entire object tree in one shoot and then work offline. If you need to save the object back to the database then reopen the database and call <code>db.save( object )</code>.</li>
+</ul>
+<h2 id="stack-overflow-on-saving-objects"><a class="header" href="#stack-overflow-on-saving-objects">Stack Overflow on saving objects</a></h2>
+<p>This could be due to the high deep of the graph, usually when you create many records. To fix it save the records more often.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../misc/Troubleshooting.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../troubleshooting/Leak-Detector.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../misc/Troubleshooting.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../troubleshooting/Leak-Detector.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

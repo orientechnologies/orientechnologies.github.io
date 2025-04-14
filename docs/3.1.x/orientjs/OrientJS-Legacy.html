@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>OrientJS Legacy - Node.js Driver - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="orientjs---nodejs-driver"><a class="header" href="#orientjs---nodejs-driver">OrientJS - Node.js Driver</a></h1>
+<blockquote>
+<p>The support for the new version of the OrientDB protocol is currently in beta, with new APIs in order to support new OrientDB features. See <a href="OrientJS.html">here</a> the OrientJS 3.0 documentation.</p>
+</blockquote>
+<p>OrientDB supports all JVM languages for server-side scripting.  Using the OrientJS module, you can develop database applications for OrientDB using the Node.js language.  It is fast, lightweight and uses the binary protocol, with features including:</p>
+<ul>
+<li>Intuitive API, based on the <a href="https://github.com/petkaantonov/bluebird">Bluebird</a> promise library.</li>
+<li>Fast Binary Protocol Parser</li>
+<li>Distributed Support</li>
+<li>Multi-Database Access, through the same socket.</li>
+<li>Connection Pooling</li>
+<li>Migration Support</li>
+</ul>
+<p>This page provides basic information on setting up OrientJS on your system.  For more information on using OrientJS in developing applications, see</p>
+<ul>
+<li><a href="OrientJS-Server.html">Server API</a></li>
+<li><a href="OrientJS-Database.html">Database API</a></li>
+<li><a href="OrientJS-Class.html">Class API</a></li>
+<li><a href="OrientJS-Index.html">Index API</a></li>
+<li><a href="OrientJS-Functions.html">Function API</a></li>
+<li><a href="OrientJS-Query.html">Queries</a></li>
+<li><a href="OrientJS-Transactions.html">Transactions</a></li>
+<li><a href="OrientJS-Events.html">Events</a></li>
+</ul>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<p>In order to use OrientJS, you need to install it on your system.  There are two methods available to you in doing this: you can install it from the Node.js repositories or you can download the latest source code and build it on your local system.</p>
+<p>Both methods require the Node.js package manager, NPM, and can install OrientJS as either a local or global package.</p>
+<h3 id="installing-from-the-nodejs-repositories"><a class="header" href="#installing-from-the-nodejs-repositories">Installing from the Node.js Repositories</a></h3>
+<p>When you call NPM and provide it with the specific package name, it connects to the Node.js repositories and downloads the source package for OrientJS.  It then installs the package on your system, either at a global level or in the <code>node_modules</code> folder of the current working directory.</p>
+<ul>
+<li>
+<p>To install OrientJS locally in <code>node_modules</code>, run the following command:</p>
+<pre>
+$ <code class="lang-sh userinput">npm install orientjs</code>
+</pre>
+</li>
+<li>
+<p>To install OrientJS globally, run the following command as root or an administrator:</p>
+<pre>
+# <code class="lang-sh userinput">npm install orientjs -g</code>
+</pre>
+</li>
+</ul>
+<p>Once NPM finishes the install, you can begin to develop database applications using OrientJS.</p>
+<h3 id="building-from-the-source-code"><a class="header" href="#building-from-the-source-code">Building from the Source Code</a></h3>
+<p>When building from source code, you need to download the driver directly from <a href="https://github.com/orientechnologies/orientjs">GitHub</a>, then run NPM against the branch you want to use or test.</p>
+<ol>
+<li>
+<p>Using Git, clone the package repository, then enter the new directory:</p>
+<pre>
+$ <code class="lang-sh userinput">git clone https://github.com/orientechnologies/orientjs.git</code>
+$ <code class="lang-sh userinput">cd orientjs</code>
+</pre>
+</li>
+<li>
+<p>When you clone the repository, Git automatically provides you with the current state of the <code>master</code> branch.  If you would like to work with another branch, like <code>develop</code> or test features on past releases, you need to check out the branch you want.  For instance,</p>
+<pre>
+$ <code class="lang-sh userinput">git checkout develop</code>
+</pre>
+</li>
+<li>
+<p>Once you've selected the branch you want to build, call NPM to handle the installation.</p>
+<ul>
+<li>
+<p>To install OrientJS locally, run the following command:</p>
+<pre>
+$ <code class="lang-sh userinput">npm install</code>
+</pre>
+</li>
+<li>
+<p>To install OrientJS globally, instead run this command as root or an administrator:</p>
+<pre>
+# <code class="lang-sh userinput">npm install -g</code>
+</pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Run the tests to make sure it works:</p>
+<pre>
+$ <code class="lang-sh userinput">npm test</code>
+</pre>
+</li>
+</ol>
+<p>By calling NPM without an argument, it builds the package in the current working directory, here your local copy of the OrientJS GitHub repository.</p>
+<h2 id="support"><a class="header" href="#support">Support</a></h2>
+<p>OrientJS aims to support version 2.0.0 and later.  It has been tested on both versions 2.0.x and 2.1 of OrientDB.  While it may work with earlier versions, it does not currently support them directly.</p>
+<h3 id="bonsai-structure"><a class="header" href="#bonsai-structure">Bonsai Structure</a></h3>
+<p>Currently, OrientJS does not support the tree-based <a href="../internals/RidBag.html">Bonsai Structure</a> feature in OrientDB, as it relies on additional network requests.</p>
+<p>What this means is that, by default, the result  of <code>JSON.stringify(record)</code> on a record with 119 edges would behave very differently from a record with more than 120 edges.  It can lead to unexpected results that may not appear at any point during development, but which will occur when your application runs in production</p>
+<p>For more information, see <a href="https://github.com/orientechnologies/orientdb/issues/2315">Issue 2315</a>.  Until this issue is addressed it is <strong>strongly recommended</strong> that you set the <code>RID_EMBEDDED_TO_SBTREEBONSAI_THRESHOLD</code> to a very large figure, such as 2147483647.</p>
+<h3 id="maximum-call-stack-size-exceeded"><a class="header" href="#maximum-call-stack-size-exceeded">Maximum Call Stack Size Exceeded</a></h3>
+<p>There is a maximum call stack size issue currently being worked on.  This occurs in queries over large record-sets (as in, in the range of 150,000 records), results in a <code>RangeError</code> exception.</p>
+<p>For more information, see <a href="https://github.com/orientechnologies/orientjs/issues/116">Issue 116</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../scala/Scala-Language.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../orientjs/OrientJS-Server.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../scala/Scala-Language.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../orientjs/OrientJS-Server.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
