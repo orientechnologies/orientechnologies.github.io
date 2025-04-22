@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Class - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="classes-in-the-graph-database"><a class="header" href="#classes-in-the-graph-database">Classes in the Graph Database</a></h1>
+<p>Classes are a concept drawn from the Object-Oriented Programming paradigm.  OrientDB defines it as a record-type.  In the Relational Model, it is nearest the concept of the table.  Classes can be schema-less, schema-full or mixed.  Classes can inherit from another class, shaping a tree of classes.  Due to inheritance, the subclass extends the parent class, inheriting all the attributes as though they were its own.</p>
+<p>Each class has one cluster defined as its default cluster, but it can support multiple clusters.  In this case by default, OrientDB writes new records in the default cluster, but reads always occur on defined clusters.  When you create a new class, it creates a default physical cluster with the same name as the class, changed to lowercase.</p>
+<p>In Graph Databases, the structure follows tow classes: <code>V</code> as the base class for vertices and <code>E</code> as the base class for edges.  OrientDB builds these classes automatically when you create the graph database.  In the event that you don't have these classes, create them, (see below).</p>
+<h2 id="working-with-vertex-and-edge-classes"><a class="header" href="#working-with-vertex-and-edge-classes">Working with Vertex and Edge Classes</a></h2>
+<p>While you can build graphs using <code>V</code> and <code>E</code> class instances, it is strongly recommended that you create custom types for vertices and edges.</p>
+<p>To create a custom vertex class (or type) use the <code>createVertexType(&lt;name&gt;)</code>:</p>
+<pre><code class="language-java">// Create Custom Vertex Class
+OrientVertexType account = graph.createVertexType("Account");
+</code></pre>
+<p>To create a vertex of that class <code>Account</code>, pass a string with the format <code>"class:&lt;name&gt;"</code>:</p>
+<pre><code class="language-java">// Add Vertex Instance
+Vertex v = graph.addVertex("class:Account");
+</code></pre>
+<p>In Blueprints, edges have the concept of labels used in distinguishing between edge types.  OrientDB binds the concept of edge labels to edge classes.  There is a similar method in creating custom edge types, using <code>createEdgeType(&lt;name)</code>:</p>
+<pre><code class="language-java">// Create Graph Database Instance
+OrientGraph graph = new OrientGraph("plocal:/tmp/db");
+
+// Create Custom Vertex Classes
+OrientVertexType accountVertex = graph.createVertexType("Account");
+OrientVertexType addressVertex = graph.createVertexType("Address");
+
+// Create Custom Edge Class
+OrientEdgeType livesedge = graph.createEdgeType("Lives");
+
+// Create Vertices
+Vertex account = graph.addVertex("class:Account");
+Vertex address = graph.addVertex("class:Address");
+
+// Create Edge
+Edge e = account.addEdge("Lives", address);
+</code></pre>
+<h2 id="inheritance-tree"><a class="header" href="#inheritance-tree">Inheritance Tree</a></h2>
+<p>Classes can extend other classes.  To create a class that extend a class different from <code>V</code> or <code>E</code>, pass the class name in the construction:</p>
+<pre><code class="language-java">graph.createVertexType(&lt;class&gt;, &lt;super-class&gt;); // Vertex
+graph.createEdgeType(&lt;class&gt;, &lt;super-class&gt;); // Edge
+</code></pre>
+<p>For instance, create the base class <code>Account</code>, then create two subclasses: <code>Provider</code> and <code>Customer</code>:</p>
+<pre><code class="language-java">// Create Vertex Base Class
+graph.createVertexType("Account");
+
+// Create Vertex Subclasses
+graph.createVertexType("Customer", "Account");
+graph.createVertexType("Provider", "Account");
+</code></pre>
+<h2 id="retrieve-types"><a class="header" href="#retrieve-types">Retrieve Types</a></h2>
+<p>Classes are polymorphic.  If you search for generic vertices, you also receive all custom vertex instances:</p>
+<pre><code class="language-java">// Retrieve Vertices
+Iterable&lt;Vertex&gt; allVertices = graph.getVertices();
+</code></pre>
+<p>To retrieve custom classes, use the <code>getVertexType()</code> and the <code>getEdgeType</code> methods.  For instance, retrieving from the <code>graph</code> database instance:</p>
+<pre><code class="language-java">OrientVertexType accountVertex = graph.getVertexType("Account");
+OrientEdgeType livesEdge = graph.getEdgeType("Lives");
+</code></pre>
+<h2 id="drop-persistent-types"><a class="header" href="#drop-persistent-types">Drop Persistent Types</a></h2>
+<p>To drop a persistent class, use the <code>dropVertexType()</code> and <code>dropVertexType()</code> methods.  For instance, dropping from the <code>graph</code> database instance:</p>
+<pre><code class="language-java">graph.dropVertexType("Address");
+graph.dropEdgeType("Lives");
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Graph-Schema.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Graph-Schema-Property.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Graph-Schema.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Graph-Schema-Property.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
