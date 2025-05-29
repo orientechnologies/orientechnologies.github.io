@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tutorial - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="java-api-tutorial-legacy"><a class="header" href="#java-api-tutorial-legacy">Java API Tutorial (LEGACY)</a></h1>
+<p>In the event that you have only used Relational database systems, you may find much of OrientDB very unfamiliar.  Given that OrientDB supports Document, Graph and Object Oriented modes, it requires that you use different Java API's, but there are some similarities between them.</p>
+<p>Similar to the JDBC, the TinkerPop produces the <a href="https://github.com/tinkerpop/blueprints">Blueprints API</a>, which provides support for basic operations on Graph databases.  Using the OrientDB adapter, you can operate on a database without needing to manage OrientDB classes.  This makes the resulting code more portable, given that Blueprints offers adapters for other Graph database system.</p>
+<p>Tweaking the database configuration itself requires that you use the OrientDB API's directly.  It is recommended in these situations that you use a mix, (that is, Blueprints when you can and the OrientDB API's where necessary).</p>
+<h2 id="orientdb-java-apis"><a class="header" href="#orientdb-java-apis">OrientDB Java API's</a></h2>
+<p>OrientDB provides three different Java API's that allow you to work with OrientDB.  Choose the Java API that supports the mode in which you want to work:</p>
+<ul>
+<li><a href="Graph-Database-Tinkerpop.html">Graph API</a></li>
+<li><a href="Document-Database.html">Document API</a></li>
+<li><a href="Object-Database.html">Object API</a></li>
+</ul>
+<blockquote>
+<p>For more information on the API's in general, see <a href="Java-API.html">Java API</a></p>
+</blockquote>
+<h3 id="use-case-graph-api"><a class="header" href="#use-case-graph-api">Use Case: Graph API</a></h3>
+<p>Consider as an example setting up a Graph Database using the Java API with Blueprint.</p>
+<h4 id="connecting-to-a-graph-database"><a class="header" href="#connecting-to-a-graph-database">Connecting to a Graph Database</a></h4>
+<p>In order to use the Graph API, you need to create an <code>OrientGraph</code> object first:</p>
+<pre><code class="language-java">import com.tinkerpop.blueprints.impls.orient.OrientGraph;
+
+OrientGraph graph = new OrientGraph("embedded:./test",
+        "username", "password");
+</code></pre>
+<p>When your application runs, these lines initialize the <code>graph</code> object to your OrientDB database using the Graph API.</p>
+<h4 id="inserting-vertices"><a class="header" href="#inserting-vertices">Inserting Vertices</a></h4>
+<p>While you can work with the generic vertex class <code>V</code>, you gain much more power by defining custom types for vertices.  For instance,</p>
+<pre><code class="language-java">graph.createVertexType("Person");
+graph.createVertexType("Address");
+</code></pre>
+<p>The Blueprint adapter for OrientDB is thread-safe and where necessary automatically creates transactions.  That is, it creates a transaction at the first operation, in the event that you have not yet explicitly started one.  You have to specify where these transactions end, for commits or rollbacks.</p>
+<p>To add vertices into the database with the Blueprints API:</p>
+<pre><code class="language-java">Vertex vPerson = graph.addVertex("class:Person");
+vPerson.setProperty("firstName", "John");
+vPerson.setProperty("lastName", "Smith");
+
+Vertex vAddress = graph.addVertex("class:Address");
+vAddress.setProperty("street", "Van Ness Ave.");
+vAddress.setProperty("city", "San Francisco");
+vAddress.setProperty("state", "California");
+</code></pre>
+<p>When using the Blueprint API, keep in mind that the specific syntax to use is <code>class:&lt;class-name&gt;</code>.  You must use this syntax when creating an object in order to specify its class.  Note that this is not mandatory.  It is possible to specify a null value, (which means that the vertex uses the default <code>V</code> vertex class, as it is the super-class for all vertices in OrientDB).  For instance,</p>
+<pre><code class="language-java">Vertex vPerson = graph.addVertex(null);
+</code></pre>
+<p>However, when creating vertices in this way, you cannot distinguish them from other vertices in a query.</p>
+<h4 id="inserting-edges"><a class="header" href="#inserting-edges">Inserting Edges</a></h4>
+<p>While you can work with the generic edge class <code>E</code>, you gain much more power by defining custom types for edges.  The method for adding edges is similar to that of vertices:</p>
+<pre><code class="language-java">OrientEdge eLives = graph.addEdge(null, vPerson, vAddress, "lives");
+</code></pre>
+<p>OrientDB binds the Blueprint label concept to the edge class.  That is, you can create an edge of the class <code>lives</code> by passing it as a label or as a class name.</p>
+<pre><code class="language-java">OrientEdge eLives = graph.addEdge("class:lives", vPerson, vAddress, null);
+</code></pre>
+<p>You have now created:</p>
+<pre><code>[John Smith:Person] --[lives]--&gt; [Van Ness Ave:Address]
+</code></pre>
+<p>Bear in mind that, in this example, you have used a partially schema-full mode, given that you defined the vertex types, but not their properties.  By default, OrientDB dynamically accepts everything and works in a schema-less mode.</p>
+<h3 id="use-case-sql-queries"><a class="header" href="#use-case-sql-queries">Use Case: SQL Queries</a></h3>
+<p>While the Tinkerpop interfaces do allow you to execute fluent queries in SQL or Gremlin, you can also utilize the power of OrientDB SQL through the <code>.command()</code> method.  For instance,</p>
+<pre><code class="language-java">for (Vertex v : (Iterable&lt;Vertex&gt;) graph.command(
+        new OCommandSQL(
+		    "SELECT EXPAND(OUT('bough')) FROM Customer"
+          + "WHERE name='Jay'")).execute()) {
+    System.out.println("- Bought: " + v);
+}
+</code></pre>
+<p>In addition to queries, you can also execute any SQL command, such as <a href="../sql/SQL-Create-Vertex.html"><code>CREATE VERTEX</code></a>, <a href="../sql/SQL-Update.html"><code>UPDATE</code></a>, or <a href="../sql/SQL-Delete-Vertex.html"><code>DELETE VERTEX</code></a>.  For instance,</p>
+<pre><code class="language-java">int modified = graph.command(
+        new OCommandSQL(
+		    "UPDATE Customer SET local = TRUE" 
+		  + "WHERE 'Rome' IN out('lives').name")).execute());
+</code></pre>
+<p>Running this command sets a new property called <code>local</code> to <code>TRUE</code> on all instances in the class <code>Customer</code> where these customers live in Rome.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Graph-Database-Tinkerpop.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Graph-VE.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Graph-Database-Tinkerpop.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Graph-VE.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

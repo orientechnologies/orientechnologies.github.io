@@ -1,0 +1,645 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lucene Full Text - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="lucene-fulltext-index"><a class="header" href="#lucene-fulltext-index">Lucene FullText Index</a></h1>
+<p>In addition to the standard FullText Index, which uses the SB-Tree index algorithm, you can also create FullText indexes using the <a href="http://lucene.apache.org/">Lucene Engine</a> .
+Apache LuceneTM is a high-performance, full-featured text search engine library written entirely in Java.
+Check the <a href="http://lucene.apache.org/core/6_6_0/index.html">Lucene documentation</a> for a full overview of its capabilities.</p>
+<h2 id="how-lucenes-works"><a class="header" href="#how-lucenes-works">How Lucene's works?</a></h2>
+<p>Let's look at a sample corpus of five documents:</p>
+<ul>
+<li>My sister is coming for the holidays.</li>
+<li>The holidays are a chance for family meeting.</li>
+<li>Who did your sister meet?</li>
+<li>It takes an hour to make fudge.</li>
+<li>My sister makes awesome fudge.</li>
+</ul>
+<p>What does Lucene do? Lucene is a full text search library.
+Search has two principal stages: indexing and retrieval.</p>
+<p>During indexing, each document is broken into words, and the list of documents containing each word is stored in a list called the <em>postings list</em>.
+The posting list for the word <em>my</em> is:</p>
+<p><em>my</em> --&gt; 1,5</p>
+<p>Posting list for others terms:</p>
+<p><em>fudge</em> --&gt; 4,5</p>
+<p><em>sister</em> --&gt; 1,2,3,5</p>
+<p><em>fudge</em> --&gt; 4,5</p>
+<p>The index consists of all the posting lists for the words in the corpus.
+Indexing must be done before retrieval, and we can only retrieve documents that were indexed.</p>
+<p>Retrieval is the process starting with a query and ending with a ranked list of documents.
+Say the query is "my fudge".
+In order to find matches for the query, we break it into the individual words, and go to the posting lists.
+The full list of documents containing the keywords is [1,4,5].
+Note that the query is broken into words (terms) and each term is matched with the terms in the index.
+Lucene's default operator is <em>OR</em>, so it retrieves the documents tha contain <em>my</em> <em>OR</em> <em>fudge</em>.
+If we want to retrieve documents that contain both <em>my</em> and <em>fudge</em>, rewrite the query: "+my +fudge".</p>
+<p>Lucene doesn't work as a LIKE operator on steroids, it works on single terms. Terms are produced analyzing the provided text, so the right analyzer should be configured.
+On the other side, it offers a complete query language, well documented <a href="https://lucene.apache.org/core/6_6_0/queryparser/org/apache/lucene/queryparser/classic/QueryParser.html">here</a>:</p>
+<h2 id="index-creation"><a class="header" href="#index-creation">Index creation</a></h2>
+<p>To create an index based on Lucene</p>
+<pre><code class="lang-sql userinput">CREATE INDEX <name> ON <class-name> (prop-names) FULLTEXT ENGINE LUCENE [{json metadata}]</code></pre>
+<p>The following SQL statement will create a FullText index on the property <code>name</code> for the class <code>City</code>, using the Lucene Engine.</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name) FULLTEXT ENGINE LUCENE</code>
+</pre>
+<p>Indexes can also be created on <em>n</em>-properties.  For example, create an index on the properties <code>name</code> and <code>description</code> on the class <code>City</code>.</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name_description ON City(name, description)
+          FULLTEXT ENGINE LUCENE</code></pre>
+<p>When multiple properties should be indexed, define a <em>single multi-field index</em> over the class.
+A single multi-field index needs less resources, such as file handlers.
+Moreover, it is easy to write better Lucene queries.
+The default analyzer used by OrientDB when a Lucene index is created is the <a href="https://lucene.apache.org/core/6_6_0/core/org/apache/lucene/analysis/standard/StandardAnalyzer.html">StandardAnalyzer</a>.
+The StandardAnalyzer usually works fine with western languages, but Lucene offers analyzer for different languages and use cases.</p>
+<h2 id="two-minutes-tutorial"><a class="header" href="#two-minutes-tutorial">Two minutes tutorial</a></h2>
+<p>Open studio or console and create a sample dataset:</p>
+<pre><code class="lang-sql userinput">CREATE CLASS Item;
+CREATE PROPERTY Item.text STRING;
+CREATE INDEX Item.text ON Item(text) FULLTEXT ENGINE LUCENE;
+INSERT INTO Item (text) VALUES ('My sister is coming for the holidays.');
+INSERT INTO Item (text) VALUES ('The holidays are a chance for family meeting.');
+INSERT INTO Item (text) VALUES ('Who did your sister meet?');
+INSERT INTO Item (text) VALUES ('It takes an hour to make fudge.');
+INSERT INTO Item (text) VALUES ('My sister makes awesome fudge.');
+</code></pre>
+<p>Search all documents that contain <em>sister</em>:</p>
+<pre><code class="lang-sql userinput">SELECT FROM Item WHERE SEARCH_CLASS("sister") = true</code></pre>
+<p>Search all documents that contain <em>sister</em> <em>AND</em> <em>coming</em>:</p>
+<pre><code class="lang-sql userinput">SELECT FROM Item WHERE SEARCH_CLASS("+sister +coming") = true</code></pre>
+<p>Search all documents that contain <em>sister</em> but <em>NOT</em> <em>coming</em>:</p>
+<pre><code class="lang-sql userinput">SELECT FROM Item WHERE SEARCH_CLASS("+sister -coming") = true</code></pre>
+<p>Search all documents that contain the phrase <em>sister meet</em>:</p>
+<pre><code class="lang-sql userinput">SELECT FROM Item WHERE SEARCH_CLASS(' "sister meet" ') = true</code></pre>
+<p>Search all documents that contain terms starting with <em>meet</em>:</p>
+<pre><code class="lang-sql userinput">SELECT FROM Item WHERE SEARCH_CLASS('meet*') = true</code></pre>
+<p>To better understand how the query parser work, read carefully the official documentation and play with the above documents.</p>
+<h2 id="customize-analyzers"><a class="header" href="#customize-analyzers">Customize Analyzers</a></h2>
+<p>In addition to the StandardAnalyzer, full text indexes can be configured to use different analyzer by the <code>METADATA</code> operator through <a href="../sql/SQL-Create-Index.html"><code>CREATE INDEX</code></a>.</p>
+<p>Configure the index on <code>City.name</code> to use the <code>EnglishAnalyzer</code>:</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name)
+            FULLTEXT ENGINE LUCENE METADATA {
+                "analyzer": "org.apache.lucene.analysis.en.EnglishAnalyzer"
+            }</code></pre>
+<p>Configure the index on <code>City.name</code> to use different analyzers for indexing and querying.</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name)
+            FULLTEXT ENGINE LUCENE METADATA {
+                "index": "org.apache.lucene.analysis.en.EnglishAnalyzer",
+                "query": "org.apache.lucene.analysis.standard.StandardAnalyzer"
+          }</code></pre>
+<p><code>EnglishAnalyzer</code> will be used to analyze text while indexing and the <code>StandardAnalyzer</code> will be used to analyze query text.</p>
+<p>A very detailed configuration, on multi-field index configuration, could be:</p>
+<pre><code class="lang-sql userinput">CREATE INDEX Song.fulltext ON Song(name, lyrics, title, author, description)
+            FULLTEXT ENGINE LUCENE METADATA {
+                "default": "org.apache.lucene.analysis.standard.StandardAnalyzer",
+                "index": "org.apache.lucene.analysis.core.KeywordAnalyzer",
+                "query": "org.apache.lucene.analysis.standard.StandardAnalyzer",
+                "name_index": "org.apache.lucene.analysis.standard.StandardAnalyzer",
+                "name_query": "org.apache.lucene.analysis.core.KeywordAnalyzer",
+                "lyrics_index": "org.apache.lucene.analysis.en.EnglishAnalyzer",
+                "title_index": "org.apache.lucene.analysis.en.EnglishAnalyzer",
+                "title_query": "org.apache.lucene.analysis.en.EnglishAnalyzer",
+                "author_query": "org.apache.lucene.analysis.core.KeywordAnalyzer",
+                "description_index": "org.apache.lucene.analysis.standard.StandardAnalyzer",
+                "description_index_stopwords": [
+                  "the",
+                  "is"
+                ]
+            }</code></pre>
+<p>With this configuration, the underlying Lucene index will works in different way on each field:</p>
+<ul>
+<li><em>name</em>: indexed with StandardAnalyzer, searched with KeywordAnalyzer (it's a strange choice, but possible)</li>
+<li><em>lyrics</em>: indexed with EnglishAnalyzer, searched with default query analyzer StandardAnalyzer</li>
+<li><em>title</em>:  indexed and searched with EnglishAnalyzer</li>
+<li><em>author</em>: indexed and searched with KeywordAnalyzer</li>
+<li><em>description</em>: indexed with StandardAnalyzer with a given set of stop-words that overrides the internal set</li>
+</ul>
+<p>Analysis is the foundation of Lucene. By default the StandardAnalyzer removes english stop-words and punctuation and lowercase the generated terms:</p>
+<p><em>The holidays are a chance for family meeting!</em></p>
+<p>Would produce</p>
+<ul>
+<li><em>holidays</em></li>
+<li><em>are</em></li>
+<li><em>chance</em></li>
+<li><em>for</em></li>
+<li><em>family</em></li>
+<li><em>meeting</em></li>
+</ul>
+<p>Each analyzer has its set of stop-words and tokenize the text in a different way.
+Read the full (documentation)[http://lucene.apache.org/core/6_6_0/].</p>
+<h2 id="query-parser"><a class="header" href="#query-parser">Query parser</a></h2>
+<p>It is possible to configure some behavior of the Lucene <a href="https://lucene.apache.org/core/6_6_0/queryparser/org/apache/lucene/queryparser/classic/QueryParser.html">query parser</a>
+Query parser's behavior can be configured at index creation time and overridden at runtime.</p>
+<h3 id="allow-leading-wildcard"><a class="header" href="#allow-leading-wildcard">Allow Leading Wildcard</a></h3>
+<p>Lucene by default doesn't support leading wildcard: <a href="https://wiki.apache.org/lucene-java/LuceneFAQ#What_wildcard_search_support_is_available_from_Lucene.3F">Lucene wildcard support</a></p>
+<p>It is possible to override this behavior with a dedicated flag on meta-data:</p>
+<pre><code class="language-json">{
+  "allowLeadingWildcard": true
+}
+</code></pre>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name)
+            FULLTEXT ENGINE LUCENE METADATA {
+                "allowLeadingWildcard": true
+            }</code></pre>
+<p>Use this flag carefully, as stated in the Lucene FAQ:</p>
+<blockquote>
+<p>Note that this can be an expensive operation: it requires scanning the list of tokens in the index in its entirety to look for those that match the pattern.</p>
+</blockquote>
+<h3 id="disable-lower-case-on-terms"><a class="header" href="#disable-lower-case-on-terms">Disable lower case on terms</a></h3>
+<p>Lucene's QueryParser applies a lower case filter on expanded queries by default. It is possible to override this behavior with a dedicated flag on meta-data:</p>
+<pre><code class="language-json">{
+  "lowercaseExpandedTerms": false
+}
+</code></pre>
+<p>It is useful when used in pair with keyword analyzer:</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name)
+            FULLTEXT ENGINE LUCENE METADATA {
+              "lowercaseExpandedTerms": false,
+              "default" : "org.apache.lucene.analysis.core.KeywordAnalyzer"
+            }</code></pre>
+<p>With <em>lowercaseExpandedTerms</em> set to false, these two queries will return different results:</p>
+<pre><code class="lang-sql userinput">SELECT from Person WHERE SEARCH_CLASS("NAME") = true
+
+SELECT from Person WHERE WHERE SEARCH_CLASS("name") = true
+</code></pre>
+<h2 id="querying-lucene-fulltext-indexes"><a class="header" href="#querying-lucene-fulltext-indexes">Querying Lucene FullText Indexes</a></h2>
+<p>OrientDB 3.0.x introduced search functions: <em>SEARCH_CLASS</em>, <em>SEARCH_FIELDS</em>, <em>SEARCH_INDEX</em>, <em>SEARCH_MORE</em>
+Every function accepts as last, optional, parameter a JSON with additional configuration.</p>
+<h3 id="search_class"><a class="header" href="#search_class">SEARCH_CLASS</a></h3>
+<p>The best way to use the search capabilities of OrientDB is to define a single multi-fields index and use the <em>SEARCH_CLASS</em> function.
+In case more than one full-text index are defined over a class, an error is raised in case of <em>SEARCH_CLASS</em> invocation.</p>
+<p>Suppose to have this index</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.fulltext ON City(name, description) FULLTEXT ENGINE LUCENE </code></pre>
+<p>A query that retrieve cities with the name starting with cas and description containing the word beautiful:</p>
+<pre><code class="lang-sql userinput">SELECT FROM City WHERE SEARCH_CLASS("+name:cas*  +description:beautiful") = true</code></pre>
+<p>The function accepts metadata JSON as second parameter:</p>
+<pre><code class="lang-sql userinput">SELECT FROM City WHERE SEARCH_CLASS("+name:cas*  +description:beautiful", {
+    "allowLeadingWildcard": true ,
+    "lowercaseExpandedTerms": false,
+    "boost": {
+        "name": 2
+    },
+    "highlight": {
+        "fields": ["name"],
+        "start": "<em>",
+        "end": "</em>"
+    }
+}) = true
+</code></pre>
+<p>The query shows query parser's configuration overrides, boost of field <em>name</em> with highlight. Highlight and boost will be explained later.</p>
+<h3 id="search_more"><a class="header" href="#search_more">SEARCH_MORE</a></h3>
+<p>OrientDB exposes the Lucene's <em>more like this</em> capability with a dedicated function.</p>
+<p>The first parameter is the array of RID of elements to be used to calculate similarity, the second parameter the usual metadata JSON used to tune the query behaviour.</p>
+<pre><code class="lang-sql userinput">SELECT FROM City WHERE SEARCH_MORE([#25:2, #25:3],{'minTermFreq':1, 'minDocFreq':1} ) = true</code></pre>
+<p>It is possible to use a query to gather RID of documents to be used to calculate similarity:</p>
+<pre><code class="lang-sql userinput">SELECT FROM City
+    let $a=(SELECT @rid FROM City WHERE name = 'Rome')
+    WHERE SEARCH_MORE( $a, { 'minTermFreq':1, 'minDocFreq':1} ) = true</code></pre>
+<p>Lucene's MLT has a lot of parameter, and all these are exposed through the metadata JSON: http://lucene.apache.org/core/6_6_0/queries/org/apache/lucene/queries/mlt/MoreLikeThis.html</p>
+<ul>
+<li><em>fieldNames</em>: array of field's names to be used to extract content</li>
+<li><em>maxQueryTerms</em></li>
+<li><em>minDocFreq</em></li>
+<li><em>maxDocFreq</em></li>
+<li><em>minTermFreq</em></li>
+<li><em>boost</em></li>
+<li><em>boostFactor</em></li>
+<li><em>maxWordLen</em></li>
+<li><em>minWordLen</em></li>
+<li><em>maxNumTokensParsed</em></li>
+<li><em>stopWords</em></li>
+</ul>
+<h3 id="query-parsers-runtime-configuration"><a class="header" href="#query-parsers-runtime-configuration">Query parser's runtime configuration</a></h3>
+<p>It is possible to override the query parser's  configuration given at creation index time at runtime passing a json:</p>
+<pre><code class="lang-sql userinput">SELECT from Person WHERE SEARCH_CLASS("bob",{
+        "allowLeadingWildcard": true ,
+        "lowercaseExpandedTerms": false
+    } ) = true</code></pre>
+<p>The same can be done for query analyzer, overriding the configuration given at index creation's time:</p>
+<pre><code class="lang-sql userinput">SELECT from Person WHERE SEARCH_CLASS("bob",{
+        "customAnalysis": true ,
+        "query": "org.apache.lucene.analysis.standard.StandardAnalyzer",
+        "name_query": "org.apache.lucene.analysis.en.EnglishAnalyzer"
+    } ) = true
+</code></pre>
+<p>The <em>customAnalysis</em> flag is mandatory to enable the runtime configuration of query analyzers.
+The runtime configuration is <em>per query</em> and it isn't stored nor reused for a subsequent query.
+The custom configuration can be used with all the functions.</p>
+<h3 id="search_index"><a class="header" href="#search_index">SEARCH_INDEX</a></h3>
+<p>The <em>SEARCH_INDEX</em> function allows to execute the query on a single index. It is useful if more than one index are defined over a class.</p>
+<pre><code class="lang-sql userinput">SELECT FROM City WHERE SEARCH_INDEX("City.name", "cas*") = true</code></pre>
+<p>The function accepts a JSON as third parameter, as for <em>SEARCH_CLASS</em>.</p>
+<h3 id="search_fields"><a class="header" href="#search_fields">SEARCH_FIELDS</a></h3>
+<p>The <em>SEARCH_FIELDS</em> function allows to execute query over the index that is defined over one or more fields:</p>
+<pre><code class="lang-sql userinput">SELECT FROM City WHERE SEARCH_FIELDS(["name", "description"], "name:cas* description:beautiful") = true</code></pre>
+<p>The function accepts a JSON as third parameter, as for <em>SEARCH_CLASS</em>.</p>
+<h3 id="numeric-and-date-range-queries"><a class="header" href="#numeric-and-date-range-queries">Numeric and date range queries</a></h3>
+<p>If the index is defined over a numeric field (INTEGER, LONG, DOUBLE) or a date field (DATE, DATETIME), the engine supports <a href="http://lucene.apache.org/core/6_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Range_Searches">range queries</a>
+Suppose to have a <code>City</code> class with a multi-field Lucene index defined:</p>
+<pre><code class="lang-sql userinput">CREATE CLASS CITY EXTENDS V
+CREATE PROPERTY CITY.name STRING
+CREATE PROPERTY CITY.size INTEGER
+CREATE INDEX City.name ON City(name,size) FULLTEXT ENGINE LUCENE
+</code></pre>
+<p>Then query using ranges:</p>
+<pre><code class="lang-sql userinput">SELECT FROM City WHERE SEARCH_CLASS('name:cas* AND size:[15000 TO 20000]') = true</code></pre>
+<p>Ranges can be applied to DATE/DATETIME field as well. Create a Lucene index over a property:</p>
+<pre><code class="lang-sql userinput">CREATE CLASS Article EXTENDS V
+CREATE PROPERTY Article.createdAt DATETIME
+CREATE INDEX Article.createdAt  ON Article(createdAt) FULLTEXT ENGINE LUCENE
+</code></pre>
+<p>Then query to retrieve articles published only in a given time range:</p>
+<pre><code class="lang-sql userinput">SELECT FROM Article WHERE SEARCH_CLASS('[201612221000 TO 201612221100]') =true</code></pre>
+<h3 id="retrieve-the-score"><a class="header" href="#retrieve-the-score">Retrieve the Score</a></h3>
+<p>When the lucene index is used in a query, the results set carries a context variable for each record representing the score.
+To display the score add <code>$score</code> in projections.</p>
+<pre>
+<code class="lang-sql userinput">SELECT *,$score FROM V WHERE name LUCENE "test*"</code>
+</pre>
+<h3 id="highlighting"><a class="header" href="#highlighting">Highlighting</a></h3>
+<p>OrientDB uses the Lucene's highlighter. Highlighting can be configured using the metadata JSON. The highlighted content of a field is returned in a dedicated field suffixed with <em>_hl</em>:</p>
+<pre>
+<code class="lang-sql userinput">SELECT name, $name_hl, description, $description_hl FROM City
+WHERE SEARCH_CLASS("+name:cas*  +description:beautiful", {
+    "highlight": {
+        "fields": ["name", "description"],
+        "start": "<em>",
+        "end": "</em>"
+    }
+}) = true</code>
+</pre>
+<p>Parameters</p>
+<ul>
+<li><em>fields</em>: array of field names to be highlighted</li>
+<li><em>start</em>: start delimiter for highlighted text (default &lt;B&gt;)</li>
+<li><em>end</em>: end delimiter for highlighted text (default &lt;/B&gt;)</li>
+<li><em>maxNumFragments</em>: maximum number of text's fragments to highlight</li>
+</ul>
+<h3 id="sorting"><a class="header" href="#sorting">Sorting</a></h3>
+<p>Sorting uses <a href="https://lucene.apache.org/core/6_5_0/core/org/apache/lucene/document/SortedDocValuesField.html">SortedDocValuesField</a> which for too large string can cause <code>DocValuesField  is too large, must be &lt;= 32766</code> exception.</p>
+<p>In order to disable sorting add the configuration on the metadata ad index creation (From OrientDB 3.0.24).</p>
+<p>For all fields:</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name)
+            FULLTEXT ENGINE LUCENE METADATA {
+                "*_index_sorted": false
+            }</code></pre>
+<p>For single field:</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name)
+            FULLTEXT ENGINE LUCENE METADATA {
+                "name_index_sorted": false
+            }</code></pre>
+<p>Documents retrieved by a search call are ordered by their score. It is possible to configure the way the document are sorted.
+Read carefully the official documentation about sorting : https://lucene.apache.org/core/6_6_1/core/org/apache/lucene/search/Sort.html</p>
+<pre>
+<code class="lang-sql userinput">SELECT name, description, size FROM City
+WHERE SEARCH_CLASS("+name:cas*  +description:beautiful", {
+    "sort": [ { 'field': 'size', reverse:true, type:'INT' }]
+}) = true</code>
+</pre>
+<p>Sort over multiple fields is possible:</p>
+<pre>
+<code class="lang-sql userinput">SELECT name, description, size FROM City
+WHERE SEARCH_CLASS("+name:cas*  +description:beautiful", {
+    "sort": [
+        { 'field': 'size', reverse:true, type:'INT' },
+        { 'field': 'name', reverse:false, type:'STRING' },
+        { reverse:false, type:'DOC' },
+        ]
+}) = true</code>
+</pre>
+<p>Sort configuration:</p>
+<ul>
+<li><em>field</em>: is the field name. Could be absent only if the sort type is DOC or INDEX</li>
+<li><em>reverse</em>: if set to true, will sort for the given field in reverse order</li>
+<li><em>type</em>: look to https://lucene.apache.org/core/6_6_1/core/org/apache/lucene/search/SortField.Type.html</li>
+</ul>
+<p><em>CUSTOM</em> type is not supported</p>
+<h3 id="cross-class-search-enterprise-edition"><a class="header" href="#cross-class-search-enterprise-edition">Cross class search (Enterprise Edition)</a></h3>
+<p>Bundled with the enterprise edition there's the <em>SEARCH_CROSS</em> function that is able to search over all the Lucene indexes defined on a database</p>
+<p>Suppose to define two indexes:</p>
+<pre><code class="lang-sql userinput">CREATE INDEX Song.title ON Song (title,author) FULLTEXT ENGINE LUCENE METADATA
+CREATE INDEX Author.name on Author(name,score) FULLTEXT ENGINE LUCENE METADATA
+</code></pre>
+<p>Searching for a term on each class implies a lot of different queries to be aggregated.</p>
+<p>The <em>SEARCH_CLASS</em> function automatically performs the given query on each full-text index configured inside the database.</p>
+<pre><code class="lang-sql userinput">SELECT  EXPAND(SEARCH_CROSS('beautiful'))</code></pre>
+<p>The query will be execute over all the indexes configured on each field.
+It is possible to search over a given field of a certain class, just qualify the field names with their class name:</p>
+<pre><code class="lang-sql userinput">SELECT  EXPAND(SEARCH_CROSS('Song.title:beautiful  Author.name:bob'))</code></pre>
+<p>Another way is to use the metadata field <em>_CLASS</em> present in every index:</p>
+<pre><code class="lang-sql userinput">SELECT expand(SEARCH_CROSS('(+_CLASS:Song +title:beautiful) (+_CLASS:Author +name:bob)') )</code></pre>
+<p>All the options of a Lucene's query are allowed: inline boosting, phrase queries, proximity etc.</p>
+<p>The function accepts a metadata JSON as second parameter:</p>
+<pre><code class="lang-sql userinput">SELECT  EXPAND(SEARCH_CROSS('Author.name:bob Song.title:*tain', {"
+   "allowLeadingWildcard" : true,
+   "boost": {
+        "Author.name": 2.0
+        }
+   }
+)</code></pre>
+<p>Highlight isn't supported yet.</p>
+<h2 id="lucene-writer-fine-tuning-expert"><a class="header" href="#lucene-writer-fine-tuning-expert">Lucene Writer fine tuning (expert)</a></h2>
+<p>It is possible to fine tune the behaviour of the underlying Lucene's IndexWriter</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name)
+    FULLTEXT ENGINE LUCENE METADATA {
+        "directory_type": "nio",
+        "use_compound_file": false,
+        "ram_buffer_MB": "16",
+        "max_buffered_docs": "-1",
+        "max_buffered_delete_terms": "-1",
+        "ram_per_thread_MB": "1024",
+        "default": "org.apache.lucene.analysis.standard.StandardAnalyzer"
+    }</code></pre>
+<ul>
+<li><em>directory_type</em>: configure the access type to the Lucene's index
+<ul>
+<li><em>nio</em> (<em>default)</em>: the index is opened with <em>NIOFSDirectory</em></li>
+<li><em>mmap</em>:  the index is opened with <em>MMapDirectory</em></li>
+<li><em>ram</em>: index will be created in memory with <em>RAMDirectory</em></li>
+</ul>
+</li>
+<li><em>use_compound_file</em>: default is false</li>
+<li><em>ram_buffer_MB</em>: size of the document's buffer in MB, default value is 16 MB (which means flush when buffered docs consume approximately 16 MB RAM)</li>
+<li><em>max_buffered_docs</em>: size of the document's buffer in number of docs, disabled by default (because IndexWriter flushes by RAM usage by default)</li>
+<li><em>max_buffered_delete_terms</em>: disabled by default (because IndexWriter flushes by RAM usage by default).</li>
+<li><em>ram_per_thread_MB</em>: default value is 1945</li>
+</ul>
+<p>For a detailed explanation of config parameters and IndexWriter behaviour</p>
+<ul>
+<li>indexWriterConfig : https://lucene.apache.org/core/6_6_0/core/org/apache/lucene/index/IndexWriterConfig.html</li>
+<li>indexWriter: https://lucene.apache.org/core/6_6_0/core/org/apache/lucene/index/IndexWriter.html</li>
+</ul>
+<h2 id="index-lifecycle"><a class="header" href="#index-lifecycle">Index lifecycle</a></h2>
+<p>Lucene indexes are lazy. If the index is in idle mode, no reads and no writes, it will be closed.
+Intervals are fully configurable.</p>
+<ul>
+<li><em>flushIndexInterval</em>: flushing index interval in milliseconds, default to 20000 (10s)</li>
+<li><em>closeAfterInterval</em>: closing index interval in milliseconds, default to 120000 (12m)</li>
+<li><em>firstFlushAfter</em>: first flush time in milliseconds, default to 10000 (10s)</li>
+</ul>
+<p>To configure the index lifecycle, just pass the parameters in the JSON of metadata:</p>
+<pre><code class="lang-sql userinput">CREATE INDEX City.name ON City(name) FULLTEXT ENGINE LUCENE METADATA
+{
+  "flushIndexInterval": 200000,
+  "closeAfterInterval": 200000,
+  "firstFlushAfter": 20000
+}
+</code></pre>
+<h2 id="create-index-using-the-java-api"><a class="header" href="#create-index-using-the-java-api">Create index using the Java API</a></h2>
+<p>The FullText Index with the Lucene Engine is configurable through the Java API.</p>
+<pre><code class="lang-java">OSchema schema = databaseDocumentTx.getMetadata().getSchema();
+    OClass oClass = schema.createClass("Foo");
+    oClass.createProperty("name", OType.STRING);
+    oClass.createIndex("City.name", "FULLTEXT", null, null, "LUCENE", new String[] { "name"});
+</code></pre>
+<h3 id="the-lucene-operator-deprecated"><a class="header" href="#the-lucene-operator-deprecated">The LUCENE operator (deprecated)</a></h3>
+<p><em>NOTE</em>: <em>LUCENE</em> operator is translated to <em>SEARCH_FIELDS</em> function, but it doesn't support the metadata JSON</p>
+<p>You can query the Lucene FullText Index using the custom operator <code>LUCENE</code> with the <a href="http://lucene.apache.org/core/6_3_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description">Query Parser Syntax</a> from the Lucene Engine.</p>
+<pre>
+<code class='lang-sql userinput'>SELECT FROM V WHERE name LUCENE "test*"</code>
+</pre>
+<p>This query searches for <code>test</code>, <code>tests</code>, <code>tester</code>, and so on from the property <code>name</code> of the class <code>V</code>.
+The query can use proximity operator <em>~</em>, the required (<em>+</em>) and prohibit (<em>-</em>) operators, phrase queries, regexp queries:</p>
+<pre>
+<code class='lang-sql userinput'>SELECT FROM Article WHERE content LUCENE "(+graph -rdbms) AND +cloud"</code>
+</pre>
+<h3 id="working-with-multiple-fields-deprecated"><a class="header" href="#working-with-multiple-fields-deprecated">Working with multiple fields (deprecated)</a></h3>
+<p><em>NOTE</em>: define a single Lucene index on the class and use <em>SEARCH_CLASS</em> function</p>
+<p>In addition to the standard Lucene query above, you can also query multiple fields.  For example,</p>
+<pre>
+<code class="lang-sql userinput">SELECT FROM Class WHERE [prop1, prop2] LUCENE "query"</code>
+</pre>
+<p>In this case, if the word <code>query</code> is a plain string, the engine parses the query using <a href="http://lucene.apache.org/core/6_3_0/queryparser/org/apache/lucene/queryparser/classic/MultiFieldQueryParser.html">MultiFieldQueryParser</a> on each indexed field.</p>
+<p>To execute a more complex query on each field, surround your query with parentheses, which causes the query to address specific fields.</p>
+<pre>
+<code class="lang-sql userinput">SELECT FROM Article WHERE [content, author] LUCENE "(content:graph AND author:john)"</code>
+</pre>
+<p>Here, the engine parses the query using the <a href="http://lucene.apache.org/core/6_3_0/queryparser/org/apache/lucene/queryparser/classic/QueryParser.html">QueryParser</a></p>
+<h2 id="creating-a-manual-lucene-index-deprecated"><a class="header" href="#creating-a-manual-lucene-index-deprecated">Creating a Manual Lucene Index (deprecated)</a></h2>
+<p><em>NOTE</em>: avoid manual Lucene index</p>
+<p>The Lucene Engine supports index creation without the need for a class.</p>
+<p><strong>Syntax</strong>:</p>
+<pre>
+<code class="lang-sql userinput">CREATE INDEX <name> FULLTEXT ENGINE LUCENE  [<key-type>] [METADATA {<metadata>}]
+</code>
+</pre>
+<p>For example, create a manual index using the <a href="../sql/SQL-Create-Index.html"><code>CREATE INDEX</code></a> command:</p>
+<pre>
+<code class="lang-sql userinput">CREATE INDEX Manual FULLTEXT ENGINE LUCENE STRING, STRING</code>
+</pre>
+<p>Once you have created the index <code>Manual</code>, you can insert values in index using the <a href="../sql/SQL-Insert.html"><code>INSERT INTO INDEX:...</code></a> command.</p>
+<pre>
+<code class="lang-sql userinput">INSERT INTO INDEX:Manual (key, rid) VALUES(['Enrico', 'Rome'], #5:0)</code>
+</pre>
+<p>You can then query the index through <a href="../sql/SQL-Query.html"><code>SELECT...FROM INDEX:</code></a>:</p>
+<pre>
+<code class="lang-sql userinput">SELECT FROM INDEX:Manual WHERE key LUCENE "Enrico"</code>
+</pre>
+<p>Manual indexes could be created programmatically using the Java API</p>
+<pre><code class="lang-java">ODocument meta = new ODocument().field("analyzer", StandardAnalyzer.class.getName());
+OIndex<?> index = databaseDocumentTx.getMetadata().getIndexManager()
+     .createIndex("apiManual", OClass.INDEX_TYPE.FULLTEXT.toString(),
+         new OSimpleKeyIndexDefinition(1, OType.STRING, OType.STRING), null, null, meta, OLuceneIndexFactory.LUCENE_ALGORITHM);
+
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../indexing/FullTextIndex.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../indexing/Spatial-Index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../indexing/FullTextIndex.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../indexing/Spatial-Index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Create Class - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sql---create-class"><a class="header" href="#sql---create-class">SQL - <code>CREATE CLASS</code></a></h1>
+<p>Creates a new class in the schema.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-sql">CREATE CLASS &lt;class&gt; 
+[ IF NOT EXISTS ]
+[EXTENDS &lt;super-class&gt;] [CLUSTER &lt;cluster-id&gt;*] [CLUSTERS &lt;total-cluster-number&gt;] [ABSTRACT]
+</code></pre>
+<ul>
+<li><strong><code>&lt;class&gt;</code></strong> Defines the name of the class you want to create.  You must use a letter, underscore or dollar for the first character, for all other characters you can use alphanumeric characters, underscores and dollar.</li>
+<li><strong>IF NOT EXISTS</strong> Specifying this option, the class creation will just be ignored if the class already exists (instead of failing with an error)</li>
+<li><strong><code>&lt;super-class&gt;</code></strong> Defines the super-class you want to extend with this class.</li>
+<li><strong><code>&lt;cluster-id&gt;</code></strong>  Defines in a comma-separated list the ID's of the clusters you want this class to use.</li>
+<li><strong><code>&lt;total-cluster-number&gt;</code></strong> Defines the total number of clusters you want to create for this class.  The default value is <code>1</code>.  This feature was introduced in version 2.1.</li>
+<li><strong><code>ABSTRACT</code></strong> Defines whether the class is abstract.  For abstract classes, you cannot create instances of the class.</li>
+</ul>
+<p>In the event that a cluster of the same name exists in the cluster, the new class uses this cluster by default.  If you do not define a cluster in the command and a cluster of this name does not exist, OrientDB creates one.  The new cluster has the same name as the class, but in lower-case.</p>
+<p>When working with multiple cores, it is recommended that you use multiple clusters to improve concurrency during inserts.  To change the number of clusters created by default, <a href="SQL-Alter-Database.html"><code>ALTER DATABASE</code></a> command to update the <code>minimumclusters</code> property.  Beginning with version 2.1, you can also define the number of clusters you want to create using the <code>CLUSTERS</code> option when you create the class.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Create the class <code>Account</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Account</code>
+</pre>
+</li>
+<li>
+<p>Create the class <code>Car</code> to extend <code>Vehicle</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Car EXTENDS Vehicle</code>
+</pre>
+</li>
+<li>
+<p>Create the class <code>Car</code>, using the cluster ID of <code>10</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Car CLUSTER 10</code>
+</pre>
+</li>
+<li>
+<p>Create the class <code>Person</code> as an <a href="../datamodeling/Concepts.html#abstract-class">abstract class</a>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Person ABSTRACT</code>
+</pre>
+</li>
+</ul>
+<h2 id="cluster-selection-strategies"><a class="header" href="#cluster-selection-strategies">Cluster Selection Strategies</a></h2>
+<p>When you create a class, it inherits the cluster selection strategy defined at the database-level.  By default this is set to round-robin.  You can change the database default using the <a href="SQL-Alter-Database.html"><code>ALTER DATABASE</code></a> command and the selection strategy for the class using the <a href="SQL-Alter-Class.html"><code>ALTER CLASS</code></a> command.</p>
+<p>Supported Strategies:</p>
+<div class="table-wrapper"><table><thead><tr><th>Strategy</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>default</code></td><td>Selects the cluster using the class property <code>defaultClusterId</code>.  This was the default selection strategy before version 1.7.</td></tr>
+<tr><td><code>round-robin</code></td><td>Selects the next cluster in a circular order, restarting once complete.</td></tr>
+<tr><td><code>balanced</code></td><td>Selects the smallest cluster.  Allows the class to have all underlying clusters balanced on size.  When adding a new cluster to an existing class, it fills the new cluster first.  When using a distributed database, this keeps the servers balanced with the same amount of data.  It calculates the cluster size every five seconds or more to avoid slow-downs on insertion.</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>For more information, see</p>
+<ul>
+<li><a href="SQL-Alter-Class.html"><code>ALTER CLASS</code></a></li>
+<li><a href="SQL-Drop-Class.html"><code>DROP CLASS</code></a></li>
+<li><a href="SQL-Create-Cluster.html"><code>CREATE CLUSTER</code></a></li>
+<li><a href="SQL-Commands.html">SQL Commands</a></li>
+<li><a href="../console/Console-Commands.html">Console Commands</a></li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sql/SQL-Alter-Sequence.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/SQL-Create-Cluster.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sql/SQL-Alter-Sequence.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/SQL-Create-Cluster.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

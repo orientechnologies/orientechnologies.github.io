@@ -1,0 +1,569 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Database security - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="database-security"><a class="header" href="#database-security">Database Security</a></h1>
+<p>OrientDB uses a security model based on the concepts of users and roles.  That is, a database has its own users.  Each <a href="#users">User</a> has one or more roles.  <a href="#roles">Roles</a> are a combination of the working mode and a set of permissions and security policies.</p>
+<p><img src="http://www.orientdb.org/images/orientdb-dbsecurity.png" alt="Security overview" /></p>
+<blockquote>
+<p>For more information on security, see:</p>
+<ul>
+<li><a href="Server-Security.html">Server security</a></li>
+<li><a href="Database-Encryption.html">Database Encryption</a></li>
+<li><a href="Using-SSL-with-OrientDB.html">Secure SSL connections</a></li>
+<li><a href="Database-Security.html#record-level-security-deprecated-in-v-31">Record Level Security (legacy)</a></li>
+<li><a href="Database-Security.html#security-policies">Security Policies</a></li>
+</ul>
+</blockquote>
+<h2 id="users"><a class="header" href="#users">Users</a></h2>
+<p>A user is an actor on the database.  When you open a database, you need to specify the user name and the password to use.  Each user has its own credentials and permissions.</p>
+<p>By convention, each time you create a new database OrientDB creates three default users.  The passwords for these users are the same as the usernames.  That is, by default the <code>admin</code> user has a password of <code>admin</code>.</p>
+<ul>
+<li><code>admin</code> This user has access to all functions on the database without limitation.</li>
+<li><code>reader</code> This user is a read-only user.  The <code>reader</code> can query any records in the database, but can't modify or delete them.  It has no access to internal information, such as the users and roles themselves.</li>
+<li><code>writer</code> This user is the same as the user <code>reader</code>, but it can also create, update and delete records.</li>
+</ul>
+<p>The users themselves are records stored inside the cluster <code>ouser</code>.  OrientDB stores passwords in hash.  From version 2.2 on, OrientDB uses the <a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> algorithm.  Prior releases relied on <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a>.  For more information on passwords, see <a href="Database-Security.html#password-management">Password Management</a>.</p>
+<p>OrientDB stores the user status in the field <code>status</code>.  It can either be <code>SUSPENDED</code> or <code>ACTIVE</code>.  Only <code>ACTIVE</code> users can log in.</p>
+<h3 id="working-with-users"><a class="header" href="#working-with-users">Working with Users</a></h3>
+<p>When you are connected to a database, you can query the current users on the database by using <a href="../sql/SQL-Query.html"><code>SELECT</code></a> queries on the <code>OUser</code> class.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT RID, name, status FROM OUser</code>
+
+---+--------+--------+--------
+#  | @CLASS | name   | status
+---+--------+--------+--------
+0  | null   | admin  | ACTIVE
+1  | null   | reader | ACTIVE
+2  | null   | writer | ACTIVE
+---+--------+--------+--------
+3 item(s) found. Query executed in 0.005 sec(s).
+</pre>
+<h4 id="creating-a-new-user"><a class="header" href="#creating-a-new-user">Creating a New User</a></h4>
+<p>To create a new user, use the <a href="../sql/SQL-Insert.html"><code>INSERT</code></a> command.  Remember in doing so, that you must set the status to <code>ACTIVE</code> and give it a valid role.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">INSERT INTO OUser SET name = 'jay', password = 'JaY', status = 'ACTIVE',
+          roles = (SELECT FROM ORole WHERE name = 'reader')</code>
+</pre>
+<h4 id="updating-users"><a class="header" href="#updating-users">Updating Users</a></h4>
+<p>You can change the name for the user with the <a href="../sql/SQL-Update.html"><code>UPDATE</code></a> statement:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE OUser SET name = 'jay' WHERE name = 'reader'</code>
+</pre>
+<p>In the same way, you can also change the password for the user:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE OUser SET password = 'hello' WHERE name = 'reader'</code>
+</pre>
+<p>OrientDB saves the password in a hash format.  The trigger <code>OUserTrigger</code> encrypts the password transparently before it saves the record.</p>
+<h4 id="disabling-users"><a class="header" href="#disabling-users">Disabling Users</a></h4>
+<p>To disable a user, use <a href="../sql/SQL-Update.html"><code>UPDATE</code></a> to switch its status from <code>ACTIVE</code> to <code>SUSPENDED</code>.  For instance, if you wanted to disable all users except for <code>admin</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE OUser SET status = 'SUSPENDED' WHERE name &lt;&gt; 'admin'</code>
+</pre>
+<blockquote>
+<p><strong>NOTE</strong>: In the event that, due to accident or database corruption, you lose the user <code>admin</code> and need to restore it on the database, see <a href="../security/Server-Security.html#restoring-the-user-admin">Restoring the admin User`</a>.</p>
+</blockquote>
+<h2 id="roles"><a class="header" href="#roles">Roles</a></h2>
+<p>A role determines what operations a user can perform against a resource.</p>
+<h3 id="working-with-roles"><a class="header" href="#working-with-roles">Working with Roles</a></h3>
+<p>When you are connected to a database, you can query the current roles on the database using <a href="../sql/SQL-Query.html"><code>SELECT</code></a> queries on the <code>ORole</code> class.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT RID, mode, name, policies, rules FROM ORole</code>
+
++----+----+----+------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+|#   |RID |mode|name  |rules                                                                                     |policies                                                                                                             |
++----+----+----+------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+|0   |    |    |admin |{database=31, database.function=31, database.schema=31, database.command.gremlin=31, *=...|{*:#4:0}                                                                                                             |
+|1   |    |    |reader|{database.cluster.internal=2, database.cluster.orole=0, database=2, database.function=2...|{database.class.*.*:#4:0, database:#4:1, database.schema:#4:1, database.cluster.internal:#4:1, database.cluster.or...|
+|2   |    |    |writer|{database.cluster.internal=2, database.class.oschedule=2, database.class.osequence=2, d...|{database.class.*.*:#4:0, database:#4:1, database.schema:#4:3, database.cluster.internal:#4:1, database.cluster.or...|
++----+----+----+------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+3 item(s) found.  Query executed in 0.002 sec(s).
+</pre>
+<h4 id="creating-new-roles"><a class="header" href="#creating-new-roles">Creating New Roles</a></h4>
+<p>To create a new role, use the <a href="../sql/SQL-Insert.html"><code>INSERT</code></a> statement.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">INSERT INTO ORole SET name = 'developer'</code>
+</pre>
+<h4 id="role-inheritance"><a class="header" href="#role-inheritance">Role Inheritance</a></h4>
+<p>Roles can inherit permissions from other roles in an object-oriented fashion.  To let a role extend another, add the parent role in the <code>inheritedRole</code> attribute.  For instance, say you want users with the role <code>appuser</code> to inherit settings from the role <code>writer</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE ORole SET inheritedRole = (SELECT FROM ORole WHERE name = 'writer')
+          WHERE name = 'appuser'</code>
+</pre>
+<h3 id="working-with-modes-deprecated-in-v-31"><a class="header" href="#working-with-modes-deprecated-in-v-31">Working with Modes (DEPRECATED in v 3.1)</a></h3>
+<blockquote>
+<p>IMPORTANT: in v 3.1 working modes do not apply anymore. The standard behaviour is Deny All But. Even explicitly configuring the role for Allow All, it won't change the behaviour.</p>
+</blockquote>
+<p>Where rules determine what users belonging to certain roles can do on the databases, working modes determine how OrientDB interprets these rules.  There are two types of working modes, designating by <code>1</code> and <code>0</code>.</p>
+<ul>
+<li>
+<p><strong>Allow All But (Rules)</strong> By default is the super user mode.  Specify exceptions to this using the rules.  If OrientDB finds no rules for a requested resource, then it allows the user to execute the operation.  Use this mode mainly for power users and administrators.  The default role <code>admin</code> uses this mode by default and has no exception rules.  It is written as <code>1</code> in the database.</p>
+</li>
+<li>
+<p><strong>Deny All But (Rules)</strong> By default this mode allows nothing.  Specify exceptions to this using the rules.  If OrientDB finds rules for a requested resource, then it allows the user to execute the operation.  Use this mode as the default for all classic users.  The default roles <code>reader</code> and <code>writer</code> use this mode.  It is written as <code>0</code> in the database.</p>
+</li>
+</ul>
+<h4 id="operations"><a class="header" href="#operations">Operations</a></h4>
+<p>The supported operations are the classic CRUD operations.  That is, <strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, <strong>D</strong>elete.  Roles can have none of these permissions or all of them.  OrientDB represents each permission internally by a 4-digit bitmask flag.</p>
+<pre><code>NONE:   #0000 - 0
+CREATE: #0001 - 1
+READ:   #0010 - 2
+UPDATE: #0100 - 4
+DELETE: #1000 - 8
+ALL:    #1111 - 15
+</code></pre>
+<p>In addition to these base permissions, you can also combine them to create new permissions.  For instance, say you want to allow only the Read and Update permissions:</p>
+<pre><code>READ:               #0010 - 2
+UPDATE:             #0100 - 4
+Permission to use:  #0110 - 6
+</code></pre>
+<h3 id="security-policies"><a class="header" href="#security-policies">Security Policies</a></h3>
+<p>Security policies are an enhanced version of a the Operations bitmap.</p>
+<p>A security policy is a map made of operation-predicate pairs.</p>
+<p>The "operation" (the map key) can be one of the following:</p>
+<ul>
+<li>"CREATE"</li>
+<li>"READ"</li>
+<li>"BEFORE UPDATE"</li>
+<li>"AFTER UPDATE"</li>
+<li>"DELETE"</li>
+<li>"EXECUTE"</li>
+</ul>
+<p>The "predicate" is a normal SQL predicate, that can be a very simple one (eg. <code>TRUE</code> or <code>FALSE</code>) or a more structured condition (eg. <code>"owner = $currentUser</code>), that can also include subqueries and graph traversal.</p>
+<p>Security policies are intended to be applied to single records in each phase of its lifecycle (ie. when it's created, read, before and after its update and so on) to define if that particular operation is allowed or not</p>
+<h3 id="resources"><a class="header" href="#resources">Resources</a></h3>
+<p>Resources are strings bound to OrientDB concepts.</p>
+<blockquote>
+<p><strong>NOTE</strong>: Resource entries are case-sensitive.</p>
+</blockquote>
+<ul>
+<li><code>database</code>, checked on accessing to the database</li>
+<li><code>database.class.&lt;class-name&gt;</code>, checked on accessing on specific class</li>
+<li><code>database.class.&lt;class-name&gt;.&lt;property-name&gt;</code>, checked on accessing on specific property</li>
+<li><code>database.cluster.&lt;cluster-name&gt;</code>, checked on accessing on specific cluster</li>
+<li><code>database.query</code>, checked on query execution</li>
+<li><code>database.command</code>, checked on command execution</li>
+<li><code>database.schema</code>, checked to access to the schema</li>
+<li><code>database.function</code>, checked on function execution</li>
+<li><code>database.config</code>, checked on accessing at database configuration</li>
+<li><code>database.hook.record</code></li>
+<li><code>server.admin</code>, checked on accessing to remote server administration</li>
+</ul>
+<p>For instance, say you have a role <code>motorcyclist</code> that you want to have access to all classes except for the class <code>Car</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE ORole PUT rules = "database.class.*", 15 WHERE name = "motorcyclist"</code>
+
+orientdb> <code class="lang-sql userinput">UPDATE ORole PUT rules = "database.class.Car", 0 WHERE name = "motorcyclist"</code>
+</pre>
+<h3 id="granting-and-revoking-permissions"><a class="header" href="#granting-and-revoking-permissions">Granting and Revoking Permissions</a></h3>
+<p>To grant and revoke permissions from a role, use the <a href="../sql/SQL-Grant.html">GRANT</a> and <a href="../sql/SQL-Revoke.html">REVOKE</a> commands.</p>
+<p>Until v 3.0, the only way to manage permissions for a particular role, was to grant or revoke "cluster" permissions as follows</p>
+<pre>
+orientdb> <code class="lang-sql userinput">GRANT UPDATE ON database.cluster.Car TO motorcyclist</code>
+</pre>
+<p>In v 3.1, role permissions can be managed with security policies, eg.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE SECURITY POLICY readOnlyPolicy SET CREATE = (FALSE), READ = (TRUE), BEFORE UPDATE = (FALSE), DELETE = (FALSE)</code>
+
+orientdb> <code class="lang-sql userinput">GRANT POLICY readOnlyPolicy ON database.class.Car TO aRoleName</code>
+</pre>
+<p>Security policies can also be applied to single properties, eg. to hide a property to a particular role</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE SECURITY POLICY cannotRead SET  READ = (FALSE)</code>
+
+orientdb> <code class="lang-sql userinput">GRANT POLICY cannotRead ON database.class.Employee.salary TO basicRole</code>
+</pre>
+<h3 id="record-level-security-deprecated-in-v-31"><a class="header" href="#record-level-security-deprecated-in-v-31">Record-level Security (DEPRECATED in v 3.1)</a></h3>
+<blockquote>
+<p>IMPORTANT: In v 3.1 the record level security is replaced by Predicate Security (see below).</p>
+</blockquote>
+<p>The sections above manage security in a vertical fashion at the schema-level, but in OrientDB you can also manage security in a horizontal fashion, that is: per record.  This allows you to completely separate database records as sandboxes, where only authorized users can access restricted records.</p>
+<p>To active record-level security, create classes that extend the <code>ORestricted</code> super class.  In the event that you are working with a Graph Database, set the <code>V</code> and <code>E</code> classes (that is, the vertex and edge classes) themselves to extend <code>ORestricted</code>.</p>
+<pre>
+orientdb> <code class='lang-sql userinput'>ALTER CLASS V SUPERCLASS ORestricted</code>
+
+orientdb> <code class="lang-sql userinput">ALTER CLASS E SUPERCLASS ORestricted</code>
+</pre>
+<p>This causes all vertices and edges to inherit the record-level security.  Beginning with version 2.1, OrientDB allows you to use multiple inheritances, to cause only certain vertex or edge calsses to be restricted.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Order EXTENDS V, ORestricted</code>
+</pre>
+<p>Whenever a class extends the class <code>ORestricted</code>, OrientDB uses special fields to type-set <code>_&lt;OIdentifiable&gt;</code> to store authorization on each record.</p>
+<ul>
+<li><code>_allow</code> Contains the users that have full access to the record, (that is, all CRUD operations).</li>
+<li><code>_allowRead</code> Contains the users that can read the record.</li>
+<li><code>_allowUpdate</code> Contains the users that can update the record.</li>
+<li><code>_allowDelete</code> Contains the users that can delete the record.</li>
+</ul>
+<p>To allow full control over a record to a user, add the user's RID to the <code>_allow</code> set.  To provide only read permissions, use <code>_allowRead</code>.  In the example below, you allow the user with the RID <code>#5:10</code> to read record <code>#43:22</code>:</p>
+<pre>
+orientdb> <code class='lang-sql userinput'>UPDATE #43:22 ADD _allowRead #5:10</code>
+</pre>
+<p>If you want to remove read permissions, use the following command:</p>
+<pre>
+orientdb> <code class='lang-sql userinput'>UPDATE #43:22 REMOVE _allowRead #5:10</code>
+</pre>
+<h3 id="predicate-security"><a class="header" href="#predicate-security">Predicate Security</a></h3>
+<p>The sections above manage security in a vertical fashion at the schema-level, but in OrientDB you can also manage security in a horizontal fashion, that is: per record or even per single property in a record.  This allows you to completely separate database records as sandboxes, where only authorized users can access restricted records.</p>
+<p>To active Predicate Security, you have to define Security Policies and assign them to roles.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE SECURITY POLICY readYourRecords SET READ = (owner = $currentUser)</code>
+orientdb> <code class="lang-sql userinput">GRANT readYourRecords ON database.class.Person TO aRoleName</code>
+</pre>
+<pre>
+orientdb> <code class="lang-sql userinput">INSERT INTO Person SET name = 'John', owner = #6:15</code>
+</pre>
+<p>In this case, when records of <code>Person</code> class are loaded (eg. with a SQL query), the predicate <code>owner = $currentUser</code> is evaluated on each record; if the result of the evaluation is TRUE, then the record will be made available to the user, otherwise it will be just hidden (it's completely transparent on the user level, the user will just not see the record).</p>
+<p>Predicates can be applied to all the record lifecycle.</p>
+<p>In case the policy is applied to a class resource (eg. <code>database.class.ClassName</code>):</p>
+<ul>
+<li>CREATE predicate: is evaluated when a record is created, in case it returns FALSE, the user will have a security exception</li>
+<li>READ predicate: is evaluated when the record is loaded, in case it returns FALSE, the record is not returned to the user</li>
+<li>BEFORE UPDATE predicate: is evaluated during an UPDATE operation, passing the record in its original status (ie. before the modifications); in case it returns FALSE, the user will have a security exception</li>
+<li>AFTER UPDATE predicate: is evaluated during an UPDATE operation, passing the record in its new status (ie. after the modifications); in case it returns FALSE, the user will have a security exception</li>
+<li>DELETE predicate: is evaluated during a DELETE operation, passing the record in its  status before it's deleted; in case it returns FALSE, the user will have a security exception</li>
+</ul>
+<p>In case the policy is applied to a property resource (eg. <code>database.class.ClassName.propertyName</code>):</p>
+<ul>
+<li>CREATE predicate: is evaluated when a record is created, in case it returns FALSE, the user will have a security exception</li>
+<li>READ predicate: is evaluated when the record is loaded, in case it returns FALSE, the record is returned to the user, but WITHOUT the property. The user won't be allowed to overwrite the property either.</li>
+<li>BEFORE UPDATE predicate: is evaluated during an UPDATE operation, passing the record in its original status (ie. before the modifications); in case it returns FALSE, the user will have a security exception</li>
+<li>AFTER UPDATE predicate: is evaluated during an UPDATE operation, passing the record in its new status (ie. after the modifications); in case it returns FALSE, the user will have a security exception</li>
+<li>DELETE predicate: is evaluated during a DELETE operation, passing the record in its  status before it's deleted; in case it returns FALSE, the user will have a security exception</li>
+</ul>
+<p>If you want to remove read permissions, use the following command:</p>
+<pre>
+orientdb> <code class='lang-sql userinput'>REVOKE POLICY ON database.class.Person FROM aRoleName</code>
+</pre>
+<h3 id="run-time-checks"><a class="header" href="#run-time-checks">Run-time Checks</a></h3>
+<p>OrientDB checks record-level security using a hook that injects the check before each CRUD operation:</p>
+<ul>
+<li><strong>Create Documents</strong>: Sets the current database's user in the <code>_allow</code> field.  To change this behavior, see <a href="#customize-on-creation">Customize on Creation</a>.</li>
+<li><strong>Read Documents</strong>: Checks if the current user, or its roles, are listed in the <code>_allow</code> or <code>_allowRead</code> fields.  If not, OrientDB skips the record.  This allows each query to work per user.</li>
+<li><strong>Update Documents</strong>: Checks if the current user, or its roles, are listed in the <code>_allow</code> or <code>_allowUpdate</code> field.  If not, OrientDB raises an <code>OSecurityException</code> exception.</li>
+<li><strong>Delete Documents</strong>: Checks if the current user, or its roles, are listed in the <code>_allow</code> or <code>_allowDelete</code> field.  If not, OrientDB raises an <code>OSecurityException</code> exception.</li>
+</ul>
+<p>The allow fields, (that is, <code>_allow</code>, <code>_allowRead</code>, <code>_allowUpdate</code>, and <code>_allowDelete</code>) can contain instances of <code>OUser</code> and <code>ORole</code> records, as both classes extend <code>OIdentity</code>.  Use the class <code>OUser</code> to allow single <a href="#users">users</a> and use the class <code>ORole</code> to allow all users that are a part of that <a href="#roles">role</a>.</p>
+<h3 id="using-the-api"><a class="header" href="#using-the-api">Using the API</a></h3>
+<p>In addition to managing record-level security features through the OrientDB console, you can also configure it through the Graph and Document API's.</p>
+<ul>
+<li>
+<p><strong>Graph API</strong></p>
+<pre><code class="language-java">OrientVertex v = graph.addVertex("class:Invoice");
+v.setProperty("amount", 1234567);
+graph.getRawGraph().getMetadata().getSecurity().allowUser(
+      v.getRecord(), ORestrictedOperation.ALLOW_READ, "report");
+v.save();
+</code></pre>
+</li>
+<li>
+<p><strong>Document API</strong></p>
+<pre><code class="language-java">ODocument invoice = new ODocument("Invoice").field("amount", 1234567);
+database.getMetadata().getSecurity().allowUser(
+      invoice, ORestrictedOperation.ALLOW_READ, "report");
+invoice.save();
+</code></pre>
+</li>
+</ul>
+<h3 id="customize-on-creation"><a class="header" href="#customize-on-creation">Customize on Creation</a></h3>
+<p>By default, whenever you create a restricted record, (that is, create a class that extends the class <code>ORestricted</code>), OrientDB inserts the current user into the <code>_allow</code> field.  You can change this using custom properties in the class schema:</p>
+<ul>
+<li><code>onCreate.fields</code> Specifies the names of the fields it sets.  By default, these are <code>_allow</code>, but you can also specify <code>_allowRead</code>, <code>_allowUpdate</code>, <code>_allowDelete</code> or a combination of them as an alternative.  Use commas to separate multiple fields.</li>
+<li><code>onCreate.identityType</code> Specifies whether to insert the user's object or its role (the first one).  By default, it is set to <code>user</code>, but you can also set it to use its <code>role</code>.</li>
+</ul>
+<p>For instance, say you wanted to prevent a user from deleting new posts:</p>
+<pre>
+orientdb> <code class='lang-sql userinput'>ALTER CLASS Post CUSTOM onCreate.fields=_allowRead,_allowUpdate</code>
+</pre>
+<p>Consider another example, where you want to assign a role instead of a user to new instances of <code>Post</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER CLASS Post CUSTOM onCreate.identityType=role</code>
+</pre>
+<h3 id="bypassing-security-constraints"><a class="header" href="#bypassing-security-constraints">Bypassing Security Constraints</a></h3>
+<p>On occasion, you may need a role that can bypass restrictions, such as for backup or administrative operations.  You can manage this through the special permission <code>database.bypassRestricted</code>, by changing its value to <code>READ</code>.  By default, the role <code>admin</code> has this permission.</p>
+<p>For security reasons, this permission is not inheritable.  In the event that you need to assign it to other roles in your database, you need to set it on each role.</p>
+<h2 id="using-security"><a class="header" href="#using-security">Using Security</a></h2>
+<p>Now that you have some familiarity with how security works in OrientDB, consider the use case of OrientDB serving as the database for a blog-like application.  The blog is accessible through the web and you need to implement various security features to ensure that it works properly and does not grant its users access to restricted content.</p>
+<p>To begin, the administrator connects to the database and creates the document class <code>Post</code>, which extends <code>ORestricted</code>.  This ensures that users can only see their own entries in the blog and entries that are shared with them.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CONNECT REMOTE:localhost/blog admin admin</code>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Post EXTENDS ORestricted</code>
+
+Class 'Post' created successfully.
+</pre>
+<p>The user Luke is registered in <code>OUser</code> as <code>luke</code>, with an <code>RID</code> of <code>#5:5</code>.  He logs into the database and creates a new blog, which is an instance of the class <code>Post</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CONNECT REMOTE:localhost/blog luke lukepassword</code>
+orientdb> <code class="lang-sql userinput">INSERT INTO Post SET title = "Yesterday in Italy"</code>
+
+Created document #18:0
+
+orientdb> <code class="lang-sql userinput">SELECT FROM Post</code>
+
+-------+--------+--------------------
+ RID   | _allow | title 
+-------+--------+--------------------
+ #18:0 | [#5:5] | Yesterday in Italy
+-------+--------+--------------------
+</pre>
+<p>Independent of the users <code>admin</code> and <code>luke</code>, there is the user Steve.  Steve is registers with <code>OUser</code> as <code>steve</code>, he has an RID of <code>#5:6</code>.  Steve logs into OrientDB and also creates a new entry on the class <code>Post</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CONNECT REMOTE:localhost/blog steve steve</code>
+orientdb> <code class="lang-sql userinput">INSERT INTO Post SET title = "My Nutella Cake!"</code>
+
+Created document #18:1
+
+orientdb> <code class="lang-sql userinput">SELECT FROM Post</code>
+
+-------+--------+------------------
+ RID   | _allow | title
+-------+--------+------------------
+ #18:1 | [#5:6] | My Nutella Cake!
+-------+--------+------------------
+</pre>
+<p>As you can see, the users Steve and Luke can only see the records that they have access to.  Now, after some editorial work, Luke is satisfied with the state of his blog entry <code>Yesterday in Italy</code>.  He is now ready to share it with others.  From the database console, he can do so by adding the user Steve's RID to the <code>_allow</code> field.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE #18:0 ADD _allow = #5:6</code>
+</pre>
+<p>Now, when Steve logs in, the same query from before gives him different results, since he can now see the content Luke shared with him.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Post</code>
+
+-------+--------+---------------------
+ RID   | _allow | title  
+-------+--------+---------------------
+ #18:0 | [#5:5] | Yesterday in Italy
+ #18:1 | [#5:6] | My Nutella Cake!
+-------+--------+---------------------
+</pre>
+<p>While this is an effective solution, it does have one minor flaw for Luke.  By adding Steve to the <code>_allow</code> list, Steve can not only read posts Luke makes, but he can also modify them.  While Luke may find Steve a reasonable person, he begins to have second thoughts about this blanket permission and decides to remove Steve from the <code>_allow</code> field and instead add him to the <code>_allowRead</code> field:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE #18:0 REMOVE _allow = 5:6</code>
+orientdb> <code class="lang-sql userinput">UPDATE #18:0 ADD _allowRead = #5:6</code>
+</pre>
+<p>For the sake of argument, assume that Luke's misgivings about Steve have some foundation.  Steve decides that he does not like Luke's entry <code>Yesterday in Italy</code> and would like to remove it from the database.  He logs into OrientDB, runs <a href="../sql/SQL-Query.html"><code>SELECT</code></a> to find its RID, and attempts to <a href="../sql/SQL-Delete.html"><code>DELETE</code></a> the record:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Post</code>
+
+-------+--------+---------------------
+ RID   | _allow | title
+-------+--------+---------------------
+ #18:0 | [#5:5] | Yesterday in Italy
+ #18:1 | [#5:6] | My Nutella Cake!
+-------+--------+---------------------
+
+orientdb> <code class="lang-sql userinput">DELETE FROM #18:0</code>
+
+!Error: Cannot delete record #18:0 because the access to the resource is restricted.
+</pre>
+<p>As you can see, OrientDB blocks the <a href="../sql/SQL-Delete.html"><code>DELETE</code></a> operation, given that the current user, Steve, does not have permission to do so on this resource.</p>
+<h2 id="password-management"><a class="header" href="#password-management">Password Management</a></h2>
+<p>OrientDB stores user passwords in the <code>OUser</code> records using the  <a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> HASH algorithm with a 24-bit length Salt per user for a configurable number of iterations.  By default, this number is 65,536 iterations.  You can change this account through the <code>security.userPasswordSaltIterations</code> global configuration.  Note that while a higher iteration count can slow down attacks, it also slows down the authentication process on legitimate OrientDB use.</p>
+<p>In order to speed up password hashing, OrientDB uses a password cache, which it implements as an LRU with a maximum of five hundred entries.  You can change this setting through the <code>security.userPasswordSaltCacheSize</code> global configuration.  Giving this global configuration the value of <code>0</code> disables the cache.</p>
+<blockquote>
+<p><strong>NOTE</strong>: In the event that attackers gain access to the Java virtual machine memory dump, he could access this map, which would give them access to all passwords.  You can protect your database from this attack by disabling the in memory password cache.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../security/SAP-Enterprise-OrientDB-DPP.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../security/Server-Security.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../security/SAP-Enterprise-OrientDB-DPP.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../security/Server-Security.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

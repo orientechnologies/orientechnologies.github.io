@@ -1,0 +1,462 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Select - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sql---select"><a class="header" href="#sql---select">SQL - <code>SELECT</code></a></h1>
+<p>OrientDB supports the SQL language to execute queries against the database engine.  For more information, see <a href="SQL-Where.html#operators">operators</a> and <a href="SQL-Where.html#functions">functions</a>.  For more information on the differences between this implementation and the SQL-92 standard, please refer to <a href="SQL-Introduction.html">this</a> section.</p>
+<p><strong>Syntax</strong>:</p>
+<pre><code class="language-sql">SELECT [ &lt;Projections&gt; ] [ FROM &lt;Target&gt; [ LET &lt;Assignment&gt;* ] ]
+    [ WHERE &lt;Condition&gt;* ]
+    [ GROUP BY &lt;Field&gt;* ]
+    [ ORDER BY &lt;Fields&gt;* [ ASC|DESC ] * ]
+    [ UNWIND &lt;Field&gt;* ]
+    [ SKIP &lt;SkipRecords&gt; ]
+    [ LIMIT &lt;MaxRecords&gt; ]
+    [ FETCHPLAN &lt;FetchPlan&gt; ]
+    [ TIMEOUT &lt;Timeout&gt; [ &lt;STRATEGY&gt; ]
+    [ LOCK default|record ]
+    [ PARALLEL ]
+    [ NOCACHE ]
+</code></pre>
+<ul>
+<li><strong><a href="SQL-Query.html#projections"><code>&lt;Projections&gt;</code></a></strong> Indicates the data you want to extract from the query as the result-set.  Note: In OrientDB, this variable is optional.  In the projections you can define aliases for single fields, using the <code>AS</code> keyword; in current release aliases cannot be used in the WHERE condition, GROUP BY and ORDER BY (they will be evaluated to null)</li>
+<li><strong><code>FROM</code></strong> Designates the object to query.  This can be a class, cluster, single <a href="../datamodeling/Concepts.html#record-id">Record ID</a>, set of <a href="../datamodeling/Concepts.html#record-id">Record ID's</a>, or (beginning in version 1.7.7) index values sorted by ascending or descending key order.
+<ul>
+<li>When querying a class, for <code>&lt;target&gt;</code> use the class name.</li>
+<li>When querying a cluster, for <code>&lt;target&gt;</code> use <code>CLUSTER:&lt;cluster-name&gt;</code> (eg. <code>CLUSTER:person</code>) or <code>CLUSTER:&lt;cluster-id&gt;</code> (eg. <code>CLUSTER:12</code>).  This causes the query to execute only on records in that cluster.</li>
+<li>When querying record ID's, you can specific one or a small set of records to query.  This is useful when you need to specify a starting point in navigating graphs.</li>
+<li>When querying indexes, use the following prefixes:
+<ul>
+<li><code>INDEXVALUES:&lt;index&gt;</code> and <code>INDEXVALUESASC:&lt;index&gt;</code> sorts values into an ascending order of index keys.</li>
+<li><code>INDEXVALUESDESC:&lt;index&gt;</code> sorts the values into a descending order of index keys.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a href="SQL-Where.html"><code>WHERE</code></a></strong> Designates conditions to filter the result-set.</li>
+<li><strong><a href="SQL-Query.html#let-block"><code>LET</code></a></strong> Binds context variables to use in projections, conditions or sub-queries.</li>
+<li><strong><code>GROUP BY</code></strong> Designates field on which to group the result-set.</li>
+<li><strong><code>ORDER BY</code></strong> Designates the field with which to order the result-set.  Use the optional <code>ASC</code> and <code>DESC</code> operators to define the direction of the order.  The default is ascending.  Additionally, if you are using a <a href="SQL-Query.html#projections">projection</a>, you need to include the <code>ORDER BY</code> field in the projection. Note that ORDER BY works only on projection fields (fields that are returned in the result set) not on LET variables.</li>
+<li><strong><a href="SQL-Query.html#unwinding"><code>UNWIND</code></a></strong> Designates the field on which to unwind the collection.  Introduced in version 2.1.</li>
+<li><strong><code>SKIP</code></strong> Defines the number of records you want to skip from the start of the result-set.  You may find this useful in <a href="Pagination.html">pagination</a>, when using it in conjunction with <code>LIMIT</code>.</li>
+<li><strong><code>LIMIT</code></strong> Defines the maximum number of records in the result-set.  You may find this useful in <a href="Pagination.html">pagination</a>, when using it in conjunction with <code>SKIP</code>.</li>
+<li><strong><code>FETCHPLAN</code></strong> Defines how you want it to fetch results.  For more information, see <a href="../java/Fetching-Strategies.html">Fetching Strategy</a>.</li>
+<li><strong><code>TIMEOUT</code></strong> Defines the maximum time in milliseconds for the query.  By default, queries have no timeouts.  If you don't specify a timeout strategy, it defaults to <code>EXCEPTION</code>.  These are the available timeout strategies:
+<ul>
+<li><code>RETURN</code> Truncate the result-set, returning the data collected up to the timeout.</li>
+<li><code>EXCEPTION</code> Raises an exception.</li>
+</ul>
+</li>
+<li><strong><code>LOCK</code></strong> Defines the locking strategy.  These are the available locking strategies:
+<ul>
+<li><code>DEFAULT</code> Locks the record for the read.</li>
+<li><code>RECORD</code> Locks the record in exclusive mode for the current transaction, until the transaction commits or you perform a rollback operation.</li>
+</ul>
+</li>
+<li><strong><code>PARALLEL</code></strong> Executes the query against <em>x</em> concurrent threads, where <em>x</em> refers to the number of processors or cores found on the host operating system of the query.  You may find <code>PARALLEL</code> execution useful on long running queries or queries that involve multiple cluster.  For simple queries, using <code>PARALLEL</code> may cause a slow down due to the overhead inherent in using multiple threads.</li>
+<li><strong><code>NOCACHE</code></strong> Defines whether you want to avoid using the cache.</li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong>: Beginning with version 1.0 rc 7, the <code>RANGE</code> operator was removed.  To execute range queries, instead use the <code>BETWEEN</code> operator against <code>@RID</code>.  For more information, see <a href="Pagination.html">Pagination</a>.</p>
+</blockquote>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>
+<p>Return all records of the class <code>Person</code>, where the name starts with <code>Luk</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Person WHERE name LIKE 'Luk%'</code>
+</pre>
+<p>Alternatively, you might also use either of these queries:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Person WHERE name.left(3) = 'Luk'</code>
+orientdb> <code class="lang-sql userinput">SELECT FROM Person WHERE name.substring(0,3) = 'Luk'</code>
+</pre>
+</li>
+<li>
+<p>Return all records of the type <code>!AnimalType</code> where the collection <code>races</code> contains at least one entry where the first character is <code>e</code>, ignoring case:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM animaltype WHERE races CONTAINS( name.toLowerCase().subString(
+          0, 1) = 'e' )</code>
+</pre>
+</li>
+<li>
+<p>Return all records of type <code>!AnimalType</code> where the collection <code>races</code> contains at least one entry with names <code>European</code> or <code>Asiatic</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT * FROM animaltype WHERE races CONTAINS(name in ['European',
+          'Asiatic'])</code>
+</pre>
+</li>
+<li>
+<p>Return all records in the class <code>Profile</code> where any field contains the word <code>danger</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Profile WHERE ANY() LIKE '%danger%'</code>
+</pre>
+</li>
+<li>
+<p>Return any record at any level that has the word <code>danger</code>:</p>
+<p>DEPRECATED SYNTAX</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Profile WHERE ANY() TRAVERSE( ANY() LIKE '%danger%' )</code>
+</pre>
+</li>
+<li>
+<p>Return any record where up to the third level of connections has some field that contains the word <code>danger</code>, ignoring case:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Profile WHERE ANY() TRAVERSE(0, 3) ( 
+          ANY().toUpperCase().indexOf('danger') > -1 )</code>
+</pre>
+</li>
+<li>
+<p>Return all results on class <code>Profile</code>, ordered by the field <code>name</code> in descending order:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Profile ORDER BY name DESC</code>
+</pre>
+</li>
+<li>
+<p>Return the number of records in the class <code>Account</code> per city:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT SUM(*) FROM Account GROUP BY city</code>
+</pre>
+</li>
+<li>
+<p>Traverse records from a root node:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM 11:4 WHERE ANY() TRAVERSE(0,10) (address.city = 'Rome')</code>
+</pre>
+</li>
+<li>
+<p>Return only a limited set of records:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM [#10:3, #10:4, #10:5]</code>
+</pre>
+</li>
+<li>
+<p>Return three fields from the class <code>Profile</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT nick, followings, followers FROM Profile</code>
+</pre>
+</li>
+<li>
+<p>Return the field <code>name</code> in uppercase and the field country name of the linked city of the address:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT name.toUppercase(), address.city.country.name FROM Profile</code>
+</pre>
+</li>
+<li>
+<p>Return records from the class <code>Profile</code> in descending order of their creation:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Profile ORDER BY @rid DESC</code>
+</pre>
+</li>
+<li>
+<p>Return value of <code>email</code> which is stored in a JSON field <code>data</code> (type EMBEDDED)  of the class <code>Person</code>, where the name starts with <code>Luk</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT data.email FROM Person WHERE name LIKE 'Luk%'</code>
+</pre>
+<p>Beginning in version 1.7.7, OrientDB can open an inverse cursor against clusters.  This is very fast and doesn't require the classic ordering resources, CPU and RAM.</p>
+</li>
+</ul>
+<h2 id="projections"><a class="header" href="#projections">Projections</a></h2>
+<p>In the standard implementations of SQL, projections are mandatory.  In OrientDB, the omission of projects translates to its returning the entire record.  That is, it reads no projection as the equivalent of the <code>*</code> wildcard.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Account</code>
+</pre>
+<p>For all projections except the wildcard <code>*</code>, it creates a new temporary document, which does not include the <code>@rid</code> and <code>@version</code> fields of the original record.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT name, age FROM Account</code>
+</pre>
+<p>The naming convention for the returned document fields are:</p>
+<ul>
+<li>Field name for plain fields, like <code>invoice</code> becoming <code>invoice</code>.</li>
+<li>First field name for chained fields, like <code>invoice.customer.name</code> becoming <code>invoice</code>.</li>
+<li>Function name for functions, like <code>MAX(salary)</code> becoming <code>max</code>.</li>
+</ul>
+<p>In the event that the target field exists, it uses a numeric progression.  For instance,</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT MAX(incoming), MAX(cost) FROM Balance</code>
+
+------+------
+ max  | max2
+------+------
+ 1342 | 2478
+------+------
+</pre>
+<p>To override the display for the field names, use the <code>AS</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT MAX(incoming) AS max_incoming, MAX(cost) AS max_cost FROM Balance</code>
+
+---------------+----------
+ max_incoming  | max_cost
+---------------+----------
+ 1342          | 2478
+---------------+----------
+</pre>
+<p>With the dollar sign <code>$</code>, you can access the context variables.  Each time you run the command, OrientDB accesses the context to read and write the variables.  For instance, say you want to display the path and depth levels up to the fifth of a <a href="SQL-Traverse.html"><code>TRAVERSE</code></a> on all records in the <code>Movie</code> class.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT $path, $depth FROM ( TRAVERSE * FROM Movie WHERE $depth <= 5 )</code>
+</pre>
+<h2 id="let-block"><a class="header" href="#let-block"><code>LET</code> Block</a></h2>
+<p>The <code>LET</code> block contains context variables to assign each time OrientDB evaluates a record.  It destroys these values once the query execution ends.  You can use context variables in projections, conditions, and sub-queries.</p>
+<h3 id="assigning-fields-for-reuse"><a class="header" href="#assigning-fields-for-reuse">Assigning Fields for Reuse</a></h3>
+<p>OrientDB allows for crossing relationships.  In single queries, you need to evaluate the same branch of the nested relationship.  This is better than using a context variable that refers to the full relationship.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Profile WHERE address.city.name LIKE '%Saint%"' AND 
+          ( address.city.country.name = 'Italy' OR 
+            address.city.country.name = 'France' )</code>
+</pre>
+<p>Using the <code>LET</code> makes the query shorter and faster, because it traverses the relationships only once:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Profile LET $city = address.city WHERE $city.name LIKE 
+          '%Saint%"' AND ($city.country.name = 'Italy' OR $city.country.name = 'France')</code>
+</pre>
+<p>In this case, it traverses the path till <code>address.city</code> only once.</p>
+<h3 id="sub-query"><a class="header" href="#sub-query">Sub-query</a></h3>
+<p>The <code>LET</code> block allows you to assign a context variable to the result of a sub-query.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Document LET $temp = ( SELECT @rid, $depth FROM (TRAVERSE 
+          V.OUT, E.IN FROM $parent.current ) WHERE @class = 'Concept' AND 
+          ( id = 'first concept' OR id = 'second concept' )) WHERE $temp.SIZE() > 0</code>
+</pre>
+<h3 id="let-block-in-projection"><a class="header" href="#let-block-in-projection"><code>LET</code> Block in Projection</a></h3>
+<p>You can use context variables as part of a result-set in <a href="#projections">projections</a>.  For instance, the query below displays the city name from the previous example:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT $temp.name FROM Profile LET $temp = address.city WHERE $city.name 
+          LIKE '%Saint%"' AND ( $city.country.name = 'Italy' OR 
+          $city.country.name = 'France' )</code>
+</pre>
+<h2 id="unwinding"><a class="header" href="#unwinding">Unwinding</a></h2>
+<p>Beginning with version 2.1, OrientDB allows unwinding of collection fields and obtaining multiple records as a result, one for each element in the collection:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT name, OUT("Friend").name AS friendName FROM Person</code>
+
+--------+-------------------
+ name   | friendName
+--------+-------------------
+ 'John' | ['Mark', 'Steve']
+--------+-------------------
+</pre>
+<p>In the event if you want one record for each element in <code>friendName</code>, you can rewrite the query using <code>UNWIND</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT name, OUT("Friend").name AS friendName FROM Person UNWIND friendName</code>
+
+--------+-------------
+ name   | friendName
+--------+-------------
+ 'John' | 'Mark'
+ 'John' | 'Steve'
+--------+-------------
+</pre>
+<blockquote>
+<p><strong>NOTE</strong>: For more information on other SQL commands, see <a href="SQL-Commands.html">SQL Commands</a>.</p>
+</blockquote>
+<h2 id="execution-planning"><a class="header" href="#execution-planning">Execution planning</a></h2>
+<p>For details about query execution planning, please refer to <a href="SQL-Select-Execution.html">SQL SELECT Execution</a></p>
+<h2 id="history"><a class="header" href="#history">History</a></h2>
+<ul>
+<li><strong>1.7.7</strong>: New target prefixes <code>INDEXVALUES:</code>, <code>INDEXVALUESASC:</code> and <code>INDEXVALUESDESC:</code> added.</li>
+<li><strong>1.7</strong>: <code>PARALLEL</code> keyword added to execute the query against <em>x</em> concurrent threads, where <em>x</em> is the number of processors or cores found on the operating system where the query runs.  <code>PARALLEL</code> execution is useful on long running queries or queries that involve multiple clusters.  On simple queries, using <code>PARALLEL</code> can cause a slow down due to the overhead of using multiple threads.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sql/SQL-Revoke.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/SQL-Traverse.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sql/SQL-Revoke.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/SQL-Traverse.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

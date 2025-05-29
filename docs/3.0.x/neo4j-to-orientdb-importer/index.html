@@ -1,0 +1,565 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Neo4j to OrientDB Importer - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="neo4j-to-orientdb-importer"><a class="header" href="#neo4j-to-orientdb-importer">Neo4j to OrientDB Importer</a></h1>
+<p>The <em>Neo4j to OrientDB Importer</em> is a tool that can help you importing in a quick way a Neo4j graph database into OrientDB.</p>
+<p>Imported Neo4j items are:</p>
+<ul>
+<li>nodes</li>
+<li>relationships</li>
+<li>unique constraints</li>
+<li>indexes</li>
+</ul>
+<blockquote>
+<p>Neo4j and Cypher are registered trademark of Neo Technology, Inc.</p>
+</blockquote>
+<h2 id="supported-versions"><a class="header" href="#supported-versions">Supported Versions</a></h2>
+<p>Currently, the <em>Neo4j to OrientDB Importer</em> supports, and has been tested with, the following versions:</p>
+<ul>
+<li>OrientDB: 2.2.x, 3.0.x</li>
+<li>Neo4j: 3.x</li>
+</ul>
+<h2 id="limitations"><a class="header" href="#limitations">Limitations</a></h2>
+<p>The following limitations apply:</p>
+<ul>
+<li>Currently only <code>local</code> migrations are allowed.</li>
+<li>Schema limitations:
+<ul>
+<li>In case a node in Neo4j has multiple <em>Labels</em>, it will be imported into a single OrientDB <code>Class</code> (<em>"MultipleLabelNeo4jConversion"</em>).
+<ul>
+<li>Note that the information about the original set of Labels is not lost but stored into an internal property of the imported vertex (<em>"Neo4jLabelList"</em>). As a result, it will be possible to query nodes with a specific Neo4j <em>Label</em>. Note also that the nodes imported into the single class <em>"MultipleLabelNeo4jConversion"</em> can then be moved to other <code>Classes</code>, according to your specific needs, using the <a href="../sql/SQL-Move-Vertex.html">MOVE VERTEX</a> command. For more information, please refer to <a href="README.html#querying-nodes-by-original-neo4j-labels">this</a> Section.</li>
+</ul>
+</li>
+<li>Neo4j Nodes with same <em>Label</em> but different case, e.g. <em>LABEL</em> and <em>LAbel</em> will be aggregated into a single OrientDB vertex <code>Class</code>.</li>
+<li>Neo4j Relationship with same name but different case, e.g. <em>relaTIONship</em> and <em>RELATIONSHIP</em> will be aggregated into a single OrientDB edge <code>Class</code></li>
+<li>Migration of Neo4j's <em>"existence"</em> constraints (only available in the Neo4j's Enterprise Edition) is currently not implemented.</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<p>The <em>Neo4j to OrientDB Importer</em> is provided as an external plugin for the OrientDB Server, and is available as a <code>zip</code> or <code>tar.gz</code> archive.</p>
+<p>Please download the plugin from maven central:</p>
+<pre><code class="lang-sh">http://central.maven.org/maven2/com/orientechnologies/orientdb-neo4j-importer/3.2.4/orientdb-neo4j-importer-3.2.4.tar.gz</code></pre>
+<p>Replace <code>tar.gz</code> with  <code>zip</code> for the <code>zip</code> archive.</p>
+<p>To install the plugin, please unpack the archive on your OrientDB server directory (please make sure that the version of your OrientDB server and the version of the Neo4j to OrientDB Importer are the same. Upgrade your OrientDB server, if necessary). On Linux systems, to unpack the archive you can use a command like the following:</p>
+<pre><code class="lang-sh">tar xfv orientdb-neo4j-importer-3.2.4.tar.gz -C path_to_orientDB/ --strip-components=1 </code></pre>
+<h2 id="migration-scenarios"><a class="header" href="#migration-scenarios">Migration Scenarios</a></h2>
+<p>A typical migration scenario consists of the following steps:</p>
+<ul>
+<li>A copy of the Neo4j's database graph directory (typically <code>graph.db</code>) is created into a safe place</li>
+<li>OrientDB is installed</li>
+<li>The <em>Neo4j to OrientDB Importer</em> is installed</li>
+<li>The migration process is started from the command line, passing to the <em>Neo4j to OrientDB Importer</em> the copy of the Neo4j's database directory created earlier</li>
+<li>OrientDB (embedded or server) is started and the newly imported graph database can be used</li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>
+<p>Since currently only exclusive, <code>local</code>, connections are allowed, during the migration there must be no running servers on the Neo4j's database directory and on the target OrientDB's import directory.</p>
+</li>
+<li>
+<p>As an alternative of creating a copy of the Neo4j's database directory, and in case you can schedule a Neo4j shutdown, you can:</p>
+<ul>
+<li>Shutdown your Neo4j Server</li>
+<li>Start the migration by passing the original Neo4j's database directory to the <em>Neo4j to OrientDB Importer</em> (a good practice is to create a back-up first)</li>
+</ul>
+</li>
+</ul>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>After Installation, the <em>Neo4j to OrientDB Importer</em> can be launched using the provided <code>orientdb-neo4j-importer.sh</code> script (or <code>orientdb-neo4j-importer.bat</code> for Windows systems).</p>
+<h3 id="syntax"><a class="header" href="#syntax">Syntax</a></h3>
+<pre><code>OrientDB-Neo4j-Importer
+	-neo4jlibdir &lt;neo4jlibdir&gt; (mandatory)
+	-neo4jdbdir &lt;neo4jdbdir&gt; (mandatory)
+	[-odbdir &lt;odbdir&gt;]
+    [-o true|false]
+    [-i true|false]
+</code></pre>
+<p>Where:</p>
+<ul>
+<li>
+<p><strong>neo4jlibdir</strong> (mandatory option) is the full path to the Neo4j lib directory (e.g. <code>D:\neo4j\neo4j-community-3.0.7\lib</code>). On Windows systems, this parameter must be the first passed parameter.</p>
+</li>
+<li>
+<p><strong>neo4jdbdir</strong> (mandatory option) is the full path to the Neo4j’s graph database directory (e.g. <code>D:\neo4j\neo4j-community-3.0.7\data\databases\graph.db</code>).</p>
+</li>
+<li>
+<p><strong>odbdir</strong> (optional) is the full path to a directory where the Neo4j database will be migrated. The directory will be created by the import tool. In case the directory exists already, the <em>Neo4j to OrientDB Importer</em> will behave accordingly to the value of the option <code>o</code> (see below). The default value of <code>odbdir</code> is <code>$ORIENTDB_HOME/databases/neo4j_import</code>.</p>
+</li>
+<li>
+<p><strong>o</strong> (optional). If <code>true</code> the <code>odbdir</code> directory will be overwritten, if it exists. If <code>false</code> and the <code>odbdir</code> directory exists, a warning will be printed and the program will exit. The default value of <code>o</code> is <code>false</code>.</p>
+</li>
+<li>
+<p><strong>i</strong> (optional). If <code>true</code> a unique index on the property <code>Neo4jRelID</code> will be created, for all migrated edge classes. This allows you to query relationships by original Neo4j relationship Ids. The default value of <code>i</code> is <code>false</code>.</p>
+</li>
+</ul>
+<p>If the <em>Neo4j to OrientDB Importer</em> is launched without parameters, it fails because <strong>-neo4jlibdir</strong> and <strong>-neo4jdbdir</strong> are mandatory.</p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p>A typical import command looks like the following (please adapt the value of the <code>-neo4jlibdir</code> and <code>-neo4jdbdir</code> parameters to your specific case):</p>
+<p><strong>Windows:</strong></p>
+<pre><code>orientdb-neo4j-importer.bat -neo4jlibdir="D:\neo4j\neo4j-community-3.0.7\lib" -neo4jdbdir="D:\neo4j\neo4j-community-3.0.7\data\databases\graph.db"
+</code></pre>
+<p><strong>Linux / Mac:</strong></p>
+<pre><code>./orientdb-neo4j-importer.sh -neo4jlibdir /mnt/d/neo4j/neo4j-community-3.0.7/lib -neo4jdbdir /mnt/d/neo4j/neo4j-community-3.0.7/data/databases/graph.db
+</code></pre>
+<h2 id="migration-details"><a class="header" href="#migration-details">Migration Details</a></h2>
+<p>Internally, the <em>Neo4j to OrientDB Importer</em> makes use of the Neo4j's <code>java</code> API to read the graph database from Neo4j and of the OrientDB's <code>java</code> API to store the graph into OrientDB.</p>
+<p>The import consists of four phases:</p>
+<ul>
+<li><strong>Phase 1:</strong> Initialization of the Neo4j and OrientDB servers</li>
+<li><strong>Phase 2:</strong> Migration of nodes and relationships</li>
+<li><strong>Phase 3:</strong> Schema migration</li>
+<li><strong>Phase 4:</strong> Shutdown of the servers and summary info</li>
+</ul>
+<h3 id="general-migration-details"><a class="header" href="#general-migration-details">General Migration Details</a></h3>
+<p>The following are some general migration details that is good to keep in mind:</p>
+<ul>
+<li>
+<p>During the import, OrientDB's <a href="http://orientdb.com/docs/last/Configuration.html#storageusewal"><code>WAL</code></a> and <a href="http://orientdb.com/docs/last/Configuration.html#storagewalsynconpageflush"><code>WAL_SYNC_ON_PAGE_FLUSH</code></a> are disabled, and OrientDB is prepared for massive inserts (<em>OIntentMassiveInsert</em>).</p>
+</li>
+<li>
+<p>In case a node in Neo4j has no <em>Label</em>, it will be imported in OrientDB into the Class <em>"GenericClassNeo4jConversion"</em>.</p>
+</li>
+<li>
+<p>Starting from version 2.2.14, in case a node in Neo4j has multiple <em>Labels</em>, it will be imported into the <code>Class</code> <em>"MultipleLabelNeo4jConversion"</em>. Before 2.2.14, only the first <em>Label</em> was imported.</p>
+</li>
+<li>
+<p>List of original Neo4j <em>Labels</em> are stored as properties in the imported OrientDB vertices (property: <em>"Neo4jLabelList"</em>).</p>
+</li>
+<li>
+<p>During the import, a not unique index is created on the property <em>"Neo4jLabelList"</em>. This allows you to query by <em>Label</em> even over nodes migrated into the single <code>Class</code> <em>"MultipleLabelNeo4jConversion"</em>, using queries like:
+<code>SELECT FROM V WHERE Neo4jLabelList CONTAINS 'your_label_here'</code> or the equivalent with the <a href="../sql/SQL-Match.html">MATCH</a> syntax: <code>MATCH {class: V, as: your_alias, where: (Neo4jLabelList CONTAINS 'your_label'} RETURN your_alias</code>.</p>
+</li>
+<li>
+<p>Original Neo4j <code>IDs</code> are stored as properties in the imported OrientDB vertices and edges (<code>Neo4jNodeID</code> for vertices and <code>Neo4jRelID</code> for edges). Such properties can be (manually) removed at the end of the import, if not needed.</p>
+</li>
+<li>
+<p>During the import, an OrientDB index is created on the property <code>Neo4jNodeID</code> for all imported vertex <code>classes</code> (node's <em>Labels</em> in Neo4j). This is to speed up vertices lookup during edge creation. The created indexes can be (manually) removed at the end of the import, if not needed.</p>
+</li>
+<li>
+<p>In case a Neo4j Relationship has the same name of a Neo4j <em>Label</em>, e.g. <em>"RelationshipName"</em>, the <em>Neo4j to OrientDB Importer</em> will import that relationship into OrientDB in the class <code>E_RelationshipName</code> (i.e. prefixing the Neo4j's <code>RelationshipType</code> with an <code>E_</code>).</p>
+</li>
+<li>
+<p>During the creation of properties in OrientDB, Neo4j <code>Char</code> data type is mapped to a <code>String</code> data type.</p>
+</li>
+</ul>
+<h3 id="details-on-schema-migration"><a class="header" href="#details-on-schema-migration">Details on Schema Migration</a></h3>
+<p>The following are some schema-specific migration details that is good to keep in mind:</p>
+<ul>
+<li>
+<p>If in Neo4j there are no constraints or indexes, and if we exclude the properties and indexes created for internal purposes (<code>Neo4jNodeID</code>, <code>Neo4jRelID</code>, <code>Neo4jLabelList</code> and corresponding indexes), the imported OrientDB database is schemaless.</p>
+</li>
+<li>
+<p>If in Neo4j there are constraints or indexes, the imported OrientDB database is schema-hybrid (with some properties defined). In particular, for any constraint and index:</p>
+<ul>
+<li>
+<p>The Neo4j property where the constraint or index is defined on, is determined.</p>
+</li>
+<li>
+<p>A corresponding property is created in OrientDB (hence the schema-hybrid mode).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If a Neo4j unique constraint is found, a corresponding unique index is created in OrientDB</p>
+<ul>
+<li>In case the creation of the unique index fails, a not unique index will be created. Note: this scenario can happen, by design, when migrating nodes that have multiple <em>Labels</em>, as they are imported into a single vertex <code>Class</code>).</li>
+</ul>
+</li>
+<li>
+<p>If a Neo4j index is found, a corresponding (not unique) OrientDB index is created.</p>
+</li>
+</ul>
+<h2 id="migration-best-practices"><a class="header" href="#migration-best-practices">Migration Best Practices</a></h2>
+<p>Below some migration best practices.</p>
+<ol>
+<li>
+<p>Check if you are using <em>Labels</em> with same name but different case, e.g. <em>LABEL</em> and <em>LAbel</em> and if you really need them. If the correct <em>Label</em> is <em>Label</em>, change <em>LABEL</em> and <em>LAbel</em> to <em>Label</em> in the original Neo4j database before the import. If you really cannot change them, be aware that with the current version of the Neo4j to OrientDB Importer such nodes will be aggregated into a single OrientDB vertex <code>Class</code>.</p>
+</li>
+<li>
+<p>Check if you are using relationships with same name but different case, e.g. <em>relaTIONship</em> and <em>RELATIONSHIP</em> and if you really need them. If the correct relationship is <em>Relationship</em>, change <em>relaTIONship</em> and <em>RELATIONSHIP</em> to <em>Relationship</em> before the import. If you really cannot change them, be aware that with the current version of the Neo4j to OrientDB Importer such relationships will be aggregated into a single OrientDB edge <code>Class</code>.</p>
+</li>
+<li>
+<p>Check your constraints and indexes before starting the import. Sometime you have more constraints or indexes than needed, e.g. old ones that you created on <em>Labels</em> that you are not using anymore. These constraints will be migrated as well, so a best practice is to check that you have defined, in Neo4j, only those that you really want to import. To check constraints and indexes in Neo4j, you can type <code>:schema</code> in the Browser and then click on the "play" icon. Please delete the not needed items.</p>
+</li>
+<li>
+<p>Check if you are using nodes with multiple <em>Labels</em>, and if you really need more than one <em>Label</em> on them. Be aware that with current version of the Neo4j to OrientDB Importer such nodes with multiple <em>Labels</em> will be imported into a single OrientDB <code>Class</code> ("<em>MultipleLabelNeo4jConversion</em>").</p>
+</li>
+</ol>
+<h2 id="migration-log"><a class="header" href="#migration-log">Migration Log</a></h2>
+<p>During the migration, a log file is created.</p>
+<p>The log can be found at <code>path_to_orientDB/log/orientdb-neo4j-importer.log</code>.</p>
+<h2 id="migration-monitoring"><a class="header" href="#migration-monitoring">Migration Monitoring</a></h2>
+<p>During the migration, for each imported Neo4j items (nodes, relationships, constraints and indexes) a completion percentage is written in the shell from where the import has been started, thus allowing to monitor progresses.</p>
+<p>For large imports, a best practice is to monitor also the produced import log, using a program like <code>tail</code>, e.g.</p>
+<pre><code>tail -f -n 100 -f path_to_orientDB/log/orientdb-neo4j-importer.log
+</code></pre>
+<h2 id="migration-troubleshooting"><a class="header" href="#migration-troubleshooting">Migration Troubleshooting</a></h2>
+<p>In case of problems, the details of the occurred errors are written in the migration log file. Please use this file to troubleshoot the migration.</p>
+<h2 id="connecting-to-the-newly-imported-database"><a class="header" href="#connecting-to-the-newly-imported-database">Connecting to the newly imported Database</a></h2>
+<p>After the migration process, you may start an OrientDB server using the <code>server.sh</code> or <code>server.bat</code> scripts.</p>
+<p>You can connect to the newly imported database through <a href="../studio/README.html">Studio</a> or the <a href="../console/README.html">Console</a> using the OrientDB's default database users, e.g. using the user <em>admin</em> and password <em>admin</em>.</p>
+<p>Please secure your database by removing the default users, if you don't need them, or by creating new users.</p>
+<p>For further information on using OrientDB, please refer to the <a href="../gettingstarted/Tutorial-Introduction-to-the-NoSQL-world.html">Getting Started Guide</a>.</p>
+<h2 id="query-strategies"><a class="header" href="#query-strategies">Query Strategies</a></h2>
+<p>This section includes a few strategies that you can use to query your data after the import.</p>
+<p>As first thing, please be aware that in OrientDB you can query your data using both <a href="../sql/README.html">SQL</a> or pattern matching. In case you are familiar with Neo4j's Cypher query language, it may be more easy for you to use our pattern matching (see our <a href="../sql/SQL-Match.html">MATCH</a> syntax for more details). However, keep in mind that depending on your specific use case, our SQL can be of great help.</p>
+<h3 id="counting-all-nodes"><a class="header" href="#counting-all-nodes">Counting all nodes</a></h3>
+<p>To count all nodes (vertices):</p>
+<table>
+<tr>
+    <th width="50%">Neo4j's Cypher</th>
+    <th width="50%">OrientDB's SQL</th>
+</tr>
+<tr>
+<td>
+<pre>
+MATCH (n) RETURN count(n)
+</pre>
+</td>
+<td>
+<pre>
+SELECT COUNT(*) FROM V
+</pre>
+</td>
+</tr>
+</table>
+<h3 id="counting-all-relationships"><a class="header" href="#counting-all-relationships">Counting all relationships</a></h3>
+<p>To count all relationships (edges):</p>
+<table>
+<tr>
+    <th width="50%">Neo4j's Cypher</th>
+    <th width="50%">OrientDB's SQL</th>
+</tr>
+<tr>
+<td>
+<pre>
+MATCH ()-->() RETURN count(*)
+</pre>
+</td>
+<td>
+<pre>
+SELECT COUNT(*) FROM E 
+</pre>
+</td>
+</tr>
+</table>   
+<h3 id="querying-nodes-by-original-neo4j-id"><a class="header" href="#querying-nodes-by-original-neo4j-id">Querying nodes by original Neo4j ID</a></h3>
+<p>If you would like to query nodes by their original Neo4j Node ID, you can use the property <em>Neo4jNodeID</em>, which is created automatically for you during the import, and indexed as well.</p>
+<p>To query a node that belongs to a specific <code>Class</code> with name <em>ClassName</em>, you can execute a query like:</p>
+<pre><code>SELECT FROM ClassName WHERE Neo4jNodeID = your_id_here
+</code></pre>
+<p>To query a node regardless of the <code>Class</code> where it has been included in, you can use a query like:</p>
+<pre><code>SELECT FROM V WHERE Neo4jNodeID = your_id_here
+</code></pre>
+<h3 id="querying-relationships-by-original-neo4j-id"><a class="header" href="#querying-relationships-by-original-neo4j-id">Querying relationships by original Neo4j ID</a></h3>
+<p>The strategy to query relationships by their original Neo4j Relationship ID, will be improved in the next hotfix (see GitHub <a href="https://github.com/orientechnologies/orientdb-neo4j-importer/issues/9">Issue #9</a>, which also includes a workaround).</p>
+<h3 id="querying-nodes-by-original-neo4j-labels"><a class="header" href="#querying-nodes-by-original-neo4j-labels">Querying nodes by original Neo4j Labels</a></h3>
+<p>In case the original nodes have just one <em>Label</em>, they will be migrated in OrientDB into a <code>Class</code> that has name equals to the Neo4j's <em>Label</em> name. In this simple case, to query nodes by <em>Label</em> you can execute a query like the following:</p>
+<table>
+<tr>
+    <th width="50%">Neo4j's Cypher</th>
+    <th width="50%">OrientDB's SQL</th>
+</tr>
+<tr>
+<td>
+<pre>
+MATCH (n:LabelName) RETURN n
+</pre>
+</td>
+<td>
+<pre>
+SELECT FROM LabelName
+</pre>
+<p>or using our MATCH syntax:</p>
+<pre>
+MATCH {class: LabelName, as: n} RETURN n
+</pre>
+</td>
+</tr>
+</table>  
+<p>More generally speaking, since the original Neo4j <em>Label</em> is stored inside the property <em>Neo4jLabelList</em>, to query imported nodes (vertices) using their original Neo4j <em>Label</em>, you can use queries like the following:</p>
+<table>
+<tr>
+    <th width="50%">Neo4j's Cypher</th>
+    <th width="50%">OrientDB's SQL</th>
+</tr>
+<tr>
+<td>
+<pre>
+MATCH (n:LabelName) RETURN n
+</pre>
+</td>
+<td>
+<pre>
+SELECT * FROM V WHERE Neo4jLabelList CONTAINS 'LabelName'
+</pre>
+<p>or using our MATCH syntax:</p>
+<pre>
+MATCH {class: V, as: n, where: (Neo4jLabelList CONTAINS 'LabelName')} RETURN n
+</pre>
+</td>
+</tr>
+</table>  
+<p>This is, in particular, the strategy that must be followed in case the original Neo4j's nodes have multiple <em>Labels</em> (and are hence migrated into the single OrientDB <code>Class</code> <em>MultipleLabelNeo4jConversion</em>).</p>
+<p>Note that the property <em>Neo4jLabelList</em> has an index on it.</p>
+<h2 id="migration-example"><a class="header" href="#migration-example">Migration Example</a></h2>
+<p>A complete example of a migration from Neo4j to OrientDB using the <em>Neo4j to OrientDB Importer</em> can be found in the section <a href="../gettingstarted/tutorials/Tutorial-Importing-the-northwind-Database-from-Neo4j.html">Tutorial: Importing the <em>northwind</em> Database from Neo4j</a>.</p>
+<h2 id="roadmap"><a class="header" href="#roadmap">Roadmap</a></h2>
+<p>A list of prioritized enhancements for the Neo4j to OrientDB Importer, along with some other project information can be found <a href="https://github.com/orientechnologies/orientdb-neo4j-importer/projects/1">here</a>.</p>
+<h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
+<p><strong>1. In case original nodes in Neo4j have multiple <em>Labels</em>, they are imported into a single OrientDB vertex Class. Depending on the specific use case, after the migration, it may be useful to manually move vertices to other Classes. How can this be done?</strong></p>
+<p>First, please note that there is an open <a href="https://github.com/orientechnologies/orientdb-neo4j-importer/issues/8">enhancement request</a> about having a customized mapping between Neo4j <em>Labels</em> and OrientDB <code>Classes</code>. Until it is implemented, a possible strategy to quickly move vertices into other <code>Classes</code> is to use the <a href="../sql/SQL-Move-Vertex.html"><code>MOVE VERTEX</code></a> syntax.</p>
+<p>The following are the steps to follow:</p>
+<p><strong>A</strong> - Create the <code>Classes</code> where you want to move the vertices.</p>
+<p>When creating the <code>Classes</code>, please keep in mind the following:</p>
+<ul>
+<li>Define the following properties:
+<ul>
+<li><em>Neo4jNodeID</em> of type <em>LONG</em></li>
+<li><em>Neo4jLabelList</em> of type <em>EmbeddedList String</em></li>
+</ul>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code>CREATE CLASS YourNewClassHere EXTENDS V
+CREATE PROPERTY YourNewClassHere.Neo4jNodeID LONG 
+CREATE PROPERTY YourNewClassHere.Neo4jLabelList EMBEDDEDLIST STRING 
+</code></pre>
+<p><strong>B</strong> - Select all vertices that have a specific Neo4j <em>Label</em>, and then move them to your new <code>Class</code>. To do this you can use a query like:</p>
+<pre><code>MOVE VERTEX (
+  SELECT FROM MultipleLabelNeo4jConversion 
+    WHERE Neo4jLabelList CONTAINS 'Your Neo4j Label here'
+  ) 
+TO CLASS:YourNewClassHere BATCH 10000
+</code></pre>
+<p>(use a batch size appropriate to your specific case).</p>
+<p><strong>C</strong> - Create the following indexes in your new <code>Classes</code>:</p>
+<ul>
+<li>A unique index on the property <em>Neo4jNodeID</em></li>
+<li>A not unique index on the property <em>Neo4jLabelList</em></li>
+</ul>
+<p><strong>Important:</strong> creation of the indexes above is crucial in case you will want to query vertices using their original Neo4j node <em>IDs</em> or <em>Labels</em>.</p>
+<p><strong>Example:</strong></p>
+<pre><code>CREATE INDEX YourNewClassHere.Neo4jNodeID ON YourNewClassHere(Neo4jNodeID) UNIQUE
+CREATE INDEX YourNewClassHere.Neo4jLabelList ON YourNewClassHere(Neo4jLabelList) NOTUNIQUE
+</code></pre>
+<p><strong>2. Not all constraints have been imported. Why?</strong></p>
+<p>By design, there are certain cases where not all the constraints can be imported. It may be that you are in one of these cases. When nodes are aggregated into a single <code>Class</code> (either because that node has multiple <em>Labels</em> or because there are <em>Labels</em> with the same name but different case, e.g. <em>LABEL</em> and <em>LAbel</em>) not all constraints can be imported: the creation of unique indices in OrientDB will probably fail; as a workaround the Importer will try to create not unique indexes, but when aggregating nodes into a single <code>Class</code>, number of created constraints will be probably less than number of constraints in Neo4j, even after the creation of the not unique indexes. This in general may or may not be a problem depending on your specific case. Please feel free to open an <a href="https://github.com/orientechnologies/orientdb-neo4j-importer/issues">issue</a> if you believe you incurred into a bug.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../etl/Import-from-PARSE.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../etl/Import-from-PARSE.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
