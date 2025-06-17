@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Filtering - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sql---filtering"><a class="header" href="#sql---filtering">SQL - Filtering</a></h1>
+<p>The Where condition is shared among many SQL commands.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<p><code>[&lt;item&gt;] &lt;operator&gt; &lt;item&gt;</code></p>
+<h2 id="items"><a class="header" href="#items">Items</a></h2>
+<p>And <code>item</code> can be:</p>
+<div class="table-wrapper"><table><thead><tr><th><strong>What</strong></th><th><strong>Description</strong></th><th><strong>Example</strong></th><th><strong>Available since</strong></th></tr></thead><tbody>
+<tr><td>field</td><td>Document field</td><td>where <em>price</em> &gt; 1000000</td><td>0.9.1</td></tr>
+<tr><td>field&lt;indexes&gt;</td><td>Document field part. To know more about field part look at the full syntax: <a href="../java/Document-API-Property.html">properties</a></td><td>where tags[name='Hi'] or tags[0-3] IN ('Hello') and employees IS NOT NULL</td><td>1.0rc5</td></tr>
+<tr><td>record attribute</td><td>Record attribute name with @ as prefix</td><td>where <em>@class</em> = 'Profile'</td><td>0.9.21</td></tr>
+<tr><td>column</td><td>The number of the column. Useful in Column Database</td><td>where <em>column(1)</em> &gt; 300</td><td>0.9.1</td></tr>
+<tr><td>any()</td><td>Represents any field of the Document. The condition is true if ANY of the fields matches the condition</td><td>where <em>any()</em> like 'L%'</td><td>0.9.10</td></tr>
+<tr><td>all()</td><td>Represents all the fields of the Document. The condition is true if ALL the fields match the condition</td><td>where <em>all()</em> is null</td><td>0.9.10</td></tr>
+<tr><td><a href="SQL-Functions.html">functions</a></td><td>Any <a href="SQL-Functions.html">function</a> between the defined ones</td><td>where distance(x, y, 52.20472, 0.14056 ) &lt;= 30</td><td>0.9.25</td></tr>
+<tr><td><a href="SQL-Where.html#variables">$variable</a></td><td>Context variable prefixed with $</td><td>where $depth &lt;= 3</td><td>1.2.0</td></tr>
+</tbody></table>
+</div>
+<h3 id="record-attributes"><a class="header" href="#record-attributes">Record attributes</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Description</th><th>Example</th><th>Available since</th></tr></thead><tbody>
+<tr><td>@this</td><td>returns the record it self</td><td>select <strong>@this.toJSON()</strong> from Account</td><td>0.9.25</td></tr>
+<tr><td>@rid</td><td>returns the <a href="../datamodeling/Concepts.html#record-id">Record ID</a> in the form &lt;cluster:position&gt;. It's null for embedded records. *NOTE: using @rid in where condition slow down queries. Much better to use the <a href="../datamodeling/Concepts.html#record-id">Record ID</a> as target. Example: change this: select from Profile where @rid = #10:44 with this: select from #10:44 *</td><td><strong>@rid</strong> = #11:0</td><td>0.9.21</td></tr>
+<tr><td>@class</td><td>returns Class name only for record of type Schema Aware. It's null for the others</td><td><strong>@class</strong> = 'Profile'</td><td>0.9.21</td></tr>
+<tr><td>@version</td><td>returns the record version as integer. Version starts from 0. Can't be null</td><td><strong>@version</strong> &gt; 0</td><td>0.9.21</td></tr>
+<tr><td>@size</td><td>returns the record size in bytes</td><td><strong>@size</strong> &gt; 1024</td><td>0.9.21</td></tr>
+<tr><td>@fields</td><td>returns the number of fields in document</td><td>select @fields from V</td><td>-</td></tr>
+<tr><td>@type</td><td>returns the record type between: 'document', 'column', 'flat', 'bytes'</td><td><strong>@type</strong> = 'flat'</td><td>0.9.21</td></tr>
+</tbody></table>
+</div>
+<h2 id="operators"><a class="header" href="#operators">Operators</a></h2>
+<h3 id="conditional-operators"><a class="header" href="#conditional-operators">Conditional Operators</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Apply to</th><th>Operator</th><th>Description</th><th>Example</th><th>Available since</th></tr></thead><tbody>
+<tr><td>any</td><td>=</td><td>Equals to</td><td>name <strong>=</strong> 'Luke'</td><td>0.9.1</td></tr>
+<tr><td>string</td><td>like</td><td>Similar to equals, but allow the wildcard '%' that means 'any'</td><td>name <strong>like</strong> 'Luk%'</td><td>0.9.1</td></tr>
+<tr><td>any</td><td>&lt;</td><td>Less than</td><td>age <strong>&lt;</strong> 40</td><td>0.9.1</td></tr>
+<tr><td>any</td><td>&lt;=</td><td>Less than or equal to</td><td>age <strong>&lt;=</strong> 40</td><td>0.9.1</td></tr>
+<tr><td>any</td><td>&gt;</td><td>Greater than</td><td>age <strong>&gt;</strong> 40</td><td>0.9.1</td></tr>
+<tr><td>any</td><td>&gt;=</td><td>Greater than or equal to</td><td>age <strong>&gt;=</strong> 40</td><td>0.9.1</td></tr>
+<tr><td>any</td><td>&lt;&gt;</td><td>Not equals (same of !=)</td><td>age <strong>&lt;&gt;</strong> 40</td><td>0.9.1</td></tr>
+<tr><td>any</td><td>BETWEEN</td><td>The value is between a range. It's equivalent to &lt;field&gt; &gt;= &lt;from-value&gt; AND &lt;field&gt; &lt;= &lt;to-value&gt;</td><td>price BETWEEN 10 and 30</td><td>1.0rc2</td></tr>
+<tr><td>any</td><td>IS</td><td>Used to test if a value is NULL</td><td>children <strong>is</strong> null</td><td>0.9.6</td></tr>
+<tr><td>record, string (as class name)</td><td>INSTANCEOF</td><td>Used to check if the record extends a class</td><td>@this <strong>instanceof</strong> 'Customer' or @class <strong>instanceof</strong> 'Provider'</td><td>1.0rc8</td></tr>
+<tr><td>collection</td><td>IN</td><td>contains any of the elements listed</td><td>name <strong>in</strong> ['European','Asiatic']</td><td></td></tr>
+<tr><td>collection</td><td>CONTAINS</td><td>true if the collection contains at least one element that satisfy the next condition. Condition can be a single item: in this case the behaviour is like the IN operator</td><td>children <strong>contains</strong> (name = 'Luke') - map.values() <strong>contains</strong> (name = 'Luke')</td><td>0.9.7</td></tr>
+<tr><td>collection</td><td>CONTAINSALL</td><td>true if all the elements of the collection satisfy the next condition</td><td>children <em>containsAll</em> (name = 'Luke')</td><td>0.9.7</td></tr>
+<tr><td>collection</td><td>CONTAINSANY</td><td>true if any the elements of the collection satisfy the next condition</td><td>children <em>containsAny</em> (name = 'Luke')</td><td></td></tr>
+<tr><td>map</td><td>CONTAINSKEY</td><td>true if the map contains at least one key equals to the requested. You can also use map.keys() CONTAINS in place of it</td><td>connections <em>containsKey</em> 'Luke'</td><td>0.9.22</td></tr>
+<tr><td>map</td><td>CONTAINSVALUE</td><td>true if the map contains at least one value equals to the requested. You can also use map.values() CONTAINS in place of it</td><td>connections <em>containsValue</em> 10:3</td><td>0.9.22</td></tr>
+<tr><td>string</td><td>CONTAINSTEXT</td><td>When used against an indexed field, a lookup in the index will be performed with the text specified as key. When there is no index a simple Java indexOf will be performed. So the result set could be different if you have an index or not on that field</td><td>text <em>containsText</em> 'jay'</td><td>0.9.22</td></tr>
+<tr><td>string</td><td>MATCHES</td><td>Matches the string using a [http://www.regular-expressions.info/ Regular Expression]</td><td>text matches '\b[A-Z0-9.%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}\b'</td><td>0.9.6</td></tr>
+<tr><td>any</td><td>TRAVERSE[(&lt;minDepth&gt; [,&lt;maxDepth&gt; [,&lt;fields&gt;]]</td><td><em>This function was born before the SQL Traverse statement and today it's pretty limited. Look at <a href="../java/Java-Traverse.html">Traversing graphs</a> to know more about traversing in better ways.</em> <br>true if traversing the declared field(s) at the level from &lt;minDepth&gt; to &lt;maxDepth&gt; matches the condition. A minDepth = 0 means the root node, maxDepth = -1 means no limit: traverse all the graph recursively. If &lt;minDepth&gt; and &lt;maxDepth&gt; are not used, then (0, -1) will be taken. If &lt;fields&gt; is not passed, than any() will be used.</td><td>select from profile where any() <strong>traverse(0,7,'followers,followings')</strong> ( address.city.name = 'Rome' )</td><td>0.9.10 and 0.9.24 for &lt;fields&gt; parameter</td></tr>
+</tbody></table>
+</div>
+<h3 id="logical-operators"><a class="header" href="#logical-operators">Logical Operators</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Description</th><th>Example</th><th>Available since</th></tr></thead><tbody>
+<tr><td>AND</td><td>true if both the conditions are true</td><td>name = 'Luke' <strong>and</strong> surname like 'Sky%'</td><td>0.9.1</td></tr>
+<tr><td>OR</td><td>true if at least one of the condition is true</td><td>name = 'Luke' <strong>or</strong> surname like 'Sky%'</td><td>0.9.1</td></tr>
+<tr><td>NOT</td><td>true if the condition is false. NOT needs parenthesis on the right with the condition to negate</td><td><strong>not</strong> ( name = 'Luke')</td><td>1.2</td></tr>
+</tbody></table>
+</div>
+<h3 id="mathematics-operators"><a class="header" href="#mathematics-operators">Mathematics Operators</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Apply to</th><th>Operator</th><th>Description</th><th>Example</th><th>Available since</th></tr></thead><tbody>
+<tr><td>Numbers</td><td>+</td><td>Plus</td><td>age + 34</td><td>1.0rc7</td></tr>
+<tr><td>Numbers</td><td>-</td><td>Minus</td><td>salary - 34</td><td>1.0rc7</td></tr>
+<tr><td>Numbers</td><td>*</td><td>Multiply</td><td>factor * 1.3</td><td>1.0rc7</td></tr>
+<tr><td>Numbers</td><td>/</td><td>Divide</td><td>total / 12</td><td>1.0rc7</td></tr>
+<tr><td>Numbers</td><td>%</td><td>Mod</td><td>total % 3</td><td>1.0rc7</td></tr>
+</tbody></table>
+</div>
+<p>Starting from v1.4 OrientDB supports the <code>eval()</code> function to execute complex operations. Example:</p>
+<pre><code class="language-sql">select eval( "amount * 120 / 100 - discount" ) as finalPrice from Order
+</code></pre>
+<h3 id="methods"><a class="header" href="#methods">Methods</a></h3>
+<p>Also called "Field Operators", are <a href="SQL-Methods.html">are treated on a separate page</a>.</p>
+<h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
+<p>All the <a href="SQL-Functions.html">SQL functions are treated on a separate page</a>.</p>
+<h2 id="variables"><a class="header" href="#variables">Variables</a></h2>
+<p>OrientDB supports variables managed in the context of the command/query. By default some variables are created. Below the table with the available variables:</p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Description</th><th>Command(s)</th><th>Since</th></tr></thead><tbody>
+<tr><td>$parent</td><td>Get the parent context from a sub-query. Example: select from V let $type = ( traverse * from $parent.$current.children )</td><td><a href="SQL-Query.html">SELECT</a> and <a href="SQL-Traverse.html">TRAVERSE</a></td><td>1.2.0</td></tr>
+<tr><td>$current</td><td>Current record to use in sub-queries to refer from the parent's variable</td><td><a href="SQL-Query.html">SELECT</a> and <a href="SQL-Traverse.html">TRAVERSE</a></td><td>1.2.0</td></tr>
+<tr><td>$depth</td><td>The current depth of nesting</td><td><a href="SQL-Traverse.html">TRAVERSE</a></td><td>1.1.0</td></tr>
+<tr><td>$path</td><td>The string representation of the current path. Example:  #6:0.in.#5:0#.out. You can also display it with -&gt; select $path from (traverse * from V)</td><td><a href="SQL-Traverse.html">TRAVERSE</a></td><td>1.1.0</td></tr>
+<tr><td>$stack</td><td>The List of operation in the stack. Use it to access to the history of the traversal</td><td><a href="SQL-Traverse.html">TRAVERSE</a></td><td>1.1.0</td></tr>
+<tr><td>$history</td><td>The set of all the records traversed as a Set&lt;ORID&gt;</td><td><a href="SQL-Traverse.html">TRAVERSE</a></td><td>1.1.0</td></tr>
+</tbody></table>
+</div>
+<p>To set custom variable use the <a href="SQL-Query.html#let-block">LET</a> keyword.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sql/SQL-Update-Edge.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/SQL-Functions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sql/SQL-Update-Edge.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/SQL-Functions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

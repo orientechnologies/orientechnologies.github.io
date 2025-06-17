@@ -1,0 +1,1283 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Binary Protocol - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="binary-protocol"><a class="header" href="#binary-protocol">Binary Protocol</a></h1>
+<p>Current protocol version for 3.0.x: <strong>37</strong>. Look at <a href="#compatibility">Compatibility</a> for retro-compatibility.</p>
+<h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>The OrientDB binary protocol is the fastest way to interface a client application to an OrientDB Server instance. The aim of this page is to provide a starting point from which to build a language binding, maintaining high-performance.</p>
+<p>If you'd like to develop a new binding, please take a look to the available ones before starting a new project from scratch: <a href="../apis-and-drivers/README.html">Existent Drivers</a>.</p>
+<p>Also, check the available <a href="../misc/OrientDB-REST.html">REST implementations</a>.</p>
+<p>Before starting, please note that:</p>
+<ul>
+<li><strong><a href="../datamodeling/Concepts.html#record">Record</a></strong> is an abstraction of <strong><a href="../datamodeling/Concepts.html#document">Document</a></strong>. However, keep in mind that in OrientDB you can handle structures at a lower level than Documents. These include positional records, raw strings, raw bytes, etc.</li>
+</ul>
+<p>For more in-depth information please look at the Java classes:</p>
+<ul>
+<li>Client side: <a href="https://github.com/nuvolabase/orientdb/tree/master/client/src/main/java/com/orientechnologies/orient/client/remote/OStorageRemote.java">OStorageRemote.java</a></li>
+<li>Server side: <a href="https://github.com/nuvolabase/orientdb/tree/master/server/src/main/java/com/orientechnologies/orient/server/network/protocol/binary/ONetworkProtocolBinary.java">ONetworkProtocolBinary.java</a></li>
+<li>Protocol constants: <a href="https://github.com/nuvolabase/orientdb/tree/master/enterprise/src/main/java/com/orientechnologies/orient/enterprise/channel/binary/OChannelBinaryProtocol.java">OChannelBinaryProtocol.java</a></li>
+</ul>
+<h2 id="connection"><a class="header" href="#connection">Connection</a></h2>
+<p><em>(Since 0.9.24-SNAPSHOT Nov 25th 2010)</em> Once connected, the server sends a short number (2 byte) containing the binary protocol number. The client should check that it supports that version of the protocol. Every time the protocol changes the version is incremented.</p>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting started</a></h2>
+<p>After the connection has been established, a client can <b>Connect</b> to the server or request the opening of a database <b>Database Open</b>. Currently, only TCP/IP raw sockets are supported. For this operation use socket APIs appropriate to the language you're using. After the <b>Connect</b> and <b>Database Open</b> all the client's requests are sent to the server until the client closes the socket. When the socket is closed, OrientDB Server instance frees resources the used for the connection.</p>
+<p>The first operation following the socket-level connection must be one of:</p>
+<ul>
+<li><a href="#connection">Connect to the server</a> to work with the OrientDB Server instance</li>
+<li><a href="#request_db_open">Open a database</a> to open an existing database</li>
+</ul>
+<p>In both cases a <a href="#session-id">Session ID</a> is sent back to the client. The server assigns a unique Session-Id to the client. This value must be used for all further operations against the server. You may open a database after connecting to the server, using the same Session-Id</p>
+<h2 id="session"><a class="header" href="#session">Session</a></h2>
+<p>The session management supports two modes: stateful and stateless:</p>
+<ul>
+<li>the stateful is based on a <a href="#session-id">Session ID</a></li>
+<li>the stateless is based on a <a href="#token">Token</a></li>
+</ul>
+<p>The session mode is selected at open/connect operation.</p>
+<h2 id="session-id"><a class="header" href="#session-id">Session ID</a></h2>
+<p>All the operations that follow the open/connect must contain, as the first parameter, the client <strong>Session-Id</strong> (as Integer, 4 bytes) and it will be sent back on completion of the request just after the result field.</p>
+<p><em>NOTE: In order to create a new server-side connection, the client must send a negative number into the open/connect calls.</em></p>
+<p>This <strong>Session-Id</strong> can be used into the client to keep track of the requests if it handles multiple session bound to the same connection. In this way the client can implement a sharing policy to save resources. This requires that the client implementation handle the response returned and dispatch it to the correct caller thread.</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><img src="../images/warning.png" alt="" /></td><td>Opening multiple TCP/IP sockets against OrientDB Server allows to parallelize requests. However, pay attention to use one Session-id per connection. If multiple sockets use the same Session-Id, requests will not be executed concurrently on the server side.</td></tr>
+</tbody></table>
+</div>
+<h2 id="token"><a class="header" href="#token">Token</a></h2>
+<p>All the operation in a stateless session are based on the token, the token is a byte[] that contains all the information for the interaction with the server, the token is acquired at the moment of open or connect, and need to be resend for each request. the session id used in the stateful requests is still there and is used to associate the request to the response. in the response can be resend a token in case of expire renew.</p>
+<h1 id="enable-debug-messages-on-protocol"><a class="header" href="#enable-debug-messages-on-protocol">Enable debug messages on protocol</a></h1>
+<p>To make the development of a new client easier it's strongly suggested to activate debug mode on the binary channel. To activate this, edit the file <code>orientdb-server-config.xml</code> and configure the new parameter <code>network.binary.debug</code> on the "binary" or "distributed" listener. E.g.:</p>
+<pre><code>...
+&lt;listener protocol="distributed" port-range="2424-2430"
+ip-address="127.0.0.1"&gt;
+  &lt;parameters&gt;
+    &lt;parameter name="network.binary.debug" value="true" /&gt;
+  &lt;/parameters&gt;
+&lt;/listener&gt;
+...
+</code></pre>
+<p>In the log file (or the console if you have configured the <code>orientdb-server-log.properties</code> file)
+all the packets received will be printed.</p>
+<h1 id="exchange"><a class="header" href="#exchange">Exchange</a></h1>
+<p>This is the typical exchange of messages between client and server sides:</p>
+<pre><code>+------+ +------+
+|Client| |Server|
++------+ +------+
+| TCP/IP Socket connection |
++--------------------------&gt;|
+| DB_OPEN |
++--------------------------&gt;|
+| RESPONSE (+ SESSION-ID) |
++&lt;--------------------------+
+... ...
+| REQUEST (+ SESSION-ID) |
++--------------------------&gt;|
+| RESPONSE (+ SESSION-ID) |
++&lt;--------------------------+
+... ...
+| DB_CLOSE (+ SESSION-ID) |
++--------------------------&gt;|
+| TCP/IP Socket close |
++--------------------------&gt;|
+</code></pre>
+<h1 id="network-message-format"><a class="header" href="#network-message-format">Network message format</a></h1>
+<p>In explaining the network messages these conventions will be used:</p>
+<ul>
+<li>fields are bracketed by parenthesis and contain the name and the type separated by ':'. E.g. <code>(length:int)</code></li>
+</ul>
+<h1 id="supported-types"><a class="header" href="#supported-types">Supported types</a></h1>
+<p>The network protocol supports different types of information:</p>
+<table>
+<tbody>
+<tr><th>Type</th><th>Minimum length in bytes</th><th>Maximum length in bytes</th><th>Notes</th><th>Example</th></tr>
+<tr><th>boolean</th><td>1</td><td>1</td><td>Single byte: 1 = true, 0 = false</td><td>1</td></tr>
+<tr><th>byte</th><td>1</td><td>1</td><td>Single byte, used to store small numbers and booleans</td><td>1</td></tr>
+<tr><th>short</th><td>2</td><td>2</td><td>Signed short type</td><td>01</td></tr>
+<tr><th>int</th><td>4</td><td>4</td><td>Signed integer type</td><td>0001</td></tr>
+<tr><th>long</th><td>8</td><td>8</td><td>Signed long type</td><td>00000001</td></tr>
+<tr><th>bytes</th><td>4</td><td>N</td><td>Used for binary data. The format is <code>(length:int)[(bytes)]</code>. Send -1 as NULL</td><td><code>000511111</code></td></tr>
+<tr><th>string</th><td>4</td><td>N</td><td>Used for text messages.The format is: <code>(length:int)[(bytes)](content:&lt;length&gt;)</code>. Send -1 as NULL</td><td><code>0005Hello</code></td></tr>
+<tr><th>record</th><td>2</td><td>N</td><td>An entire record serialized. The format depends if a RID is passed or an entire record with its content. In case of null record then -2 as short is passed. In case of RID -3 is passes as short and then the RID: <code>(-3:short)(cluster-id:short)(cluster-position:long)</code>. In case of record: <code>(0:short)(record-type:byte)(cluster-id:short)(cluster-position:long)(record-version:int)(record-content:bytes)</code></td><td></td></tr>
+<tr><th>strings</th><td>4</td><td>N</td><td>Used for multiple text messages. The format is: <code>(length:int)[(Nth-string:string)]</code></td><td><code>00020005Hello0007World!</code></td></tr>
+</tbody>
+</table>
+<p><strong>Note</strong> when the type of a field in a response depends on the values of the previous fields, that field will be written without the type (e.g., <code>(a-field)</code>). The type of the field will be then specified based on the values of the previous fields in the description of the response.</p>
+<h1 id="record-format"><a class="header" href="#record-format">Record format</a></h1>
+<p>The record format is choose during the <a href="#request_connect">CONNECT</a> or <a href="#request_db_open">DB_OPEN</a> request, the formats available are:</p>
+<p><a href="Record-CSV-Serialization.html">CSV</a> (serialization-impl value "ORecordDocument2csv")
+<a href="Record-Schemaless-Binary-Serialization.html">Binary</a> (serialization-impl value "ORecordSerializerBinary")</p>
+<p>The CSV format is the default for all the versions 0.* and 1.* or for any client with Network Protocol Version &lt; 22</p>
+<h1 id="request"><a class="header" href="#request">Request</a></h1>
+<p>Each request has own format depending of the operation requested. The operation requested is indicated in the first byte:</p>
+<ul>
+<li><em>1 byte</em> for the operation. See <a href="#operation-types">Operation types</a> for the list</li>
+<li><strong>4 bytes</strong> for the <a href="#session-id">Session-Id</a> number as Integer</li>
+<li><strong>N bytes</strong> optional token bytes only present if the REQUEST_CONNECT/REQUEST_DB_OPEN return a token.</li>
+<li><strong>N bytes</strong> = message content based on the operation type</li>
+</ul>
+<h2 id="operation-types"><a class="header" href="#operation-types">Operation types</a></h2>
+<table>
+<tr><th>Command</th><th>Value as byte</th><th>Description</th><th>Async</th><th>Since</th></tr>
+<tr><td colspan="5"><h3 id="server-connect-operations"><a class="header" href="#server-connect-operations">Server <i>(CONNECT Operations)</i></a></h3></td></tr>
+<tr><td><a href="#request_shutdown">REQUEST_SHUTDOWN</a></td><td>1</td><td>Shut down server.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_connect">REQUEST_CONNECT</a></td><td>2</td><td>Required initial operation</b> to access to server commands.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_db_open">REQUEST_DB_OPEN</a></td><td>3</td><td><b>Required initial operation</b> to access to the database.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_db_create">REQUEST_DB_CREATE</a></td><td>4</td><td>Add a new database.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_db_exist">REQUEST_DB_EXIST</a></td><td>6</td><td>Check if database exists.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_db_drop">REQUEST_DB_DROP</a></td><td>7</td><td>Delete database.</td><td>no</td><td></td></tr>
+<tr><td>REQUEST_CONFIG_GET</td><td>70</td><td>Get a configuration property.</td><td>no</td><td></td></tr>
+<tr><td>REQUEST_CONFIG_SET</td><td>71</td><td>Set a configuration property.</td><td>no</td><td></td></tr>
+<tr><td>REQUEST_CONFIG_LIST</td><td>72</td><td>Get a list of configuration properties.</td><td>no</td><td></td></tr>
+<tr><td>REQUEST_DB_LIST<td>74</td><td>Get a list of databases.</td><td>no</td><td>1.0rc6</td></tr>
+<tr><td colspan="5"><h3 id="database-db_open-operations"><a class="header" href="#database-db_open-operations">Database <i>(DB_OPEN Operations)</i></a></h3></td></tr>
+<tr><td><a href="#request_db_close">REQUEST_DB_CLOSE</a></td><td>5</td><td>Close a database.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_db_size">REQUEST_DB_SIZE</a></td><td>8</td><td>Get the size of a database (in bytes).</td><td>no</td><td>0.9.25</td></tr>
+<tr><td><a href="#request_db_countrecords">REQUEST_DB_COUNTRECORDS</a></td><td>9</td><td>Get total number of records in a database.</td><td>no</td><td>0.9.25</td></tr>
+<tr><td><a href="#request_datacluster_add">REQUEST_DATACLUSTER_ADD (deprecated)</a></td><td>10</td><td>Add a data cluster.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_datacluster_drop">REQUEST_DATACLUSTER_DROP (deprecated)</a><td>11</td><td>Delete a data cluster.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_datacluster_count">REQUEST_DATACLUSTER_COUNT (deprecated)</a></td><td>12</td><td>Get the total number of data clusters.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_datacluster_datarange">REQUEST_DATACLUSTER_DATARANGE (deprecated)</a></td><td>13</td><td>Get the data range of data clusters.</td><td>no</td><td></td></tr>
+<tr><td>REQUEST_DATACLUSTER_COPY</td><td>14</td><td>Copy a data cluster.</td><td>no</td><td></td></tr>
+<tr><td>REQUEST_DATACLUSTER_LH_CLUSTER_IS_USED</td><td>16</td><td></td><td>no</td><td>1.2.0</td></tr>
+<tr><td>REQUEST_RECORD_METADATA</td><td>29</td><td>Get metadata from a record.</td><td>no</td><td>1.4.0</td></tr>
+<tr><td><a href="#request_record_load">REQUEST_RECORD_LOAD</a></td><td>30</td><td>Load a record.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_record_load_if_version_not_latest">REQUEST_RECORD_LOAD_IF_VERSION_NOT_LATEST</a></td><td>44</td><td>Load a record.</td><td>no</td><td>2.1-rc4</td></tr>
+<tr><td><a href="#request_record_create">REQUEST_RECORD_CREATE</a></td><td>31</td><td>Add a record.</td><td>yes</td><td></td></tr>
+<tr><td><a href="#request_record_update">REQUEST_RECORD_UPDATE</a></td><td>32</td><td><Update a record./td><td>yes</td><td></td></tr>
+<tr><td><a href="#request_record_delete">REQUEST_RECORD_DELETE</a></td><td>33</td><td>Delete a record.</td><td>yes</td><td></td></tr>
+<tr><td>REQUEST_RECORD_COPY</td><td>34</td><td>Copy a record.</td><td>yes</td><td></td></tr>
+<tr><td>REQUEST_RECORD_CLEAN_OUT</td><td>38</td><td>Clean out record.</td><td>yes</td><td>1.3.0</td></tr>
+<tr><td>REQUEST_POSITIONS_FLOOR</td><td>39</td><td>Get the last record.</td><td>yes</td><td>1.3.0</td></tr>
+<tr><td>REQUEST_COUNT <i>(DEPRECATED)</i></td><td>40</td><td>See REQUEST_DATACLUSTER_COUNT</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_command">REQUEST_COMMAND</a></td><td>41</td><td>Execute a command.</td><td>no</td><td></td></tr>
+<tr><td>REQUEST_POSITIONS_CEILING</td><td>42</td><td>Get the first record.</td><td>no</td><td>1.3.0</td></tr>
+<tr><td><a href="#request_query">REQUEST_QUERY</a></td><td>45</td><td>Execute a query.</td><td>no</td><td>3.0.0</td></tr>   
+<tr><td><a href="#request_query_close">REQUEST_CLOSE_QUERY</a></td><td>46</td><td>Close an active query cursor.</td><td>no</td><td>3.0.0</td></tr>   
+<tr><td><a href="#request_query_next_page">REQUEST_QUERY_NEXT_PAGE</a></td><td>47</td><td>Get next page of a query result</td><td>no</td><td>3.0.0</td></tr>   
+<tr><td><a href="#request_tx_commit">REQUEST_TX_COMMIT</a></td><td>60</td><td>Commit transaction.</td><td>no</td><td></td></tr>
+<tr><td><a href="#request_db_reload">REQUEST_DB_RELOAD</a></td><td>73</td><td>Reload database.</td><td>no</td><td>1.0rc4</td></tr>
+<tr><td>REQUEST_PUSH_RECORD<td>79</td><td></td><td>no</td><td>1.0rc6</td></tr>
+<tr><td>REQUEST_PUSH_DISTRIB_CONFIG<td>80</td><td></td><td>no</td><td>1.0rc6</td></tr>
+<tr><td><a href="#request_push_live_query">REQUEST_PUSH_LIVE_QUERY</a><td>81</td><td></td><td>no</td><td>2.1-rc2</td></tr>
+<tr><td>REQUEST_DB_COPY<td>90</td><td></td><td>no</td><td>1.0rc8</td></tr>
+<tr><td>REQUEST_REPLICATION<td>91</td><td></td><td>no</td><td>1.0</td></tr>
+<tr><td>REQUEST_CLUSTER<td>92</td><td></td><td>no</td><td>1.0</td></tr>
+<tr><td>REQUEST_DB_TRANSFER<td>93</td><td></td><td>no</td><td>1.0.2</td></tr>
+<tr><td>REQUEST_DB_FREEZE<td>94</td><td></td><td>no</td><td>1.1.0</td></tr>
+<tr><td>REQUEST_DB_RELEASE<td>95</td><td></td><td>no</td><td>1.1.0</td></tr>
+<tr><td>REQUEST_DATACLUSTER_FREEZE (deprecated)<td>96</td><td></td><td>no</td><td></td></tr>
+<tr><td>REQUEST_DATACLUSTER_RELEASE (deprecated)<td>97</td><td></td><td>no</td><td></td></tr>
+<tr><td>REQUEST_CREATE_SBTREE_BONSAI<td>110</td><td>Creates an sb-tree bonsai on the remote server</td><td>no</td><td>1.7rc1</td></tr>
+<tr><td>REQUEST_SBTREE_BONSAI_GET<td>111</td><td>Get value by key from sb-tree bonsai</td><td>no</td><td>1.7rc1</td></tr>
+<tr><td>REQUEST_SBTREE_BONSAI_FIRST_KEY<td>112</td><td>Get first key from sb-tree bonsai</td><td>no</td><td>1.7rc1</td></tr>
+<tr><td>REQUEST_SBTREE_BONSAI_GET_ENTRIES_MAJOR<td>113</td><td>Gets the portion of entries greater than the specified one. If returns 0 entries then the specified entry is the largest</td><td>no</td><td>1.7rc1</td></tr>
+<tr><td>REQUEST_RIDBAG_GET_SIZE<td>114</td><td>Rid-bag specific operation. Send but does not save changes of rid bag. Retrieves computed size of rid bag.</td><td>no</td><td>1.7rc1</td></tr>
+<tr><td>REQUEST_INDEX_GET<td>120</td><td>Lookup in an index by key</td><td>no</td><td>2.1rc4</td></tr>
+<tr><td>REQUEST_INDEX_PUT<td>121</td><td>Create or update an entry in an index</td><td>no</td><td>2.1rc4</td></tr>
+<tr><td>REQUEST_INDEX_REMOVE<td>122</td><td>Remove an entry in an index by key</td><td>no</td><td>2.1rc4</td></tr>
+<tr><td>REQUEST_INCREMENTAL_RESTORE</td><td> Incremental restore </td><td>no</td><td>2.2-rc1</td></tr>
+</table>
+<h1 id="response"><a class="header" href="#response">Response</a></h1>
+<p>Every request has a response unless the command supports the asynchronous mode (look at the table above).</p>
+<ul>
+<li><strong>1 byte</strong>: Success status of the request if succeeded or failed (0=OK, 1=ERROR)</li>
+<li><strong>4 bytes</strong>: <a href="#session-id">Session-Id</a> (Integer)</li>
+<li><strong>N bytes</strong> optional token, is only present for token based session (REQUEST_CONNECT/REQUEST_DB_OPEN return a token) and is usually empty(N=0) is only filled up by the server when renew of an expiring token is required.</li>
+<li><strong>N bytes</strong>: Message content depending on the operation requested</li>
+</ul>
+<h1 id="push-request"><a class="header" href="#push-request">Push Request</a></h1>
+<p>A push request is a message sent by the server without any request from the client, it has a similar structure of a response and is distinguished using the response status byte:</p>
+<ul>
+<li><strong>1 byte</strong>: Success status has value 3 in case of push request</li>
+<li><strong>4 bytes</strong>: <a href="#session-id">Session-Id</a> has everytime MIN_INTEGER value (-2^31)</li>
+<li><strong>1 byte</strong>: Push command id</li>
+<li><strong>N bytes</strong>: Message content depending on the push massage, this is written as a <code>(content:bytes)</code> having inside the details of the specific message.</li>
+</ul>
+<h2 id="statuses"><a class="header" href="#statuses">Statuses</a></h2>
+<p>Every time the client sends a request, and the command is not in asynchronous mode (look at the table above), client must read the one-byte response status that indicates OK or ERROR. The rest of response bytes depends on this first byte.</p>
+<pre><code>* OK = 0;
+* ERROR = 1;
+* PUSH_REQUEST = 3
+</code></pre>
+<p><strong>OK response bytes are depends for every request type. ERROR response bytes sequence described below.</strong></p>
+<h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
+<p>The format is: <code>[(1)(exception-class:string)(exception-message:string)]*(0)(serialized-exception:bytes)</code></p>
+<p>The pairs exception-class and exception-message continue while the following byte is 1. A 0 in this position indicates that no more data follows.</p>
+<p>E.g. (parentheses are used here just to separate fields to make this easier to read: they are not present in the server response):</p>
+<pre><code>(1)(com.orientechnologies.orient.core.exception.OStorageException)(Can't open the storage 'demo')(0)
+</code></pre>
+<p>Example of 2 depth-levels exception:</p>
+<pre><code>(1)(com.orientechnologies.orient.core.exception.OStorageException)(Can't open the storage 'demo')(1)(com.orientechnologies.orient.core.exception.OStorageException)(File not found)(0)
+</code></pre>
+<p>Since 1.6.1 we also send serialized version of exception thrown on server side. This allows to preserve full
+stack trace of server exception on client side but this feature can be used by Java clients only.</p>
+<h1 id="operations"><a class="header" href="#operations">Operations</a></h1>
+<p>This section explains the <em>request</em> and <em>response</em> messages of all supported operations.</p>
+<h2 id="request_shutdown"><a class="header" href="#request_shutdown">REQUEST_SHUTDOWN</a></h2>
+<p>Shut down the server. Requires "shutdown" permission to be set in <em>orientdb-server-config.xml</em> file.</p>
+<pre><code>Request: (user-name:string)(user-password:string)
+Response: empty
+</code></pre>
+<p>Typically the credentials are those of the OrientDB server administrator. This is not the same as the <em>admin</em> user for individual databases.</p>
+<h2 id="request_connect"><a class="header" href="#request_connect">REQUEST_CONNECT</a></h2>
+<p>This is the first operation requested by the client when it needs to work with the server instance. This operation returns the <a href="#session-id">Session-Id</a> of the new client to reuse for all the next calls.</p>
+<pre><code>Request: (driver-name:string)(driver-version:string)(protocol-version:short)(client-id:string)(serialization-impl:string)(token-session:boolean)(support-push)(collect-stats)(user-name:string)(user-password:string)
+Response: (session-id:int)(token:bytes)
+</code></pre>
+<h4 id="request-1"><a class="header" href="#request-1">Request</a></h4>
+<ul>
+<li>client's <strong>driver-name</strong> - the name of the client driver. Example: "OrientDB Java client"</li>
+<li>client's <strong>driver-version</strong> - the version of the client driver. Example: "1.0rc8-SNAPSHOT"</li>
+<li>client's <strong>protocol-version</strong> - the version of the protocol the client wants to use. Example: 30</li>
+<li>client's <strong>client-id</strong> - can be null for clients. In clustered configurations it's the distributed node ID as TCP <code>host:port</code>. Example: "10.10.10.10:2480"</li>
+<li>client's <strong>serialization-impl</strong> - the <a href="#record-format">serialization format</a> required by the client</li>
+<li><strong>token-session</strong> - true if the client wants to use a token-based session, false otherwise</li>
+<li><strong>support-push</strong> - supports push messages from the server (starting from v34)</li>
+<li><strong>collect-stats</strong> - collects statistics for the connection (starting from v34)</li>
+<li><strong>user-name</strong> - the username of the user on the server. Example: "root"</li>
+<li><strong>user-password</strong> - the password of the user on the server. Example: "37aed6392"</li>
+</ul>
+<p>Typically the credentials are those of the OrientDB server administrator. This is not the same as the <em>admin</em> user for individual databases.</p>
+<h4 id="response-1"><a class="header" href="#response-1">Response</a></h4>
+<ul>
+<li><strong>session-id</strong> - the new session id or a match id in case of token authentication.</li>
+<li><strong>token</strong> - the token for token-based authentication. If the clients sends <strong>token-session</strong> as false in the request or the server doesn't support token-based authentication, this will be an empty <code>byte[]</code>.</li>
+</ul>
+<h2 id="request_db_open"><a class="header" href="#request_db_open">REQUEST_DB_OPEN</a></h2>
+<p>This is the first operation the client should call. It opens a database on the remote OrientDB Server. This operation returns the <a href="#session-id">Session-Id</a> of the new client to reuse for all the next calls and the list of configured <a href="../datamodeling/Concepts.html#cluster">clusters</a> in the opened database.</p>
+<pre><code>Request: (driver-name:string)(driver-version:string)(protocol-version:short)(client-id:string)(serialization-impl:string)(token-session:boolean)(support-push:boolean)(collect-stats:boolean)(database-name:string)(user-name:string)(user-password:string)
+Response: (session-id:int)(token:bytes)(num-of-clusters:short)[(cluster-name:string)(cluster-id:short)](cluster-config:bytes)(orientdb-release:string)
+</code></pre>
+<h4 id="request-2"><a class="header" href="#request-2">Request</a></h4>
+<ul>
+<li>client's <strong>driver-name</strong> - the name of the client driver. Example: "OrientDB Java client".</li>
+<li>client's <strong>driver-version</strong> - the version of the client driver. Example: "1.0rc8-SNAPSHOT"</li>
+<li>client's <strong>protocol-version</strong> - the version of the protocol the client wants to use. Example: 30.</li>
+<li>client's <strong>client-id</strong> - can be null for clients. In clustered configurations it's the distributed node ID as TCP <code>host:port</code>. Example: "10.10.10.10:2480".</li>
+<li>client's <strong>serialization-impl</strong> - the <a href="#record-format">serialization format</a> required by the client.</li>
+<li><strong>token-session</strong> - true if the client wants to use a token-based session, false otherwise.</li>
+<li><strong>support-push</strong> - true if the client support push request</li>
+<li><strong>collect-stats</strong> - true if this connection is to be counted on the server stats, normal client should use true</li>
+<li><strong>database-name</strong> - the name of the database to connect to. Example: "demo".</li>
+<li><strong>user-name</strong> - the username of the user on the server. Example: "root".</li>
+<li><strong>user-password</strong> - the password of the user on the server. Example: "37aed6392".</li>
+</ul>
+<h4 id="response-2"><a class="header" href="#response-2">Response</a></h4>
+<ul>
+<li><strong>session-id</strong> - the new session id or a match id in case of token authentication.</li>
+<li><strong>token</strong> - the token for token-based authentication. If the clients sends <strong>token-session</strong> as false in the request or the server doesn't support token-based authentication, this will be an empty <code>byte[]</code>.</li>
+<li><strong>num-of-clusters</strong> - the size of the array of clusters in the form <code>(cluster-name:string)(cluster-id:short)</code> that follows this number.</li>
+<li><strong>cluster-name</strong>, <strong>cluster-id</strong> - the name and id of a cluster.</li>
+<li><strong>cluster-config</strong> - it's usually null unless running in a server clustered configuration.</li>
+<li><strong>orientdb-release</strong> - contains the version of the OrientDB release deployed on the server and optionally the build number. Example: "1.4.0-SNAPSHOT (build 13)".</li>
+</ul>
+<h2 id="request_db_reopen"><a class="header" href="#request_db_reopen">REQUEST_DB_REOPEN</a></h2>
+<p>Used on new sockets for associate the specific socket with the server side session for the specific client, can be used exclusively with the token authentication</p>
+<pre><code>Request:empty 
+Response:(session-id:int)
+</code></pre>
+<h2 id="request_db_create"><a class="header" href="#request_db_create">REQUEST_DB_CREATE</a></h2>
+<p>Creates a database in the remote OrientDB server instance.</p>
+<pre><code>Request: (database-name:string)(database-type:string)(storage-type:string)(backup-path)
+Response: empty
+</code></pre>
+<h4 id="request-3"><a class="header" href="#request-3">Request</a></h4>
+<ul>
+<li><strong>database-name</strong> - the name of the database to create. Example: "MyDatabase".</li>
+<li><strong>database-type</strong> - the type of the database to create. Can be either <code>document</code> or <code>graph</code> (since version 8). Example: "document".</li>
+<li><strong>storage-type</strong> - specifies the storage type of the database to create. It can be one of the <a href="../datamodeling/Concepts.html#database-url">supported types</a>:
+<ul>
+<li><code>plocal</code> - persistent database</li>
+<li><code>memory</code> - volatile database</li>
+</ul>
+</li>
+<li><strong>backup-path</strong> - path of the backup file to restore located on the server's file system (since version 36). This is used when a database is created starting from a previous backup</li>
+</ul>
+<p><strong>Note</strong>: it doesn't make sense to use <code>remote</code> in this context.</p>
+<h2 id="request_db_close"><a class="header" href="#request_db_close">REQUEST_DB_CLOSE</a></h2>
+<p>Closes the database and the network connection to the OrientDB server instance. No response is expected.</p>
+<pre><code>Request: empty
+Response: no response, the socket is just closed at server side
+</code></pre>
+<h2 id="request_db_exist"><a class="header" href="#request_db_exist">REQUEST_DB_EXIST</a></h2>
+<p>Asks if a database exists in the OrientDB server instance.</p>
+<pre><code>Request: (database-name:string)(server-storage-type:string)
+Response: (result:boolean)
+</code></pre>
+<h4 id="request-4"><a class="header" href="#request-4">Request</a></h4>
+<ul>
+<li><strong>database-name</strong> - the name of the target database. <em>Note</em> that this was empty before <code>1.0rc1</code>.</li>
+<li><strong>storage-type</strong> - specifies the storage type of the database to be checked for existence. Since <code>1.5-snapshot</code>. It can be one of the <a href="../datamodeling/Concepts.html#database-url">supported types</a>:
+<ul>
+<li><code>plocal</code> - persistent database</li>
+<li><code>memory</code> - volatile database</li>
+</ul>
+</li>
+</ul>
+<h4 id="response-3"><a class="header" href="#response-3">Response</a></h4>
+<ul>
+<li><strong>result</strong> - true if the given database exists, false otherwise.</li>
+</ul>
+<h2 id="request_db_reload"><a class="header" href="#request_db_reload">REQUEST_DB_RELOAD</a></h2>
+<p>Reloads information about the given database. Available since <code>1.0rc4</code>.</p>
+<pre><code>Request: empty
+Response: (num-of-clusters:short)[(cluster-name:string)(cluster-id:short)]
+</code></pre>
+<h4 id="response-4"><a class="header" href="#response-4">Response</a></h4>
+<ul>
+<li><strong>num-of-clusters</strong> - the size of the array of clusters in the form <code>(cluster-name:string)(cluster-id:short)</code> that follows this number.</li>
+<li><strong>cluster-name</strong>, <strong>cluster-id</strong> - the name and id of a cluster.</li>
+</ul>
+<h2 id="request_db_drop"><a class="header" href="#request_db_drop">REQUEST_DB_DROP</a></h2>
+<p>Removes a database from the OrientDB server instance. This operation returns a successful response if the database is deleted successfully. Otherwise, if the database doesn't exist on the server, it returns an error (an <code>OStorageException</code>).</p>
+<pre><code>Request: (database-name:string)(storage-type:string)
+Response: empty
+</code></pre>
+<h4 id="request-5"><a class="header" href="#request-5">Request</a></h4>
+<ul>
+<li><strong>database-name</strong> - the name of the database to remove.</li>
+<li><strong>storage-type</strong> - specifies the storage type of the database to create. Since <code>1.5-snapshot</code>. It can be one of the <a href="../datamodeling/Concepts.html#database-url">supported types</a>:
+<ul>
+<li><code>plocal</code> - persistent database</li>
+<li><code>memory</code> - volatile database</li>
+</ul>
+</li>
+</ul>
+<h2 id="request_db_size"><a class="header" href="#request_db_size">REQUEST_DB_SIZE</a></h2>
+<p>Returns the size of the currently open database.</p>
+<pre><code>Request: empty
+Response: (size:long)
+</code></pre>
+<h4 id="response-5"><a class="header" href="#response-5">Response</a></h4>
+<ul>
+<li><strong>size</strong> - the size of the current database.</li>
+</ul>
+<h2 id="request_db_countrecords"><a class="header" href="#request_db_countrecords">REQUEST_DB_COUNTRECORDS</a></h2>
+<p>Returns the number of records in the currently open database.</p>
+<pre><code>Request: empty
+Response: (count:long)
+</code></pre>
+<h4 id="response-6"><a class="header" href="#response-6">Response</a></h4>
+<ul>
+<li><strong>count</strong> - the number of records in the current database.</li>
+</ul>
+<h2 id="request_datacluster_add"><a class="header" href="#request_datacluster_add">REQUEST_DATACLUSTER_ADD</a></h2>
+<p>Add a new data cluster. Deprecated.</p>
+<pre><code>Request: (name:string)(cluster-id:short - since 1.6 snapshot)
+Response: (new-cluster:short)
+</code></pre>
+<p>Where: type is one of "PHYSICAL" or "MEMORY".
+If cluster-id is -1 (recommended value) new cluster id will be generated.</p>
+<h2 id="request_datacluster_drop"><a class="header" href="#request_datacluster_drop">REQUEST_DATACLUSTER_DROP</a></h2>
+<p>Remove a cluster. Deprecated.</p>
+<pre><code>Request: (cluster-number:short)
+Response: (delete-on-clientside:byte)
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><strong>delete-on-clientside</strong> can be 1 if the cluster has been successfully removed and the client has to remove too, otherwise 0</li>
+</ul>
+<h2 id="request_datacluster_count"><a class="header" href="#request_datacluster_count">REQUEST_DATACLUSTER_COUNT</a></h2>
+<p>Returns the number of records in one or more clusters. Deprecated.</p>
+<pre><code>Request: (cluster-count:short)(cluster-number:short)*(count-tombstones:byte)
+Response: (records-in-clusters:long)
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><strong>cluster-count</strong> the number of requested clusters</li>
+<li><strong>cluster-number</strong> the cluster id of each single cluster</li>
+<li><strong>count-tombstones</strong> the flag which indicates whether deleted records should be taken in account. It is applicable for autosharded storage only, otherwise it is ignored.</li>
+<li><strong>records-in-clusters</strong> is the total number of records found in the requested clusters</li>
+</ul>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p>Request the record count for clusters 5, 6 and 7. Note the "03" at the beginning to tell you're passing 3 cluster ids (as short each). 1,000 as long (8 bytes) is the answer.</p>
+<pre><code>Request: 03050607
+Response: 00001000
+</code></pre>
+<h2 id="request_datacluster_datarange"><a class="header" href="#request_datacluster_datarange">REQUEST_DATACLUSTER_DATARANGE</a></h2>
+<p>Returns the range of record ids for a cluster. Deprecated.</p>
+<pre><code>Request: (cluster-number:short)
+Response: (begin:long)(end:long)
+</code></pre>
+<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
+<p>Request the range for cluster 7. The range 0-1,000 is returned in the response as 2 longs (8 bytes each).</p>
+<pre><code>Request: 07
+Response: 0000000000001000
+</code></pre>
+<h2 id="request_record_load"><a class="header" href="#request_record_load">REQUEST_RECORD_LOAD</a></h2>
+<p>Loads a record by its <a href="../datamodeling/Concepts.html#record-id">Record ID</a>, according to a <a href="../java/Fetching-Strategies.html">fetch plan</a>.</p>
+<pre><code>Request: (cluster-id:short)(cluster-position:long)(fetch-plan:string)(ignore-cache:boolean)(load-tombstones:boolean)
+Response: [(payload-status:byte)[(record-type:byte)(record-version:int)(record-content:bytes)]*]+
+</code></pre>
+<h4 id="request-6"><a class="header" href="#request-6">Request</a></h4>
+<ul>
+<li><strong>cluster-id</strong>, <strong>cluster-position</strong> - the Record ID of the record.</li>
+<li><strong>fetch-plan</strong> - the <a href="../java/Fetching-Strategies.html">fetch plan</a> to use or an empty string.</li>
+<li><strong>ignore-cache</strong> - if true tells the server to ignore the cache, if false tells the server to not ignore the cache. Available since protocol v.9 (introduced in release 1.0rc9).</li>
+<li><strong>load-tombstones</strong> - a flag which indicates whether information about deleted record should be loaded. The flag is applied only to autosharded storage and ignored otherwise.</li>
+</ul>
+<h4 id="response-7"><a class="header" href="#response-7">Response</a></h4>
+<ul>
+<li><strong>payload-status</strong> - can be:
+<ul>
+<li><code>0</code>: no records remain to be fetched.</li>
+<li><code>1</code>: a record is returned as resultset.</li>
+<li><code>2</code>: a record is returned as pre-fetched to be loaded in client's cache only. It's not part of the result set but the client knows that it's available for later access. This value is not currently used.</li>
+</ul>
+</li>
+<li><strong>record-type</strong> - can be:
+<ul>
+<li><code>d</code>: document</li>
+<li><code>b</code>: raw bytes</li>
+<li><code>f</code>: flat data</li>
+</ul>
+</li>
+</ul>
+<h2 id="request_record_load_if_version_not_latest"><a class="header" href="#request_record_load_if_version_not_latest">REQUEST_RECORD_LOAD_IF_VERSION_NOT_LATEST</a></h2>
+<p>Loads a record by <a href="../datamodeling/Concepts.html#record-id">Record ID</a>, according to a <a href="../java/Fetching-Strategies.html">fetch plan</a>. The record is only loaded if the persistent version is more recent of the version specified in the request.</p>
+<pre><code>Request: (cluster-id:short)(cluster-position:long)(version:int)(fetch-plan:string)(ignore-cache:boolean)
+Response: [(payload-status:byte)[(record-type:byte)(record-version:int)(record-content:bytes)]*]*
+</code></pre>
+<h4 id="request-7"><a class="header" href="#request-7">Request</a></h4>
+<ul>
+<li><strong>cluster-id</strong>, <strong>cluster-position</strong> - the Record ID of the record.</li>
+<li><strong>version</strong> - the version of the record to fetch.</li>
+<li><strong>fetch-plan</strong> - the <a href="../java/Fetching-Strategies.html">fetch plan</a> to use or an empty string.</li>
+<li><strong>ignore-cache</strong> - if true tells the server to ignore the cache, if false tells the server to not ignore the cache. Available since protocol v.9 (introduced in release 1.0rc9).</li>
+</ul>
+<h4 id="response-8"><a class="header" href="#response-8">Response</a></h4>
+<ul>
+<li><code>payload-status</code> - can be:
+<ul>
+<li><code>0</code>: no records remain to be fetched.</li>
+<li><code>1</code>: a record is returned as resultset.</li>
+<li><code>2</code>: a record is returned as pre-fetched to be loaded in client's cache only. It's not part of the result set but the client knows that it's available for later access. This value is not currently used.</li>
+</ul>
+</li>
+<li><code>record-type</code> - can be:
+<ul>
+<li><code>d</code>: document</li>
+<li><code>b</code>: raw bytes</li>
+<li><code>f</code>: flat data</li>
+</ul>
+</li>
+</ul>
+<h2 id="request_record_create"><a class="header" href="#request_record_create">REQUEST_RECORD_CREATE</a></h2>
+<p>Creates a new record. Returns the Record ID of the newly created record.. New records can have version &gt; 0 (since <code>1.0</code>) in case the Record ID has been recycled.</p>
+<pre><code>Request: (cluster-id:short)(record-content:bytes)(record-type:byte)(mode:byte)
+Response: (cluster-id:short)(cluster-position:long)(record-version:int)(count-of-collection-changes)[(uuid-most-sig-bits:long)(uuid-least-sig-bits:long)(updated-file-id:long)(updated-page-index:long)(updated-page-offset:int)]*
+</code></pre>
+<h4 id="request-8"><a class="header" href="#request-8">Request</a></h4>
+<ul>
+<li><strong>cluster-id</strong> - the id of the cluster in which to create the new record.</li>
+<li><strong>record-content</strong> - the record to create serialized using the appropriate <a href="#record-format">serialization format</a> chosen at connection time.</li>
+<li><strong>record-type</strong> - the type of the record to create. It can be:
+<ul>
+<li><code>d</code>: document</li>
+<li><code>b</code>: raw bytes</li>
+<li><code>f</code>: flat data</li>
+</ul>
+</li>
+<li><strong>mode</strong> - can be:
+<ul>
+<li><code>0</code> - <strong>synchronous</strong>. It's the default mode which waits for the answer before the response is sent.</li>
+<li><code>1</code> - <strong>asynchronous</strong>. The response is identical to the synchronous response, but the driver is encouraged to manage the answer in a callback.</li>
+<li><code>2</code> - <strong>no-response</strong>. Don't wait for the answer (<em>fire and forget</em>). This mode is useful on massive operations since it reduces network latency.</li>
+</ul>
+</li>
+</ul>
+<p>In versions before <code>2.0</code>, the response started with an additional <strong>datasegment-id</strong>, the segment id to store the data (available since version 10 - <code>1.0-SNAPSHOT</code>), with -1 meaning default one.</p>
+<h4 id="response-9"><a class="header" href="#response-9">Response</a></h4>
+<ul>
+<li><strong>cluster-id</strong>, <strong>cluster-position</strong> - the Record ID of the newly created record.</li>
+<li><strong>record-version</strong> - the version of the newly created record.</li>
+</ul>
+<p>The last part of response (from <code>count-of-collection-changes</code> on) refers to <a href="RidBag.html">RidBag</a> management. Take a look at <a href="RidBag.html">the main page</a> for more details.</p>
+<h2 id="request_record_update"><a class="header" href="#request_record_update">REQUEST_RECORD_UPDATE</a></h2>
+<p>Updates the record identified by the given <a href="../datamodeling/Concepts.html#record-id">Record ID</a>. Returns the new version of the record.</p>
+<pre><code>Request: (cluster-id:short)(cluster-position:long)(update-content:boolean)(record-content:bytes)(record-version:int)(record-type:byte)(mode:byte)
+Response: (record-version:int)(count-of-collection-changes)[(uuid-most-sig-bits:long)(uuid-least-sig-bits:long)(updated-file-id:long)(updated-page-index:long)(updated-page-offset:int)]*
+</code></pre>
+<h4 id="request-9"><a class="header" href="#request-9">Request</a></h4>
+<ul>
+<li><strong>cluster-id</strong>, <strong>cluster-position</strong> - the Record ID of the record to update.</li>
+<li><strong>update-content</strong> - can be:
+<ul>
+<li>true - the content of the record has been changed and should be updated in the storage.</li>
+<li>false - the record was modified but its own content has not changed: related collections (e.g. RidBags) have to be updated, but the record version and its contents should not be updated.</li>
+</ul>
+</li>
+<li><strong>record-content</strong> - the new contents of the record serialized using the appropriate <a href="#record-format">serialization format</a> chosen at connection time.</li>
+<li><strong>record-version</strong> - the version of the record to update.</li>
+<li><strong>record-type</strong> - the type of the record to create. It can be:
+<ul>
+<li><code>d</code>: document</li>
+<li><code>b</code>: raw bytes</li>
+<li><code>f</code>: flat data</li>
+</ul>
+</li>
+<li><strong>mode</strong> - can be:
+<ul>
+<li><code>0</code> - <strong>synchronous</strong>. It's the default mode which waits for the answer before the response is sent.</li>
+<li><code>1</code> - <strong>asynchronous</strong>. The response is identical to the synchronous response, but the driver is encouraged to manage the answer in a callback.</li>
+<li><code>2</code> - <strong>no-response</strong>. Don't wait for the answer (<em>fire and forget</em>). This mode is useful on massive operations since it reduces network latency.</li>
+</ul>
+</li>
+</ul>
+<h4 id="response-10"><a class="header" href="#response-10">Response</a></h4>
+<ul>
+<li><strong>record-version</strong> - the new version of the updated record</li>
+</ul>
+<p>The last part of response (from <code>count-of-collection-changes</code> on) refers to <a href="RidBag.html">RidBag</a> management. Take a look at <a href="RidBag.html">the main page</a> for more details.</p>
+<h2 id="request_record_delete"><a class="header" href="#request_record_delete">REQUEST_RECORD_DELETE</a></h2>
+<p>Delete a record identified by the given <a href="../datamodeling/Concepts.html#record-id">Record ID</a>. During the optimistic transaction the record will be deleted only if the given version and the version of the record on the server match. This operation returns true if the record is deleted successfully, false otherwise.</p>
+<pre><code>Request: (cluster-id:short)(cluster-position:long)(record-version:int)(mode:byte)
+Response: (has-been-deleted:boolean)
+</code></pre>
+<h4 id="request-10"><a class="header" href="#request-10">Request</a></h4>
+<ul>
+<li><strong>cluster-id</strong>, <strong>cluster-position</strong> - the Record ID of the record to delete.</li>
+<li><strong>record-version</strong> - the version of the record to delete.</li>
+<li><strong>mode</strong> - can be:
+<ul>
+<li><code>0</code> - <strong>synchronous</strong>. It's the default mode which waits for the answer before the response is sent.</li>
+<li><code>1</code> - <strong>asynchronous</strong>. The response is identical to the synchronous response, but the driver is encouraged to manage the answer in a callback.</li>
+<li><code>2</code> - <strong>no-response</strong>. Don't wait for the answer (<em>fire and forget</em>). This mode is useful on massive operations since it reduces network latency.</li>
+</ul>
+</li>
+</ul>
+<h4 id="response-11"><a class="header" href="#response-11">Response</a></h4>
+<ul>
+<li><strong>has-been-deleted</strong> - true if the record is deleted successfully, false if it's not or if the record with the given Record ID doesn't exist.</li>
+</ul>
+<h2 id="request_command"><a class="header" href="#request_command">REQUEST_COMMAND</a></h2>
+<p>Executes remote commands.</p>
+<pre><code>Request: (mode:byte)(command-payload-length:int)(class-name:string)(command-payload)
+Response:
+- synchronous commands: [(synch-result-type:byte)[(synch-result-content:?)]]+
+- asynchronous commands: [(asynch-result-type:byte)[(asynch-result-content:?)]*](pre-fetched-record-size.md)[(pre-fetched-record)]*+
+</code></pre>
+<h4 id="request-11"><a class="header" href="#request-11">Request</a></h4>
+<ul>
+<li><strong>mode</strong> - it can assume one of the following values:
+<ul>
+<li><code>a</code> - asynchronous mode</li>
+<li><code>s</code> - synchronous mode</li>
+<li><code>l</code> - live mode</li>
+</ul>
+</li>
+<li><strong>command-payload-length</strong> - the length of the <strong>class-name</strong> field plus the length of the <strong>command-payload</strong> field.</li>
+<li><strong>class-name</strong> - the class name of the command implementation. There are some short forms for the most common commands, which are:
+<ul>
+<li><code>q</code> - stands for "query" as idempotent command (e.g., <code>SELECT</code>). It's like passing <code>com.orientechnologies.orient.core.sql.query.OSQLSynchquery</code>.</li>
+<li><code>c</code> - stands for "command" as non-idempotent command (e.g., <code>INSERT</code> or <code>UPDATE</code>). It's like passing <code>com.orientechnologies.orient.core.sql.OCommandSQL</code>.</li>
+<li><code>s</code> - stands for "script" (for server-side scripting using languages like <a href="../js/Javascript-Command.html">JavaScript</a>). It's like passing <code>com.orientechnologies.orient.core.command.script.OCommandScript</code>.</li>
+<li>any other string - the string is the class name of the command. The command will be created via reflection using the default constructor and invoking the <code>fromStream()</code> method against it.</li>
+</ul>
+</li>
+<li><strong>command-payload</strong> - is the payload of the command as specified in <a href="Network-Binary-Protocol-Commands.html">the "Commands" section</a>.</li>
+</ul>
+<h4 id="response-12"><a class="header" href="#response-12">Response</a></h4>
+<p>Response is different for synchronous and asynchronous request:</p>
+<ul>
+<li><strong>synchronous</strong>:</li>
+<li><strong>synch-result-type</strong> can be:</li>
+<li>'n', means null result</li>
+<li>'r', means single record returned</li>
+<li>'l', list of records. The format is:
+<ul>
+<li>an integer to indicate the collection size. Starting form v32, size can be -1 to stream a resultset. Last item will be null</li>
+<li>all the records and each entry is typed with a short that can be:
+<ul>
+<li>'0' a record in the next bytes</li>
+<li>'-2' no record and is considered as a null record</li>
+<li>'-3' only a recordId in the next bytes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>'s', set of records. The format is:
+<ul>
+<li>an integer to indicate the collection size. Starting form v32, size can be -1 to stream a resultset. Last item will be null</li>
+<li>all the records and each entry is typed with a short that can be:
+<ul>
+<li>'0' a record in the next bytes</li>
+<li>'-2' no record and is considered as a null record</li>
+<li>'-3' only a recordId in the next bytes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>'w', is a simple result wrapped inside a single record, deserialize the record as the <code>r</code> option and unwrap the real result reading the field <code>result</code> of the record.</li>
+<li>'i', iterable of records
+<ul>
+<li>the result records will be streamed, no size as start is given, each entry has a flag at the start(same as <strong>asynch-result-type</strong>)
+<ul>
+<li>0: no record remain to be fetched</li>
+<li>1: a record in the next bytes</li>
+<li>2: a record in the next bytes to be loaded in client's cache only. It's not part of the result set but</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>synch-result-content</strong>, can only be a record</li>
+<li><strong>pre-fetched-record-size</strong>, as the number of pre-fetched records not directly part of the result set but joined to it by fetching</li>
+<li><strong>pre-fetched-record</strong> as the pre-fetched record content</li>
+<li><strong>asynchronous</strong>:</li>
+<li><strong>asynch-result-type</strong> can be:</li>
+<li>0: no records remain to be fetched</li>
+<li>1: a record is returned as a resultset</li>
+<li>2: a record is returned as pre-fetched to be loaded in client's cache only. It's not part of the result set but the client knows that it's available for later access</li>
+<li><strong>asynch-result-content</strong>, can only be a record</li>
+</ul>
+<h2 id="request_query"><a class="header" href="#request_query">REQUEST_QUERY</a></h2>
+<p>Executes remote commands.</p>
+<pre><code>Request: (language:string)(statement:string)(operationType:byte)(recordsPerPage:int)(unused:string)(params:byte[])(namedParams:boolean)
+Response: (queryId:string)(txChanges:boolean)(executionPlanPresent:boolean)[(executionPlan:OResult)](zero:integer)(resultSize:int)[(resultItem:OResult)]*(hasNextPage:boolean)(queryStatsCount:int)[(queryStatKey:string)(queryStatValue:long)]*(reloadMetadata:boolean)
+</code></pre>
+<h4 id="request-12"><a class="header" href="#request-12">Request</a></h4>
+<ul>
+<li><strong>language</strong> - The query language (eg. "SQL")</li>
+<li><strong>statement</strong> - The command statement (ie. the query itself)</li>
+<li><strong>operationType</strong> - The type of query operation to be performed:
+<ul>
+<li><code>0</code> - stands for "command" as non-idempotent command (e.g., <code>INSERT</code> or <code>UPDATE</code>). It's like using db.command(statement, params)</li>
+<li><code>1</code> - stands for "query" as non-idempotent command (e.g., <code>SELECT</code>). It's like using db.query(statement, params)</li>
+<li><code>2</code> - stands for "script" (for server-side scripting using languages like <a href="../js/Javascript-Command.html">JavaScript</a>).  It's like using db.execute(language, statement, params)</li>
+</ul>
+</li>
+<li><strong>recordsPerPage</strong> - The number N of results to be returned for each query page. At the first execution N results are returned, to return the next N REQUEST_QUERY_NEXT_PAGE has to be used.</li>
+<li><strong>unused</strong> - reserved string, for future extensions. It is safe to pass a NULL string</li>
+<li><strong>params</strong> - the query parameters, serialized as an ODocument, containing a "params" attribute (a Map) see <a href="Record-Schemaless-Binary-Serialization.html">Binary</a>.</li>
+<li><strong>namedParams</strong> - true if the query is using named parameters, false if it's using positional parameters.</li>
+</ul>
+<h4 id="response-13"><a class="header" href="#response-13">Response</a></h4>
+<ul>
+<li><strong>queryId</strong> - the query ID assigned by the server (needed to close the query cursor and to request next query pages)</li>
+<li><strong>txChanges</strong> - true if the statement execution changed the transaction status server-side</li>
+<li><strong>executionPlanPresent</strong> - true if there is an execution plan description attached to the query result</li>
+<li><strong>executionPlan</strong> - and OResult describing the execution plan (present only if <code>executionPlanPresent</code> is true, see below for the serialization)</li>
+<li><strong>zero</strong>  - not used</li>
+<li><strong>resultSize</strong> - the number of result items that follow</li>
+<li><strong>resultItem</strong> - a query result, that can be an OResult or an OIdentifiable. The resultItem structure is as follows: <code>(type:byte)(payload:varies based on type)</code>. The type can be 0 (BLOB), 1 (VERTEX), 2 (EDGE), 3 (ELEMENT, ie. Document), 4 (PROJECTION, ie. OResult, projection). 0, 1 and 2 are serialized as for the existing implementation (see <a href="Record-Schemaless-Binary-Serialization.html">Binary</a> ); for 4 see below</li>
+<li><strong>hasNextPage</strong> - true if the query has more results in a new page, ie. if invoking REQUEST_QUERY_NEXT_PAGE will return more items</li>
+<li><strong>queryStatsCount</strong> - the number of query stats included in the result</li>
+<li><strong>queryStatKey</strong> - a query stats key name (a normal string)</li>
+<li><strong>queryStatValue</strong> - a query stats value</li>
+<li><strong>reloadMetadata</strong> - true if the database metadata (eg. the schema) where modified during the statement execution.</li>
+</ul>
+<h4 id="projection-oresult-serialization"><a class="header" href="#projection-oresult-serialization">PROJECTION (OResult) serialization</a></h4>
+<pre><code>(numberOfFields:varint)[(fieldName:string)(type:byte)[(value:serialized value)]]*
+(numberOfMetadata:varint)[(metadataKey:string)(metadataType:byte)[(metadataValue:serialized value)]]*
+</code></pre>
+<ul>
+<li><strong>numberOfFields</strong> - the number of fields following</li>
+<li><strong>fieldName</strong> - a string representing a field name (a projection name) in the OResult</li>
+<li><strong>type</strong> - the value type <a href="../general/Types.html">see Types</a>.</li>
+<li><strong>value</strong> - the actual field value serialization <a href="../general/Types.html">see Types</a>.</li>
+<li><strong>numberOfMetadata</strong> - the number of metadata items following</li>
+<li><strong>metadataKey</strong> - a string representing a field name (a projection name) in the OResult</li>
+<li><strong>metadataType</strong> - the value type <a href="../general/Types.html">see Types</a>.</li>
+<li><strong>metadataValue</strong> - the actual field value serialization <a href="../general/Types.html">see Types</a>.</li>
+</ul>
+<h2 id="request_close_query"><a class="header" href="#request_close_query">REQUEST_CLOSE_QUERY</a></h2>
+<p>Closes open query cursors. Queries always have to be closed to free the cursor memory</p>
+<pre><code>request: (queryId:string)
+response: empty
+</code></pre>
+<ul>
+<li><strong>queryId</strong> - the ID of the query to close, as returned by REQUEST_QUERY</li>
+</ul>
+<h2 id="request_query_next_page"><a class="header" href="#request_query_next_page">REQUEST_QUERY_NEXT_PAGE</a></h2>
+<p>Requests next page from the results of a running query</p>
+<pre><code>request: (queryId:string)(recordsPerPage:int)
+response: same as REQUEST_QUERY
+</code></pre>
+<ul>
+<li><strong>queryId</strong> - the ID of the query to close, as returned by REQUEST_QUERY</li>
+<li><strong>recordsPerPage</strong> - the maximum number of results that will be returned with next query page (less results can be returned if the query has no more results)</li>
+</ul>
+<h2 id="request_tx_commit"><a class="header" href="#request_tx_commit">REQUEST_TX_COMMIT</a></h2>
+<p>Commits a transaction. This operation flushes all the pending changes to the server side.</p>
+<pre><code>Request: (transaction-id:int)(using-tx-log:boolean)(tx-entry)*(0-byte indicating end-of-records)
+Response: (created-record-count:int)[(client-specified-cluster-id:short)(client-specified-cluster-position:long)(created-cluster-id:short)(created-cluster-position:long)]*(updated-record-count:int)[(updated-cluster-id:short)(updated-cluster-position:long)(new-record-version:int)]*(count-of-collection-changes:int)[(uuid-most-sig-bits:long)(uuid-least-sig-bits:long)(updated-file-id:long)(updated-page-index:long)(updated-page-offset:int)]*
+</code></pre>
+<h4 id="request-13"><a class="header" href="#request-13">Request</a></h4>
+<ul>
+<li><strong>transaction-id</strong> - the id of the transaction. Read the "Transaction ID" section below for more information.</li>
+<li><strong>using-tx-log</strong> - tells the server whether to use the transaction log to recover the transaction or not. Use <code>true</code> by default to ensure consistency. <em>Note</em>: disabling the log could speed up the execution of the transaction, but it makes impossible to rollback the transaction in case of errors. This could lead to inconsistencies in indexes as well, since in case of duplicated keys the rollback is not called to restore the index status.</li>
+<li><strong>tx-entry</strong> - a list of elements (terminated by a 0 byte) with the form described below.</li>
+</ul>
+<h5 id="transaction-entry"><a class="header" href="#transaction-entry">Transaction entry</a></h5>
+<p>Each transaction entry can specify one out of three actions to perform: create, update or delete.</p>
+<p>The general form of a transaction entry (<strong>tx-entry</strong> above) is:</p>
+<pre><code>(1:byte)(operation-type:byte)(cluster-id:short)(cluster-position:long)(record-type:byte)(entry-content)
+</code></pre>
+<p>The first byte means that there's another entry next. The values of the rest of these attributes depend directly on the operation type.</p>
+<h5 id="update"><a class="header" href="#update">Update</a></h5>
+<ul>
+<li><strong>operation-type</strong> - has the value 1.</li>
+<li><strong>cluster-id</strong>, <strong>cluster-position</strong> - the Record ID of the record to update.</li>
+<li><strong>record-type</strong> - the type of the record to update (<code>d</code> for document, <code>b</code> for raw bytes and <code>f</code> for flat data).</li>
+<li><strong>entry-content</strong> - has the form <code>(version:int)(update-content:boolean)(record-content:bytes)</code> where:
+<ul>
+<li><strong>update-content</strong> - can be:
+<ul>
+<li>true - the content of the record has been changed and should be updated in the storage.</li>
+<li>false - the record was modified but its own content has not changed: related collections (e.g. RidBags) have to be updated, but the record version and its contents should not be updated.</li>
+</ul>
+</li>
+<li><strong>version</strong> - the version of the record to update.</li>
+<li><strong>record-content</strong> - the new contents of the record serialized using the appropriate <a href="#record-format">serialization format</a> chosen at connection time.</li>
+</ul>
+</li>
+</ul>
+<h6 id="delete"><a class="header" href="#delete">Delete</a></h6>
+<ul>
+<li><strong>operation-type</strong> - has the value 2.</li>
+<li><strong>cluster-id</strong>, <strong>cluster-position</strong> - the Record ID of the record to update.</li>
+<li><strong>record-type</strong> - the type of the record to update (<code>d</code> for document, <code>b</code> for raw bytes and <code>f</code> for flat data).</li>
+<li><strong>entry-content</strong> - has the form <code>(version:int)</code> where:
+<ul>
+<li><strong>version</strong> - the version of the record to delete.</li>
+</ul>
+</li>
+</ul>
+<h6 id="create"><a class="header" href="#create">Create</a></h6>
+<ul>
+<li><strong>operation-type</strong> - has the value 3.</li>
+<li><strong>cluster-id</strong>, <strong>cluster-position</strong> - when creating a new record, set the cluster id to <code>-1</code>. The cluster position must be an integer <code>&lt; -1</code>, unique in the scope of the transaction (meaning that if two new records are being created in the same transaction, they should have two different ids both <code>&lt; -1</code>).</li>
+<li><strong>record-type</strong> - the type of the record to update (<code>d</code> for document, <code>b</code> for raw bytes and <code>f</code> for flat data).</li>
+<li><strong>entry-content</strong> - has the form <code>(record-content:bytes)</code> where:
+<ul>
+<li><strong>record-content</strong> - the new contents of the record serialized using the appropriate <a href="#record-format">serialization format</a> chosen at connection time.</li>
+</ul>
+</li>
+</ul>
+<h5 id="transaction-id"><a class="header" href="#transaction-id">Transaction ID</a></h5>
+<p>Each transaction must have an ID; the client is responsible for assigning an ID to each transaction. The ID must be unique in the scope of each session.</p>
+<h4 id="response-14"><a class="header" href="#response-14">Response</a></h4>
+<p>The response contains two parts:</p>
+<ul>
+<li>a map of "temporary" client-generated record ids to "real" server-provided record ids for each <strong>created</strong> record (not guaranteed to have the same order as the records in the request).</li>
+<li>a map of <strong>updated</strong> record ids to update record versions.</li>
+</ul>
+<p>If the version of a created record is not <code>0</code>, then the Record ID of the created record will also appear in the list of "updated" records, along with its new version. This is a <a href="https://github.com/orientechnologies/orientdb/issues/4660">known bug</a>.</p>
+<p>Look at <a href="Transactions.html#optimistic-transaction">Optimistic Transaction</a> to know how temporary <a href="../datamodeling/Concepts.html#record-id">Record ID</a>s are managed.</p>
+<p>The last part of response (from <code>count-of-collection-changes</code> on) refers to <a href="RidBag.html">RidBag</a> management. Take a look at <a href="RidBag.html">the main page</a> for more details.</p>
+<h2 id="request_index_get"><a class="header" href="#request_index_get">REQUEST_INDEX_GET</a></h2>
+<p>Lookups in an index by key.</p>
+<pre><code>Request: (index-name:string)(key:document)(fetch-plan:string)
+Response: (result-type:byte)
+</code></pre>
+<h4 id="request-14"><a class="header" href="#request-14">Request</a></h4>
+<ul>
+<li><strong>index-name</strong> - the name of the index.</li>
+<li><strong>key</strong> - a document whose <code>"key"</code> field contains the key.</li>
+<li><strong>fetch-plan</strong> - the <a href="../java/Fetching-Strategies.html">fetch plan</a> to use or an empty string.</li>
+</ul>
+<h4 id="response-15"><a class="header" href="#response-15">Response</a></h4>
+<ul>
+<li><strong>key</strong> - is stored in the field named "key" inside the document</li>
+<li><strong>result-type</strong> can be:</li>
+<li>'n', means null result</li>
+<li>'r', means single record returned</li>
+<li>'l', list of records. The format is:</li>
+<li>an integer to indicate the collection size</li>
+<li>all the records one by one</li>
+<li>'s', set of records. The format is:</li>
+<li>an integer to indicate the collection size</li>
+<li>all the records one by one</li>
+<li>'a', serialized result, a byte[] is sent</li>
+<li><strong>synch-result-content</strong>, can only be a record</li>
+<li><strong>pre-fetched-record-size</strong>, as the number of pre-fetched records not directly part of the result set but joined to it by fetching</li>
+<li><strong>pre-fetched-record</strong> as the pre-fetched record content</li>
+</ul>
+<h2 id="request_index_put"><a class="header" href="#request_index_put">REQUEST_INDEX_PUT</a></h2>
+<p>Create or update an entry in index by key.</p>
+<pre><code>Request: (index-name:string)(key:document)(value:rid)
+Response: no response
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><strong>key</strong> is stored in the field named "key" inside the document</li>
+</ul>
+<h2 id="request_index_remove"><a class="header" href="#request_index_remove">REQUEST_INDEX_REMOVE</a></h2>
+<p>Remove an entry by key from an index. It returns true if the entry was present, otherwise false.</p>
+<pre><code>Request: (index-name:string)(key:document)
+Response: (found:boolean)
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><strong>key</strong> is stored in the field named "key" inside the document</li>
+</ul>
+<h3 id="request_create_sbtree_bonsai"><a class="header" href="#request_create_sbtree_bonsai">REQUEST_CREATE_SBTREE_BONSAI</a></h3>
+<pre><code>Request: (clusterId:int)
+Response: (collectionPointer)
+</code></pre>
+<p>See: <a href="RidBag.html#serialization-of-collection-pointer">serialization of collection pointer</a></p>
+<p>Creates an sb-tree bonsai on the remote server.</p>
+<h3 id="request_sbtree_bonsai_get"><a class="header" href="#request_sbtree_bonsai_get">REQUEST_SBTREE_BONSAI_GET</a></h3>
+<pre><code>Request: (collectionPointer)(key:binary)
+Response: (valueSerializerId:byte)(value:binary)
+</code></pre>
+<p>See: <a href="RidBag.html#serialization-of-collection-pointer">serialization of collection pointer</a></p>
+<p>Get value by key from sb-tree bonsai.</p>
+<p>Key and value are serialized according to format of tree serializer.
+If the operation is used by RidBag key is always a RID and value can be null or integer.</p>
+<h3 id="request_sbtree_bonsai_first_key"><a class="header" href="#request_sbtree_bonsai_first_key">REQUEST_SBTREE_BONSAI_FIRST_KEY</a></h3>
+<pre><code>Request: (collectionPointer)
+Response: (keySerializerId:byte)(key:binary)
+</code></pre>
+<p>See: <a href="RidBag.html#serialization-of-collection-pointer">serialization of collection pointer</a></p>
+<p>Get first key from sb-tree bonsai. Null if tree is empty.</p>
+<p>Key are serialized according to format of tree serializer.
+If the operation is used by RidBag key is null or RID.</p>
+<h3 id="request_sbtree_bonsai_get_entries_major"><a class="header" href="#request_sbtree_bonsai_get_entries_major">REQUEST_SBTREE_BONSAI_GET_ENTRIES_MAJOR</a></h3>
+<pre><code>Request: (collectionPointer)(key:binary)(inclusive:boolean)(pageSize:int)
+Response: (count:int)[(key:binary)(value:binary)]*
+</code></pre>
+<p>See: <a href="RidBag.html#serialization-of-collection-pointer">serialization of collection pointer</a></p>
+<p>Gets the portion of entries major than specified one. If returns 0 entries than the specified entry is the largest.</p>
+<p>Keys and values are serialized according to format of tree serializer.
+If the operation is used by RidBag key is always a RID and value is integer.</p>
+<p>Default pageSize is 128.</p>
+<h3 id="request_ridbag_get_size"><a class="header" href="#request_ridbag_get_size">REQUEST_RIDBAG_GET_SIZE</a></h3>
+<pre><code>Request: (collectionPointer)(collectionChanges)
+Response: (size:int)
+</code></pre>
+<p>See: <a href="RidBag.html#serialization-of-collection-pointer">serialization of collection pointer</a>, <a href="RidBag.html#serialization-of-rid-bag-changes">serialization of collection changes</a></p>
+<p>Rid-bag specific operation. Send but does not save changes of rid bag. Retrieves computed size of rid bag.</p>
+<h1 id="special-use-of-linkset-types"><a class="header" href="#special-use-of-linkset-types">Special use of LINKSET types</a></h1>
+<blockquote>
+<p>NOTE. Since 1.7rc1 this feature is deprecated. Usage of RidBag is preferable.</p>
+</blockquote>
+<p>Starting from 1.0rc8-SNAPSHOT OrientDB can transform collections of links from the classic mode:</p>
+<pre><code>[#10:3,#10:4,#10:5]
+</code></pre>
+<p>to:</p>
+<pre><code>(ORIDs@pageSize:16,root:#2:6)
+</code></pre>
+<p>For more information look at the announcement of this new feature: https://groups.google.com/d/topic/orient-database/QF52JEwCuTM/discussion</p>
+<p>In practice to optimize cases with many relationships/edges the collection is transformed in a mvrb-tree. This is because the embedded object. In that case the important thing is the link to the root node of the balanced tree.</p>
+<p>You can disable this behaviour by setting</p>
+<p><em>mvrbtree.ridBinaryThreshold</em> = -1</p>
+<p>Where <em>mvrbtree.ridBinaryThreshold</em> is the threshold where OrientDB will use the tree instead of plain collection (as before). -1 means "hey, never use the new mode but leave all as before".</p>
+<h2 id="tree-node-binary-structure"><a class="header" href="#tree-node-binary-structure">Tree node binary structure</a></h2>
+<p>To improve performance this structure is managed in binary form. Below how is made:</p>
+<pre><code>+-----------+-----------+--------+------------+----------+-----------+---------------------+
+| TREE SIZE | NODE SIZE | COLOR .| PARENT RID | LEFT RID | RIGHT RID | RID LIST .......... |
++-----------+-----------+--------+------------+----------+-----------+---------------------+
+| 4 bytes . | 4 bytes . | 1 byte | 10 bytes ..| 10 bytes | 10 bytes .| 10 * MAX_SIZE bytes |
++-----------+-----------+--------+------------+----------+-----------+---------------------+
+= 39 bytes + 10 * PAGE-SIZE bytes
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><em>TREE SIZE</em> as signed integer (4 bytes) containing the size of the tree. Only the root node has this value updated, so to know the size of the collection you need to load the root node and get this field. other nodes can contain not updated values because upon rotation of pieces of the tree (made during tree rebalancing) the root can change and the old root will have the "old" size as dirty.</li>
+<li><em>NODE SIZE</em> as signed integer (4 bytes) containing number of entries in this node. It's always &lt;= to the page-size defined at the tree level and equals for all the nodes. By default page-size is 16 items</li>
+<li><em>COLOR</em> as 1 byte containing 1=Black, 0=Red. To know more about the meaning of this look at <a href="http://en.wikipedia.org/wiki/Red%E2%80%93black_tree">Red-Black Trees</a></li>
+<li><strong>PARENT RID</strong> as <a href="../datamodeling/Concepts.html#record-id">RID</a> (10 bytes) of the parent node record</li>
+<li><strong>LEFT RID</strong> as <a href="../datamodeling/Concepts.html#record-id">RID</a> (10 bytes) of the left node record</li>
+<li><strong>RIGHT RID</strong> as <a href="../datamodeling/Concepts.html#record-id">RID</a> (10 bytes) of the right node record</li>
+<li><strong>RID LIST</strong> as the list of <a href="../datamodeling/Concepts.html#record-id">RIDs</a> containing the references to the records. This is pre-allocated to the configured page-size. Since each <a href="../datamodeling/Concepts.html#record-id">RID</a> takes 10 bytes, a page-size of 16 means 16 x 10bytes = 160bytes</li>
+</ul>
+<p>The size of the tree-node on disk (and memory) is fixed to avoid fragmentation. To compute it: 39 bytes + 10 * PAGE-SIZE bytes. For a page-size = 16 you'll have 39 + 160 = 199 bytes.</p>
+<h3 id="request_push_distrib_config"><a class="header" href="#request_push_distrib_config">REQUEST_PUSH_DISTRIB_CONFIG</a></h3>
+<pre><code>(configuration:document)
+</code></pre>
+<p>where:
+<strong>configuration</strong> is and orientdb document serialized with the network <a href="#record-format">Record Format</a>, that contain the distributed configuration.</p>
+<h3 id="request_push_live_query"><a class="header" href="#request_push_live_query">REQUEST_PUSH_LIVE_QUERY</a></h3>
+<pre><code>(message-type:byte)(message-body)
+</code></pre>
+<p>where:<br />
+<strong>message-type</strong> is the type of message and can have as a value</p>
+<ul>
+<li><em>RECORD</em> = 'r'</li>
+<li><em>UNSUBSCRIBE</em> = 'u'</li>
+</ul>
+<p><strong>message-body</strong> is one for each type of message</p>
+<h5 id="record-message-body"><a class="header" href="#record-message-body">Record Message Body:</a></h5>
+<pre><code>(operation:byte)(query_token:int)(record-type:byte)(record-version:int)(cluster-id:short)(cluster-position:long)(record-content:bytes)
+</code></pre>
+<p>where:<br />
+<strong>operation</strong> the type of operation happened, possible values</p>
+<ul>
+<li><em>LOADED</em> = 0</li>
+<li><em>UPDATED</em> = 1</li>
+<li><em>DELETED</em> = 2</li>
+<li><em>CREATED</em> = 3</li>
+</ul>
+<p><strong>query_token</strong> the token that identify the relative query of the push message, it match the result token of the live query command request.<br />
+<strong>record-type</strong> type of the record ('d' or 'b')<br />
+<strong>record-version</strong>  record version<br />
+<strong>cluster-id</strong> record cluster id<br />
+<strong>cluster-position</strong> record cluster position<br />
+<strong>record-content</strong> record content</p>
+<h5 id="unsubscribe-message-body"><a class="header" href="#unsubscribe-message-body">Unsubscribe Message Body:</a></h5>
+<pre><code>(query_token:int)
+</code></pre>
+<p><strong>query_token</strong> the token for identify the query that has been unsubscribed.</p>
+<h1 id="history"><a class="header" href="#history">History</a></h1>
+<h2 id="version-36"><a class="header" href="#version-36">version 36</a></h2>
+<p>add support for REQUEST_INCREMENTAL_RESTORE</p>
+<h2 id="version-35"><a class="header" href="#version-35">version 35</a></h2>
+<p>command result review:
+add support for "wrapped types" on command result set, removed support for "simple types".</p>
+<p>is now possible a new option <code>w</code> over the one already existent <code>r</code>,<code>s</code>,<code>l</code>,<code>i</code>
+it consist in a document serialized in the same way of <code>r</code> that wrap the result in a field called <code>result</code>.</p>
+<p>the old options <code>a</code> for simple results is now removed.</p>
+<h2 id="version-34"><a class="header" href="#version-34">version 34</a></h2>
+<p>Add flags <code>support-push</code> and <code>collect-stats</code> on  REQUEST_DB_OPEN.</p>
+<h2 id="version-33"><a class="header" href="#version-33">version 33</a></h2>
+<p>Removed the token data from error handling header in case of non token session.
+Removed the db-type from REQUEST_DB_OPEN
+added REQUEST_DB_REOPEN</p>
+<h2 id="version-32"><a class="header" href="#version-32">Version 32</a></h2>
+<p>Added support of streamable resultset in case of sync command, added a new result of type 'i' that stream the result in the same way of async result.</p>
+<h2 id="version-31"><a class="header" href="#version-31">Version 31</a></h2>
+<p>Added new commands to manipulate indexes: REQUEST_INDEX_GET, REQUEST_INDEX_PUT and REQUEST_INDEX_REMOVE.</p>
+<h2 id="version-30"><a class="header" href="#version-30">Version 30</a></h2>
+<p>Added new command REQUEST_RECORD_LOAD_IF_VERSION_NOT_LATEST</p>
+<h2 id="version-29"><a class="header" href="#version-29">Version 29</a></h2>
+<p>Added support support of live query in REQUEST_COMMAND, added new push command REQUEST_PUSH_LIVE_QUERY</p>
+<h2 id="version-28"><a class="header" href="#version-28">Version 28</a></h2>
+<p>Since version 28 the <a href="#request_record_load">REQUEST_RECORD_LOAD</a> response order is changed from:
+<code>[(payload-status:byte)[(record-content:bytes)(record-version:int)(record-type:byte)]*]+</code>
+to:
+<code>[(payload-status:byte)[(record-type:byte)(record-version:int)(record-content:bytes)]*]+</code></p>
+<h2 id="version-27"><a class="header" href="#version-27">Version 27</a></h2>
+<p>Since version 27 is introduced an extension to allow use a token based session, if this modality is enabled a few things change in the modality the protocol works.</p>
+<ul>
+<li>in the first negotiation the client should ask for a token based authentication using the token-auth flag</li>
+<li>the server will reply with a token or an empty byte array that means that it not support token based session and is using a old style session.</li>
+<li>if the server don't send back the token the client can fail or drop back the the old modality.</li>
+<li>for each request the client should send the token and the sessionId</li>
+<li>the sessionId is needed only for match a response to a request</li>
+<li>if used the token the connections can be shared between users and db of the same server, not needed to have connection associated to db and user.</li>
+</ul>
+<p>protocol methods changed:</p>
+<p>REQUEST_DB_OPEN</p>
+<ul>
+<li>request add token session flag</li>
+<li>response add of the token</li>
+</ul>
+<p>REQUEST_CONNECT</p>
+<ul>
+<li>request add token session flag</li>
+<li>response add of the token</li>
+</ul>
+<h2 id="version-26"><a class="header" href="#version-26">Version 26</a></h2>
+<p>Added cluster-id in the REQUEST_CREATE_RECORD response.</p>
+<h2 id="version-25"><a class="header" href="#version-25">Version 25</a></h2>
+<p>Reviewed serialization of index changes in the REQUEST_TX_COMMIT for details <a href="https://github.com/orientechnologies/orientdb/issues/2676">#2676</a>
+Removed double serialization of commands parameters, now the parameters are directly serialized in a document see <a href="Network-Binary-Protocol-Commands.html">Network Binary Protocol Commands</a> and <a href="https://github.com/orientechnologies/orientdb/issues/2301">#2301</a></p>
+<h2 id="version-24"><a class="header" href="#version-24">Version 24</a></h2>
+<ul>
+<li>cluster-type and cluster-dataSegmentId parameters were removed from response for REQUEST_DB_OPEN, REQUEST_DB_RELOAD requests.</li>
+<li>datasegment-id parameter was removed from REQUEST_RECORD_CREATE request.</li>
+<li>type, location and datasegment-name parameters were removed from REQUEST_DATACLUSTER_ADD request.</li>
+<li>REQUEST_DATASEGMENT_ADD  request was removed.</li>
+<li>REQUEST_DATASEGMENT_DROP request was removed.</li>
+</ul>
+<h2 id="version-23"><a class="header" href="#version-23">Version 23</a></h2>
+<ul>
+<li>Add support of <code>updateContent</code> flag to UPDATE_RECORD and COMMIT</li>
+</ul>
+<h2 id="version-22"><a class="header" href="#version-22">Version 22</a></h2>
+<ul>
+<li>REQUEST_CONNECT and REQUEST_OPEN now send the document serialization format that the client require</li>
+</ul>
+<h2 id="version-21"><a class="header" href="#version-21">Version 21</a></h2>
+<ul>
+<li>REQUEST_SBTREE_BONSAI_GET_ENTRIES_MAJOR (which is used to iterate through SBTree) now gets "pageSize" as int as last argument. Version 20 had a fixed pageSize=5. The new version provides configurable pageSize by client. Default pageSize value for protocol=20 has been changed to 128.</li>
+</ul>
+<h2 id="version-20"><a class="header" href="#version-20">Version 20</a></h2>
+<ul>
+<li>Rid bag commands were introduced.</li>
+<li>Save/commit was adapted to support client notifications about changes of collection pointers.</li>
+</ul>
+<h2 id="version-19"><a class="header" href="#version-19">Version 19</a></h2>
+<ul>
+<li>Serialized version of server exception is sent to the client.</li>
+</ul>
+<h2 id="version-18"><a class="header" href="#version-18">Version 18</a></h2>
+<ul>
+<li>Ability to set cluster id during cluster creation was added.</li>
+</ul>
+<h2 id="version-17"><a class="header" href="#version-17">Version 17</a></h2>
+<ul>
+<li>Synchronous commands can send fetched records like asynchronous one.</li>
+</ul>
+<h2 id="version-16"><a class="header" href="#version-16">Version 16</a></h2>
+<ul>
+<li>Storage type is required for REQUEST_DB_FREEZE, REQUEST_DB_RELEASE, REQUEST_DB_DROP, REQUEST_DB_EXIST commands.</li>
+<li>This is required to support plocal storage.</li>
+</ul>
+<h2 id="version-15"><a class="header" href="#version-15">Version 15</a></h2>
+<ul>
+<li>SET types are stored in different way then LIST. Before rel. 15 both were stored between squared braces [] while now SET are stored between &lt;&gt;</li>
+</ul>
+<h2 id="version-14"><a class="header" href="#version-14">Version 14</a></h2>
+<ul>
+<li>DB_OPEN returns information about version of OrientDB deployed on server.</li>
+</ul>
+<h2 id="version-13"><a class="header" href="#version-13">Version 13</a></h2>
+<ul>
+<li>To support upcoming auto-sharding support feature following changes were done
+<ul>
+<li>RECORD_LOAD flag to support ability to load tombstones was added.</li>
+<li>DATACLUSTER_COUNT flag to support ability to count tombstones in cluster was added.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-12"><a class="header" href="#version-12">Version 12</a></h2>
+<ul>
+<li>DB_OPEN returns the dataSegmentId foreach cluster</li>
+</ul>
+<h2 id="version-11"><a class="header" href="#version-11">Version 11</a></h2>
+<ul>
+<li>RECORD_CREATE always returns the record version. This was necessary because new records could have version &gt; 0 to avoid MVCC problems on RID recycle</li>
+</ul>
+<h1 id="compatibility"><a class="header" href="#compatibility">Compatibility</a></h1>
+<p>Current release of OrientDB server supports older client versions.</p>
+<ul>
+<li>version 35: 100% compatible 2.2-SNAPSHOT</li>
+<li>version 34: 100% compatible 2.2-SNAPSHOT</li>
+<li>version 34: 100% compatible 2.2-SNAPSHOT</li>
+<li>version 33: 100% compatible 2.2-SNAPSHOT</li>
+<li>version 32: 100% compatible 2.1-SNAPSHOT</li>
+<li>version 31: 100% compatible 2.1-SNAPSHOT</li>
+<li>version 30: 100% compatible 2.1-SNAPSHOT</li>
+<li>version 29: 100% compatible 2.1-SNAPSHOT</li>
+<li>version 28: 100% compatible 2.1-SNAPSHOT</li>
+<li>version 27: 100% compatible 2.0-SNAPSHOT</li>
+<li>version 26: 100% compatible 2.0-SNAPSHOT</li>
+<li>version 25: 100% compatible 2.0-SNAPSHOT</li>
+<li>version 24: 100% compatible 2.0-SNAPSHOT</li>
+<li>version 23: 100% compatible 2.0-SNAPSHOT</li>
+<li>version 22: 100% compatible 2.0-SNAPSHOT</li>
+<li>version 22: 100% compatible 2.0-SNAPSHOT</li>
+<li>version 21: 100% compatible 1.7-SNAPSHOT</li>
+<li>version 20: 100% compatible 1.7rc1-SNAPSHOT</li>
+<li>version 19: 100% compatible 1.6.1-SNAPSHOT</li>
+<li>version 18: 100% compatible 1.6-SNAPSHOT</li>
+<li>version 17: 100% compatible. 1.5</li>
+<li>version 16: 100% compatible. 1.5-SNAPSHOT</li>
+<li>version 15: 100% compatible. 1.4-SNAPSHOT</li>
+<li>version 14: 100% compatible. 1.4-SNAPSHOT</li>
+<li>version 13: 100% compatible. 1.3-SNAPSHOT</li>
+<li>version 12: 100% compatible. 1.3-SNAPSHOT</li>
+<li>version 11: 100% compatible. 1.0-SNAPSHOT</li>
+<li>version 10: 100% compatible. 1.0rc9-SNAPSHOT</li>
+<li>version 9: 100% compatible. 1.0rc9-SNAPSHOT</li>
+<li>version 8: 100% compatible. 1.0rc9-SNAPSHOT</li>
+<li>version 7: 100% compatible. 1.0rc7-SNAPSHOT - 1.0rc8</li>
+<li>version 6: 100% compatible. Before 1.0rc7-SNAPSHOT</li>
+<li>&lt; version 6: not compatible</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../internals/Web-Server.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../internals/Record-CSV-Serialization.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../internals/Web-Server.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../internals/Record-CSV-Serialization.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

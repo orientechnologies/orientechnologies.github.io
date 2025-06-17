@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Schema - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="schema"><a class="header" href="#schema">Schema</a></h1>
+<p>While OrientDb can work in a schema-less mode, you may find it necessary at times to enforce a schema on your data model.  OrientDB supports both schema-full and schema-hybrid solutions.</p>
+<p>In the case of schema-hybrid mode, you only set constraints for certain fields and leave the user to add custom fields to the record.  This mode occurs at a class level, meaning that you can have an <code>Employee</code> class as schema-full and an <code>EmployeeInformation</code> class as schema-less.</p>
+<ul>
+<li><strong>Schema-full</strong> Enables strict-mode at a class-level and sets all fields as mandatory.</li>
+<li><strong>Schema-less</strong> Enables classes with no properties.  Default is non-strict-mode, meaning that records can have arbitrary fields.</li>
+<li><strong>Schema-hybrid</strong> Enables classes with some fields, but allows records to define custom fields.  This is also sometimes called schema-mixed.</li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong> Changes to the schema are not transactional.  You must execute these commands outside of a transaction.</p>
+</blockquote>
+<p>You can access the schema through <a href="../sql/SQL-Metadata.html#querying-the-schema">SQL</a> or through the Java API.  Examples here use the latter.  To access the schema API in Java, you need the Schema instance of the database you want to use.  For example,</p>
+<pre><code class="language-java">OSchema schema = database.getMetadata().getSchema();
+</code></pre>
+<h2 id="class"><a class="header" href="#class">Class</a></h2>
+<p>OrientDB draws from the Object Oriented programming paradigm in the concept of the Class.  A class is a type of record.  In comparison to Relational database systems, it is most similar in conception to the table.</p>
+<p>Classes can be schema-less, schema-full or schema-hybrid.  They can inherit from other classes, shaping a tree of classes.  In other words, a sub-class extends the parent class, inheriting all attributes.</p>
+<p>Each class has its own clusters.  By default, these clusters are logical, but they can also be physical.  A given class must have at least one cluster defined as its default, but it can support multiple clusters.  OrientDB writes new records into the default cluster, but always reads from all defined clusters.</p>
+<p>When you create a new class, OrientDB creates a default physical cluster that uses the same name as the class, but in lowercase.</p>
+<h3 id="creating-persistent-classes"><a class="header" href="#creating-persistent-classes">Creating Persistent Classes</a></h3>
+<p>Classes contain one or more properties.  This mode is similar to the classical model of the Relational database, where you must define tables before you can begin to store records.</p>
+<p>To create a persistent class in Java, use the <code>createClass()</code> method:</p>
+<pre><code class="language-java">OClass account = database.getMetadata().getSchema().createClass("Account");
+</code></pre>
+<p>This method creates the class <code>Account</code> on the database.  It simultaneously creates the physical cluster <code>account</code>, to provide storage for records in the class <code>Account</code>.</p>
+<h3 id="getting-persistent-classes"><a class="header" href="#getting-persistent-classes">Getting Persistent Classes</a></h3>
+<p>With the new persistent class created, you may also need to get its contents.</p>
+<p>To retrieve a persistent class in Java, use the <code>getClass()</code> method:</p>
+<pre><code class="language-java">OClass account = database.getMetadata().getSchema().getClass("Account");
+</code></pre>
+<p>This method retrieves from the database the persistent class <code>Account</code>.  If the query finds that the <code>Account</code> class does not exist, it returns <code>NULL</code>.</p>
+<h3 id="dropping-persistent-classes"><a class="header" href="#dropping-persistent-classes">Dropping Persistent Classes</a></h3>
+<p>In the event that you no longer want the class, you can drop, or delete, it from the database.</p>
+<p>To drop a persistent class in Java, use the <a href="../java/ref/OSchema/dropClass.html"><code>OSchema.dropClass()</code></a> method:</p>
+<pre><code class="language-java">database.getMetadata().getSchema().dropClass("Account");
+</code></pre>
+<p>This method drops the class <code>Account</code> from your database.  It does not delete records that belong to this class unless you explicitly ask it to do so:</p>
+<pre><code class="language-java">database.command(new OCommandSQL("DELETE FROM Account")).execute();
+database.getMetadata().getSchema().dropClass("Account");
+</code></pre>
+<h3 id="constraints"><a class="header" href="#constraints">Constraints</a></h3>
+<p>Working in schema-full mode requires that you set the strict mode at the class-level, by defining the <code>setStrictMode()</code> method to <code>TRUE</code>.  In this case, records of that class cannot have undefined properties.</p>
+<h2 id="properties"><a class="header" href="#properties">Properties</a></h2>
+<p>In OrientDB, a property is a field assigned to a class.  For the purposes of this tutorial, consider Property and Field as synonymous.</p>
+<h3 id="creating-class-properties"><a class="header" href="#creating-class-properties">Creating Class Properties</a></h3>
+<p>After you create a class, you can define fields for that class.  To define a field, use the <code>createProperty()</code> method.</p>
+<pre><code class="language-java">OClass account = database.getMetadata().getSchema().createClass("Account");
+account.createProperty("id", OType.Integer);
+account.createProperty("birthDate", OType.Date);
+</code></pre>
+<p>These lines create a class <code>Account</code>, then defines two properties <code>id</code> and <code>birthDate</code>.  Bear in mind that each field must belong to one of the <a href="Types.html">supported types</a>.  Here these are the integer and date types.</p>
+<h3 id="dropping-class-properties"><a class="header" href="#dropping-class-properties">Dropping Class Properties</a></h3>
+<p>In the event that you would like to remove properties from a class you can do so using the <a href="../java/ref/OClass/dropProperty.html"><code>dropProperty()</code></a> method under <a href="../java/ref/OClass.html"><code>OClass</code></a>.</p>
+<pre><code class="language-java">database.getMetadata().getSchema().getClass("Account").dropProperty("name");
+</code></pre>
+<p>When you drop a property from a class, it does not remove records from that class unless you explicitly ask for it, using the <a href="../sql/SQL-Update.html"><code>UPDATE... REMOVE</code></a> statements.  For instance,</p>
+<pre><code class="language-java">database.getMetadata().getSchema().getClass("Account").dropProperty("name");
+database.command(new OCommandSQL("UPDATE Account REMOVE name")).execute();
+</code></pre>
+<p>The first method drops the property from the class.  The second updates the database to remove the property.</p>
+<h2 id="relationships"><a class="header" href="#relationships">Relationships</a></h2>
+<p>OrientDB supports two types of relationships: referenced and embedded.</p>
+<h3 id="referenced-relationships"><a class="header" href="#referenced-relationships">Referenced Relationships</a></h3>
+<p>In the case of referenced relationships, OrientDB uses a direct link to the referenced record or records.  This allows the database to avoid the costly <code>JOIN</code> operations used by Relational databases.</p>
+<pre><code>                  customer
+  Record A     -------------&gt;    Record B
+CLASS=Invoice                 CLASS=Customer
+  RID=5:23                       RID=10:2
+</code></pre>
+<p>In the example, Record A contains the reference to Record B in the property <code>customer</code>.  Both records are accessible by any other records since each has a <a href="../datamodeling/Concepts.html#record-id">Record ID</a>.</p>
+<h4 id="11-and-n1-reference-relationships"><a class="header" href="#11-and-n1-reference-relationships">1:1 and <em>n</em>:1 Reference Relationships</a></h4>
+<p>In one to one and many to one relationships, the reference relationship is expressed using the <code>LINK</code> type.  For instance.</p>
+<pre><code class="language-java">OClass customer= database.getMetadata().getSchema().createClass("Customer");
+customer.createProperty("name", OType.STRING);
+
+OClass invoice = database.getMetadata().getSchema().createClass("Invoice");
+invoice.createProperty("id", OType.INTEGER);
+invoice.createProperty("date", OType.DATE);
+invoice.createProperty("customer", OType.LINK, customer);
+</code></pre>
+<p>Here, records of the class <code>Invoice</code> link to a record of the class <code>Customer</code>, through the field <code>customer</code>.</p>
+<h4 id="1n-and-nn-reference-relationships"><a class="header" href="#1n-and-nn-reference-relationships">1:<em>n</em> and <em>n</em>:<em>n</em> Reference Relationships.</a></h4>
+<p>In one to many and many to many relationships, OrientDB expresses the referenced relationship using collections of links.</p>
+<ul>
+<li><code>LINKLIST</code> An ordered list of links.</li>
+<li><code>LINKSET</code> An unordered set of links, that does not accept duplicates.</li>
+<li><code>LINKMAP</code> An ordered map of links, with a string key.  It does not accept duplicate keys.</li>
+</ul>
+<p>For example,</p>
+<pre><code class="language-java">OClass orderItem = db.getMetadata().getSchema().createClass("OrderItem");
+orderItem.createProperty("id", OType.INTEGER);
+orderItem.createProperty("animal", OType.LINK, animal);
+
+OClass order = db.getMetadata().getSchema().createClass("Order");
+order.createProperty("id", OType.INTEGER);
+order.createProperty("date", OType.DATE);
+order.createProperty("items", OType.LINKLIST, orderItem);
+</code></pre>
+<p>Here, you have two classes: <code>Order</code> and <code>OrderItem</code> and a 1:<em>n</em> referenced relationship is created between them.</p>
+<h3 id="embedded-relationships"><a class="header" href="#embedded-relationships">Embedded Relationships</a></h3>
+<p>In the case of embedded relationships, OrientDB contains the relationship within the record.  Embedded relationships are stronger than referenced relationships, but the embedded record does not have its own <a href="../datamodeling/Concepts.html#record-id">Record ID</a>.  Because of this, you cannot reference them directly through other records.  The relationship is only accessible through the container record.  If the container record is deleted, then the embedded record is also deleted.</p>
+<pre><code>                  address
+  Record A     &lt;&gt;----------&gt;   Record B
+CLASS=Account               CLASS=Address
+  RID=5:23                     NO RID!
+</code></pre>
+<p>Here, Record A contains the entirety of Record B in the property <code>address</code>.  You can only reach Record B by traversing the container, Record A.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Account WHERE Address.city = 'Rome'</code>
+</pre>
+<h4 id="11-and-n1-embedded-relationships"><a class="header" href="#11-and-n1-embedded-relationships">1:1 and <em>n</em>:1 Embedded Relationships</a></h4>
+<p>For one to one and many to one embedded relationships, OrientDB uses links of the <code>EMBEDDED</code> type.  For example,</p>
+<pre><code class="language-java">OClass address = database.getMetadata().getSchema().createClass("Address");
+
+OClass account = database.getMetadata().getSchema().createClass("Account");
+account.createProperty("id", OType.INTEGER);
+account.createProperty("birthDate", OType.DATE);
+account.createProperty("address", OType.EMBEDDED, address);
+</code></pre>
+<p>Here, records of the class <code>Account</code> embed records for the class <code>Address</code>.</p>
+<h4 id="1n-and-nn-embedded-relationships"><a class="header" href="#1n-and-nn-embedded-relationships">1:<em>n</em> and <em>n</em>:<em>n</em> Embedded Relationships</a></h4>
+<p>In the case of one to many and many to many relationships, OrientDB sues a collection embedded link types:</p>
+<ul>
+<li><code>EMBEDDEDLIST</code> An ordered list of records.</li>
+<li><code>EMBEDDEDSET</code> An unordered set of records.  It doesn't accept duplicates.</li>
+<li><code>EMBEDDEDMAP</code> An ordered map of records as key-value pairs.  It doesn't accept duplicate keys.</li>
+</ul>
+<p>For example,</p>
+<pre><code class="language-java">OClass orderItem = db.getMetadata().getSchema().createClass("OrderItem");
+orderItem.createProperty("id", OType.INTEGER);
+orderItem.createProperty("animal", OType.LINK, animal);
+
+OClass order = db.getMetadata().getSchema().createClass("Order");
+order.createProperty("id", OType.INTEGER);
+order.createProperty("date", OType.DATE);
+order.createProperty("items", OType.EMBEDDEDLIST, orderItem);
+</code></pre>
+<p>This establishes a one to many relationship between the classes <code>Order</code> and <code>OrderItem</code>.</p>
+<h2 id="constraints-1"><a class="header" href="#constraints-1">Constraints</a></h2>
+<p>OrientDB supports a number of constraints for each field.  For more information on setting constraints, see the <a href="../sql/SQL-Alter-Property.html"><code>ALTER PROPERTY</code></a> command.</p>
+<ul>
+<li><strong>Minimum Value</strong>: <code>setMin()</code> The field accepts a string, because it works also for date ranges.</li>
+<li><strong>Maximum Value</strong>: <code>setMax()</code> The field accepts a string, because it works also for date rangers.</li>
+<li><strong>Mandatory</strong>: <code>setMandatory()</code> This field is required.</li>
+<li><strong>Read Only</strong>: <code>setReadonly()</code> This field cannot update after being created.</li>
+<li><strong>Not Null</strong>: <code>setNotNull()</code> This field cannot be null.</li>
+<li><strong>Unique</strong>: This field doesn't allow duplicates or speedup searches.</li>
+<li><strong>Regex</strong>: This field must satisfy <a href="http://en.wikipedia.org/wiki/Regular_expression">Regular Expressions</a></li>
+</ul>
+<p>For example,</p>
+<pre><code class="language-java">profile.createProperty("nick", OType.STRING).setMin("3").setMax("30").setMandatory(true).setNotNull(true);
+profile.createIndex("nickIdx", OClass.INDEX_TYPE.UNIQUE, "nick"); // Creates unique constraint
+
+profile.createProperty("name", OType.STRING).setMin("3").setMax("30");
+profile.createProperty("surname", OType.STRING).setMin("3").setMax("30");
+profile.createProperty("registeredOn", OType.DATE).setMin("2010-01-01 00:00:00");
+profile.createProperty("lastAccessOn", OType.DATE).setMin("2010-01-01 00:00:00");
+</code></pre>
+<h3 id="indices-as-constraints"><a class="header" href="#indices-as-constraints">Indices as Constraints</a></h3>
+<p>To define a property value as unique, use the <code>UNIQUE</code> index constraint.  For example,</p>
+<pre><code class="language-java">profile.createIndex("EmployeeId", OClass.INDEX_TYPE.UNIQUE, "id");
+</code></pre>
+<p>You can also constrain a group of properties as unique by creating a composite index made from multiple fields.  For instance,</p>
+<pre><code class="language-java">profile.createIndex("compositeIdx", OClass.INDEX_TYPE.NOTUNIQUE, "name", "surname");
+</code></pre>
+<p>For more information about indexes look at <a href="../indexing/Indexes.html">Index guide</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../general/Types.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../general/Inheritance.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../general/Types.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../general/Inheritance.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
