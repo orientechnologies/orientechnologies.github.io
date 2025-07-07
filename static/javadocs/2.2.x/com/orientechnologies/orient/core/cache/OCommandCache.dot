@@ -9,20 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.cache.OCommandCacheSoftRefs
-	c959574 [label=<<table title="com.orientechnologies.orient.core.cache.OCommandCacheSoftRefs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandCacheSoftRefs.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandCacheSoftRefs </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandCacheSoftRefs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.cache.OCommandCache
-	c959576 [label=<<table title="com.orientechnologies.orient.core.cache.OCommandCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandCache.html">
+	c959574 [label=<<table title="com.orientechnologies.orient.core.cache.OCommandCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.cache.OCommandCacheSoftRefs
+	c959578 [label=<<table title="com.orientechnologies.orient.core.cache.OCommandCacheSoftRefs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandCacheSoftRefs.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCommandCacheSoftRefs </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandCacheSoftRefs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.cache.OCommandCacheSoftRefs implements com.orientechnologies.orient.core.cache.OCommandCache
-	c959576:p -> c959574:p [dir=back,arrowtail=empty,style=dashed];
+	c959574:p -> c959578:p [dir=back,arrowtail=empty,style=dashed];
 }
 

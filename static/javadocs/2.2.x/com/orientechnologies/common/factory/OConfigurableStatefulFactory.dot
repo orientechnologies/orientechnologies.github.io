@@ -10,13 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.factory.OConfigurableStatefulFactory<K, V>
-	c1201225 [label=<<table title="com.orientechnologies.common.factory.OConfigurableStatefulFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OConfigurableStatefulFactory.html">
+	c1201222 [label=<<table title="com.orientechnologies.common.factory.OConfigurableStatefulFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OConfigurableStatefulFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OConfigurableStatefulFactory&lt;K, V&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OConfigurableStatefulFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.cache.OLocalRecordCacheFactoryImpl
-	c1201394 [label=<<table title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactoryImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/cache/OLocalRecordCacheFactoryImpl.html">
+	c1201393 [label=<<table title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactoryImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/cache/OLocalRecordCacheFactoryImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLocalRecordCacheFactoryImpl </td></tr>
 		</table></td></tr>
@@ -28,8 +28,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../orient/core/metadata/schema/clusterselection/OClusterSelectionFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.cache.OLocalRecordCacheFactoryImpl extends com.orientechnologies.common.factory.OConfigurableStatefulFactory<java.lang.String, com.orientechnologies.orient.core.cache.ORecordCache>
-	c1201225:p -> c1201394:p [dir=back,arrowtail=empty];
+	c1201222:p -> c1201393:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionFactory extends com.orientechnologies.common.factory.OConfigurableStatefulFactory<java.lang.String, com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy>
-	c1201225:p -> c1201457:p [dir=back,arrowtail=empty];
+	c1201222:p -> c1201457:p [dir=back,arrowtail=empty];
 }
 

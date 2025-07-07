@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3473819 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../method/misc/OAbstractSQLMethod.html">
+	c3473805 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../method/misc/OAbstractSQLMethod.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractSQLMethod </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../method/misc/OAbstractSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude
-	c3473846 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodInclude.html">
+	c3473838 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodInclude.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodInclude </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodInclude.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3473819:p -> c3473846:p [dir=back,arrowtail=empty];
+	c3473805:p -> c3473838:p [dir=back,arrowtail=empty];
 }
 

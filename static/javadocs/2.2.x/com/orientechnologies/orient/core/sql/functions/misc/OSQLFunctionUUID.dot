@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.functions.OSQLFunctionAbstract
-	c3418970 [label=<<table title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLFunctionAbstract.html">
+	c3418963 [label=<<table title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLFunctionAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OSQLFunctionAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID
-	c3418985 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionUUID.html">
+	c3418982 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionUUID.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionUUID </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionUUID.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID extends com.orientechnologies.orient.core.sql.functions.OSQLFunctionAbstract
-	c3418970:p -> c3418985:p [dir=back,arrowtail=empty];
+	c3418963:p -> c3418982:p [dir=back,arrowtail=empty];
 }
 

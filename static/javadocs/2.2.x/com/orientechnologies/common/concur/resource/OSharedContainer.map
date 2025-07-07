@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OSharedContainer.html" title="com.orientechnologies.common.concur.resource.OSharedContainer" alt="" coords="207,11,344,53"/>
-<area shape="rect" id="node1" href="./OSharedContainer.html" title="&lt;TABLE&gt;" alt="" coords="196,5,355,59"/>
-<area shape="rect" id="node2_1" href="./OSharedContainerImpl.html" title="com.orientechnologies.common.concur.resource.OSharedContainerImpl" alt="" coords="16,121,183,146"/>
-<area shape="rect" id="node2" href="./OSharedContainerImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,109,193,157"/>
-<area shape="rect" id="node3_2" href="../../../orient/core/storage/OStorage.html" title="com.orientechnologies.orient.core.storage.OStorage" alt="" coords="229,112,322,155"/>
-<area shape="rect" id="node3" href="../../../orient/core/storage/OStorage.html" title="&lt;TABLE&gt;" alt="" coords="218,107,333,160"/>
-<area shape="rect" id="node4_3" href="../../../orient/core/storage/OStorageAbstract.html" title="com.orientechnologies.orient.core.storage.OStorageAbstract" alt="" coords="255,219,389,245"/>
-<area shape="rect" id="node4" href="../../../orient/core/storage/OStorageAbstract.html" title="&lt;TABLE&gt;" alt="" coords="245,208,399,256"/>
+<area shape="rect" id="node1_0" href="./OSharedContainerImpl.html" title="com.orientechnologies.common.concur.resource.OSharedContainerImpl" alt="" coords="16,121,183,146"/>
+<area shape="rect" id="node1" href="./OSharedContainerImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,109,193,157"/>
+<area shape="rect" id="node2_1" href="./OSharedContainer.html" title="com.orientechnologies.common.concur.resource.OSharedContainer" alt="" coords="163,11,300,53"/>
+<area shape="rect" id="node2" href="./OSharedContainer.html" title="&lt;TABLE&gt;" alt="" coords="152,5,311,59"/>
+<area shape="rect" id="node3_2" href="../../../orient/core/storage/OStorageAbstract.html" title="com.orientechnologies.orient.core.storage.OStorageAbstract" alt="" coords="211,219,345,245"/>
+<area shape="rect" id="node3" href="../../../orient/core/storage/OStorageAbstract.html" title="&lt;TABLE&gt;" alt="" coords="201,208,355,256"/>
+<area shape="rect" id="node4_3" href="../../../orient/core/storage/OStorage.html" title="com.orientechnologies.orient.core.storage.OStorage" alt="" coords="279,112,373,155"/>
+<area shape="rect" id="node4" href="../../../orient/core/storage/OStorage.html" title="&lt;TABLE&gt;" alt="" coords="269,107,383,160"/>
 </map>

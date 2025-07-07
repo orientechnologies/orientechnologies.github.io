@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.tool.ODatabaseRepair
-	c1386268 [label=<<table title="com.orientechnologies.orient.core.db.tool.ODatabaseRepair" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseRepair.html">
+	c1386259 [label=<<table title="com.orientechnologies.orient.core.db.tool.ODatabaseRepair" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseRepair.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODatabaseRepair </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseRepair.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.tool.ODatabaseTool
-	c1386269 [label=<<table title="com.orientechnologies.orient.core.db.tool.ODatabaseTool" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseTool.html">
+	c1386261 [label=<<table title="com.orientechnologies.orient.core.db.tool.ODatabaseTool" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseTool.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODatabaseTool </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseTool.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.tool.ODatabaseRepair extends com.orientechnologies.orient.core.db.tool.ODatabaseTool
-	c1386269:p -> c1386268:p [dir=back,arrowtail=empty];
+	c1386261:p -> c1386259:p [dir=back,arrowtail=empty];
 }
 

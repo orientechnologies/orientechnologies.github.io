@@ -9,52 +9,52 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.common.collection.OIterableObject<T>
-	c3145888 [label=<<table title="com.orientechnologies.common.collection.OIterableObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/OIterableObject.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OIterableObject&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../collection/OIterableObject.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.collection.OMultiCollectionIterator<T>
-	c3145891 [label=<<table title="com.orientechnologies.common.collection.OMultiCollectionIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/OMultiCollectionIterator.html">
+	c3145883 [label=<<table title="com.orientechnologies.common.collection.OMultiCollectionIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/OMultiCollectionIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OMultiCollectionIterator&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../collection/OMultiCollectionIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.collection.OIterableObject<T>
+	c3145886 [label=<<table title="com.orientechnologies.common.collection.OIterableObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/OIterableObject.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OIterableObject&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../collection/OIterableObject.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.util.OResettable
-	c3145984 [label=<<table title="com.orientechnologies.common.util.OResettable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OResettable.html">
+	c3145969 [label=<<table title="com.orientechnologies.common.util.OResettable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OResettable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OResettable </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OResettable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator
-	c3146056 [label=<<table title="com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/OLazyRecordMultiIterator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLazyRecordMultiIterator </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../orient/core/db/record/OLazyRecordMultiIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.OLazyRecordIterator
-	c3146077 [label=<<table title="com.orientechnologies.orient.core.db.record.OLazyRecordIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/OLazyRecordIterator.html">
+	c3146057 [label=<<table title="com.orientechnologies.orient.core.db.record.OLazyRecordIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/OLazyRecordIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLazyRecordIterator </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/db/record/OLazyRecordIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator
+	c3146078 [label=<<table title="com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/OLazyRecordMultiIterator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLazyRecordMultiIterator </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../orient/core/db/record/OLazyRecordMultiIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.iterator.OLazyWrapperIterator<T>
-	c3147243 [label=<<table title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/iterator/OLazyWrapperIterator.html">
+	c3147238 [label=<<table title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/iterator/OLazyWrapperIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OLazyWrapperIterator&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/iterator/OLazyWrapperIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.common.collection.OIterableObject<T> implements com.orientechnologies.common.util.OResettable
-	c3145984:p -> c3145888:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.common.collection.OMultiCollectionIterator<T> implements com.orientechnologies.common.util.OResettable
-	c3145984:p -> c3145891:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator implements com.orientechnologies.common.util.OResettable
-	c3145984:p -> c3146056:p [dir=back,arrowtail=empty,style=dashed];
+	c3145969:p -> c3145883:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.common.collection.OIterableObject<T> implements com.orientechnologies.common.util.OResettable
+	c3145969:p -> c3145886:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.record.OLazyRecordIterator implements com.orientechnologies.common.util.OResettable
-	c3145984:p -> c3146077:p [dir=back,arrowtail=empty,style=dashed];
+	c3145969:p -> c3146057:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator implements com.orientechnologies.common.util.OResettable
+	c3145969:p -> c3146078:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.iterator.OLazyWrapperIterator<T> implements com.orientechnologies.common.util.OResettable
-	c3145984:p -> c3147243:p [dir=back,arrowtail=empty,style=dashed];
+	c3145969:p -> c3147238:p [dir=back,arrowtail=empty,style=dashed];
 }
 

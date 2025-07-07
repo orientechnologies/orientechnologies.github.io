@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandAbstractLogic
-	c3724642 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandAbstractLogic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandAbstractLogic.html">
+	c3724636 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandAbstractLogic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandAbstractLogic.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAbstractLogic </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandAbstractLogic.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandFunction
-	c3724643 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandFunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandFunction.html">
+	c3724638 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandFunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandFunction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandFunction </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandFunction.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandFunction extends com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandAbstractLogic
-	c3724642:p -> c3724643:p [dir=back,arrowtail=empty];
+	c3724636:p -> c3724638:p [dir=back,arrowtail=empty];
 }
 

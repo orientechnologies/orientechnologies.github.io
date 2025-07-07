@@ -9,20 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.parser.JavaCharStream
-	c456020 [label=<<table title="com.orientechnologies.orient.core.sql.parser.JavaCharStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JavaCharStream.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> JavaCharStream </td></tr>
-		</table></td></tr>
-		</table>>, URL="./JavaCharStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.CharStream
-	c456050 [label=<<table title="com.orientechnologies.orient.core.sql.parser.CharStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CharStream.html">
+	c455873 [label=<<table title="com.orientechnologies.orient.core.sql.parser.CharStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CharStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CharStream </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CharStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.parser.JavaCharStream
+	c455882 [label=<<table title="com.orientechnologies.orient.core.sql.parser.JavaCharStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JavaCharStream.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> JavaCharStream </td></tr>
+		</table></td></tr>
+		</table>>, URL="./JavaCharStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.JavaCharStream implements com.orientechnologies.orient.core.sql.parser.CharStream
-	c456050:p -> c456020:p [dir=back,arrowtail=empty,style=dashed];
+	c455873:p -> c455882:p [dir=back,arrowtail=empty,style=dashed];
 }
 

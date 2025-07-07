@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../OChannel.html" title="com.orientechnologies.orient.enterprise.channel.OChannel" alt="" coords="291,17,374,42"/>
-<area shape="rect" id="node1" href="../OChannel.html" title="&lt;TABLE&gt;" alt="" coords="281,5,385,53"/>
-<area shape="rect" id="node2_1" href="./OChannelBinary.html" title="com.orientechnologies.orient.enterprise.channel.binary.OChannelBinary" alt="" coords="271,113,395,138"/>
-<area shape="rect" id="node2" href="./OChannelBinary.html" title="&lt;TABLE&gt;" alt="" coords="260,101,405,149"/>
+<area shape="rect" id="node1_0" href="../OChannel.html" title="com.orientechnologies.orient.enterprise.channel.OChannel" alt="" coords="295,17,378,42"/>
+<area shape="rect" id="node1" href="../OChannel.html" title="&lt;TABLE&gt;" alt="" coords="285,5,389,53"/>
+<area shape="rect" id="node2_1" href="./OChannelBinary.html" title="com.orientechnologies.orient.enterprise.channel.binary.OChannelBinary" alt="" coords="275,113,399,138"/>
+<area shape="rect" id="node2" href="./OChannelBinary.html" title="&lt;TABLE&gt;" alt="" coords="264,101,409,149"/>
 <area shape="rect" id="node3_2" href="./OChannelBinaryServer.html" title="com.orientechnologies.orient.enterprise.channel.binary.OChannelBinaryServer" alt="" coords="16,209,183,234"/>
 <area shape="rect" id="node3" href="./OChannelBinaryServer.html" title="&lt;TABLE&gt;" alt="" coords="5,197,193,245"/>
-<area shape="rect" id="node4_3" href="../../../client/binary/OChannelBinaryAsynchClient.html" title="com.orientechnologies.orient.client.binary.OChannelBinaryAsynchClient" alt="" coords="228,209,437,234"/>
-<area shape="rect" id="node4" href="../../../client/binary/OChannelBinaryAsynchClient.html" title="&lt;TABLE&gt;" alt="" coords="217,197,448,245"/>
-<area shape="rect" id="node5_4" href="../../../client/binary/OChannelBinaryClientAbstract.html" title="com.orientechnologies.orient.client.binary.OChannelBinaryClientAbstract" alt="" coords="483,209,699,234"/>
-<area shape="rect" id="node5" href="../../../client/binary/OChannelBinaryClientAbstract.html" title="&lt;TABLE&gt;" alt="" coords="473,197,710,245"/>
+<area shape="rect" id="node4_3" href="../../../client/binary/OChannelBinaryClientAbstract.html" title="com.orientechnologies.orient.client.binary.OChannelBinaryClientAbstract" alt="" coords="229,209,445,234"/>
+<area shape="rect" id="node4" href="../../../client/binary/OChannelBinaryClientAbstract.html" title="&lt;TABLE&gt;" alt="" coords="218,197,455,245"/>
+<area shape="rect" id="node5_4" href="../../../client/binary/OChannelBinaryAsynchClient.html" title="com.orientechnologies.orient.client.binary.OChannelBinaryAsynchClient" alt="" coords="491,209,700,234"/>
+<area shape="rect" id="node5" href="../../../client/binary/OChannelBinaryAsynchClient.html" title="&lt;TABLE&gt;" alt="" coords="480,197,711,245"/>
 </map>

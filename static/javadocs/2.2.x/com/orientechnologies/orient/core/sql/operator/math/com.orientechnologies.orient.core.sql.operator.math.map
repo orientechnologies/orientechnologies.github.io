@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OQueryOperatorPlus.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorPlus" alt="" coords="16,17,168,42"/>
-<area shape="rect" id="node1" href="./OQueryOperatorPlus.html" title="&lt;TABLE&gt;" alt="" coords="5,5,179,53"/>
-<area shape="rect" id="node2_1" href="./OQueryOperatorMod.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorMod" alt="" coords="214,17,367,42"/>
-<area shape="rect" id="node2" href="./OQueryOperatorMod.html" title="&lt;TABLE&gt;" alt="" coords="203,5,378,53"/>
-<area shape="rect" id="node3_2" href="./OQueryOperatorMinus.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorMinus" alt="" coords="413,17,577,42"/>
-<area shape="rect" id="node3" href="./OQueryOperatorMinus.html" title="&lt;TABLE&gt;" alt="" coords="402,5,587,53"/>
-<area shape="rect" id="node4_3" href="./OQueryOperatorDivide.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorDivide" alt="" coords="623,17,791,42"/>
-<area shape="rect" id="node4" href="./OQueryOperatorDivide.html" title="&lt;TABLE&gt;" alt="" coords="612,5,801,53"/>
-<area shape="rect" id="node5_4" href="./OQueryOperatorMultiply.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorMultiply" alt="" coords="836,17,1015,42"/>
-<area shape="rect" id="node5" href="./OQueryOperatorMultiply.html" title="&lt;TABLE&gt;" alt="" coords="825,5,1025,53"/>
+<area shape="rect" id="node1_0" href="./OQueryOperatorMinus.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorMinus" alt="" coords="16,17,180,42"/>
+<area shape="rect" id="node1" href="./OQueryOperatorMinus.html" title="&lt;TABLE&gt;" alt="" coords="5,5,191,53"/>
+<area shape="rect" id="node2_1" href="./OQueryOperatorMultiply.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorMultiply" alt="" coords="226,17,405,42"/>
+<area shape="rect" id="node2" href="./OQueryOperatorMultiply.html" title="&lt;TABLE&gt;" alt="" coords="215,5,415,53"/>
+<area shape="rect" id="node3_2" href="./OQueryOperatorMod.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorMod" alt="" coords="451,17,604,42"/>
+<area shape="rect" id="node3" href="./OQueryOperatorMod.html" title="&lt;TABLE&gt;" alt="" coords="440,5,615,53"/>
+<area shape="rect" id="node4_3" href="./OQueryOperatorPlus.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorPlus" alt="" coords="650,17,802,42"/>
+<area shape="rect" id="node4" href="./OQueryOperatorPlus.html" title="&lt;TABLE&gt;" alt="" coords="639,5,813,53"/>
+<area shape="rect" id="node5_4" href="./OQueryOperatorDivide.html" title="com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorDivide" alt="" coords="847,17,1015,42"/>
+<area shape="rect" id="node5" href="./OQueryOperatorDivide.html" title="&lt;TABLE&gt;" alt="" coords="837,5,1026,53"/>
 </map>

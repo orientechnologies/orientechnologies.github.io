@@ -9,27 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractPageWALRecord
-	c539660 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractPageWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractPageWALRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractPageWALRecord </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OAbstractPageWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OUpdatePageRecord
-	c539668 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OUpdatePageRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUpdatePageRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OUpdatePageRecord </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OUpdatePageRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
-	c539681 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitBodyRecord.html">
+	c539657 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitBodyRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OOperationUnitBodyRecord </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOperationUnitBodyRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractPageWALRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
-	c539681:p -> c539660:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OUpdatePageRecord
+	c539660 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OUpdatePageRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUpdatePageRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OUpdatePageRecord </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OUpdatePageRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractPageWALRecord
+	c539676 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractPageWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractPageWALRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractPageWALRecord </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OAbstractPageWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OUpdatePageRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractPageWALRecord
-	c539660:p -> c539668:p [dir=back,arrowtail=empty];
+	c539676:p -> c539660:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractPageWALRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
+	c539657:p -> c539676:p [dir=back,arrowtail=empty];
 }
 

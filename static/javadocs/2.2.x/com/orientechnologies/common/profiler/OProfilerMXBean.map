@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OProfilerMXBean.html" title="com.orientechnologies.common.profiler.OProfilerMXBean" alt="" coords="17,11,146,53"/>
-<area shape="rect" id="node1" href="./OProfilerMXBean.html" title="&lt;TABLE&gt;" alt="" coords="6,5,157,59"/>
-<area shape="rect" id="node2_1" href="./OAbstractProfiler.html" title="com.orientechnologies.common.profiler.OAbstractProfiler" alt="" coords="16,118,147,143"/>
-<area shape="rect" id="node2" href="./OAbstractProfiler.html" title="&lt;TABLE&gt;" alt="" coords="5,107,157,155"/>
+<area shape="rect" id="node1_0" href="./OAbstractProfiler.html" title="com.orientechnologies.common.profiler.OAbstractProfiler" alt="" coords="16,118,147,143"/>
+<area shape="rect" id="node1" href="./OAbstractProfiler.html" title="&lt;TABLE&gt;" alt="" coords="5,107,157,155"/>
+<area shape="rect" id="node2_1" href="./OProfilerMXBean.html" title="com.orientechnologies.common.profiler.OProfilerMXBean" alt="" coords="17,11,146,53"/>
+<area shape="rect" id="node2" href="./OProfilerMXBean.html" title="&lt;TABLE&gt;" alt="" coords="6,5,157,59"/>
 </map>

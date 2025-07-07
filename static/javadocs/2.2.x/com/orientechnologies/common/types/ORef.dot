@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.types.ORef<T>
-	c3103234 [label=<<table title="com.orientechnologies.common.types.ORef" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORef.html">
+	c3103226 [label=<<table title="com.orientechnologies.common.types.ORef" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORef.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORef&lt;T&gt; </td></tr>
 		</table></td></tr>

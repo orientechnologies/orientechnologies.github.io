@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../task/OAbstractRemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRemoteTask" alt="" coords="29,17,193,42"/>
-<area shape="rect" id="node1" href="../task/OAbstractRemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="18,5,203,53"/>
-<area shape="rect" id="node2_1" href="./OWaitPartitionsReadyTask.html" title="com.orientechnologies.orient.server.distributed.impl.OWaitPartitionsReadyTask" alt="" coords="16,113,205,138"/>
-<area shape="rect" id="node2" href="./OWaitPartitionsReadyTask.html" title="&lt;TABLE&gt;" alt="" coords="5,101,216,149"/>
-</map>

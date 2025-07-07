@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.tinkerpop.blueprints.impls.orient.OrientGraphFactory.OrientGraphImplFactory
-	c4462362 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientGraphFactory.OrientGraphImplFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientGraphFactory.OrientGraphImplFactory.html">
+	c4462385 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientGraphFactory.OrientGraphImplFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientGraphFactory.OrientGraphImplFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OrientGraphImplFactory </td></tr>

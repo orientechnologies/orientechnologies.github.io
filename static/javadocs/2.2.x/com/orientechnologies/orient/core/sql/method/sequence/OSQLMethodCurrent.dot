@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent
-	c3457543 [label=<<table title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodCurrent.html">
+	c3457535 [label=<<table title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodCurrent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodCurrent </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodCurrent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3457563 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../misc/OAbstractSQLMethod.html">
+	c3457549 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../misc/OAbstractSQLMethod.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractSQLMethod </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../misc/OAbstractSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3457563:p -> c3457543:p [dir=back,arrowtail=empty];
+	c3457549:p -> c3457535:p [dir=back,arrowtail=empty];
 }
 

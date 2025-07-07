@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.lucene.parser.OLuceneMultiFieldQueryParser
-	c2408043 [label=<<table title="com.orientechnologies.lucene.parser.OLuceneMultiFieldQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneMultiFieldQueryParser.html">
+	c2408039 [label=<<table title="com.orientechnologies.lucene.parser.OLuceneMultiFieldQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneMultiFieldQueryParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLuceneMultiFieldQueryParser </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneMultiFieldQueryParser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.lucene.parser.OLuceneMultiFieldQueryParser extends org.apache.lucene.queryparser.classic.MultiFieldQueryParser
-	c2408149:p -> c2408043:p [dir=back,arrowtail=empty];
+	c2408145:p -> c2408039:p [dir=back,arrowtail=empty];
 	// org.apache.lucene.queryparser.classic.MultiFieldQueryParser
-	c2408149 [label=<<table title="org.apache.lucene.queryparser.classic.MultiFieldQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/org/apache/lucene/queryparser/classic/MultiFieldQueryParser.html">
+	c2408145 [label=<<table title="org.apache.lucene.queryparser.classic.MultiFieldQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/org/apache/lucene/queryparser/classic/MultiFieldQueryParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MultiFieldQueryParser </td></tr>
 		</table></td></tr>

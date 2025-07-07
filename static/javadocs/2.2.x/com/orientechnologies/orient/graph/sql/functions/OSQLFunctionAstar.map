@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OSQLFunctionAstar.html" title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar" alt="" coords="90,113,234,138"/>
-<area shape="rect" id="node1" href="./OSQLFunctionAstar.html" title="&lt;TABLE&gt;" alt="" coords="79,101,245,149"/>
-<area shape="rect" id="node2_1" href="./OSQLFunctionHeuristicPathFinderAbstract.html" title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract" alt="" coords="16,17,308,42"/>
-<area shape="rect" id="node2" href="./OSQLFunctionHeuristicPathFinderAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,5,319,53"/>
+<area shape="rect" id="node1_0" href="./OSQLFunctionHeuristicPathFinderAbstract.html" title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract" alt="" coords="16,17,308,42"/>
+<area shape="rect" id="node1" href="./OSQLFunctionHeuristicPathFinderAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,5,319,53"/>
+<area shape="rect" id="node2_1" href="./OSQLFunctionAstar.html" title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar" alt="" coords="90,113,234,138"/>
+<area shape="rect" id="node2" href="./OSQLFunctionAstar.html" title="&lt;TABLE&gt;" alt="" coords="79,101,245,149"/>
 </map>

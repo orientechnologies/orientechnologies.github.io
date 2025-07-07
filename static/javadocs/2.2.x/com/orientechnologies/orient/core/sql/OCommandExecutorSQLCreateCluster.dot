@@ -16,21 +16,21 @@ digraph G {
 <tr><td align="center" balign="center"> OCommandDistributedReplicateRequest </td></tr>
 		</table></td></tr>
 		</table>>, URL="../command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1006532 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLCreateCluster
-	c1006536 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLCreateCluster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLCreateCluster.html">
+	c1006519 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLCreateCluster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLCreateCluster.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLCreateCluster </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLCreateCluster.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
+	c1006529 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLCreateCluster extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1006532:p -> c1006536:p [dir=back,arrowtail=empty];
+	c1006529:p -> c1006519:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLCreateCluster implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1006435:p -> c1006536:p [dir=back,arrowtail=empty,style=dashed];
+	c1006435:p -> c1006519:p [dir=back,arrowtail=empty,style=dashed];
 }
 

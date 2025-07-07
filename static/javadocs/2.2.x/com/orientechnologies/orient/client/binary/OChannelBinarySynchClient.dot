@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.client.binary.OChannelBinarySynchClient
-	c844845 [label=<<table title="com.orientechnologies.orient.client.binary.OChannelBinarySynchClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OChannelBinarySynchClient.html">
+	c844840 [label=<<table title="com.orientechnologies.orient.client.binary.OChannelBinarySynchClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OChannelBinarySynchClient.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OChannelBinarySynchClient </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OChannelBinarySynchClient.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.client.binary.OChannelBinaryClientAbstract
-	c844846 [label=<<table title="com.orientechnologies.orient.client.binary.OChannelBinaryClientAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OChannelBinaryClientAbstract.html">
+	c844842 [label=<<table title="com.orientechnologies.orient.client.binary.OChannelBinaryClientAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OChannelBinaryClientAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OChannelBinaryClientAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OChannelBinaryClientAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.client.binary.OChannelBinarySynchClient extends com.orientechnologies.orient.client.binary.OChannelBinaryClientAbstract
-	c844846:p -> c844845:p [dir=back,arrowtail=empty];
+	c844842:p -> c844840:p [dir=back,arrowtail=empty];
 }
 

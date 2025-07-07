@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract
-	c3791691 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedServerAbstract.html">
+	c3791681 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedServerAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAuthenticatedServerAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandAuthenticatedServerAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.put.OServerCommandPostConnection
-	c3791697 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.put.OServerCommandPostConnection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPostConnection.html">
+	c3791691 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.put.OServerCommandPostConnection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPostConnection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandPostConnection </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandPostConnection.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.put.OServerCommandPostConnection extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract
-	c3791691:p -> c3791697:p [dir=back,arrowtail=empty];
+	c3791681:p -> c3791691:p [dir=back,arrowtail=empty];
 }
 

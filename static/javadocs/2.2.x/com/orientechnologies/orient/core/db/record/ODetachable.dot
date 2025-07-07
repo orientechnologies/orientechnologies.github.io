@@ -10,28 +10,28 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.record.ODetachable
-	c1469527 [label=<<table title="com.orientechnologies.orient.core.db.record.ODetachable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODetachable.html">
+	c1469515 [label=<<table title="com.orientechnologies.orient.core.db.record.ODetachable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODetachable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODetachable </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODetachable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue
-	c1469537 [label=<<table title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordLazyMultiValue.html">
+	c1469539 [label=<<table title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordLazyMultiValue.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORecordLazyMultiValue </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordLazyMultiValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.record.impl.ODocument
-	c1469597 [label=<<table title="com.orientechnologies.orient.core.record.impl.ODocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../record/impl/ODocument.html">
+	c1469605 [label=<<table title="com.orientechnologies.orient.core.record.impl.ODocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../record/impl/ODocument.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODocument </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../record/impl/ODocument.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue implements com.orientechnologies.orient.core.db.record.ODetachable
-	c1469527:p -> c1469537:p [dir=back,arrowtail=empty,style=dashed];
+	c1469515:p -> c1469539:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.record.impl.ODocument implements com.orientechnologies.orient.core.db.record.ODetachable
-	c1469527:p -> c1469597:p [dir=back,arrowtail=empty,style=dashed];
+	c1469515:p -> c1469605:p [dir=back,arrowtail=empty,style=dashed];
 }
 

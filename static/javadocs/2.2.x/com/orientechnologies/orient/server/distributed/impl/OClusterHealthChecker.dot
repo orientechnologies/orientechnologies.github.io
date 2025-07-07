@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.impl.OClusterHealthChecker
-	c918415 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.OClusterHealthChecker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OClusterHealthChecker.html">
+	c918418 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.OClusterHealthChecker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OClusterHealthChecker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OClusterHealthChecker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OClusterHealthChecker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.OClusterHealthChecker extends java.util.TimerTask
-	c918601:p -> c918415:p [dir=back,arrowtail=empty];
+	c918599:p -> c918418:p [dir=back,arrowtail=empty];
 	// java.util.TimerTask
-	c918601 [label=<<table title="java.util.TimerTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/TimerTask.html">
+	c918599 [label=<<table title="java.util.TimerTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/TimerTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> TimerTask </font></td></tr>
 		</table></td></tr>

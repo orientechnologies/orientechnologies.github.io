@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OV1IndexEngine.html" title="com.orientechnologies.orient.core.index.engine.OV1IndexEngine" alt="" coords="73,11,199,53"/>
-<area shape="rect" id="node1" href="./OV1IndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="62,5,210,59"/>
-<area shape="rect" id="node2_1" href="./OMultiValueIndexEngine.html" title="com.orientechnologies.orient.core.index.engine.OMultiValueIndexEngine" alt="" coords="47,112,225,155"/>
-<area shape="rect" id="node2" href="./OMultiValueIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="36,107,236,160"/>
-<area shape="rect" id="node3_2" href="./v1/OCellBTreeMultiValueIndexEngine.html" title="com.orientechnologies.orient.core.index.engine.v1.OCellBTreeMultiValueIndexEngine" alt="" coords="16,219,256,245"/>
-<area shape="rect" id="node3" href="./v1/OCellBTreeMultiValueIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="5,208,267,256"/>
-</map>

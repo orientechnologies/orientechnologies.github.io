@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask
-	c1281934 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractRecordReplicatedTask.html">
+	c1281922 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractRecordReplicatedTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractRecordReplicatedTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../task/OAbstractRecordReplicatedTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OCreateRecordTask
-	c1282193 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OCreateRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreateRecordTask.html">
+	c1282194 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OCreateRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreateRecordTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCreateRecordTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCreateRecordTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.OCreateRecordTask extends com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask
-	c1281934:p -> c1282193:p [dir=back,arrowtail=empty];
+	c1281922:p -> c1282194:p [dir=back,arrowtail=empty];
 }
 

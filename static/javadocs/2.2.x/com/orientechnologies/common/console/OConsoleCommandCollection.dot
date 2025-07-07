@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.console.OConsoleCommandCollection
-	c1217442 [label=<<table title="com.orientechnologies.common.console.OConsoleCommandCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OConsoleCommandCollection.html">
+	c1217436 [label=<<table title="com.orientechnologies.common.console.OConsoleCommandCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OConsoleCommandCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OConsoleCommandCollection </font></td></tr>
 		</table></td></tr>

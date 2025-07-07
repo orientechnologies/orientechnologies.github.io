@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.impl.proxy.OProxyChannel
-	c2846944 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.proxy.OProxyChannel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OProxyChannel.html">
+	c2846940 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.proxy.OProxyChannel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OProxyChannel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OProxyChannel </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OProxyChannel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.proxy.OProxyChannel extends java.lang.Thread
-	c2847116:p -> c2846944:p [dir=back,arrowtail=empty];
+	c2847112:p -> c2846940:p [dir=back,arrowtail=empty];
 	// java.lang.Thread
-	c2847116 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html">
+	c2847112 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Thread </td></tr>
 		</table></td></tr>

@@ -9,20 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.common.serialization.types.OShortSerializer
+	c3932343 [label=<<table title="com.orientechnologies.common.serialization.types.OShortSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OShortSerializer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OShortSerializer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OShortSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.serialization.types.OBinarySerializer<T>
-	c3932357 [label=<<table title="com.orientechnologies.common.serialization.types.OBinarySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinarySerializer.html">
+	c3932345 [label=<<table title="com.orientechnologies.common.serialization.types.OBinarySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinarySerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBinarySerializer&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBinarySerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.serialization.types.OShortSerializer
-	c3932362 [label=<<table title="com.orientechnologies.common.serialization.types.OShortSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OShortSerializer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OShortSerializer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OShortSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.serialization.types.OShortSerializer implements com.orientechnologies.common.serialization.types.OBinarySerializer<T>
-	c3932357:p -> c3932362:p [dir=back,arrowtail=empty,style=dashed];
+	c3932345:p -> c3932343:p [dir=back,arrowtail=empty,style=dashed];
 }
 

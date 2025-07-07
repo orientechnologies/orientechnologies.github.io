@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ORecordLazyMap.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyMap" alt="" coords="137,118,269,143"/>
-<area shape="rect" id="node1" href="./ORecordLazyMap.html" title="&lt;TABLE&gt;" alt="" coords="126,107,279,155"/>
-<area shape="rect" id="node2_1" href="./ORecordLazyMultiValue.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" alt="" coords="16,11,189,53"/>
-<area shape="rect" id="node2" href="./ORecordLazyMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="5,5,200,59"/>
-<area shape="rect" id="node3_2" href="./OTrackedMap.html" title="com.orientechnologies.orient.core.db.record.OTrackedMap" alt="" coords="235,19,371,45"/>
-<area shape="rect" id="node3" href="./OTrackedMap.html" title="&lt;TABLE&gt;" alt="" coords="224,8,381,56"/>
+<area shape="rect" id="node1_0" href="./OTrackedMap.html" title="com.orientechnologies.orient.core.db.record.OTrackedMap" alt="" coords="16,19,152,45"/>
+<area shape="rect" id="node1" href="./OTrackedMap.html" title="&lt;TABLE&gt;" alt="" coords="5,8,163,56"/>
+<area shape="rect" id="node2_1" href="./ORecordLazyMap.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyMap" alt="" coords="118,118,250,143"/>
+<area shape="rect" id="node2" href="./ORecordLazyMap.html" title="&lt;TABLE&gt;" alt="" coords="107,107,261,155"/>
+<area shape="rect" id="node3_2" href="./ORecordLazyMultiValue.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" alt="" coords="197,11,371,53"/>
+<area shape="rect" id="node3" href="./ORecordLazyMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="187,5,381,59"/>
 </map>

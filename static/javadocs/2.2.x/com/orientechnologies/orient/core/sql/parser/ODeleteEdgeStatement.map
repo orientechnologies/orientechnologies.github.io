@@ -1,16 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ODeleteEdgeVToStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeVToStatement" alt="" coords="16,209,212,234"/>
-<area shape="rect" id="node1" href="./ODeleteEdgeVToStatement.html" title="&lt;TABLE&gt;" alt="" coords="5,197,223,245"/>
-<area shape="rect" id="node2_1" href="./ODeleteEdgeWhereStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeWhereStatement" alt="" coords="257,209,472,234"/>
-<area shape="rect" id="node2" href="./ODeleteEdgeWhereStatement.html" title="&lt;TABLE&gt;" alt="" coords="247,197,483,245"/>
-<area shape="rect" id="node3_2" href="./ODeleteEdgeStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeStatement" alt="" coords="537,113,709,138"/>
-<area shape="rect" id="node3" href="./ODeleteEdgeStatement.html" title="&lt;TABLE&gt;" alt="" coords="527,101,720,149"/>
-<area shape="rect" id="node5_3" href="./ODeleteEdgeByRidStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeByRidStatement" alt="" coords="518,209,729,234"/>
-<area shape="rect" id="node5" href="./ODeleteEdgeByRidStatement.html" title="&lt;TABLE&gt;" alt="" coords="507,197,739,245"/>
-<area shape="rect" id="node6_4" href="./ODeleteEdgeFromToStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeFromToStatement" alt="" coords="775,209,995,234"/>
-<area shape="rect" id="node6" href="./ODeleteEdgeFromToStatement.html" title="&lt;TABLE&gt;" alt="" coords="764,197,1005,245"/>
-<area shape="rect" id="node7_5" href="./ODeleteEdgeToStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeToStatement" alt="" coords="1041,209,1227,234"/>
-<area shape="rect" id="node7" href="./ODeleteEdgeToStatement.html" title="&lt;TABLE&gt;" alt="" coords="1030,197,1238,245"/>
-<area shape="rect" id="node4_6" href="./OStatement.html" title="com.orientechnologies.orient.core.sql.parser.OStatement" alt="" coords="575,17,672,42"/>
-<area shape="rect" id="node4" href="./OStatement.html" title="&lt;TABLE&gt;" alt="" coords="564,5,683,53"/>
+<area shape="rect" id="node1_0" href="./ODeleteEdgeStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeStatement" alt="" coords="525,113,697,138"/>
+<area shape="rect" id="node1" href="./ODeleteEdgeStatement.html" title="&lt;TABLE&gt;" alt="" coords="515,101,708,149"/>
+<area shape="rect" id="node2_1" href="./ODeleteEdgeVToStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeVToStatement" alt="" coords="16,209,212,234"/>
+<area shape="rect" id="node2" href="./ODeleteEdgeVToStatement.html" title="&lt;TABLE&gt;" alt="" coords="5,197,223,245"/>
+<area shape="rect" id="node3_2" href="./ODeleteEdgeWhereStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeWhereStatement" alt="" coords="257,209,472,234"/>
+<area shape="rect" id="node3" href="./ODeleteEdgeWhereStatement.html" title="&lt;TABLE&gt;" alt="" coords="247,197,483,245"/>
+<area shape="rect" id="node5_3" href="./ODeleteEdgeToStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeToStatement" alt="" coords="518,209,705,234"/>
+<area shape="rect" id="node5" href="./ODeleteEdgeToStatement.html" title="&lt;TABLE&gt;" alt="" coords="507,197,715,245"/>
+<area shape="rect" id="node6_4" href="./ODeleteEdgeFromToStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeFromToStatement" alt="" coords="751,209,971,234"/>
+<area shape="rect" id="node6" href="./ODeleteEdgeFromToStatement.html" title="&lt;TABLE&gt;" alt="" coords="740,197,981,245"/>
+<area shape="rect" id="node7_5" href="./ODeleteEdgeByRidStatement.html" title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeByRidStatement" alt="" coords="1017,209,1227,234"/>
+<area shape="rect" id="node7" href="./ODeleteEdgeByRidStatement.html" title="&lt;TABLE&gt;" alt="" coords="1006,197,1238,245"/>
+<area shape="rect" id="node4_6" href="./OStatement.html" title="com.orientechnologies.orient.core.sql.parser.OStatement" alt="" coords="563,17,660,42"/>
+<area shape="rect" id="node4" href="./OStatement.html" title="&lt;TABLE&gt;" alt="" coords="552,5,671,53"/>
 </map>

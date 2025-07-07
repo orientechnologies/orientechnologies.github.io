@@ -1,14 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../collection/OIterableObject.html" title="com.orientechnologies.common.collection.OIterableObject" alt="" coords="16,118,168,143"/>
-<area shape="rect" id="node1" href="../collection/OIterableObject.html" title="&lt;TABLE&gt;" alt="" coords="5,107,179,155"/>
-<area shape="rect" id="node2_1" href="../collection/OMultiCollectionIterator.html" title="com.orientechnologies.common.collection.OMultiCollectionIterator" alt="" coords="213,118,419,143"/>
-<area shape="rect" id="node2" href="../collection/OMultiCollectionIterator.html" title="&lt;TABLE&gt;" alt="" coords="203,107,429,155"/>
-<area shape="rect" id="node3_2" href="./OResettable.html" title="com.orientechnologies.common.util.OResettable" alt="" coords="507,11,607,53"/>
-<area shape="rect" id="node3" href="./OResettable.html" title="&lt;TABLE&gt;" alt="" coords="497,5,618,59"/>
-<area shape="rect" id="node4_3" href="../../orient/core/db/record/OLazyRecordMultiIterator.html" title="com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator" alt="" coords="465,118,650,143"/>
-<area shape="rect" id="node4" href="../../orient/core/db/record/OLazyRecordMultiIterator.html" title="&lt;TABLE&gt;" alt="" coords="454,107,661,155"/>
-<area shape="rect" id="node5_4" href="../../orient/core/db/record/OLazyRecordIterator.html" title="com.orientechnologies.orient.core.db.record.OLazyRecordIterator" alt="" coords="696,118,848,143"/>
-<area shape="rect" id="node5" href="../../orient/core/db/record/OLazyRecordIterator.html" title="&lt;TABLE&gt;" alt="" coords="685,107,859,155"/>
+<area shape="rect" id="node1_0" href="../collection/OMultiCollectionIterator.html" title="com.orientechnologies.common.collection.OMultiCollectionIterator" alt="" coords="16,118,221,143"/>
+<area shape="rect" id="node1" href="../collection/OMultiCollectionIterator.html" title="&lt;TABLE&gt;" alt="" coords="5,107,232,155"/>
+<area shape="rect" id="node2_1" href="../collection/OIterableObject.html" title="com.orientechnologies.common.collection.OIterableObject" alt="" coords="267,118,419,143"/>
+<area shape="rect" id="node2" href="../collection/OIterableObject.html" title="&lt;TABLE&gt;" alt="" coords="256,107,429,155"/>
+<area shape="rect" id="node3_2" href="./OResettable.html" title="com.orientechnologies.common.util.OResettable" alt="" coords="490,11,590,53"/>
+<area shape="rect" id="node3" href="./OResettable.html" title="&lt;TABLE&gt;" alt="" coords="479,5,601,59"/>
+<area shape="rect" id="node4_3" href="../../orient/core/db/record/OLazyRecordIterator.html" title="com.orientechnologies.orient.core.db.record.OLazyRecordIterator" alt="" coords="464,118,616,143"/>
+<area shape="rect" id="node4" href="../../orient/core/db/record/OLazyRecordIterator.html" title="&lt;TABLE&gt;" alt="" coords="453,107,627,155"/>
+<area shape="rect" id="node5_4" href="../../orient/core/db/record/OLazyRecordMultiIterator.html" title="com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator" alt="" coords="662,118,847,143"/>
+<area shape="rect" id="node5" href="../../orient/core/db/record/OLazyRecordMultiIterator.html" title="&lt;TABLE&gt;" alt="" coords="651,107,858,155"/>
 <area shape="rect" id="node6_5" href="../../orient/core/iterator/OLazyWrapperIterator.html" title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" alt="" coords="893,118,1085,143"/>
 <area shape="rect" id="node6" href="../../orient/core/iterator/OLazyWrapperIterator.html" title="&lt;TABLE&gt;" alt="" coords="883,107,1096,155"/>
 </map>

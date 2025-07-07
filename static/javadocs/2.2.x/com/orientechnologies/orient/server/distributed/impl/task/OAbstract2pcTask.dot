@@ -10,26 +10,26 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask
-	c499576 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractReplicatedTask.html">
+	c499571 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractReplicatedTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractReplicatedTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../task/OAbstractReplicatedTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask
-	c499819 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstract2pcTask.html">
+	c499830 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstract2pcTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstract2pcTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstract2pcTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OTxTask
-	c499834 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OTxTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTxTask.html">
+	c499849 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OTxTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTxTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTxTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTxTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask extends com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask
-	c499576:p -> c499819:p [dir=back,arrowtail=empty];
+	c499571:p -> c499830:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.impl.task.OTxTask extends com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask
-	c499819:p -> c499834:p [dir=back,arrowtail=empty];
+	c499830:p -> c499849:p [dir=back,arrowtail=empty];
 }
 

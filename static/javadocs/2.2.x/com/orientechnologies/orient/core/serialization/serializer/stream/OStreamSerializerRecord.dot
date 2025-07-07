@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializer
-	c4087694 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStreamSerializer.html">
+	c4087689 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStreamSerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OStreamSerializer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStreamSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerRecord
-	c4087696 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStreamSerializerRecord.html">
+	c4087692 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStreamSerializerRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStreamSerializerRecord </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStreamSerializerRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerRecord implements com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializer
-	c4087694:p -> c4087696:p [dir=back,arrowtail=empty,style=dashed];
+	c4087689:p -> c4087692:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,28 +10,28 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.serialization.types.OBinarySerializer<T>
-	c4088835 [label=<<table title="com.orientechnologies.common.serialization.types.OBinarySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../common/serialization/types/OBinarySerializer.html">
+	c4088823 [label=<<table title="com.orientechnologies.common.serialization.types.OBinarySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../common/serialization/types/OBinarySerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBinarySerializer&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../common/serialization/types/OBinarySerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerSBTreeIndexRIDContainer
+	c4089719 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerSBTreeIndexRIDContainer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStreamSerializerSBTreeIndexRIDContainer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OStreamSerializerSBTreeIndexRIDContainer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OStreamSerializerSBTreeIndexRIDContainer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializer
-	c4089726 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStreamSerializer.html">
+	c4089721 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStreamSerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OStreamSerializer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStreamSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerSBTreeIndexRIDContainer
-	c4089733 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerSBTreeIndexRIDContainer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStreamSerializerSBTreeIndexRIDContainer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OStreamSerializerSBTreeIndexRIDContainer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OStreamSerializerSBTreeIndexRIDContainer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerSBTreeIndexRIDContainer implements com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializer
-	c4089726:p -> c4089733:p [dir=back,arrowtail=empty,style=dashed];
+	c4089721:p -> c4089719:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerSBTreeIndexRIDContainer implements com.orientechnologies.common.serialization.types.OBinarySerializer<T>
-	c4088835:p -> c4089733:p [dir=back,arrowtail=empty,style=dashed];
+	c4088823:p -> c4089719:p [dir=back,arrowtail=empty,style=dashed];
 }
 

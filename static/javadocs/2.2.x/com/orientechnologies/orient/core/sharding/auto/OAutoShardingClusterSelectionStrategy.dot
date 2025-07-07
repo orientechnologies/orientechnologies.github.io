@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c660920 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../metadata/schema/clusterselection/OClusterSelectionStrategy.html">
+	c660918 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../metadata/schema/clusterselection/OClusterSelectionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OClusterSelectionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../metadata/schema/clusterselection/OClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy
-	c661664 [label=<<table title="com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAutoShardingClusterSelectionStrategy.html">
+	c661663 [label=<<table title="com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAutoShardingClusterSelectionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OAutoShardingClusterSelectionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAutoShardingClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c660920:p -> c661664:p [dir=back,arrowtail=empty,style=dashed];
+	c660918:p -> c661663:p [dir=back,arrowtail=empty,style=dashed];
 }
 

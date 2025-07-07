@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OAbstractCommandTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractCommandTask" alt="" coords="85,113,265,138"/>
-<area shape="rect" id="node1" href="./OAbstractCommandTask.html" title="&lt;TABLE&gt;" alt="" coords="75,101,276,149"/>
-<area shape="rect" id="node3_1" href="../impl/task/OSQLCommandTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSQLCommandTask" alt="" coords="16,209,167,234"/>
+<area shape="rect" id="node1_0" href="./OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="84,17,267,42"/>
+<area shape="rect" id="node1" href="./OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="73,5,277,53"/>
+<area shape="rect" id="node2_1" href="./OAbstractCommandTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractCommandTask" alt="" coords="85,113,265,138"/>
+<area shape="rect" id="node2" href="./OAbstractCommandTask.html" title="&lt;TABLE&gt;" alt="" coords="75,101,276,149"/>
+<area shape="rect" id="node3_2" href="../impl/task/OSQLCommandTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSQLCommandTask" alt="" coords="16,209,167,234"/>
 <area shape="rect" id="node3" href="../impl/task/OSQLCommandTask.html" title="&lt;TABLE&gt;" alt="" coords="5,197,177,245"/>
-<area shape="rect" id="node4_2" href="../impl/task/OScriptTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OScriptTask" alt="" coords="213,209,309,234"/>
+<area shape="rect" id="node4_3" href="../impl/task/OScriptTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OScriptTask" alt="" coords="213,209,309,234"/>
 <area shape="rect" id="node4" href="../impl/task/OScriptTask.html" title="&lt;TABLE&gt;" alt="" coords="202,197,319,245"/>
-<area shape="rect" id="node2_3" href="./OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="84,17,267,42"/>
-<area shape="rect" id="node2" href="./OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="73,5,277,53"/>
 </map>

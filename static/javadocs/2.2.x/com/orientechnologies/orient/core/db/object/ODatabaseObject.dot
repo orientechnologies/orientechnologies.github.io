@@ -10,37 +10,37 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
-	c1371945 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseSchemaAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ODatabaseSchemaAware.html">
+	c1371966 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseSchemaAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ODatabaseSchemaAware.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODatabaseSchemaAware&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ODatabaseSchemaAware.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.OUserObject2RecordHandler
-	c1371946 [label=<<table title="com.orientechnologies.orient.core.db.OUserObject2RecordHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OUserObject2RecordHandler.html">
+	c1371970 [label=<<table title="com.orientechnologies.orient.core.db.OUserObject2RecordHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OUserObject2RecordHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OUserObject2RecordHandler </td></tr>
 		</table></td></tr>
 		</table>>, URL="../OUserObject2RecordHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.object.ODatabaseObject
-	c1372020 [label=<<table title="com.orientechnologies.orient.core.db.object.ODatabaseObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseObject.html">
+	c1372018 [label=<<table title="com.orientechnologies.orient.core.db.object.ODatabaseObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseObject.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODatabaseObject </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseObject.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.db.OObjectDatabaseTx
-	c1373207 [label=<<table title="com.orientechnologies.orient.object.db.OObjectDatabaseTx" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../object/db/OObjectDatabaseTx.html">
+	c1373209 [label=<<table title="com.orientechnologies.orient.object.db.OObjectDatabaseTx" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../object/db/OObjectDatabaseTx.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectDatabaseTx </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../object/db/OObjectDatabaseTx.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.object.ODatabaseObject implements com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
-	c1371945:p -> c1372020:p [dir=back,arrowtail=empty,style=dashed];
+	c1371966:p -> c1372018:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.object.ODatabaseObject implements com.orientechnologies.orient.core.db.OUserObject2RecordHandler
-	c1371946:p -> c1372020:p [dir=back,arrowtail=empty,style=dashed];
+	c1371970:p -> c1372018:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.object.db.OObjectDatabaseTx implements com.orientechnologies.orient.core.db.object.ODatabaseObject
-	c1372020:p -> c1373207:p [dir=back,arrowtail=empty,style=dashed];
+	c1372018:p -> c1373209:p [dir=back,arrowtail=empty,style=dashed];
 }
 

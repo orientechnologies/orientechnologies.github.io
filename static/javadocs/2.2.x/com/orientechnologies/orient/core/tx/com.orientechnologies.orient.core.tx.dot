@@ -9,129 +9,129 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.tx.OTxListener
-	c263506 [label=<<table title="com.orientechnologies.orient.core.tx.OTxListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTxListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OTxListener </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTxListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTxListener.EVENT
-	c263507 [label=<<table title="com.orientechnologies.orient.core.tx.OTxListener.EVENT" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTxListener.EVENT.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> EVENT </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTxListener.EVENT.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionIndexChanges
-	c263508 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChanges" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChanges.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OTransactionIndexChanges </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionIndexChanges.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionIndexChanges.OPERATION
-	c263509 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChanges.OPERATION" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChanges.OPERATION.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> OPERATION </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionIndexChanges.OPERATION.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionNoTx
-	c263510 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionNoTx" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionNoTx.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OTransactionNoTx </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionNoTx.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionAbstract
-	c263511 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OTransactionAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.ORollbackException
-	c263512 [label=<<table title="com.orientechnologies.orient.core.tx.ORollbackException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORollbackException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORollbackException </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORollbackException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey
-	c263513 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChangesPerKey.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OTransactionIndexChangesPerKey </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionIndexChangesPerKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.OTransactionIndexEntry
-	c263514 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.OTransactionIndexEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChangesPerKey.OTransactionIndexEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OTransactionIndexEntry </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionIndexChangesPerKey.OTransactionIndexEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.Interpretation
-	c263515 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.Interpretation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChangesPerKey.Interpretation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Interpretation </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionIndexChangesPerKey.Interpretation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionInternal
-	c263516 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionInternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionInternal.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OTransactionInternal </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionInternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.tx.OTransaction
-	c263517 [label=<<table title="com.orientechnologies.orient.core.tx.OTransaction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransaction.html">
+	c263505 [label=<<table title="com.orientechnologies.orient.core.tx.OTransaction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransaction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OTransaction </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTransaction.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.tx.OTransaction.TXTYPE
-	c263518 [label=<<table title="com.orientechnologies.orient.core.tx.OTransaction.TXTYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransaction.TXTYPE.html">
+	c263506 [label=<<table title="com.orientechnologies.orient.core.tx.OTransaction.TXTYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransaction.TXTYPE.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TXTYPE </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTransaction.TXTYPE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.tx.OTransaction.TXSTATUS
-	c263519 [label=<<table title="com.orientechnologies.orient.core.tx.OTransaction.TXSTATUS" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransaction.TXSTATUS.html">
+	c263507 [label=<<table title="com.orientechnologies.orient.core.tx.OTransaction.TXSTATUS" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransaction.TXSTATUS.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TXSTATUS </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTransaction.TXSTATUS.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.tx.OTransaction.ISOLATION_LEVEL
-	c263520 [label=<<table title="com.orientechnologies.orient.core.tx.OTransaction.ISOLATION_LEVEL" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransaction.ISOLATION_LEVEL.html">
+	c263508 [label=<<table title="com.orientechnologies.orient.core.tx.OTransaction.ISOLATION_LEVEL" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransaction.ISOLATION_LEVEL.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> ISOLATION_LEVEL </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTransaction.ISOLATION_LEVEL.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.tx.OTransactionOptimistic
-	c263521 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionOptimistic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionOptimistic.html">
+	// com.orientechnologies.orient.core.tx.ORollbackException
+	c263509 [label=<<table title="com.orientechnologies.orient.core.tx.ORollbackException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORollbackException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OTransactionOptimistic </td></tr>
+<tr><td align="center" balign="center"> ORollbackException </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OTransactionOptimistic.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ORollbackException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionInternal
+	c263510 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionInternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionInternal.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OTransactionInternal </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionInternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionAbstract
+	c263511 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OTransactionAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTxListener
+	c263512 [label=<<table title="com.orientechnologies.orient.core.tx.OTxListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTxListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OTxListener </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTxListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTxListener.EVENT
+	c263513 [label=<<table title="com.orientechnologies.orient.core.tx.OTxListener.EVENT" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTxListener.EVENT.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> EVENT </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTxListener.EVENT.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionNoTx
+	c263514 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionNoTx" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionNoTx.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OTransactionNoTx </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionNoTx.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.tx.OTransactionRealAbstract
-	c263522 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionRealAbstract.html">
+	c263515 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionRealAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OTransactionRealAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTransactionRealAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.tx.OTransactionRealAbstract.OTransactionRecordIndexOperation
-	c263523 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract.OTransactionRecordIndexOperation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionRealAbstract.OTransactionRecordIndexOperation.html">
+	c263516 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract.OTransactionRecordIndexOperation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionRealAbstract.OTransactionRecordIndexOperation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTransactionRecordIndexOperation </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTransactionRealAbstract.OTransactionRecordIndexOperation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.tx.OTransactionNoTx extends com.orientechnologies.orient.core.tx.OTransactionAbstract
-	c263511:p -> c263510:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.orient.core.tx.OTransactionOptimistic
+	c263517 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionOptimistic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionOptimistic.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OTransactionOptimistic </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionOptimistic.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey
+	c263518 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChangesPerKey.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OTransactionIndexChangesPerKey </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionIndexChangesPerKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.OTransactionIndexEntry
+	c263519 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.OTransactionIndexEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChangesPerKey.OTransactionIndexEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OTransactionIndexEntry </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionIndexChangesPerKey.OTransactionIndexEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.Interpretation
+	c263520 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.Interpretation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChangesPerKey.Interpretation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> Interpretation </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionIndexChangesPerKey.Interpretation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionIndexChanges
+	c263521 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChanges" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChanges.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OTransactionIndexChanges </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionIndexChanges.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionIndexChanges.OPERATION
+	c263522 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionIndexChanges.OPERATION" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionIndexChanges.OPERATION.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> OPERATION </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionIndexChanges.OPERATION.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.tx.OTransactionAbstract implements com.orientechnologies.orient.core.tx.OTransaction
-	c263517:p -> c263511:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.tx.OTransactionOptimistic extends com.orientechnologies.orient.core.tx.OTransactionRealAbstract
-	c263522:p -> c263521:p [dir=back,arrowtail=empty];
+	c263505:p -> c263511:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.tx.OTransactionNoTx extends com.orientechnologies.orient.core.tx.OTransactionAbstract
+	c263511:p -> c263514:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.tx.OTransactionRealAbstract extends com.orientechnologies.orient.core.tx.OTransactionAbstract
-	c263511:p -> c263522:p [dir=back,arrowtail=empty];
+	c263511:p -> c263515:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.tx.OTransactionOptimistic extends com.orientechnologies.orient.core.tx.OTransactionRealAbstract
+	c263515:p -> c263517:p [dir=back,arrowtail=empty];
 }
 

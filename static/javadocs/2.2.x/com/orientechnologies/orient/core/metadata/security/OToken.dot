@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.metadata.security.OToken
-	c4174452 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OToken.html">
+	c4174444 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OToken.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OToken </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OToken.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.token.JsonWebToken
-	c4175629 [label=<<table title="com.orientechnologies.orient.server.token.JsonWebToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../server/token/JsonWebToken.html">
+	c4175622 [label=<<table title="com.orientechnologies.orient.server.token.JsonWebToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../server/token/JsonWebToken.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JsonWebToken </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../server/token/JsonWebToken.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.binary.impl.OBinaryToken
-	c4175633 [label=<<table title="com.orientechnologies.orient.server.binary.impl.OBinaryToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../server/binary/impl/OBinaryToken.html">
+	c4175627 [label=<<table title="com.orientechnologies.orient.server.binary.impl.OBinaryToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../server/binary/impl/OBinaryToken.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OBinaryToken </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../server/binary/impl/OBinaryToken.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.token.JsonWebToken implements com.orientechnologies.orient.core.metadata.security.OToken
-	c4174452:p -> c4175629:p [dir=back,arrowtail=empty,style=dashed];
+	c4174444:p -> c4175622:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.server.binary.impl.OBinaryToken implements com.orientechnologies.orient.core.metadata.security.OToken
-	c4174452:p -> c4175633:p [dir=back,arrowtail=empty,style=dashed];
+	c4174444:p -> c4175627:p [dir=back,arrowtail=empty,style=dashed];
 }
 

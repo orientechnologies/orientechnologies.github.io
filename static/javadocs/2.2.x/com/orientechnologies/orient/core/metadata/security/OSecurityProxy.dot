@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.record.OProxedResource<T>
-	c3625650 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../db/record/OProxedResource.html">
+	c3625628 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../db/record/OProxedResource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OProxedResource&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../db/record/OProxedResource.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSecurityProxy
+	c3625776 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSecurityProxy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSecurityProxy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSecurityProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OSecurity
-	c3625780 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurity.html">
+	c3625777 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSecurity </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSecurity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurityProxy
-	c3625781 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSecurityProxy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSecurityProxy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSecurityProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.security.OSecurityProxy extends com.orientechnologies.orient.core.db.record.OProxedResource<com.orientechnologies.orient.core.metadata.security.OSecurity>
-	c3625650:p -> c3625781:p [dir=back,arrowtail=empty];
+	c3625628:p -> c3625776:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.security.OSecurityProxy implements com.orientechnologies.orient.core.metadata.security.OSecurity
-	c3625780:p -> c3625781:p [dir=back,arrowtail=empty,style=dashed];
+	c3625777:p -> c3625776:p [dir=back,arrowtail=empty,style=dashed];
 }
 

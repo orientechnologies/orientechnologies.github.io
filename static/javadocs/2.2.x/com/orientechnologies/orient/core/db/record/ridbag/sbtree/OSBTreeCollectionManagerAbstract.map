@@ -1,16 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../../../common/concur/resource/OCloseable.html" title="com.orientechnologies.common.concur.resource.OCloseable" alt="" coords="461,11,554,53"/>
-<area shape="rect" id="node1" href="../../../../../../common/concur/resource/OCloseable.html" title="&lt;TABLE&gt;" alt="" coords="450,5,565,59"/>
-<area shape="rect" id="node4_1" href="./OSBTreeCollectionManagerAbstract.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract" alt="" coords="358,118,609,143"/>
-<area shape="rect" id="node4" href="./OSBTreeCollectionManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="347,107,619,155"/>
-<area shape="rect" id="node2_2" href="../../../../OOrientStartupListener.html" title="com.orientechnologies.orient.core.OOrientStartupListener" alt="" coords="247,11,415,53"/>
-<area shape="rect" id="node2" href="../../../../OOrientStartupListener.html" title="&lt;TABLE&gt;" alt="" coords="237,5,426,59"/>
-<area shape="rect" id="node5_3" href="./OSBTreeCollectionManagerShared.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerShared" alt="" coords="99,214,339,239"/>
-<area shape="rect" id="node5" href="./OSBTreeCollectionManagerShared.html" title="&lt;TABLE&gt;" alt="" coords="89,203,350,251"/>
-<area shape="rect" id="node3_4" href="../../../../OOrientShutdownListener.html" title="com.orientechnologies.orient.core.OOrientShutdownListener" alt="" coords="16,11,201,53"/>
-<area shape="rect" id="node3" href="../../../../OOrientShutdownListener.html" title="&lt;TABLE&gt;" alt="" coords="5,5,212,59"/>
-<area shape="rect" id="node7_5" href="../../../../../client/remote/OSBTreeCollectionManagerRemote.html" title="com.orientechnologies.orient.client.remote.OSBTreeCollectionManagerRemote" alt="" coords="385,214,632,239"/>
-<area shape="rect" id="node7" href="../../../../../client/remote/OSBTreeCollectionManagerRemote.html" title="&lt;TABLE&gt;" alt="" coords="375,203,643,251"/>
-<area shape="rect" id="node6_6" href="./OSBTreeCollectionManager.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManager" alt="" coords="600,11,796,53"/>
-<area shape="rect" id="node6" href="./OSBTreeCollectionManager.html" title="&lt;TABLE&gt;" alt="" coords="589,5,807,59"/>
+<area shape="rect" id="node1_0" href="../../../../../../common/concur/resource/OCloseable.html" title="com.orientechnologies.common.concur.resource.OCloseable" alt="" coords="461,11,555,53"/>
+<area shape="rect" id="node1" href="../../../../../../common/concur/resource/OCloseable.html" title="&lt;TABLE&gt;" alt="" coords="451,5,565,59"/>
+<area shape="rect" id="node4_1" href="./OSBTreeCollectionManagerAbstract.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract" alt="" coords="351,118,601,143"/>
+<area shape="rect" id="node4" href="./OSBTreeCollectionManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="340,107,612,155"/>
+<area shape="rect" id="node2_2" href="../../../../OOrientShutdownListener.html" title="com.orientechnologies.orient.core.OOrientShutdownListener" alt="" coords="230,11,415,53"/>
+<area shape="rect" id="node2" href="../../../../OOrientShutdownListener.html" title="&lt;TABLE&gt;" alt="" coords="219,5,426,59"/>
+<area shape="rect" id="node5_3" href="./OSBTreeCollectionManagerShared.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerShared" alt="" coords="91,214,331,239"/>
+<area shape="rect" id="node5" href="./OSBTreeCollectionManagerShared.html" title="&lt;TABLE&gt;" alt="" coords="80,203,341,251"/>
+<area shape="rect" id="node3_4" href="../../../../OOrientStartupListener.html" title="com.orientechnologies.orient.core.OOrientStartupListener" alt="" coords="16,11,184,53"/>
+<area shape="rect" id="node3" href="../../../../OOrientStartupListener.html" title="&lt;TABLE&gt;" alt="" coords="5,5,195,59"/>
+<area shape="rect" id="node7_5" href="../../../../../client/remote/OSBTreeCollectionManagerRemote.html" title="com.orientechnologies.orient.client.remote.OSBTreeCollectionManagerRemote" alt="" coords="377,214,623,239"/>
+<area shape="rect" id="node7" href="../../../../../client/remote/OSBTreeCollectionManagerRemote.html" title="&lt;TABLE&gt;" alt="" coords="366,203,634,251"/>
+<area shape="rect" id="node6_6" href="./OSBTreeCollectionManager.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManager" alt="" coords="601,11,797,53"/>
+<area shape="rect" id="node6" href="./OSBTreeCollectionManager.html" title="&lt;TABLE&gt;" alt="" coords="590,5,807,59"/>
 </map>

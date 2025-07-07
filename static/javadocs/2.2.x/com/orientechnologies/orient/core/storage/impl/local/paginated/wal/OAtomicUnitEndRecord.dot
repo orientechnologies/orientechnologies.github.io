@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitEndRecord
-	c649407 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitEndRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAtomicUnitEndRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OAtomicUnitEndRecord </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OAtomicUnitEndRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
-	c649416 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitBodyRecord.html">
+	c649392 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitBodyRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OOperationUnitBodyRecord </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOperationUnitBodyRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitEndRecord
+	c649417 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitEndRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAtomicUnitEndRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OAtomicUnitEndRecord </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OAtomicUnitEndRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitEndRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
-	c649416:p -> c649407:p [dir=back,arrowtail=empty];
+	c649392:p -> c649417:p [dir=back,arrowtail=empty];
 }
 

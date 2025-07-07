@@ -9,6 +9,12 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy
+	c396042 [label=<<table title="com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OHazelcastMergeStrategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OHazelcastMergeStrategy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OHazelcastMergeStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.hazelcast.ONetworkSimulator
 	c396043 [label=<<table title="com.orientechnologies.orient.server.hazelcast.ONetworkSimulator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONetworkSimulator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -27,11 +33,5 @@ digraph G {
 <tr><td align="center" balign="center"> OHazelcastDistributedMap </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OHazelcastDistributedMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy
-	c396046 [label=<<table title="com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OHazelcastMergeStrategy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OHazelcastMergeStrategy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OHazelcastMergeStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

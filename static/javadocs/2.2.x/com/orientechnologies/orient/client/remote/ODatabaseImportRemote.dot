@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.tool.ODatabaseImpExpAbstract
-	c1357813 [label=<<table title="com.orientechnologies.orient.core.db.tool.ODatabaseImpExpAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/tool/ODatabaseImpExpAbstract.html">
+	c1357815 [label=<<table title="com.orientechnologies.orient.core.db.tool.ODatabaseImpExpAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/tool/ODatabaseImpExpAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODatabaseImpExpAbstract </font></td></tr>
 		</table></td></tr>
@@ -22,6 +22,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ODatabaseImportRemote.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.client.remote.ODatabaseImportRemote extends com.orientechnologies.orient.core.db.tool.ODatabaseImpExpAbstract
-	c1357813:p -> c1358974:p [dir=back,arrowtail=empty];
+	c1357815:p -> c1358974:p [dir=back,arrowtail=empty];
 }
 

@@ -17,20 +17,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../core/command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1059364 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/OCommandExecutorSQLAbstract.html">
+	c1059361 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/OCommandExecutorSQLAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/sql/OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster
-	c1060719 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLHASyncCluster.html">
+	c1060715 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLHASyncCluster.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLHASyncCluster </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLHASyncCluster.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1059364:p -> c1060719:p [dir=back,arrowtail=empty];
+	c1059361:p -> c1060715:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1059267:p -> c1060719:p [dir=back,arrowtail=empty,style=dashed];
+	c1059267:p -> c1060715:p [dir=back,arrowtail=empty,style=dashed];
 }
 

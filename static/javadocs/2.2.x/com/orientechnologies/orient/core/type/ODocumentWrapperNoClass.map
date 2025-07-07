@@ -1,16 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../metadata/schema/OSchemaShared.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" alt="" coords="16,209,143,234"/>
-<area shape="rect" id="node1" href="../metadata/schema/OSchemaShared.html" title="&lt;TABLE&gt;" alt="" coords="5,197,153,245"/>
-<area shape="rect" id="node2_1" href="../metadata/schema/OClassImpl.html" title="com.orientechnologies.orient.core.metadata.schema.OClassImpl" alt="" coords="189,209,282,234"/>
-<area shape="rect" id="node2" href="../metadata/schema/OClassImpl.html" title="&lt;TABLE&gt;" alt="" coords="178,197,293,245"/>
-<area shape="rect" id="node3_2" href="../metadata/schema/OPropertyImpl.html" title="com.orientechnologies.orient.core.metadata.schema.OPropertyImpl" alt="" coords="328,209,441,234"/>
-<area shape="rect" id="node3" href="../metadata/schema/OPropertyImpl.html" title="&lt;TABLE&gt;" alt="" coords="317,197,452,245"/>
-<area shape="rect" id="node4_3" href="./ODocumentWrapperNoClass.html" title="com.orientechnologies.orient.core.type.ODocumentWrapperNoClass" alt="" coords="283,113,487,138"/>
-<area shape="rect" id="node4" href="./ODocumentWrapperNoClass.html" title="&lt;TABLE&gt;" alt="" coords="272,101,497,149"/>
-<area shape="rect" id="node6_4" href="../index/OIndexManagerAbstract.html" title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" alt="" coords="487,209,663,234"/>
-<area shape="rect" id="node6" href="../index/OIndexManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="477,197,674,245"/>
-<area shape="rect" id="node7_5" href="../index/OAbstractIndexDefinition.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" alt="" coords="709,209,893,234"/>
-<area shape="rect" id="node7" href="../index/OAbstractIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="698,197,903,245"/>
-<area shape="rect" id="node5_6" href="./ODocumentWrapper.html" title="com.orientechnologies.orient.core.type.ODocumentWrapper" alt="" coords="309,17,461,42"/>
-<area shape="rect" id="node5" href="./ODocumentWrapper.html" title="&lt;TABLE&gt;" alt="" coords="298,5,471,53"/>
+<area shape="rect" id="node1_0" href="../metadata/schema/OPropertyImpl.html" title="com.orientechnologies.orient.core.metadata.schema.OPropertyImpl" alt="" coords="16,209,129,234"/>
+<area shape="rect" id="node1" href="../metadata/schema/OPropertyImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,197,140,245"/>
+<area shape="rect" id="node2_1" href="../metadata/schema/OSchemaShared.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" alt="" coords="175,209,301,234"/>
+<area shape="rect" id="node2" href="../metadata/schema/OSchemaShared.html" title="&lt;TABLE&gt;" alt="" coords="164,197,312,245"/>
+<area shape="rect" id="node3_2" href="../metadata/schema/OClassImpl.html" title="com.orientechnologies.orient.core.metadata.schema.OClassImpl" alt="" coords="347,209,441,234"/>
+<area shape="rect" id="node3" href="../metadata/schema/OClassImpl.html" title="&lt;TABLE&gt;" alt="" coords="337,197,451,245"/>
+<area shape="rect" id="node4_3" href="./ODocumentWrapperNoClass.html" title="com.orientechnologies.orient.core.type.ODocumentWrapperNoClass" alt="" coords="292,113,496,138"/>
+<area shape="rect" id="node4" href="./ODocumentWrapperNoClass.html" title="&lt;TABLE&gt;" alt="" coords="281,101,507,149"/>
+<area shape="rect" id="node6_4" href="../index/OIndexManagerAbstract.html" title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" alt="" coords="486,209,662,234"/>
+<area shape="rect" id="node6" href="../index/OIndexManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="475,197,673,245"/>
+<area shape="rect" id="node7_5" href="../index/OAbstractIndexDefinition.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" alt="" coords="707,209,891,234"/>
+<area shape="rect" id="node7" href="../index/OAbstractIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="697,197,902,245"/>
+<area shape="rect" id="node5_6" href="./ODocumentWrapper.html" title="com.orientechnologies.orient.core.type.ODocumentWrapper" alt="" coords="318,17,470,42"/>
+<area shape="rect" id="node5" href="./ODocumentWrapper.html" title="&lt;TABLE&gt;" alt="" coords="307,5,481,53"/>
 </map>

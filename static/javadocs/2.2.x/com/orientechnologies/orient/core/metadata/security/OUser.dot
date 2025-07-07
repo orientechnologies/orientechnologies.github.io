@@ -9,36 +9,36 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.metadata.security.OSystemUser
-	c4324815 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSystemUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSystemUser.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSystemUser </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSystemUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OUser
-	c4324822 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OUser.html">
+	c4324804 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OUser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OUser </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSystemUser
+	c4324808 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSystemUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSystemUser.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSystemUser </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSystemUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OSecurityUser
-	c4324827 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityUser.html">
+	c4324810 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityUser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSecurityUser </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSecurityUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OIdentity
-	c4324832 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OIdentity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIdentity.html">
+	c4324813 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OIdentity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIdentity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIdentity </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIdentity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.metadata.security.OSystemUser extends com.orientechnologies.orient.core.metadata.security.OUser
-	c4324822:p -> c4324815:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.security.OUser extends com.orientechnologies.orient.core.metadata.security.OIdentity
-	c4324832:p -> c4324822:p [dir=back,arrowtail=empty];
+	c4324813:p -> c4324804:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.security.OUser implements com.orientechnologies.orient.core.metadata.security.OSecurityUser
-	c4324827:p -> c4324822:p [dir=back,arrowtail=empty,style=dashed];
+	c4324810:p -> c4324804:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.metadata.security.OSystemUser extends com.orientechnologies.orient.core.metadata.security.OUser
+	c4324804:p -> c4324808:p [dir=back,arrowtail=empty];
 }
 

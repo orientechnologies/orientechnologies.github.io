@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c2192267 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginAbstract.html">
+	c2192260 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../plugin/OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.handler.OJMXPlugin
-	c2192273 [label=<<table title="com.orientechnologies.orient.server.handler.OJMXPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OJMXPlugin.html">
+	c2192270 [label=<<table title="com.orientechnologies.orient.server.handler.OJMXPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OJMXPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OJMXPlugin </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OJMXPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.handler.OJMXPlugin extends com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c2192267:p -> c2192273:p [dir=back,arrowtail=empty];
+	c2192260:p -> c2192270:p [dir=back,arrowtail=empty];
 }
 

@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.object.jpa.OJPAPersistenceProvider
-	c2200304 [label=<<table title="com.orientechnologies.orient.object.jpa.OJPAPersistenceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OJPAPersistenceProvider.html">
+	c2200300 [label=<<table title="com.orientechnologies.orient.object.jpa.OJPAPersistenceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OJPAPersistenceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OJPAPersistenceProvider </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OJPAPersistenceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.object.jpa.OJPAPersistenceProvider implements javax.persistence.spi.PersistenceProvider
-	c2200862:p -> c2200304:p [dir=back,arrowtail=empty,style=dashed];
+	c2200858:p -> c2200300:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.persistence.spi.PersistenceProvider
-	c2200862 [label=<<table title="javax.persistence.spi.PersistenceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/persistence/spi/PersistenceProvider.html">
+	c2200858 [label=<<table title="javax.persistence.spi.PersistenceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/persistence/spi/PersistenceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PersistenceProvider </td></tr>

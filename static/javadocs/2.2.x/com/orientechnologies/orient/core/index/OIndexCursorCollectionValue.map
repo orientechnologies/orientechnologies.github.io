@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../../common/util/OSizeable.html" title="com.orientechnologies.common.util.OSizeable" alt="" coords="16,11,109,53"/>
 <area shape="rect" id="node1" href="../../../common/util/OSizeable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,120,59"/>
-<area shape="rect" id="node3_1" href="./OIndexCursorCollectionValue.html" title="com.orientechnologies.orient.core.index.OIndexCursorCollectionValue" alt="" coords="45,118,253,143"/>
-<area shape="rect" id="node3" href="./OIndexCursorCollectionValue.html" title="&lt;TABLE&gt;" alt="" coords="35,107,264,155"/>
-<area shape="rect" id="node2_2" href="./OIndexAbstractCursor.html" title="com.orientechnologies.orient.core.index.OIndexAbstractCursor" alt="" coords="155,19,317,45"/>
-<area shape="rect" id="node2" href="./OIndexAbstractCursor.html" title="&lt;TABLE&gt;" alt="" coords="145,8,327,56"/>
+<area shape="rect" id="node2_1" href="./OIndexCursorCollectionValue.html" title="com.orientechnologies.orient.core.index.OIndexCursorCollectionValue" alt="" coords="45,118,253,143"/>
+<area shape="rect" id="node2" href="./OIndexCursorCollectionValue.html" title="&lt;TABLE&gt;" alt="" coords="35,107,264,155"/>
+<area shape="rect" id="node3_2" href="./OIndexAbstractCursor.html" title="com.orientechnologies.orient.core.index.OIndexAbstractCursor" alt="" coords="155,19,317,45"/>
+<area shape="rect" id="node3" href="./OIndexAbstractCursor.html" title="&lt;TABLE&gt;" alt="" coords="145,8,327,56"/>
 </map>

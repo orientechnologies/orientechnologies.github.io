@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog
-	c4388538 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractWriteAheadLog.html">
+	c4388511 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractWriteAheadLog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractWriteAheadLog </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractWriteAheadLog.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWriteAheadLog
-	c4388544 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWriteAheadLog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OWriteAheadLog.html">
+	c4388530 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWriteAheadLog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OWriteAheadLog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OWriteAheadLog </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OWriteAheadLog.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog implements com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWriteAheadLog
-	c4388544:p -> c4388538:p [dir=back,arrowtail=empty,style=dashed];
+	c4388530:p -> c4388511:p [dir=back,arrowtail=empty,style=dashed];
 }
 

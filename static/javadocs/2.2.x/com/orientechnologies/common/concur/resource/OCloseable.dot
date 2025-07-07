@@ -10,39 +10,39 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.concur.resource.OCloseable
-	c896294 [label=<<table title="com.orientechnologies.common.concur.resource.OCloseable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCloseable.html">
+	c896284 [label=<<table title="com.orientechnologies.common.concur.resource.OCloseable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCloseable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCloseable </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCloseable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.console.OCommandStream
-	c896374 [label=<<table title="com.orientechnologies.common.console.OCommandStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../console/OCommandStream.html">
+	c896368 [label=<<table title="com.orientechnologies.common.console.OCommandStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../console/OCommandStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandStream </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../console/OCommandStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract
-	c896507 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/db/record/ridbag/sbtree/OSBTreeCollectionManagerAbstract.html">
+	c896505 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/db/record/ridbag/sbtree/OSBTreeCollectionManagerAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSBTreeCollectionManagerAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../orient/core/db/record/ridbag/sbtree/OSBTreeCollectionManagerAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OSecurityShared
-	c896622 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/metadata/security/OSecurityShared.html">
+	c896627 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/metadata/security/OSecurityShared.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSecurityShared </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../orient/core/metadata/security/OSecurityShared.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.OSchemaShared
-	c896660 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/metadata/schema/OSchemaShared.html">
+	c896661 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/metadata/schema/OSchemaShared.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSchemaShared </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../orient/core/metadata/schema/OSchemaShared.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexManagerAbstract
-	c897580 [label=<<table title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/index/OIndexManagerAbstract.html">
+	c897533 [label=<<table title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/index/OIndexManagerAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexManagerAbstract </font></td></tr>
 		</table></td></tr>
@@ -54,16 +54,16 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../orient/core/query/live/OLiveQueryHook.OLiveQueryOps.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.console.OCommandStream implements com.orientechnologies.common.concur.resource.OCloseable
-	c896294:p -> c896374:p [dir=back,arrowtail=empty,style=dashed];
+	c896284:p -> c896368:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract implements com.orientechnologies.common.concur.resource.OCloseable
-	c896294:p -> c896507:p [dir=back,arrowtail=empty,style=dashed];
+	c896284:p -> c896505:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.security.OSecurityShared implements com.orientechnologies.common.concur.resource.OCloseable
-	c896294:p -> c896622:p [dir=back,arrowtail=empty,style=dashed];
+	c896284:p -> c896627:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.schema.OSchemaShared implements com.orientechnologies.common.concur.resource.OCloseable
-	c896294:p -> c896660:p [dir=back,arrowtail=empty,style=dashed];
+	c896284:p -> c896661:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.index.OIndexManagerAbstract implements com.orientechnologies.common.concur.resource.OCloseable
-	c896294:p -> c897580:p [dir=back,arrowtail=empty,style=dashed];
+	c896284:p -> c897533:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.query.live.OLiveQueryHook.OLiveQueryOps implements com.orientechnologies.common.concur.resource.OCloseable
-	c896294:p -> c897649:p [dir=back,arrowtail=empty,style=dashed];
+	c896284:p -> c897649:p [dir=back,arrowtail=empty,style=dashed];
 }
 

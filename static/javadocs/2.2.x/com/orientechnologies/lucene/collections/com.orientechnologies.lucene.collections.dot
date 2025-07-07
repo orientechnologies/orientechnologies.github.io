@@ -9,6 +9,12 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.lucene.collections.OLuceneCompositeKey
+	c416459 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneCompositeKey.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLuceneCompositeKey </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLuceneCompositeKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.collections.OLuceneAbstractResultSet
 	c416460 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneAbstractResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneAbstractResultSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -21,35 +27,29 @@ digraph G {
 <tr><td align="center" balign="center"> OLuceneResultSetFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneResultSetFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.lucene.collections.OLuceneResultSet
+	c416462 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneResultSet.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLuceneResultSet </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLuceneResultSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.collections.OLuceneTxResultSet
-	c416462 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneTxResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneTxResultSet.html">
+	c416463 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneTxResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneTxResultSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLuceneTxResultSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneTxResultSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.collections.OFullTextCompositeKey
-	c416463 [label=<<table title="com.orientechnologies.lucene.collections.OFullTextCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OFullTextCompositeKey.html">
+	c416464 [label=<<table title="com.orientechnologies.lucene.collections.OFullTextCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OFullTextCompositeKey.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OFullTextCompositeKey </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OFullTextCompositeKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.lucene.collections.OLuceneResultSet
-	c416464 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneResultSet.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLuceneResultSet </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLuceneResultSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.lucene.collections.OLuceneCompositeKey
-	c416465 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneCompositeKey.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLuceneCompositeKey </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLuceneCompositeKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.lucene.collections.OLuceneTxResultSet extends com.orientechnologies.lucene.collections.OLuceneAbstractResultSet
-	c416460:p -> c416462:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.lucene.collections.OFullTextCompositeKey extends com.orientechnologies.lucene.collections.OLuceneCompositeKey
-	c416465:p -> c416463:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.lucene.collections.OLuceneResultSet extends com.orientechnologies.lucene.collections.OLuceneAbstractResultSet
-	c416460:p -> c416464:p [dir=back,arrowtail=empty];
+	c416460:p -> c416462:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.lucene.collections.OLuceneTxResultSet extends com.orientechnologies.lucene.collections.OLuceneAbstractResultSet
+	c416460:p -> c416463:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.lucene.collections.OFullTextCompositeKey extends com.orientechnologies.lucene.collections.OLuceneCompositeKey
+	c416459:p -> c416464:p [dir=back,arrowtail=empty];
 }
 

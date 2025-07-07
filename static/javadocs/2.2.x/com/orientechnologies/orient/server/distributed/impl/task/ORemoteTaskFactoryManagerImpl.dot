@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.ORemoteTaskFactoryManager
-	c3137268 [label=<<table title="com.orientechnologies.orient.server.distributed.ORemoteTaskFactoryManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../ORemoteTaskFactoryManager.html">
+	c3137256 [label=<<table title="com.orientechnologies.orient.server.distributed.ORemoteTaskFactoryManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../ORemoteTaskFactoryManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORemoteTaskFactoryManager </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../ORemoteTaskFactoryManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.ORemoteTaskFactoryManagerImpl
-	c3137567 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ORemoteTaskFactoryManagerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORemoteTaskFactoryManagerImpl.html">
+	c3137541 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ORemoteTaskFactoryManagerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORemoteTaskFactoryManagerImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORemoteTaskFactoryManagerImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORemoteTaskFactoryManagerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.ORemoteTaskFactoryManagerImpl implements com.orientechnologies.orient.server.distributed.ORemoteTaskFactoryManager
-	c3137268:p -> c3137567:p [dir=back,arrowtail=empty,style=dashed];
+	c3137256:p -> c3137541:p [dir=back,arrowtail=empty,style=dashed];
 }
 

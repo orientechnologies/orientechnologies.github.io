@@ -9,6 +9,13 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.iterator.object.OObjectIteratorClusterInterface<T>
+	c271669 [label=<<table title="com.orientechnologies.orient.core.iterator.object.OObjectIteratorClusterInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectIteratorClusterInterface.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OObjectIteratorClusterInterface&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OObjectIteratorClusterInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.iterator.object.OObjectIteratorClassInterface<T>
 	c271670 [label=<<table title="com.orientechnologies.orient.core.iterator.object.OObjectIteratorClassInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectIteratorClassInterface.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -16,12 +23,5 @@ digraph G {
 <tr><td align="center" balign="center"> OObjectIteratorClassInterface&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectIteratorClassInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.iterator.object.OObjectIteratorClusterInterface<T>
-	c271671 [label=<<table title="com.orientechnologies.orient.core.iterator.object.OObjectIteratorClusterInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectIteratorClusterInterface.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OObjectIteratorClusterInterface&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OObjectIteratorClusterInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

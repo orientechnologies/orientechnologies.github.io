@@ -9,20 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.index.engine.ORemoteIndexEngine
-	c3118722 [label=<<table title="com.orientechnologies.orient.core.index.engine.ORemoteIndexEngine" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORemoteIndexEngine.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORemoteIndexEngine </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORemoteIndexEngine.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.index.engine.ORemoteIndexEngine implements com.orientechnologies.orient.core.index.engine.OIndexEngine
-	c3119416:p -> c3118722:p [dir=back,arrowtail=empty,style=dashed];
-	// com.orientechnologies.orient.core.index.engine.OIndexEngine
-	c3119416 [label=<<table title="com.orientechnologies.orient.core.index.engine.OIndexEngine" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/com/orientechnologies/orient/core/index/engine/OIndexEngine.html">
+	// com.orientechnologies.orient.core.index.OIndexEngine
+	c3118687 [label=<<table title="com.orientechnologies.orient.core.index.OIndexEngine" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OIndexEngine.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OIndexEngine </td></tr>
 		</table></td></tr>
-		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/com/orientechnologies/orient/core/index/engine/OIndexEngine.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../OIndexEngine.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.index.engine.ORemoteIndexEngine
+	c3118718 [label=<<table title="com.orientechnologies.orient.core.index.engine.ORemoteIndexEngine" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORemoteIndexEngine.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORemoteIndexEngine </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORemoteIndexEngine.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//com.orientechnologies.orient.core.index.engine.ORemoteIndexEngine implements com.orientechnologies.orient.core.index.OIndexEngine
+	c3118687:p -> c3118718:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -1,14 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ODefaultSQLMethodFactory.html" title="com.orientechnologies.orient.core.sql.method.ODefaultSQLMethodFactory" alt="" coords="16,118,215,143"/>
-<area shape="rect" id="node1" href="./ODefaultSQLMethodFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,107,225,155"/>
-<area shape="rect" id="node2_1" href="./OSQLMethodCharAt.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt" alt="" coords="236,19,384,45"/>
-<area shape="rect" id="node2" href="./OSQLMethodCharAt.html" title="&lt;TABLE&gt;" alt="" coords="225,8,395,56"/>
-<area shape="rect" id="node3_2" href="./OSQLMethodRuntime.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethodRuntime" alt="" coords="429,19,588,45"/>
-<area shape="rect" id="node3" href="./OSQLMethodRuntime.html" title="&lt;TABLE&gt;" alt="" coords="419,8,599,56"/>
-<area shape="rect" id="node4_3" href="./OSQLMethodFactory.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethodFactory" alt="" coords="40,11,191,53"/>
-<area shape="rect" id="node4" href="./OSQLMethodFactory.html" title="&lt;TABLE&gt;" alt="" coords="29,5,201,59"/>
-<area shape="rect" id="node5_4" href="./OSQLMethod.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethod" alt="" coords="634,11,738,53"/>
-<area shape="rect" id="node5" href="./OSQLMethod.html" title="&lt;TABLE&gt;" alt="" coords="623,5,749,59"/>
-<area shape="rect" id="node6_5" href="./OSQLMethodLeft.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethodLeft" alt="" coords="783,19,911,45"/>
-<area shape="rect" id="node6" href="./OSQLMethodLeft.html" title="&lt;TABLE&gt;" alt="" coords="773,8,922,56"/>
+<area shape="rect" id="node1_0" href="./OSQLMethodFactory.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethodFactory" alt="" coords="40,11,191,53"/>
+<area shape="rect" id="node1" href="./OSQLMethodFactory.html" title="&lt;TABLE&gt;" alt="" coords="29,5,201,59"/>
+<area shape="rect" id="node5_1" href="./ODefaultSQLMethodFactory.html" title="com.orientechnologies.orient.core.sql.method.ODefaultSQLMethodFactory" alt="" coords="16,118,215,143"/>
+<area shape="rect" id="node5" href="./ODefaultSQLMethodFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,107,225,155"/>
+<area shape="rect" id="node2_2" href="./OSQLMethod.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethod" alt="" coords="237,11,341,53"/>
+<area shape="rect" id="node2" href="./OSQLMethod.html" title="&lt;TABLE&gt;" alt="" coords="226,5,351,59"/>
+<area shape="rect" id="node3_3" href="./OSQLMethodRuntime.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethodRuntime" alt="" coords="387,19,545,45"/>
+<area shape="rect" id="node3" href="./OSQLMethodRuntime.html" title="&lt;TABLE&gt;" alt="" coords="376,8,556,56"/>
+<area shape="rect" id="node4_4" href="./OSQLMethodCharAt.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt" alt="" coords="591,19,739,45"/>
+<area shape="rect" id="node4" href="./OSQLMethodCharAt.html" title="&lt;TABLE&gt;" alt="" coords="580,8,749,56"/>
+<area shape="rect" id="node6_5" href="./OSQLMethodLeft.html" title="com.orientechnologies.orient.core.sql.method.OSQLMethodLeft" alt="" coords="785,19,913,45"/>
+<area shape="rect" id="node6" href="./OSQLMethodLeft.html" title="&lt;TABLE&gt;" alt="" coords="774,8,923,56"/>
 </map>

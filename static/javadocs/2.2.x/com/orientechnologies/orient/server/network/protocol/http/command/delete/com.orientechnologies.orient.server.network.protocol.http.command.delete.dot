@@ -9,35 +9,35 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteProperty
-	c359346 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteProperty.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OServerCommandDeleteProperty </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OServerCommandDeleteProperty.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteClass
-	c359347 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteClass.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OServerCommandDeleteClass </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OServerCommandDeleteClass.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDatabase
-	c359348 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteDatabase.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OServerCommandDeleteDatabase </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OServerCommandDeleteDatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteIndex
-	c359349 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteIndex.html">
+	c359345 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteIndex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandDeleteIndex </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandDeleteIndex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDatabase
+	c359346 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteDatabase.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OServerCommandDeleteDatabase </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OServerCommandDeleteDatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDocument
-	c359350 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteDocument.html">
+	c359347 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteDocument.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandDeleteDocument </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandDeleteDocument.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteClass
+	c359348 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteClass.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OServerCommandDeleteClass </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OServerCommandDeleteClass.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteProperty
+	c359349 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandDeleteProperty.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OServerCommandDeleteProperty </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OServerCommandDeleteProperty.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

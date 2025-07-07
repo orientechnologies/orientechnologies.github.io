@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.OStatement
-	c1878380 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
+	c1878424 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OHaRemoveServerStatement
-	c1878457 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OHaRemoveServerStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OHaRemoveServerStatement.html">
+	c1878436 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OHaRemoveServerStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OHaRemoveServerStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OHaRemoveServerStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OHaRemoveServerStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OHaRemoveServerStatement extends com.orientechnologies.orient.core.sql.parser.OStatement
-	c1878380:p -> c1878457:p [dir=back,arrowtail=empty];
+	c1878424:p -> c1878436:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.record.impl.ORecordBytes
-	c760404 [label=<<table title="com.orientechnologies.orient.core.record.impl.ORecordBytes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordBytes.html">
+	c760398 [label=<<table title="com.orientechnologies.orient.core.record.impl.ORecordBytes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordBytes.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordBytes </td></tr>
 		</table></td></tr>
@@ -23,15 +23,15 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OBlob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.record.ORecord
-	c760422 [label=<<table title="com.orientechnologies.orient.core.record.ORecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ORecord.html">
+	c760416 [label=<<table title="com.orientechnologies.orient.core.record.ORecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ORecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORecord </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ORecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.record.impl.ORecordBytes implements com.orientechnologies.orient.core.record.impl.OBlob
-	c760405:p -> c760404:p [dir=back,arrowtail=empty,style=dashed];
+	c760405:p -> c760398:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.record.impl.OBlob implements com.orientechnologies.orient.core.record.ORecord
-	c760422:p -> c760405:p [dir=back,arrowtail=empty,style=dashed];
+	c760416:p -> c760405:p [dir=back,arrowtail=empty,style=dashed];
 }
 

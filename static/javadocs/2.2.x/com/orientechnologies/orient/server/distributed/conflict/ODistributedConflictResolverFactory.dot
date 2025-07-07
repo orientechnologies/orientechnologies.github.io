@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.factory.OConfigurableStatelessFactory<K, V>
-	c1508065 [label=<<table title="com.orientechnologies.common.factory.OConfigurableStatelessFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/factory/OConfigurableStatelessFactory.html">
+	c1508064 [label=<<table title="com.orientechnologies.common.factory.OConfigurableStatelessFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/factory/OConfigurableStatelessFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OConfigurableStatelessFactory&lt;K, V&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../common/factory/OConfigurableStatelessFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory
-	c1509534 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedConflictResolverFactory.html">
+	c1509531 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedConflictResolverFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedConflictResolverFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedConflictResolverFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory extends com.orientechnologies.common.factory.OConfigurableStatelessFactory<java.lang.String, com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver>
-	c1508065:p -> c1509534:p [dir=back,arrowtail=empty];
+	c1508064:p -> c1509531:p [dir=back,arrowtail=empty];
 }
 

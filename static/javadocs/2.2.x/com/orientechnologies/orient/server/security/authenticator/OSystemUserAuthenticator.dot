@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.security.OSecurityAuthenticatorAbstract
-	c4155488 [label=<<table title="com.orientechnologies.orient.server.security.OSecurityAuthenticatorAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSecurityAuthenticatorAbstract.html">
+	c4155482 [label=<<table title="com.orientechnologies.orient.server.security.OSecurityAuthenticatorAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSecurityAuthenticatorAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSecurityAuthenticatorAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OSecurityAuthenticatorAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator
-	c4155492 [label=<<table title="com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSystemUserAuthenticator.html">
+	c4155487 [label=<<table title="com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSystemUserAuthenticator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSystemUserAuthenticator </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSystemUserAuthenticator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator extends com.orientechnologies.orient.server.security.OSecurityAuthenticatorAbstract
-	c4155488:p -> c4155492:p [dir=back,arrowtail=empty];
+	c4155482:p -> c4155487:p [dir=back,arrowtail=empty];
 }
 

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ODatabaseException.html" title="com.orientechnologies.orient.core.exception.ODatabaseException" alt="" coords="63,113,219,138"/>
-<area shape="rect" id="node1" href="./ODatabaseException.html" title="&lt;TABLE&gt;" alt="" coords="53,101,230,149"/>
-<area shape="rect" id="node3_1" href="./OAllCacheEntriesAreUsedException.html" title="com.orientechnologies.orient.core.exception.OAllCacheEntriesAreUsedException" alt="" coords="16,209,267,234"/>
-<area shape="rect" id="node3" href="./OAllCacheEntriesAreUsedException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,277,245"/>
-<area shape="rect" id="node2_2" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="79,17,203,42"/>
-<area shape="rect" id="node2" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="69,5,214,53"/>
+<area shape="rect" id="node1_0" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="79,17,203,42"/>
+<area shape="rect" id="node1" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="69,5,214,53"/>
+<area shape="rect" id="node3_1" href="./ODatabaseException.html" title="com.orientechnologies.orient.core.exception.ODatabaseException" alt="" coords="63,113,219,138"/>
+<area shape="rect" id="node3" href="./ODatabaseException.html" title="&lt;TABLE&gt;" alt="" coords="53,101,230,149"/>
+<area shape="rect" id="node2_2" href="./OAllCacheEntriesAreUsedException.html" title="com.orientechnologies.orient.core.exception.OAllCacheEntriesAreUsedException" alt="" coords="16,209,267,234"/>
+<area shape="rect" id="node2" href="./OAllCacheEntriesAreUsedException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,277,245"/>
 </map>

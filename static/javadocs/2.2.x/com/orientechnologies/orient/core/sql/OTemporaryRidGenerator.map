@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../command/script/OCommandExecutorScript.html" title="com.orientechnologies.orient.core.command.script.OCommandExecutorScript" alt="" coords="16,118,205,143"/>
 <area shape="rect" id="node1" href="../command/script/OCommandExecutorScript.html" title="&lt;TABLE&gt;" alt="" coords="5,107,216,155"/>
-<area shape="rect" id="node2_1" href="./OTemporaryRidGenerator.html" title="com.orientechnologies.orient.core.sql.OTemporaryRidGenerator" alt="" coords="143,11,327,53"/>
-<area shape="rect" id="node2" href="./OTemporaryRidGenerator.html" title="&lt;TABLE&gt;" alt="" coords="132,5,337,59"/>
-<area shape="rect" id="node3_2" href="./OCommandExecutorSQLSelect.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect" alt="" coords="251,118,469,143"/>
-<area shape="rect" id="node3" href="./OCommandExecutorSQLSelect.html" title="&lt;TABLE&gt;" alt="" coords="241,107,479,155"/>
+<area shape="rect" id="node2_1" href="./OCommandExecutorSQLSelect.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect" alt="" coords="251,118,469,143"/>
+<area shape="rect" id="node2" href="./OCommandExecutorSQLSelect.html" title="&lt;TABLE&gt;" alt="" coords="241,107,479,155"/>
+<area shape="rect" id="node3_2" href="./OTemporaryRidGenerator.html" title="com.orientechnologies.orient.core.sql.OTemporaryRidGenerator" alt="" coords="143,11,327,53"/>
+<area shape="rect" id="node3" href="./OTemporaryRidGenerator.html" title="&lt;TABLE&gt;" alt="" coords="132,5,337,59"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./JavaCharStream.html" title="com.orientechnologies.orient.core.sql.parser.JavaCharStream" alt="" coords="16,118,140,143"/>
-<area shape="rect" id="node1" href="./JavaCharStream.html" title="&lt;TABLE&gt;" alt="" coords="5,107,151,155"/>
-<area shape="rect" id="node2_1" href="./CharStream.html" title="com.orientechnologies.orient.core.sql.parser.CharStream" alt="" coords="30,11,126,53"/>
-<area shape="rect" id="node2" href="./CharStream.html" title="&lt;TABLE&gt;" alt="" coords="19,5,137,59"/>
+<area shape="rect" id="node1_0" href="./CharStream.html" title="com.orientechnologies.orient.core.sql.parser.CharStream" alt="" coords="30,11,126,53"/>
+<area shape="rect" id="node1" href="./CharStream.html" title="&lt;TABLE&gt;" alt="" coords="19,5,137,59"/>
+<area shape="rect" id="node2_1" href="./JavaCharStream.html" title="com.orientechnologies.orient.core.sql.parser.JavaCharStream" alt="" coords="16,118,140,143"/>
+<area shape="rect" id="node2" href="./JavaCharStream.html" title="&lt;TABLE&gt;" alt="" coords="5,107,151,155"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OSQLMethodReset.html" title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodReset" alt="" coords="16,17,156,42"/>
-<area shape="rect" id="node1" href="./OSQLMethodReset.html" title="&lt;TABLE&gt;" alt="" coords="5,5,167,53"/>
-<area shape="rect" id="node2_1" href="./OSQLMethodNext.html" title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodNext" alt="" coords="201,17,336,42"/>
-<area shape="rect" id="node2" href="./OSQLMethodNext.html" title="&lt;TABLE&gt;" alt="" coords="191,5,347,53"/>
-<area shape="rect" id="node3_2" href="./OSQLMethodCurrent.html" title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent" alt="" coords="382,17,534,42"/>
-<area shape="rect" id="node3" href="./OSQLMethodCurrent.html" title="&lt;TABLE&gt;" alt="" coords="371,5,545,53"/>
+<area shape="rect" id="node1_0" href="./OSQLMethodCurrent.html" title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent" alt="" coords="16,17,168,42"/>
+<area shape="rect" id="node1" href="./OSQLMethodCurrent.html" title="&lt;TABLE&gt;" alt="" coords="5,5,179,53"/>
+<area shape="rect" id="node2_1" href="./OSQLMethodNext.html" title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodNext" alt="" coords="214,17,349,42"/>
+<area shape="rect" id="node2" href="./OSQLMethodNext.html" title="&lt;TABLE&gt;" alt="" coords="203,5,359,53"/>
+<area shape="rect" id="node3_2" href="./OSQLMethodReset.html" title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodReset" alt="" coords="394,17,534,42"/>
+<area shape="rect" id="node3" href="./OSQLMethodReset.html" title="&lt;TABLE&gt;" alt="" coords="383,5,545,53"/>
 </map>

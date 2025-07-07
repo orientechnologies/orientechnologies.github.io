@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.test.CompositeException
-	c459333 [label=<<table title="com.orientechnologies.orient.test.CompositeException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CompositeException.html">
+	c459332 [label=<<table title="com.orientechnologies.orient.test.CompositeException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CompositeException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CompositeException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CompositeException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.test.CompositeException extends java.lang.RuntimeException
-	c461364:p -> c459333:p [dir=back,arrowtail=empty];
+	c461362:p -> c459332:p [dir=back,arrowtail=empty];
 	// java.lang.RuntimeException
-	c461364 [label=<<table title="java.lang.RuntimeException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html">
+	c461362 [label=<<table title="java.lang.RuntimeException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RuntimeException </td></tr>
 		</table></td></tr>

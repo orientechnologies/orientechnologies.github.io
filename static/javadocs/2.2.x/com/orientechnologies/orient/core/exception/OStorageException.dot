@@ -9,51 +9,51 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.exception.OPageIsBrokenException
-	c4022884 [label=<<table title="com.orientechnologies.orient.core.exception.OPageIsBrokenException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OPageIsBrokenException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OPageIsBrokenException </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OPageIsBrokenException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OCoreException
-	c4022887 [label=<<table title="com.orientechnologies.orient.core.exception.OCoreException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCoreException.html">
+	c4022878 [label=<<table title="com.orientechnologies.orient.core.exception.OCoreException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCoreException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCoreException </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCoreException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.exception.OJVMErrorException
-	c4022892 [label=<<table title="com.orientechnologies.orient.core.exception.OJVMErrorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OJVMErrorException.html">
+	// com.orientechnologies.orient.core.exception.OPageIsBrokenException
+	c4022887 [label=<<table title="com.orientechnologies.orient.core.exception.OPageIsBrokenException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OPageIsBrokenException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OJVMErrorException </td></tr>
+<tr><td align="center" balign="center"> OPageIsBrokenException </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OJVMErrorException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OPageIsBrokenException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OStorageException
-	c4022898 [label=<<table title="com.orientechnologies.orient.core.exception.OStorageException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageException.html">
+	c4022892 [label=<<table title="com.orientechnologies.orient.core.exception.OStorageException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OStorageExistsException
-	c4022901 [label=<<table title="com.orientechnologies.orient.core.exception.OStorageExistsException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageExistsException.html">
+	c4022894 [label=<<table title="com.orientechnologies.orient.core.exception.OStorageExistsException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageExistsException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageExistsException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageExistsException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.exception.OJVMErrorException
+	c4022915 [label=<<table title="com.orientechnologies.orient.core.exception.OJVMErrorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OJVMErrorException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OJVMErrorException </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OJVMErrorException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OLowDiskSpaceException
-	c4022905 [label=<<table title="com.orientechnologies.orient.core.exception.OLowDiskSpaceException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLowDiskSpaceException.html">
+	c4022917 [label=<<table title="com.orientechnologies.orient.core.exception.OLowDiskSpaceException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLowDiskSpaceException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLowDiskSpaceException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLowDiskSpaceException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.exception.OPageIsBrokenException extends com.orientechnologies.orient.core.exception.OStorageException
-	c4022898:p -> c4022884:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.exception.OJVMErrorException extends com.orientechnologies.orient.core.exception.OStorageException
-	c4022898:p -> c4022892:p [dir=back,arrowtail=empty];
+	c4022892:p -> c4022887:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.exception.OStorageException extends com.orientechnologies.orient.core.exception.OCoreException
-	c4022887:p -> c4022898:p [dir=back,arrowtail=empty];
+	c4022878:p -> c4022892:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.exception.OStorageExistsException extends com.orientechnologies.orient.core.exception.OStorageException
-	c4022898:p -> c4022901:p [dir=back,arrowtail=empty];
+	c4022892:p -> c4022894:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.exception.OJVMErrorException extends com.orientechnologies.orient.core.exception.OStorageException
+	c4022892:p -> c4022915:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.exception.OLowDiskSpaceException extends com.orientechnologies.orient.core.exception.OStorageException
-	c4022898:p -> c4022905:p [dir=back,arrowtail=empty];
+	c4022892:p -> c4022917:p [dir=back,arrowtail=empty];
 }
 

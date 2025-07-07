@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OStatement.html" title="com.orientechnologies.orient.core.sql.parser.OStatement" alt="" coords="77,17,174,42"/>
-<area shape="rect" id="node1" href="./OStatement.html" title="&lt;TABLE&gt;" alt="" coords="66,5,185,53"/>
-<area shape="rect" id="node2_1" href="./OOptimizeDatabaseStatement.html" title="com.orientechnologies.orient.core.sql.parser.OOptimizeDatabaseStatement" alt="" coords="16,113,235,138"/>
-<area shape="rect" id="node2" href="./OOptimizeDatabaseStatement.html" title="&lt;TABLE&gt;" alt="" coords="5,101,245,149"/>
+<area shape="rect" id="node1_0" href="./OOptimizeDatabaseStatement.html" title="com.orientechnologies.orient.core.sql.parser.OOptimizeDatabaseStatement" alt="" coords="16,113,235,138"/>
+<area shape="rect" id="node1" href="./OOptimizeDatabaseStatement.html" title="&lt;TABLE&gt;" alt="" coords="5,101,245,149"/>
+<area shape="rect" id="node2_1" href="./OStatement.html" title="com.orientechnologies.orient.core.sql.parser.OStatement" alt="" coords="77,17,174,42"/>
+<area shape="rect" id="node2" href="./OStatement.html" title="&lt;TABLE&gt;" alt="" coords="66,5,185,53"/>
 </map>

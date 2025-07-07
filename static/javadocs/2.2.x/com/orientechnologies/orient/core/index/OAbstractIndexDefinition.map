@@ -1,16 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../type/ODocumentWrapperNoClass.html" title="com.orientechnologies.orient.core.type.ODocumentWrapperNoClass" alt="" coords="267,19,471,45"/>
-<area shape="rect" id="node1" href="../type/ODocumentWrapperNoClass.html" title="&lt;TABLE&gt;" alt="" coords="257,8,482,56"/>
-<area shape="rect" id="node7_1" href="./OAbstractIndexDefinition.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" alt="" coords="383,118,567,143"/>
-<area shape="rect" id="node7" href="./OAbstractIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="372,107,577,155"/>
-<area shape="rect" id="node2_2" href="./OPropertyIndexDefinition.html" title="com.orientechnologies.orient.core.index.OPropertyIndexDefinition" alt="" coords="16,214,200,239"/>
-<area shape="rect" id="node2" href="./OPropertyIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="5,203,211,251"/>
-<area shape="rect" id="node3_3" href="./OSimpleKeyIndexDefinition.html" title="com.orientechnologies.orient.core.index.OSimpleKeyIndexDefinition" alt="" coords="245,214,443,239"/>
-<area shape="rect" id="node3" href="./OSimpleKeyIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="235,203,453,251"/>
-<area shape="rect" id="node4_4" href="./ORuntimeKeyIndexDefinition.html" title="com.orientechnologies.orient.core.index.ORuntimeKeyIndexDefinition" alt="" coords="488,214,725,239"/>
-<area shape="rect" id="node4" href="./ORuntimeKeyIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="477,203,736,251"/>
-<area shape="rect" id="node5_5" href="./OIndexDefinition.html" title="com.orientechnologies.orient.core.index.OIndexDefinition" alt="" coords="516,11,644,53"/>
-<area shape="rect" id="node5" href="./OIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="505,5,655,59"/>
-<area shape="rect" id="node6_6" href="./OCompositeIndexDefinition.html" title="com.orientechnologies.orient.core.index.OCompositeIndexDefinition" alt="" coords="771,214,970,239"/>
-<area shape="rect" id="node6" href="./OCompositeIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="761,203,981,251"/>
+<area shape="rect" id="node1_0" href="../type/ODocumentWrapperNoClass.html" title="com.orientechnologies.orient.core.type.ODocumentWrapperNoClass" alt="" coords="262,19,466,45"/>
+<area shape="rect" id="node1" href="../type/ODocumentWrapperNoClass.html" title="&lt;TABLE&gt;" alt="" coords="251,8,477,56"/>
+<area shape="rect" id="node5_1" href="./OAbstractIndexDefinition.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" alt="" coords="377,118,561,143"/>
+<area shape="rect" id="node5" href="./OAbstractIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="367,107,572,155"/>
+<area shape="rect" id="node2_2" href="./OIndexDefinition.html" title="com.orientechnologies.orient.core.index.OIndexDefinition" alt="" coords="511,11,639,53"/>
+<area shape="rect" id="node2" href="./OIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="500,5,649,59"/>
+<area shape="rect" id="node3_3" href="./OSimpleKeyIndexDefinition.html" title="com.orientechnologies.orient.core.index.OSimpleKeyIndexDefinition" alt="" coords="16,214,213,239"/>
+<area shape="rect" id="node3" href="./OSimpleKeyIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="5,203,224,251"/>
+<area shape="rect" id="node4_4" href="./OPropertyIndexDefinition.html" title="com.orientechnologies.orient.core.index.OPropertyIndexDefinition" alt="" coords="259,214,443,239"/>
+<area shape="rect" id="node4" href="./OPropertyIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="248,203,453,251"/>
+<area shape="rect" id="node6_5" href="./OCompositeIndexDefinition.html" title="com.orientechnologies.orient.core.index.OCompositeIndexDefinition" alt="" coords="489,214,687,239"/>
+<area shape="rect" id="node6" href="./OCompositeIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="478,203,698,251"/>
+<area shape="rect" id="node7_6" href="./ORuntimeKeyIndexDefinition.html" title="com.orientechnologies.orient.core.index.ORuntimeKeyIndexDefinition" alt="" coords="733,214,971,239"/>
+<area shape="rect" id="node7" href="./ORuntimeKeyIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="723,203,981,251"/>
 </map>

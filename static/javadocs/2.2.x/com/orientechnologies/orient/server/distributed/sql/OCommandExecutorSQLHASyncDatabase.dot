@@ -17,20 +17,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../core/command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1061396 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/OCommandExecutorSQLAbstract.html">
+	c1061393 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/OCommandExecutorSQLAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/sql/OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncDatabase
-	c1062750 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLHASyncDatabase.html">
+	c1062749 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLHASyncDatabase.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLHASyncDatabase </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLHASyncDatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncDatabase extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1061396:p -> c1062750:p [dir=back,arrowtail=empty];
+	c1061393:p -> c1062749:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncDatabase implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1061299:p -> c1062750:p [dir=back,arrowtail=empty,style=dashed];
+	c1061299:p -> c1062749:p [dir=back,arrowtail=empty,style=dashed];
 }
 

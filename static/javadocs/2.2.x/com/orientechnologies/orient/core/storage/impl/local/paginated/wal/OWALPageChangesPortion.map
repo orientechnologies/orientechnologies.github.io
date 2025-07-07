@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OWALChanges.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALChanges" alt="" coords="55,11,168,53"/>
-<area shape="rect" id="node1" href="./OWALChanges.html" title="&lt;TABLE&gt;" alt="" coords="44,5,179,59"/>
-<area shape="rect" id="node2_1" href="./OWALPageChangesPortion.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALPageChangesPortion" alt="" coords="16,118,207,143"/>
-<area shape="rect" id="node2" href="./OWALPageChangesPortion.html" title="&lt;TABLE&gt;" alt="" coords="5,107,217,155"/>
+<area shape="rect" id="node1_0" href="./OWALPageChangesPortion.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALPageChangesPortion" alt="" coords="16,118,207,143"/>
+<area shape="rect" id="node1" href="./OWALPageChangesPortion.html" title="&lt;TABLE&gt;" alt="" coords="5,107,217,155"/>
+<area shape="rect" id="node2_1" href="./OWALChanges.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALChanges" alt="" coords="55,11,168,53"/>
+<area shape="rect" id="node2" href="./OWALChanges.html" title="&lt;TABLE&gt;" alt="" coords="44,5,179,59"/>
 </map>

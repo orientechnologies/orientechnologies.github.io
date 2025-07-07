@@ -9,39 +9,39 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionVariance
-	c155327 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionVariance" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionVariance.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionVariance </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionVariance.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMedian
-	c155328 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMedian" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMedian.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionMedian </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionMedian.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMode
-	c155329 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMode.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionMode </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionMode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionPercentile
-	c155330 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionPercentile" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionPercentile.html">
+	c155327 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionPercentile" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionPercentile.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionPercentile </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionPercentile.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionStandardDeviation
-	c155331 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionStandardDeviation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionStandardDeviation.html">
+	c155328 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionStandardDeviation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionStandardDeviation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionStandardDeviation </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionStandardDeviation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMedian extends com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionPercentile
-	c155330:p -> c155328:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMedian
+	c155329 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMedian" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMedian.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionMedian </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionMedian.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMode
+	c155330 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMode.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionMode </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionMode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionVariance
+	c155331 [label=<<table title="com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionVariance" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionVariance.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionVariance </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionVariance.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionStandardDeviation extends com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionVariance
-	c155327:p -> c155331:p [dir=back,arrowtail=empty];
+	c155331:p -> c155328:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionMedian extends com.orientechnologies.orient.core.sql.functions.stat.OSQLFunctionPercentile
+	c155327:p -> c155329:p [dir=back,arrowtail=empty];
 }
 

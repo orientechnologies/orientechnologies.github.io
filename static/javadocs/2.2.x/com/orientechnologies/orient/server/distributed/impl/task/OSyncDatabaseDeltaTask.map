@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OAbstractSyncDatabaseTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OAbstractSyncDatabaseTask" alt="" coords="16,17,223,42"/>
-<area shape="rect" id="node1" href="./OAbstractSyncDatabaseTask.html" title="&lt;TABLE&gt;" alt="" coords="5,5,233,53"/>
-<area shape="rect" id="node2_1" href="./OSyncDatabaseDeltaTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSyncDatabaseDeltaTask" alt="" coords="26,113,213,138"/>
-<area shape="rect" id="node2" href="./OSyncDatabaseDeltaTask.html" title="&lt;TABLE&gt;" alt="" coords="15,101,223,149"/>
+<area shape="rect" id="node1_0" href="./OSyncDatabaseDeltaTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSyncDatabaseDeltaTask" alt="" coords="26,113,213,138"/>
+<area shape="rect" id="node1" href="./OSyncDatabaseDeltaTask.html" title="&lt;TABLE&gt;" alt="" coords="15,101,223,149"/>
+<area shape="rect" id="node2_1" href="./OAbstractSyncDatabaseTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OAbstractSyncDatabaseTask" alt="" coords="16,17,223,42"/>
+<area shape="rect" id="node2" href="./OAbstractSyncDatabaseTask.html" title="&lt;TABLE&gt;" alt="" coords="5,5,233,53"/>
 </map>

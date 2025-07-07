@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.exception.OException
-	c3611316 [label=<<table title="com.orientechnologies.common.exception.OException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/exception/OException.html">
+	c3611313 [label=<<table title="com.orientechnologies.common.exception.OException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/exception/OException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OException </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../common/exception/OException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.security.OSecurityAuthenticatorException
-	c3612924 [label=<<table title="com.orientechnologies.orient.server.security.OSecurityAuthenticatorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSecurityAuthenticatorException.html">
+	c3612911 [label=<<table title="com.orientechnologies.orient.server.security.OSecurityAuthenticatorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSecurityAuthenticatorException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSecurityAuthenticatorException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSecurityAuthenticatorException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.security.OSecurityAuthenticatorException extends com.orientechnologies.common.exception.OException
-	c3611316:p -> c3612924:p [dir=back,arrowtail=empty];
+	c3611313:p -> c3612911:p [dir=back,arrowtail=empty];
 }
 

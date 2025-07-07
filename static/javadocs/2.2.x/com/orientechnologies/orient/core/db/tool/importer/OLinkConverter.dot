@@ -9,20 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.db.tool.importer.OValuesConverter<T>
+	c2274303 [label=<<table title="com.orientechnologies.orient.core.db.tool.importer.OValuesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OValuesConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OValuesConverter&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OValuesConverter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.tool.importer.OLinkConverter
 	c2274304 [label=<<table title="com.orientechnologies.orient.core.db.tool.importer.OLinkConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLinkConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLinkConverter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLinkConverter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.db.tool.importer.OValuesConverter<T>
-	c2274310 [label=<<table title="com.orientechnologies.orient.core.db.tool.importer.OValuesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OValuesConverter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OValuesConverter&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OValuesConverter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.tool.importer.OLinkConverter implements com.orientechnologies.orient.core.db.tool.importer.OValuesConverter<T>
-	c2274310:p -> c2274304:p [dir=back,arrowtail=empty,style=dashed];
+	c2274303:p -> c2274304:p [dir=back,arrowtail=empty,style=dashed];
 }
 

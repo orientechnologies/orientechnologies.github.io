@@ -9,36 +9,36 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.index.OIndexRemoteMultiValue
-	c2112757 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemoteMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexRemoteMultiValue.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OIndexRemoteMultiValue </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexRemoteMultiValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.index.OIndexRemoteOneValue
-	c2112761 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemoteOneValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexRemoteOneValue.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OIndexRemoteOneValue </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexRemoteOneValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexRemote<T>
-	c2112772 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexRemote.html">
+	c2112715 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexRemote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexRemote&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexRemote.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.index.OIndexRemoteOneValue
+	c2112730 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemoteOneValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexRemoteOneValue.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OIndexRemoteOneValue </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexRemoteOneValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndex<T>
-	c2112773 [label=<<table title="com.orientechnologies.orient.core.index.OIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndex.html">
+	c2112731 [label=<<table title="com.orientechnologies.orient.core.index.OIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OIndex&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.index.OIndexRemoteMultiValue extends com.orientechnologies.orient.core.index.OIndexRemote<java.util.Collection<com.orientechnologies.orient.core.db.record.OIdentifiable>>
-	c2112772:p -> c2112757:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.index.OIndexRemoteOneValue extends com.orientechnologies.orient.core.index.OIndexRemote<com.orientechnologies.orient.core.db.record.OIdentifiable>
-	c2112772:p -> c2112761:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.orient.core.index.OIndexRemoteMultiValue
+	c2112736 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemoteMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexRemoteMultiValue.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OIndexRemoteMultiValue </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexRemoteMultiValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.OIndexRemote<T> implements com.orientechnologies.orient.core.index.OIndex<T>
-	c2112773:p -> c2112772:p [dir=back,arrowtail=empty,style=dashed];
+	c2112731:p -> c2112715:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.index.OIndexRemoteOneValue extends com.orientechnologies.orient.core.index.OIndexRemote<com.orientechnologies.orient.core.db.record.OIdentifiable>
+	c2112715:p -> c2112730:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.index.OIndexRemoteMultiValue extends com.orientechnologies.orient.core.index.OIndexRemote<java.util.Collection<com.orientechnologies.orient.core.db.record.OIdentifiable>>
+	c2112715:p -> c2112736:p [dir=back,arrowtail=empty];
 }
 

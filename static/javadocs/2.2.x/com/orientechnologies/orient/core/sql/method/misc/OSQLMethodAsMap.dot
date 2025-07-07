@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap
-	c3447396 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodAsMap.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAsMap </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodAsMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3447403 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractSQLMethod.html">
+	c3447389 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractSQLMethod.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractSQLMethod </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap
+	c3447393 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodAsMap.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodAsMap </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodAsMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3447403:p -> c3447396:p [dir=back,arrowtail=empty];
+	c3447389:p -> c3447393:p [dir=back,arrowtail=empty];
 }
 

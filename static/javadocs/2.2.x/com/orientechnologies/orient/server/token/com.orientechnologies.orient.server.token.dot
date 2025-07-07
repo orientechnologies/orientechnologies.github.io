@@ -9,47 +9,47 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.server.token.OrientJwtPayload
+	c320579 [label=<<table title="com.orientechnologies.orient.server.token.OrientJwtPayload" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientJwtPayload.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OrientJwtPayload </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OrientJwtPayload.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.token.OrientJwtHeader
 	c320580 [label=<<table title="com.orientechnologies.orient.server.token.OrientJwtHeader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientJwtHeader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OrientJwtHeader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OrientJwtHeader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.token.OBinaryTokenSerializer
-	c320581 [label=<<table title="com.orientechnologies.orient.server.token.OBinaryTokenSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinaryTokenSerializer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OBinaryTokenSerializer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OBinaryTokenSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.token.OrientTokenHandler
-	c320582 [label=<<table title="com.orientechnologies.orient.server.token.OrientTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientTokenHandler.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OrientTokenHandler </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OrientTokenHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.token.JsonWebToken
-	c320583 [label=<<table title="com.orientechnologies.orient.server.token.JsonWebToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JsonWebToken.html">
+	c320581 [label=<<table title="com.orientechnologies.orient.server.token.JsonWebToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JsonWebToken.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JsonWebToken </td></tr>
 		</table></td></tr>
 		</table>>, URL="./JsonWebToken.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.token.OrientJwtPayload
-	c320584 [label=<<table title="com.orientechnologies.orient.server.token.OrientJwtPayload" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientJwtPayload.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OrientJwtPayload </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OrientJwtPayload.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.token.DefaultKeyProvider
-	c320585 [label=<<table title="com.orientechnologies.orient.server.token.DefaultKeyProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultKeyProvider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DefaultKeyProvider </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DefaultKeyProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.token.OTokenHandlerImpl
-	c320586 [label=<<table title="com.orientechnologies.orient.server.token.OTokenHandlerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTokenHandlerImpl.html">
+	c320582 [label=<<table title="com.orientechnologies.orient.server.token.OTokenHandlerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTokenHandlerImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTokenHandlerImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTokenHandlerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.token.DefaultKeyProvider
+	c320583 [label=<<table title="com.orientechnologies.orient.server.token.DefaultKeyProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultKeyProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DefaultKeyProvider </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DefaultKeyProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.token.OrientTokenHandler
+	c320584 [label=<<table title="com.orientechnologies.orient.server.token.OrientTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientTokenHandler.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OrientTokenHandler </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OrientTokenHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.token.OBinaryTokenSerializer
+	c320585 [label=<<table title="com.orientechnologies.orient.server.token.OBinaryTokenSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinaryTokenSerializer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OBinaryTokenSerializer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OBinaryTokenSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.comparator.ODefaultComparator
-	c1418584 [label=<<table title="com.orientechnologies.common.comparator.ODefaultComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/comparator/ODefaultComparator.html">
+	c1418580 [label=<<table title="com.orientechnologies.common.comparator.ODefaultComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/comparator/ODefaultComparator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODefaultComparator </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../common/comparator/ODefaultComparator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.collate.ODefaultCollate
-	c1419434 [label=<<table title="com.orientechnologies.orient.core.collate.ODefaultCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODefaultCollate.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODefaultCollate </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODefaultCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.collate.OCollate
-	c1419436 [label=<<table title="com.orientechnologies.orient.core.collate.OCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCollate.html">
+	c1419433 [label=<<table title="com.orientechnologies.orient.core.collate.OCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCollate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCollate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.collate.ODefaultCollate
+	c1419436 [label=<<table title="com.orientechnologies.orient.core.collate.ODefaultCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODefaultCollate.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODefaultCollate </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODefaultCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.collate.ODefaultCollate extends com.orientechnologies.common.comparator.ODefaultComparator
-	c1418584:p -> c1419434:p [dir=back,arrowtail=empty];
+	c1418580:p -> c1419436:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.collate.ODefaultCollate implements com.orientechnologies.orient.core.collate.OCollate
-	c1419436:p -> c1419434:p [dir=back,arrowtail=empty,style=dashed];
+	c1419433:p -> c1419436:p [dir=back,arrowtail=empty,style=dashed];
 }
 

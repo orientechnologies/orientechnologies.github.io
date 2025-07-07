@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf
-	c3475849 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodIndexOf.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodIndexOf </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodIndexOf.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3475851 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractSQLMethod.html">
+	c3475837 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractSQLMethod.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractSQLMethod </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf
+	c3475838 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodIndexOf.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodIndexOf </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodIndexOf.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3475851:p -> c3475849:p [dir=back,arrowtail=empty];
+	c3475837:p -> c3475838:p [dir=back,arrowtail=empty];
 }
 

@@ -1,10 +1,10 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="./OCommandExecutorSQLPermissionAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract" alt="" coords="109,113,413,138"/>
 <area shape="rect" id="node1" href="./OCommandExecutorSQLPermissionAbstract.html" title="&lt;TABLE&gt;" alt="" coords="98,101,423,149"/>
-<area shape="rect" id="node2_1" href="./OCommandExecutorSQLRevoke.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLRevoke" alt="" coords="16,209,241,234"/>
-<area shape="rect" id="node2" href="./OCommandExecutorSQLRevoke.html" title="&lt;TABLE&gt;" alt="" coords="5,197,252,245"/>
+<area shape="rect" id="node3_1" href="./OCommandExecutorSQLRevoke.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLRevoke" alt="" coords="16,209,241,234"/>
+<area shape="rect" id="node3" href="./OCommandExecutorSQLRevoke.html" title="&lt;TABLE&gt;" alt="" coords="5,197,252,245"/>
 <area shape="rect" id="node4_2" href="./OCommandExecutorSQLGrant.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant" alt="" coords="286,209,499,234"/>
 <area shape="rect" id="node4" href="./OCommandExecutorSQLGrant.html" title="&lt;TABLE&gt;" alt="" coords="275,197,510,245"/>
-<area shape="rect" id="node3_3" href="./OCommandExecutorSQLAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" alt="" coords="145,17,377,42"/>
-<area shape="rect" id="node3" href="./OCommandExecutorSQLAbstract.html" title="&lt;TABLE&gt;" alt="" coords="134,5,387,53"/>
+<area shape="rect" id="node2_3" href="./OCommandExecutorSQLAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" alt="" coords="145,17,377,42"/>
+<area shape="rect" id="node2" href="./OCommandExecutorSQLAbstract.html" title="&lt;TABLE&gt;" alt="" coords="134,5,387,53"/>
 </map>

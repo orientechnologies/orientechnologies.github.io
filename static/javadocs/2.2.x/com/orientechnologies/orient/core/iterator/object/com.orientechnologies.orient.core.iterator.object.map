@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OObjectIteratorClassInterface.html" title="com.orientechnologies.orient.core.iterator.object.OObjectIteratorClassInterface" alt="" coords="16,11,259,53"/>
-<area shape="rect" id="node1" href="./OObjectIteratorClassInterface.html" title="&lt;TABLE&gt;" alt="" coords="5,5,269,59"/>
-<area shape="rect" id="node2_1" href="./OObjectIteratorClusterInterface.html" title="com.orientechnologies.orient.core.iterator.object.OObjectIteratorClusterInterface" alt="" coords="304,11,557,53"/>
-<area shape="rect" id="node2" href="./OObjectIteratorClusterInterface.html" title="&lt;TABLE&gt;" alt="" coords="293,5,568,59"/>
+<area shape="rect" id="node1_0" href="./OObjectIteratorClusterInterface.html" title="com.orientechnologies.orient.core.iterator.object.OObjectIteratorClusterInterface" alt="" coords="16,11,269,53"/>
+<area shape="rect" id="node1" href="./OObjectIteratorClusterInterface.html" title="&lt;TABLE&gt;" alt="" coords="5,5,280,59"/>
+<area shape="rect" id="node2_1" href="./OObjectIteratorClassInterface.html" title="com.orientechnologies.orient.core.iterator.object.OObjectIteratorClassInterface" alt="" coords="315,11,557,53"/>
+<area shape="rect" id="node2" href="./OObjectIteratorClassInterface.html" title="&lt;TABLE&gt;" alt="" coords="304,5,568,59"/>
 </map>

@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OrientDBDistributed.html" title="com.orientechnologies.orient.core.db.OrientDBDistributed" alt="" coords="103,118,253,143"/>
-<area shape="rect" id="node1" href="./OrientDBDistributed.html" title="&lt;TABLE&gt;" alt="" coords="92,107,264,155"/>
-<area shape="rect" id="node2_1" href="./OrientDBEmbedded.html" title="com.orientechnologies.orient.core.db.OrientDBEmbedded" alt="" coords="16,19,164,45"/>
-<area shape="rect" id="node2" href="./OrientDBEmbedded.html" title="&lt;TABLE&gt;" alt="" coords="5,8,175,56"/>
-<area shape="rect" id="node3_2" href="../../server/OServerAware.html" title="com.orientechnologies.orient.server.OServerAware" alt="" coords="210,11,322,53"/>
-<area shape="rect" id="node3" href="../../server/OServerAware.html" title="&lt;TABLE&gt;" alt="" coords="199,5,333,59"/>
-</map>

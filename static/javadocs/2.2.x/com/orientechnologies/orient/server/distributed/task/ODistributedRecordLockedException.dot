@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.concur.ONeedRetryException
-	c1548542 [label=<<table title="com.orientechnologies.common.concur.ONeedRetryException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/ONeedRetryException.html">
+	c1548540 [label=<<table title="com.orientechnologies.common.concur.ONeedRetryException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/ONeedRetryException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ONeedRetryException </font></td></tr>
 		</table></td></tr>
@@ -22,6 +22,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ODistributedRecordLockedException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.task.ODistributedRecordLockedException extends com.orientechnologies.common.concur.ONeedRetryException
-	c1548542:p -> c1550164:p [dir=back,arrowtail=empty];
+	c1548540:p -> c1550164:p [dir=back,arrowtail=empty];
 }
 

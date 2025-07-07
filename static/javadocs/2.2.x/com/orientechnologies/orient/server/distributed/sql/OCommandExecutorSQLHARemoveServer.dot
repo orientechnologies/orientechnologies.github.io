@@ -17,20 +17,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../core/command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1055300 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/OCommandExecutorSQLAbstract.html">
+	c1055297 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/OCommandExecutorSQLAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/sql/OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer
-	c1056652 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLHARemoveServer.html">
+	c1056654 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLHARemoveServer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLHARemoveServer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLHARemoveServer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1055300:p -> c1056652:p [dir=back,arrowtail=empty];
+	c1055297:p -> c1056654:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1055203:p -> c1056652:p [dir=back,arrowtail=empty,style=dashed];
+	c1055203:p -> c1056654:p [dir=back,arrowtail=empty,style=dashed];
 }
 

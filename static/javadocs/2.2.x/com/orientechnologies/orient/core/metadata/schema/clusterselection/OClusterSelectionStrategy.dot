@@ -9,52 +9,52 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.metadata.schema.clusterselection.ODefaultClusterSelectionStrategy
+	c941352 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.ODefaultClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultClusterSelectionStrategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODefaultClusterSelectionStrategy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODefaultClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.schema.clusterselection.ORoundRobinClusterSelectionStrategy
+	c941353 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.ORoundRobinClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORoundRobinClusterSelectionStrategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORoundRobinClusterSelectionStrategy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORoundRobinClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.clusterselection.OBalancedClusterSelectionStrategy
 	c941355 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OBalancedClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBalancedClusterSelectionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OBalancedClusterSelectionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBalancedClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.schema.clusterselection.ODefaultClusterSelectionStrategy
-	c941356 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.ODefaultClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultClusterSelectionStrategy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODefaultClusterSelectionStrategy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODefaultClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.schema.clusterselection.ORoundRobinClusterSelectionStrategy
-	c941357 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.ORoundRobinClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORoundRobinClusterSelectionStrategy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORoundRobinClusterSelectionStrategy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORoundRobinClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c941358 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OClusterSelectionStrategy.html">
+	c941356 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OClusterSelectionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OClusterSelectionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy
-	c942102 [label=<<table title="com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../sharding/auto/OAutoShardingClusterSelectionStrategy.html">
+	c942101 [label=<<table title="com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../sharding/auto/OAutoShardingClusterSelectionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OAutoShardingClusterSelectionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../sharding/auto/OAutoShardingClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy
-	c942793 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../server/distributed/impl/OLocalClusterWrapperStrategy.html">
+	c942810 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../server/distributed/impl/OLocalClusterWrapperStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLocalClusterWrapperStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../server/distributed/impl/OLocalClusterWrapperStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.metadata.schema.clusterselection.OBalancedClusterSelectionStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c941358:p -> c941355:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.schema.clusterselection.ODefaultClusterSelectionStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c941358:p -> c941356:p [dir=back,arrowtail=empty,style=dashed];
+	c941356:p -> c941352:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.schema.clusterselection.ORoundRobinClusterSelectionStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c941358:p -> c941357:p [dir=back,arrowtail=empty,style=dashed];
+	c941356:p -> c941353:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.metadata.schema.clusterselection.OBalancedClusterSelectionStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
+	c941356:p -> c941355:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c941358:p -> c942102:p [dir=back,arrowtail=empty,style=dashed];
+	c941356:p -> c942101:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c941358:p -> c942793:p [dir=back,arrowtail=empty,style=dashed];
+	c941356:p -> c942810:p [dir=back,arrowtail=empty,style=dashed];
 }
 

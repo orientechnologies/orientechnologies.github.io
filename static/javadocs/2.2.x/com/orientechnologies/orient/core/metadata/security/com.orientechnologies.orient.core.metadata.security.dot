@@ -9,186 +9,186 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.metadata.security.OSecurityNull
-	c93830 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityNull" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityNull.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSecurityNull </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSecurityNull.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurityTrackerHook
-	c93831 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityTrackerHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityTrackerHook.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSecurityTrackerHook </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSecurityTrackerHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OUserTrigger
-	c93832 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OUserTrigger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUserTrigger.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OUserTrigger </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OUserTrigger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.ORule
-	c93833 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORule.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORule </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.ORule.ResourceGeneric
-	c93834 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORule.ResourceGeneric" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORule.ResourceGeneric.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ResourceGeneric </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORule.ResourceGeneric.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSystemUser
-	c93835 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSystemUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSystemUser.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSystemUser </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSystemUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurityRole
-	c93836 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityRole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityRole.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OSecurityRole </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSecurityRole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurityRole.ALLOW_MODES
-	c93837 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityRole.ALLOW_MODES" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityRole.ALLOW_MODES.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> ALLOW_MODES </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSecurityRole.ALLOW_MODES.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OImmutableUser
-	c93838 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OImmutableUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OImmutableUser.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OImmutableUser </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OImmutableUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OTokenException
-	c93839 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OTokenException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTokenException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OTokenException </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTokenException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.ODatabaseSecurityResources
-	c93840 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ODatabaseSecurityResources" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseSecurityResources.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODatabaseSecurityResources </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODatabaseSecurityResources.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OImmutableRole
-	c93841 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OImmutableRole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OImmutableRole.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OImmutableRole </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OImmutableRole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OUser
-	c93842 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUser.html">
+	c93830 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OUser </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSystemRole
-	c93843 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSystemRole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSystemRole.html">
+	// com.orientechnologies.orient.core.metadata.security.ORestrictedOperation
+	c93831 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORestrictedOperation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORestrictedOperation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSystemRole </td></tr>
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> ORestrictedOperation </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSystemRole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurity
-	c93844 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurity.html">
+		</table>>, URL="./ORestrictedOperation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OImmutableRole
+	c93832 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OImmutableRole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OImmutableRole.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OSecurity </td></tr>
+<tr><td align="center" balign="center"> OImmutableRole </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSecurity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurityProxy
-	c93845 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityProxy.html">
+		</table>>, URL="./OImmutableRole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSecurityNull
+	c93833 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityNull" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityNull.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSecurityProxy </td></tr>
+<tr><td align="center" balign="center"> OSecurityNull </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSecurityProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurityShared
-	c93846 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityShared.html">
+		</table>>, URL="./OSecurityNull.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSystemUser
+	c93834 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSystemUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSystemUser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSecurityShared </td></tr>
+<tr><td align="center" balign="center"> OSystemUser </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSecurityShared.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OSystemUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OImmutableUser
+	c93835 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OImmutableUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OImmutableUser.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OImmutableUser </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OImmutableUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OSecurityUser
-	c93847 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityUser.html">
+	c93836 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityUser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSecurityUser </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSecurityUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OSecurityUser.STATUSES
-	c93848 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityUser.STATUSES" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityUser.STATUSES.html">
+	c93837 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityUser.STATUSES" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityUser.STATUSES.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> STATUSES </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSecurityUser.STATUSES.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurityExternal
-	c93849 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityExternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityExternal.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSecurityExternal </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSecurityExternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.ORestrictedOperation
-	c93850 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORestrictedOperation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORestrictedOperation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> ORestrictedOperation </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORestrictedOperation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook
-	c93851 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORestrictedAccessHook.html">
+	c93838 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORestrictedAccessHook.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORestrictedAccessHook </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORestrictedAccessHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OIdentity
-	c93852 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OIdentity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIdentity.html">
+	c93839 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OIdentity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIdentity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIdentity </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIdentity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.ODatabaseSecurityResources
+	c93840 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ODatabaseSecurityResources" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseSecurityResources.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODatabaseSecurityResources </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODatabaseSecurityResources.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.ORole
+	c93841 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORole.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORole </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSecurityRole
+	c93842 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityRole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityRole.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OSecurityRole </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSecurityRole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSecurityRole.ALLOW_MODES
+	c93843 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityRole.ALLOW_MODES" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityRole.ALLOW_MODES.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> ALLOW_MODES </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSecurityRole.ALLOW_MODES.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.ORule
+	c93844 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORule.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORule </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.ORule.ResourceGeneric
+	c93845 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORule.ResourceGeneric" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORule.ResourceGeneric.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ResourceGeneric </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORule.ResourceGeneric.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSecurityProxy
+	c93846 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityProxy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSecurityProxy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSecurityProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSecurity
+	c93847 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurity.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OSecurity </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSecurity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSystemRole
+	c93848 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSystemRole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSystemRole.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSystemRole </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSystemRole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSecurityTrackerHook
+	c93849 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityTrackerHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityTrackerHook.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSecurityTrackerHook </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSecurityTrackerHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OUserTrigger
+	c93850 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OUserTrigger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUserTrigger.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OUserTrigger </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OUserTrigger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OToken
-	c93853 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OToken.html">
+	c93851 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OToken.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OToken </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OToken.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.ORole
-	c93854 [label=<<table title="com.orientechnologies.orient.core.metadata.security.ORole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORole.html">
+	// com.orientechnologies.orient.core.metadata.security.OSecurityExternal
+	c93852 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityExternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityExternal.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORole </td></tr>
+<tr><td align="center" balign="center"> OSecurityExternal </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ORole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.metadata.security.OSecurityNull implements com.orientechnologies.orient.core.metadata.security.OSecurity
-	c93844:p -> c93830:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.metadata.security.OSystemUser extends com.orientechnologies.orient.core.metadata.security.OUser
-	c93842:p -> c93835:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.metadata.security.OImmutableUser implements com.orientechnologies.orient.core.metadata.security.OSecurityUser
-	c93847:p -> c93838:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.metadata.security.OImmutableRole implements com.orientechnologies.orient.core.metadata.security.OSecurityRole
-	c93836:p -> c93841:p [dir=back,arrowtail=empty,style=dashed];
+		</table>>, URL="./OSecurityExternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OSecurityShared
+	c93853 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityShared.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSecurityShared </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSecurityShared.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.security.OTokenException
+	c93854 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OTokenException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTokenException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OTokenException </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTokenException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.security.OUser extends com.orientechnologies.orient.core.metadata.security.OIdentity
-	c93852:p -> c93842:p [dir=back,arrowtail=empty];
+	c93839:p -> c93830:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.security.OUser implements com.orientechnologies.orient.core.metadata.security.OSecurityUser
-	c93847:p -> c93842:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.metadata.security.OSystemRole extends com.orientechnologies.orient.core.metadata.security.ORole
-	c93854:p -> c93843:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.metadata.security.OSecurityProxy implements com.orientechnologies.orient.core.metadata.security.OSecurity
-	c93844:p -> c93845:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.metadata.security.OSecurityShared implements com.orientechnologies.orient.core.metadata.security.OSecurity
-	c93844:p -> c93846:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.metadata.security.OSecurityExternal extends com.orientechnologies.orient.core.metadata.security.OSecurityShared
-	c93846:p -> c93849:p [dir=back,arrowtail=empty];
+	c93836:p -> c93830:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.metadata.security.OImmutableRole implements com.orientechnologies.orient.core.metadata.security.OSecurityRole
+	c93842:p -> c93832:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.metadata.security.OSecurityNull implements com.orientechnologies.orient.core.metadata.security.OSecurity
+	c93847:p -> c93833:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.metadata.security.OSystemUser extends com.orientechnologies.orient.core.metadata.security.OUser
+	c93830:p -> c93834:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.metadata.security.OImmutableUser implements com.orientechnologies.orient.core.metadata.security.OSecurityUser
+	c93836:p -> c93835:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.security.ORole extends com.orientechnologies.orient.core.metadata.security.OIdentity
-	c93852:p -> c93854:p [dir=back,arrowtail=empty];
+	c93839:p -> c93841:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.security.ORole implements com.orientechnologies.orient.core.metadata.security.OSecurityRole
-	c93836:p -> c93854:p [dir=back,arrowtail=empty,style=dashed];
+	c93842:p -> c93841:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.metadata.security.OSecurityProxy implements com.orientechnologies.orient.core.metadata.security.OSecurity
+	c93847:p -> c93846:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.metadata.security.OSystemRole extends com.orientechnologies.orient.core.metadata.security.ORole
+	c93841:p -> c93848:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.metadata.security.OSecurityExternal extends com.orientechnologies.orient.core.metadata.security.OSecurityShared
+	c93853:p -> c93852:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.metadata.security.OSecurityShared implements com.orientechnologies.orient.core.metadata.security.OSecurity
+	c93847:p -> c93853:p [dir=back,arrowtail=empty,style=dashed];
 }
 

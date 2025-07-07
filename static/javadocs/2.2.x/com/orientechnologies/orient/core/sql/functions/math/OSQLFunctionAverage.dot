@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract
-	c3301163 [label=<<table title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMathAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMathAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionMathAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionAverage
-	c3301165 [label=<<table title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionAverage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionAverage.html">
+	c3301157 [label=<<table title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionAverage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionAverage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionAverage </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionAverage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract
+	c3301159 [label=<<table title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMathAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMathAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionMathAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionAverage extends com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract
-	c3301163:p -> c3301165:p [dir=back,arrowtail=empty];
+	c3301159:p -> c3301157:p [dir=back,arrowtail=empty];
 }
 

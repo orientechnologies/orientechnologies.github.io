@@ -9,30 +9,30 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.cache.ORecordCacheSoftRefs
-	c2969380 [label=<<table title="com.orientechnologies.orient.core.cache.ORecordCacheSoftRefs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordCacheSoftRefs.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORecordCacheSoftRefs </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORecordCacheSoftRefs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.cache.OAbstractMapCache<T extends java.util.Map<com.orientechnologies.orient.core.id.ORID, ?>>
-	c2969382 [label=<<table title="com.orientechnologies.orient.core.cache.OAbstractMapCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractMapCache.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractMapCache&lt;T extends Map&lt;ORID, ?&gt;&gt; </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OAbstractMapCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.cache.ORecordCache
-	c2969384 [label=<<table title="com.orientechnologies.orient.core.cache.ORecordCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordCache.html">
+	c2969367 [label=<<table title="com.orientechnologies.orient.core.cache.ORecordCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORecordCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.cache.ORecordCacheSoftRefs
+	c2969368 [label=<<table title="com.orientechnologies.orient.core.cache.ORecordCacheSoftRefs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordCacheSoftRefs.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORecordCacheSoftRefs </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORecordCacheSoftRefs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.cache.OAbstractMapCache<T extends java.util.Map<com.orientechnologies.orient.core.id.ORID, ?>>
+	c2969380 [label=<<table title="com.orientechnologies.orient.core.cache.OAbstractMapCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractMapCache.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractMapCache&lt;T extends Map&lt;ORID, ?&gt;&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OAbstractMapCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.cache.ORecordCacheSoftRefs extends com.orientechnologies.orient.core.cache.OAbstractMapCache<com.orientechnologies.orient.core.cache.OSoftRefsHashMap<com.orientechnologies.orient.core.id.ORID, com.orientechnologies.orient.core.record.ORecord>>
-	c2969382:p -> c2969380:p [dir=back,arrowtail=empty];
+	c2969380:p -> c2969368:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.cache.ORecordCacheSoftRefs implements com.orientechnologies.orient.core.cache.ORecordCache
-	c2969384:p -> c2969380:p [dir=back,arrowtail=empty,style=dashed];
+	c2969367:p -> c2969368:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.cache.OAbstractMapCache<T extends java.util.Map<com.orientechnologies.orient.core.id.ORID, ?>> implements com.orientechnologies.orient.core.cache.ORecordCache
-	c2969384:p -> c2969382:p [dir=back,arrowtail=empty,style=dashed];
+	c2969367:p -> c2969380:p [dir=back,arrowtail=empty,style=dashed];
 }
 

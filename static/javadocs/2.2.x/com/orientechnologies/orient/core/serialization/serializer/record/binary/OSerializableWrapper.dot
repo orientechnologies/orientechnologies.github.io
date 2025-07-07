@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.OSerializableStream
-	c3677170 [label=<<table title="com.orientechnologies.orient.core.serialization.OSerializableStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../OSerializableStream.html">
+	c3677162 [label=<<table title="com.orientechnologies.orient.core.serialization.OSerializableStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../OSerializableStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSerializableStream </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../OSerializableStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.record.binary.OSerializableWrapper
-	c3677189 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.OSerializableWrapper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSerializableWrapper.html">
+	c3677177 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.OSerializableWrapper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSerializableWrapper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSerializableWrapper </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSerializableWrapper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.serialization.serializer.record.binary.OSerializableWrapper implements com.orientechnologies.orient.core.serialization.OSerializableStream
-	c3677170:p -> c3677189:p [dir=back,arrowtail=empty,style=dashed];
+	c3677162:p -> c3677177:p [dir=back,arrowtail=empty,style=dashed];
 }
 

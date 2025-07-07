@@ -3,18 +3,18 @@
 <area shape="rect" id="node1" href="./OCommandResultListener.html" title="&lt;TABLE&gt;" alt="" coords="908,5,1119,59"/>
 <area shape="rect" id="node2_1" href="../sql/OCommandExecutorSQLUpdate.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLUpdate" alt="" coords="16,118,240,143"/>
 <area shape="rect" id="node2" href="../sql/OCommandExecutorSQLUpdate.html" title="&lt;TABLE&gt;" alt="" coords="5,107,251,155"/>
-<area shape="rect" id="node3_2" href="../sql/OCommandExecutorSQLDelete.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelete" alt="" coords="286,118,506,143"/>
-<area shape="rect" id="node3" href="../sql/OCommandExecutorSQLDelete.html" title="&lt;TABLE&gt;" alt="" coords="275,107,517,155"/>
-<area shape="rect" id="node4_3" href="../sql/OCommandExecutorSQLInsert.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLInsert" alt="" coords="551,118,766,143"/>
-<area shape="rect" id="node4" href="../sql/OCommandExecutorSQLInsert.html" title="&lt;TABLE&gt;" alt="" coords="541,107,777,155"/>
+<area shape="rect" id="node3_2" href="../sql/OCommandExecutorSQLInsert.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLInsert" alt="" coords="286,118,501,143"/>
+<area shape="rect" id="node3" href="../sql/OCommandExecutorSQLInsert.html" title="&lt;TABLE&gt;" alt="" coords="275,107,511,155"/>
+<area shape="rect" id="node4_3" href="../sql/OCommandExecutorSQLDelete.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelete" alt="" coords="546,118,766,143"/>
+<area shape="rect" id="node4" href="../sql/OCommandExecutorSQLDelete.html" title="&lt;TABLE&gt;" alt="" coords="535,107,777,155"/>
 <area shape="rect" id="node5_4" href="../sql/query/OLocalLiveResultListener.html" title="com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener" alt="" coords="812,118,996,143"/>
 <area shape="rect" id="node5" href="../sql/query/OLocalLiveResultListener.html" title="&lt;TABLE&gt;" alt="" coords="801,107,1007,155"/>
 <area shape="rect" id="node6_5" href="../sql/query/OSQLSynchQuery.html" title="com.orientechnologies.orient.core.sql.query.OSQLSynchQuery" alt="" coords="1041,118,1204,143"/>
 <area shape="rect" id="node6" href="../sql/query/OSQLSynchQuery.html" title="&lt;TABLE&gt;" alt="" coords="1031,107,1215,155"/>
 <area shape="rect" id="node7_6" href="../../server/network/protocol/binary/OAbstractCommandResultListener.html" title="com.orientechnologies.orient.server.network.protocol.binary.OAbstractCommandResultListener" alt="" coords="1250,118,1494,143"/>
 <area shape="rect" id="node7" href="../../server/network/protocol/binary/OAbstractCommandResultListener.html" title="&lt;TABLE&gt;" alt="" coords="1239,107,1505,155"/>
-<area shape="rect" id="node8_7" href="../../graph/sql/OCommandExecutorSQLDeleteVertex.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex" alt="" coords="1539,118,1802,143"/>
-<area shape="rect" id="node8" href="../../graph/sql/OCommandExecutorSQLDeleteVertex.html" title="&lt;TABLE&gt;" alt="" coords="1529,107,1813,155"/>
-<area shape="rect" id="node9_8" href="../../graph/sql/OCommandExecutorSQLDeleteEdge.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteEdge" alt="" coords="1847,118,2099,143"/>
-<area shape="rect" id="node9" href="../../graph/sql/OCommandExecutorSQLDeleteEdge.html" title="&lt;TABLE&gt;" alt="" coords="1837,107,2110,155"/>
+<area shape="rect" id="node8_7" href="../../graph/sql/OCommandExecutorSQLDeleteEdge.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteEdge" alt="" coords="1539,118,1791,143"/>
+<area shape="rect" id="node8" href="../../graph/sql/OCommandExecutorSQLDeleteEdge.html" title="&lt;TABLE&gt;" alt="" coords="1529,107,1802,155"/>
+<area shape="rect" id="node9_8" href="../../graph/sql/OCommandExecutorSQLDeleteVertex.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex" alt="" coords="1837,118,2099,143"/>
+<area shape="rect" id="node9" href="../../graph/sql/OCommandExecutorSQLDeleteVertex.html" title="&lt;TABLE&gt;" alt="" coords="1826,107,2110,155"/>
 </map>

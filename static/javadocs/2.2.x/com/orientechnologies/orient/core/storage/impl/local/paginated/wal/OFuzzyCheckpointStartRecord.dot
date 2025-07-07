@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord
-	c1819883 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractCheckPointStartRecord.html">
+	c1819876 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractCheckPointStartRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractCheckPointStartRecord </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractCheckPointStartRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointStartRecord
-	c1819898 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointStartRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFuzzyCheckpointStartRecord.html">
+	c1819891 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointStartRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFuzzyCheckpointStartRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OFuzzyCheckpointStartRecord </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OFuzzyCheckpointStartRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointStartRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord
-	c1819883:p -> c1819898:p [dir=back,arrowtail=empty];
+	c1819876:p -> c1819891:p [dir=back,arrowtail=empty];
 }
 

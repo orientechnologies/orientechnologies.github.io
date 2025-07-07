@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandDocumentAbstract
-	c3777463 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandDocumentAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandDocumentAbstract.html">
+	c3777459 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandDocumentAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandDocumentAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandDocumentAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandDocumentAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.patch.OServerCommandPatchDocument
-	c3777477 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.patch.OServerCommandPatchDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPatchDocument.html">
+	c3777471 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.patch.OServerCommandPatchDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPatchDocument.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandPatchDocument </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandPatchDocument.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.patch.OServerCommandPatchDocument extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandDocumentAbstract
-	c3777463:p -> c3777477:p [dir=back,arrowtail=empty];
+	c3777459:p -> c3777471:p [dir=back,arrowtail=empty];
 }
 

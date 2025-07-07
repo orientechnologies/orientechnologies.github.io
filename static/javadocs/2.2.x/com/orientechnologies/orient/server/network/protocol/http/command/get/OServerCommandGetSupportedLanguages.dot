@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetSupportedLanguages
-	c3771351 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetSupportedLanguages" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetSupportedLanguages.html">
+	c3771342 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetSupportedLanguages" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetSupportedLanguages.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandGetSupportedLanguages </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandGetSupportedLanguages.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract
-	c3771368 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedDbAbstract.html">
+	c3771367 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedDbAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAuthenticatedDbAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandAuthenticatedDbAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetSupportedLanguages extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract
-	c3771368:p -> c3771351:p [dir=back,arrowtail=empty];
+	c3771367:p -> c3771342:p [dir=back,arrowtail=empty];
 }
 

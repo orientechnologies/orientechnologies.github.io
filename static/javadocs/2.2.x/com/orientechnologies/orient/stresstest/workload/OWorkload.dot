@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.stresstest.workload.OBaseWorkload
-	c4384907 [label=<<table title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBaseWorkload.html">
+	c4384901 [label=<<table title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBaseWorkload.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OBaseWorkload </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBaseWorkload.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.stresstest.workload.OWorkload
-	c4384910 [label=<<table title="com.orientechnologies.orient.stresstest.workload.OWorkload" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OWorkload.html">
+	c4384906 [label=<<table title="com.orientechnologies.orient.stresstest.workload.OWorkload" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OWorkload.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OWorkload </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OWorkload.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.stresstest.workload.OBaseWorkload implements com.orientechnologies.orient.stresstest.workload.OWorkload
-	c4384910:p -> c4384907:p [dir=back,arrowtail=empty,style=dashed];
+	c4384906:p -> c4384901:p [dir=back,arrowtail=empty,style=dashed];
 }
 

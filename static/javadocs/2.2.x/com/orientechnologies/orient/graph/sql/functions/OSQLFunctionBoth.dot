@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3304113 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMove.html">
+	c3304118 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMove.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMove </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionMove.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBoth
-	c3304130 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBoth" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionBoth.html">
+	c3304123 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBoth" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionBoth.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionBoth </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionBoth.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBoth extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3304113:p -> c3304130:p [dir=back,arrowtail=empty];
+	c3304118:p -> c3304123:p [dir=back,arrowtail=empty];
 }
 

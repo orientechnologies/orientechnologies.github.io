@@ -10,26 +10,26 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.index.OCompositeKey
-	c2370859 [label=<<table title="com.orientechnologies.orient.core.index.OCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/index/OCompositeKey.html">
+	c2370838 [label=<<table title="com.orientechnologies.orient.core.index.OCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/index/OCompositeKey.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCompositeKey </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/index/OCompositeKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.lucene.collections.OFullTextCompositeKey
-	c2371473 [label=<<table title="com.orientechnologies.lucene.collections.OFullTextCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OFullTextCompositeKey.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OFullTextCompositeKey </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OFullTextCompositeKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.collections.OLuceneCompositeKey
-	c2371475 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneCompositeKey.html">
+	c2371466 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneCompositeKey.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLuceneCompositeKey </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneCompositeKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.lucene.collections.OFullTextCompositeKey extends com.orientechnologies.lucene.collections.OLuceneCompositeKey
-	c2371475:p -> c2371473:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.lucene.collections.OFullTextCompositeKey
+	c2371471 [label=<<table title="com.orientechnologies.lucene.collections.OFullTextCompositeKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OFullTextCompositeKey.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OFullTextCompositeKey </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OFullTextCompositeKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.lucene.collections.OLuceneCompositeKey extends com.orientechnologies.orient.core.index.OCompositeKey
-	c2370859:p -> c2371475:p [dir=back,arrowtail=empty];
+	c2370838:p -> c2371466:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.lucene.collections.OFullTextCompositeKey extends com.orientechnologies.lucene.collections.OLuceneCompositeKey
+	c2371466:p -> c2371471:p [dir=back,arrowtail=empty];
 }
 

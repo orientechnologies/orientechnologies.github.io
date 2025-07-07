@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OAuditingService.html" title="com.orientechnologies.orient.server.security.OAuditingService" alt="" coords="16,112,148,155"/>
-<area shape="rect" id="node1" href="./OAuditingService.html" title="&lt;TABLE&gt;" alt="" coords="5,107,159,160"/>
-<area shape="rect" id="node2_1" href="./OSecurityComponent.html" title="com.orientechnologies.orient.server.security.OSecurityComponent" alt="" coords="189,11,346,53"/>
-<area shape="rect" id="node2" href="./OSecurityComponent.html" title="&lt;TABLE&gt;" alt="" coords="178,5,357,59"/>
-<area shape="rect" id="node3_2" href="./OPasswordValidator.html" title="com.orientechnologies.orient.server.security.OPasswordValidator" alt="" coords="193,112,341,155"/>
-<area shape="rect" id="node3" href="./OPasswordValidator.html" title="&lt;TABLE&gt;" alt="" coords="183,107,352,160"/>
-<area shape="rect" id="node4_3" href="./OSecurityAuthenticator.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticator" alt="" coords="387,112,558,155"/>
-<area shape="rect" id="node4" href="./OSecurityAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="377,107,569,160"/>
+<area shape="rect" id="node1_0" href="./OPasswordValidator.html" title="com.orientechnologies.orient.server.security.OPasswordValidator" alt="" coords="16,112,164,155"/>
+<area shape="rect" id="node1" href="./OPasswordValidator.html" title="&lt;TABLE&gt;" alt="" coords="5,107,175,160"/>
+<area shape="rect" id="node2_1" href="./OSecurityAuthenticator.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticator" alt="" coords="210,112,381,155"/>
+<area shape="rect" id="node2" href="./OSecurityAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="199,107,391,160"/>
+<area shape="rect" id="node3_2" href="./OAuditingService.html" title="com.orientechnologies.orient.server.security.OAuditingService" alt="" coords="427,112,559,155"/>
+<area shape="rect" id="node3" href="./OAuditingService.html" title="&lt;TABLE&gt;" alt="" coords="416,107,569,160"/>
+<area shape="rect" id="node4_3" href="./OSecurityComponent.html" title="com.orientechnologies.orient.server.security.OSecurityComponent" alt="" coords="217,11,374,53"/>
+<area shape="rect" id="node4" href="./OSecurityComponent.html" title="&lt;TABLE&gt;" alt="" coords="206,5,385,59"/>
 </map>

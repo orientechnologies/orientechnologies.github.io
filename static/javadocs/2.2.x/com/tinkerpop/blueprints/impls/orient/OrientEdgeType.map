@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OrientEdgeType.html" title="com.tinkerpop.blueprints.impls.orient.OrientEdgeType" alt="" coords="27,113,149,138"/>
-<area shape="rect" id="node1" href="./OrientEdgeType.html" title="&lt;TABLE&gt;" alt="" coords="17,101,159,149"/>
-<area shape="rect" id="node2_1" href="./OrientElementType.html" title="com.tinkerpop.blueprints.impls.orient.OrientElementType" alt="" coords="16,17,160,42"/>
-<area shape="rect" id="node2" href="./OrientElementType.html" title="&lt;TABLE&gt;" alt="" coords="5,5,171,53"/>
+<area shape="rect" id="node1_0" href="./OrientElementType.html" title="com.tinkerpop.blueprints.impls.orient.OrientElementType" alt="" coords="16,17,160,42"/>
+<area shape="rect" id="node1" href="./OrientElementType.html" title="&lt;TABLE&gt;" alt="" coords="5,5,171,53"/>
+<area shape="rect" id="node2_1" href="./OrientEdgeType.html" title="com.tinkerpop.blueprints.impls.orient.OrientEdgeType" alt="" coords="27,113,149,138"/>
+<area shape="rect" id="node2" href="./OrientEdgeType.html" title="&lt;TABLE&gt;" alt="" coords="17,101,159,149"/>
 </map>

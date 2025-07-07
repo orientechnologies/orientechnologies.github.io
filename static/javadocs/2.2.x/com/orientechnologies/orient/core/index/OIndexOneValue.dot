@@ -9,35 +9,35 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.index.OIndexOneValue
+	c2102573 [label=<<table title="com.orientechnologies.orient.core.index.OIndexOneValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexOneValue.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexOneValue </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexOneValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexDictionary
-	c2102563 [label=<<table title="com.orientechnologies.orient.core.index.OIndexDictionary" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexDictionary.html">
+	c2102577 [label=<<table title="com.orientechnologies.orient.core.index.OIndexDictionary" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexDictionary.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OIndexDictionary </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexDictionary.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexAbstract<T>
-	c2102569 [label=<<table title="com.orientechnologies.orient.core.index.OIndexAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexAbstract.html">
+	c2102600 [label=<<table title="com.orientechnologies.orient.core.index.OIndexAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexAbstract&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexUnique
-	c2102615 [label=<<table title="com.orientechnologies.orient.core.index.OIndexUnique" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexUnique.html">
+	c2102605 [label=<<table title="com.orientechnologies.orient.core.index.OIndexUnique" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexUnique.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OIndexUnique </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexUnique.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.index.OIndexOneValue
-	c2102617 [label=<<table title="com.orientechnologies.orient.core.index.OIndexOneValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexOneValue.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexOneValue </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexOneValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.index.OIndexDictionary extends com.orientechnologies.orient.core.index.OIndexOneValue
-	c2102617:p -> c2102563:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.index.OIndexUnique extends com.orientechnologies.orient.core.index.OIndexOneValue
-	c2102617:p -> c2102615:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.index.OIndexOneValue extends com.orientechnologies.orient.core.index.OIndexAbstract<com.orientechnologies.orient.core.db.record.OIdentifiable>
-	c2102569:p -> c2102617:p [dir=back,arrowtail=empty];
+	c2102600:p -> c2102573:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.index.OIndexDictionary extends com.orientechnologies.orient.core.index.OIndexOneValue
+	c2102573:p -> c2102577:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.index.OIndexUnique extends com.orientechnologies.orient.core.index.OIndexOneValue
+	c2102573:p -> c2102605:p [dir=back,arrowtail=empty];
 }
 

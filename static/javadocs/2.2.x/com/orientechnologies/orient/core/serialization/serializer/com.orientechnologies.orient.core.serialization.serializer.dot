@@ -9,18 +9,18 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.serialization.serializer.ONetworkThreadLocalSerializer
-	c173704 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.ONetworkThreadLocalSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONetworkThreadLocalSerializer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ONetworkThreadLocalSerializer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ONetworkThreadLocalSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.OJSONWriter
-	c173705 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.OJSONWriter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OJSONWriter.html">
+	c173704 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.OJSONWriter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OJSONWriter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OJSONWriter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OJSONWriter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.serialization.serializer.ONetworkThreadLocalSerializer
+	c173705 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.ONetworkThreadLocalSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONetworkThreadLocalSerializer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ONetworkThreadLocalSerializer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ONetworkThreadLocalSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.OStringSerializerHelper
 	c173706 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.OStringSerializerHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStringSerializerHelper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

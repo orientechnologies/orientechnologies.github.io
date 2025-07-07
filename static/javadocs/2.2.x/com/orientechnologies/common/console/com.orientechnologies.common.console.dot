@@ -9,70 +9,70 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.common.console.OConsoleApplication
-	c34665 [label=<<table title="com.orientechnologies.common.console.OConsoleApplication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleApplication.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OConsoleApplication </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OConsoleApplication.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.console.OConsoleApplication.RESULT
-	c34666 [label=<<table title="com.orientechnologies.common.console.OConsoleApplication.RESULT" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleApplication.RESULT.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> RESULT </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OConsoleApplication.RESULT.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.console.ODefaultConsoleReader
-	c34667 [label=<<table title="com.orientechnologies.common.console.ODefaultConsoleReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultConsoleReader.html">
+	c34665 [label=<<table title="com.orientechnologies.common.console.ODefaultConsoleReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultConsoleReader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODefaultConsoleReader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODefaultConsoleReader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.console.ODFACommandStream
-	c34668 [label=<<table title="com.orientechnologies.common.console.ODFACommandStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODFACommandStream.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODFACommandStream </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODFACommandStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.console.OConsoleReader
-	c34669 [label=<<table title="com.orientechnologies.common.console.OConsoleReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleReader.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OConsoleReader </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OConsoleReader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.console.OCommandStream
-	c34670 [label=<<table title="com.orientechnologies.common.console.OCommandStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandStream.html">
+	c34666 [label=<<table title="com.orientechnologies.common.console.OCommandStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandStream </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.console.OScannerCommandStream
-	c34671 [label=<<table title="com.orientechnologies.common.console.OScannerCommandStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScannerCommandStream.html">
+	c34667 [label=<<table title="com.orientechnologies.common.console.OScannerCommandStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScannerCommandStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OScannerCommandStream </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OScannerCommandStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.console.TTYConsoleReader
-	c34672 [label=<<table title="com.orientechnologies.common.console.TTYConsoleReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TTYConsoleReader.html">
+	// com.orientechnologies.common.console.OConsoleReader
+	c34668 [label=<<table title="com.orientechnologies.common.console.OConsoleReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleReader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> TTYConsoleReader </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OConsoleReader </td></tr>
 		</table></td></tr>
-		</table>>, URL="./TTYConsoleReader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OConsoleReader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.console.OConsoleCommandCollection
-	c34673 [label=<<table title="com.orientechnologies.common.console.OConsoleCommandCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleCommandCollection.html">
+	c34669 [label=<<table title="com.orientechnologies.common.console.OConsoleCommandCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleCommandCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OConsoleCommandCollection </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OConsoleCommandCollection.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.console.OConsoleApplication
+	c34670 [label=<<table title="com.orientechnologies.common.console.OConsoleApplication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleApplication.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OConsoleApplication </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OConsoleApplication.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.console.OConsoleApplication.RESULT
+	c34671 [label=<<table title="com.orientechnologies.common.console.OConsoleApplication.RESULT" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleApplication.RESULT.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> RESULT </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OConsoleApplication.RESULT.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.console.ODFACommandStream
+	c34672 [label=<<table title="com.orientechnologies.common.console.ODFACommandStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODFACommandStream.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODFACommandStream </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODFACommandStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.console.TTYConsoleReader
+	c34673 [label=<<table title="com.orientechnologies.common.console.TTYConsoleReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TTYConsoleReader.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TTYConsoleReader </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TTYConsoleReader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.console.ODefaultConsoleReader implements com.orientechnologies.common.console.OConsoleReader
-	c34669:p -> c34667:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.common.console.ODFACommandStream implements com.orientechnologies.common.console.OCommandStream
-	c34670:p -> c34668:p [dir=back,arrowtail=empty,style=dashed];
+	c34668:p -> c34665:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.common.console.OScannerCommandStream implements com.orientechnologies.common.console.OCommandStream
-	c34670:p -> c34671:p [dir=back,arrowtail=empty,style=dashed];
+	c34666:p -> c34667:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.common.console.ODFACommandStream implements com.orientechnologies.common.console.OCommandStream
+	c34666:p -> c34672:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.common.console.TTYConsoleReader implements com.orientechnologies.common.console.OConsoleReader
-	c34669:p -> c34672:p [dir=back,arrowtail=empty,style=dashed];
+	c34668:p -> c34673:p [dir=back,arrowtail=empty,style=dashed];
 }
 

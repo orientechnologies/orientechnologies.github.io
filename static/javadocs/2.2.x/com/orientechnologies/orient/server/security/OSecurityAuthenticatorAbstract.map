@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OSecurityAuthenticatorAbstract.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticatorAbstract" alt="" coords="246,118,470,143"/>
-<area shape="rect" id="node1" href="./OSecurityAuthenticatorAbstract.html" title="&lt;TABLE&gt;" alt="" coords="235,107,481,155"/>
-<area shape="rect" id="node3_1" href="./authenticator/OSystemUserAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator" alt="" coords="16,214,212,239"/>
-<area shape="rect" id="node3" href="./authenticator/OSystemUserAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="5,203,223,251"/>
-<area shape="rect" id="node4_2" href="./authenticator/OServerConfigAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.OServerConfigAuthenticator" alt="" coords="258,214,458,239"/>
-<area shape="rect" id="node4" href="./authenticator/OServerConfigAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="247,203,469,251"/>
-<area shape="rect" id="node5_3" href="./authenticator/ODefaultPasswordAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.ODefaultPasswordAuthenticator" alt="" coords="503,214,730,239"/>
-<area shape="rect" id="node5" href="./authenticator/ODefaultPasswordAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="493,203,741,251"/>
-<area shape="rect" id="node2_4" href="./OSecurityAuthenticator.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticator" alt="" coords="273,11,443,53"/>
-<area shape="rect" id="node2" href="./OSecurityAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="262,5,454,59"/>
+<area shape="rect" id="node1_0" href="./OSecurityAuthenticator.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticator" alt="" coords="301,11,472,53"/>
+<area shape="rect" id="node1" href="./OSecurityAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="291,5,483,59"/>
+<area shape="rect" id="node2_1" href="./OSecurityAuthenticatorAbstract.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticatorAbstract" alt="" coords="275,118,499,143"/>
+<area shape="rect" id="node2" href="./OSecurityAuthenticatorAbstract.html" title="&lt;TABLE&gt;" alt="" coords="264,107,509,155"/>
+<area shape="rect" id="node3_2" href="./authenticator/ODefaultPasswordAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.ODefaultPasswordAuthenticator" alt="" coords="16,214,243,239"/>
+<area shape="rect" id="node3" href="./authenticator/ODefaultPasswordAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="5,203,253,251"/>
+<area shape="rect" id="node4_3" href="./authenticator/OSystemUserAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator" alt="" coords="289,214,485,239"/>
+<area shape="rect" id="node4" href="./authenticator/OSystemUserAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="278,203,495,251"/>
+<area shape="rect" id="node5_4" href="./authenticator/OServerConfigAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.OServerConfigAuthenticator" alt="" coords="531,214,731,239"/>
+<area shape="rect" id="node5" href="./authenticator/OServerConfigAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="520,203,741,251"/>
 </map>

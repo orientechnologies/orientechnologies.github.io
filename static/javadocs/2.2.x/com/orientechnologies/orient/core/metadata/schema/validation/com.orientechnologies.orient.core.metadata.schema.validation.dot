@@ -9,29 +9,29 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.metadata.schema.validation.ValidationBinaryComparable
+	c99964 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.validation.ValidationBinaryComparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValidationBinaryComparable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ValidationBinaryComparable </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ValidationBinaryComparable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.validation.ValidationMapComparable
-	c99964 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.validation.ValidationMapComparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValidationMapComparable.html">
+	c99965 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.validation.ValidationMapComparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValidationMapComparable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ValidationMapComparable </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ValidationMapComparable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.schema.validation.ValidationStringComparable
-	c99965 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.validation.ValidationStringComparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValidationStringComparable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ValidationStringComparable </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ValidationStringComparable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.validation.ValidationCollectionComparable
 	c99966 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.validation.ValidationCollectionComparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValidationCollectionComparable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ValidationCollectionComparable </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ValidationCollectionComparable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.schema.validation.ValidationBinaryComparable
-	c99967 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.validation.ValidationBinaryComparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValidationBinaryComparable.html">
+	// com.orientechnologies.orient.core.metadata.schema.validation.ValidationStringComparable
+	c99967 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.validation.ValidationStringComparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValidationStringComparable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ValidationBinaryComparable </td></tr>
+<tr><td align="center" balign="center"> ValidationStringComparable </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ValidationBinaryComparable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ValidationStringComparable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.ODistributedSyncConfiguration
-	c1582668 [label=<<table title="com.orientechnologies.orient.server.distributed.ODistributedSyncConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedSyncConfiguration.html">
+	c1582666 [label=<<table title="com.orientechnologies.orient.server.distributed.ODistributedSyncConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedSyncConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedSyncConfiguration </td></tr>
 		</table></td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerHelper
-	c4077539 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStreamSerializerHelper.html">
+	c4077536 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStreamSerializerHelper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStreamSerializerHelper </td></tr>
 		</table></td></tr>

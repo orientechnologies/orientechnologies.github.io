@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.metadata.schema.OImmutableClass
-	c1996027 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OImmutableClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OImmutableClass.html">
+	c1996028 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OImmutableClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OImmutableClass.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OImmutableClass </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OImmutableClass.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.OClass
-	c1996034 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OClass.html">
+	c1996032 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OClass.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OClass </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OClass.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.schema.OImmutableClass implements com.orientechnologies.orient.core.metadata.schema.OClass
-	c1996034:p -> c1996027:p [dir=back,arrowtail=empty,style=dashed];
+	c1996032:p -> c1996028:p [dir=back,arrowtail=empty,style=dashed];
 }
 

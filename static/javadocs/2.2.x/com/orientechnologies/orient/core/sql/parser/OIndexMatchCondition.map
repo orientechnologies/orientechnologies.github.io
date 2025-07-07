@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OIndexMatchCondition.html" title="com.orientechnologies.orient.core.sql.parser.OIndexMatchCondition" alt="" coords="16,113,184,138"/>
-<area shape="rect" id="node1" href="./OIndexMatchCondition.html" title="&lt;TABLE&gt;" alt="" coords="5,101,195,149"/>
-<area shape="rect" id="node2_1" href="./OBooleanExpression.html" title="com.orientechnologies.orient.core.sql.parser.OBooleanExpression" alt="" coords="23,17,177,42"/>
-<area shape="rect" id="node2" href="./OBooleanExpression.html" title="&lt;TABLE&gt;" alt="" coords="13,5,187,53"/>
+<area shape="rect" id="node1_0" href="./OBooleanExpression.html" title="com.orientechnologies.orient.core.sql.parser.OBooleanExpression" alt="" coords="23,17,177,42"/>
+<area shape="rect" id="node1" href="./OBooleanExpression.html" title="&lt;TABLE&gt;" alt="" coords="13,5,187,53"/>
+<area shape="rect" id="node2_1" href="./OIndexMatchCondition.html" title="com.orientechnologies.orient.core.sql.parser.OIndexMatchCondition" alt="" coords="16,113,184,138"/>
+<area shape="rect" id="node2" href="./OIndexMatchCondition.html" title="&lt;TABLE&gt;" alt="" coords="5,101,195,149"/>
 </map>

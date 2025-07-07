@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../orient/server/plugin/OServerPluginAbstract.html" title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" alt="" coords="16,19,181,45"/>
-<area shape="rect" id="node1" href="../../orient/server/plugin/OServerPluginAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,8,192,56"/>
-<area shape="rect" id="node3_1" href="./ODefaultSyslog.html" title="com.orientechnologies.security.syslog.ODefaultSyslog" alt="" coords="125,118,245,143"/>
-<area shape="rect" id="node3" href="./ODefaultSyslog.html" title="&lt;TABLE&gt;" alt="" coords="115,107,256,155"/>
-<area shape="rect" id="node2_2" href="../../orient/server/security/OSyslog.html" title="com.orientechnologies.orient.server.security.OSyslog" alt="" coords="227,11,320,53"/>
-<area shape="rect" id="node2" href="../../orient/server/security/OSyslog.html" title="&lt;TABLE&gt;" alt="" coords="216,5,331,59"/>
-</map>

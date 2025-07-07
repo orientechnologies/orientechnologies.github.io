@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.config.OServerResourceConfiguration
-	c3866691 [label=<<table title="com.orientechnologies.orient.server.config.OServerResourceConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerResourceConfiguration.html">
+	c3866686 [label=<<table title="com.orientechnologies.orient.server.config.OServerResourceConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerResourceConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerResourceConfiguration </td></tr>
 		</table></td></tr>

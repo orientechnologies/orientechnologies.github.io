@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OIndexDictionary.html" title="com.orientechnologies.orient.core.index.OIndexDictionary" alt="" coords="16,113,148,138"/>
-<area shape="rect" id="node1" href="./OIndexDictionary.html" title="&lt;TABLE&gt;" alt="" coords="5,101,159,149"/>
-<area shape="rect" id="node2_1" href="./OIndexOneValue.html" title="com.orientechnologies.orient.core.index.OIndexOneValue" alt="" coords="18,17,146,42"/>
-<area shape="rect" id="node2" href="./OIndexOneValue.html" title="&lt;TABLE&gt;" alt="" coords="7,5,157,53"/>
+<area shape="rect" id="node1_0" href="./OIndexOneValue.html" title="com.orientechnologies.orient.core.index.OIndexOneValue" alt="" coords="18,17,146,42"/>
+<area shape="rect" id="node1" href="./OIndexOneValue.html" title="&lt;TABLE&gt;" alt="" coords="7,5,157,53"/>
+<area shape="rect" id="node2_1" href="./OIndexDictionary.html" title="com.orientechnologies.orient.core.index.OIndexDictionary" alt="" coords="16,113,148,138"/>
+<area shape="rect" id="node2" href="./OIndexDictionary.html" title="&lt;TABLE&gt;" alt="" coords="5,101,159,149"/>
 </map>

@@ -10,38 +10,38 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.OTokenHandler
-	c4508914 [label=<<table title="com.orientechnologies.orient.server.OTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OTokenHandler.html">
+	c4508898 [label=<<table title="com.orientechnologies.orient.server.OTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OTokenHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OTokenHandler </td></tr>
 		</table></td></tr>
 		</table>>, URL="../OTokenHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.token.OrientTokenHandler
-	c4508920 [label=<<table title="com.orientechnologies.orient.server.token.OrientTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientTokenHandler.html">
+	c4508917 [label=<<table title="com.orientechnologies.orient.server.token.OrientTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientTokenHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OrientTokenHandler </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OrientTokenHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
+	c4508922 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../plugin/OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.plugin.OServerPlugin
-	c4508927 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPlugin.html">
+	c4508923 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OServerPlugin </td></tr>
 		</table></td></tr>
 		</table>>, URL="../plugin/OServerPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c4508931 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../plugin/OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.token.OrientTokenHandler extends com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c4508931:p -> c4508920:p [dir=back,arrowtail=empty];
+	c4508922:p -> c4508917:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.token.OrientTokenHandler implements com.orientechnologies.orient.server.OTokenHandler
-	c4508914:p -> c4508920:p [dir=back,arrowtail=empty,style=dashed];
+	c4508898:p -> c4508917:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.server.token.OrientTokenHandler implements com.orientechnologies.orient.server.plugin.OServerPlugin
-	c4508927:p -> c4508920:p [dir=back,arrowtail=empty,style=dashed];
+	c4508923:p -> c4508917:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.server.plugin.OServerPluginAbstract implements com.orientechnologies.orient.server.plugin.OServerPlugin
-	c4508927:p -> c4508931:p [dir=back,arrowtail=empty,style=dashed];
+	c4508923:p -> c4508922:p [dir=back,arrowtail=empty,style=dashed];
 }
 

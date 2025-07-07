@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.parser.OQueryStatement
-	c2931089 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OQueryStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OQueryStatement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OQueryStatement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OQueryStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.SimpleNode
-	c2931165 [label=<<table title="com.orientechnologies.orient.core.sql.parser.SimpleNode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SimpleNode.html">
+	c2931057 [label=<<table title="com.orientechnologies.orient.core.sql.parser.SimpleNode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SimpleNode.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SimpleNode </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SimpleNode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.parser.OQueryStatement
+	c2931142 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OQueryStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OQueryStatement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OQueryStatement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OQueryStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OQueryStatement extends com.orientechnologies.orient.core.sql.parser.SimpleNode
-	c2931165:p -> c2931089:p [dir=back,arrowtail=empty];
+	c2931057:p -> c2931142:p [dir=back,arrowtail=empty];
 }
 

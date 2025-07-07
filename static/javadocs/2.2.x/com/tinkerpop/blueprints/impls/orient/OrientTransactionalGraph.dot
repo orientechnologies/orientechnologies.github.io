@@ -9,32 +9,32 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.tinkerpop.blueprints.impls.orient.OrientTransactionalGraph
+	c4511158 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientTransactionalGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientTransactionalGraph.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OrientTransactionalGraph </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OrientTransactionalGraph.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.tinkerpop.blueprints.impls.orient.OrientGraph
 	c4511164 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientGraph.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OrientGraph </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OrientGraph.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.tinkerpop.blueprints.impls.orient.OrientTransactionalGraph
-	c4511165 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientTransactionalGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientTransactionalGraph.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OrientTransactionalGraph </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OrientTransactionalGraph.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.tinkerpop.blueprints.impls.orient.OrientBaseGraph
-	c4511172 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientBaseGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientBaseGraph.html">
+	c4511168 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientBaseGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientBaseGraph.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OrientBaseGraph </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OrientBaseGraph.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.tinkerpop.blueprints.impls.orient.OrientGraph extends com.tinkerpop.blueprints.impls.orient.OrientTransactionalGraph
-	c4511165:p -> c4511164:p [dir=back,arrowtail=empty];
 	//com.tinkerpop.blueprints.impls.orient.OrientTransactionalGraph extends com.tinkerpop.blueprints.impls.orient.OrientBaseGraph
-	c4511172:p -> c4511165:p [dir=back,arrowtail=empty];
+	c4511168:p -> c4511158:p [dir=back,arrowtail=empty];
 	//com.tinkerpop.blueprints.impls.orient.OrientTransactionalGraph implements com.tinkerpop.blueprints.TransactionalGraph
-	c4511427:p -> c4511165:p [dir=back,arrowtail=empty,style=dashed];
+	c4511421:p -> c4511158:p [dir=back,arrowtail=empty,style=dashed];
+	//com.tinkerpop.blueprints.impls.orient.OrientGraph extends com.tinkerpop.blueprints.impls.orient.OrientTransactionalGraph
+	c4511158:p -> c4511164:p [dir=back,arrowtail=empty];
 	// com.tinkerpop.blueprints.TransactionalGraph
-	c4511427 [label=<<table title="com.tinkerpop.blueprints.TransactionalGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/com/tinkerpop/blueprints/TransactionalGraph.html">
+	c4511421 [label=<<table title="com.tinkerpop.blueprints.TransactionalGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/com/tinkerpop/blueprints/TransactionalGraph.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TransactionalGraph </td></tr>

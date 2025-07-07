@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.tool.importer.ORidBagConverter
-	c3180654 [label=<<table title="com.orientechnologies.orient.core.db.tool.importer.ORidBagConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORidBagConverter.html">
+	c3180657 [label=<<table title="com.orientechnologies.orient.core.db.tool.importer.ORidBagConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORidBagConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORidBagConverter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORidBagConverter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.tool.importer.OAbstractCollectionConverter<T>
-	c3180663 [label=<<table title="com.orientechnologies.orient.core.db.tool.importer.OAbstractCollectionConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractCollectionConverter.html">
+	c3180658 [label=<<table title="com.orientechnologies.orient.core.db.tool.importer.OAbstractCollectionConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractCollectionConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractCollectionConverter&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractCollectionConverter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.tool.importer.ORidBagConverter extends com.orientechnologies.orient.core.db.tool.importer.OAbstractCollectionConverter<com.orientechnologies.orient.core.db.record.ridbag.ORidBag>
-	c3180663:p -> c3180654:p [dir=back,arrowtail=empty];
+	c3180658:p -> c3180657:p [dir=back,arrowtail=empty];
 }
 

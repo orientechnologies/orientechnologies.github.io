@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.ODistributedDatabase
-	c1513560 [label=<<table title="com.orientechnologies.orient.server.distributed.ODistributedDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedDatabase.html">
+	c1513555 [label=<<table title="com.orientechnologies.orient.server.distributed.ODistributedDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedDatabase.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODistributedDatabase </td></tr>
@@ -23,6 +23,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ODistributedDatabaseImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.ODistributedDatabaseImpl implements com.orientechnologies.orient.server.distributed.ODistributedDatabase
-	c1513560:p -> c1513803:p [dir=back,arrowtail=empty,style=dashed];
+	c1513555:p -> c1513803:p [dir=back,arrowtail=empty,style=dashed];
 }
 

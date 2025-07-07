@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.operator.OQueryOperatorEqualityNotNulls
-	c2898820 [label=<<table title="com.orientechnologies.orient.core.sql.operator.OQueryOperatorEqualityNotNulls" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OQueryOperatorEqualityNotNulls.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OQueryOperatorEqualityNotNulls </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OQueryOperatorEqualityNotNulls.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.operator.OQueryOperatorMajor
-	c2898831 [label=<<table title="com.orientechnologies.orient.core.sql.operator.OQueryOperatorMajor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OQueryOperatorMajor.html">
+	c2898817 [label=<<table title="com.orientechnologies.orient.core.sql.operator.OQueryOperatorMajor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OQueryOperatorMajor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OQueryOperatorMajor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OQueryOperatorMajor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.operator.OQueryOperatorEqualityNotNulls
+	c2898824 [label=<<table title="com.orientechnologies.orient.core.sql.operator.OQueryOperatorEqualityNotNulls" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OQueryOperatorEqualityNotNulls.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OQueryOperatorEqualityNotNulls </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OQueryOperatorEqualityNotNulls.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.operator.OQueryOperatorMajor extends com.orientechnologies.orient.core.sql.operator.OQueryOperatorEqualityNotNulls
-	c2898820:p -> c2898831:p [dir=back,arrowtail=empty];
+	c2898824:p -> c2898817:p [dir=back,arrowtail=empty];
 }
 

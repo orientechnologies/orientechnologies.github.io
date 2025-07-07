@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ORID.html" title="com.orientechnologies.orient.core.id.ORID" alt="" coords="149,11,243,53"/>
-<area shape="rect" id="node1" href="./ORID.html" title="&lt;TABLE&gt;" alt="" coords="139,5,253,59"/>
-<area shape="rect" id="node4_1" href="./ORecordId.html" title="com.orientechnologies.orient.core.id.ORecordId" alt="" coords="153,118,239,143"/>
-<area shape="rect" id="node4" href="./ORecordId.html" title="&lt;TABLE&gt;" alt="" coords="142,107,250,155"/>
-<area shape="rect" id="node2_2" href="./OImmutableRecordId.html" title="com.orientechnologies.orient.core.id.OImmutableRecordId" alt="" coords="16,214,173,239"/>
-<area shape="rect" id="node2" href="./OImmutableRecordId.html" title="&lt;TABLE&gt;" alt="" coords="5,203,184,251"/>
-<area shape="rect" id="node3_3" href="./OContextualRecordId.html" title="com.orientechnologies.orient.core.id.OContextualRecordId" alt="" coords="219,214,376,239"/>
-<area shape="rect" id="node3" href="./OContextualRecordId.html" title="&lt;TABLE&gt;" alt="" coords="208,203,387,251"/>
+<area shape="rect" id="node1_0" href="./ORecordId.html" title="com.orientechnologies.orient.core.id.ORecordId" alt="" coords="153,118,239,143"/>
+<area shape="rect" id="node1" href="./ORecordId.html" title="&lt;TABLE&gt;" alt="" coords="142,107,250,155"/>
+<area shape="rect" id="node2_1" href="./OContextualRecordId.html" title="com.orientechnologies.orient.core.id.OContextualRecordId" alt="" coords="16,214,173,239"/>
+<area shape="rect" id="node2" href="./OContextualRecordId.html" title="&lt;TABLE&gt;" alt="" coords="5,203,184,251"/>
+<area shape="rect" id="node4_2" href="./OImmutableRecordId.html" title="com.orientechnologies.orient.core.id.OImmutableRecordId" alt="" coords="219,214,376,239"/>
+<area shape="rect" id="node4" href="./OImmutableRecordId.html" title="&lt;TABLE&gt;" alt="" coords="208,203,387,251"/>
+<area shape="rect" id="node3_3" href="./ORID.html" title="com.orientechnologies.orient.core.id.ORID" alt="" coords="149,11,243,53"/>
+<area shape="rect" id="node3" href="./ORID.html" title="&lt;TABLE&gt;" alt="" coords="139,5,253,59"/>
 </map>

@@ -9,36 +9,36 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy
+	c4350039 [label=<<table title="com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OVersionRecordConflictStrategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OVersionRecordConflictStrategy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OVersionRecordConflictStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.conflict.OAutoMergeRecordConflictStrategy
-	c4350045 [label=<<table title="com.orientechnologies.orient.core.conflict.OAutoMergeRecordConflictStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAutoMergeRecordConflictStrategy.html">
+	c4350040 [label=<<table title="com.orientechnologies.orient.core.conflict.OAutoMergeRecordConflictStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAutoMergeRecordConflictStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OAutoMergeRecordConflictStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAutoMergeRecordConflictStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.conflict.OContentRecordConflictStrategy
-	c4350046 [label=<<table title="com.orientechnologies.orient.core.conflict.OContentRecordConflictStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OContentRecordConflictStrategy.html">
+	c4350041 [label=<<table title="com.orientechnologies.orient.core.conflict.OContentRecordConflictStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OContentRecordConflictStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OContentRecordConflictStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OContentRecordConflictStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy
-	c4350048 [label=<<table title="com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OVersionRecordConflictStrategy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OVersionRecordConflictStrategy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OVersionRecordConflictStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.conflict.ORecordConflictStrategy
-	c4350049 [label=<<table title="com.orientechnologies.orient.core.conflict.ORecordConflictStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordConflictStrategy.html">
+	c4350042 [label=<<table title="com.orientechnologies.orient.core.conflict.ORecordConflictStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordConflictStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORecordConflictStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordConflictStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.conflict.OAutoMergeRecordConflictStrategy extends com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy
-	c4350048:p -> c4350045:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.conflict.OContentRecordConflictStrategy extends com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy
-	c4350048:p -> c4350046:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy implements com.orientechnologies.orient.core.conflict.ORecordConflictStrategy
-	c4350049:p -> c4350048:p [dir=back,arrowtail=empty,style=dashed];
+	c4350042:p -> c4350039:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.conflict.OAutoMergeRecordConflictStrategy extends com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy
+	c4350039:p -> c4350040:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.conflict.OContentRecordConflictStrategy extends com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy
+	c4350039:p -> c4350041:p [dir=back,arrowtail=empty];
 }
 

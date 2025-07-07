@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.config.OStorageClusterConfiguration
-	c4033015 [label=<<table title="com.orientechnologies.orient.core.config.OStorageClusterConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageClusterConfiguration.html">
+	c4033005 [label=<<table title="com.orientechnologies.orient.core.config.OStorageClusterConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageClusterConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OStorageClusterConfiguration </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageClusterConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.config.OStoragePaginatedClusterConfiguration
-	c4033021 [label=<<table title="com.orientechnologies.orient.core.config.OStoragePaginatedClusterConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStoragePaginatedClusterConfiguration.html">
+	c4033011 [label=<<table title="com.orientechnologies.orient.core.config.OStoragePaginatedClusterConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStoragePaginatedClusterConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStoragePaginatedClusterConfiguration </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStoragePaginatedClusterConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.config.OStoragePaginatedClusterConfiguration implements com.orientechnologies.orient.core.config.OStorageClusterConfiguration
-	c4033015:p -> c4033021:p [dir=back,arrowtail=empty,style=dashed];
+	c4033005:p -> c4033011:p [dir=back,arrowtail=empty,style=dashed];
 }
 

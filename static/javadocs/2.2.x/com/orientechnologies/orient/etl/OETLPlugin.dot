@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c1670003 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../server/plugin/OServerPluginAbstract.html">
+	c1669998 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../server/plugin/OServerPluginAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../server/plugin/OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.etl.OETLPlugin
-	c1670400 [label=<<table title="com.orientechnologies.orient.etl.OETLPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OETLPlugin.html">
+	c1670398 [label=<<table title="com.orientechnologies.orient.etl.OETLPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OETLPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OETLPlugin </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OETLPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.etl.OETLPlugin extends com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c1670003:p -> c1670400:p [dir=back,arrowtail=empty];
+	c1669998:p -> c1670398:p [dir=back,arrowtail=empty];
 }
 

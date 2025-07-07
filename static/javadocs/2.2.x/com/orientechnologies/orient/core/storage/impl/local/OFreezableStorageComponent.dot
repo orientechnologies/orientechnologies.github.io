@@ -10,36 +10,36 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent
-	c1789369 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFreezableStorageComponent.html">
+	c1789360 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFreezableStorageComponent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OFreezableStorageComponent </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OFreezableStorageComponent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage
-	c1789372 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./paginated/OLocalPaginatedStorage.html">
+	c1789371 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./paginated/OLocalPaginatedStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLocalPaginatedStorage </td></tr>
 		</table></td></tr>
 		</table>>, URL="./paginated/OLocalPaginatedStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.ODistributedStorage
-	c1790174 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../server/distributed/impl/ODistributedStorage.html">
+	c1790186 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../server/distributed/impl/ODistributedStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedStorage </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../server/distributed/impl/ODistributedStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.engine.OLuceneIndexEngine
-	c1790248 [label=<<table title="com.orientechnologies.lucene.engine.OLuceneIndexEngine" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../lucene/engine/OLuceneIndexEngine.html">
+	c1790244 [label=<<table title="com.orientechnologies.lucene.engine.OLuceneIndexEngine" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../lucene/engine/OLuceneIndexEngine.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OLuceneIndexEngine </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../lucene/engine/OLuceneIndexEngine.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage implements com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent
-	c1789369:p -> c1789372:p [dir=back,arrowtail=empty,style=dashed];
+	c1789360:p -> c1789371:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.server.distributed.impl.ODistributedStorage implements com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent
-	c1789369:p -> c1790174:p [dir=back,arrowtail=empty,style=dashed];
+	c1789360:p -> c1790186:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.lucene.engine.OLuceneIndexEngine implements com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent
-	c1789369:p -> c1790248:p [dir=back,arrowtail=empty,style=dashed];
+	c1789360:p -> c1790244:p [dir=back,arrowtail=empty,style=dashed];
 }
 

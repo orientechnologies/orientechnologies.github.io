@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OPropertyMapIndexDefinition.html" title="com.orientechnologies.orient.core.index.OPropertyMapIndexDefinition" alt="" coords="36,113,248,138"/>
-<area shape="rect" id="node1" href="./OPropertyMapIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="25,101,259,149"/>
-<area shape="rect" id="node2_1" href="./OAbstractIndexDefinitionMultiValue.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinitionMultiValue" alt="" coords="16,17,268,42"/>
-<area shape="rect" id="node2" href="./OAbstractIndexDefinitionMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="5,5,279,53"/>
+<area shape="rect" id="node1_0" href="./OAbstractIndexDefinitionMultiValue.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinitionMultiValue" alt="" coords="16,17,268,42"/>
+<area shape="rect" id="node1" href="./OAbstractIndexDefinitionMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="5,5,279,53"/>
+<area shape="rect" id="node2_1" href="./OPropertyMapIndexDefinition.html" title="com.orientechnologies.orient.core.index.OPropertyMapIndexDefinition" alt="" coords="36,113,248,138"/>
+<area shape="rect" id="node2" href="./OPropertyMapIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="25,101,259,149"/>
 </map>

@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionTraversedEdge
-	c3412918 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionTraversedEdge" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionTraversedEdge.html">
+	c3412905 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionTraversedEdge" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionTraversedEdge.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionTraversedEdge </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionTraversedEdge.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionTraversedElement
-	c3412922 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionTraversedElement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionTraversedElement.html">
+	c3412909 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionTraversedElement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionTraversedElement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionTraversedElement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionTraversedElement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionTraversedEdge extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionTraversedElement
-	c3412922:p -> c3412918:p [dir=back,arrowtail=empty];
+	c3412909:p -> c3412905:p [dir=back,arrowtail=empty];
 }
 

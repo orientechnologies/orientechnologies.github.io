@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ONetworkThreadLocalSerializer.html" title="com.orientechnologies.orient.core.serialization.serializer.ONetworkThreadLocalSerializer" alt="" coords="16,17,240,42"/>
-<area shape="rect" id="node1" href="./ONetworkThreadLocalSerializer.html" title="&lt;TABLE&gt;" alt="" coords="5,5,251,53"/>
-<area shape="rect" id="node2_1" href="./OJSONWriter.html" title="com.orientechnologies.orient.core.serialization.serializer.OJSONWriter" alt="" coords="285,17,387,42"/>
-<area shape="rect" id="node2" href="./OJSONWriter.html" title="&lt;TABLE&gt;" alt="" coords="275,5,397,53"/>
+<area shape="rect" id="node1_0" href="./OJSONWriter.html" title="com.orientechnologies.orient.core.serialization.serializer.OJSONWriter" alt="" coords="16,17,117,42"/>
+<area shape="rect" id="node1" href="./OJSONWriter.html" title="&lt;TABLE&gt;" alt="" coords="5,5,128,53"/>
+<area shape="rect" id="node2_1" href="./ONetworkThreadLocalSerializer.html" title="com.orientechnologies.orient.core.serialization.serializer.ONetworkThreadLocalSerializer" alt="" coords="163,17,387,42"/>
+<area shape="rect" id="node2" href="./ONetworkThreadLocalSerializer.html" title="&lt;TABLE&gt;" alt="" coords="152,5,397,53"/>
 <area shape="rect" id="node3_2" href="./OStringSerializerHelper.html" title="com.orientechnologies.orient.core.serialization.serializer.OStringSerializerHelper" alt="" coords="433,17,605,42"/>
 <area shape="rect" id="node3" href="./OStringSerializerHelper.html" title="&lt;TABLE&gt;" alt="" coords="422,5,615,53"/>
 <area shape="rect" id="node4_3" href="./OJSONReader.html" title="com.orientechnologies.orient.core.serialization.serializer.OJSONReader" alt="" coords="650,17,758,42"/>

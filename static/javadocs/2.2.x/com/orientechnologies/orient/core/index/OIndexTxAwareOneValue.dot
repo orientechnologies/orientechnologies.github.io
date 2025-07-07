@@ -9,27 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.index.OIndexTxAware<T>
-	c2131031 [label=<<table title="com.orientechnologies.orient.core.index.OIndexTxAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexTxAware.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexTxAware&lt;T&gt; </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexTxAware.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.index.OIndexTxAwareOneValue
-	c2131039 [label=<<table title="com.orientechnologies.orient.core.index.OIndexTxAwareOneValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexTxAwareOneValue.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OIndexTxAwareOneValue </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexTxAwareOneValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexTxAwareDictionary
-	c2131048 [label=<<table title="com.orientechnologies.orient.core.index.OIndexTxAwareDictionary" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexTxAwareDictionary.html">
+	c2131014 [label=<<table title="com.orientechnologies.orient.core.index.OIndexTxAwareDictionary" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexTxAwareDictionary.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OIndexTxAwareDictionary </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexTxAwareDictionary.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.index.OIndexTxAwareOneValue extends com.orientechnologies.orient.core.index.OIndexTxAware<com.orientechnologies.orient.core.db.record.OIdentifiable>
-	c2131031:p -> c2131039:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.orient.core.index.OIndexTxAwareOneValue
+	c2131030 [label=<<table title="com.orientechnologies.orient.core.index.OIndexTxAwareOneValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexTxAwareOneValue.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OIndexTxAwareOneValue </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexTxAwareOneValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.index.OIndexTxAware<T>
+	c2131046 [label=<<table title="com.orientechnologies.orient.core.index.OIndexTxAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexTxAware.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexTxAware&lt;T&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexTxAware.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.OIndexTxAwareDictionary extends com.orientechnologies.orient.core.index.OIndexTxAwareOneValue
-	c2131039:p -> c2131048:p [dir=back,arrowtail=empty];
+	c2131030:p -> c2131014:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.index.OIndexTxAwareOneValue extends com.orientechnologies.orient.core.index.OIndexTxAware<com.orientechnologies.orient.core.db.record.OIdentifiable>
+	c2131046:p -> c2131030:p [dir=back,arrowtail=empty];
 }
 

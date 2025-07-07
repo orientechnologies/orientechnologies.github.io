@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.OAutoshardedStorage
-	c679824 [label=<<table title="com.orientechnologies.orient.core.storage.OAutoshardedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAutoshardedStorage.html">
+	c679826 [label=<<table title="com.orientechnologies.orient.core.storage.OAutoshardedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAutoshardedStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OAutoshardedStorage </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAutoshardedStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.ODistributedStorage
-	c680649 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../server/distributed/impl/ODistributedStorage.html">
+	c680661 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../server/distributed/impl/ODistributedStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedStorage </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../server/distributed/impl/ODistributedStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.ODistributedStorage implements com.orientechnologies.orient.core.storage.OAutoshardedStorage
-	c679824:p -> c680649:p [dir=back,arrowtail=empty,style=dashed];
+	c679826:p -> c680661:p [dir=back,arrowtail=empty,style=dashed];
 }
 

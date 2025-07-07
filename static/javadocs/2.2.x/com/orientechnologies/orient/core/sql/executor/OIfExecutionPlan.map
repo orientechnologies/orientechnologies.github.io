@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OInternalExecutionPlan.html" title="com.orientechnologies.orient.core.sql.executor.OInternalExecutionPlan" alt="" coords="16,11,187,53"/>
-<area shape="rect" id="node1" href="./OInternalExecutionPlan.html" title="&lt;TABLE&gt;" alt="" coords="5,5,197,59"/>
-<area shape="rect" id="node2_1" href="./OIfExecutionPlan.html" title="com.orientechnologies.orient.core.sql.executor.OIfExecutionPlan" alt="" coords="37,118,166,143"/>
-<area shape="rect" id="node2" href="./OIfExecutionPlan.html" title="&lt;TABLE&gt;" alt="" coords="26,107,177,155"/>
-</map>

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ORecordSerializerBinaryV0.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerBinaryV0" alt="" coords="29,118,223,143"/>
-<area shape="rect" id="node1" href="./ORecordSerializerBinaryV0.html" title="&lt;TABLE&gt;" alt="" coords="18,107,234,155"/>
-<area shape="rect" id="node2_1" href="./ORecordSerializerBinaryDebug.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerBinaryDebug" alt="" coords="16,214,236,239"/>
-<area shape="rect" id="node2" href="./ORecordSerializerBinaryDebug.html" title="&lt;TABLE&gt;" alt="" coords="5,203,247,251"/>
-<area shape="rect" id="node3_2" href="./ODocumentSerializer.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ODocumentSerializer" alt="" coords="47,11,205,53"/>
-<area shape="rect" id="node3" href="./ODocumentSerializer.html" title="&lt;TABLE&gt;" alt="" coords="37,5,215,59"/>
+<area shape="rect" id="node1_0" href="./ORecordSerializerBinaryDebug.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerBinaryDebug" alt="" coords="16,214,236,239"/>
+<area shape="rect" id="node1" href="./ORecordSerializerBinaryDebug.html" title="&lt;TABLE&gt;" alt="" coords="5,203,247,251"/>
+<area shape="rect" id="node2_1" href="./ODocumentSerializer.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ODocumentSerializer" alt="" coords="47,11,205,53"/>
+<area shape="rect" id="node2" href="./ODocumentSerializer.html" title="&lt;TABLE&gt;" alt="" coords="37,5,215,59"/>
+<area shape="rect" id="node3_2" href="./ORecordSerializerBinaryV0.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerBinaryV0" alt="" coords="29,118,223,143"/>
+<area shape="rect" id="node3" href="./ORecordSerializerBinaryV0.html" title="&lt;TABLE&gt;" alt="" coords="18,107,234,155"/>
 </map>

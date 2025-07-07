@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.record.binary.OBinaryComparator
-	c736678 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.OBinaryComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinaryComparator.html">
+	c736674 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.OBinaryComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinaryComparator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBinaryComparator </td></tr>
@@ -23,6 +23,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OBinaryComparatorV0.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.serialization.serializer.record.binary.OBinaryComparatorV0 implements com.orientechnologies.orient.core.serialization.serializer.record.binary.OBinaryComparator
-	c736678:p -> c736679:p [dir=back,arrowtail=empty,style=dashed];
+	c736674:p -> c736679:p [dir=back,arrowtail=empty,style=dashed];
 }
 

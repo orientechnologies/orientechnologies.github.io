@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract
-	c1053227 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLPermissionAbstract.html">
+	c1053218 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLPermissionAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLPermissionAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLPermissionAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant
-	c1053277 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLGrant.html">
+	c1053268 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLGrant.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLGrant </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLGrant.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract
-	c1053227:p -> c1053277:p [dir=back,arrowtail=empty];
+	c1053218:p -> c1053268:p [dir=back,arrowtail=empty];
 }
 

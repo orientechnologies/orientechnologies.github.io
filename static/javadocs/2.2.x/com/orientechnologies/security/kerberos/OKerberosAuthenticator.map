@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../orient/server/security/OSecurityAuthenticatorAbstract.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticatorAbstract" alt="" coords="16,17,240,42"/>
-<area shape="rect" id="node1" href="../../orient/server/security/OSecurityAuthenticatorAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,5,251,53"/>
-<area shape="rect" id="node2_1" href="./OKerberosAuthenticator.html" title="com.orientechnologies.security.kerberos.OKerberosAuthenticator" alt="" coords="41,113,215,138"/>
-<area shape="rect" id="node2" href="./OKerberosAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="30,101,226,149"/>
-</map>

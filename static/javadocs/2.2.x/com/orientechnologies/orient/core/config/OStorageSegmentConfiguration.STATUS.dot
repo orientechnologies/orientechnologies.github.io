@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.config.OStorageSegmentConfiguration.STATUS
-	c4061463 [label=<<table title="com.orientechnologies.orient.core.config.OStorageSegmentConfiguration.STATUS" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageSegmentConfiguration.STATUS.html">
+	c4061465 [label=<<table title="com.orientechnologies.orient.core.config.OStorageSegmentConfiguration.STATUS" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageSegmentConfiguration.STATUS.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> STATUS </td></tr>

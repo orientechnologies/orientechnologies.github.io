@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.concur.ONeedRetryException
-	c1550574 [label=<<table title="com.orientechnologies.common.concur.ONeedRetryException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/ONeedRetryException.html">
+	c1550572 [label=<<table title="com.orientechnologies.common.concur.ONeedRetryException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/ONeedRetryException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ONeedRetryException </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../common/concur/ONeedRetryException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.enterprise.channel.binary.ODistributedRedirectException
-	c1551994 [label=<<table title="com.orientechnologies.orient.enterprise.channel.binary.ODistributedRedirectException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedRedirectException.html">
+	c1551990 [label=<<table title="com.orientechnologies.orient.enterprise.channel.binary.ODistributedRedirectException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedRedirectException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedRedirectException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedRedirectException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.enterprise.channel.binary.ODistributedRedirectException extends com.orientechnologies.common.concur.ONeedRetryException
-	c1550574:p -> c1551994:p [dir=back,arrowtail=empty];
+	c1550572:p -> c1551990:p [dir=back,arrowtail=empty];
 }
 

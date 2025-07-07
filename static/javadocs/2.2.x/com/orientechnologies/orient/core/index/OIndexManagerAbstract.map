@@ -1,14 +1,14 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../../common/concur/resource/OCloseable.html" title="com.orientechnologies.common.concur.resource.OCloseable" alt="" coords="16,11,109,53"/>
 <area shape="rect" id="node1" href="../../../common/concur/resource/OCloseable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,120,59"/>
-<area shape="rect" id="node6_1" href="./OIndexManagerAbstract.html" title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" alt="" coords="169,118,345,143"/>
-<area shape="rect" id="node6" href="./OIndexManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="159,107,356,155"/>
+<area shape="rect" id="node4_1" href="./OIndexManagerAbstract.html" title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" alt="" coords="169,118,345,143"/>
+<area shape="rect" id="node4" href="./OIndexManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="159,107,356,155"/>
 <area shape="rect" id="node2_2" href="../type/ODocumentWrapperNoClass.html" title="com.orientechnologies.orient.core.type.ODocumentWrapperNoClass" alt="" coords="155,19,359,45"/>
 <area shape="rect" id="node2" href="../type/ODocumentWrapperNoClass.html" title="&lt;TABLE&gt;" alt="" coords="145,8,370,56"/>
-<area shape="rect" id="node3_3" href="./OIndexManager.html" title="com.orientechnologies.orient.core.index.OIndexManager" alt="" coords="405,11,528,53"/>
-<area shape="rect" id="node3" href="./OIndexManager.html" title="&lt;TABLE&gt;" alt="" coords="395,5,539,59"/>
-<area shape="rect" id="node4_4" href="./OIndexManagerShared.html" title="com.orientechnologies.orient.core.index.OIndexManagerShared" alt="" coords="65,214,233,239"/>
-<area shape="rect" id="node4" href="./OIndexManagerShared.html" title="&lt;TABLE&gt;" alt="" coords="55,203,244,251"/>
-<area shape="rect" id="node5_5" href="./OIndexManagerRemote.html" title="com.orientechnologies.orient.core.index.OIndexManagerRemote" alt="" coords="279,214,452,239"/>
-<area shape="rect" id="node5" href="./OIndexManagerRemote.html" title="&lt;TABLE&gt;" alt="" coords="268,203,463,251"/>
+<area shape="rect" id="node3_3" href="./OIndexManagerShared.html" title="com.orientechnologies.orient.core.index.OIndexManagerShared" alt="" coords="65,214,233,239"/>
+<area shape="rect" id="node3" href="./OIndexManagerShared.html" title="&lt;TABLE&gt;" alt="" coords="55,203,244,251"/>
+<area shape="rect" id="node6_4" href="./OIndexManagerRemote.html" title="com.orientechnologies.orient.core.index.OIndexManagerRemote" alt="" coords="279,214,452,239"/>
+<area shape="rect" id="node6" href="./OIndexManagerRemote.html" title="&lt;TABLE&gt;" alt="" coords="268,203,463,251"/>
+<area shape="rect" id="node5_5" href="./OIndexManager.html" title="com.orientechnologies.orient.core.index.OIndexManager" alt="" coords="405,11,528,53"/>
+<area shape="rect" id="node5" href="./OIndexManager.html" title="&lt;TABLE&gt;" alt="" coords="395,5,539,59"/>
 </map>

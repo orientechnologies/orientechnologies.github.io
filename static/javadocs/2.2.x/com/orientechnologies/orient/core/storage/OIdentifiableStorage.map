@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OStorage.html" title="com.orientechnologies.orient.core.storage.OStorage" alt="" coords="69,11,162,53"/>
-<area shape="rect" id="node1" href="./OStorage.html" title="&lt;TABLE&gt;" alt="" coords="58,5,173,59"/>
-<area shape="rect" id="node2_1" href="./OIdentifiableStorage.html" title="com.orientechnologies.orient.core.storage.OIdentifiableStorage" alt="" coords="39,112,191,155"/>
-<area shape="rect" id="node2" href="./OIdentifiableStorage.html" title="&lt;TABLE&gt;" alt="" coords="29,107,202,160"/>
-<area shape="rect" id="node3_2" href="./impl/local/OAbstractPaginatedStorage.html" title="com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage" alt="" coords="16,219,215,245"/>
+<area shape="rect" id="node1_0" href="./OIdentifiableStorage.html" title="com.orientechnologies.orient.core.storage.OIdentifiableStorage" alt="" coords="39,112,191,155"/>
+<area shape="rect" id="node1" href="./OIdentifiableStorage.html" title="&lt;TABLE&gt;" alt="" coords="29,107,202,160"/>
+<area shape="rect" id="node3_1" href="./impl/local/OAbstractPaginatedStorage.html" title="com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage" alt="" coords="16,219,215,245"/>
 <area shape="rect" id="node3" href="./impl/local/OAbstractPaginatedStorage.html" title="&lt;TABLE&gt;" alt="" coords="5,208,225,256"/>
+<area shape="rect" id="node2_2" href="./OStorage.html" title="com.orientechnologies.orient.core.storage.OStorage" alt="" coords="69,11,162,53"/>
+<area shape="rect" id="node2" href="./OStorage.html" title="&lt;TABLE&gt;" alt="" coords="58,5,173,59"/>
 </map>

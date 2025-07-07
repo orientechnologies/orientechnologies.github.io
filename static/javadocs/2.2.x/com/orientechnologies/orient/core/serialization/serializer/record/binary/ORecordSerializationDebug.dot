@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializationDebug
-	c3057394 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializationDebug" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializationDebug.html">
+	c3057393 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializationDebug" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializationDebug.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordSerializationDebug </td></tr>
 		</table></td></tr>

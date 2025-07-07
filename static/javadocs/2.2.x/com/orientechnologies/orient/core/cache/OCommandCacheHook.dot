@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.cache.OCommandCacheHook
-	c963642 [label=<<table title="com.orientechnologies.orient.core.cache.OCommandCacheHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandCacheHook.html">
+	c963646 [label=<<table title="com.orientechnologies.orient.core.cache.OCommandCacheHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandCacheHook.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandCacheHook </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandCacheHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.hook.ORecordHook.Scoped
-	c963747 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHook.Scoped" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../hook/ORecordHook.Scoped.html">
+	c963745 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHook.Scoped" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../hook/ORecordHook.Scoped.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Scoped </td></tr>
 		</table></td></tr>
 		</table>>, URL="../hook/ORecordHook.Scoped.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.hook.ORecordHookAbstract
-	c963748 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHookAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../hook/ORecordHookAbstract.html">
+	c963746 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHookAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../hook/ORecordHookAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordHookAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../hook/ORecordHookAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.cache.OCommandCacheHook extends com.orientechnologies.orient.core.hook.ORecordHookAbstract
-	c963748:p -> c963642:p [dir=back,arrowtail=empty];
+	c963746:p -> c963646:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.cache.OCommandCacheHook implements com.orientechnologies.orient.core.hook.ORecordHook.Scoped
-	c963747:p -> c963642:p [dir=back,arrowtail=empty,style=dashed];
+	c963745:p -> c963646:p [dir=back,arrowtail=empty,style=dashed];
 }
 

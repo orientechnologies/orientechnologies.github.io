@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OAbstractDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" alt="" coords="16,17,279,42"/>
-<area shape="rect" id="node1" href="./OAbstractDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="5,5,289,53"/>
-<area shape="rect" id="node2_1" href="./OVersionDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver" alt="" coords="19,113,275,138"/>
-<area shape="rect" id="node2" href="./OVersionDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="9,101,286,149"/>
+<area shape="rect" id="node1_0" href="./OVersionDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver" alt="" coords="19,113,275,138"/>
+<area shape="rect" id="node1" href="./OVersionDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="9,101,286,149"/>
+<area shape="rect" id="node2_1" href="./OAbstractDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" alt="" coords="16,17,279,42"/>
+<area shape="rect" id="node2" href="./OAbstractDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="5,5,289,53"/>
 </map>

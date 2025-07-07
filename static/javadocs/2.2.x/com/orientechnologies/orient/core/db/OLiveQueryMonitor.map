@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OLiveQueryMonitor.html" title="com.orientechnologies.orient.core.db.OLiveQueryMonitor" alt="" coords="167,11,312,53"/>
-<area shape="rect" id="node1" href="./OLiveQueryMonitor.html" title="&lt;TABLE&gt;" alt="" coords="156,5,323,59"/>
-<area shape="rect" id="node2_1" href="./document/OLiveQueryMonitorRemote.html" title="com.orientechnologies.orient.core.db.document.OLiveQueryMonitorRemote" alt="" coords="16,118,212,143"/>
-<area shape="rect" id="node2" href="./document/OLiveQueryMonitorRemote.html" title="&lt;TABLE&gt;" alt="" coords="5,107,223,155"/>
-<area shape="rect" id="node3_2" href="../query/live/OLiveQueryMonitorEmbedded.html" title="com.orientechnologies.orient.core.query.live.OLiveQueryMonitorEmbedded" alt="" coords="257,118,472,143"/>
-<area shape="rect" id="node3" href="../query/live/OLiveQueryMonitorEmbedded.html" title="&lt;TABLE&gt;" alt="" coords="247,107,483,155"/>
-</map>

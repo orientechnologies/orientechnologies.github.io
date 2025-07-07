@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.profiler.OAbstractProfiler.OProfilerHookStatic
-	c546805 [label=<<table title="com.orientechnologies.common.profiler.OAbstractProfiler.OProfilerHookStatic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractProfiler.OProfilerHookStatic.html">
+	c546799 [label=<<table title="com.orientechnologies.common.profiler.OAbstractProfiler.OProfilerHookStatic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractProfiler.OProfilerHookStatic.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OProfilerHookStatic </td></tr>
 		</table></td></tr>

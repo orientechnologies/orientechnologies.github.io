@@ -3,12 +3,12 @@
 <area shape="rect" id="node1" href="./OJPAPersistenceProvider.html" title="&lt;TABLE&gt;" alt="" coords="5,5,205,53"/>
 <area shape="rect" id="node2_1" href="./OJPAEntityTransaction.html" title="com.orientechnologies.orient.object.jpa.OJPAEntityTransaction" alt="" coords="241,17,402,42"/>
 <area shape="rect" id="node2" href="./OJPAEntityTransaction.html" title="&lt;TABLE&gt;" alt="" coords="230,5,413,53"/>
-<area shape="rect" id="node3_2" href="./OJPAEntityManager.html" title="com.orientechnologies.orient.object.jpa.OJPAEntityManager" alt="" coords="448,17,592,42"/>
-<area shape="rect" id="node3" href="./OJPAEntityManager.html" title="&lt;TABLE&gt;" alt="" coords="437,5,603,53"/>
-<area shape="rect" id="node4_3" href="./OJPAProviderUtil.html" title="com.orientechnologies.orient.object.jpa.OJPAProviderUtil" alt="" coords="638,17,765,42"/>
-<area shape="rect" id="node4" href="./OJPAProviderUtil.html" title="&lt;TABLE&gt;" alt="" coords="627,5,775,53"/>
-<area shape="rect" id="node5_4" href="./OJPAEntityManagerFactory.html" title="com.orientechnologies.orient.object.jpa.OJPAEntityManagerFactory" alt="" coords="811,17,1003,42"/>
-<area shape="rect" id="node5" href="./OJPAEntityManagerFactory.html" title="&lt;TABLE&gt;" alt="" coords="800,5,1013,53"/>
+<area shape="rect" id="node3_2" href="./OJPAEntityManagerFactory.html" title="com.orientechnologies.orient.object.jpa.OJPAEntityManagerFactory" alt="" coords="448,17,640,42"/>
+<area shape="rect" id="node3" href="./OJPAEntityManagerFactory.html" title="&lt;TABLE&gt;" alt="" coords="437,5,651,53"/>
+<area shape="rect" id="node4_3" href="./OJPAEntityManager.html" title="com.orientechnologies.orient.object.jpa.OJPAEntityManager" alt="" coords="685,17,829,42"/>
+<area shape="rect" id="node4" href="./OJPAEntityManager.html" title="&lt;TABLE&gt;" alt="" coords="675,5,840,53"/>
+<area shape="rect" id="node5_4" href="./OJPAProviderUtil.html" title="com.orientechnologies.orient.object.jpa.OJPAProviderUtil" alt="" coords="875,17,1002,42"/>
+<area shape="rect" id="node5" href="./OJPAProviderUtil.html" title="&lt;TABLE&gt;" alt="" coords="865,5,1013,53"/>
 <area shape="rect" id="node6_5" href="./OJPAPersistenceUnitInfo.html" title="com.orientechnologies.orient.object.jpa.OJPAPersistenceUnitInfo" alt="" coords="1048,17,1224,42"/>
 <area shape="rect" id="node6" href="./OJPAPersistenceUnitInfo.html" title="&lt;TABLE&gt;" alt="" coords="1037,5,1235,53"/>
 </map>

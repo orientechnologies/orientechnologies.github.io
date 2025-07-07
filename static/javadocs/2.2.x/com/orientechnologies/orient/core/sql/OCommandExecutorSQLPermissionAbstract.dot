@@ -10,34 +10,34 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract
-	c1075579 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLPermissionAbstract.html">
+	c1075570 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLPermissionAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLPermissionAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLPermissionAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLRevoke
-	c1075581 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLRevoke" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLRevoke.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLRevoke </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLRevoke.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1075620 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
+	c1075617 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLRevoke
+	c1075618 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLRevoke" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLRevoke.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCommandExecutorSQLRevoke </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandExecutorSQLRevoke.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant
-	c1075629 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLGrant.html">
+	c1075620 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLGrant.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLGrant </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLGrant.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1075620:p -> c1075579:p [dir=back,arrowtail=empty];
+	c1075617:p -> c1075570:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLRevoke extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract
-	c1075579:p -> c1075581:p [dir=back,arrowtail=empty];
+	c1075570:p -> c1075618:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLGrant extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLPermissionAbstract
-	c1075579:p -> c1075629:p [dir=back,arrowtail=empty];
+	c1075570:p -> c1075620:p [dir=back,arrowtail=empty];
 }
 

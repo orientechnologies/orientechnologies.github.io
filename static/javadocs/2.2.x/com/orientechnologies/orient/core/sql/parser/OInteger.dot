@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.ONumber
-	c2150677 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ONumber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONumber.html">
+	c2150716 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ONumber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONumber.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ONumber </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ONumber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OInteger
-	c2150808 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OInteger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OInteger.html">
+	c2150789 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OInteger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OInteger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OInteger </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OInteger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OInteger extends com.orientechnologies.orient.core.sql.parser.ONumber
-	c2150677:p -> c2150808:p [dir=back,arrowtail=empty];
+	c2150716:p -> c2150789:p [dir=back,arrowtail=empty];
 }
 

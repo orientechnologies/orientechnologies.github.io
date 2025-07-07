@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
-	c1763005 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitBodyRecord.html">
+	c1762981 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitBodyRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OOperationUnitBodyRecord </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOperationUnitBodyRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileTruncatedWALRecord
-	c1763007 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileTruncatedWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFileTruncatedWALRecord.html">
+	c1762986 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileTruncatedWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFileTruncatedWALRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OFileTruncatedWALRecord </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OFileTruncatedWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileTruncatedWALRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
-	c1763005:p -> c1763007:p [dir=back,arrowtail=empty];
+	c1762981:p -> c1762986:p [dir=back,arrowtail=empty];
 }
 

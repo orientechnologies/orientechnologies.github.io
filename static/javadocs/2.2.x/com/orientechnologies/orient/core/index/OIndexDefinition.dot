@@ -9,38 +9,38 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.index.OIndexCallback
-	c2045668 [label=<<table title="com.orientechnologies.orient.core.index.OIndexCallback" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexCallback.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OIndexCallback </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexCallback.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue
-	c2045684 [label=<<table title="com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexDefinitionMultiValue.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OIndexDefinitionMultiValue </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexDefinitionMultiValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexDefinition
-	c2045698 [label=<<table title="com.orientechnologies.orient.core.index.OIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexDefinition.html">
+	c2045664 [label=<<table title="com.orientechnologies.orient.core.index.OIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexDefinition.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OIndexDefinition </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexDefinition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OAbstractIndexDefinition
-	c2045722 [label=<<table title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractIndexDefinition.html">
+	c2045688 [label=<<table title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractIndexDefinition.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractIndexDefinition </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractIndexDefinition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue implements com.orientechnologies.orient.core.index.OIndexDefinition
-	c2045698:p -> c2045684:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.orient.core.index.OIndexCallback
+	c2045695 [label=<<table title="com.orientechnologies.orient.core.index.OIndexCallback" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexCallback.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OIndexCallback </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexCallback.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue
+	c2045711 [label=<<table title="com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexDefinitionMultiValue.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OIndexDefinitionMultiValue </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexDefinitionMultiValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.OIndexDefinition implements com.orientechnologies.orient.core.index.OIndexCallback
-	c2045668:p -> c2045698:p [dir=back,arrowtail=empty,style=dashed];
+	c2045695:p -> c2045664:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.index.OAbstractIndexDefinition implements com.orientechnologies.orient.core.index.OIndexDefinition
-	c2045698:p -> c2045722:p [dir=back,arrowtail=empty,style=dashed];
+	c2045664:p -> c2045688:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue implements com.orientechnologies.orient.core.index.OIndexDefinition
+	c2045664:p -> c2045711:p [dir=back,arrowtail=empty,style=dashed];
 }
 

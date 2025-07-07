@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../common/util/OResettable.html" title="com.orientechnologies.common.util.OResettable" alt="" coords="16,11,116,53"/>
-<area shape="rect" id="node1" href="../../../../common/util/OResettable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,127,59"/>
-<area shape="rect" id="node2_1" href="./OInternalResultSet.html" title="com.orientechnologies.orient.core.sql.executor.OInternalResultSet" alt="" coords="66,118,207,143"/>
-<area shape="rect" id="node2" href="./OInternalResultSet.html" title="&lt;TABLE&gt;" alt="" coords="55,107,218,155"/>
-<area shape="rect" id="node3_2" href="./OResultSet.html" title="com.orientechnologies.orient.core.sql.executor.OResultSet" alt="" coords="162,11,255,53"/>
-<area shape="rect" id="node3" href="./OResultSet.html" title="&lt;TABLE&gt;" alt="" coords="151,5,266,59"/>
-</map>

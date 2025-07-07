@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../command/OCommandResultListener.html" title="com.orientechnologies.orient.core.command.OCommandResultListener" alt="" coords="16,11,205,53"/>
 <area shape="rect" id="node1" href="../../command/OCommandResultListener.html" title="&lt;TABLE&gt;" alt="" coords="5,5,216,59"/>
-<area shape="rect" id="node3_1" href="./OLocalLiveResultListener.html" title="com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener" alt="" coords="125,118,309,143"/>
-<area shape="rect" id="node3" href="./OLocalLiveResultListener.html" title="&lt;TABLE&gt;" alt="" coords="115,107,320,155"/>
-<area shape="rect" id="node2_2" href="./OLiveResultListener.html" title="com.orientechnologies.orient.core.sql.query.OLiveResultListener" alt="" coords="251,11,400,53"/>
-<area shape="rect" id="node2" href="./OLiveResultListener.html" title="&lt;TABLE&gt;" alt="" coords="240,5,411,59"/>
+<area shape="rect" id="node2_1" href="./OLocalLiveResultListener.html" title="com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener" alt="" coords="125,118,309,143"/>
+<area shape="rect" id="node2" href="./OLocalLiveResultListener.html" title="&lt;TABLE&gt;" alt="" coords="115,107,320,155"/>
+<area shape="rect" id="node3_2" href="./OLiveResultListener.html" title="com.orientechnologies.orient.core.sql.query.OLiveResultListener" alt="" coords="251,11,400,53"/>
+<area shape="rect" id="node3" href="./OLiveResultListener.html" title="&lt;TABLE&gt;" alt="" coords="240,5,411,59"/>
 </map>

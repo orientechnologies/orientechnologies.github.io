@@ -10,82 +10,82 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract
-	c3380365 [label=<<table title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/functions/OSQLFunctionConfigurableAbstract.html">
+	c3380358 [label=<<table title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/functions/OSQLFunctionConfigurableAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionConfigurableAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/sql/functions/OSQLFunctionConfigurableAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMoveFiltered
+	c3381322 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMoveFiltered" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMoveFiltered.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMoveFiltered </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionMoveFiltered.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothV
+	c3381324 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothV" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionBothV.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionBothV </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionBothV.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothE
+	c3381325 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionBothE.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionBothE </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionBothE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutV
-	c3381328 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutV" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionOutV.html">
+	c3381331 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutV" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionOutV.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionOutV </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionOutV.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionMove.html">
+	c3381334 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionMove.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMove </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionMove.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMoveFiltered
-	c3381331 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMoveFiltered" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMoveFiltered.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMoveFiltered </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionMoveFiltered.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothE
-	c3381338 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionBothE.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionBothE </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionBothE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothV
-	c3381341 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothV" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionBothV.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionBothV </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionBothV.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInE
-	c3381343 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionInE.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionInE </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionInE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutE
-	c3381344 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionOutE.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionOutE </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionOutE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInV
-	c3381345 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInV" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionInV.html">
+	c3381335 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInV" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionInV.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionInV </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionInV.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutE
+	c3381336 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionOutE.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionOutE </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionOutE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInE
+	c3381337 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionInE.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionInE </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionInE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBoth
-	c3381346 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBoth" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionBoth.html">
+	c3381339 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBoth" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionBoth.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionBoth </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionBoth.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutV extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329:p -> c3381328:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove extends com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract
-	c3380365:p -> c3381329:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMoveFiltered extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329:p -> c3381331:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothE extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329:p -> c3381338:p [dir=back,arrowtail=empty];
+	c3381334:p -> c3381322:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothV extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329:p -> c3381341:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInE extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329:p -> c3381343:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutE extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329:p -> c3381344:p [dir=back,arrowtail=empty];
+	c3381334:p -> c3381324:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBothE extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
+	c3381334:p -> c3381325:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutV extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
+	c3381334:p -> c3381331:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove extends com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract
+	c3380358:p -> c3381334:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInV extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329:p -> c3381345:p [dir=back,arrowtail=empty];
+	c3381334:p -> c3381335:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionOutE extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
+	c3381334:p -> c3381336:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionInE extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
+	c3381334:p -> c3381337:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionBoth extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionMove
-	c3381329:p -> c3381346:p [dir=back,arrowtail=empty];
+	c3381334:p -> c3381339:p [dir=back,arrowtail=empty];
 }
 

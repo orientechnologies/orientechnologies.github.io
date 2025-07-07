@@ -9,33 +9,33 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.server.network.OServerSSLSocketFactory
+	c338950 [label=<<table title="com.orientechnologies.orient.server.network.OServerSSLSocketFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerSSLSocketFactory.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OServerSSLSocketFactory </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OServerSSLSocketFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.OServerSocketFactory
 	c338951 [label=<<table title="com.orientechnologies.orient.server.network.OServerSocketFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerSocketFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerSocketFactory </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerSocketFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.network.OServerSSLSocketFactory
-	c338952 [label=<<table title="com.orientechnologies.orient.server.network.OServerSSLSocketFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerSSLSocketFactory.html">
+	// com.orientechnologies.orient.server.network.OServerTLSSocketFactory
+	c338952 [label=<<table title="com.orientechnologies.orient.server.network.OServerTLSSocketFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerTLSSocketFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OServerSSLSocketFactory </td></tr>
+<tr><td align="center" balign="center"> OServerTLSSocketFactory </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OServerSSLSocketFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OServerTLSSocketFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.OServerNetworkListener
 	c338953 [label=<<table title="com.orientechnologies.orient.server.network.OServerNetworkListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerNetworkListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerNetworkListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerNetworkListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.network.OServerTLSSocketFactory
-	c338954 [label=<<table title="com.orientechnologies.orient.server.network.OServerTLSSocketFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerTLSSocketFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OServerTLSSocketFactory </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OServerTLSSocketFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.OServerSSLSocketFactory extends com.orientechnologies.orient.server.network.OServerSocketFactory
-	c338951:p -> c338952:p [dir=back,arrowtail=empty];
+	c338951:p -> c338950:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.network.OServerTLSSocketFactory extends com.orientechnologies.orient.server.network.OServerSSLSocketFactory
-	c338952:p -> c338954:p [dir=back,arrowtail=empty];
+	c338950:p -> c338952:p [dir=back,arrowtail=empty];
 }
 

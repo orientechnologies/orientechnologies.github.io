@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.OStatement
-	c1274852 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
+	c1274896 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OCreateLinkStatement
-	c1274955 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreateLinkStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreateLinkStatement.html">
+	c1274986 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreateLinkStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreateLinkStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCreateLinkStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCreateLinkStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OCreateLinkStatement extends com.orientechnologies.orient.core.sql.parser.OStatement
-	c1274852:p -> c1274955:p [dir=back,arrowtail=empty];
+	c1274896:p -> c1274986:p [dir=back,arrowtail=empty];
 }
 

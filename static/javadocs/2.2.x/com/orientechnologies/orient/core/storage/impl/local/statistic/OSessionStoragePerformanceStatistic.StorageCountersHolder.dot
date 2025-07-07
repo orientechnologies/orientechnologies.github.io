@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.StorageCountersHolder
-	c3911003 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.StorageCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSessionStoragePerformanceStatistic.StorageCountersHolder.html">
+	c3910998 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.StorageCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSessionStoragePerformanceStatistic.StorageCountersHolder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StorageCountersHolder </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSessionStoragePerformanceStatistic.StorageCountersHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder<T extends com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder>
-	c3911009 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSessionStoragePerformanceStatistic.CountersHolder.html">
+	c3911004 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSessionStoragePerformanceStatistic.CountersHolder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CountersHolder&lt;T extends CountersHolder&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSessionStoragePerformanceStatistic.CountersHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.StorageCountersHolder implements com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder<T extends com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder>
-	c3911009:p -> c3911003:p [dir=back,arrowtail=empty,style=dashed];
+	c3911004:p -> c3910998:p [dir=back,arrowtail=empty,style=dashed];
 }
 

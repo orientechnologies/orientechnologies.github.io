@@ -10,13 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.graph.batch.OGraphBatchInsertBasic
-	c391975 [label=<<table title="com.orientechnologies.orient.graph.batch.OGraphBatchInsertBasic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphBatchInsertBasic.html">
+	c391974 [label=<<table title="com.orientechnologies.orient.graph.batch.OGraphBatchInsertBasic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphBatchInsertBasic.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OGraphBatchInsertBasic </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OGraphBatchInsertBasic.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.batch.OGraphBatchInsert
-	c391976 [label=<<table title="com.orientechnologies.orient.graph.batch.OGraphBatchInsert" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphBatchInsert.html">
+	c391975 [label=<<table title="com.orientechnologies.orient.graph.batch.OGraphBatchInsert" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphBatchInsert.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OGraphBatchInsert </td></tr>
 		</table></td></tr>

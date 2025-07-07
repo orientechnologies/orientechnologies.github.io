@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.console.OConsoleApplication
-	c1211338 [label=<<table title="com.orientechnologies.common.console.OConsoleApplication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OConsoleApplication.html">
+	c1211341 [label=<<table title="com.orientechnologies.common.console.OConsoleApplication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OConsoleApplication.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OConsoleApplication </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OConsoleApplication.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.console.OrientConsole
-	c1212757 [label=<<table title="com.orientechnologies.orient.console.OrientConsole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/console/OrientConsole.html">
+	c1212755 [label=<<table title="com.orientechnologies.orient.console.OrientConsole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/console/OrientConsole.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OrientConsole </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/console/OrientConsole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.console.OrientConsole extends com.orientechnologies.common.console.OConsoleApplication
-	c1211338:p -> c1212757:p [dir=back,arrowtail=empty];
+	c1211341:p -> c1212755:p [dir=back,arrowtail=empty];
 }
 

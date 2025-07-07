@@ -9,30 +9,30 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.query.live.OLiveQueryHook
-	c267593 [label=<<table title="com.orientechnologies.orient.core.query.live.OLiveQueryHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveQueryHook.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLiveQueryHook </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLiveQueryHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.query.live.OLiveQueryHook.OLiveQueryOps
-	c267594 [label=<<table title="com.orientechnologies.orient.core.query.live.OLiveQueryHook.OLiveQueryOps" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveQueryHook.OLiveQueryOps.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLiveQueryOps </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLiveQueryHook.OLiveQueryOps.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.query.live.OLiveQueryListener
-	c267595 [label=<<table title="com.orientechnologies.orient.core.query.live.OLiveQueryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveQueryListener.html">
+	c267592 [label=<<table title="com.orientechnologies.orient.core.query.live.OLiveQueryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveQueryListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OLiveQueryListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLiveQueryListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.query.live.OLiveQueryQueueThread
-	c267596 [label=<<table title="com.orientechnologies.orient.core.query.live.OLiveQueryQueueThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveQueryQueueThread.html">
+	c267593 [label=<<table title="com.orientechnologies.orient.core.query.live.OLiveQueryQueueThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveQueryQueueThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLiveQueryQueueThread </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLiveQueryQueueThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.query.live.OLiveQueryHook
+	c267594 [label=<<table title="com.orientechnologies.orient.core.query.live.OLiveQueryHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveQueryHook.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLiveQueryHook </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLiveQueryHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.query.live.OLiveQueryHook.OLiveQueryOps
+	c267595 [label=<<table title="com.orientechnologies.orient.core.query.live.OLiveQueryHook.OLiveQueryOps" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveQueryHook.OLiveQueryOps.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLiveQueryOps </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLiveQueryHook.OLiveQueryOps.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

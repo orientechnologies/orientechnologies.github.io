@@ -10,43 +10,43 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.IndexCountersHolder
-	c3904909 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.IndexCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSessionStoragePerformanceStatistic.IndexCountersHolder.html">
+	c3904904 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.IndexCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSessionStoragePerformanceStatistic.IndexCountersHolder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> IndexCountersHolder </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSessionStoragePerformanceStatistic.IndexCountersHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.RidbagCountersHolder
-	c3904910 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.RidbagCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSessionStoragePerformanceStatistic.RidbagCountersHolder.html">
+	c3904905 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.RidbagCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSessionStoragePerformanceStatistic.RidbagCountersHolder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RidbagCountersHolder </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSessionStoragePerformanceStatistic.RidbagCountersHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder
-	c3904911 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSessionStoragePerformanceStatistic.PerformanceCountersHolder.html">
+	c3904906 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSessionStoragePerformanceStatistic.PerformanceCountersHolder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PerformanceCountersHolder </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSessionStoragePerformanceStatistic.PerformanceCountersHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder<T extends com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder>
-	c3904913 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSessionStoragePerformanceStatistic.CountersHolder.html">
+	c3904908 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSessionStoragePerformanceStatistic.CountersHolder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CountersHolder&lt;T extends CountersHolder&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSessionStoragePerformanceStatistic.CountersHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder
-	c3904915 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OClusterCountersHolder.html">
+	c3904910 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OClusterCountersHolder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OClusterCountersHolder </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OClusterCountersHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.IndexCountersHolder extends com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder
-	c3904911:p -> c3904909:p [dir=back,arrowtail=empty];
+	c3904906:p -> c3904904:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.RidbagCountersHolder extends com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder
-	c3904911:p -> c3904910:p [dir=back,arrowtail=empty];
+	c3904906:p -> c3904905:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder implements com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder<T extends com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder>
-	c3904913:p -> c3904911:p [dir=back,arrowtail=empty,style=dashed];
+	c3904908:p -> c3904906:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder extends com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder
-	c3904911:p -> c3904915:p [dir=back,arrowtail=empty];
+	c3904906:p -> c3904910:p [dir=back,arrowtail=empty];
 }
 

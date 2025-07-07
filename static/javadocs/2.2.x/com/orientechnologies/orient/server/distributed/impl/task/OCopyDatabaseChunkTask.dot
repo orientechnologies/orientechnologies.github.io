@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask
-	c1259581 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractReplicatedTask.html">
+	c1259576 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractReplicatedTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractReplicatedTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../task/OAbstractReplicatedTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OCopyDatabaseChunkTask
-	c1259819 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OCopyDatabaseChunkTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCopyDatabaseChunkTask.html">
+	c1259816 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OCopyDatabaseChunkTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCopyDatabaseChunkTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCopyDatabaseChunkTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCopyDatabaseChunkTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.OCopyDatabaseChunkTask extends com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask
-	c1259581:p -> c1259819:p [dir=back,arrowtail=empty];
+	c1259576:p -> c1259816:p [dir=back,arrowtail=empty];
 }
 

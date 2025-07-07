@@ -10,34 +10,34 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask
-	c4281616 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstract2pcTask.html">
+	c4281623 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstract2pcTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstract2pcTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstract2pcTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.distributed.impl.task.ORepairClusterTask
+	c4281635 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ORepairClusterTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORepairClusterTask.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORepairClusterTask </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORepairClusterTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.ORepairRecordsTask
-	c4281619 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ORepairRecordsTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORepairRecordsTask.html">
+	c4281636 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ORepairRecordsTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORepairRecordsTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORepairRecordsTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORepairRecordsTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OTxTask
-	c4281631 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OTxTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OTxTask.html">
+	c4281642 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OTxTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OTxTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTxTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTxTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.distributed.impl.task.ORepairClusterTask
-	c4281636 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ORepairClusterTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORepairClusterTask.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORepairClusterTask </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORepairClusterTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.server.distributed.impl.task.ORepairRecordsTask extends com.orientechnologies.orient.server.distributed.impl.task.OTxTask
-	c4281631:p -> c4281619:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.server.distributed.impl.task.OTxTask extends com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask
-	c4281616:p -> c4281631:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.impl.task.ORepairClusterTask extends com.orientechnologies.orient.server.distributed.impl.task.OTxTask
-	c4281631:p -> c4281636:p [dir=back,arrowtail=empty];
+	c4281642:p -> c4281635:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.server.distributed.impl.task.ORepairRecordsTask extends com.orientechnologies.orient.server.distributed.impl.task.OTxTask
+	c4281642:p -> c4281636:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.server.distributed.impl.task.OTxTask extends com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask
+	c4281623:p -> c4281642:p [dir=back,arrowtail=empty];
 }
 

@@ -9,20 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.common.serialization.types.ODoubleSerializer
-	c1623833 [label=<<table title="com.orientechnologies.common.serialization.types.ODoubleSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODoubleSerializer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODoubleSerializer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODoubleSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.serialization.types.OBinarySerializer<T>
-	c1623840 [label=<<table title="com.orientechnologies.common.serialization.types.OBinarySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinarySerializer.html">
+	c1623832 [label=<<table title="com.orientechnologies.common.serialization.types.OBinarySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinarySerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBinarySerializer&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBinarySerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.serialization.types.ODoubleSerializer
+	c1623840 [label=<<table title="com.orientechnologies.common.serialization.types.ODoubleSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODoubleSerializer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODoubleSerializer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODoubleSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.serialization.types.ODoubleSerializer implements com.orientechnologies.common.serialization.types.OBinarySerializer<T>
-	c1623840:p -> c1623833:p [dir=back,arrowtail=empty,style=dashed];
+	c1623832:p -> c1623840:p [dir=back,arrowtail=empty,style=dashed];
 }
 

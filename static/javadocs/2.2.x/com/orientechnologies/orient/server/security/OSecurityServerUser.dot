@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.record.OProxedResource<T>
-	c3631747 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/record/OProxedResource.html">
+	c3631725 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/record/OProxedResource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OProxedResource&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/db/record/OProxedResource.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OSecurity
-	c3631877 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/metadata/security/OSecurity.html">
+	c3631874 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/metadata/security/OSecurity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSecurity </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/metadata/security/OSecurity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.security.OSecurityServerUser
-	c3633238 [label=<<table title="com.orientechnologies.orient.server.security.OSecurityServerUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSecurityServerUser.html">
+	c3633240 [label=<<table title="com.orientechnologies.orient.server.security.OSecurityServerUser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSecurityServerUser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSecurityServerUser </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSecurityServerUser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.security.OSecurityServerUser extends com.orientechnologies.orient.core.db.record.OProxedResource<com.orientechnologies.orient.core.metadata.security.OSecurity>
-	c3631747:p -> c3633238:p [dir=back,arrowtail=empty];
+	c3631725:p -> c3633240:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.security.OSecurityServerUser implements com.orientechnologies.orient.core.metadata.security.OSecurity
-	c3631877:p -> c3633238:p [dir=back,arrowtail=empty,style=dashed];
+	c3631874:p -> c3633240:p [dir=back,arrowtail=empty,style=dashed];
 }
 

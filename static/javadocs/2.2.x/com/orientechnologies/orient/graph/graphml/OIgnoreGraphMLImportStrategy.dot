@@ -9,6 +9,12 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.graph.graphml.OIgnoreGraphMLImportStrategy
+	c1995408 [label=<<table title="com.orientechnologies.orient.graph.graphml.OIgnoreGraphMLImportStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIgnoreGraphMLImportStrategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OIgnoreGraphMLImportStrategy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIgnoreGraphMLImportStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.graphml.OGraphMLImportStrategy
 	c1995410 [label=<<table title="com.orientechnologies.orient.graph.graphml.OGraphMLImportStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphMLImportStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -16,13 +22,7 @@ digraph G {
 <tr><td align="center" balign="center"> OGraphMLImportStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OGraphMLImportStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.graphml.OIgnoreGraphMLImportStrategy
-	c1995414 [label=<<table title="com.orientechnologies.orient.graph.graphml.OIgnoreGraphMLImportStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIgnoreGraphMLImportStrategy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OIgnoreGraphMLImportStrategy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIgnoreGraphMLImportStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.graph.graphml.OIgnoreGraphMLImportStrategy implements com.orientechnologies.orient.graph.graphml.OGraphMLImportStrategy
-	c1995410:p -> c1995414:p [dir=back,arrowtail=empty,style=dashed];
+	c1995410:p -> c1995408:p [dir=back,arrowtail=empty,style=dashed];
 }
 

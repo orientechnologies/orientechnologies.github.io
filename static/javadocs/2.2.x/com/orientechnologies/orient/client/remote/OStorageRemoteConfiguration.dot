@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.config.OStorageConfigurationImpl
-	c4047243 [label=<<table title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/config/OStorageConfigurationImpl.html">
+	c4047237 [label=<<table title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/config/OStorageConfigurationImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageConfigurationImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/config/OStorageConfigurationImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.client.remote.OStorageRemoteConfiguration
-	c4047490 [label=<<table title="com.orientechnologies.orient.client.remote.OStorageRemoteConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageRemoteConfiguration.html">
+	c4047497 [label=<<table title="com.orientechnologies.orient.client.remote.OStorageRemoteConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageRemoteConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageRemoteConfiguration </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageRemoteConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.client.remote.OStorageRemoteConfiguration extends com.orientechnologies.orient.core.config.OStorageConfigurationImpl
-	c4047243:p -> c4047490:p [dir=back,arrowtail=empty];
+	c4047237:p -> c4047497:p [dir=back,arrowtail=empty];
 }
 

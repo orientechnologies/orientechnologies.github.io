@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.metadata.sequence.OSequenceTrigger
-	c3672491 [label=<<table title="com.orientechnologies.orient.core.metadata.sequence.OSequenceTrigger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSequenceTrigger.html">
+	c3672490 [label=<<table title="com.orientechnologies.orient.core.metadata.sequence.OSequenceTrigger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSequenceTrigger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSequenceTrigger </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSequenceTrigger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.hook.ODocumentHookAbstract
-	c3672578 [label=<<table title="com.orientechnologies.orient.core.hook.ODocumentHookAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../hook/ODocumentHookAbstract.html">
+	c3672572 [label=<<table title="com.orientechnologies.orient.core.hook.ODocumentHookAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../hook/ODocumentHookAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODocumentHookAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../hook/ODocumentHookAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.hook.ORecordHook.Scoped
-	c3672585 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHook.Scoped" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../hook/ORecordHook.Scoped.html">
+	c3672579 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHook.Scoped" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../hook/ORecordHook.Scoped.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Scoped </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../hook/ORecordHook.Scoped.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.sequence.OSequenceTrigger extends com.orientechnologies.orient.core.hook.ODocumentHookAbstract
-	c3672578:p -> c3672491:p [dir=back,arrowtail=empty];
+	c3672572:p -> c3672490:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.sequence.OSequenceTrigger implements com.orientechnologies.orient.core.hook.ORecordHook.Scoped
-	c3672585:p -> c3672491:p [dir=back,arrowtail=empty,style=dashed];
+	c3672579:p -> c3672490:p [dir=back,arrowtail=empty,style=dashed];
 }
 

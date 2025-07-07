@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../traverse/OAbstractScriptExecutor.html" title="com.orientechnologies.orient.core.command.traverse.OAbstractScriptExecutor" alt="" coords="21,17,198,42"/>
-<area shape="rect" id="node1" href="../traverse/OAbstractScriptExecutor.html" title="&lt;TABLE&gt;" alt="" coords="10,5,209,53"/>
-<area shape="rect" id="node2_1" href="./OJsr223ScriptExecutor.html" title="com.orientechnologies.orient.core.command.script.OJsr223ScriptExecutor" alt="" coords="28,113,191,138"/>
-<area shape="rect" id="node2" href="./OJsr223ScriptExecutor.html" title="&lt;TABLE&gt;" alt="" coords="17,101,201,149"/>
-<area shape="rect" id="node3_2" href="./OJavascriptScriptExecutor.html" title="com.orientechnologies.orient.core.command.script.OJavascriptScriptExecutor" alt="" coords="16,209,203,234"/>
-<area shape="rect" id="node3" href="./OJavascriptScriptExecutor.html" title="&lt;TABLE&gt;" alt="" coords="5,197,213,245"/>
-</map>

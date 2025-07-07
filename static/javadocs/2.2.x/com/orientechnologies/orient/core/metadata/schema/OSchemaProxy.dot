@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.record.OProxedResource<T>
-	c3578912 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../db/record/OProxedResource.html">
+	c3578890 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../db/record/OProxedResource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OProxedResource&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../db/record/OProxedResource.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.schema.OSchemaProxy
-	c3579078 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchemaProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSchemaProxy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSchemaProxy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSchemaProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.OSchema
-	c3579081 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSchema.html">
+	c3579074 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSchema.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSchema </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSchema.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.metadata.schema.OSchemaProxy
+	c3579086 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchemaProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSchemaProxy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSchemaProxy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSchemaProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.schema.OSchemaProxy extends com.orientechnologies.orient.core.db.record.OProxedResource<com.orientechnologies.orient.core.metadata.schema.OSchemaShared>
-	c3578912:p -> c3579078:p [dir=back,arrowtail=empty];
+	c3578890:p -> c3579086:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.schema.OSchemaProxy implements com.orientechnologies.orient.core.metadata.schema.OSchema
-	c3579081:p -> c3579078:p [dir=back,arrowtail=empty,style=dashed];
+	c3579074:p -> c3579086:p [dir=back,arrowtail=empty,style=dashed];
 }
 

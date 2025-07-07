@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OConfigurableStatelessFactory.html" title="com.orientechnologies.common.factory.OConfigurableStatelessFactory" alt="" coords="16,17,283,42"/>
-<area shape="rect" id="node1" href="./OConfigurableStatelessFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,5,293,53"/>
-<area shape="rect" id="node2_1" href="./OConfigurableStatefulFactory.html" title="com.orientechnologies.common.factory.OConfigurableStatefulFactory" alt="" coords="329,17,586,42"/>
-<area shape="rect" id="node2" href="./OConfigurableStatefulFactory.html" title="&lt;TABLE&gt;" alt="" coords="318,5,597,53"/>
+<area shape="rect" id="node1_0" href="./OConfigurableStatefulFactory.html" title="com.orientechnologies.common.factory.OConfigurableStatefulFactory" alt="" coords="16,17,273,42"/>
+<area shape="rect" id="node1" href="./OConfigurableStatefulFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,5,284,53"/>
+<area shape="rect" id="node2_1" href="./OConfigurableStatelessFactory.html" title="com.orientechnologies.common.factory.OConfigurableStatelessFactory" alt="" coords="319,17,586,42"/>
+<area shape="rect" id="node2" href="./OConfigurableStatelessFactory.html" title="&lt;TABLE&gt;" alt="" coords="309,5,597,53"/>
 </map>

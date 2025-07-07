@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.ODatabaseSessionMetadata
-	c4056406 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseSessionMetadata" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/ODatabaseSessionMetadata.html">
+	c4056422 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseSessionMetadata" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/ODatabaseSessionMetadata.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODatabaseSessionMetadata </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/db/ODatabaseSessionMetadata.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.client.remote.OStorageRemoteSession
-	c4057655 [label=<<table title="com.orientechnologies.orient.client.remote.OStorageRemoteSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageRemoteSession.html">
+	c4057643 [label=<<table title="com.orientechnologies.orient.client.remote.OStorageRemoteSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageRemoteSession.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageRemoteSession </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageRemoteSession.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.client.remote.OStorageRemoteSession implements com.orientechnologies.orient.core.db.ODatabaseSessionMetadata
-	c4056406:p -> c4057655:p [dir=back,arrowtail=empty,style=dashed];
+	c4056422:p -> c4057643:p [dir=back,arrowtail=empty,style=dashed];
 }
 

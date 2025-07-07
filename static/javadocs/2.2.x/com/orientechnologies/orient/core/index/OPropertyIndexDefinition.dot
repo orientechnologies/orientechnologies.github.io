@@ -9,27 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.index.OPropertyIndexDefinition
-	c2834184 [label=<<table title="com.orientechnologies.orient.core.index.OPropertyIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OPropertyIndexDefinition.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OPropertyIndexDefinition </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OPropertyIndexDefinition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OAbstractIndexDefinitionMultiValue
-	c2834204 [label=<<table title="com.orientechnologies.orient.core.index.OAbstractIndexDefinitionMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractIndexDefinitionMultiValue.html">
+	c2834162 [label=<<table title="com.orientechnologies.orient.core.index.OAbstractIndexDefinitionMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractIndexDefinitionMultiValue.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractIndexDefinitionMultiValue </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractIndexDefinitionMultiValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.index.OPropertyIndexDefinition
+	c2834189 [label=<<table title="com.orientechnologies.orient.core.index.OPropertyIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OPropertyIndexDefinition.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OPropertyIndexDefinition </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OPropertyIndexDefinition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OAbstractIndexDefinition
-	c2834226 [label=<<table title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractIndexDefinition.html">
+	c2834192 [label=<<table title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractIndexDefinition.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractIndexDefinition </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractIndexDefinition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.index.OPropertyIndexDefinition extends com.orientechnologies.orient.core.index.OAbstractIndexDefinition
-	c2834226:p -> c2834184:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.index.OAbstractIndexDefinitionMultiValue extends com.orientechnologies.orient.core.index.OPropertyIndexDefinition
-	c2834184:p -> c2834204:p [dir=back,arrowtail=empty];
+	c2834189:p -> c2834162:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.index.OPropertyIndexDefinition extends com.orientechnologies.orient.core.index.OAbstractIndexDefinition
+	c2834192:p -> c2834189:p [dir=back,arrowtail=empty];
 }
 

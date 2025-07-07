@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.OStatement
-	c3648404 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
+	c3648444 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStatement </td></tr>
 		</table></td></tr>
@@ -22,14 +22,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OSelectWithoutTargetStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OSelectStatement
-	c3648555 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OSelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSelectStatement.html">
+	c3648518 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OSelectStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSelectStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSelectStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSelectStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OSelectWithoutTargetStatement extends com.orientechnologies.orient.core.sql.parser.OSelectStatement
-	c3648555:p -> c3648482:p [dir=back,arrowtail=empty];
+	c3648518:p -> c3648482:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.parser.OSelectStatement extends com.orientechnologies.orient.core.sql.parser.OStatement
-	c3648404:p -> c3648555:p [dir=back,arrowtail=empty];
+	c3648444:p -> c3648518:p [dir=back,arrowtail=empty];
 }
 

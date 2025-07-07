@@ -1,10 +1,10 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../db/record/OIdentifiable.html" title="com.orientechnologies.orient.core.db.record.OIdentifiable" alt="" coords="16,11,119,53"/>
 <area shape="rect" id="node1" href="../db/record/OIdentifiable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,129,59"/>
-<area shape="rect" id="node2_1" href="./ORID.html" title="com.orientechnologies.orient.core.id.ORID" alt="" coords="107,112,201,155"/>
-<area shape="rect" id="node2" href="./ORID.html" title="&lt;TABLE&gt;" alt="" coords="97,107,211,160"/>
-<area shape="rect" id="node3_2" href="./ORecordId.html" title="com.orientechnologies.orient.core.id.ORecordId" alt="" coords="111,219,197,245"/>
-<area shape="rect" id="node3" href="./ORecordId.html" title="&lt;TABLE&gt;" alt="" coords="100,208,208,256"/>
+<area shape="rect" id="node3_1" href="./ORID.html" title="com.orientechnologies.orient.core.id.ORID" alt="" coords="107,112,201,155"/>
+<area shape="rect" id="node3" href="./ORID.html" title="&lt;TABLE&gt;" alt="" coords="97,107,211,160"/>
+<area shape="rect" id="node2_2" href="./ORecordId.html" title="com.orientechnologies.orient.core.id.ORecordId" alt="" coords="111,219,197,245"/>
+<area shape="rect" id="node2" href="./ORecordId.html" title="&lt;TABLE&gt;" alt="" coords="100,208,208,256"/>
 <area shape="rect" id="node4_3" href="../serialization/OSerializableStream.html" title="com.orientechnologies.orient.core.serialization.OSerializableStream" alt="" coords="165,11,317,53"/>
 <area shape="rect" id="node4" href="../serialization/OSerializableStream.html" title="&lt;TABLE&gt;" alt="" coords="154,5,327,59"/>
 </map>

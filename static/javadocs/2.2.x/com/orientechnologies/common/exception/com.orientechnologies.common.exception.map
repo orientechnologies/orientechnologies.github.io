@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OException.html" title="com.orientechnologies.common.exception.OException" alt="" coords="41,19,134,45"/>
-<area shape="rect" id="node1" href="./OException.html" title="&lt;TABLE&gt;" alt="" coords="30,8,145,56"/>
-<area shape="rect" id="node2_1" href="./OSystemException.html" title="com.orientechnologies.common.exception.OSystemException" alt="" coords="16,118,159,143"/>
-<area shape="rect" id="node2" href="./OSystemException.html" title="&lt;TABLE&gt;" alt="" coords="5,107,169,155"/>
-<area shape="rect" id="node3_2" href="./OErrorCode.html" title="com.orientechnologies.common.exception.OErrorCode" alt="" coords="180,11,299,53"/>
-<area shape="rect" id="node3" href="./OErrorCode.html" title="&lt;TABLE&gt;" alt="" coords="169,5,309,59"/>
-<area shape="rect" id="node4_3" href="./OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="344,11,503,53"/>
-<area shape="rect" id="node4" href="./OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="333,5,513,59"/>
-<area shape="rect" id="node5_4" href="./OErrorCategory.html" title="com.orientechnologies.common.exception.OErrorCategory" alt="" coords="549,11,669,53"/>
-<area shape="rect" id="node5" href="./OErrorCategory.html" title="&lt;TABLE&gt;" alt="" coords="538,5,679,59"/>
+<area shape="rect" id="node1_0" href="./OErrorCategory.html" title="com.orientechnologies.common.exception.OErrorCategory" alt="" coords="16,11,136,53"/>
+<area shape="rect" id="node1" href="./OErrorCategory.html" title="&lt;TABLE&gt;" alt="" coords="5,5,147,59"/>
+<area shape="rect" id="node2_1" href="./OErrorCode.html" title="com.orientechnologies.common.exception.OErrorCode" alt="" coords="182,11,301,53"/>
+<area shape="rect" id="node2" href="./OErrorCode.html" title="&lt;TABLE&gt;" alt="" coords="171,5,311,59"/>
+<area shape="rect" id="node3_2" href="./OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="346,11,505,53"/>
+<area shape="rect" id="node3" href="./OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="335,5,515,59"/>
+<area shape="rect" id="node4_3" href="./OException.html" title="com.orientechnologies.common.exception.OException" alt="" coords="551,19,644,45"/>
+<area shape="rect" id="node4" href="./OException.html" title="&lt;TABLE&gt;" alt="" coords="540,8,655,56"/>
+<area shape="rect" id="node5_4" href="./OSystemException.html" title="com.orientechnologies.common.exception.OSystemException" alt="" coords="526,118,669,143"/>
+<area shape="rect" id="node5" href="./OSystemException.html" title="&lt;TABLE&gt;" alt="" coords="515,107,679,155"/>
 </map>

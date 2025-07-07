@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.TokenMgrError
-	c4560800 [label=<<table title="com.orientechnologies.orient.core.sql.parser.TokenMgrError" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TokenMgrError.html">
+	c4560915 [label=<<table title="com.orientechnologies.orient.core.sql.parser.TokenMgrError" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TokenMgrError.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TokenMgrError </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TokenMgrError.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.TokenMgrError extends java.lang.Error
-	c4562240:p -> c4560800:p [dir=back,arrowtail=empty];
+	c4562234:p -> c4560915:p [dir=back,arrowtail=empty];
 	// java.lang.Error
-	c4562240 [label=<<table title="java.lang.Error" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Error.html">
+	c4562234 [label=<<table title="java.lang.Error" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Error.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Error </td></tr>
 		</table></td></tr>

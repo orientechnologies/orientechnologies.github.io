@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OSharedResourceAdaptiveExternal.html" title="com.orientechnologies.common.concur.resource.OSharedResourceAdaptiveExternal" alt="" coords="16,118,263,143"/>
-<area shape="rect" id="node1" href="./OSharedResourceAdaptiveExternal.html" title="&lt;TABLE&gt;" alt="" coords="5,107,273,155"/>
-<area shape="rect" id="node2_1" href="./OSharedResource.html" title="com.orientechnologies.common.concur.resource.OSharedResource" alt="" coords="72,11,207,53"/>
-<area shape="rect" id="node2" href="./OSharedResource.html" title="&lt;TABLE&gt;" alt="" coords="61,5,217,59"/>
+<area shape="rect" id="node1_0" href="./OSharedResource.html" title="com.orientechnologies.common.concur.resource.OSharedResource" alt="" coords="72,11,207,53"/>
+<area shape="rect" id="node1" href="./OSharedResource.html" title="&lt;TABLE&gt;" alt="" coords="61,5,217,59"/>
+<area shape="rect" id="node2_1" href="./OSharedResourceAdaptiveExternal.html" title="com.orientechnologies.common.concur.resource.OSharedResourceAdaptiveExternal" alt="" coords="16,118,263,143"/>
+<area shape="rect" id="node2" href="./OSharedResourceAdaptiveExternal.html" title="&lt;TABLE&gt;" alt="" coords="5,107,273,155"/>
 </map>

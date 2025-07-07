@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OOperation
-	c909555 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OOperation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperation.html">
+	c909541 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OOperation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OOperation </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOperation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder.DeleteRecordPages
-	c909559 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder.DeleteRecordPages" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OClusterCountersHolder.DeleteRecordPages.html">
+	c909558 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder.DeleteRecordPages" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OClusterCountersHolder.DeleteRecordPages.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DeleteRecordPages </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OClusterCountersHolder.DeleteRecordPages.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder.DeleteRecordPages extends com.orientechnologies.orient.core.storage.impl.local.statistic.OOperation
-	c909555:p -> c909559:p [dir=back,arrowtail=empty];
+	c909541:p -> c909558:p [dir=back,arrowtail=empty];
 }
 

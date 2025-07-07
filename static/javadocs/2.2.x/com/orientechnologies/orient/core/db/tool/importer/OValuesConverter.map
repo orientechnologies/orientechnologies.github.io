@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OLinkConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OLinkConverter" alt="" coords="16,118,136,143"/>
-<area shape="rect" id="node1" href="./OLinkConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,107,147,155"/>
-<area shape="rect" id="node2_1" href="./OValuesConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OValuesConverter" alt="" coords="106,11,273,53"/>
-<area shape="rect" id="node2" href="./OValuesConverter.html" title="&lt;TABLE&gt;" alt="" coords="95,5,283,59"/>
+<area shape="rect" id="node1_0" href="./OValuesConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OValuesConverter" alt="" coords="106,11,273,53"/>
+<area shape="rect" id="node1" href="./OValuesConverter.html" title="&lt;TABLE&gt;" alt="" coords="95,5,283,59"/>
+<area shape="rect" id="node2_1" href="./OLinkConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OLinkConverter" alt="" coords="16,118,136,143"/>
+<area shape="rect" id="node2" href="./OLinkConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,107,147,155"/>
 <area shape="rect" id="node3_2" href="./OAbstractCollectionConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OAbstractCollectionConverter" alt="" coords="181,118,424,143"/>
 <area shape="rect" id="node3" href="./OAbstractCollectionConverter.html" title="&lt;TABLE&gt;" alt="" coords="171,107,435,155"/>
 </map>

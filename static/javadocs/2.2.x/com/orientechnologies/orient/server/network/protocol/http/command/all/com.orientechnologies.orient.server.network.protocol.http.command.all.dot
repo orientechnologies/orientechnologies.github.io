@@ -10,24 +10,24 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandAbstractLogic
-	c351199 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandAbstractLogic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandAbstractLogic.html">
+	c351198 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandAbstractLogic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandAbstractLogic.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAbstractLogic </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandAbstractLogic.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandForward
+	c351199 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandForward" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandForward.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OServerCommandForward </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OServerCommandForward.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandFunction
 	c351200 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandFunction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandFunction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandFunction </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandFunction.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandForward
-	c351201 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandForward" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandForward.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OServerCommandForward </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OServerCommandForward.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandFunction extends com.orientechnologies.orient.server.network.protocol.http.command.all.OServerCommandAbstractLogic
-	c351199:p -> c351200:p [dir=back,arrowtail=empty];
+	c351198:p -> c351200:p [dir=back,arrowtail=empty];
 }
 

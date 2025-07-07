@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.stresstest.OStressTester.OMode
-	c4100404 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTester.OMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStressTester.OMode.html">
+	c4100402 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTester.OMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStressTester.OMode.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> OMode </td></tr>

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ONetworkProtocolData.html" title="com.orientechnologies.orient.server.network.protocol.ONetworkProtocolData" alt="" coords="16,19,184,45"/>
-<area shape="rect" id="node1" href="./ONetworkProtocolData.html" title="&lt;TABLE&gt;" alt="" coords="5,8,195,56"/>
-<area shape="rect" id="node2_1" href="./ONetworkProtocol.html" title="com.orientechnologies.orient.server.network.protocol.ONetworkProtocol" alt="" coords="230,19,367,45"/>
-<area shape="rect" id="node2" href="./ONetworkProtocol.html" title="&lt;TABLE&gt;" alt="" coords="219,8,378,56"/>
+<area shape="rect" id="node1_0" href="./ONetworkProtocol.html" title="com.orientechnologies.orient.server.network.protocol.ONetworkProtocol" alt="" coords="16,19,153,45"/>
+<area shape="rect" id="node1" href="./ONetworkProtocol.html" title="&lt;TABLE&gt;" alt="" coords="5,8,164,56"/>
+<area shape="rect" id="node2_1" href="./ONetworkProtocolData.html" title="com.orientechnologies.orient.server.network.protocol.ONetworkProtocolData" alt="" coords="199,19,367,45"/>
+<area shape="rect" id="node2" href="./ONetworkProtocolData.html" title="&lt;TABLE&gt;" alt="" coords="189,8,378,56"/>
 <area shape="rect" id="node3_2" href="./OBeforeDatabaseOpenNetworkEventListener.html" title="com.orientechnologies.orient.server.network.protocol.OBeforeDatabaseOpenNetworkEventListener" alt="" coords="413,11,725,53"/>
-<area shape="rect" id="node3" href="./OBeforeDatabaseOpenNetworkEventListener.html" title="&lt;TABLE&gt;" alt="" coords="403,5,736,59"/>
+<area shape="rect" id="node3" href="./OBeforeDatabaseOpenNetworkEventListener.html" title="&lt;TABLE&gt;" alt="" coords="402,5,735,59"/>
 </map>

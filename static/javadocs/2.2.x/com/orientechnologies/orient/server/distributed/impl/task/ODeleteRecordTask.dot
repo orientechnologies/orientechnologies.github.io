@@ -10,26 +10,26 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask
-	c1464822 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractRecordReplicatedTask.html">
+	c1464810 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractRecordReplicatedTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractRecordReplicatedTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../task/OAbstractRecordReplicatedTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.ODeleteRecordTask
-	c1465060 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ODeleteRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODeleteRecordTask.html">
+	c1465076 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ODeleteRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODeleteRecordTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODeleteRecordTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODeleteRecordTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OFixCreateRecordTask
-	c1465089 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OFixCreateRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OFixCreateRecordTask.html">
+	c1465083 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OFixCreateRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OFixCreateRecordTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OFixCreateRecordTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OFixCreateRecordTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.ODeleteRecordTask extends com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask
-	c1464822:p -> c1465060:p [dir=back,arrowtail=empty];
+	c1464810:p -> c1465076:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.impl.task.OFixCreateRecordTask extends com.orientechnologies.orient.server.distributed.impl.task.ODeleteRecordTask
-	c1465060:p -> c1465089:p [dir=back,arrowtail=empty];
+	c1465076:p -> c1465083:p [dir=back,arrowtail=empty];
 }
 

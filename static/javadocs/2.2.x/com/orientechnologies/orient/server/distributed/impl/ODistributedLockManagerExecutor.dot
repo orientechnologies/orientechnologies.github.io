@@ -17,12 +17,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ODistributedLockManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerExecutor
-	c1534140 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerExecutor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedLockManagerExecutor.html">
+	c1534120 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerExecutor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedLockManagerExecutor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedLockManagerExecutor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedLockManagerExecutor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerExecutor implements com.orientechnologies.orient.server.distributed.ODistributedLockManager
-	c1533888:p -> c1534140:p [dir=back,arrowtail=empty,style=dashed];
+	c1533888:p -> c1534120:p [dir=back,arrowtail=empty,style=dashed];
 }
 

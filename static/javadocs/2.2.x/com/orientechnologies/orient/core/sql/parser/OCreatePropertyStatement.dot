@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.parser.OCreatePropertyStatement
-	c1278871 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreatePropertyStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreatePropertyStatement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCreatePropertyStatement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCreatePropertyStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OStatement
-	c1278916 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
+	c1278960 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.parser.OCreatePropertyStatement
+	c1278981 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreatePropertyStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreatePropertyStatement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCreatePropertyStatement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCreatePropertyStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OCreatePropertyStatement extends com.orientechnologies.orient.core.sql.parser.OStatement
-	c1278916:p -> c1278871:p [dir=back,arrowtail=empty];
+	c1278960:p -> c1278981:p [dir=back,arrowtail=empty];
 }
 

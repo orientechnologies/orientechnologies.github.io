@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache
-	c2943746 [label=<<table title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../impl/memory/ODirectMemoryOnlyDiskCache.html">
+	c2943742 [label=<<table title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../impl/memory/ODirectMemoryOnlyDiskCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODirectMemoryOnlyDiskCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="../impl/memory/ODirectMemoryOnlyDiskCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.cache.OReadCache
-	c2943753 [label=<<table title="com.orientechnologies.orient.core.storage.cache.OReadCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OReadCache.html">
+	c2943746 [label=<<table title="com.orientechnologies.orient.core.storage.cache.OReadCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OReadCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OReadCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OReadCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.cache.local.twoq.O2QCache
-	c2943758 [label=<<table title="com.orientechnologies.orient.core.storage.cache.local.twoq.O2QCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./local/twoq/O2QCache.html">
+	c2943755 [label=<<table title="com.orientechnologies.orient.core.storage.cache.local.twoq.O2QCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./local/twoq/O2QCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> O2QCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./local/twoq/O2QCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache implements com.orientechnologies.orient.core.storage.cache.OReadCache
-	c2943753:p -> c2943746:p [dir=back,arrowtail=empty,style=dashed];
+	c2943746:p -> c2943742:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.storage.cache.local.twoq.O2QCache implements com.orientechnologies.orient.core.storage.cache.OReadCache
-	c2943753:p -> c2943758:p [dir=back,arrowtail=empty,style=dashed];
+	c2943746:p -> c2943755:p [dir=back,arrowtail=empty,style=dashed];
 }
 

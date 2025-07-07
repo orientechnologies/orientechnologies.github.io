@@ -9,38 +9,38 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.method.ODefaultSQLMethodFactory
-	c134914 [label=<<table title="com.orientechnologies.orient.core.sql.method.ODefaultSQLMethodFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultSQLMethodFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODefaultSQLMethodFactory </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODefaultSQLMethodFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt
-	c134915 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodCharAt.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodCharAt </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodCharAt.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.OSQLMethodRuntime
-	c134916 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodRuntime" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodRuntime.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodRuntime </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodRuntime.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.OSQLMethodFactory
-	c134917 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodFactory.html">
+	c134914 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSQLMethodFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.OSQLMethod
-	c134918 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethod.html">
+	c134915 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethod.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSQLMethod </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.OSQLMethodRuntime
+	c134916 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodRuntime" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodRuntime.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodRuntime </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodRuntime.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt
+	c134917 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodCharAt.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodCharAt </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodCharAt.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.ODefaultSQLMethodFactory
+	c134918 [label=<<table title="com.orientechnologies.orient.core.sql.method.ODefaultSQLMethodFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultSQLMethodFactory.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODefaultSQLMethodFactory </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODefaultSQLMethodFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.OSQLMethodLeft
 	c134919 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodLeft" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodLeft.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -48,6 +48,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodLeft.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.method.ODefaultSQLMethodFactory implements com.orientechnologies.orient.core.sql.method.OSQLMethodFactory
-	c134917:p -> c134914:p [dir=back,arrowtail=empty,style=dashed];
+	c134914:p -> c134918:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCount
-	c3315354 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCount" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionCount.html">
+	c3315340 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCount" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionCount.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionCount </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionCount.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract
-	c3315387 [label=<<table title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../math/OSQLFunctionMathAbstract.html">
+	c3315383 [label=<<table title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../math/OSQLFunctionMathAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMathAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../math/OSQLFunctionMathAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCount extends com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract
-	c3315387:p -> c3315354:p [dir=back,arrowtail=empty];
+	c3315383:p -> c3315340:p [dir=back,arrowtail=empty];
 }
 

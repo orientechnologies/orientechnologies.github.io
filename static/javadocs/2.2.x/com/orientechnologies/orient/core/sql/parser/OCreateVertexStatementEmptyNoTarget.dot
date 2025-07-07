@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.parser.OCreateVertexStatementEmptyNoTarget
-	c1291119 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreateVertexStatementEmptyNoTarget" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreateVertexStatementEmptyNoTarget.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCreateVertexStatementEmptyNoTarget </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCreateVertexStatementEmptyNoTarget.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OCreateVertexStatement
-	c1291142 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreateVertexStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCreateVertexStatement.html">
+	c1291102 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreateVertexStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCreateVertexStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCreateVertexStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCreateVertexStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.parser.OCreateVertexStatementEmptyNoTarget
+	c1291238 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreateVertexStatementEmptyNoTarget" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreateVertexStatementEmptyNoTarget.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCreateVertexStatementEmptyNoTarget </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCreateVertexStatementEmptyNoTarget.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OCreateVertexStatementEmptyNoTarget extends com.orientechnologies.orient.core.sql.parser.OCreateVertexStatement
-	c1291142:p -> c1291119:p [dir=back,arrowtail=empty];
+	c1291102:p -> c1291238:p [dir=back,arrowtail=empty];
 }
 

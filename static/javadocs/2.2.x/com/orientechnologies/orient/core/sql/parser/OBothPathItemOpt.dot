@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.OBothPathItemOpt
-	c781024 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OBothPathItemOpt" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBothPathItemOpt.html">
+	c781035 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OBothPathItemOpt" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBothPathItemOpt.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OBothPathItemOpt </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBothPathItemOpt.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OBothPathItem
-	c781179 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OBothPathItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBothPathItem.html">
+	c781095 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OBothPathItem" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBothPathItem.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OBothPathItem </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBothPathItem.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OBothPathItemOpt extends com.orientechnologies.orient.core.sql.parser.OBothPathItem
-	c781179:p -> c781024:p [dir=back,arrowtail=empty];
+	c781095:p -> c781035:p [dir=back,arrowtail=empty];
 }
 

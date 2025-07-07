@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.ORecordAttribute
-	c2961587 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ORecordAttribute" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordAttribute.html">
+	c2961499 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ORecordAttribute" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordAttribute.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordAttribute </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordAttribute.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.SimpleNode
-	c2961647 [label=<<table title="com.orientechnologies.orient.core.sql.parser.SimpleNode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SimpleNode.html">
+	c2961539 [label=<<table title="com.orientechnologies.orient.core.sql.parser.SimpleNode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SimpleNode.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SimpleNode </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SimpleNode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.ORecordAttribute extends com.orientechnologies.orient.core.sql.parser.SimpleNode
-	c2961647:p -> c2961587:p [dir=back,arrowtail=empty];
+	c2961539:p -> c2961499:p [dir=back,arrowtail=empty];
 }
 

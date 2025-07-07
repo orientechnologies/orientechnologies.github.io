@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../common/exception/OException.html" title="com.orientechnologies.common.exception.OException" alt="" coords="24,19,117,45"/>
-<area shape="rect" id="node1" href="../../../common/exception/OException.html" title="&lt;TABLE&gt;" alt="" coords="13,8,128,56"/>
-<area shape="rect" id="node3_1" href="./OFileLockedByAnotherProcessException.html" title="com.orientechnologies.orient.core.exception.OFileLockedByAnotherProcessException" alt="" coords="16,118,296,143"/>
-<area shape="rect" id="node3" href="./OFileLockedByAnotherProcessException.html" title="&lt;TABLE&gt;" alt="" coords="5,107,307,155"/>
-<area shape="rect" id="node2_2" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="163,11,322,53"/>
-<area shape="rect" id="node2" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="153,5,333,59"/>
+<area shape="rect" id="node1_0" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="16,11,175,53"/>
+<area shape="rect" id="node1" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="5,5,185,59"/>
+<area shape="rect" id="node3_1" href="./OFileLockedByAnotherProcessException.html" title="com.orientechnologies.orient.core.exception.OFileLockedByAnotherProcessException" alt="" coords="41,118,321,143"/>
+<area shape="rect" id="node3" href="./OFileLockedByAnotherProcessException.html" title="&lt;TABLE&gt;" alt="" coords="30,107,331,155"/>
+<area shape="rect" id="node2_2" href="../../../common/exception/OException.html" title="com.orientechnologies.common.exception.OException" alt="" coords="221,19,314,45"/>
+<area shape="rect" id="node2" href="../../../common/exception/OException.html" title="&lt;TABLE&gt;" alt="" coords="210,8,325,56"/>
 </map>

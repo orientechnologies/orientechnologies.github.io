@@ -9,28 +9,28 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
+	c672239 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../plugin/OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.plugin.OServerPluginConfigurable
-	c672239 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginConfigurable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginConfigurable.html">
+	c672241 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginConfigurable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginConfigurable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OServerPluginConfigurable </td></tr>
 		</table></td></tr>
 		</table>>, URL="../plugin/OServerPluginConfigurable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c672244 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../plugin/OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.handler.OAutomaticBackup
-	c672255 [label=<<table title="com.orientechnologies.orient.server.handler.OAutomaticBackup" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAutomaticBackup.html">
+	c672252 [label=<<table title="com.orientechnologies.orient.server.handler.OAutomaticBackup" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAutomaticBackup.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OAutomaticBackup </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAutomaticBackup.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.handler.OAutomaticBackup extends com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c672244:p -> c672255:p [dir=back,arrowtail=empty];
+	c672239:p -> c672252:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.handler.OAutomaticBackup implements com.orientechnologies.orient.server.plugin.OServerPluginConfigurable
-	c672239:p -> c672255:p [dir=back,arrowtail=empty,style=dashed];
+	c672241:p -> c672252:p [dir=back,arrowtail=empty,style=dashed];
 }
 

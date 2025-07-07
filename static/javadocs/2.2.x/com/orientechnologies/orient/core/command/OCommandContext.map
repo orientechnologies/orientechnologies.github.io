@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OBasicCommandContext.html" title="com.orientechnologies.orient.core.command.OBasicCommandContext" alt="" coords="16,118,199,143"/>
-<area shape="rect" id="node1" href="./OBasicCommandContext.html" title="&lt;TABLE&gt;" alt="" coords="5,107,209,155"/>
-<area shape="rect" id="node2_1" href="./OCommandContext.html" title="com.orientechnologies.orient.core.command.OCommandContext" alt="" coords="33,11,181,53"/>
-<area shape="rect" id="node2" href="./OCommandContext.html" title="&lt;TABLE&gt;" alt="" coords="23,5,192,59"/>
+<area shape="rect" id="node1_0" href="./OCommandContext.html" title="com.orientechnologies.orient.core.command.OCommandContext" alt="" coords="33,11,181,53"/>
+<area shape="rect" id="node1" href="./OCommandContext.html" title="&lt;TABLE&gt;" alt="" coords="23,5,192,59"/>
+<area shape="rect" id="node2_1" href="./OBasicCommandContext.html" title="com.orientechnologies.orient.core.command.OBasicCommandContext" alt="" coords="16,118,199,143"/>
+<area shape="rect" id="node2" href="./OBasicCommandContext.html" title="&lt;TABLE&gt;" alt="" coords="5,107,209,155"/>
 </map>

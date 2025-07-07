@@ -17,20 +17,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLLiveUnsubscribe
-	c1069516 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLLiveUnsubscribe" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLLiveUnsubscribe.html">
+	c1069517 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLLiveUnsubscribe" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLLiveUnsubscribe.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLLiveUnsubscribe </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLLiveUnsubscribe.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1069524 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
+	c1069521 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLLiveUnsubscribe extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1069524:p -> c1069516:p [dir=back,arrowtail=empty];
+	c1069521:p -> c1069517:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLLiveUnsubscribe implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1069427:p -> c1069516:p [dir=back,arrowtail=empty,style=dashed];
+	c1069427:p -> c1069517:p [dir=back,arrowtail=empty,style=dashed];
 }
 

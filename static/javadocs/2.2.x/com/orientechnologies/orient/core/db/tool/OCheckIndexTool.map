@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OCheckIndexTool.html" title="com.orientechnologies.orient.core.db.tool.OCheckIndexTool" alt="" coords="16,113,148,138"/>
-<area shape="rect" id="node1" href="./OCheckIndexTool.html" title="&lt;TABLE&gt;" alt="" coords="5,101,159,149"/>
-<area shape="rect" id="node2_1" href="./ODatabaseTool.html" title="com.orientechnologies.orient.core.db.tool.ODatabaseTool" alt="" coords="23,17,141,42"/>
-<area shape="rect" id="node2" href="./ODatabaseTool.html" title="&lt;TABLE&gt;" alt="" coords="13,5,151,53"/>
+<area shape="rect" id="node1_0" href="./ODatabaseTool.html" title="com.orientechnologies.orient.core.db.tool.ODatabaseTool" alt="" coords="23,17,141,42"/>
+<area shape="rect" id="node1" href="./ODatabaseTool.html" title="&lt;TABLE&gt;" alt="" coords="13,5,151,53"/>
+<area shape="rect" id="node2_1" href="./OCheckIndexTool.html" title="com.orientechnologies.orient.core.db.tool.OCheckIndexTool" alt="" coords="16,113,148,138"/>
+<area shape="rect" id="node2" href="./OCheckIndexTool.html" title="&lt;TABLE&gt;" alt="" coords="5,101,159,149"/>
 </map>

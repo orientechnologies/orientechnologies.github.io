@@ -1,16 +1,16 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../sql/OChainedIndexProxy.html" title="com.orientechnologies.orient.core.sql.OChainedIndexProxy" alt="" coords="16,222,201,247"/>
 <area shape="rect" id="node1" href="../sql/OChainedIndexProxy.html" title="&lt;TABLE&gt;" alt="" coords="5,211,212,259"/>
-<area shape="rect" id="node2_1" href="./OIndexRecorder.html" title="com.orientechnologies.orient.core.index.OIndexRecorder" alt="" coords="471,321,595,346"/>
-<area shape="rect" id="node2" href="./OIndexRecorder.html" title="&lt;TABLE&gt;" alt="" coords="460,309,605,357"/>
-<area shape="rect" id="node3_2" href="./OIndexAbstractDelegate.html" title="com.orientechnologies.orient.core.index.OIndexAbstractDelegate" alt="" coords="298,222,506,247"/>
-<area shape="rect" id="node3" href="./OIndexAbstractDelegate.html" title="&lt;TABLE&gt;" alt="" coords="287,211,517,259"/>
-<area shape="rect" id="node4_3" href="./OIndexRemote.html" title="com.orientechnologies.orient.core.index.OIndexRemote" alt="" coords="551,222,698,247"/>
-<area shape="rect" id="node4" href="./OIndexRemote.html" title="&lt;TABLE&gt;" alt="" coords="541,211,709,259"/>
-<area shape="rect" id="node5_4" href="./OIndex.html" title="com.orientechnologies.orient.core.index.OIndex" alt="" coords="354,112,450,155"/>
-<area shape="rect" id="node5" href="./OIndex.html" title="&lt;TABLE&gt;" alt="" coords="343,107,461,160"/>
-<area shape="rect" id="node6_5" href="./OIndexInternal.html" title="com.orientechnologies.orient.core.index.OIndexInternal" alt="" coords="744,213,889,256"/>
-<area shape="rect" id="node6" href="./OIndexInternal.html" title="&lt;TABLE&gt;" alt="" coords="733,208,900,261"/>
-<area shape="rect" id="node7_6" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Comparable.html" title="java.lang.Comparable" alt="" coords="338,11,466,53"/>
-<area shape="rect" id="node7" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Comparable.html" title="&lt;TABLE&gt;" alt="" coords="327,5,477,59"/>
+<area shape="rect" id="node2_1" href="./OIndexRemote.html" title="com.orientechnologies.orient.core.index.OIndexRemote" alt="" coords="247,222,394,247"/>
+<area shape="rect" id="node2" href="./OIndexRemote.html" title="&lt;TABLE&gt;" alt="" coords="237,211,405,259"/>
+<area shape="rect" id="node3_2" href="./OIndex.html" title="com.orientechnologies.orient.core.index.OIndex" alt="" coords="394,112,490,155"/>
+<area shape="rect" id="node3" href="./OIndex.html" title="&lt;TABLE&gt;" alt="" coords="383,107,501,160"/>
+<area shape="rect" id="node4_3" href="./OIndexRecorder.html" title="com.orientechnologies.orient.core.index.OIndexRecorder" alt="" coords="440,321,564,346"/>
+<area shape="rect" id="node4" href="./OIndexRecorder.html" title="&lt;TABLE&gt;" alt="" coords="429,309,575,357"/>
+<area shape="rect" id="node5_4" href="./OIndexInternal.html" title="com.orientechnologies.orient.core.index.OIndexInternal" alt="" coords="491,213,636,256"/>
+<area shape="rect" id="node5" href="./OIndexInternal.html" title="&lt;TABLE&gt;" alt="" coords="480,208,647,261"/>
+<area shape="rect" id="node6_5" href="./OIndexAbstractDelegate.html" title="com.orientechnologies.orient.core.index.OIndexAbstractDelegate" alt="" coords="682,222,890,247"/>
+<area shape="rect" id="node6" href="./OIndexAbstractDelegate.html" title="&lt;TABLE&gt;" alt="" coords="671,211,901,259"/>
+<area shape="rect" id="node7_6" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Comparable.html" title="java.lang.Comparable" alt="" coords="378,11,506,53"/>
+<area shape="rect" id="node7" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Comparable.html" title="&lt;TABLE&gt;" alt="" coords="367,5,517,59"/>
 </map>

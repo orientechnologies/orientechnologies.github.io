@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.index.OIndexRemoteOneValue
-	c2116825 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemoteOneValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexRemoteOneValue.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OIndexRemoteOneValue </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexRemoteOneValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexRemote<T>
-	c2116836 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexRemote.html">
+	c2116779 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexRemote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexRemote&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexRemote.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.index.OIndexRemoteOneValue
+	c2116794 [label=<<table title="com.orientechnologies.orient.core.index.OIndexRemoteOneValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexRemoteOneValue.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OIndexRemoteOneValue </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexRemoteOneValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.OIndexRemoteOneValue extends com.orientechnologies.orient.core.index.OIndexRemote<com.orientechnologies.orient.core.db.record.OIdentifiable>
-	c2116836:p -> c2116825:p [dir=back,arrowtail=empty];
+	c2116779:p -> c2116794:p [dir=back,arrowtail=empty];
 }
 

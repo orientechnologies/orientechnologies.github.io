@@ -10,28 +10,28 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.metadata.schema.OGlobalProperty
-	c1829374 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OGlobalProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGlobalProperty.html">
+	c1829373 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OGlobalProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGlobalProperty.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OGlobalProperty </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OGlobalProperty.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl
-	c1829383 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OGlobalPropertyImpl.html">
+	c1829374 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OGlobalPropertyImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OGlobalPropertyImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OGlobalPropertyImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.ODocumentSerializable
-	c1829924 [label=<<table title="com.orientechnologies.orient.core.serialization.ODocumentSerializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../serialization/ODocumentSerializable.html">
+	c1829918 [label=<<table title="com.orientechnologies.orient.core.serialization.ODocumentSerializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../serialization/ODocumentSerializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODocumentSerializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../serialization/ODocumentSerializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl implements com.orientechnologies.orient.core.metadata.schema.OGlobalProperty
-	c1829374:p -> c1829383:p [dir=back,arrowtail=empty,style=dashed];
+	c1829373:p -> c1829374:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl implements com.orientechnologies.orient.core.serialization.ODocumentSerializable
-	c1829924:p -> c1829383:p [dir=back,arrowtail=empty,style=dashed];
+	c1829918:p -> c1829374:p [dir=back,arrowtail=empty,style=dashed];
 }
 

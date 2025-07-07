@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.tinkerpop.rexster.OrientGraphConfiguration
-	c4458329 [label=<<table title="com.tinkerpop.rexster.OrientGraphConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientGraphConfiguration.html">
+	c4458323 [label=<<table title="com.tinkerpop.rexster.OrientGraphConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientGraphConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OrientGraphConfiguration </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OrientGraphConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.tinkerpop.rexster.OrientGraphConfiguration implements com.tinkerpop.rexster.config.GraphConfiguration
-	c4458580:p -> c4458329:p [dir=back,arrowtail=empty,style=dashed];
+	c4458574:p -> c4458323:p [dir=back,arrowtail=empty,style=dashed];
 	// com.tinkerpop.rexster.config.GraphConfiguration
-	c4458580 [label=<<table title="com.tinkerpop.rexster.config.GraphConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/com/tinkerpop/rexster/config/GraphConfiguration.html">
+	c4458574 [label=<<table title="com.tinkerpop.rexster.config.GraphConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/com/tinkerpop/rexster/config/GraphConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> GraphConfiguration </td></tr>

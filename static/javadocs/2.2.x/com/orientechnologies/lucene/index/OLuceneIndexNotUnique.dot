@@ -10,37 +10,37 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.index.OIndexAbstract<T>
-	c2399272 [label=<<table title="com.orientechnologies.orient.core.index.OIndexAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/index/OIndexAbstract.html">
+	c2399303 [label=<<table title="com.orientechnologies.orient.core.index.OIndexAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/index/OIndexAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexAbstract&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/index/OIndexAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.OLuceneIndex
-	c2399898 [label=<<table title="com.orientechnologies.lucene.OLuceneIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OLuceneIndex.html">
+	c2399894 [label=<<table title="com.orientechnologies.lucene.OLuceneIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OLuceneIndex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OLuceneIndex </td></tr>
 		</table></td></tr>
 		</table>>, URL="../OLuceneIndex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.lucene.index.OLuceneIndexNotUnique
-	c2399929 [label=<<table title="com.orientechnologies.lucene.index.OLuceneIndexNotUnique" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneIndexNotUnique.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLuceneIndexNotUnique </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLuceneIndexNotUnique.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.index.OLuceneFullTextIndex
-	c2399930 [label=<<table title="com.orientechnologies.lucene.index.OLuceneFullTextIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneFullTextIndex.html">
+	c2399925 [label=<<table title="com.orientechnologies.lucene.index.OLuceneFullTextIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneFullTextIndex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLuceneFullTextIndex </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneFullTextIndex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.lucene.index.OLuceneIndexNotUnique extends com.orientechnologies.orient.core.index.OIndexAbstract<java.util.Set<com.orientechnologies.orient.core.db.record.OIdentifiable>>
-	c2399272:p -> c2399929:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.lucene.index.OLuceneIndexNotUnique implements com.orientechnologies.lucene.OLuceneIndex
-	c2399898:p -> c2399929:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.lucene.index.OLuceneIndexNotUnique
+	c2399926 [label=<<table title="com.orientechnologies.lucene.index.OLuceneIndexNotUnique" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneIndexNotUnique.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLuceneIndexNotUnique </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLuceneIndexNotUnique.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.lucene.index.OLuceneFullTextIndex extends com.orientechnologies.lucene.index.OLuceneIndexNotUnique
-	c2399929:p -> c2399930:p [dir=back,arrowtail=empty];
+	c2399926:p -> c2399925:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.lucene.index.OLuceneFullTextIndex implements com.orientechnologies.lucene.OLuceneIndex
-	c2399898:p -> c2399930:p [dir=back,arrowtail=empty,style=dashed];
+	c2399894:p -> c2399925:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.lucene.index.OLuceneIndexNotUnique extends com.orientechnologies.orient.core.index.OIndexAbstract<java.util.Set<com.orientechnologies.orient.core.db.record.OIdentifiable>>
+	c2399303:p -> c2399926:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.lucene.index.OLuceneIndexNotUnique implements com.orientechnologies.lucene.OLuceneIndex
+	c2399894:p -> c2399926:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OSBTreeIndexEngine.html" title="com.orientechnologies.orient.core.index.engine.OSBTreeIndexEngine" alt="" coords="16,118,169,143"/>
-<area shape="rect" id="node1" href="./OSBTreeIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="5,107,180,155"/>
-<area shape="rect" id="node2_1" href="http://java.sun.com/j2se/1.4.2/docs/api/com/orientechnologies/orient/core/index/engine/OIndexEngine.html" title="com.orientechnologies.orient.core.index.engine.OIndexEngine" alt="" coords="38,11,147,53"/>
-<area shape="rect" id="node2" href="http://java.sun.com/j2se/1.4.2/docs/api/com/orientechnologies/orient/core/index/engine/OIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="27,5,158,59"/>
+<area shape="rect" id="node1_0" href="../OIndexEngine.html" title="com.orientechnologies.orient.core.index.OIndexEngine" alt="" coords="38,11,147,53"/>
+<area shape="rect" id="node1" href="../OIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="27,5,158,59"/>
+<area shape="rect" id="node2_1" href="./OSBTreeIndexEngine.html" title="com.orientechnologies.orient.core.index.engine.OSBTreeIndexEngine" alt="" coords="16,118,169,143"/>
+<area shape="rect" id="node2" href="./OSBTreeIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="5,107,180,155"/>
 </map>

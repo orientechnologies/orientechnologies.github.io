@@ -9,55 +9,55 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory
-	c383811 [label=<<table title="com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphCommandExecutorSQLFactory.html">
+	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteEdge
+	c383810 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteEdge" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLDeleteEdge.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OGraphCommandExecutorSQLFactory </td></tr>
+<tr><td align="center" balign="center"> OCommandExecutorSQLDeleteEdge </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OGraphCommandExecutorSQLFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory.GRAPH_CONSISTENCY_MODE
-	c383812 [label=<<table title="com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory.GRAPH_CONSISTENCY_MODE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphCommandExecutorSQLFactory.GRAPH_CONSISTENCY_MODE.html">
+		</table>>, URL="./OCommandExecutorSQLDeleteEdge.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex
+	c383811 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLMoveVertex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> GRAPH_CONSISTENCY_MODE </td></tr>
+<tr><td align="center" balign="center"> OCommandExecutorSQLMoveVertex </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OGraphCommandExecutorSQLFactory.GRAPH_CONSISTENCY_MODE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory.GraphCallBack<T>
-	c383813 [label=<<table title="com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory.GraphCallBack" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphCommandExecutorSQLFactory.GraphCallBack.html">
+		</table>>, URL="./OCommandExecutorSQLMoveVertex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateVertex
+	c383812 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLCreateVertex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> GraphCallBack&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> OCommandExecutorSQLCreateVertex </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OGraphCommandExecutorSQLFactory.GraphCallBack.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OCommandExecutorSQLCreateVertex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex
+	c383813 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLDeleteVertex.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCommandExecutorSQLDeleteVertex </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandExecutorSQLDeleteVertex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateEdge
 	c383814 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateEdge" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLCreateEdge.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLCreateEdge </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLCreateEdge.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateVertex
-	c383815 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLCreateVertex.html">
+	// com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory
+	c383815 [label=<<table title="com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphCommandExecutorSQLFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLCreateVertex </td></tr>
+<tr><td align="center" balign="center"> OGraphCommandExecutorSQLFactory </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLCreateVertex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex
-	c383816 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLMoveVertex.html">
+		</table>>, URL="./OGraphCommandExecutorSQLFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory.GRAPH_CONSISTENCY_MODE
+	c383816 [label=<<table title="com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory.GRAPH_CONSISTENCY_MODE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphCommandExecutorSQLFactory.GRAPH_CONSISTENCY_MODE.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLMoveVertex </td></tr>
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> GRAPH_CONSISTENCY_MODE </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLMoveVertex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex
-	c383817 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLDeleteVertex.html">
+		</table>>, URL="./OGraphCommandExecutorSQLFactory.GRAPH_CONSISTENCY_MODE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory.GraphCallBack<T>
+	c383817 [label=<<table title="com.orientechnologies.orient.graph.sql.OGraphCommandExecutorSQLFactory.GraphCallBack" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGraphCommandExecutorSQLFactory.GraphCallBack.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLDeleteVertex </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> GraphCallBack&lt;T&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLDeleteVertex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteEdge
-	c383818 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteEdge" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLDeleteEdge.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLDeleteEdge </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLDeleteEdge.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OGraphCommandExecutorSQLFactory.GraphCallBack.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

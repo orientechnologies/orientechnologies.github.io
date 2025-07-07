@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.record.OProxedResource<T>
-	c2083238 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../db/record/OProxedResource.html">
+	c2083218 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../db/record/OProxedResource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OProxedResource&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../db/record/OProxedResource.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.index.OIndexManagerProxy
+	c2084273 [label=<<table title="com.orientechnologies.orient.core.index.OIndexManagerProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexManagerProxy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OIndexManagerProxy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OIndexManagerProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexManager
-	c2084297 [label=<<table title="com.orientechnologies.orient.core.index.OIndexManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexManager.html">
+	c2084284 [label=<<table title="com.orientechnologies.orient.core.index.OIndexManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OIndexManager </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.index.OIndexManagerProxy
-	c2084300 [label=<<table title="com.orientechnologies.orient.core.index.OIndexManagerProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexManagerProxy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OIndexManagerProxy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OIndexManagerProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.OIndexManagerProxy extends com.orientechnologies.orient.core.db.record.OProxedResource<com.orientechnologies.orient.core.index.OIndexManager>
-	c2083238:p -> c2084300:p [dir=back,arrowtail=empty];
+	c2083218:p -> c2084273:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.index.OIndexManagerProxy implements com.orientechnologies.orient.core.index.OIndexManager
-	c2084297:p -> c2084300:p [dir=back,arrowtail=empty,style=dashed];
+	c2084284:p -> c2084273:p [dir=back,arrowtail=empty,style=dashed];
 }
 

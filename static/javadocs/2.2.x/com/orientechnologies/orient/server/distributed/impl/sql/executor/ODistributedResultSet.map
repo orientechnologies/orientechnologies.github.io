@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../../core/sql/executor/OResultSet.html" title="com.orientechnologies.orient.core.sql.executor.OResultSet" alt="" coords="51,11,145,53"/>
-<area shape="rect" id="node1" href="../../../../../core/sql/executor/OResultSet.html" title="&lt;TABLE&gt;" alt="" coords="41,5,155,59"/>
-<area shape="rect" id="node2_1" href="./ODistributedResultSet.html" title="com.orientechnologies.orient.server.distributed.impl.sql.executor.ODistributedResultSet" alt="" coords="16,118,180,143"/>
-<area shape="rect" id="node2" href="./ODistributedResultSet.html" title="&lt;TABLE&gt;" alt="" coords="5,107,191,155"/>
-</map>

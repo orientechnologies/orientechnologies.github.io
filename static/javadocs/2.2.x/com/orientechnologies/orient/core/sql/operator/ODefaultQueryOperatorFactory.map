@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OQueryOperatorFactory.html" title="com.orientechnologies.orient.core.sql.operator.OQueryOperatorFactory" alt="" coords="40,11,212,53"/>
-<area shape="rect" id="node1" href="./OQueryOperatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="29,5,223,59"/>
-<area shape="rect" id="node2_1" href="./ODefaultQueryOperatorFactory.html" title="com.orientechnologies.orient.core.sql.operator.ODefaultQueryOperatorFactory" alt="" coords="16,118,236,143"/>
-<area shape="rect" id="node2" href="./ODefaultQueryOperatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,107,247,155"/>
+<area shape="rect" id="node1_0" href="./ODefaultQueryOperatorFactory.html" title="com.orientechnologies.orient.core.sql.operator.ODefaultQueryOperatorFactory" alt="" coords="16,118,236,143"/>
+<area shape="rect" id="node1" href="./ODefaultQueryOperatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,107,247,155"/>
+<area shape="rect" id="node2_1" href="./OQueryOperatorFactory.html" title="com.orientechnologies.orient.core.sql.operator.OQueryOperatorFactory" alt="" coords="40,11,212,53"/>
+<area shape="rect" id="node2" href="./OQueryOperatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="29,5,223,59"/>
 </map>

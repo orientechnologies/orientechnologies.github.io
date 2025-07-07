@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializerHelperDocument
-	c2673347 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializerHelperDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OObjectSerializerHelperDocument.html">
+	c2673344 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializerHelperDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OObjectSerializerHelperDocument.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectSerializerHelperDocument </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectSerializerHelperDocument.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializerHelperInterface
-	c2673348 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializerHelperInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializerHelperInterface.html">
+	c2673345 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializerHelperInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializerHelperInterface.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OObjectSerializerHelperInterface </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectSerializerHelperInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializerHelperDocument implements com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializerHelperInterface
-	c2673348:p -> c2673347:p [dir=back,arrowtail=empty,style=dashed];
+	c2673345:p -> c2673344:p [dir=back,arrowtail=empty,style=dashed];
 }
 

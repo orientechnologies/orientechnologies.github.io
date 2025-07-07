@@ -9,41 +9,41 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.collate.ODefaultCollate
-	c947995 [label=<<table title="com.orientechnologies.orient.core.collate.ODefaultCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultCollate.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODefaultCollate </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODefaultCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.collate.OCollate
-	c947997 [label=<<table title="com.orientechnologies.orient.core.collate.OCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCollate.html">
+	c947994 [label=<<table title="com.orientechnologies.orient.core.collate.OCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCollate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCollate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate
-	c947999 [label=<<table title="com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCaseInsensitiveCollate.html">
+	c947995 [label=<<table title="com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCaseInsensitiveCollate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCaseInsensitiveCollate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCaseInsensitiveCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.collate.ODefaultCollate
+	c947997 [label=<<table title="com.orientechnologies.orient.core.collate.ODefaultCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultCollate.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODefaultCollate </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODefaultCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OCompositeCollate
-	c948385 [label=<<table title="com.orientechnologies.orient.core.index.OCompositeCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../index/OCompositeCollate.html">
+	c948384 [label=<<table title="com.orientechnologies.orient.core.index.OCompositeCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../index/OCompositeCollate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCompositeCollate </td></tr>
 		</table></td></tr>
 		</table>>, URL="../index/OCompositeCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.collate.ODefaultCollate implements com.orientechnologies.orient.core.collate.OCollate
-	c947997:p -> c947995:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.collate.OCollate implements java.io.Serializable
-	c949082:p -> c947997:p [dir=back,arrowtail=empty,style=dashed];
+	c949080:p -> c947994:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate implements com.orientechnologies.orient.core.collate.OCollate
-	c947997:p -> c947999:p [dir=back,arrowtail=empty,style=dashed];
+	c947994:p -> c947995:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.collate.ODefaultCollate implements com.orientechnologies.orient.core.collate.OCollate
+	c947994:p -> c947997:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.index.OCompositeCollate implements com.orientechnologies.orient.core.collate.OCollate
-	c947997:p -> c948385:p [dir=back,arrowtail=empty,style=dashed];
+	c947994:p -> c948384:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c949082 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c949080 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

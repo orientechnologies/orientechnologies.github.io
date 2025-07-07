@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage
-	c2321802 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OAbstractPaginatedStorage.html">
+	c2321793 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OAbstractPaginatedStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractPaginatedStorage </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OAbstractPaginatedStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent
-	c2321806 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OFreezableStorageComponent.html">
+	c2321795 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OFreezableStorageComponent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OFreezableStorageComponent </td></tr>
 		</table></td></tr>
 		</table>>, URL="../OFreezableStorageComponent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage
-	c2321809 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLocalPaginatedStorage.html">
+	c2321806 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLocalPaginatedStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLocalPaginatedStorage </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLocalPaginatedStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage extends com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage
-	c2321802:p -> c2321809:p [dir=back,arrowtail=empty];
+	c2321793:p -> c2321806:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage implements com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent
-	c2321806:p -> c2321809:p [dir=back,arrowtail=empty,style=dashed];
+	c2321795:p -> c2321806:p [dir=back,arrowtail=empty,style=dashed];
 }
 

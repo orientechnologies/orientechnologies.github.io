@@ -10,13 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.hook.ODocumentHookAbstract
-	c3570974 [label=<<table title="com.orientechnologies.orient.core.hook.ODocumentHookAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../hook/ODocumentHookAbstract.html">
+	c3570968 [label=<<table title="com.orientechnologies.orient.core.hook.ODocumentHookAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../hook/ODocumentHookAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODocumentHookAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../hook/ODocumentHookAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.hook.ORecordHook.Scoped
-	c3570981 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHook.Scoped" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../hook/ORecordHook.Scoped.html">
+	c3570975 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHook.Scoped" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../hook/ORecordHook.Scoped.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Scoped </td></tr>
@@ -29,8 +29,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OSchedulerTrigger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.schedule.OSchedulerTrigger extends com.orientechnologies.orient.core.hook.ODocumentHookAbstract
-	c3570974:p -> c3571693:p [dir=back,arrowtail=empty];
+	c3570968:p -> c3571693:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.schedule.OSchedulerTrigger implements com.orientechnologies.orient.core.hook.ORecordHook.Scoped
-	c3570981:p -> c3571693:p [dir=back,arrowtail=empty,style=dashed];
+	c3570975:p -> c3571693:p [dir=back,arrowtail=empty,style=dashed];
 }
 

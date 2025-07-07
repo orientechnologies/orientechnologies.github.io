@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../../../common/collection/closabledictionary/OClosableItem.html" title="com.orientechnologies.common.collection.closabledictionary.OClosableItem" alt="" coords="16,11,132,53"/>
 <area shape="rect" id="node1" href="../../../../common/collection/closabledictionary/OClosableItem.html" title="&lt;TABLE&gt;" alt="" coords="5,5,143,59"/>
-<area shape="rect" id="node3_1" href="./OFileClassic.html" title="com.orientechnologies.orient.core.storage.fs.OFileClassic" alt="" coords="99,118,198,143"/>
-<area shape="rect" id="node3" href="./OFileClassic.html" title="&lt;TABLE&gt;" alt="" coords="89,107,209,155"/>
-<area shape="rect" id="node2_2" href="./OFile.html" title="com.orientechnologies.orient.core.storage.fs.OFile" alt="" coords="178,11,271,53"/>
-<area shape="rect" id="node2" href="./OFile.html" title="&lt;TABLE&gt;" alt="" coords="167,5,282,59"/>
+<area shape="rect" id="node2_1" href="./OFileClassic.html" title="com.orientechnologies.orient.core.storage.fs.OFileClassic" alt="" coords="99,118,198,143"/>
+<area shape="rect" id="node2" href="./OFileClassic.html" title="&lt;TABLE&gt;" alt="" coords="89,107,209,155"/>
+<area shape="rect" id="node3_2" href="./OFile.html" title="com.orientechnologies.orient.core.storage.fs.OFile" alt="" coords="178,11,271,53"/>
+<area shape="rect" id="node3" href="./OFile.html" title="&lt;TABLE&gt;" alt="" coords="167,5,282,59"/>
 </map>

@@ -9,27 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract
-	c3071623 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializerCSVAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordSerializerCSVAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORecordSerializerCSVAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerSchemaAware2CSV
-	c3071626 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerSchemaAware2CSV" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordSerializerSchemaAware2CSV.html">
+	c3071621 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerSchemaAware2CSV" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordSerializerSchemaAware2CSV.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordSerializerSchemaAware2CSV </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordSerializerSchemaAware2CSV.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract
+	c3071622 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializerCSVAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordSerializerCSVAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORecordSerializerCSVAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract
-	c3071627 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordSerializerStringAbstract.html">
+	c3071623 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordSerializerStringAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordSerializerStringAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordSerializerStringAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract extends com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract
-	c3071627:p -> c3071623:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerSchemaAware2CSV extends com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract
-	c3071623:p -> c3071626:p [dir=back,arrowtail=empty];
+	c3071622:p -> c3071621:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract extends com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract
+	c3071623:p -> c3071622:p [dir=back,arrowtail=empty];
 }
 

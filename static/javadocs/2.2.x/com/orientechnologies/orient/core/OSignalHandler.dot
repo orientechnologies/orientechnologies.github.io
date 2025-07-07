@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.OSignalHandler
-	c3936496 [label=<<table title="com.orientechnologies.orient.core.OSignalHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSignalHandler.html">
+	c3936483 [label=<<table title="com.orientechnologies.orient.core.OSignalHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSignalHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSignalHandler </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSignalHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.OSignalHandler implements sun.misc.SignalHandler
-	c3938343:p -> c3936496:p [dir=back,arrowtail=empty,style=dashed];
+	c3938337:p -> c3936483:p [dir=back,arrowtail=empty,style=dashed];
 	// sun.misc.SignalHandler
-	c3938343 [label=<<table title="sun.misc.SignalHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/sun/misc/SignalHandler.html">
+	c3938337 [label=<<table title="sun.misc.SignalHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/sun/misc/SignalHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SignalHandler </td></tr>

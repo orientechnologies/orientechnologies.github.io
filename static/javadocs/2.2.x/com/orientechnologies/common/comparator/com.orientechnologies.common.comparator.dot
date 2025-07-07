@@ -9,35 +9,35 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.common.comparator.OUnsafeByteArrayComparator
-	c24475 [label=<<table title="com.orientechnologies.common.comparator.OUnsafeByteArrayComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUnsafeByteArrayComparator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OUnsafeByteArrayComparator </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OUnsafeByteArrayComparator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.comparator.OComparatorFactory
-	c24476 [label=<<table title="com.orientechnologies.common.comparator.OComparatorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OComparatorFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OComparatorFactory </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OComparatorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.comparator.OByteArrayComparator
-	c24477 [label=<<table title="com.orientechnologies.common.comparator.OByteArrayComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OByteArrayComparator.html">
+	c24475 [label=<<table title="com.orientechnologies.common.comparator.OByteArrayComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OByteArrayComparator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OByteArrayComparator </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OByteArrayComparator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.comparator.OCaseInsentiveComparator
-	c24478 [label=<<table title="com.orientechnologies.common.comparator.OCaseInsentiveComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCaseInsentiveComparator.html">
+	// com.orientechnologies.common.comparator.OUnsafeByteArrayComparator
+	c24476 [label=<<table title="com.orientechnologies.common.comparator.OUnsafeByteArrayComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUnsafeByteArrayComparator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCaseInsentiveComparator </td></tr>
+<tr><td align="center" balign="center"> OUnsafeByteArrayComparator </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCaseInsentiveComparator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OUnsafeByteArrayComparator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.comparator.ODefaultComparator
-	c24479 [label=<<table title="com.orientechnologies.common.comparator.ODefaultComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultComparator.html">
+	c24477 [label=<<table title="com.orientechnologies.common.comparator.ODefaultComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultComparator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODefaultComparator </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODefaultComparator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.comparator.OComparatorFactory
+	c24478 [label=<<table title="com.orientechnologies.common.comparator.OComparatorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OComparatorFactory.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OComparatorFactory </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OComparatorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.comparator.OCaseInsentiveComparator
+	c24479 [label=<<table title="com.orientechnologies.common.comparator.OCaseInsentiveComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCaseInsentiveComparator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCaseInsentiveComparator </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCaseInsentiveComparator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

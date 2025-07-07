@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.ODatabaseLifecycleListener
-	c2298616 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/db/ODatabaseLifecycleListener.html">
+	c2298602 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/db/ODatabaseLifecycleListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODatabaseLifecycleListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/db/ODatabaseLifecycleListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c2299980 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerPluginAbstract.html">
+	c2299973 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerPluginAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.plugin.livequery.OLiveQueryPlugin
-	c2299982 [label=<<table title="com.orientechnologies.orient.server.plugin.livequery.OLiveQueryPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLiveQueryPlugin.html">
+	c2299978 [label=<<table title="com.orientechnologies.orient.server.plugin.livequery.OLiveQueryPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLiveQueryPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLiveQueryPlugin </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLiveQueryPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.plugin.livequery.OLiveQueryPlugin extends com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c2299980:p -> c2299982:p [dir=back,arrowtail=empty];
+	c2299973:p -> c2299978:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.plugin.livequery.OLiveQueryPlugin implements com.orientechnologies.orient.core.db.ODatabaseLifecycleListener
-	c2298616:p -> c2299982:p [dir=back,arrowtail=empty,style=dashed];
+	c2298602:p -> c2299978:p [dir=back,arrowtail=empty,style=dashed];
 }
 

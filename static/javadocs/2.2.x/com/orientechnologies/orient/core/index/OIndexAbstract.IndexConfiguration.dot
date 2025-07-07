@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.index.OIndexAbstract.IndexConfiguration
-	c2027386 [label=<<table title="com.orientechnologies.orient.core.index.OIndexAbstract.IndexConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexAbstract.IndexConfiguration.html">
+	c2027417 [label=<<table title="com.orientechnologies.orient.core.index.OIndexAbstract.IndexConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIndexAbstract.IndexConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> IndexConfiguration </td></tr>
 		</table></td></tr>

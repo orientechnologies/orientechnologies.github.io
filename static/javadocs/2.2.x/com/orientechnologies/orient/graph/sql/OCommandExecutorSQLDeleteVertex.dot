@@ -17,29 +17,29 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../core/command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandResultListener
-	c1030825 [label=<<table title="com.orientechnologies.orient.core.command.OCommandResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/command/OCommandResultListener.html">
+	c1030827 [label=<<table title="com.orientechnologies.orient.core.command.OCommandResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/command/OCommandResultListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandResultListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/command/OCommandResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1030916 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/sql/OCommandExecutorSQLAbstract.html">
+	c1030913 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/sql/OCommandExecutorSQLAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/sql/OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex
-	c1032164 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLDeleteVertex.html">
+	c1032159 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLDeleteVertex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLDeleteVertex </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLDeleteVertex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1030916:p -> c1032164:p [dir=back,arrowtail=empty];
+	c1030913:p -> c1032159:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1030819:p -> c1032164:p [dir=back,arrowtail=empty,style=dashed];
+	c1030819:p -> c1032159:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex implements com.orientechnologies.orient.core.command.OCommandResultListener
-	c1030825:p -> c1032164:p [dir=back,arrowtail=empty,style=dashed];
+	c1030827:p -> c1032159:p [dir=back,arrowtail=empty,style=dashed];
 }
 

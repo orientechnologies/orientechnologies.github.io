@@ -9,28 +9,28 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.common.concur.lock.OAbstractLock
-	c530478 [label=<<table title="com.orientechnologies.common.concur.lock.OAbstractLock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractLock.html">
+	// com.orientechnologies.common.concur.lock.OLock
+	c530474 [label=<<table title="com.orientechnologies.common.concur.lock.OLock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLock.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractLock </font></td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OLock </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OAbstractLock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OLock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.concur.lock.OAdaptiveLock
 	c530481 [label=<<table title="com.orientechnologies.common.concur.lock.OAdaptiveLock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAdaptiveLock.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OAdaptiveLock </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAdaptiveLock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.concur.lock.OLock
-	c530484 [label=<<table title="com.orientechnologies.common.concur.lock.OLock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLock.html">
+	// com.orientechnologies.common.concur.lock.OAbstractLock
+	c530482 [label=<<table title="com.orientechnologies.common.concur.lock.OAbstractLock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractLock.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OLock </td></tr>
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractLock </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./OLock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.common.concur.lock.OAbstractLock implements com.orientechnologies.common.concur.lock.OLock
-	c530484:p -> c530478:p [dir=back,arrowtail=empty,style=dashed];
+		</table>>, URL="./OAbstractLock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.concur.lock.OAdaptiveLock extends com.orientechnologies.common.concur.lock.OAbstractLock
-	c530478:p -> c530481:p [dir=back,arrowtail=empty];
+	c530482:p -> c530481:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.common.concur.lock.OAbstractLock implements com.orientechnologies.common.concur.lock.OLock
+	c530474:p -> c530482:p [dir=back,arrowtail=empty,style=dashed];
 }
 

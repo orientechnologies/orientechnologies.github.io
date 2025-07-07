@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.ORemoteTaskFactory
-	c1444487 [label=<<table title="com.orientechnologies.orient.server.distributed.ORemoteTaskFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../ORemoteTaskFactory.html">
+	c1444458 [label=<<table title="com.orientechnologies.orient.server.distributed.ORemoteTaskFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../ORemoteTaskFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORemoteTaskFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../ORemoteTaskFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.ODefaultRemoteTaskFactoryV2
-	c1444738 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ODefaultRemoteTaskFactoryV2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODefaultRemoteTaskFactoryV2.html">
+	c1444773 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ODefaultRemoteTaskFactoryV2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODefaultRemoteTaskFactoryV2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODefaultRemoteTaskFactoryV2 </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODefaultRemoteTaskFactoryV2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.ODefaultRemoteTaskFactoryV2 implements com.orientechnologies.orient.server.distributed.ORemoteTaskFactory
-	c1444487:p -> c1444738:p [dir=back,arrowtail=empty,style=dashed];
+	c1444458:p -> c1444773:p [dir=back,arrowtail=empty,style=dashed];
 }
 

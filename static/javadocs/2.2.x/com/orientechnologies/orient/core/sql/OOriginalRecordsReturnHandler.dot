@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.ORecordsReturnHandler
-	c2723713 [label=<<table title="com.orientechnologies.orient.core.sql.ORecordsReturnHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordsReturnHandler.html">
+	c2723661 [label=<<table title="com.orientechnologies.orient.core.sql.ORecordsReturnHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordsReturnHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordsReturnHandler </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordsReturnHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OOriginalRecordsReturnHandler
-	c2723725 [label=<<table title="com.orientechnologies.orient.core.sql.OOriginalRecordsReturnHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OOriginalRecordsReturnHandler.html">
+	c2723717 [label=<<table title="com.orientechnologies.orient.core.sql.OOriginalRecordsReturnHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OOriginalRecordsReturnHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OOriginalRecordsReturnHandler </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOriginalRecordsReturnHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.OOriginalRecordsReturnHandler extends com.orientechnologies.orient.core.sql.ORecordsReturnHandler
-	c2723713:p -> c2723725:p [dir=back,arrowtail=empty];
+	c2723661:p -> c2723717:p [dir=back,arrowtail=empty];
 }
 

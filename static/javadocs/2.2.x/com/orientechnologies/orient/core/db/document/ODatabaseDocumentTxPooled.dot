@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.ODatabasePooled
-	c1335384 [label=<<table title="com.orientechnologies.orient.core.db.ODatabasePooled" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ODatabasePooled.html">
+	c1335376 [label=<<table title="com.orientechnologies.orient.core.db.ODatabasePooled" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ODatabasePooled.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODatabasePooled </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ODatabasePooled.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxPooled
-	c1335470 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxPooled" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseDocumentTxPooled.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODatabaseDocumentTxPooled </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODatabaseDocumentTxPooled.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx
-	c1335473 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseDocumentTx.html">
+	c1335465 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseDocumentTx.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODatabaseDocumentTx </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseDocumentTx.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxPooled
+	c1335473 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxPooled" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseDocumentTxPooled.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODatabaseDocumentTxPooled </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODatabaseDocumentTxPooled.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxPooled extends com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx
-	c1335473:p -> c1335470:p [dir=back,arrowtail=empty];
+	c1335465:p -> c1335473:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxPooled implements com.orientechnologies.orient.core.db.ODatabasePooled
-	c1335384:p -> c1335470:p [dir=back,arrowtail=empty,style=dashed];
+	c1335376:p -> c1335473:p [dir=back,arrowtail=empty,style=dashed];
 }
 

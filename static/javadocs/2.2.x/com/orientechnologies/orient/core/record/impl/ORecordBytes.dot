@@ -9,36 +9,36 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.record.impl.ORecordBytes
+	c2963247 [label=<<table title="com.orientechnologies.orient.core.record.impl.ORecordBytes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordBytes.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORecordBytes </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORecordBytes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.record.impl.ORecordBytesLazy
 	c2963250 [label=<<table title="com.orientechnologies.orient.core.record.impl.ORecordBytesLazy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordBytesLazy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordBytesLazy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordBytesLazy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.record.impl.ORecordBytes
-	c2963255 [label=<<table title="com.orientechnologies.orient.core.record.impl.ORecordBytes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordBytes.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORecordBytes </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORecordBytes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.record.impl.OBlob
-	c2963256 [label=<<table title="com.orientechnologies.orient.core.record.impl.OBlob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBlob.html">
+	c2963254 [label=<<table title="com.orientechnologies.orient.core.record.impl.OBlob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBlob.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBlob </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBlob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.record.ORecordAbstract
-	c2963269 [label=<<table title="com.orientechnologies.orient.core.record.ORecordAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ORecordAbstract.html">
+	c2963264 [label=<<table title="com.orientechnologies.orient.core.record.ORecordAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ORecordAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../ORecordAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.record.impl.ORecordBytesLazy extends com.orientechnologies.orient.core.record.impl.ORecordBytes
-	c2963255:p -> c2963250:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.record.impl.ORecordBytes extends com.orientechnologies.orient.core.record.ORecordAbstract
-	c2963269:p -> c2963255:p [dir=back,arrowtail=empty];
+	c2963264:p -> c2963247:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.record.impl.ORecordBytes implements com.orientechnologies.orient.core.record.impl.OBlob
-	c2963256:p -> c2963255:p [dir=back,arrowtail=empty,style=dashed];
+	c2963254:p -> c2963247:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.record.impl.ORecordBytesLazy extends com.orientechnologies.orient.core.record.impl.ORecordBytes
+	c2963247:p -> c2963250:p [dir=back,arrowtail=empty];
 }
 

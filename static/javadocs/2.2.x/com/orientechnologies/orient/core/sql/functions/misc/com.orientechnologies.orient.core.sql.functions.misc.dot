@@ -9,77 +9,77 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionEncode
-	c143084 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionEncode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionEncode.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionEncode </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionEncode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionSysdate
-	c143085 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionSysdate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionSysdate.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionSysdate </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionSysdate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDate
-	c143086 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionDate.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionDate </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionDate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIfNull
-	c143087 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIfNull" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionIfNull.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionIfNull </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionIfNull.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude
-	c143088 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodInclude.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodInclude </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodInclude.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIf
-	c143089 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionIf.html">
+	c143084 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionIf.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionIf </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionIf.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCoalesce
-	c143090 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCoalesce" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionCoalesce.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionCoalesce </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionCoalesce.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDecode
-	c143091 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDecode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionDecode.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionDecode </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionDecode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID
-	c143092 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionUUID.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionUUID </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionUUID.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCount
-	c143093 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCount" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionCount.html">
+	c143085 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCount" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionCount.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionCount </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionCount.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude
-	c143094 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodExclude.html">
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude
+	c143086 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodInclude.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodExclude </td></tr>
+<tr><td align="center" balign="center"> OSQLMethodInclude </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSQLMethodExclude.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OSQLMethodInclude.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionFormat
-	c143095 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionFormat" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionFormat.html">
+	c143087 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionFormat" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionFormat.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionFormat </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionFormat.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionEncode
+	c143088 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionEncode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionEncode.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionEncode </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionEncode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCoalesce
+	c143089 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCoalesce" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionCoalesce.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionCoalesce </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionCoalesce.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIfNull
+	c143090 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIfNull" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionIfNull.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionIfNull </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionIfNull.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDate
+	c143091 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionDate.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionDate </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionDate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude
+	c143092 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodExclude.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodExclude </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodExclude.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDecode
+	c143093 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDecode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionDecode.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionDecode </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionDecode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionSysdate
+	c143094 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionSysdate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionSysdate.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionSysdate </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionSysdate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID
+	c143095 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionUUID.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionUUID </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionUUID.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

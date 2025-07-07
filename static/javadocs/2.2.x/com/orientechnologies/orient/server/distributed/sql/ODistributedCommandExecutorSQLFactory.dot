@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLFactory
-	c1494192 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/OCommandExecutorSQLFactory.html">
+	c1494200 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/OCommandExecutorSQLFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandExecutorSQLFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/sql/OCommandExecutorSQLFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.sql.ODistributedCommandExecutorSQLFactory
-	c1495579 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.ODistributedCommandExecutorSQLFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedCommandExecutorSQLFactory.html">
+	c1495578 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.ODistributedCommandExecutorSQLFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedCommandExecutorSQLFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedCommandExecutorSQLFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedCommandExecutorSQLFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.sql.ODistributedCommandExecutorSQLFactory implements com.orientechnologies.orient.core.sql.OCommandExecutorSQLFactory
-	c1494192:p -> c1495579:p [dir=back,arrowtail=empty,style=dashed];
+	c1494200:p -> c1495578:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStorageAllocation
-	c3769332 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStorageAllocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetStorageAllocation.html">
+	c3769323 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStorageAllocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetStorageAllocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandGetStorageAllocation </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandGetStorageAllocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract
-	c3769336 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedDbAbstract.html">
+	c3769335 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedDbAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAuthenticatedDbAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandAuthenticatedDbAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStorageAllocation extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract
-	c3769336:p -> c3769332:p [dir=back,arrowtail=empty];
+	c3769335:p -> c3769323:p [dir=back,arrowtail=empty];
 }
 

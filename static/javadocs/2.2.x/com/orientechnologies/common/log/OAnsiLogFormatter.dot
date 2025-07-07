@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.log.OAnsiLogFormatter
-	c611915 [label=<<table title="com.orientechnologies.common.log.OAnsiLogFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAnsiLogFormatter.html">
+	c611913 [label=<<table title="com.orientechnologies.common.log.OAnsiLogFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAnsiLogFormatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OAnsiLogFormatter </td></tr>
 		</table></td></tr>
@@ -22,6 +22,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OLogFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.log.OAnsiLogFormatter extends com.orientechnologies.common.log.OLogFormatter
-	c611916:p -> c611915:p [dir=back,arrowtail=empty];
+	c611916:p -> c611913:p [dir=back,arrowtail=empty];
 }
 

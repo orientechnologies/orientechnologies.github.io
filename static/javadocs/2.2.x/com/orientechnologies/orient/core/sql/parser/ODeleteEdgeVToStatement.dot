@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.parser.ODeleteEdgeVToStatement
-	c1459723 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeVToStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODeleteEdgeVToStatement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODeleteEdgeVToStatement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODeleteEdgeVToStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.ODeleteEdgeStatement
-	c1459766 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODeleteEdgeStatement.html">
+	c1459745 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODeleteEdgeStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODeleteEdgeStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODeleteEdgeStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.parser.ODeleteEdgeVToStatement
+	c1459760 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ODeleteEdgeVToStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODeleteEdgeVToStatement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODeleteEdgeVToStatement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODeleteEdgeVToStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.ODeleteEdgeVToStatement extends com.orientechnologies.orient.core.sql.parser.ODeleteEdgeStatement
-	c1459766:p -> c1459723:p [dir=back,arrowtail=empty];
+	c1459745:p -> c1459760:p [dir=back,arrowtail=empty];
 }
 

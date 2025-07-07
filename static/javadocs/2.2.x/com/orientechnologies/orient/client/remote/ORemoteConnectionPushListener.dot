@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.enterprise.channel.binary.ORemoteServerEventListener
-	c3112705 [label=<<table title="com.orientechnologies.orient.enterprise.channel.binary.ORemoteServerEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../enterprise/channel/binary/ORemoteServerEventListener.html">
+	c3112702 [label=<<table title="com.orientechnologies.orient.enterprise.channel.binary.ORemoteServerEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../enterprise/channel/binary/ORemoteServerEventListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORemoteServerEventListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../enterprise/channel/binary/ORemoteServerEventListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.client.remote.ORemoteConnectionPushListener
-	c3112724 [label=<<table title="com.orientechnologies.orient.client.remote.ORemoteConnectionPushListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORemoteConnectionPushListener.html">
+	c3112727 [label=<<table title="com.orientechnologies.orient.client.remote.ORemoteConnectionPushListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORemoteConnectionPushListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORemoteConnectionPushListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORemoteConnectionPushListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.client.remote.ORemoteConnectionPushListener implements com.orientechnologies.orient.enterprise.channel.binary.ORemoteServerEventListener
-	c3112705:p -> c3112724:p [dir=back,arrowtail=empty,style=dashed];
+	c3112702:p -> c3112727:p [dir=back,arrowtail=empty,style=dashed];
 }
 

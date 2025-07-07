@@ -17,20 +17,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateClass
-	c1095915 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLTruncateClass.html">
+	c1095900 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLTruncateClass.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLTruncateClass </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLTruncateClass.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1095942 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
+	c1095939 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateClass extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1095942:p -> c1095915:p [dir=back,arrowtail=empty];
+	c1095939:p -> c1095900:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateClass implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1095845:p -> c1095915:p [dir=back,arrowtail=empty,style=dashed];
+	c1095845:p -> c1095900:p [dir=back,arrowtail=empty,style=dashed];
 }
 

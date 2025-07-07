@@ -10,35 +10,35 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.cache.pages.OLruPageCache
-	c2734458 [label=<<table title="com.orientechnologies.orient.core.storage.cache.pages.OLruPageCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLruPageCache.html">
+	c2734454 [label=<<table title="com.orientechnologies.orient.core.storage.cache.pages.OLruPageCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLruPageCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLruPageCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLruPageCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.cache.pages.OPageCache
-	c2734459 [label=<<table title="com.orientechnologies.orient.core.storage.cache.pages.OPageCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OPageCache.html">
+	c2734455 [label=<<table title="com.orientechnologies.orient.core.storage.cache.pages.OPageCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OPageCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OPageCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OPageCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.cache.pages.OTinyPageCache
-	c2734460 [label=<<table title="com.orientechnologies.orient.core.storage.cache.pages.OTinyPageCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTinyPageCache.html">
+	c2734456 [label=<<table title="com.orientechnologies.orient.core.storage.cache.pages.OTinyPageCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTinyPageCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTinyPageCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTinyPageCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.cache.pages.OPassthroughPageCache
-	c2734461 [label=<<table title="com.orientechnologies.orient.core.storage.cache.pages.OPassthroughPageCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OPassthroughPageCache.html">
+	c2734457 [label=<<table title="com.orientechnologies.orient.core.storage.cache.pages.OPassthroughPageCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OPassthroughPageCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OPassthroughPageCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OPassthroughPageCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.cache.pages.OLruPageCache implements com.orientechnologies.orient.core.storage.cache.pages.OPageCache
-	c2734459:p -> c2734458:p [dir=back,arrowtail=empty,style=dashed];
+	c2734455:p -> c2734454:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.storage.cache.pages.OTinyPageCache implements com.orientechnologies.orient.core.storage.cache.pages.OPageCache
-	c2734459:p -> c2734460:p [dir=back,arrowtail=empty,style=dashed];
+	c2734455:p -> c2734456:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.storage.cache.pages.OPassthroughPageCache implements com.orientechnologies.orient.core.storage.cache.pages.OPageCache
-	c2734459:p -> c2734461:p [dir=back,arrowtail=empty,style=dashed];
+	c2734455:p -> c2734457:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.ODistributedMessageService
-	c1541998 [label=<<table title="com.orientechnologies.orient.server.distributed.ODistributedMessageService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ODistributedMessageService.html">
+	c1542002 [label=<<table title="com.orientechnologies.orient.server.distributed.ODistributedMessageService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ODistributedMessageService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODistributedMessageService </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ODistributedMessageService.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.ODistributedMessageServiceImpl
-	c1542259 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedMessageServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedMessageServiceImpl.html">
+	c1542249 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedMessageServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedMessageServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedMessageServiceImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedMessageServiceImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.ODistributedMessageServiceImpl implements com.orientechnologies.orient.server.distributed.ODistributedMessageService
-	c1541998:p -> c1542259:p [dir=back,arrowtail=empty,style=dashed];
+	c1542002:p -> c1542249:p [dir=back,arrowtail=empty,style=dashed];
 }
 

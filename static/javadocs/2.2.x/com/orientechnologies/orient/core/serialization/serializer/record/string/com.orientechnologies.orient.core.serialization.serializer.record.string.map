@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ORecordSerializerCSVAbstract.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract" alt="" coords="39,113,255,138"/>
-<area shape="rect" id="node1" href="./ORecordSerializerCSVAbstract.html" title="&lt;TABLE&gt;" alt="" coords="29,101,266,149"/>
-<area shape="rect" id="node4_1" href="./ORecordSerializerSchemaAware2CSV.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerSchemaAware2CSV" alt="" coords="16,209,279,234"/>
-<area shape="rect" id="node4" href="./ORecordSerializerSchemaAware2CSV.html" title="&lt;TABLE&gt;" alt="" coords="5,197,289,245"/>
-<area shape="rect" id="node2_2" href="./ORecordSerializerJSON.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON" alt="" coords="301,113,469,138"/>
-<area shape="rect" id="node2" href="./ORecordSerializerJSON.html" title="&lt;TABLE&gt;" alt="" coords="290,101,479,149"/>
-<area shape="rect" id="node3_3" href="./ORecordSerializerJSON.FormatSettings.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON.FormatSettings" alt="" coords="425,17,544,42"/>
-<area shape="rect" id="node3" href="./ORecordSerializerJSON.FormatSettings.html" title="&lt;TABLE&gt;" alt="" coords="415,5,555,53"/>
-<area shape="rect" id="node5_4" href="./ORecordSerializerStringAbstract.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract" alt="" coords="152,17,380,42"/>
-<area shape="rect" id="node5" href="./ORecordSerializerStringAbstract.html" title="&lt;TABLE&gt;" alt="" coords="141,5,391,53"/>
+<area shape="rect" id="node1_0" href="./ORecordSerializerJSON.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON" alt="" coords="16,113,184,138"/>
+<area shape="rect" id="node1" href="./ORecordSerializerJSON.html" title="&lt;TABLE&gt;" alt="" coords="5,101,195,149"/>
+<area shape="rect" id="node2_1" href="./ORecordSerializerJSON.FormatSettings.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON.FormatSettings" alt="" coords="378,17,497,42"/>
+<area shape="rect" id="node2" href="./ORecordSerializerJSON.FormatSettings.html" title="&lt;TABLE&gt;" alt="" coords="367,5,507,53"/>
+<area shape="rect" id="node3_2" href="./ORecordSerializerSchemaAware2CSV.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerSchemaAware2CSV" alt="" coords="206,209,469,234"/>
+<area shape="rect" id="node3" href="./ORecordSerializerSchemaAware2CSV.html" title="&lt;TABLE&gt;" alt="" coords="195,197,479,245"/>
+<area shape="rect" id="node4_3" href="./ORecordSerializerCSVAbstract.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract" alt="" coords="229,113,445,138"/>
+<area shape="rect" id="node4" href="./ORecordSerializerCSVAbstract.html" title="&lt;TABLE&gt;" alt="" coords="219,101,456,149"/>
+<area shape="rect" id="node5_4" href="./ORecordSerializerStringAbstract.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract" alt="" coords="105,17,333,42"/>
+<area shape="rect" id="node5" href="./ORecordSerializerStringAbstract.html" title="&lt;TABLE&gt;" alt="" coords="94,5,343,53"/>
 </map>

@@ -21,19 +21,19 @@ digraph G {
 <tr><td align="center" balign="center"> OClassDictionary </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OClassDictionary.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.entity.OEntityManagerClassHandler
-	c236918 [label=<<table title="com.orientechnologies.orient.core.entity.OEntityManagerClassHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OEntityManagerClassHandler.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OEntityManagerClassHandler </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OEntityManagerClassHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.entity.OEntityManager
-	c236919 [label=<<table title="com.orientechnologies.orient.core.entity.OEntityManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OEntityManager.html">
+	c236918 [label=<<table title="com.orientechnologies.orient.core.entity.OEntityManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OEntityManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OEntityManager </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OEntityManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.entity.OEntityManagerClassHandler
+	c236919 [label=<<table title="com.orientechnologies.orient.core.entity.OEntityManagerClassHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OEntityManagerClassHandler.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OEntityManagerClassHandler </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OEntityManagerClassHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.entity.OEntityManagerInternal extends com.orientechnologies.orient.core.entity.OEntityManager
-	c236919:p -> c236916:p [dir=back,arrowtail=empty];
+	c236918:p -> c236916:p [dir=back,arrowtail=empty];
 }
 

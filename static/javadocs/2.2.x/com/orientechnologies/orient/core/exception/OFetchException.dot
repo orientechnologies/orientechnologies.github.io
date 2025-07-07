@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.exception.OCoreException
-	c1736718 [label=<<table title="com.orientechnologies.orient.core.exception.OCoreException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCoreException.html">
+	c1736713 [label=<<table title="com.orientechnologies.orient.core.exception.OCoreException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCoreException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCoreException </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCoreException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OFetchException
-	c1736742 [label=<<table title="com.orientechnologies.orient.core.exception.OFetchException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFetchException.html">
+	c1736735 [label=<<table title="com.orientechnologies.orient.core.exception.OFetchException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFetchException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OFetchException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OFetchException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.exception.OFetchException extends com.orientechnologies.orient.core.exception.OCoreException
-	c1736718:p -> c1736742:p [dir=back,arrowtail=empty];
+	c1736713:p -> c1736735:p [dir=back,arrowtail=empty];
 }
 

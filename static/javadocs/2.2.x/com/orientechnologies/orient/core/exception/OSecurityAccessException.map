@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="33,11,191,53"/>
-<area shape="rect" id="node1" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="22,5,202,59"/>
-<area shape="rect" id="node2_1" href="./OSecurityAccessException.html" title="com.orientechnologies.orient.core.exception.OSecurityAccessException" alt="" coords="16,214,208,239"/>
-<area shape="rect" id="node2" href="./OSecurityAccessException.html" title="&lt;TABLE&gt;" alt="" coords="5,203,219,251"/>
-<area shape="rect" id="node3_2" href="./OSecurityException.html" title="com.orientechnologies.orient.core.exception.OSecurityException" alt="" coords="100,118,247,143"/>
-<area shape="rect" id="node3" href="./OSecurityException.html" title="&lt;TABLE&gt;" alt="" coords="89,107,257,155"/>
+<area shape="rect" id="node1_0" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="70,11,229,53"/>
+<area shape="rect" id="node1" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="59,5,239,59"/>
+<area shape="rect" id="node2_1" href="./OSecurityException.html" title="com.orientechnologies.orient.core.exception.OSecurityException" alt="" coords="16,118,163,143"/>
+<area shape="rect" id="node2" href="./OSecurityException.html" title="&lt;TABLE&gt;" alt="" coords="5,107,173,155"/>
+<area shape="rect" id="node3_2" href="./OSecurityAccessException.html" title="com.orientechnologies.orient.core.exception.OSecurityAccessException" alt="" coords="53,214,245,239"/>
+<area shape="rect" id="node3" href="./OSecurityAccessException.html" title="&lt;TABLE&gt;" alt="" coords="43,203,256,251"/>
 </map>

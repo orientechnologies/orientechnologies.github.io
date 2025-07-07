@@ -10,37 +10,37 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.concur.ONeedRetryException
-	c1544478 [label=<<table title="com.orientechnologies.common.concur.ONeedRetryException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/ONeedRetryException.html">
+	c1544476 [label=<<table title="com.orientechnologies.common.concur.ONeedRetryException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/ONeedRetryException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ONeedRetryException </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../common/concur/ONeedRetryException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.exception.OHighLevelException
-	c1544609 [label=<<table title="com.orientechnologies.common.exception.OHighLevelException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/exception/OHighLevelException.html">
+	c1544606 [label=<<table title="com.orientechnologies.common.exception.OHighLevelException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/exception/OHighLevelException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OHighLevelException </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../common/exception/OHighLevelException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.distributed.task.ODistributedOperationException
-	c1546096 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ODistributedOperationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedOperationException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODistributedOperationException </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODistributedOperationException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.task.ODistributedLockException
-	c1546099 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ODistributedLockException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedLockException.html">
+	c1546093 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ODistributedLockException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedLockException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedLockException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedLockException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.server.distributed.task.ODistributedOperationException extends com.orientechnologies.common.concur.ONeedRetryException
-	c1544478:p -> c1546096:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.server.distributed.task.ODistributedOperationException implements com.orientechnologies.common.exception.OHighLevelException
-	c1544609:p -> c1546096:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.orient.server.distributed.task.ODistributedOperationException
+	c1546095 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ODistributedOperationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedOperationException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODistributedOperationException </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODistributedOperationException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.task.ODistributedLockException extends com.orientechnologies.orient.server.distributed.task.ODistributedOperationException
-	c1546096:p -> c1546099:p [dir=back,arrowtail=empty];
+	c1546095:p -> c1546093:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.task.ODistributedLockException implements com.orientechnologies.common.exception.OHighLevelException
-	c1544609:p -> c1546099:p [dir=back,arrowtail=empty,style=dashed];
+	c1544606:p -> c1546093:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.server.distributed.task.ODistributedOperationException extends com.orientechnologies.common.concur.ONeedRetryException
+	c1544476:p -> c1546095:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.server.distributed.task.ODistributedOperationException implements com.orientechnologies.common.exception.OHighLevelException
+	c1544606:p -> c1546095:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,72 +9,72 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.server.distributed.conflict.OQuorumDistributedConflictResolver
-	c336910 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OQuorumDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OQuorumDistributedConflictResolver.html">
+	// com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver
+	c336909 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OVersionDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OQuorumDistributedConflictResolver </td></tr>
+<tr><td align="center" balign="center"> OVersionDistributedConflictResolver </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OQuorumDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OVersionDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
+	c336910 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractDistributedConflictResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractDistributedConflictResolver </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OAbstractDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.OContentDistributedConflictResolver
 	c336911 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OContentDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OContentDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OContentDistributedConflictResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OContentDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
-	c336912 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractDistributedConflictResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractDistributedConflictResolver </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OAbstractDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver
-	c336913 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedConflictResolver.html">
+	c336912 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODistributedConflictResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver.OConflictResult
-	c336914 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver.OConflictResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedConflictResolver.OConflictResult.html">
+	c336913 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver.OConflictResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedConflictResolver.OConflictResult.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OConflictResult </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedConflictResolver.OConflictResult.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver
-	c336915 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODCDistributedConflictResolver.html">
+	c336914 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODCDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODCDistributedConflictResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODCDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver
-	c336916 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OVersionDistributedConflictResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OVersionDistributedConflictResolver </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OVersionDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory
-	c336917 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedConflictResolverFactory.html">
+	c336915 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedConflictResolverFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedConflictResolverFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedConflictResolverFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver
-	c336918 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OMajorityDistributedConflictResolver.html">
+	c336916 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OMajorityDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OMajorityDistributedConflictResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OMajorityDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.server.distributed.conflict.OQuorumDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
-	c336912:p -> c336910:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.server.distributed.conflict.OContentDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
-	c336912:p -> c336911:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver implements com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver
-	c336913:p -> c336912:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver
-	c336918:p -> c336915:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.orient.server.distributed.conflict.OQuorumDistributedConflictResolver
+	c336917 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OQuorumDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OQuorumDistributedConflictResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OQuorumDistributedConflictResolver </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OQuorumDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
-	c336912:p -> c336916:p [dir=back,arrowtail=empty];
+	c336910:p -> c336909:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver implements com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver
+	c336912:p -> c336910:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.server.distributed.conflict.OContentDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
+	c336910:p -> c336911:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver
+	c336916:p -> c336914:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
-	c336912:p -> c336918:p [dir=back,arrowtail=empty];
+	c336910:p -> c336916:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.server.distributed.conflict.OQuorumDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
+	c336910:p -> c336917:p [dir=back,arrowtail=empty];
 }
 

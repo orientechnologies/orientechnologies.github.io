@@ -25,4 +25,9 @@ menu = true
 ## OrientDB 2.2.x
 
 - [General Documentation](https://orientdb.dev/docs/2.2.x) 
-- [Java Doc API](https://orientdb.dev/javadocs/3.0.x) 
+- [Java Doc API](https://orientdb.dev/javadocs/2.2.x) 
+
+## OrientDB develop
+
+- [General Documentation](https://orientdb.dev/docs/develop) 
+- [Java Doc API](https://orientdb.dev/javadocs/develop) 

@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract
-	c3803880 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedDbAbstract.html">
+	c3803879 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedDbAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAuthenticatedDbAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandAuthenticatedDbAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostKillDbConnection
-	c3803903 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostKillDbConnection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPostKillDbConnection.html">
+	c3803895 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostKillDbConnection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPostKillDbConnection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandPostKillDbConnection </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandPostKillDbConnection.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostKillDbConnection extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract
-	c3803880:p -> c3803903:p [dir=back,arrowtail=empty];
+	c3803879:p -> c3803895:p [dir=back,arrowtail=empty];
 }
 

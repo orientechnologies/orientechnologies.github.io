@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.index.OIndexAbstractCursor
-	c1179994 [label=<<table title="com.orientechnologies.orient.core.index.OIndexAbstractCursor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexAbstractCursor.html">
+	c1180003 [label=<<table title="com.orientechnologies.orient.core.index.OIndexAbstractCursor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexAbstractCursor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OIndexAbstractCursor </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexAbstractCursor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OCompositeIndexCursor
-	c1180021 [label=<<table title="com.orientechnologies.orient.core.index.OCompositeIndexCursor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCompositeIndexCursor.html">
+	c1180015 [label=<<table title="com.orientechnologies.orient.core.index.OCompositeIndexCursor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCompositeIndexCursor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCompositeIndexCursor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCompositeIndexCursor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.OCompositeIndexCursor extends com.orientechnologies.orient.core.index.OIndexAbstractCursor
-	c1179994:p -> c1180021:p [dir=back,arrowtail=empty];
+	c1180003:p -> c1180015:p [dir=back,arrowtail=empty];
 }
 

@@ -10,23 +10,23 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.log.OAnsiLogFormatter
-	c2335159 [label=<<table title="com.orientechnologies.common.log.OAnsiLogFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAnsiLogFormatter.html">
+	c2335155 [label=<<table title="com.orientechnologies.common.log.OAnsiLogFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAnsiLogFormatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OAnsiLogFormatter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAnsiLogFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.log.OLogFormatter
-	c2335160 [label=<<table title="com.orientechnologies.common.log.OLogFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLogFormatter.html">
+	c2335158 [label=<<table title="com.orientechnologies.common.log.OLogFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLogFormatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLogFormatter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLogFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.log.OAnsiLogFormatter extends com.orientechnologies.common.log.OLogFormatter
-	c2335160:p -> c2335159:p [dir=back,arrowtail=empty];
+	c2335158:p -> c2335155:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.common.log.OLogFormatter extends java.util.logging.Formatter
-	c2337022:p -> c2335160:p [dir=back,arrowtail=empty];
+	c2337018:p -> c2335158:p [dir=back,arrowtail=empty];
 	// java.util.logging.Formatter
-	c2337022 [label=<<table title="java.util.logging.Formatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/logging/Formatter.html">
+	c2337018 [label=<<table title="java.util.logging.Formatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/logging/Formatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Formatter </font></td></tr>
 		</table></td></tr>

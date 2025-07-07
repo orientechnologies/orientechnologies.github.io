@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OServerCommandGetGephi.html" title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetGephi" alt="" coords="67,113,267,138"/>
-<area shape="rect" id="node1" href="./OServerCommandGetGephi.html" title="&lt;TABLE&gt;" alt="" coords="56,101,277,149"/>
-<area shape="rect" id="node2_1" href="../OServerCommandAuthenticatedDbAbstract.html" title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" alt="" coords="16,17,317,42"/>
-<area shape="rect" id="node2" href="../OServerCommandAuthenticatedDbAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,5,328,53"/>
-</map>

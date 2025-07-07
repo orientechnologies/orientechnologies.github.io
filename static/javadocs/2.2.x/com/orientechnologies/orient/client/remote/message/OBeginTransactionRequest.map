@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../OBinaryRequest.html" title="com.orientechnologies.orient.client.remote.OBinaryRequest" alt="" coords="16,11,345,53"/>
-<area shape="rect" id="node1" href="../OBinaryRequest.html" title="&lt;TABLE&gt;" alt="" coords="5,5,356,59"/>
-<area shape="rect" id="node2_1" href="./OBeginTransactionRequest.html" title="com.orientechnologies.orient.client.remote.message.OBeginTransactionRequest" alt="" coords="84,118,277,143"/>
-<area shape="rect" id="node2" href="./OBeginTransactionRequest.html" title="&lt;TABLE&gt;" alt="" coords="73,107,288,155"/>
-<area shape="rect" id="node3_2" href="./ORebeginTransactionRequest.html" title="com.orientechnologies.orient.client.remote.message.ORebeginTransactionRequest" alt="" coords="76,214,285,239"/>
-<area shape="rect" id="node3" href="./ORebeginTransactionRequest.html" title="&lt;TABLE&gt;" alt="" coords="65,203,296,251"/>
-</map>

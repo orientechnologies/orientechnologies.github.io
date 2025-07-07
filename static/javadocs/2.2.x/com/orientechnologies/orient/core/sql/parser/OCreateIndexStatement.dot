@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.parser.OStatement
-	c1270788 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OStatement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OCreateIndexStatement
-	c1270911 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreateIndexStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreateIndexStatement.html">
+	c1270791 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OCreateIndexStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCreateIndexStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCreateIndexStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCreateIndexStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.parser.OStatement
+	c1270832 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OStatement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OCreateIndexStatement extends com.orientechnologies.orient.core.sql.parser.OStatement
-	c1270788:p -> c1270911:p [dir=back,arrowtail=empty];
+	c1270832:p -> c1270791:p [dir=back,arrowtail=empty];
 }
 

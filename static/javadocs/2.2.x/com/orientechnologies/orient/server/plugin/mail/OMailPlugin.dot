@@ -10,12 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.command.script.OScriptInjection
-	c2443180 [label=<<table title="com.orientechnologies.orient.core.command.script.OScriptInjection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/command/script/OScriptInjection.html">
+	c2443176 [label=<<table title="com.orientechnologies.orient.core.command.script.OScriptInjection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/command/script/OScriptInjection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OScriptInjection </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/command/script/OScriptInjection.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
+	c2444257 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerPluginAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.plugin.OServerPluginConfigurable
 	c2444259 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginConfigurable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerPluginConfigurable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -23,23 +29,17 @@ digraph G {
 <tr><td align="center" balign="center"> OServerPluginConfigurable </td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerPluginConfigurable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c2444264 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerPluginAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerPluginAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="../OServerPluginAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.plugin.mail.OMailPlugin
-	c2444267 [label=<<table title="com.orientechnologies.orient.server.plugin.mail.OMailPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OMailPlugin.html">
+	c2444265 [label=<<table title="com.orientechnologies.orient.server.plugin.mail.OMailPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OMailPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OMailPlugin </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OMailPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.plugin.mail.OMailPlugin extends com.orientechnologies.orient.server.plugin.OServerPluginAbstract
-	c2444264:p -> c2444267:p [dir=back,arrowtail=empty];
+	c2444257:p -> c2444265:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.plugin.mail.OMailPlugin implements com.orientechnologies.orient.core.command.script.OScriptInjection
-	c2443180:p -> c2444267:p [dir=back,arrowtail=empty,style=dashed];
+	c2443176:p -> c2444265:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.server.plugin.mail.OMailPlugin implements com.orientechnologies.orient.server.plugin.OServerPluginConfigurable
-	c2444259:p -> c2444267:p [dir=back,arrowtail=empty,style=dashed];
+	c2444259:p -> c2444265:p [dir=back,arrowtail=empty,style=dashed];
 }
 

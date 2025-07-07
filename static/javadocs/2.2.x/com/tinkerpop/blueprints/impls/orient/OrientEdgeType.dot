@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.tinkerpop.blueprints.impls.orient.OrientEdgeType
-	c4440010 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientEdgeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientEdgeType.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OrientEdgeType </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OrientEdgeType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.tinkerpop.blueprints.impls.orient.OrientElementType
-	c4440013 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientElementType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientElementType.html">
+	c4440014 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientElementType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientElementType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OrientElementType </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OrientElementType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.tinkerpop.blueprints.impls.orient.OrientEdgeType
+	c4440026 [label=<<table title="com.tinkerpop.blueprints.impls.orient.OrientEdgeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientEdgeType.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OrientEdgeType </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OrientEdgeType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.tinkerpop.blueprints.impls.orient.OrientEdgeType extends com.tinkerpop.blueprints.impls.orient.OrientElementType
-	c4440013:p -> c4440010:p [dir=back,arrowtail=empty];
+	c4440014:p -> c4440026:p [dir=back,arrowtail=empty];
 }
 

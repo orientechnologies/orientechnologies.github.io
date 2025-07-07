@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OSQLFunctionPathFinder.html" title="com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionPathFinder" alt="" coords="16,17,196,42"/>
-<area shape="rect" id="node1" href="./OSQLFunctionPathFinder.html" title="&lt;TABLE&gt;" alt="" coords="5,5,207,53"/>
-<area shape="rect" id="node2_1" href="./OSQLFunctionDijkstra.html" title="com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionDijkstra" alt="" coords="26,113,186,138"/>
-<area shape="rect" id="node2" href="./OSQLFunctionDijkstra.html" title="&lt;TABLE&gt;" alt="" coords="15,101,197,149"/>
-</map>

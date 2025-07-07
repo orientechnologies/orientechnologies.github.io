@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.record.OProxedResource<T>
-	c3568752 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../db/record/OProxedResource.html">
+	c3568730 [label=<<table title="com.orientechnologies.orient.core.db.record.OProxedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../db/record/OProxedResource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OProxedResource&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../db/record/OProxedResource.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.schedule.OSchedulerProxy
-	c3569664 [label=<<table title="com.orientechnologies.orient.core.schedule.OSchedulerProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSchedulerProxy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSchedulerProxy </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSchedulerProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.schedule.OScheduler
-	c3569666 [label=<<table title="com.orientechnologies.orient.core.schedule.OScheduler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScheduler.html">
+	c3569659 [label=<<table title="com.orientechnologies.orient.core.schedule.OScheduler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScheduler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OScheduler </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OScheduler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.schedule.OSchedulerProxy
+	c3569662 [label=<<table title="com.orientechnologies.orient.core.schedule.OSchedulerProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSchedulerProxy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSchedulerProxy </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSchedulerProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.schedule.OSchedulerProxy extends com.orientechnologies.orient.core.db.record.OProxedResource<com.orientechnologies.orient.core.schedule.OScheduler>
-	c3568752:p -> c3569664:p [dir=back,arrowtail=empty];
+	c3568730:p -> c3569662:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.schedule.OSchedulerProxy implements com.orientechnologies.orient.core.schedule.OScheduler
-	c3569666:p -> c3569664:p [dir=back,arrowtail=empty,style=dashed];
+	c3569659:p -> c3569662:p [dir=back,arrowtail=empty,style=dashed];
 }
 

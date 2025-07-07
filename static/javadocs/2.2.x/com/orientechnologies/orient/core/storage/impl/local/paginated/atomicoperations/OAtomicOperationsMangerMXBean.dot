@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OAtomicOperationsManager
-	c647353 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OAtomicOperationsManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAtomicOperationsManager.html">
+	c647352 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OAtomicOperationsManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAtomicOperationsManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OAtomicOperationsManager </td></tr>
 		</table></td></tr>
@@ -23,6 +23,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OAtomicOperationsMangerMXBean.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OAtomicOperationsManager implements com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OAtomicOperationsMangerMXBean
-	c647354:p -> c647353:p [dir=back,arrowtail=empty,style=dashed];
+	c647354:p -> c647352:p [dir=back,arrowtail=empty,style=dashed];
 }
 

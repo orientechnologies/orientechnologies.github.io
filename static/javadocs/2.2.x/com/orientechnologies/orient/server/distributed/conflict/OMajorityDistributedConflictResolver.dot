@@ -10,26 +10,26 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
-	c2448393 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractDistributedConflictResolver.html">
+	c2448388 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractDistributedConflictResolver </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver
-	c2448396 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODCDistributedConflictResolver.html">
+	c2448392 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODCDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODCDistributedConflictResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODCDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver
-	c2448399 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OMajorityDistributedConflictResolver.html">
+	c2448394 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OMajorityDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OMajorityDistributedConflictResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OMajorityDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver
-	c2448399:p -> c2448396:p [dir=back,arrowtail=empty];
+	c2448394:p -> c2448392:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver
-	c2448393:p -> c2448399:p [dir=back,arrowtail=empty];
+	c2448388:p -> c2448394:p [dir=back,arrowtail=empty];
 }
 

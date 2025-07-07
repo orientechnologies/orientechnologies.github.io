@@ -9,66 +9,66 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.object.serialization.OObjectSerializerManager
-	c300189 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializerManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializerManager.html">
+	// com.orientechnologies.orient.object.serialization.OObjectSerializationThreadLocal
+	c300188 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializationThreadLocal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializationThreadLocal.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OObjectSerializerManager </td></tr>
+<tr><td align="center" balign="center"> OObjectSerializationThreadLocal </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OObjectSerializerManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.object.serialization.OObjectSerializerContext
-	c300190 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializerContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializerContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OObjectSerializerContext </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OObjectSerializerContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OObjectSerializationThreadLocal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.serialization.OObjectCustomSerializerList<TYPE>
-	c300191 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectCustomSerializerList.html">
+	c300189 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectCustomSerializerList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectCustomSerializerList&lt;TYPE&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectCustomSerializerList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap<TYPE>
+	c300190 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectCustomSerializerMap.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OObjectCustomSerializerMap&lt;TYPE&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OObjectCustomSerializerMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.object.serialization.OObjectSerializerHelper
+	c300191 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializerHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializerHelper.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OObjectSerializerHelper </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OObjectSerializerHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.object.serialization.OObjectSerializerContext
+	c300192 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializerContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializerContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OObjectSerializerContext </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OObjectSerializerContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.serialization.OObjectCustomSerializerSet<TYPE>
-	c300192 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectCustomSerializerSet.html">
+	c300193 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectCustomSerializerSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectCustomSerializerSet&lt;TYPE&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectCustomSerializerSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.object.serialization.OObjectCustomSerializerIterator<TYPE>
+	c300194 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectCustomSerializerIterator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OObjectCustomSerializerIterator&lt;TYPE&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OObjectCustomSerializerIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer<T>
-	c300193 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectLazyCustomSerializer.html">
+	c300195 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectLazyCustomSerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OObjectLazyCustomSerializer&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectLazyCustomSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.object.serialization.OObjectSerializerHelper
-	c300194 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializerHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializerHelper.html">
+	// com.orientechnologies.orient.object.serialization.OObjectSerializerManager
+	c300196 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializerManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializerManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OObjectSerializerHelper </td></tr>
+<tr><td align="center" balign="center"> OObjectSerializerManager </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OObjectSerializerHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap<TYPE>
-	c300195 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectCustomSerializerMap.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OObjectCustomSerializerMap&lt;TYPE&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OObjectCustomSerializerMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.object.serialization.OObjectCustomSerializerIterator<TYPE>
-	c300196 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectCustomSerializerIterator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OObjectCustomSerializerIterator&lt;TYPE&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OObjectCustomSerializerIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.object.serialization.OObjectSerializationThreadLocal
-	c300197 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializationThreadLocal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectSerializationThreadLocal.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OObjectSerializationThreadLocal </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OObjectSerializationThreadLocal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OObjectSerializerManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.object.serialization.OObjectCustomSerializerList<TYPE> implements com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer<T>
-	c300193:p -> c300191:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.object.serialization.OObjectCustomSerializerSet<TYPE> implements com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer<T>
-	c300193:p -> c300192:p [dir=back,arrowtail=empty,style=dashed];
+	c300195:p -> c300189:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap<TYPE> implements com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer<T>
-	c300193:p -> c300195:p [dir=back,arrowtail=empty,style=dashed];
+	c300195:p -> c300190:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.object.serialization.OObjectCustomSerializerSet<TYPE> implements com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer<T>
+	c300195:p -> c300193:p [dir=back,arrowtail=empty,style=dashed];
 }
 

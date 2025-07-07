@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver
-	c1302262 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODCDistributedConflictResolver.html">
+	c1302260 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODCDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODCDistributedConflictResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODCDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver
-	c1302265 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OMajorityDistributedConflictResolver.html">
+	c1302262 [label=<<table title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OMajorityDistributedConflictResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OMajorityDistributedConflictResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OMajorityDistributedConflictResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver extends com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver
-	c1302265:p -> c1302262:p [dir=back,arrowtail=empty];
+	c1302262:p -> c1302260:p [dir=back,arrowtail=empty];
 }
 

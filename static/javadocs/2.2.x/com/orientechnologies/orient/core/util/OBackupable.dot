@@ -10,29 +10,29 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.ODatabase<T>
-	c685113 [label=<<table title="com.orientechnologies.orient.core.db.ODatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../db/ODatabase.html">
+	c685097 [label=<<table title="com.orientechnologies.orient.core.db.ODatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../db/ODatabase.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODatabase&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../db/ODatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.OStorage
-	c685912 [label=<<table title="com.orientechnologies.orient.core.storage.OStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../storage/OStorage.html">
+	c685923 [label=<<table title="com.orientechnologies.orient.core.storage.OStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../storage/OStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OStorage </td></tr>
 		</table></td></tr>
 		</table>>, URL="../storage/OStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.util.OBackupable
-	c686162 [label=<<table title="com.orientechnologies.orient.core.util.OBackupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBackupable.html">
+	c686159 [label=<<table title="com.orientechnologies.orient.core.util.OBackupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBackupable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBackupable </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBackupable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.ODatabase<T> implements com.orientechnologies.orient.core.util.OBackupable
-	c686162:p -> c685113:p [dir=back,arrowtail=empty,style=dashed];
+	c686159:p -> c685097:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.storage.OStorage implements com.orientechnologies.orient.core.util.OBackupable
-	c686162:p -> c685912:p [dir=back,arrowtail=empty,style=dashed];
+	c686159:p -> c685923:p [dir=back,arrowtail=empty,style=dashed];
 }
 

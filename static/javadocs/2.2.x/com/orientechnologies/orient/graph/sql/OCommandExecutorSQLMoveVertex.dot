@@ -17,20 +17,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../core/command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLSetAware
-	c1071516 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLSetAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/sql/OCommandExecutorSQLSetAware.html">
+	c1071568 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLSetAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/sql/OCommandExecutorSQLSetAware.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLSetAware </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/sql/OCommandExecutorSQLSetAware.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex
-	c1072803 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLMoveVertex.html">
+	c1072797 [label=<<table title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLMoveVertex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCommandExecutorSQLMoveVertex </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLMoveVertex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLSetAware
-	c1071516:p -> c1072803:p [dir=back,arrowtail=empty];
+	c1071568:p -> c1072797:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1071459:p -> c1072803:p [dir=back,arrowtail=empty,style=dashed];
+	c1071459:p -> c1072797:p [dir=back,arrowtail=empty,style=dashed];
 }
 

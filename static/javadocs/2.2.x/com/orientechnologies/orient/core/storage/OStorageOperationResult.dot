@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.OStorageOperationResult<RET>
-	c4030811 [label=<<table title="com.orientechnologies.orient.core.storage.OStorageOperationResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageOperationResult.html">
+	c4030808 [label=<<table title="com.orientechnologies.orient.core.storage.OStorageOperationResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageOperationResult.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageOperationResult&lt;RET&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageOperationResult.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.OStorageOperationResult<RET> implements java.io.Externalizable
-	c4031827:p -> c4030811:p [dir=back,arrowtail=empty,style=dashed];
+	c4031821:p -> c4030808:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Externalizable
-	c4031827 [label=<<table title="java.io.Externalizable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Externalizable.html">
+	c4031821 [label=<<table title="java.io.Externalizable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Externalizable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Externalizable </td></tr>

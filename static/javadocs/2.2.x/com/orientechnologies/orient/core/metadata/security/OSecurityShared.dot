@@ -10,36 +10,36 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.concur.resource.OCloseable
-	c3633583 [label=<<table title="com.orientechnologies.common.concur.resource.OCloseable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/resource/OCloseable.html">
+	c3633569 [label=<<table title="com.orientechnologies.common.concur.resource.OCloseable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/resource/OCloseable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCloseable </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../common/concur/resource/OCloseable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OSecurity
-	c3633909 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurity.html">
+	c3633906 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSecurity </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSecurity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.metadata.security.OSecurityShared
-	c3633911 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSecurityShared.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSecurityShared </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSecurityShared.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.security.OSecurityExternal
-	c3633914 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityExternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityExternal.html">
+	c3633911 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityExternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSecurityExternal.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSecurityExternal </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSecurityExternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.metadata.security.OSecurityShared implements com.orientechnologies.orient.core.metadata.security.OSecurity
-	c3633909:p -> c3633911:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.metadata.security.OSecurityShared implements com.orientechnologies.common.concur.resource.OCloseable
-	c3633583:p -> c3633911:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.orient.core.metadata.security.OSecurityShared
+	c3633912 [label=<<table title="com.orientechnologies.orient.core.metadata.security.OSecurityShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSecurityShared.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSecurityShared </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSecurityShared.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.security.OSecurityExternal extends com.orientechnologies.orient.core.metadata.security.OSecurityShared
-	c3633911:p -> c3633914:p [dir=back,arrowtail=empty];
+	c3633912:p -> c3633911:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.metadata.security.OSecurityShared implements com.orientechnologies.orient.core.metadata.security.OSecurity
+	c3633906:p -> c3633912:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.metadata.security.OSecurityShared implements com.orientechnologies.common.concur.resource.OCloseable
+	c3633569:p -> c3633912:p [dir=back,arrowtail=empty,style=dashed];
 }
 

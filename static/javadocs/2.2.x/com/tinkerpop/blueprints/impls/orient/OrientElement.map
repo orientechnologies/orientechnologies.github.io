@@ -5,10 +5,10 @@
 <area shape="rect" id="node4" href="./OrientElement.html" title="&lt;TABLE&gt;" alt="" coords="257,107,392,155"/>
 <area shape="rect" id="node2_2" href="../../../../orientechnologies/orient/core/serialization/OSerializableStream.html" title="com.orientechnologies.orient.core.serialization.OSerializableStream" alt="" coords="165,11,317,53"/>
 <area shape="rect" id="node2" href="../../../../orientechnologies/orient/core/serialization/OSerializableStream.html" title="&lt;TABLE&gt;" alt="" coords="154,5,327,59"/>
-<area shape="rect" id="node3_3" href="./OrientVertex.html" title="com.tinkerpop.blueprints.impls.orient.OrientVertex" alt="" coords="203,214,305,239"/>
-<area shape="rect" id="node3" href="./OrientVertex.html" title="&lt;TABLE&gt;" alt="" coords="193,203,315,251"/>
-<area shape="rect" id="node5_4" href="./OrientEdge.html" title="com.tinkerpop.blueprints.impls.orient.OrientEdge" alt="" coords="351,214,443,239"/>
-<area shape="rect" id="node5" href="./OrientEdge.html" title="&lt;TABLE&gt;" alt="" coords="340,203,453,251"/>
+<area shape="rect" id="node3_3" href="./OrientEdge.html" title="com.tinkerpop.blueprints.impls.orient.OrientEdge" alt="" coords="208,214,300,239"/>
+<area shape="rect" id="node3" href="./OrientEdge.html" title="&lt;TABLE&gt;" alt="" coords="197,203,311,251"/>
+<area shape="rect" id="node5_4" href="./OrientVertex.html" title="com.tinkerpop.blueprints.impls.orient.OrientVertex" alt="" coords="346,214,447,239"/>
+<area shape="rect" id="node5" href="./OrientVertex.html" title="&lt;TABLE&gt;" alt="" coords="335,203,458,251"/>
 <area shape="rect" id="node6_5" href="http://java.sun.com/j2se/1.4.2/docs/api/com/tinkerpop/blueprints/Element.html" title="com.tinkerpop.blueprints.Element" alt="" coords="362,11,455,53"/>
 <area shape="rect" id="node6" href="http://java.sun.com/j2se/1.4.2/docs/api/com/tinkerpop/blueprints/Element.html" title="&lt;TABLE&gt;" alt="" coords="351,5,466,59"/>
 <area shape="rect" id="node7_6" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Externalizable.html" title="java.io.Externalizable" alt="" coords="501,11,613,53"/>

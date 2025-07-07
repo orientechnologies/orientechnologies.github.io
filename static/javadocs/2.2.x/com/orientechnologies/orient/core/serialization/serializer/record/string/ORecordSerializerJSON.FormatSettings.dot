@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON.FormatSettings
-	c3077721 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON.FormatSettings" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializerJSON.FormatSettings.html">
+	c3077716 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON.FormatSettings" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializerJSON.FormatSettings.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FormatSettings </td></tr>
 		</table></td></tr>

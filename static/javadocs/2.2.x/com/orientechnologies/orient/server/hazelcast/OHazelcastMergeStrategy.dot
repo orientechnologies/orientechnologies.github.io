@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy
-	c1918194 [label=<<table title="com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OHazelcastMergeStrategy.html">
+	c1918187 [label=<<table title="com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OHazelcastMergeStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OHazelcastMergeStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OHazelcastMergeStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy implements com.hazelcast.map.merge.MapMergePolicy
-	c1918390:p -> c1918194:p [dir=back,arrowtail=empty,style=dashed];
+	c1918386:p -> c1918187:p [dir=back,arrowtail=empty,style=dashed];
 	// com.hazelcast.map.merge.MapMergePolicy
-	c1918390 [label=<<table title="com.hazelcast.map.merge.MapMergePolicy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/com/hazelcast/map/merge/MapMergePolicy.html">
+	c1918386 [label=<<table title="com.hazelcast.map.merge.MapMergePolicy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/com/hazelcast/map/merge/MapMergePolicy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MapMergePolicy </td></tr>

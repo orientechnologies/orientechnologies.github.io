@@ -9,60 +9,60 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OCheckpointEndRecord
-	c572171 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OCheckpointEndRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCheckpointEndRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCheckpointEndRecord </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCheckpointEndRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord
-	c572173 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OOperationUnitRecord </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OOperationUnitRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord
-	c572175 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractCheckPointStartRecord.html">
+	c572168 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractCheckPointStartRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractCheckPointStartRecord </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractCheckPointStartRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord
+	c572170 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OOperationUnitRecord </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OOperationUnitRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALRecord
-	c572179 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OWALRecord.html">
+	c572173 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OWALRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OWALRecord </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointEndRecord
-	c572187 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointEndRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OFuzzyCheckpointEndRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OFuzzyCheckpointEndRecord </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OFuzzyCheckpointEndRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ONonTxOperationPerformedWALRecord
-	c572196 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ONonTxOperationPerformedWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONonTxOperationPerformedWALRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ONonTxOperationPerformedWALRecord </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ONonTxOperationPerformedWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
-	c572198 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractWALRecord.html">
+	c572176 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractWALRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractWALRecord </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OCheckpointEndRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
-	c572198:p -> c572171:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
-	c572198:p -> c572173:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ONonTxOperationPerformedWALRecord
+	c572181 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ONonTxOperationPerformedWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONonTxOperationPerformedWALRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ONonTxOperationPerformedWALRecord </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ONonTxOperationPerformedWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OCheckpointEndRecord
+	c572192 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OCheckpointEndRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCheckpointEndRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCheckpointEndRecord </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCheckpointEndRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointEndRecord
+	c572198 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointEndRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OFuzzyCheckpointEndRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OFuzzyCheckpointEndRecord </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OFuzzyCheckpointEndRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
-	c572198:p -> c572175:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointEndRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
-	c572198:p -> c572187:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ONonTxOperationPerformedWALRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
-	c572198:p -> c572196:p [dir=back,arrowtail=empty];
+	c572176:p -> c572168:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
+	c572176:p -> c572170:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord implements com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALRecord
-	c572179:p -> c572198:p [dir=back,arrowtail=empty,style=dashed];
+	c572173:p -> c572176:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ONonTxOperationPerformedWALRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
+	c572176:p -> c572181:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OCheckpointEndRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
+	c572176:p -> c572192:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointEndRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord
+	c572176:p -> c572198:p [dir=back,arrowtail=empty];
 }
 

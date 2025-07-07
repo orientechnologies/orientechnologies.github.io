@@ -10,19 +10,25 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.concur.resource.OSharedContainer
-	c3993249 [label=<<table title="com.orientechnologies.common.concur.resource.OSharedContainer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/concur/resource/OSharedContainer.html">
+	c3993255 [label=<<table title="com.orientechnologies.common.concur.resource.OSharedContainer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/concur/resource/OSharedContainer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSharedContainer </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../common/concur/resource/OSharedContainer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.storage.OStorage
-	c3994229 [label=<<table title="com.orientechnologies.orient.core.storage.OStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorage.html">
+	// com.orientechnologies.orient.core.storage.OIdentifiableStorage
+	c3994222 [label=<<table title="com.orientechnologies.orient.core.storage.OIdentifiableStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIdentifiableStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OStorage </td></tr>
+<tr><td align="center" balign="center"> OIdentifiableStorage </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OIdentifiableStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.storage.OStorageAbstract
+	c3994223 [label=<<table title="com.orientechnologies.orient.core.storage.OStorageAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OStorageAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OStorageAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.OStorageProxy
 	c3994234 [label=<<table title="com.orientechnologies.orient.core.storage.OStorageProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageProxy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -30,45 +36,39 @@ digraph G {
 <tr><td align="center" balign="center"> OStorageProxy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.storage.OStorageAbstract
-	c3994235 [label=<<table title="com.orientechnologies.orient.core.storage.OStorageAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OStorageAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OStorageAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.storage.OIdentifiableStorage
-	c3994244 [label=<<table title="com.orientechnologies.orient.core.storage.OIdentifiableStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIdentifiableStorage.html">
+	// com.orientechnologies.orient.core.storage.OStorage
+	c3994236 [label=<<table title="com.orientechnologies.orient.core.storage.OStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OIdentifiableStorage </td></tr>
+<tr><td align="center" balign="center"> OStorage </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OIdentifiableStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.util.OBackupable
-	c3994479 [label=<<table title="com.orientechnologies.orient.core.util.OBackupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/OBackupable.html">
+	c3994472 [label=<<table title="com.orientechnologies.orient.core.util.OBackupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/OBackupable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBackupable </td></tr>
 		</table></td></tr>
 		</table>>, URL="../util/OBackupable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.ODistributedStorage
-	c3995062 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../server/distributed/impl/ODistributedStorage.html">
+	c3995070 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../server/distributed/impl/ODistributedStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedStorage </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../server/distributed/impl/ODistributedStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.storage.OStorage implements com.orientechnologies.orient.core.util.OBackupable
-	c3994479:p -> c3994229:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.storage.OStorage implements com.orientechnologies.common.concur.resource.OSharedContainer
-	c3993249:p -> c3994229:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.storage.OStorageProxy implements com.orientechnologies.orient.core.storage.OStorage
-	c3994229:p -> c3994234:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.storage.OStorageAbstract implements com.orientechnologies.orient.core.storage.OStorage
-	c3994229:p -> c3994235:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.storage.OStorageAbstract implements com.orientechnologies.common.concur.resource.OSharedContainer
-	c3993249:p -> c3994235:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.storage.OIdentifiableStorage implements com.orientechnologies.orient.core.storage.OStorage
-	c3994229:p -> c3994244:p [dir=back,arrowtail=empty,style=dashed];
+	c3994236:p -> c3994222:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.storage.OStorageAbstract implements com.orientechnologies.orient.core.storage.OStorage
+	c3994236:p -> c3994223:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.storage.OStorageAbstract implements com.orientechnologies.common.concur.resource.OSharedContainer
+	c3993255:p -> c3994223:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.storage.OStorageProxy implements com.orientechnologies.orient.core.storage.OStorage
+	c3994236:p -> c3994234:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.storage.OStorage implements com.orientechnologies.orient.core.util.OBackupable
+	c3994472:p -> c3994236:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.storage.OStorage implements com.orientechnologies.common.concur.resource.OSharedContainer
+	c3993255:p -> c3994236:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.server.distributed.impl.ODistributedStorage implements com.orientechnologies.orient.core.storage.OStorage
-	c3994229:p -> c3995062:p [dir=back,arrowtail=empty,style=dashed];
+	c3994236:p -> c3995070:p [dir=back,arrowtail=empty,style=dashed];
 }
 

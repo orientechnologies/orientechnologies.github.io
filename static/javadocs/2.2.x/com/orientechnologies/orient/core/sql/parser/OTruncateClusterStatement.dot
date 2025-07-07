@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.OStatement
-	c4272260 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
+	c4272300 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OTruncateClusterStatement
-	c4272378 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OTruncateClusterStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OTruncateClusterStatement.html">
+	c4272320 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OTruncateClusterStatement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OTruncateClusterStatement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTruncateClusterStatement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTruncateClusterStatement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OTruncateClusterStatement extends com.orientechnologies.orient.core.sql.parser.OStatement
-	c4272260:p -> c4272378:p [dir=back,arrowtail=empty];
+	c4272300:p -> c4272320:p [dir=back,arrowtail=empty];
 }
 

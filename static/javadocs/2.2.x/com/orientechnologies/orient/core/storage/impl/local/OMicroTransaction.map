@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../OBasicTransaction.html" title="com.orientechnologies.orient.core.storage.OBasicTransaction" alt="" coords="17,11,155,53"/>
-<area shape="rect" id="node1" href="../../OBasicTransaction.html" title="&lt;TABLE&gt;" alt="" coords="6,5,166,59"/>
-<area shape="rect" id="node2_1" href="./OMicroTransaction.html" title="com.orientechnologies.orient.core.storage.impl.local.OMicroTransaction" alt="" coords="16,219,156,245"/>
-<area shape="rect" id="node2" href="./OMicroTransaction.html" title="&lt;TABLE&gt;" alt="" coords="5,208,167,256"/>
-<area shape="rect" id="node3_2" href="../../../tx/OTransactionInternal.html" title="com.orientechnologies.orient.core.tx.OTransactionInternal" alt="" coords="72,112,225,155"/>
-<area shape="rect" id="node3" href="../../../tx/OTransactionInternal.html" title="&lt;TABLE&gt;" alt="" coords="61,107,236,160"/>
-</map>

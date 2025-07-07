@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="16,11,175,53"/>
-<area shape="rect" id="node1" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="5,5,185,59"/>
-<area shape="rect" id="node2_1" href="./OSchemaNotCreatedException.html" title="com.orientechnologies.orient.core.exception.OSchemaNotCreatedException" alt="" coords="45,214,265,239"/>
-<area shape="rect" id="node2" href="./OSchemaNotCreatedException.html" title="&lt;TABLE&gt;" alt="" coords="35,203,276,251"/>
-<area shape="rect" id="node4_2" href="./OSchemaException.html" title="com.orientechnologies.orient.core.exception.OSchemaException" alt="" coords="144,118,289,143"/>
-<area shape="rect" id="node4" href="./OSchemaException.html" title="&lt;TABLE&gt;" alt="" coords="133,107,300,155"/>
-<area shape="rect" id="node3_3" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="220,19,344,45"/>
-<area shape="rect" id="node3" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="209,8,355,56"/>
+<area shape="rect" id="node1_0" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="185,11,344,53"/>
+<area shape="rect" id="node1" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="175,5,355,59"/>
+<area shape="rect" id="node3_1" href="./OSchemaException.html" title="com.orientechnologies.orient.core.exception.OSchemaException" alt="" coords="71,118,216,143"/>
+<area shape="rect" id="node3" href="./OSchemaException.html" title="&lt;TABLE&gt;" alt="" coords="60,107,227,155"/>
+<area shape="rect" id="node4_2" href="./OSchemaNotCreatedException.html" title="com.orientechnologies.orient.core.exception.OSchemaNotCreatedException" alt="" coords="93,214,313,239"/>
+<area shape="rect" id="node4" href="./OSchemaNotCreatedException.html" title="&lt;TABLE&gt;" alt="" coords="83,203,324,251"/>
+<area shape="rect" id="node2_3" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="16,19,140,45"/>
+<area shape="rect" id="node2" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="5,8,151,56"/>
 </map>

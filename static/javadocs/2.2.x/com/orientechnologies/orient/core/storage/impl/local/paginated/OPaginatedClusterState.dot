@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.OPaginatedClusterState
-	c2752653 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.OPaginatedClusterState" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OPaginatedClusterState.html">
+	c2752651 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.OPaginatedClusterState" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OPaginatedClusterState.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OPaginatedClusterState </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OPaginatedClusterState.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurablePage
-	c2752707 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurablePage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./base/ODurablePage.html">
+	c2752704 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurablePage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./base/ODurablePage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODurablePage </td></tr>
 		</table></td></tr>
 		</table>>, URL="./base/ODurablePage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.OPaginatedClusterState extends com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurablePage
-	c2752707:p -> c2752653:p [dir=back,arrowtail=empty];
+	c2752704:p -> c2752651:p [dir=back,arrowtail=empty];
 }
 

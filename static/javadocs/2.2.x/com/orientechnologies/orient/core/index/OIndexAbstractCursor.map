@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OIndexAbstractCursor.html" title="com.orientechnologies.orient.core.index.OIndexAbstractCursor" alt="" coords="251,118,412,143"/>
-<area shape="rect" id="node1" href="./OIndexAbstractCursor.html" title="&lt;TABLE&gt;" alt="" coords="240,107,423,155"/>
-<area shape="rect" id="node3_1" href="./OCompositeIndexCursor.html" title="com.orientechnologies.orient.core.index.OCompositeIndexCursor" alt="" coords="16,214,193,239"/>
-<area shape="rect" id="node3" href="./OCompositeIndexCursor.html" title="&lt;TABLE&gt;" alt="" coords="5,203,204,251"/>
-<area shape="rect" id="node4_2" href="./OIndexCursorSingleValue.html" title="com.orientechnologies.orient.core.index.OIndexCursorSingleValue" alt="" coords="239,214,423,239"/>
-<area shape="rect" id="node4" href="./OIndexCursorSingleValue.html" title="&lt;TABLE&gt;" alt="" coords="229,203,434,251"/>
-<area shape="rect" id="node5_3" href="./OIndexCursorCollectionValue.html" title="com.orientechnologies.orient.core.index.OIndexCursorCollectionValue" alt="" coords="469,214,677,239"/>
-<area shape="rect" id="node5" href="./OIndexCursorCollectionValue.html" title="&lt;TABLE&gt;" alt="" coords="458,203,687,251"/>
-<area shape="rect" id="node2_4" href="./OIndexCursor.html" title="com.orientechnologies.orient.core.index.OIndexCursor" alt="" coords="277,11,385,53"/>
-<area shape="rect" id="node2" href="./OIndexCursor.html" title="&lt;TABLE&gt;" alt="" coords="267,5,396,59"/>
+<area shape="rect" id="node1_0" href="./OIndexCursorSingleValue.html" title="com.orientechnologies.orient.core.index.OIndexCursorSingleValue" alt="" coords="16,214,200,239"/>
+<area shape="rect" id="node1" href="./OIndexCursorSingleValue.html" title="&lt;TABLE&gt;" alt="" coords="5,203,211,251"/>
+<area shape="rect" id="node2_1" href="./OIndexCursorCollectionValue.html" title="com.orientechnologies.orient.core.index.OIndexCursorCollectionValue" alt="" coords="245,214,453,239"/>
+<area shape="rect" id="node2" href="./OIndexCursorCollectionValue.html" title="&lt;TABLE&gt;" alt="" coords="235,203,464,251"/>
+<area shape="rect" id="node3_2" href="./OIndexAbstractCursor.html" title="com.orientechnologies.orient.core.index.OIndexAbstractCursor" alt="" coords="269,118,430,143"/>
+<area shape="rect" id="node3" href="./OIndexAbstractCursor.html" title="&lt;TABLE&gt;" alt="" coords="258,107,441,155"/>
+<area shape="rect" id="node5_3" href="./OCompositeIndexCursor.html" title="com.orientechnologies.orient.core.index.OCompositeIndexCursor" alt="" coords="499,214,677,239"/>
+<area shape="rect" id="node5" href="./OCompositeIndexCursor.html" title="&lt;TABLE&gt;" alt="" coords="489,203,687,251"/>
+<area shape="rect" id="node4_4" href="./OIndexCursor.html" title="com.orientechnologies.orient.core.index.OIndexCursor" alt="" coords="295,11,403,53"/>
+<area shape="rect" id="node4" href="./OIndexCursor.html" title="&lt;TABLE&gt;" alt="" coords="285,5,414,59"/>
 </map>

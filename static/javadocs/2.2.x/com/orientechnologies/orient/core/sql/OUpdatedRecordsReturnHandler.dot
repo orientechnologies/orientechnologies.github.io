@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.OUpdatedRecordsReturnHandler
-	c4322948 [label=<<table title="com.orientechnologies.orient.core.sql.OUpdatedRecordsReturnHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OUpdatedRecordsReturnHandler.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OUpdatedRecordsReturnHandler </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OUpdatedRecordsReturnHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.ORecordsReturnHandler
-	c4322975 [label=<<table title="com.orientechnologies.orient.core.sql.ORecordsReturnHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordsReturnHandler.html">
+	c4322921 [label=<<table title="com.orientechnologies.orient.core.sql.ORecordsReturnHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordsReturnHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordsReturnHandler </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordsReturnHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.OUpdatedRecordsReturnHandler
+	c4322988 [label=<<table title="com.orientechnologies.orient.core.sql.OUpdatedRecordsReturnHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OUpdatedRecordsReturnHandler.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OUpdatedRecordsReturnHandler </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OUpdatedRecordsReturnHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.OUpdatedRecordsReturnHandler extends com.orientechnologies.orient.core.sql.ORecordsReturnHandler
-	c4322975:p -> c4322948:p [dir=back,arrowtail=empty];
+	c4322921:p -> c4322988:p [dir=back,arrowtail=empty];
 }
 

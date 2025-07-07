@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.OStorageConfigurationSegment
-	c4016601 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OStorageConfigurationSegment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageConfigurationSegment.html">
+	c4016600 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OStorageConfigurationSegment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageConfigurationSegment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageConfigurationSegment </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageConfigurationSegment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.config.OStorageConfigurationImpl
-	c4016760 [label=<<table title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../config/OStorageConfigurationImpl.html">
+	c4016754 [label=<<table title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../config/OStorageConfigurationImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageConfigurationImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../config/OStorageConfigurationImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.OStorageConfigurationSegment extends com.orientechnologies.orient.core.config.OStorageConfigurationImpl
-	c4016760:p -> c4016601:p [dir=back,arrowtail=empty];
+	c4016754:p -> c4016600:p [dir=back,arrowtail=empty];
 }
 

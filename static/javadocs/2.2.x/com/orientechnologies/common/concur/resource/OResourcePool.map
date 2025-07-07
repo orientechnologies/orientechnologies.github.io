@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OReentrantResourcePool.html" title="com.orientechnologies.common.concur.resource.OReentrantResourcePool" alt="" coords="16,113,245,138"/>
-<area shape="rect" id="node1" href="./OReentrantResourcePool.html" title="&lt;TABLE&gt;" alt="" coords="5,101,256,149"/>
-<area shape="rect" id="node2_1" href="./OResourcePool.html" title="com.orientechnologies.common.concur.resource.OResourcePool" alt="" coords="48,17,213,42"/>
-<area shape="rect" id="node2" href="./OResourcePool.html" title="&lt;TABLE&gt;" alt="" coords="37,5,224,53"/>
+<area shape="rect" id="node1_0" href="./OResourcePool.html" title="com.orientechnologies.common.concur.resource.OResourcePool" alt="" coords="48,17,213,42"/>
+<area shape="rect" id="node1" href="./OResourcePool.html" title="&lt;TABLE&gt;" alt="" coords="37,5,224,53"/>
+<area shape="rect" id="node2_1" href="./OReentrantResourcePool.html" title="com.orientechnologies.common.concur.resource.OReentrantResourcePool" alt="" coords="16,113,245,138"/>
+<area shape="rect" id="node2" href="./OReentrantResourcePool.html" title="&lt;TABLE&gt;" alt="" coords="5,101,256,149"/>
 </map>

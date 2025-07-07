@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.server.network.protocol.http.OHttpResponse
-	c1930201 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.OHttpResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OHttpResponse.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OHttpResponse </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OHttpResponse.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.OHttpGraphResponse
-	c1930205 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.OHttpGraphResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OHttpGraphResponse.html">
+	c1930196 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.OHttpGraphResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OHttpGraphResponse.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OHttpGraphResponse </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OHttpGraphResponse.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.network.protocol.http.OHttpResponse
+	c1930205 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.OHttpResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OHttpResponse.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OHttpResponse </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OHttpResponse.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.OHttpGraphResponse extends com.orientechnologies.orient.server.network.protocol.http.OHttpResponse
-	c1930201:p -> c1930205:p [dir=back,arrowtail=empty];
+	c1930205:p -> c1930196:p [dir=back,arrowtail=empty];
 }
 

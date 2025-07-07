@@ -9,17 +9,17 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.graph.console.OInternalGraphImporter
+	c387902 [label=<<table title="com.orientechnologies.orient.graph.console.OInternalGraphImporter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OInternalGraphImporter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OInternalGraphImporter </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OInternalGraphImporter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.console.OGremlinConsole
 	c387903 [label=<<table title="com.orientechnologies.orient.graph.console.OGremlinConsole" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGremlinConsole.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OGremlinConsole </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OGremlinConsole.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.console.OInternalGraphImporter
-	c387904 [label=<<table title="com.orientechnologies.orient.graph.console.OInternalGraphImporter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OInternalGraphImporter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OInternalGraphImporter </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OInternalGraphImporter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

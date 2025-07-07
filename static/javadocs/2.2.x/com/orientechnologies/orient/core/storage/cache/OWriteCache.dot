@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache
-	c4390600 [label=<<table title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../impl/memory/ODirectMemoryOnlyDiskCache.html">
+	c4390594 [label=<<table title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../impl/memory/ODirectMemoryOnlyDiskCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODirectMemoryOnlyDiskCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="../impl/memory/ODirectMemoryOnlyDiskCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.cache.OWriteCache
-	c4390606 [label=<<table title="com.orientechnologies.orient.core.storage.cache.OWriteCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OWriteCache.html">
+	c4390599 [label=<<table title="com.orientechnologies.orient.core.storage.cache.OWriteCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OWriteCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OWriteCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OWriteCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.cache.local.OWOWCache
-	c4390616 [label=<<table title="com.orientechnologies.orient.core.storage.cache.local.OWOWCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./local/OWOWCache.html">
+	c4390608 [label=<<table title="com.orientechnologies.orient.core.storage.cache.local.OWOWCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./local/OWOWCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OWOWCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./local/OWOWCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache implements com.orientechnologies.orient.core.storage.cache.OWriteCache
-	c4390606:p -> c4390600:p [dir=back,arrowtail=empty,style=dashed];
+	c4390599:p -> c4390594:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.storage.cache.local.OWOWCache implements com.orientechnologies.orient.core.storage.cache.OWriteCache
-	c4390606:p -> c4390616:p [dir=back,arrowtail=empty,style=dashed];
+	c4390599:p -> c4390608:p [dir=back,arrowtail=empty,style=dashed];
 }
 

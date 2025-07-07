@@ -10,29 +10,29 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.lucene.OLuceneIndex
-	c2383642 [label=<<table title="com.orientechnologies.lucene.OLuceneIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OLuceneIndex.html">
+	c2383638 [label=<<table title="com.orientechnologies.lucene.OLuceneIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OLuceneIndex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OLuceneIndex </td></tr>
 		</table></td></tr>
 		</table>>, URL="../OLuceneIndex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.lucene.index.OLuceneIndexNotUnique
-	c2383673 [label=<<table title="com.orientechnologies.lucene.index.OLuceneIndexNotUnique" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneIndexNotUnique.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLuceneIndexNotUnique </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLuceneIndexNotUnique.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.index.OLuceneFullTextIndex
-	c2383674 [label=<<table title="com.orientechnologies.lucene.index.OLuceneFullTextIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneFullTextIndex.html">
+	c2383669 [label=<<table title="com.orientechnologies.lucene.index.OLuceneFullTextIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneFullTextIndex.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLuceneFullTextIndex </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneFullTextIndex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.lucene.index.OLuceneIndexNotUnique implements com.orientechnologies.lucene.OLuceneIndex
-	c2383642:p -> c2383673:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.lucene.index.OLuceneIndexNotUnique
+	c2383670 [label=<<table title="com.orientechnologies.lucene.index.OLuceneIndexNotUnique" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneIndexNotUnique.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLuceneIndexNotUnique </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLuceneIndexNotUnique.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.lucene.index.OLuceneFullTextIndex extends com.orientechnologies.lucene.index.OLuceneIndexNotUnique
-	c2383673:p -> c2383674:p [dir=back,arrowtail=empty];
+	c2383670:p -> c2383669:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.lucene.index.OLuceneFullTextIndex implements com.orientechnologies.lucene.OLuceneIndex
-	c2383642:p -> c2383674:p [dir=back,arrowtail=empty,style=dashed];
+	c2383638:p -> c2383669:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.lucene.index.OLuceneIndexNotUnique implements com.orientechnologies.lucene.OLuceneIndex
+	c2383638:p -> c2383670:p [dir=back,arrowtail=empty,style=dashed];
 }
 

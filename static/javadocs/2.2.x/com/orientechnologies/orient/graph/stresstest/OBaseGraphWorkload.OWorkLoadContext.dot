@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OBaseWorkLoadContext
-	c704718 [label=<<table title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OBaseWorkLoadContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../stresstest/workload/OBaseWorkload.OBaseWorkLoadContext.html">
+	c704716 [label=<<table title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OBaseWorkLoadContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../stresstest/workload/OBaseWorkload.OBaseWorkLoadContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OBaseWorkLoadContext </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../stresstest/workload/OBaseWorkload.OBaseWorkLoadContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.stresstest.OBaseGraphWorkload.OWorkLoadContext
-	c704981 [label=<<table title="com.orientechnologies.orient.graph.stresstest.OBaseGraphWorkload.OWorkLoadContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBaseGraphWorkload.OWorkLoadContext.html">
+	c704979 [label=<<table title="com.orientechnologies.orient.graph.stresstest.OBaseGraphWorkload.OWorkLoadContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBaseGraphWorkload.OWorkLoadContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OWorkLoadContext </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBaseGraphWorkload.OWorkLoadContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.graph.stresstest.OBaseGraphWorkload.OWorkLoadContext extends com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OBaseWorkLoadContext
-	c704718:p -> c704981:p [dir=back,arrowtail=empty];
+	c704716:p -> c704979:p [dir=back,arrowtail=empty];
 }
 

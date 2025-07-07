@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.index.OIndexFactory
-	c1434016 [label=<<table title="com.orientechnologies.orient.core.index.OIndexFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexFactory.html">
+	c1434011 [label=<<table title="com.orientechnologies.orient.core.index.OIndexFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OIndexFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OIndexFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIndexFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.ODefaultIndexFactory
-	c1434039 [label=<<table title="com.orientechnologies.orient.core.index.ODefaultIndexFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODefaultIndexFactory.html">
+	c1434047 [label=<<table title="com.orientechnologies.orient.core.index.ODefaultIndexFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODefaultIndexFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODefaultIndexFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODefaultIndexFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.ODefaultIndexFactory implements com.orientechnologies.orient.core.index.OIndexFactory
-	c1434016:p -> c1434039:p [dir=back,arrowtail=empty,style=dashed];
+	c1434011:p -> c1434047:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OMigrationConfigManager.html" title="com.orientechnologies.orient.etl.util.OMigrationConfigManager" alt="" coords="16,17,205,42"/>
-<area shape="rect" id="node1" href="./OMigrationConfigManager.html" title="&lt;TABLE&gt;" alt="" coords="5,5,216,53"/>
-<area shape="rect" id="node2_1" href="./OFileManager.html" title="com.orientechnologies.orient.etl.util.OFileManager" alt="" coords="251,17,360,42"/>
-<area shape="rect" id="node2" href="./OFileManager.html" title="&lt;TABLE&gt;" alt="" coords="240,5,371,53"/>
+<area shape="rect" id="node1_0" href="./OFileManager.html" title="com.orientechnologies.orient.etl.util.OFileManager" alt="" coords="16,17,125,42"/>
+<area shape="rect" id="node1" href="./OFileManager.html" title="&lt;TABLE&gt;" alt="" coords="5,5,136,53"/>
+<area shape="rect" id="node2_1" href="./OMigrationConfigManager.html" title="com.orientechnologies.orient.etl.util.OMigrationConfigManager" alt="" coords="171,17,360,42"/>
+<area shape="rect" id="node2" href="./OMigrationConfigManager.html" title="&lt;TABLE&gt;" alt="" coords="160,5,371,53"/>
 </map>

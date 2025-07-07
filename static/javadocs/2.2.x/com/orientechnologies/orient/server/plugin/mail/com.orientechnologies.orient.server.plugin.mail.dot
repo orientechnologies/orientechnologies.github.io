@@ -9,23 +9,23 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.server.plugin.mail.OMailPlugin
-	c328724 [label=<<table title="com.orientechnologies.orient.server.plugin.mail.OMailPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OMailPlugin.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OMailPlugin </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OMailPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.plugin.mail.OSMTPAuthenticator
-	c328725 [label=<<table title="com.orientechnologies.orient.server.plugin.mail.OSMTPAuthenticator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSMTPAuthenticator.html">
+	c328723 [label=<<table title="com.orientechnologies.orient.server.plugin.mail.OSMTPAuthenticator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSMTPAuthenticator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSMTPAuthenticator </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSMTPAuthenticator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.plugin.mail.OMailProfile
-	c328726 [label=<<table title="com.orientechnologies.orient.server.plugin.mail.OMailProfile" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OMailProfile.html">
+	c328724 [label=<<table title="com.orientechnologies.orient.server.plugin.mail.OMailProfile" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OMailProfile.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OMailProfile </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OMailProfile.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.plugin.mail.OMailPlugin
+	c328725 [label=<<table title="com.orientechnologies.orient.server.plugin.mail.OMailPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OMailPlugin.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OMailPlugin </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OMailPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

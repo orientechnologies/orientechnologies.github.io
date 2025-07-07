@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.jdbc.OrientJdbcDatabaseMetaData
-	c4476796 [label=<<table title="com.orientechnologies.orient.jdbc.OrientJdbcDatabaseMetaData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientJdbcDatabaseMetaData.html">
+	c4476791 [label=<<table title="com.orientechnologies.orient.jdbc.OrientJdbcDatabaseMetaData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OrientJdbcDatabaseMetaData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OrientJdbcDatabaseMetaData </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OrientJdbcDatabaseMetaData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.jdbc.OrientJdbcDatabaseMetaData implements java.sql.DatabaseMetaData
-	c4476875:p -> c4476796:p [dir=back,arrowtail=empty,style=dashed];
+	c4476869:p -> c4476791:p [dir=back,arrowtail=empty,style=dashed];
 	// java.sql.DatabaseMetaData
-	c4476875 [label=<<table title="java.sql.DatabaseMetaData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/sql/DatabaseMetaData.html">
+	c4476869 [label=<<table title="java.sql.DatabaseMetaData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/sql/DatabaseMetaData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DatabaseMetaData </td></tr>

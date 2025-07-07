@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.lucene.index.OLuceneFullTextIndex
+	c422566 [label=<<table title="com.orientechnologies.lucene.index.OLuceneFullTextIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneFullTextIndex.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLuceneFullTextIndex </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLuceneFullTextIndex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.index.OLuceneIndexNotUnique
 	c422567 [label=<<table title="com.orientechnologies.lucene.index.OLuceneIndexNotUnique" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneIndexNotUnique.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLuceneIndexNotUnique </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneIndexNotUnique.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.lucene.index.OLuceneFullTextIndex
-	c422568 [label=<<table title="com.orientechnologies.lucene.index.OLuceneFullTextIndex" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneFullTextIndex.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLuceneFullTextIndex </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLuceneFullTextIndex.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.lucene.index.OLuceneFullTextIndex extends com.orientechnologies.lucene.index.OLuceneIndexNotUnique
-	c422567:p -> c422568:p [dir=back,arrowtail=empty];
+	c422567:p -> c422566:p [dir=back,arrowtail=empty];
 }
 

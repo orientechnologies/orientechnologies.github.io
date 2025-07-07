@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.object.enhancement.OObjectProxyMethodHandler
-	c2663666 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectProxyMethodHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OObjectProxyMethodHandler.html">
+	c2663662 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectProxyMethodHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OObjectProxyMethodHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectProxyMethodHandler </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectProxyMethodHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.object.enhancement.OObjectProxyMethodHandler implements javassist.util.proxy.MethodHandler
-	c2664228:p -> c2663666:p [dir=back,arrowtail=empty,style=dashed];
+	c2664224:p -> c2663662:p [dir=back,arrowtail=empty,style=dashed];
 	// javassist.util.proxy.MethodHandler
-	c2664228 [label=<<table title="javassist.util.proxy.MethodHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/javassist/util/proxy/MethodHandler.html">
+	c2664224 [label=<<table title="javassist.util.proxy.MethodHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/javassist/util/proxy/MethodHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MethodHandler </td></tr>

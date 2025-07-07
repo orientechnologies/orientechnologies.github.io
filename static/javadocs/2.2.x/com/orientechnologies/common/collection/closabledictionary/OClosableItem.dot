@@ -17,12 +17,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OClosableItem.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.fs.OFileClassic
-	c893329 [label=<<table title="com.orientechnologies.orient.core.storage.fs.OFileClassic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/storage/fs/OFileClassic.html">
+	c893326 [label=<<table title="com.orientechnologies.orient.core.storage.fs.OFileClassic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../orient/core/storage/fs/OFileClassic.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OFileClassic </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../orient/core/storage/fs/OFileClassic.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.fs.OFileClassic implements com.orientechnologies.common.collection.closabledictionary.OClosableItem
-	c892244:p -> c893329:p [dir=back,arrowtail=empty,style=dashed];
+	c892244:p -> c893326:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -16,21 +16,21 @@ digraph G {
 <tr><td align="center" balign="center"> OCommandDistributedReplicateRequest </td></tr>
 		</table></td></tr>
 		</table>>, URL="../command/OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateRecord
-	c1100003 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLTruncateRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLTruncateRecord </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLTruncateRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1100006 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
+	c1100003 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorSQLAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateRecord
+	c1100022 [label=<<table title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCommandExecutorSQLTruncateRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCommandExecutorSQLTruncateRecord </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandExecutorSQLTruncateRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateRecord extends com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract
-	c1100006:p -> c1100003:p [dir=back,arrowtail=empty];
+	c1100003:p -> c1100022:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateRecord implements com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c1099909:p -> c1100003:p [dir=back,arrowtail=empty,style=dashed];
+	c1099909:p -> c1100022:p [dir=back,arrowtail=empty,style=dashed];
 }
 

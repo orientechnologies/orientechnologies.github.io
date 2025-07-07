@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage
-	c1478454 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../local/OAbstractPaginatedStorage.html">
+	c1478447 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../local/OAbstractPaginatedStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractPaginatedStorage </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../local/OAbstractPaginatedStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryStorage
-	c1478540 [label=<<table title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODirectMemoryStorage.html">
+	c1478538 [label=<<table title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryStorage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODirectMemoryStorage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODirectMemoryStorage </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODirectMemoryStorage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryStorage extends com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage
-	c1478454:p -> c1478540:p [dir=back,arrowtail=empty];
+	c1478447:p -> c1478538:p [dir=back,arrowtail=empty];
 }
 

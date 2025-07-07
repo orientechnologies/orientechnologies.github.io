@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask
-	c1537973 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractReplicatedTask.html">
+	c1537968 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractReplicatedTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractReplicatedTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../task/OAbstractReplicatedTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.ODistributedLockTask
-	c1538224 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ODistributedLockTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedLockTask.html">
+	c1538232 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.ODistributedLockTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedLockTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedLockTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedLockTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.ODistributedLockTask extends com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask
-	c1537973:p -> c1538224:p [dir=back,arrowtail=empty];
+	c1537968:p -> c1538232:p [dir=back,arrowtail=empty];
 }
 

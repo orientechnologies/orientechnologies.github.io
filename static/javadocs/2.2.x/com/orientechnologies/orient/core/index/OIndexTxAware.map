@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OIndexTxAware.html" title="com.orientechnologies.orient.core.index.OIndexTxAware" alt="" coords="148,113,300,138"/>
-<area shape="rect" id="node1" href="./OIndexTxAware.html" title="&lt;TABLE&gt;" alt="" coords="137,101,311,149"/>
-<area shape="rect" id="node2_1" href="./OIndexTxAwareOneValue.html" title="com.orientechnologies.orient.core.index.OIndexTxAwareOneValue" alt="" coords="16,209,200,234"/>
-<area shape="rect" id="node2" href="./OIndexTxAwareOneValue.html" title="&lt;TABLE&gt;" alt="" coords="5,197,211,245"/>
-<area shape="rect" id="node3_2" href="./OIndexTxAwareMultiValue.html" title="com.orientechnologies.orient.core.index.OIndexTxAwareMultiValue" alt="" coords="245,209,437,234"/>
-<area shape="rect" id="node3" href="./OIndexTxAwareMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="235,197,448,245"/>
-<area shape="rect" id="node4_3" href="./OIndexAbstractDelegate.html" title="com.orientechnologies.orient.core.index.OIndexAbstractDelegate" alt="" coords="120,17,328,42"/>
-<area shape="rect" id="node4" href="./OIndexAbstractDelegate.html" title="&lt;TABLE&gt;" alt="" coords="109,5,339,53"/>
+<area shape="rect" id="node1_0" href="./OIndexTxAwareOneValue.html" title="com.orientechnologies.orient.core.index.OIndexTxAwareOneValue" alt="" coords="16,209,200,234"/>
+<area shape="rect" id="node1" href="./OIndexTxAwareOneValue.html" title="&lt;TABLE&gt;" alt="" coords="5,197,211,245"/>
+<area shape="rect" id="node2_1" href="./OIndexTxAware.html" title="com.orientechnologies.orient.core.index.OIndexTxAware" alt="" coords="148,113,300,138"/>
+<area shape="rect" id="node2" href="./OIndexTxAware.html" title="&lt;TABLE&gt;" alt="" coords="137,101,311,149"/>
+<area shape="rect" id="node4_2" href="./OIndexTxAwareMultiValue.html" title="com.orientechnologies.orient.core.index.OIndexTxAwareMultiValue" alt="" coords="245,209,437,234"/>
+<area shape="rect" id="node4" href="./OIndexTxAwareMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="235,197,448,245"/>
+<area shape="rect" id="node3_3" href="./OIndexAbstractDelegate.html" title="com.orientechnologies.orient.core.index.OIndexAbstractDelegate" alt="" coords="120,17,328,42"/>
+<area shape="rect" id="node3" href="./OIndexAbstractDelegate.html" title="&lt;TABLE&gt;" alt="" coords="109,5,339,53"/>
 </map>

@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.plugin.OServerPluginHelper
-	c3834245 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginHelper.html">
+	c3834234 [label=<<table title="com.orientechnologies.orient.server.plugin.OServerPluginHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../plugin/OServerPluginHelper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerPluginHelper </td></tr>
 		</table></td></tr>
 		</table>>, URL="../plugin/OServerPluginHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.handler.OServerHandlerHelper
-	c3834259 [label=<<table title="com.orientechnologies.orient.server.handler.OServerHandlerHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerHandlerHelper.html">
+	c3834247 [label=<<table title="com.orientechnologies.orient.server.handler.OServerHandlerHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerHandlerHelper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerHandlerHelper </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerHandlerHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.handler.OServerHandlerHelper extends com.orientechnologies.orient.server.plugin.OServerPluginHelper
-	c3834245:p -> c3834259:p [dir=back,arrowtail=empty];
+	c3834234:p -> c3834247:p [dir=back,arrowtail=empty];
 }
 

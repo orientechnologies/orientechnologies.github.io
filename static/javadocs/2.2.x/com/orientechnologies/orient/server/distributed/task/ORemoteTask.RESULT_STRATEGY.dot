@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.task.ORemoteTask.RESULT_STRATEGY
-	c3131197 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ORemoteTask.RESULT_STRATEGY" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORemoteTask.RESULT_STRATEGY.html">
+	c3131199 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ORemoteTask.RESULT_STRATEGY" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORemoteTask.RESULT_STRATEGY.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> RESULT_STRATEGY </td></tr>

@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostCommand
-	c3789678 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostCommand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../server/network/protocol/http/command/post/OServerCommandPostCommand.html">
+	c3789665 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostCommand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../server/network/protocol/http/command/post/OServerCommandPostCommand.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandPostCommand </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../server/network/protocol/http/command/post/OServerCommandPostCommand.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.server.command.OServerCommandPostCommandGraph
-	c3789759 [label=<<table title="com.orientechnologies.orient.graph.server.command.OServerCommandPostCommandGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPostCommandGraph.html">
+	c3789753 [label=<<table title="com.orientechnologies.orient.graph.server.command.OServerCommandPostCommandGraph" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPostCommandGraph.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandPostCommandGraph </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandPostCommandGraph.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.graph.server.command.OServerCommandPostCommandGraph extends com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostCommand
-	c3789678:p -> c3789759:p [dir=back,arrowtail=empty];
+	c3789665:p -> c3789753:p [dir=back,arrowtail=empty];
 }
 

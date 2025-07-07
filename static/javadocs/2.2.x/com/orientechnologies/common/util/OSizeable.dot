@@ -10,61 +10,61 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.collection.OCollection<T>
-	c3952623 [label=<<table title="com.orientechnologies.common.collection.OCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/OCollection.html">
+	c3952617 [label=<<table title="com.orientechnologies.common.collection.OCollection" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/OCollection.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCollection&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../collection/OCollection.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.collection.OMultiCollectionIterator<T>
-	c3952628 [label=<<table title="com.orientechnologies.common.collection.OMultiCollectionIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/OMultiCollectionIterator.html">
+	c3952619 [label=<<table title="com.orientechnologies.common.collection.OMultiCollectionIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../collection/OMultiCollectionIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OMultiCollectionIterator&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../collection/OMultiCollectionIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.util.OSizeable
-	c3952717 [label=<<table title="com.orientechnologies.common.util.OSizeable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSizeable.html">
+	c3952712 [label=<<table title="com.orientechnologies.common.util.OSizeable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSizeable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSizeable </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSizeable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue
-	c3952817 [label=<<table title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/ORecordLazyMultiValue.html">
+	c3952815 [label=<<table title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/ORecordLazyMultiValue.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORecordLazyMultiValue </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/db/record/ORecordLazyMultiValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexCursorSingleValue
-	c3953891 [label=<<table title="com.orientechnologies.orient.core.index.OIndexCursorSingleValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/index/OIndexCursorSingleValue.html">
+	c3953843 [label=<<table title="com.orientechnologies.orient.core.index.OIndexCursorSingleValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/index/OIndexCursorSingleValue.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OIndexCursorSingleValue </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/index/OIndexCursorSingleValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexCursorCollectionValue
-	c3953906 [label=<<table title="com.orientechnologies.orient.core.index.OIndexCursorCollectionValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/index/OIndexCursorCollectionValue.html">
+	c3953850 [label=<<table title="com.orientechnologies.orient.core.index.OIndexCursorCollectionValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/index/OIndexCursorCollectionValue.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OIndexCursorCollectionValue </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/index/OIndexCursorCollectionValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.iterator.OLazyWrapperIterator<T>
-	c3953980 [label=<<table title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/iterator/OLazyWrapperIterator.html">
+	c3953974 [label=<<table title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/iterator/OLazyWrapperIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OLazyWrapperIterator&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/iterator/OLazyWrapperIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.collection.OCollection<T> implements com.orientechnologies.common.util.OSizeable
-	c3952717:p -> c3952623:p [dir=back,arrowtail=empty,style=dashed];
+	c3952712:p -> c3952617:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.common.collection.OMultiCollectionIterator<T> implements com.orientechnologies.common.util.OSizeable
-	c3952717:p -> c3952628:p [dir=back,arrowtail=empty,style=dashed];
+	c3952712:p -> c3952619:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue implements com.orientechnologies.common.util.OSizeable
-	c3952717:p -> c3952817:p [dir=back,arrowtail=empty,style=dashed];
+	c3952712:p -> c3952815:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.index.OIndexCursorSingleValue implements com.orientechnologies.common.util.OSizeable
-	c3952717:p -> c3953891:p [dir=back,arrowtail=empty,style=dashed];
+	c3952712:p -> c3953843:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.index.OIndexCursorCollectionValue implements com.orientechnologies.common.util.OSizeable
-	c3952717:p -> c3953906:p [dir=back,arrowtail=empty,style=dashed];
+	c3952712:p -> c3953850:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.iterator.OLazyWrapperIterator<T> implements com.orientechnologies.common.util.OSizeable
-	c3952717:p -> c3953980:p [dir=back,arrowtail=empty,style=dashed];
+	c3952712:p -> c3953974:p [dir=back,arrowtail=empty,style=dashed];
 }
 

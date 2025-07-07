@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.query.OBasicResultSet<T>
-	c718350 [label=<<table title="com.orientechnologies.orient.core.sql.query.OBasicResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBasicResultSet.html">
+	c718348 [label=<<table title="com.orientechnologies.orient.core.sql.query.OBasicResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBasicResultSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OBasicResultSet&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBasicResultSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.query.OResultSet<T>
-	c718352 [label=<<table title="com.orientechnologies.orient.core.sql.query.OResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OResultSet.html">
+	c718354 [label=<<table title="com.orientechnologies.orient.core.sql.query.OResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OResultSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OResultSet&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OResultSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.query.OBasicResultSet<T> implements com.orientechnologies.orient.core.sql.query.OResultSet<T>
-	c718352:p -> c718350:p [dir=back,arrowtail=empty,style=dashed];
+	c718354:p -> c718348:p [dir=back,arrowtail=empty,style=dashed];
 }
 

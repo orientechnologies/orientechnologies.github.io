@@ -9,27 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.db.record.ORecordLazyList
+	c3093217 [label=<<table title="com.orientechnologies.orient.core.db.record.ORecordLazyList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordLazyList.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORecordLazyList </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORecordLazyList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.OTrackedList<T>
-	c3093223 [label=<<table title="com.orientechnologies.orient.core.db.record.OTrackedList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTrackedList.html">
+	c3093219 [label=<<table title="com.orientechnologies.orient.core.db.record.OTrackedList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTrackedList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTrackedList&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTrackedList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.ORecordTrackedList
-	c3093227 [label=<<table title="com.orientechnologies.orient.core.db.record.ORecordTrackedList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordTrackedList.html">
+	c3093224 [label=<<table title="com.orientechnologies.orient.core.db.record.ORecordTrackedList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordTrackedList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordTrackedList </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordTrackedList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.db.record.ORecordLazyList
-	c3093250 [label=<<table title="com.orientechnologies.orient.core.db.record.ORecordLazyList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordLazyList.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORecordLazyList </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORecordLazyList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.db.record.ORecordTrackedList extends com.orientechnologies.orient.core.db.record.OTrackedList<com.orientechnologies.orient.core.db.record.OIdentifiable>
-	c3093223:p -> c3093227:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.db.record.ORecordLazyList extends com.orientechnologies.orient.core.db.record.ORecordTrackedList
-	c3093227:p -> c3093250:p [dir=back,arrowtail=empty];
+	c3093224:p -> c3093217:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.db.record.ORecordTrackedList extends com.orientechnologies.orient.core.db.record.OTrackedList<com.orientechnologies.orient.core.db.record.OIdentifiable>
+	c3093219:p -> c3093224:p [dir=back,arrowtail=empty];
 }
 

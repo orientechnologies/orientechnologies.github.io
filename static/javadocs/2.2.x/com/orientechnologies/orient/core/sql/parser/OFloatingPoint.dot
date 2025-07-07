@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.parser.ONumber
-	c1784888 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ONumber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONumber.html">
+	c1784929 [label=<<table title="com.orientechnologies.orient.core.sql.parser.ONumber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ONumber.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ONumber </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ONumber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.parser.OFloatingPoint
-	c1785022 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OFloatingPoint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFloatingPoint.html">
+	c1785040 [label=<<table title="com.orientechnologies.orient.core.sql.parser.OFloatingPoint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFloatingPoint.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OFloatingPoint </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OFloatingPoint.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.parser.OFloatingPoint extends com.orientechnologies.orient.core.sql.parser.ONumber
-	c1784888:p -> c1785022:p [dir=back,arrowtail=empty];
+	c1784929:p -> c1785040:p [dir=back,arrowtail=empty];
 }
 

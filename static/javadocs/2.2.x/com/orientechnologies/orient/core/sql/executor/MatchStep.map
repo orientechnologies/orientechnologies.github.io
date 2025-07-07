@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OptionalMatchStep.html" title="com.orientechnologies.orient.core.sql.executor.OptionalMatchStep" alt="" coords="27,209,171,234"/>
-<area shape="rect" id="node1" href="./OptionalMatchStep.html" title="&lt;TABLE&gt;" alt="" coords="17,197,182,245"/>
-<area shape="rect" id="node2_1" href="./MatchStep.html" title="com.orientechnologies.orient.core.sql.executor.MatchStep" alt="" coords="55,113,143,138"/>
-<area shape="rect" id="node2" href="./MatchStep.html" title="&lt;TABLE&gt;" alt="" coords="45,101,154,149"/>
-<area shape="rect" id="node3_2" href="./AbstractExecutionStep.html" title="com.orientechnologies.orient.core.sql.executor.AbstractExecutionStep" alt="" coords="16,17,183,42"/>
-<area shape="rect" id="node3" href="./AbstractExecutionStep.html" title="&lt;TABLE&gt;" alt="" coords="5,5,193,53"/>
-</map>

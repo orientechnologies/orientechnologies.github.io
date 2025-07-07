@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.lucene.collections.OLuceneAbstractResultSet
-	c2442595 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneAbstractResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneAbstractResultSet.html">
+	c2442592 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneAbstractResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLuceneAbstractResultSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OLuceneAbstractResultSet </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneAbstractResultSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.collections.OLuceneTxResultSet
-	c2442597 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneTxResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneTxResultSet.html">
+	c2442595 [label=<<table title="com.orientechnologies.lucene.collections.OLuceneTxResultSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneTxResultSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLuceneTxResultSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneTxResultSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.lucene.collections.OLuceneTxResultSet extends com.orientechnologies.lucene.collections.OLuceneAbstractResultSet
-	c2442595:p -> c2442597:p [dir=back,arrowtail=empty];
+	c2442592:p -> c2442595:p [dir=back,arrowtail=empty];
 }
 

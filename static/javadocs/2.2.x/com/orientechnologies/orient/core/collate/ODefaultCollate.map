@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../../common/comparator/ODefaultComparator.html" title="com.orientechnologies.common.comparator.ODefaultComparator" alt="" coords="16,19,171,45"/>
 <area shape="rect" id="node1" href="../../../common/comparator/ODefaultComparator.html" title="&lt;TABLE&gt;" alt="" coords="5,8,181,56"/>
-<area shape="rect" id="node2_1" href="./ODefaultCollate.html" title="com.orientechnologies.orient.core.collate.ODefaultCollate" alt="" coords="115,118,239,143"/>
-<area shape="rect" id="node2" href="./ODefaultCollate.html" title="&lt;TABLE&gt;" alt="" coords="105,107,250,155"/>
-<area shape="rect" id="node3_2" href="./OCollate.html" title="com.orientechnologies.orient.core.collate.OCollate" alt="" coords="216,11,309,53"/>
-<area shape="rect" id="node3" href="./OCollate.html" title="&lt;TABLE&gt;" alt="" coords="205,5,320,59"/>
+<area shape="rect" id="node3_1" href="./ODefaultCollate.html" title="com.orientechnologies.orient.core.collate.ODefaultCollate" alt="" coords="115,118,239,143"/>
+<area shape="rect" id="node3" href="./ODefaultCollate.html" title="&lt;TABLE&gt;" alt="" coords="105,107,250,155"/>
+<area shape="rect" id="node2_2" href="./OCollate.html" title="com.orientechnologies.orient.core.collate.OCollate" alt="" coords="216,11,309,53"/>
+<area shape="rect" id="node2" href="./OCollate.html" title="&lt;TABLE&gt;" alt="" coords="205,5,320,59"/>
 </map>

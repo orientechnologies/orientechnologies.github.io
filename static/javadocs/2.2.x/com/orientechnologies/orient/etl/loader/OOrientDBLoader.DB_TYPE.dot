@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.etl.loader.OOrientDBLoader.DB_TYPE
-	c2712959 [label=<<table title="com.orientechnologies.orient.etl.loader.OOrientDBLoader.DB_TYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OOrientDBLoader.DB_TYPE.html">
+	c2712955 [label=<<table title="com.orientechnologies.orient.etl.loader.OOrientDBLoader.DB_TYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OOrientDBLoader.DB_TYPE.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> DB_TYPE </td></tr>

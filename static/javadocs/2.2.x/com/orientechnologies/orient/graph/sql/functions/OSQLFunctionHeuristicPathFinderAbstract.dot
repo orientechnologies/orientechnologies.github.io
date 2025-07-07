@@ -10,26 +10,26 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract
-	c3347899 [label=<<table title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/functions/math/OSQLFunctionMathAbstract.html">
+	c3347895 [label=<<table title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/sql/functions/math/OSQLFunctionMathAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMathAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/sql/functions/math/OSQLFunctionMathAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar
-	c3348821 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionAstar.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionAstar </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionAstar.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract
-	c3348825 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionHeuristicPathFinderAbstract.html">
+	c3348811 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionHeuristicPathFinderAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionHeuristicPathFinderAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionHeuristicPathFinderAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract
-	c3348825:p -> c3348821:p [dir=back,arrowtail=empty];
+	// com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar
+	c3348814 [label=<<table title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionAstar.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionAstar </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionAstar.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract extends com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract
-	c3347899:p -> c3348825:p [dir=back,arrowtail=empty];
+	c3347895:p -> c3348811:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar extends com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract
+	c3348811:p -> c3348814:p [dir=back,arrowtail=empty];
 }
 

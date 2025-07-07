@@ -9,48 +9,48 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.stresstest.OStressTesterSettings
-	c310382 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTesterSettings" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStressTesterSettings.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OStressTesterSettings </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OStressTesterSettings.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.stresstest.OStressTester
-	c310383 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStressTester.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OStressTester </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OStressTester.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.stresstest.OStressTester.OMode
-	c310384 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTester.OMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStressTester.OMode.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> OMode </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OStressTester.OMode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.stresstest.OStressTesterCommandLineParser
-	c310385 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTesterCommandLineParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStressTesterCommandLineParser.html">
+	c310381 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTesterCommandLineParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStressTesterCommandLineParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStressTesterCommandLineParser </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStressTesterCommandLineParser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.stresstest.OConsoleProgressWriter
+	c310382 [label=<<table title="com.orientechnologies.orient.stresstest.OConsoleProgressWriter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleProgressWriter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OConsoleProgressWriter </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OConsoleProgressWriter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.stresstest.ODatabaseIdentifier
-	c310386 [label=<<table title="com.orientechnologies.orient.stresstest.ODatabaseIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseIdentifier.html">
+	c310383 [label=<<table title="com.orientechnologies.orient.stresstest.ODatabaseIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODatabaseIdentifier </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseIdentifier.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.stresstest.ODatabaseUtils
-	c310387 [label=<<table title="com.orientechnologies.orient.stresstest.ODatabaseUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseUtils.html">
+	c310384 [label=<<table title="com.orientechnologies.orient.stresstest.ODatabaseUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseUtils.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODatabaseUtils </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseUtils.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.stresstest.OConsoleProgressWriter
-	c310388 [label=<<table title="com.orientechnologies.orient.stresstest.OConsoleProgressWriter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConsoleProgressWriter.html">
+	// com.orientechnologies.orient.stresstest.OStressTesterSettings
+	c310385 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTesterSettings" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStressTesterSettings.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OConsoleProgressWriter </td></tr>
+<tr><td align="center" balign="center"> OStressTesterSettings </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OConsoleProgressWriter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OStressTesterSettings.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.stresstest.OStressTester
+	c310386 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStressTester.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OStressTester </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OStressTester.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.stresstest.OStressTester.OMode
+	c310387 [label=<<table title="com.orientechnologies.orient.stresstest.OStressTester.OMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStressTester.OMode.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> OMode </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OStressTester.OMode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./LongOperationId.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.LongOperationId" alt="" coords="16,112,143,155"/>
-<area shape="rect" id="node1" href="./LongOperationId.html" title="&lt;TABLE&gt;" alt="" coords="5,107,153,160"/>
-<area shape="rect" id="node2_1" href="./OperationIdRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OperationIdRecord" alt="" coords="95,11,266,53"/>
-<area shape="rect" id="node2" href="./OperationIdRecord.html" title="&lt;TABLE&gt;" alt="" coords="85,5,277,59"/>
-<area shape="rect" id="node3_2" href="./OperationUnitOperationId.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OperationUnitOperationId" alt="" coords="189,112,375,155"/>
-<area shape="rect" id="node3" href="./OperationUnitOperationId.html" title="&lt;TABLE&gt;" alt="" coords="178,107,386,160"/>
-</map>

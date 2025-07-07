@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OLocalRecordCacheFactory.html" title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactory" alt="" coords="30,11,226,53"/>
-<area shape="rect" id="node1" href="./OLocalRecordCacheFactory.html" title="&lt;TABLE&gt;" alt="" coords="19,5,237,59"/>
-<area shape="rect" id="node2_1" href="./OLocalRecordCacheFactoryImpl.html" title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactoryImpl" alt="" coords="16,118,240,143"/>
-<area shape="rect" id="node2" href="./OLocalRecordCacheFactoryImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,107,251,155"/>
+<area shape="rect" id="node1_0" href="./OLocalRecordCacheFactoryImpl.html" title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactoryImpl" alt="" coords="16,118,240,143"/>
+<area shape="rect" id="node1" href="./OLocalRecordCacheFactoryImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,107,251,155"/>
+<area shape="rect" id="node2_1" href="./OLocalRecordCacheFactory.html" title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactory" alt="" coords="30,11,226,53"/>
+<area shape="rect" id="node2" href="./OLocalRecordCacheFactory.html" title="&lt;TABLE&gt;" alt="" coords="19,5,237,59"/>
 </map>

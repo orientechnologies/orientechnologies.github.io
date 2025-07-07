@@ -10,37 +10,37 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.exception.OHighLevelException
-	c3574741 [label=<<table title="com.orientechnologies.common.exception.OHighLevelException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/exception/OHighLevelException.html">
+	c3574734 [label=<<table title="com.orientechnologies.common.exception.OHighLevelException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/exception/OHighLevelException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OHighLevelException </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../common/exception/OHighLevelException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.exception.OSchemaNotCreatedException
-	c3575826 [label=<<table title="com.orientechnologies.orient.core.exception.OSchemaNotCreatedException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSchemaNotCreatedException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSchemaNotCreatedException </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSchemaNotCreatedException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OCoreException
-	c3575827 [label=<<table title="com.orientechnologies.orient.core.exception.OCoreException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCoreException.html">
+	c3575818 [label=<<table title="com.orientechnologies.orient.core.exception.OCoreException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCoreException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCoreException </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCoreException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OSchemaException
-	c3575863 [label=<<table title="com.orientechnologies.orient.core.exception.OSchemaException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSchemaException.html">
+	c3575819 [label=<<table title="com.orientechnologies.orient.core.exception.OSchemaException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSchemaException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSchemaException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSchemaException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.exception.OSchemaNotCreatedException extends com.orientechnologies.orient.core.exception.OSchemaException
-	c3575863:p -> c3575826:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.exception.OSchemaNotCreatedException implements com.orientechnologies.common.exception.OHighLevelException
-	c3574741:p -> c3575826:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.orient.core.exception.OSchemaNotCreatedException
+	c3575829 [label=<<table title="com.orientechnologies.orient.core.exception.OSchemaNotCreatedException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSchemaNotCreatedException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSchemaNotCreatedException </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSchemaNotCreatedException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.exception.OSchemaException extends com.orientechnologies.orient.core.exception.OCoreException
-	c3575827:p -> c3575863:p [dir=back,arrowtail=empty];
+	c3575818:p -> c3575819:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.exception.OSchemaException implements com.orientechnologies.common.exception.OHighLevelException
-	c3574741:p -> c3575863:p [dir=back,arrowtail=empty,style=dashed];
+	c3574734:p -> c3575819:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.exception.OSchemaNotCreatedException extends com.orientechnologies.orient.core.exception.OSchemaException
+	c3575819:p -> c3575829:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.exception.OSchemaNotCreatedException implements com.orientechnologies.common.exception.OHighLevelException
+	c3574734:p -> c3575829:p [dir=back,arrowtail=empty,style=dashed];
 }
 

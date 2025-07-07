@@ -1,10 +1,10 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../../common/exception/OSystemException.html" title="com.orientechnologies.common.exception.OSystemException" alt="" coords="507,17,650,42"/>
 <area shape="rect" id="node1" href="../../../common/exception/OSystemException.html" title="&lt;TABLE&gt;" alt="" coords="497,5,661,53"/>
-<area shape="rect" id="node2_1" href="./ODistributedException.html" title="com.orientechnologies.orient.server.distributed.ODistributedException" alt="" coords="496,113,661,138"/>
-<area shape="rect" id="node2" href="./ODistributedException.html" title="&lt;TABLE&gt;" alt="" coords="485,101,672,149"/>
-<area shape="rect" id="node3_2" href="./OWriteOperationNotPermittedException.html" title="com.orientechnologies.orient.server.distributed.OWriteOperationNotPermittedException" alt="" coords="16,209,296,234"/>
-<area shape="rect" id="node3" href="./OWriteOperationNotPermittedException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,307,245"/>
+<area shape="rect" id="node3_1" href="./ODistributedException.html" title="com.orientechnologies.orient.server.distributed.ODistributedException" alt="" coords="496,113,661,138"/>
+<area shape="rect" id="node3" href="./ODistributedException.html" title="&lt;TABLE&gt;" alt="" coords="485,101,672,149"/>
+<area shape="rect" id="node2_2" href="./OWriteOperationNotPermittedException.html" title="com.orientechnologies.orient.server.distributed.OWriteOperationNotPermittedException" alt="" coords="16,209,296,234"/>
+<area shape="rect" id="node2" href="./OWriteOperationNotPermittedException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,307,245"/>
 <area shape="rect" id="node4_3" href="./task/ODatabaseIsOldException.html" title="com.orientechnologies.orient.server.distributed.task.ODatabaseIsOldException" alt="" coords="342,209,530,234"/>
 <area shape="rect" id="node4" href="./task/ODatabaseIsOldException.html" title="&lt;TABLE&gt;" alt="" coords="331,197,541,245"/>
 <area shape="rect" id="node5_4" href="./task/ODistributedDatabaseDeltaSyncException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedDatabaseDeltaSyncException" alt="" coords="576,209,869,234"/>

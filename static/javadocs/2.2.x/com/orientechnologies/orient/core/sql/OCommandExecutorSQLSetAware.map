@@ -1,18 +1,18 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OCommandExecutorSQLSetAware.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLSetAware" alt="" coords="746,113,986,138"/>
-<area shape="rect" id="node1" href="./OCommandExecutorSQLSetAware.html" title="&lt;TABLE&gt;" alt="" coords="735,101,997,149"/>
-<area shape="rect" id="node2_1" href="./OCommandExecutorSQLRetryAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLRetryAbstract" alt="" coords="16,209,284,234"/>
-<area shape="rect" id="node2" href="./OCommandExecutorSQLRetryAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,197,295,245"/>
-<area shape="rect" id="node3_2" href="./OCommandExecutorSQLInsert.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLInsert" alt="" coords="329,209,544,234"/>
-<area shape="rect" id="node3" href="./OCommandExecutorSQLInsert.html" title="&lt;TABLE&gt;" alt="" coords="319,197,555,245"/>
-<area shape="rect" id="node5_3" href="../../graph/sql/OCommandExecutorSQLCreateEdge.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateEdge" alt="" coords="589,209,841,234"/>
-<area shape="rect" id="node5" href="../../graph/sql/OCommandExecutorSQLCreateEdge.html" title="&lt;TABLE&gt;" alt="" coords="579,197,852,245"/>
-<area shape="rect" id="node6_4" href="../../graph/sql/OCommandExecutorSQLCreateVertex.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateVertex" alt="" coords="887,209,1149,234"/>
-<area shape="rect" id="node6" href="../../graph/sql/OCommandExecutorSQLCreateVertex.html" title="&lt;TABLE&gt;" alt="" coords="876,197,1160,245"/>
-<area shape="rect" id="node7_5" href="../../graph/sql/OCommandExecutorSQLMoveVertex.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex" alt="" coords="1195,209,1451,234"/>
-<area shape="rect" id="node7" href="../../graph/sql/OCommandExecutorSQLMoveVertex.html" title="&lt;TABLE&gt;" alt="" coords="1185,197,1462,245"/>
-<area shape="rect" id="node8_6" href="../../graph/sql/OCommandExecutorSQLDeleteEdge.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteEdge" alt="" coords="1497,209,1749,234"/>
-<area shape="rect" id="node8" href="../../graph/sql/OCommandExecutorSQLDeleteEdge.html" title="&lt;TABLE&gt;" alt="" coords="1487,197,1760,245"/>
-<area shape="rect" id="node4_7" href="./OCommandExecutorSQLAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" alt="" coords="750,17,982,42"/>
-<area shape="rect" id="node4" href="./OCommandExecutorSQLAbstract.html" title="&lt;TABLE&gt;" alt="" coords="739,5,993,53"/>
+<area shape="rect" id="node1_0" href="./OCommandExecutorSQLInsert.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLInsert" alt="" coords="16,209,231,234"/>
+<area shape="rect" id="node1" href="./OCommandExecutorSQLInsert.html" title="&lt;TABLE&gt;" alt="" coords="5,197,241,245"/>
+<area shape="rect" id="node2_1" href="./OCommandExecutorSQLRetryAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLRetryAbstract" alt="" coords="276,209,544,234"/>
+<area shape="rect" id="node2" href="./OCommandExecutorSQLRetryAbstract.html" title="&lt;TABLE&gt;" alt="" coords="265,197,555,245"/>
+<area shape="rect" id="node3_2" href="./OCommandExecutorSQLAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" alt="" coords="749,17,981,42"/>
+<area shape="rect" id="node3" href="./OCommandExecutorSQLAbstract.html" title="&lt;TABLE&gt;" alt="" coords="738,5,991,53"/>
+<area shape="rect" id="node4_3" href="./OCommandExecutorSQLSetAware.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLSetAware" alt="" coords="745,113,985,138"/>
+<area shape="rect" id="node4" href="./OCommandExecutorSQLSetAware.html" title="&lt;TABLE&gt;" alt="" coords="734,101,995,149"/>
+<area shape="rect" id="node5_4" href="../../graph/sql/OCommandExecutorSQLDeleteEdge.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteEdge" alt="" coords="589,209,841,234"/>
+<area shape="rect" id="node5" href="../../graph/sql/OCommandExecutorSQLDeleteEdge.html" title="&lt;TABLE&gt;" alt="" coords="579,197,852,245"/>
+<area shape="rect" id="node6_5" href="../../graph/sql/OCommandExecutorSQLMoveVertex.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLMoveVertex" alt="" coords="887,209,1143,234"/>
+<area shape="rect" id="node6" href="../../graph/sql/OCommandExecutorSQLMoveVertex.html" title="&lt;TABLE&gt;" alt="" coords="877,197,1154,245"/>
+<area shape="rect" id="node7_6" href="../../graph/sql/OCommandExecutorSQLCreateVertex.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateVertex" alt="" coords="1189,209,1452,234"/>
+<area shape="rect" id="node7" href="../../graph/sql/OCommandExecutorSQLCreateVertex.html" title="&lt;TABLE&gt;" alt="" coords="1179,197,1463,245"/>
+<area shape="rect" id="node8_7" href="../../graph/sql/OCommandExecutorSQLCreateEdge.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLCreateEdge" alt="" coords="1497,209,1749,234"/>
+<area shape="rect" id="node8" href="../../graph/sql/OCommandExecutorSQLCreateEdge.html" title="&lt;TABLE&gt;" alt="" coords="1487,197,1760,245"/>
 </map>

@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c2311010 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/metadata/schema/clusterselection/OClusterSelectionStrategy.html">
+	c2311006 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../core/metadata/schema/clusterselection/OClusterSelectionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OClusterSelectionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../core/metadata/schema/clusterselection/OClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy
-	c2312445 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLocalClusterWrapperStrategy.html">
+	c2312460 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLocalClusterWrapperStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLocalClusterWrapperStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLocalClusterWrapperStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c2311010:p -> c2312445:p [dir=back,arrowtail=empty,style=dashed];
+	c2311006:p -> c2312460:p [dir=back,arrowtail=empty,style=dashed];
 }
 

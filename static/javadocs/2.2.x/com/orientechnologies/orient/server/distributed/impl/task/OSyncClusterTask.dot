@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask
-	c4130992 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractReplicatedTask.html">
+	c4130983 [label=<<table title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../task/OAbstractReplicatedTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractReplicatedTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../task/OAbstractReplicatedTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OSyncClusterTask
-	c4131262 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OSyncClusterTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSyncClusterTask.html">
+	c4131240 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OSyncClusterTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSyncClusterTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSyncClusterTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSyncClusterTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.OSyncClusterTask extends com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask
-	c4130992:p -> c4131262:p [dir=back,arrowtail=empty];
+	c4130983:p -> c4131240:p [dir=back,arrowtail=empty];
 }
 

@@ -9,27 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.tx.OTransactionOptimistic
-	c4228302 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionOptimistic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OTransactionOptimistic.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OTransactionOptimistic </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OTransactionOptimistic.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.tx.OTransactionRealAbstract
-	c4228303 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionRealAbstract.html">
+	c4228291 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OTransactionRealAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OTransactionRealAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTransactionRealAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.tx.OTransactionOptimistic
+	c4228293 [label=<<table title="com.orientechnologies.orient.core.tx.OTransactionOptimistic" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OTransactionOptimistic.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OTransactionOptimistic </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OTransactionOptimistic.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.tx.OTransactionOptimisticProxy
-	c4228657 [label=<<table title="com.orientechnologies.orient.server.tx.OTransactionOptimisticProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../server/tx/OTransactionOptimisticProxy.html">
+	c4228650 [label=<<table title="com.orientechnologies.orient.server.tx.OTransactionOptimisticProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../server/tx/OTransactionOptimisticProxy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTransactionOptimisticProxy </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../server/tx/OTransactionOptimisticProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.tx.OTransactionOptimistic extends com.orientechnologies.orient.core.tx.OTransactionRealAbstract
-	c4228303:p -> c4228302:p [dir=back,arrowtail=empty];
+	c4228291:p -> c4228293:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.tx.OTransactionOptimisticProxy extends com.orientechnologies.orient.core.tx.OTransactionOptimistic
-	c4228302:p -> c4228657:p [dir=back,arrowtail=empty];
+	c4228293:p -> c4228650:p [dir=back,arrowtail=empty];
 }
 

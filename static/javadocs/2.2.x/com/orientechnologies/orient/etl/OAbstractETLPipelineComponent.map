@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OAbstractETLComponent.html" title="com.orientechnologies.orient.etl.OAbstractETLComponent" alt="" coords="16,19,197,45"/>
-<area shape="rect" id="node1" href="./OAbstractETLComponent.html" title="&lt;TABLE&gt;" alt="" coords="5,8,208,56"/>
-<area shape="rect" id="node2_1" href="./OAbstractETLPipelineComponent.html" title="com.orientechnologies.orient.etl.OAbstractETLPipelineComponent" alt="" coords="103,118,337,143"/>
-<area shape="rect" id="node2" href="./OAbstractETLPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="93,107,347,155"/>
-<area shape="rect" id="node4_2" href="./transformer/OAbstractTransformer.html" title="com.orientechnologies.orient.etl.transformer.OAbstractTransformer" alt="" coords="139,214,301,239"/>
-<area shape="rect" id="node4" href="./transformer/OAbstractTransformer.html" title="&lt;TABLE&gt;" alt="" coords="128,203,312,251"/>
-<area shape="rect" id="node3_3" href="./OETLPipelineComponent.html" title="com.orientechnologies.orient.etl.OETLPipelineComponent" alt="" coords="243,11,423,53"/>
-<area shape="rect" id="node3" href="./OETLPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="233,5,434,59"/>
+<area shape="rect" id="node1_0" href="./OETLPipelineComponent.html" title="com.orientechnologies.orient.etl.OETLPipelineComponent" alt="" coords="16,11,196,53"/>
+<area shape="rect" id="node1" href="./OETLPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="5,5,207,59"/>
+<area shape="rect" id="node3_1" href="./OAbstractETLPipelineComponent.html" title="com.orientechnologies.orient.etl.OAbstractETLPipelineComponent" alt="" coords="103,118,336,143"/>
+<area shape="rect" id="node3" href="./OAbstractETLPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="92,107,347,155"/>
+<area shape="rect" id="node2_2" href="./OAbstractETLComponent.html" title="com.orientechnologies.orient.etl.OAbstractETLComponent" alt="" coords="242,19,423,45"/>
+<area shape="rect" id="node2" href="./OAbstractETLComponent.html" title="&lt;TABLE&gt;" alt="" coords="231,8,434,56"/>
+<area shape="rect" id="node4_3" href="./transformer/OAbstractTransformer.html" title="com.orientechnologies.orient.etl.transformer.OAbstractTransformer" alt="" coords="138,214,301,239"/>
+<area shape="rect" id="node4" href="./transformer/OAbstractTransformer.html" title="&lt;TABLE&gt;" alt="" coords="127,203,311,251"/>
 </map>

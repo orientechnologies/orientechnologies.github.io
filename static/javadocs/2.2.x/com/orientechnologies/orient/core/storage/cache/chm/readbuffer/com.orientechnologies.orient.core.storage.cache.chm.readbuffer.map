@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Buffer.html" title="com.orientechnologies.orient.core.storage.cache.chm.readbuffer.Buffer" alt="" coords="16,11,109,53"/>
-<area shape="rect" id="node1" href="./Buffer.html" title="&lt;TABLE&gt;" alt="" coords="5,5,120,59"/>
-<area shape="rect" id="node2_1" href="./BoundedBuffer.html" title="com.orientechnologies.orient.core.storage.cache.chm.readbuffer.BoundedBuffer" alt="" coords="150,118,295,143"/>
-<area shape="rect" id="node2" href="./BoundedBuffer.html" title="&lt;TABLE&gt;" alt="" coords="139,107,306,155"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/com/orientechnologies/orient/core/storage/cache/chm/readbuffer/StripedBuffer.html" title="com.orientechnologies.orient.core.storage.cache.chm.readbuffer.StripedBuffer" alt="" coords="155,19,291,45"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/com/orientechnologies/orient/core/storage/cache/chm/readbuffer/StripedBuffer.html" title="&lt;TABLE&gt;" alt="" coords="144,8,301,56"/>
-</map>

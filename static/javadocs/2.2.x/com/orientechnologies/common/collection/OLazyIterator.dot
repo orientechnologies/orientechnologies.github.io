@@ -10,40 +10,40 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.collection.OLazyIteratorListWrapper<T>
-	c2241559 [label=<<table title="com.orientechnologies.common.collection.OLazyIteratorListWrapper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLazyIteratorListWrapper.html">
+	c2241557 [label=<<table title="com.orientechnologies.common.collection.OLazyIteratorListWrapper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLazyIteratorListWrapper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLazyIteratorListWrapper&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLazyIteratorListWrapper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.collection.OLazyIterator<T>
-	c2241561 [label=<<table title="com.orientechnologies.common.collection.OLazyIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLazyIterator.html">
+	c2241560 [label=<<table title="com.orientechnologies.common.collection.OLazyIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLazyIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OLazyIterator&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLazyIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator
-	c2241730 [label=<<table title="com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/OLazyRecordMultiIterator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLazyRecordMultiIterator </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../orient/core/db/record/OLazyRecordMultiIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.OLazyRecordIterator
-	c2241751 [label=<<table title="com.orientechnologies.orient.core.db.record.OLazyRecordIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/OLazyRecordIterator.html">
+	c2241732 [label=<<table title="com.orientechnologies.orient.core.db.record.OLazyRecordIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/OLazyRecordIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLazyRecordIterator </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../orient/core/db/record/OLazyRecordIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator
+	c2241753 [label=<<table title="com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../orient/core/db/record/OLazyRecordMultiIterator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLazyRecordMultiIterator </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../orient/core/db/record/OLazyRecordMultiIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.collection.OLazyIteratorListWrapper<T> implements com.orientechnologies.common.collection.OLazyIterator<T>
-	c2241561:p -> c2241559:p [dir=back,arrowtail=empty,style=dashed];
+	c2241560:p -> c2241557:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.common.collection.OLazyIterator<T> implements java.util.Iterator<E>
-	c2243539:p -> c2241561:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator implements com.orientechnologies.common.collection.OLazyIterator<T>
-	c2241561:p -> c2241730:p [dir=back,arrowtail=empty,style=dashed];
+	c2243535:p -> c2241560:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.record.OLazyRecordIterator implements com.orientechnologies.common.collection.OLazyIterator<T>
-	c2241561:p -> c2241751:p [dir=back,arrowtail=empty,style=dashed];
+	c2241560:p -> c2241732:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator implements com.orientechnologies.common.collection.OLazyIterator<T>
+	c2241560:p -> c2241753:p [dir=back,arrowtail=empty,style=dashed];
 	// java.util.Iterator<E>
-	c2243539 [label=<<table title="java.util.Iterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html">
+	c2243535 [label=<<table title="java.util.Iterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Iterator&lt;E&gt; </td></tr>

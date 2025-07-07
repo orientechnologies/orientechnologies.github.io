@@ -9,28 +9,28 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener
+	c2303409 [label=<<table title="com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLocalLiveResultListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLocalLiveResultListener </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLocalLiveResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.query.OLiveResultListener
-	c2303415 [label=<<table title="com.orientechnologies.orient.core.sql.query.OLiveResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLiveResultListener.html">
+	c2303412 [label=<<table title="com.orientechnologies.orient.core.sql.query.OLiveResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLiveResultListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OLiveResultListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLiveResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener
-	c2303419 [label=<<table title="com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLocalLiveResultListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLocalLiveResultListener </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLocalLiveResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.binary.OLiveCommandResultListener
-	c2304207 [label=<<table title="com.orientechnologies.orient.server.network.protocol.binary.OLiveCommandResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../server/network/protocol/binary/OLiveCommandResultListener.html">
+	c2304201 [label=<<table title="com.orientechnologies.orient.server.network.protocol.binary.OLiveCommandResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../server/network/protocol/binary/OLiveCommandResultListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLiveCommandResultListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../server/network/protocol/binary/OLiveCommandResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener implements com.orientechnologies.orient.core.sql.query.OLiveResultListener
-	c2303415:p -> c2303419:p [dir=back,arrowtail=empty,style=dashed];
+	c2303412:p -> c2303409:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.server.network.protocol.binary.OLiveCommandResultListener implements com.orientechnologies.orient.core.sql.query.OLiveResultListener
-	c2303415:p -> c2304207:p [dir=back,arrowtail=empty,style=dashed];
+	c2303412:p -> c2304201:p [dir=back,arrowtail=empty,style=dashed];
 }
 

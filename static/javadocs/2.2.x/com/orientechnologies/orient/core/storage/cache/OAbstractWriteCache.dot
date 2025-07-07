@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache
-	c576288 [label=<<table title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../impl/memory/ODirectMemoryOnlyDiskCache.html">
+	c576286 [label=<<table title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../impl/memory/ODirectMemoryOnlyDiskCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODirectMemoryOnlyDiskCache </td></tr>
 		</table></td></tr>
@@ -22,14 +22,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OAbstractWriteCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.cache.local.OWOWCache
-	c576304 [label=<<table title="com.orientechnologies.orient.core.storage.cache.local.OWOWCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./local/OWOWCache.html">
+	c576300 [label=<<table title="com.orientechnologies.orient.core.storage.cache.local.OWOWCache" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./local/OWOWCache.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OWOWCache </td></tr>
 		</table></td></tr>
 		</table>>, URL="./local/OWOWCache.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache extends com.orientechnologies.orient.core.storage.cache.OAbstractWriteCache
-	c576293:p -> c576288:p [dir=back,arrowtail=empty];
+	c576293:p -> c576286:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.storage.cache.local.OWOWCache extends com.orientechnologies.orient.core.storage.cache.OAbstractWriteCache
-	c576293:p -> c576304:p [dir=back,arrowtail=empty];
+	c576293:p -> c576300:p [dir=back,arrowtail=empty];
 }
 

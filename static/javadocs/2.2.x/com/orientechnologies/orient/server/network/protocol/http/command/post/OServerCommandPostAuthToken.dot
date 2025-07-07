@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract
-	c3781530 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAbstract.html">
+	c3781528 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostAuthToken
-	c3781546 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostAuthToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPostAuthToken.html">
+	c3781545 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostAuthToken" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandPostAuthToken.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandPostAuthToken </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandPostAuthToken.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostAuthToken extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract
-	c3781530:p -> c3781546:p [dir=back,arrowtail=empty];
+	c3781528:p -> c3781545:p [dir=back,arrowtail=empty];
 }
 

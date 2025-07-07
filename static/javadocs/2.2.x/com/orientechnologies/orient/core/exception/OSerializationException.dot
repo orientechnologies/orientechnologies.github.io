@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.exception.OCoreException
-	c3679464 [label=<<table title="com.orientechnologies.orient.core.exception.OCoreException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCoreException.html">
+	c3679455 [label=<<table title="com.orientechnologies.orient.core.exception.OCoreException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCoreException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCoreException </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCoreException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OSerializationException
-	c3679502 [label=<<table title="com.orientechnologies.orient.core.exception.OSerializationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSerializationException.html">
+	c3679459 [label=<<table title="com.orientechnologies.orient.core.exception.OSerializationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSerializationException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSerializationException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSerializationException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.exception.OSerializationException extends com.orientechnologies.orient.core.exception.OCoreException
-	c3679464:p -> c3679502:p [dir=back,arrowtail=empty];
+	c3679455:p -> c3679459:p [dir=back,arrowtail=empty];
 }
 

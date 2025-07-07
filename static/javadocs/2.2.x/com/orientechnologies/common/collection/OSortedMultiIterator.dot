@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.collection.OSortedMultiIterator<T extends com.orientechnologies.orient.core.db.record.OIdentifiable>
-	c3970913 [label=<<table title="com.orientechnologies.common.collection.OSortedMultiIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSortedMultiIterator.html">
+	c3970906 [label=<<table title="com.orientechnologies.common.collection.OSortedMultiIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSortedMultiIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSortedMultiIterator&lt;T extends OIdentifiable&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSortedMultiIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.collection.OSortedMultiIterator<T extends com.orientechnologies.orient.core.db.record.OIdentifiable> implements java.util.Iterator<E>
-	c3972894:p -> c3970913:p [dir=back,arrowtail=empty,style=dashed];
+	c3972888:p -> c3970906:p [dir=back,arrowtail=empty,style=dashed];
 	// java.util.Iterator<E>
-	c3972894 [label=<<table title="java.util.Iterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html">
+	c3972888 [label=<<table title="java.util.Iterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Iterator&lt;E&gt; </td></tr>

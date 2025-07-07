@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALPage
-	c4364138 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALPage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OWALPage.html">
+	c4364136 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALPage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OWALPage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OWALPage </td></tr>
@@ -23,6 +23,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OWALPageV1.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALPageV1 implements com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALPage
-	c4364138:p -> c4364141:p [dir=back,arrowtail=empty,style=dashed];
+	c4364136:p -> c4364141:p [dir=back,arrowtail=empty,style=dashed];
 }
 

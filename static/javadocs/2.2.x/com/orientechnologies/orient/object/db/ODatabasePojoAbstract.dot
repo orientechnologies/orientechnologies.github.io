@@ -9,15 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
-	c1373977 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseSchemaAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/ODatabaseSchemaAware.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ODatabaseSchemaAware&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../core/db/ODatabaseSchemaAware.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.ODatabaseWrapperAbstract<DB extends com.orientechnologies.orient.core.db.ODatabaseInternal, T>
-	c1373991 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseWrapperAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/ODatabaseWrapperAbstract.html">
+	c1373978 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseWrapperAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/ODatabaseWrapperAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODatabaseWrapperAbstract&lt;DB extends ODatabaseInternal, T&gt; </font></td></tr>
 		</table></td></tr>
@@ -29,29 +22,36 @@ digraph G {
 <tr><td align="center" balign="center"> ODatabaseInternal&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/db/ODatabaseInternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.object.db.ODatabasePojoAbstract<T>
-	c1375235 [label=<<table title="com.orientechnologies.orient.object.db.ODatabasePojoAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabasePojoAbstract.html">
+	// com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
+	c1373998 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseSchemaAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/db/ODatabaseSchemaAware.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODatabasePojoAbstract&lt;T&gt; </font></td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ODatabaseSchemaAware&lt;T&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ODatabasePojoAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../../core/db/ODatabaseSchemaAware.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.db.OObjectDatabaseTx
-	c1375239 [label=<<table title="com.orientechnologies.orient.object.db.OObjectDatabaseTx" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectDatabaseTx.html">
+	c1375241 [label=<<table title="com.orientechnologies.orient.object.db.OObjectDatabaseTx" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectDatabaseTx.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectDatabaseTx </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectDatabaseTx.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.object.db.ODatabasePojoAbstract<T>
+	c1375245 [label=<<table title="com.orientechnologies.orient.object.db.ODatabasePojoAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabasePojoAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODatabasePojoAbstract&lt;T&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODatabasePojoAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.ODatabaseWrapperAbstract<DB extends com.orientechnologies.orient.core.db.ODatabaseInternal, T> implements com.orientechnologies.orient.core.db.ODatabaseInternal<T>
-	c1373994:p -> c1373991:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.object.db.ODatabasePojoAbstract<T> extends com.orientechnologies.orient.core.db.ODatabaseWrapperAbstract<com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx, T>
-	c1373991:p -> c1375235:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.object.db.ODatabasePojoAbstract<T> implements com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
-	c1373977:p -> c1375235:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.object.db.ODatabasePojoAbstract<T> implements com.orientechnologies.orient.core.db.ODatabaseInternal<T>
-	c1373994:p -> c1375235:p [dir=back,arrowtail=empty,style=dashed];
+	c1373994:p -> c1373978:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.object.db.OObjectDatabaseTx extends com.orientechnologies.orient.object.db.ODatabasePojoAbstract<java.lang.Object>
-	c1375235:p -> c1375239:p [dir=back,arrowtail=empty];
+	c1375245:p -> c1375241:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.object.db.OObjectDatabaseTx implements com.orientechnologies.orient.core.db.ODatabaseInternal<T>
-	c1373994:p -> c1375239:p [dir=back,arrowtail=empty,style=dashed];
+	c1373994:p -> c1375241:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.object.db.ODatabasePojoAbstract<T> extends com.orientechnologies.orient.core.db.ODatabaseWrapperAbstract<com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx, T>
+	c1373978:p -> c1375245:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.object.db.ODatabasePojoAbstract<T> implements com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
+	c1373998:p -> c1375245:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.object.db.ODatabasePojoAbstract<T> implements com.orientechnologies.orient.core.db.ODatabaseInternal<T>
+	c1373994:p -> c1375245:p [dir=back,arrowtail=empty,style=dashed];
 }
 

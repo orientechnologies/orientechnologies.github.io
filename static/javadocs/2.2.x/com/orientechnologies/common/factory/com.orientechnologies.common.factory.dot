@@ -9,17 +9,17 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.common.factory.OConfigurableStatelessFactory<K, V>
-	c46903 [label=<<table title="com.orientechnologies.common.factory.OConfigurableStatelessFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConfigurableStatelessFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OConfigurableStatelessFactory&lt;K, V&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OConfigurableStatelessFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.factory.OConfigurableStatefulFactory<K, V>
-	c46904 [label=<<table title="com.orientechnologies.common.factory.OConfigurableStatefulFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConfigurableStatefulFactory.html">
+	c46903 [label=<<table title="com.orientechnologies.common.factory.OConfigurableStatefulFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConfigurableStatefulFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OConfigurableStatefulFactory&lt;K, V&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OConfigurableStatefulFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.factory.OConfigurableStatelessFactory<K, V>
+	c46904 [label=<<table title="com.orientechnologies.common.factory.OConfigurableStatelessFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OConfigurableStatelessFactory.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OConfigurableStatelessFactory&lt;K, V&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OConfigurableStatelessFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

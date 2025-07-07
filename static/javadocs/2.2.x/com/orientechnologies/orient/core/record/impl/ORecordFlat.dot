@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.record.impl.ORecordFlat
-	c2993741 [label=<<table title="com.orientechnologies.orient.core.record.impl.ORecordFlat" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordFlat.html">
+	c2993729 [label=<<table title="com.orientechnologies.orient.core.record.impl.ORecordFlat" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordFlat.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordFlat </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordFlat.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.record.ORecordAbstract
-	c2993749 [label=<<table title="com.orientechnologies.orient.core.record.ORecordAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ORecordAbstract.html">
+	c2993744 [label=<<table title="com.orientechnologies.orient.core.record.ORecordAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ORecordAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../ORecordAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.record.ORecordStringable
-	c2993752 [label=<<table title="com.orientechnologies.orient.core.record.ORecordStringable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ORecordStringable.html">
+	c2993746 [label=<<table title="com.orientechnologies.orient.core.record.ORecordStringable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ORecordStringable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORecordStringable </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ORecordStringable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.record.impl.ORecordFlat extends com.orientechnologies.orient.core.record.ORecordAbstract
-	c2993749:p -> c2993741:p [dir=back,arrowtail=empty];
+	c2993744:p -> c2993729:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.record.impl.ORecordFlat implements com.orientechnologies.orient.core.record.ORecordStringable
-	c2993752:p -> c2993741:p [dir=back,arrowtail=empty,style=dashed];
+	c2993746:p -> c2993729:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.stresstest.ODatabaseIdentifier
-	c1350919 [label=<<table title="com.orientechnologies.orient.stresstest.ODatabaseIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseIdentifier.html">
+	c1350915 [label=<<table title="com.orientechnologies.orient.stresstest.ODatabaseIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseIdentifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODatabaseIdentifier </td></tr>
 		</table></td></tr>

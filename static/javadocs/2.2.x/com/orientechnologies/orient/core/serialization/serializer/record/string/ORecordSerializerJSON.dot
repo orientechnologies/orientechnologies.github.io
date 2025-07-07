@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON
-	c3075688 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializerJSON.html">
+	c3075683 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializerJSON.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordSerializerJSON </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordSerializerJSON.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract
-	c3075691 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordSerializerStringAbstract.html">
+	c3075687 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORecordSerializerStringAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ORecordSerializerStringAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordSerializerStringAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerJSON extends com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract
-	c3075691:p -> c3075688:p [dir=back,arrowtail=empty];
+	c3075687:p -> c3075683:p [dir=back,arrowtail=empty];
 }
 

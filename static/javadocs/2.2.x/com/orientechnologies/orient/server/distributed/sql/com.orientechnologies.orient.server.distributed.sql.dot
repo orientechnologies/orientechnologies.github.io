@@ -9,12 +9,18 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer
-	c404241 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLHARemoveServer.html">
+	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHAStatus
+	c404240 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHAStatus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLHAStatus.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLHARemoveServer </td></tr>
+<tr><td align="center" balign="center"> OCommandExecutorSQLHAStatus </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLHARemoveServer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OCommandExecutorSQLHAStatus.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster
+	c404241 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLHASyncCluster.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCommandExecutorSQLHASyncCluster </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandExecutorSQLHASyncCluster.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.sql.ODistributedCommandExecutorSQLFactory
 	c404242 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.ODistributedCommandExecutorSQLFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedCommandExecutorSQLFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -27,17 +33,11 @@ digraph G {
 <tr><td align="center" balign="center"> OCommandExecutorSQLHASyncDatabase </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandExecutorSQLHASyncDatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster
-	c404244 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHASyncCluster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLHASyncCluster.html">
+	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer
+	c404244 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHARemoveServer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLHARemoveServer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLHASyncCluster </td></tr>
+<tr><td align="center" balign="center"> OCommandExecutorSQLHARemoveServer </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLHASyncCluster.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHAStatus
-	c404245 [label=<<table title="com.orientechnologies.orient.server.distributed.sql.OCommandExecutorSQLHAStatus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorSQLHAStatus.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorSQLHAStatus </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandExecutorSQLHAStatus.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OCommandExecutorSQLHARemoveServer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

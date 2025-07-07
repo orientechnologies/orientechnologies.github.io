@@ -10,54 +10,54 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.concur.resource.OCloseable
-	c3582780 [label=<<table title="com.orientechnologies.common.concur.resource.OCloseable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/resource/OCloseable.html">
+	c3582766 [label=<<table title="com.orientechnologies.common.concur.resource.OCloseable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/concur/resource/OCloseable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCloseable </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../common/concur/resource/OCloseable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.OOrientStartupListener
-	c3582912 [label=<<table title="com.orientechnologies.orient.core.OOrientStartupListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../OOrientStartupListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OOrientStartupListener </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../OOrientStartupListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.OOrientShutdownListener
-	c3582921 [label=<<table title="com.orientechnologies.orient.core.OOrientShutdownListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../OOrientShutdownListener.html">
+	c3582915 [label=<<table title="com.orientechnologies.orient.core.OOrientShutdownListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../OOrientShutdownListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OOrientShutdownListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../OOrientShutdownListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.OOrientStartupListener
+	c3582916 [label=<<table title="com.orientechnologies.orient.core.OOrientStartupListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../OOrientStartupListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OOrientStartupListener </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../OOrientStartupListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.OSchema
-	c3583145 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSchema.html">
+	c3583138 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSchema.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSchema </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSchema.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.OSchemaShared
-	c3583146 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSchemaShared.html">
+	c3583143 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSchemaShared.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSchemaShared </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSchemaShared.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.type.ODocumentWrapperNoClass
-	c3583231 [label=<<table title="com.orientechnologies.orient.core.type.ODocumentWrapperNoClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../type/ODocumentWrapperNoClass.html">
+	c3583225 [label=<<table title="com.orientechnologies.orient.core.type.ODocumentWrapperNoClass" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../type/ODocumentWrapperNoClass.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODocumentWrapperNoClass </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../type/ODocumentWrapperNoClass.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.schema.OSchemaShared extends com.orientechnologies.orient.core.type.ODocumentWrapperNoClass
-	c3583231:p -> c3583146:p [dir=back,arrowtail=empty];
+	c3583225:p -> c3583143:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.metadata.schema.OSchemaShared implements com.orientechnologies.orient.core.metadata.schema.OSchema
-	c3583145:p -> c3583146:p [dir=back,arrowtail=empty,style=dashed];
+	c3583138:p -> c3583143:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.schema.OSchemaShared implements com.orientechnologies.common.concur.resource.OCloseable
-	c3582780:p -> c3583146:p [dir=back,arrowtail=empty,style=dashed];
+	c3582766:p -> c3583143:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.schema.OSchemaShared implements com.orientechnologies.orient.core.OOrientStartupListener
-	c3582912:p -> c3583146:p [dir=back,arrowtail=empty,style=dashed];
+	c3582916:p -> c3583143:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.metadata.schema.OSchemaShared implements com.orientechnologies.orient.core.OOrientShutdownListener
-	c3582921:p -> c3583146:p [dir=back,arrowtail=empty,style=dashed];
+	c3582915:p -> c3583143:p [dir=back,arrowtail=empty,style=dashed];
 }
 

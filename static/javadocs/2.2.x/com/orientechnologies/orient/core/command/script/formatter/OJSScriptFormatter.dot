@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter
-	c2215579 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScriptFormatter.html">
+	c2215573 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScriptFormatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OScriptFormatter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OScriptFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.script.formatter.OJSScriptFormatter
-	c2215580 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OJSScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OJSScriptFormatter.html">
+	c2215577 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OJSScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OJSScriptFormatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OJSScriptFormatter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OJSScriptFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.command.script.formatter.OJSScriptFormatter implements com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter
-	c2215579:p -> c2215580:p [dir=back,arrowtail=empty,style=dashed];
+	c2215573:p -> c2215577:p [dir=back,arrowtail=empty,style=dashed];
 }
 

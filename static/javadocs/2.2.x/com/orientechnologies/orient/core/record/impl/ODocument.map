@@ -1,12 +1,12 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../db/record/ODetachable.html" title="com.orientechnologies.orient.core.db.record.ODetachable" alt="" coords="16,11,120,53"/>
 <area shape="rect" id="node1" href="../../db/record/ODetachable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,131,59"/>
-<area shape="rect" id="node2_1" href="./ODocument.html" title="com.orientechnologies.orient.core.record.impl.ODocument" alt="" coords="395,118,491,143"/>
-<area shape="rect" id="node2" href="./ODocument.html" title="&lt;TABLE&gt;" alt="" coords="384,107,501,155"/>
-<area shape="rect" id="node3_2" href="../ORecordSchemaAware.html" title="com.orientechnologies.orient.core.record.ORecordSchemaAware" alt="" coords="165,11,333,53"/>
-<area shape="rect" id="node3" href="../ORecordSchemaAware.html" title="&lt;TABLE&gt;" alt="" coords="155,5,344,59"/>
-<area shape="rect" id="node4_3" href="../ORecordAbstract.html" title="com.orientechnologies.orient.core.record.ORecordAbstract" alt="" coords="379,19,507,45"/>
-<area shape="rect" id="node4" href="../ORecordAbstract.html" title="&lt;TABLE&gt;" alt="" coords="368,8,517,56"/>
+<area shape="rect" id="node2_1" href="./ODocument.html" title="com.orientechnologies.orient.core.record.impl.ODocument" alt="" coords="375,118,471,143"/>
+<area shape="rect" id="node2" href="./ODocument.html" title="&lt;TABLE&gt;" alt="" coords="364,107,481,155"/>
+<area shape="rect" id="node3_2" href="../ORecordAbstract.html" title="com.orientechnologies.orient.core.record.ORecordAbstract" alt="" coords="165,19,293,45"/>
+<area shape="rect" id="node3" href="../ORecordAbstract.html" title="&lt;TABLE&gt;" alt="" coords="155,8,304,56"/>
+<area shape="rect" id="node4_3" href="../ORecordSchemaAware.html" title="com.orientechnologies.orient.core.record.ORecordSchemaAware" alt="" coords="339,11,507,53"/>
+<area shape="rect" id="node4" href="../ORecordSchemaAware.html" title="&lt;TABLE&gt;" alt="" coords="328,5,517,59"/>
 <area shape="rect" id="node5_4" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="java.lang.Iterable" alt="" coords="553,11,653,53"/>
 <area shape="rect" id="node5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="&lt;TABLE&gt;" alt="" coords="542,5,663,59"/>
 <area shape="rect" id="node6_5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Externalizable.html" title="java.io.Externalizable" alt="" coords="699,11,811,53"/>

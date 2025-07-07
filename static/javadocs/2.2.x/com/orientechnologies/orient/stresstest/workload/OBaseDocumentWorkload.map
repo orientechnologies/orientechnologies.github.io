@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OBaseDocumentWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OBaseDocumentWorkload" alt="" coords="16,113,207,138"/>
-<area shape="rect" id="node1" href="./OBaseDocumentWorkload.html" title="&lt;TABLE&gt;" alt="" coords="5,101,217,149"/>
-<area shape="rect" id="node3_1" href="./OCRUDWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OCRUDWorkload" alt="" coords="47,209,175,234"/>
-<area shape="rect" id="node3" href="./OCRUDWorkload.html" title="&lt;TABLE&gt;" alt="" coords="37,197,186,245"/>
-<area shape="rect" id="node2_2" href="./OBaseWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload" alt="" coords="49,17,173,42"/>
+<area shape="rect" id="node1_0" href="./OCRUDWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OCRUDWorkload" alt="" coords="47,209,175,234"/>
+<area shape="rect" id="node1" href="./OCRUDWorkload.html" title="&lt;TABLE&gt;" alt="" coords="37,197,186,245"/>
+<area shape="rect" id="node2_1" href="./OBaseWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload" alt="" coords="49,17,173,42"/>
 <area shape="rect" id="node2" href="./OBaseWorkload.html" title="&lt;TABLE&gt;" alt="" coords="39,5,184,53"/>
+<area shape="rect" id="node3_2" href="./OBaseDocumentWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OBaseDocumentWorkload" alt="" coords="16,113,207,138"/>
+<area shape="rect" id="node3" href="./OBaseDocumentWorkload.html" title="&lt;TABLE&gt;" alt="" coords="5,101,217,149"/>
 </map>

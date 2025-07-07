@@ -10,82 +10,82 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract
-	c3384429 [label=<<table title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLFunctionConfigurableAbstract.html">
+	c3384422 [label=<<table title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLFunctionConfigurableAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionConfigurableAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OSQLFunctionConfigurableAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<T>
-	c3384459 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionMultiValueAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMultiValueAbstract&lt;T&gt; </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionMultiValueAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionIntersect
-	c3384460 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionIntersect" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionIntersect.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionIntersect </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionIntersect.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMap
-	c3384461 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMap.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionMap </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSymmetricDifference
-	c3384464 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSymmetricDifference" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionSymmetricDifference.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionSymmetricDifference </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionSymmetricDifference.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDocument
-	c3384467 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionDocument.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionDocument </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionDocument.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionUnionAll
-	c3384469 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionUnionAll" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionUnionAll.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLFunctionUnionAll </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionUnionAll.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference
-	c3384471 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionDifference.html">
+	c3384458 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionDifference.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionDifference </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionDifference.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionUnionAll
+	c3384459 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionUnionAll" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionUnionAll.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionUnionAll </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionUnionAll.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDocument
+	c3384460 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionDocument.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionDocument </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionDocument.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMap
+	c3384462 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMap.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionMap </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionIntersect
+	c3384464 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionIntersect" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionIntersect.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionIntersect </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionIntersect.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSet
-	c3384472 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionSet.html">
+	c3384465 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSymmetricDifference
+	c3384466 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSymmetricDifference" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionSymmetricDifference.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLFunctionSymmetricDifference </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionSymmetricDifference.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<T>
+	c3384467 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionMultiValueAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMultiValueAbstract&lt;T&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionMultiValueAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionList
-	c3384473 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionList.html">
+	c3384468 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionList </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<T> extends com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract
-	c3384429:p -> c3384459:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionIntersect extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.lang.Object>
-	c3384459:p -> c3384460:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMap extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Map<java.lang.Object, java.lang.Object>>
-	c3384459:p -> c3384461:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSymmetricDifference extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Set<java.lang.Object>>
-	c3384459:p -> c3384464:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDocument extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<com.orientechnologies.orient.core.record.impl.ODocument>
-	c3384459:p -> c3384467:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionUnionAll extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Collection<java.lang.Object>>
-	c3384459:p -> c3384469:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Set<java.lang.Object>>
-	c3384459:p -> c3384471:p [dir=back,arrowtail=empty];
+	c3384467:p -> c3384458:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionUnionAll extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Collection<java.lang.Object>>
+	c3384467:p -> c3384459:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDocument extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<com.orientechnologies.orient.core.record.impl.ODocument>
+	c3384467:p -> c3384460:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMap extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Map<java.lang.Object, java.lang.Object>>
+	c3384467:p -> c3384462:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionIntersect extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.lang.Object>
+	c3384467:p -> c3384464:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSet extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Set<java.lang.Object>>
-	c3384459:p -> c3384472:p [dir=back,arrowtail=empty];
+	c3384467:p -> c3384465:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionSymmetricDifference extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Set<java.lang.Object>>
+	c3384467:p -> c3384466:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<T> extends com.orientechnologies.orient.core.sql.functions.OSQLFunctionConfigurableAbstract
+	c3384422:p -> c3384467:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionList extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.List<java.lang.Object>>
-	c3384459:p -> c3384473:p [dir=back,arrowtail=empty];
+	c3384467:p -> c3384468:p [dir=back,arrowtail=empty];
 }
 

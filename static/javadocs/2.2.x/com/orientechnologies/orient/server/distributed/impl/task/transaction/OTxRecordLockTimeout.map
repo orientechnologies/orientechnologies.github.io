@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OTxRecordLockTimeout.html" title="com.orientechnologies.orient.server.distributed.impl.task.transaction.OTxRecordLockTimeout" alt="" coords="27,118,201,143"/>
-<area shape="rect" id="node1" href="./OTxRecordLockTimeout.html" title="&lt;TABLE&gt;" alt="" coords="16,107,212,155"/>
-<area shape="rect" id="node2_1" href="./OTransactionResultPayload.html" title="com.orientechnologies.orient.server.distributed.impl.task.transaction.OTransactionResultPayload" alt="" coords="16,11,212,53"/>
-<area shape="rect" id="node2" href="./OTransactionResultPayload.html" title="&lt;TABLE&gt;" alt="" coords="5,5,223,59"/>
-</map>

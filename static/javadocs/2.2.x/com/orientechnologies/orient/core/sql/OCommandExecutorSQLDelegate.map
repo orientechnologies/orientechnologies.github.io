@@ -1,14 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../command/OCommandDistributedReplicateRequest.html" title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest" alt="" coords="181,11,463,53"/>
-<area shape="rect" id="node1" href="../command/OCommandDistributedReplicateRequest.html" title="&lt;TABLE&gt;" alt="" coords="170,5,474,59"/>
-<area shape="rect" id="node6_1" href="./OCommandExecutorSQLDelegate.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate" alt="" coords="355,118,591,143"/>
-<area shape="rect" id="node6" href="./OCommandExecutorSQLDelegate.html" title="&lt;TABLE&gt;" alt="" coords="344,107,601,155"/>
-<area shape="rect" id="node2_2" href="./OCommandExecutorSQLTransactional.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLTransactional" alt="" coords="16,214,279,239"/>
-<area shape="rect" id="node2" href="./OCommandExecutorSQLTransactional.html" title="&lt;TABLE&gt;" alt="" coords="5,203,289,251"/>
-<area shape="rect" id="node3_3" href="./OCommandExecutorSQLResultsetDelegate.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLResultsetDelegate" alt="" coords="324,214,621,239"/>
-<area shape="rect" id="node3" href="./OCommandExecutorSQLResultsetDelegate.html" title="&lt;TABLE&gt;" alt="" coords="313,203,632,251"/>
-<area shape="rect" id="node4_4" href="./OCommandExecutorSQLAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" alt="" coords="509,19,741,45"/>
-<area shape="rect" id="node4" href="./OCommandExecutorSQLAbstract.html" title="&lt;TABLE&gt;" alt="" coords="498,8,751,56"/>
-<area shape="rect" id="node5_5" href="./OCommandExecutorSQLExplain.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLExplain" alt="" coords="667,214,892,239"/>
-<area shape="rect" id="node5" href="./OCommandExecutorSQLExplain.html" title="&lt;TABLE&gt;" alt="" coords="656,203,903,251"/>
+<area shape="rect" id="node1_0" href="../command/OCommandDistributedReplicateRequest.html" title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest" alt="" coords="179,11,462,53"/>
+<area shape="rect" id="node1" href="../command/OCommandDistributedReplicateRequest.html" title="&lt;TABLE&gt;" alt="" coords="169,5,473,59"/>
+<area shape="rect" id="node6_1" href="./OCommandExecutorSQLDelegate.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate" alt="" coords="353,118,589,143"/>
+<area shape="rect" id="node6" href="./OCommandExecutorSQLDelegate.html" title="&lt;TABLE&gt;" alt="" coords="343,107,600,155"/>
+<area shape="rect" id="node2_2" href="./OCommandExecutorSQLAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" alt="" coords="507,19,739,45"/>
+<area shape="rect" id="node2" href="./OCommandExecutorSQLAbstract.html" title="&lt;TABLE&gt;" alt="" coords="497,8,750,56"/>
+<area shape="rect" id="node3_3" href="./OCommandExecutorSQLResultsetDelegate.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLResultsetDelegate" alt="" coords="16,214,313,239"/>
+<area shape="rect" id="node3" href="./OCommandExecutorSQLResultsetDelegate.html" title="&lt;TABLE&gt;" alt="" coords="5,203,324,251"/>
+<area shape="rect" id="node4_4" href="./OCommandExecutorSQLExplain.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLExplain" alt="" coords="359,214,584,239"/>
+<area shape="rect" id="node4" href="./OCommandExecutorSQLExplain.html" title="&lt;TABLE&gt;" alt="" coords="348,203,595,251"/>
+<area shape="rect" id="node5_5" href="./OCommandExecutorSQLTransactional.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLTransactional" alt="" coords="629,214,892,239"/>
+<area shape="rect" id="node5" href="./OCommandExecutorSQLTransactional.html" title="&lt;TABLE&gt;" alt="" coords="619,203,903,251"/>
 </map>

@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OIterableRecordSource.html" title="com.orientechnologies.orient.core.sql.OIterableRecordSource" alt="" coords="422,11,590,53"/>
-<area shape="rect" id="node1" href="./OIterableRecordSource.html" title="&lt;TABLE&gt;" alt="" coords="411,5,601,59"/>
-<area shape="rect" id="node2_1" href="./OCommandExecutorSQLResultsetDelegate.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLResultsetDelegate" alt="" coords="16,118,313,143"/>
-<area shape="rect" id="node2" href="./OCommandExecutorSQLResultsetDelegate.html" title="&lt;TABLE&gt;" alt="" coords="5,107,324,155"/>
-<area shape="rect" id="node3_2" href="./OCommandExecutorSQLResultsetAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLResultsetAbstract" alt="" coords="359,118,653,143"/>
-<area shape="rect" id="node3" href="./OCommandExecutorSQLResultsetAbstract.html" title="&lt;TABLE&gt;" alt="" coords="349,107,663,155"/>
-<area shape="rect" id="node4_3" href="./parser/OMatchStatement.html" title="com.orientechnologies.orient.core.sql.parser.OMatchStatement" alt="" coords="699,118,836,143"/>
-<area shape="rect" id="node4" href="./parser/OMatchStatement.html" title="&lt;TABLE&gt;" alt="" coords="688,107,847,155"/>
+<area shape="rect" id="node1_0" href="./OCommandExecutorSQLResultsetAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLResultsetAbstract" alt="" coords="16,118,309,143"/>
+<area shape="rect" id="node1" href="./OCommandExecutorSQLResultsetAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,107,320,155"/>
+<area shape="rect" id="node2_1" href="./OIterableRecordSource.html" title="com.orientechnologies.orient.core.sql.OIterableRecordSource" alt="" coords="420,11,588,53"/>
+<area shape="rect" id="node2" href="./OIterableRecordSource.html" title="&lt;TABLE&gt;" alt="" coords="409,5,599,59"/>
+<area shape="rect" id="node3_2" href="./OCommandExecutorSQLResultsetDelegate.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLResultsetDelegate" alt="" coords="355,118,653,143"/>
+<area shape="rect" id="node3" href="./OCommandExecutorSQLResultsetDelegate.html" title="&lt;TABLE&gt;" alt="" coords="345,107,663,155"/>
+<area shape="rect" id="node4_3" href="./parser/OMatchStatement.html" title="com.orientechnologies.orient.core.sql.parser.OMatchStatement" alt="" coords="698,118,835,143"/>
+<area shape="rect" id="node4" href="./parser/OMatchStatement.html" title="&lt;TABLE&gt;" alt="" coords="687,107,846,155"/>
 </map>

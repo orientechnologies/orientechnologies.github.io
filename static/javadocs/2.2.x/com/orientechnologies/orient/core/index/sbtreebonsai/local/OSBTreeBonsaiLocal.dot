@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurableComponent
-	c3226191 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurableComponent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../storage/impl/local/paginated/base/ODurableComponent.html">
+	c3226185 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurableComponent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../storage/impl/local/paginated/base/ODurableComponent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ODurableComponent </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../storage/impl/local/paginated/base/ODurableComponent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsai<K, V>
-	c3226460 [label=<<table title="com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsai" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSBTreeBonsai.html">
+	c3226455 [label=<<table title="com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsai" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSBTreeBonsai.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSBTreeBonsai&lt;K, V&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSBTreeBonsai.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsaiLocal<K, V>
-	c3226461 [label=<<table title="com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsaiLocal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSBTreeBonsaiLocal.html">
+	c3226456 [label=<<table title="com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsaiLocal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSBTreeBonsaiLocal.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSBTreeBonsaiLocal&lt;K, V&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSBTreeBonsaiLocal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsaiLocal<K, V> extends com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurableComponent
-	c3226191:p -> c3226461:p [dir=back,arrowtail=empty];
+	c3226185:p -> c3226456:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsaiLocal<K, V> implements com.orientechnologies.orient.core.index.sbtreebonsai.local.OSBTreeBonsai<K, V>
-	c3226460:p -> c3226461:p [dir=back,arrowtail=empty,style=dashed];
+	c3226455:p -> c3226456:p [dir=back,arrowtail=empty,style=dashed];
 }
 

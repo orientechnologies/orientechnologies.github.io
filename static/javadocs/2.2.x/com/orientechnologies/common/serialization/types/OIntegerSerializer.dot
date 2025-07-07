@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.serialization.types.OBinarySerializer<T>
-	c2152196 [label=<<table title="com.orientechnologies.common.serialization.types.OBinarySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinarySerializer.html">
+	c2152186 [label=<<table title="com.orientechnologies.common.serialization.types.OBinarySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBinarySerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBinarySerializer&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OBinarySerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.serialization.types.OIntegerSerializer
-	c2152199 [label=<<table title="com.orientechnologies.common.serialization.types.OIntegerSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIntegerSerializer.html">
+	c2152188 [label=<<table title="com.orientechnologies.common.serialization.types.OIntegerSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OIntegerSerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OIntegerSerializer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OIntegerSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.serialization.types.OIntegerSerializer implements com.orientechnologies.common.serialization.types.OBinarySerializer<T>
-	c2152196:p -> c2152199:p [dir=back,arrowtail=empty,style=dashed];
+	c2152186:p -> c2152188:p [dir=back,arrowtail=empty,style=dashed];
 }
 

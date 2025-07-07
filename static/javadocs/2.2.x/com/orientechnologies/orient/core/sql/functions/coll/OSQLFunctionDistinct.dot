@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.functions.OSQLFunctionAbstract
-	c3329562 [label=<<table title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLFunctionAbstract.html">
+	c3329555 [label=<<table title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLFunctionAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OSQLFunctionAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDistinct
-	c3329602 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDistinct" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionDistinct.html">
+	c3329599 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDistinct" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionDistinct.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionDistinct </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionDistinct.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDistinct extends com.orientechnologies.orient.core.sql.functions.OSQLFunctionAbstract
-	c3329562:p -> c3329602:p [dir=back,arrowtail=empty];
+	c3329555:p -> c3329599:p [dir=back,arrowtail=empty];
 }
 

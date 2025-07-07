@@ -9,265 +9,277 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent
+	c561738 [label=<<table title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../sequence/OSQLMethodCurrent.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodCurrent </td></tr>
+		</table></td></tr>
+		</table>>, URL="../sequence/OSQLMethodCurrent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodNext
+	c561739 [label=<<table title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodNext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../sequence/OSQLMethodNext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodNext </td></tr>
+		</table></td></tr>
+		</table>>, URL="../sequence/OSQLMethodNext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodReset
 	c561740 [label=<<table title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodReset" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../sequence/OSQLMethodReset.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodReset </td></tr>
 		</table></td></tr>
 		</table>>, URL="../sequence/OSQLMethodReset.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodNext
-	c561741 [label=<<table title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodNext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../sequence/OSQLMethodNext.html">
+	// com.orientechnologies.orient.core.sql.method.OSQLMethod
+	c561742 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLMethod.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodNext </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OSQLMethod </td></tr>
 		</table></td></tr>
-		</table>>, URL="../sequence/OSQLMethodNext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent
-	c561742 [label=<<table title="com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../sequence/OSQLMethodCurrent.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodCurrent </td></tr>
-		</table></td></tr>
-		</table>>, URL="../sequence/OSQLMethodCurrent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../OSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt
 	c561744 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLMethodCharAt.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodCharAt </td></tr>
 		</table></td></tr>
 		</table>>, URL="../OSQLMethodCharAt.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.OSQLMethod
-	c561747 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLMethod.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OSQLMethod </td></tr>
-		</table></td></tr>
-		</table>>, URL="../OSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.OSQLMethodLeft
-	c561748 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodLeft" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLMethodLeft.html">
+	c561746 [label=<<table title="com.orientechnologies.orient.core.sql.method.OSQLMethodLeft" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OSQLMethodLeft.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodLeft </td></tr>
 		</table></td></tr>
 		</table>>, URL="../OSQLMethodLeft.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsFloat
-	c561749 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsFloat" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsFloat.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAsFloat </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodAsFloat.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodKeys
-	c561750 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodKeys" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodKeys.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodKeys </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodKeys.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodValues
-	c561751 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodValues" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodValues.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodValues </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodValues.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsString
-	c561752 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsString.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAsString </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodAsString.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsSet
-	c561753 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsSet.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAsSet </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodAsSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodNormalize
-	c561754 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodNormalize" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodNormalize.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodNormalize </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodNormalize.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap
-	c561755 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsMap.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAsMap </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodAsMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodJavaType
-	c561756 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodJavaType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodJavaType.html">
+	c561747 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodJavaType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodJavaType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodJavaType </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodJavaType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSize
-	c561757 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSize" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodSize.html">
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodPrefix
+	c561748 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodPrefix" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodPrefix.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodSize </td></tr>
+<tr><td align="center" balign="center"> OSQLMethodPrefix </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSQLMethodSize.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemove
-	c561758 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemove" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodRemove.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodRemove </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodRemove.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemoveAll
-	c561759 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemoveAll" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodRemoveAll.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodRemoveAll </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodRemoveAll.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf
-	c561760 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodIndexOf.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodIndexOf </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodIndexOf.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OSQLMethodPrefix.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodType
-	c561761 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodType.html">
+	c561749 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodType </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemove
+	c561750 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemove" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodRemove.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodRemove </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodRemove.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSplit
+	c561751 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSplit" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodSplit.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodSplit </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodSplit.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractSQLMethod.html">
+	c561752 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OAbstractSQLMethod.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractSQLMethod </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodLastIndexOf
-	c561763 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodLastIndexOf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodLastIndexOf.html">
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf
+	c561753 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodIndexOf.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodLastIndexOf </td></tr>
+<tr><td align="center" balign="center"> OSQLMethodIndexOf </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSQLMethodLastIndexOf.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OSQLMethodIndexOf.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodKeys
+	c561754 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodKeys" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodKeys.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodKeys </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodKeys.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSize
+	c561755 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSize" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodSize.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodSize </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodSize.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap
+	c561756 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsMap.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodAsMap </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodAsMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFunctionDelegate
-	c561764 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFunctionDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodFunctionDelegate.html">
+	c561757 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFunctionDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodFunctionDelegate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodFunctionDelegate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodFunctionDelegate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToLowerCase
+	c561758 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToLowerCase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodToLowerCase.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodToLowerCase </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodToLowerCase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodNormalize
+	c561759 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodNormalize" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodNormalize.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodNormalize </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodNormalize.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodField
+	c561760 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodField" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodField.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodField </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodField.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsSet
+	c561761 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsSet.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodAsSet </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodAsSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFormat
+	c561762 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFormat" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodFormat.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodFormat </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodFormat.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodTrim
+	c561763 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodTrim" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodTrim.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodTrim </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodTrim.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsLong
+	c561764 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsLong" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsLong.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodAsLong </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodAsLong.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsInteger
 	c561765 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsInteger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsInteger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodAsInteger </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodAsInteger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodTrim
-	c561766 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodTrim" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodTrim.html">
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemoveAll
+	c561766 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemoveAll" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodRemoveAll.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodTrim </td></tr>
+<tr><td align="center" balign="center"> OSQLMethodRemoveAll </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSQLMethodTrim.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFormat
-	c561767 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFormat" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodFormat.html">
+		</table>>, URL="./OSQLMethodRemoveAll.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsFloat
+	c561767 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsFloat" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsFloat.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodFormat </td></tr>
+<tr><td align="center" balign="center"> OSQLMethodAsFloat </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSQLMethodFormat.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsLong
-	c561768 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsLong" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsLong.html">
+		</table>>, URL="./OSQLMethodAsFloat.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodLastIndexOf
+	c561768 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodLastIndexOf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodLastIndexOf.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAsLong </td></tr>
+<tr><td align="center" balign="center"> OSQLMethodLastIndexOf </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSQLMethodAsLong.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodField
-	c561769 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodField" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodField.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodField </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodField.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSplit
-	c561770 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSplit" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodSplit.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodSplit </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodSplit.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase
-	c561771 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodToUpperCase.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodToUpperCase </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodToUpperCase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToLowerCase
-	c561772 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToLowerCase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodToLowerCase.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodToLowerCase </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLMethodToLowerCase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OSQLMethodLastIndexOf.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsList
-	c561773 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsList.html">
+	c561769 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodAsList </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodAsList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodPrefix
-	c561774 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodPrefix" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodPrefix.html">
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsString
+	c561770 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsString.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodPrefix </td></tr>
+<tr><td align="center" balign="center"> OSQLMethodAsString </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OSQLMethodPrefix.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OSQLMethodAsString.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsBoolean
-	c561775 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsBoolean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsBoolean.html">
+	c561771 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsBoolean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodAsBoolean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodAsBoolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodAsBoolean.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodValues
+	c561772 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodValues" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodValues.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodValues </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodValues.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase
+	c561773 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLMethodToUpperCase.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodToUpperCase </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLMethodToUpperCase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude
-	c561789 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/misc/OSQLMethodInclude.html">
+	c561785 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/misc/OSQLMethodInclude.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodInclude </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../functions/misc/OSQLMethodInclude.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude
-	c561795 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/misc/OSQLMethodExclude.html">
+	c561791 [label=<<table title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/misc/OSQLMethodExclude.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodExclude </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../functions/misc/OSQLMethodExclude.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodReplace
-	c561797 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodReplace" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodReplace.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodReplace </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../functions/text/OSQLMethodReplace.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodRight
-	c561798 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodRight" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodRight.html">
+	c561795 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodRight" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodRight.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodRight </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../functions/text/OSQLMethodRight.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodLength
-	c561799 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodLength" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodLength.html">
+	c561796 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodLength" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodLength.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodLength </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../functions/text/OSQLMethodLength.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodToJSON
-	c561800 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodToJSON" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodToJSON.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodToJSON </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../functions/text/OSQLMethodToJSON.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodFromJSON
-	c561801 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodFromJSON" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodFromJSON.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodFromJSON </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../functions/text/OSQLMethodFromJSON.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodAppend
-	c561802 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodAppend" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodAppend.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAppend </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../functions/text/OSQLMethodAppend.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodHash
-	c561803 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodHash" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodHash.html">
+	c561798 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodHash" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodHash.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodHash </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../functions/text/OSQLMethodHash.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodFromJSON
+	c561800 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodFromJSON" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodFromJSON.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodFromJSON </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../functions/text/OSQLMethodFromJSON.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodReplace
+	c561801 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodReplace" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodReplace.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodReplace </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../functions/text/OSQLMethodReplace.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodSubString
-	c561804 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodSubString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodSubString.html">
+	c561802 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodSubString" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodSubString.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodSubString </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../functions/text/OSQLMethodSubString.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodToJSON
+	c561803 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodToJSON" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodToJSON.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodToJSON </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../functions/text/OSQLMethodToJSON.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.text.OSQLMethodAppend
+	c561804 [label=<<table title="com.orientechnologies.orient.core.sql.functions.text.OSQLMethodAppend" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/text/OSQLMethodAppend.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodAppend </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../functions/text/OSQLMethodAppend.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDate
+	c561805 [label=<<table title="com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/conversion/OSQLMethodAsDate.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodAsDate </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../functions/conversion/OSQLMethodAsDate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDecimal
+	c561806 [label=<<table title="com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDecimal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/conversion/OSQLMethodAsDecimal.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLMethodAsDecimal </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../functions/conversion/OSQLMethodAsDecimal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodConvert
 	c561807 [label=<<table title="com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodConvert" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/conversion/OSQLMethodConvert.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -280,117 +292,105 @@ digraph G {
 <tr><td align="center" balign="center"> OSQLMethodAsDateTime </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../functions/conversion/OSQLMethodAsDateTime.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDecimal
-	c561809 [label=<<table title="com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDecimal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/conversion/OSQLMethodAsDecimal.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAsDecimal </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../functions/conversion/OSQLMethodAsDecimal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDate
-	c561810 [label=<<table title="com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/conversion/OSQLMethodAsDate.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLMethodAsDate </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../functions/conversion/OSQLMethodAsDate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.coll.OSQLMethodMultiValue
-	c561815 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLMethodMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/coll/OSQLMethodMultiValue.html">
+	c561811 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLMethodMultiValue" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../functions/coll/OSQLMethodMultiValue.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodMultiValue </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../functions/coll/OSQLMethodMultiValue.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodReset extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561740:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodNext extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561741:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodCurrent extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561742:p [dir=back,arrowtail=empty];
+	c561752:p -> c561738:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodNext extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561739:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.sequence.OSQLMethodReset extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561740:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.method.OSQLMethodCharAt extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561744:p [dir=back,arrowtail=empty];
+	c561752:p -> c561744:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.method.OSQLMethodLeft extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561748:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsFloat extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561749:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodKeys extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561750:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodValues extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561751:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsString extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561752:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsSet extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561753:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodNormalize extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561754:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561755:p [dir=back,arrowtail=empty];
+	c561752:p -> c561746:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodJavaType extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561756:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSize extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561757:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemove extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561758:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemoveAll extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561759:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561760:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodType extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561761:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod implements com.orientechnologies.orient.core.sql.method.OSQLMethod
-	c561747:p -> c561762:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodLastIndexOf extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561763:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFunctionDelegate extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561764:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsInteger extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561765:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodTrim extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561766:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFormat extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561767:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsLong extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561768:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodField extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561769:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSplit extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561770:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561771:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToLowerCase extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561772:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsList extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561773:p [dir=back,arrowtail=empty];
+	c561752:p -> c561747:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodPrefix extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561774:p [dir=back,arrowtail=empty];
+	c561752:p -> c561748:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodType extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561749:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemove extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561750:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSplit extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561751:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod implements com.orientechnologies.orient.core.sql.method.OSQLMethod
+	c561742:p -> c561752:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodIndexOf extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561753:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodKeys extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561754:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodSize extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561755:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsMap extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561756:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFunctionDelegate extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561757:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToLowerCase extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561758:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodNormalize extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561759:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodField extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561760:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsSet extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561761:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodFormat extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561762:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodTrim extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561763:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsLong extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561764:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsInteger extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561765:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodRemoveAll extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561766:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsFloat extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561767:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodLastIndexOf extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561768:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsList extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561769:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsString extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561770:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodAsBoolean extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561775:p [dir=back,arrowtail=empty];
+	c561752:p -> c561771:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodValues extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561772:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561773:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561789:p [dir=back,arrowtail=empty];
+	c561752:p -> c561785:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561795:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodReplace extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561797:p [dir=back,arrowtail=empty];
+	c561752:p -> c561791:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodRight extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561798:p [dir=back,arrowtail=empty];
+	c561752:p -> c561795:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodLength extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561799:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodToJSON extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561800:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodFromJSON extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561801:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodAppend extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561802:p [dir=back,arrowtail=empty];
+	c561752:p -> c561796:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodHash extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561803:p [dir=back,arrowtail=empty];
+	c561752:p -> c561798:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodFromJSON extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561800:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodReplace extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561801:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodSubString extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561804:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodConvert extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561807:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDateTime extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561808:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDecimal extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561809:p [dir=back,arrowtail=empty];
+	c561752:p -> c561802:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodToJSON extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561803:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.text.OSQLMethodAppend extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561804:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDate extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561810:p [dir=back,arrowtail=empty];
+	c561752:p -> c561805:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDecimal extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561806:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodConvert extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561807:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.sql.functions.conversion.OSQLMethodAsDateTime extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
+	c561752:p -> c561808:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.sql.functions.coll.OSQLMethodMultiValue extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c561762:p -> c561815:p [dir=back,arrowtail=empty];
+	c561752:p -> c561811:p [dir=back,arrowtail=empty];
 }
 

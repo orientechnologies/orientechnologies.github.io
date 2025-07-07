@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../task/OAbstractRecordReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" alt="" coords="78,17,306,42"/>
-<area shape="rect" id="node1" href="../../task/OAbstractRecordReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="67,5,317,53"/>
-<area shape="rect" id="node4_1" href="./OAbstractReadRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OAbstractReadRecordTask" alt="" coords="96,113,288,138"/>
-<area shape="rect" id="node4" href="./OAbstractReadRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="85,101,299,149"/>
-<area shape="rect" id="node2_2" href="./OReadRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OReadRecordTask" alt="" coords="16,209,152,234"/>
-<area shape="rect" id="node2" href="./OReadRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="5,197,163,245"/>
-<area shape="rect" id="node3_3" href="./OReadRecordIfNotLatestTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OReadRecordIfNotLatestTask" alt="" coords="197,209,405,234"/>
-<area shape="rect" id="node3" href="./OReadRecordIfNotLatestTask.html" title="&lt;TABLE&gt;" alt="" coords="187,197,416,245"/>
+<area shape="rect" id="node1_0" href="../../task/OAbstractRecordReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" alt="" coords="114,17,342,42"/>
+<area shape="rect" id="node1" href="../../task/OAbstractRecordReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="103,5,353,53"/>
+<area shape="rect" id="node4_1" href="./OAbstractReadRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OAbstractReadRecordTask" alt="" coords="132,113,324,138"/>
+<area shape="rect" id="node4" href="./OAbstractReadRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="121,101,335,149"/>
+<area shape="rect" id="node2_2" href="./OReadRecordIfNotLatestTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OReadRecordIfNotLatestTask" alt="" coords="16,209,224,234"/>
+<area shape="rect" id="node2" href="./OReadRecordIfNotLatestTask.html" title="&lt;TABLE&gt;" alt="" coords="5,197,235,245"/>
+<area shape="rect" id="node3_3" href="./OReadRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OReadRecordTask" alt="" coords="269,209,405,234"/>
+<area shape="rect" id="node3" href="./OReadRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="259,197,416,245"/>
 </map>

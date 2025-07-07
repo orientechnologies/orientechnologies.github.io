@@ -10,65 +10,65 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.etl.loader.OAbstractLoader
-	c438871 [label=<<table title="com.orientechnologies.orient.etl.loader.OAbstractLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractLoader.html">
+	c438870 [label=<<table title="com.orientechnologies.orient.etl.loader.OAbstractLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractLoader </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.etl.loader.OLoader
-	c438872 [label=<<table title="com.orientechnologies.orient.etl.loader.OLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLoader.html">
+	c438871 [label=<<table title="com.orientechnologies.orient.etl.loader.OLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OLoader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.etl.loader.OOrientDBLoader
-	c438873 [label=<<table title="com.orientechnologies.orient.etl.loader.OOrientDBLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOrientDBLoader.html">
+	c438872 [label=<<table title="com.orientechnologies.orient.etl.loader.OOrientDBLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOrientDBLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OOrientDBLoader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOrientDBLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.etl.loader.OOrientDBLoader.DB_TYPE
-	c438874 [label=<<table title="com.orientechnologies.orient.etl.loader.OOrientDBLoader.DB_TYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOrientDBLoader.DB_TYPE.html">
+	c438873 [label=<<table title="com.orientechnologies.orient.etl.loader.OOrientDBLoader.DB_TYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOrientDBLoader.DB_TYPE.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> DB_TYPE </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOrientDBLoader.DB_TYPE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.etl.loader.OStreamLoader
-	c438875 [label=<<table title="com.orientechnologies.orient.etl.loader.OStreamLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStreamLoader.html">
+	c438874 [label=<<table title="com.orientechnologies.orient.etl.loader.OStreamLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStreamLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStreamLoader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStreamLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.etl.loader.OStreamLoader.Listener
-	c438876 [label=<<table title="com.orientechnologies.orient.etl.loader.OStreamLoader.Listener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStreamLoader.Listener.html">
+	c438875 [label=<<table title="com.orientechnologies.orient.etl.loader.OStreamLoader.Listener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStreamLoader.Listener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Listener </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStreamLoader.Listener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.etl.loader.OLoaderException
-	c438877 [label=<<table title="com.orientechnologies.orient.etl.loader.OLoaderException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLoaderException.html">
+	c438876 [label=<<table title="com.orientechnologies.orient.etl.loader.OLoaderException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLoaderException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLoaderException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLoaderException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.etl.loader.OOutputLoader
-	c438878 [label=<<table title="com.orientechnologies.orient.etl.loader.OOutputLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOutputLoader.html">
+	c438877 [label=<<table title="com.orientechnologies.orient.etl.loader.OOutputLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOutputLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OOutputLoader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOutputLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.etl.loader.OAbstractLoader implements com.orientechnologies.orient.etl.loader.OLoader
-	c438872:p -> c438871:p [dir=back,arrowtail=empty,style=dashed];
+	c438871:p -> c438870:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.etl.loader.OOrientDBLoader extends com.orientechnologies.orient.etl.loader.OAbstractLoader
-	c438871:p -> c438873:p [dir=back,arrowtail=empty];
+	c438870:p -> c438872:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.etl.loader.OOrientDBLoader implements com.orientechnologies.orient.etl.loader.OLoader
-	c438872:p -> c438873:p [dir=back,arrowtail=empty,style=dashed];
+	c438871:p -> c438872:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.etl.loader.OStreamLoader extends com.orientechnologies.orient.etl.loader.OAbstractLoader
-	c438871:p -> c438875:p [dir=back,arrowtail=empty];
+	c438870:p -> c438874:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.etl.loader.OOutputLoader extends com.orientechnologies.orient.etl.loader.OAbstractLoader
-	c438871:p -> c438878:p [dir=back,arrowtail=empty];
+	c438870:p -> c438877:p [dir=back,arrowtail=empty];
 }
 

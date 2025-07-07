@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ODatabaseSchemaAware.html" title="com.orientechnologies.orient.core.db.ODatabaseSchemaAware" alt="" coords="226,112,441,155"/>
-<area shape="rect" id="node1" href="./ODatabaseSchemaAware.html" title="&lt;TABLE&gt;" alt="" coords="215,107,451,160"/>
-<area shape="rect" id="node3_1" href="./object/ODatabaseObject.html" title="com.orientechnologies.orient.core.db.object.ODatabaseObject" alt="" coords="16,213,149,256"/>
-<area shape="rect" id="node3" href="./object/ODatabaseObject.html" title="&lt;TABLE&gt;" alt="" coords="5,208,160,261"/>
+<area shape="rect" id="node1_0" href="./ODatabase.html" title="com.orientechnologies.orient.core.db.ODatabase" alt="" coords="350,11,471,53"/>
+<area shape="rect" id="node1" href="./ODatabase.html" title="&lt;TABLE&gt;" alt="" coords="339,5,482,59"/>
+<area shape="rect" id="node2_1" href="./ODatabaseSchemaAware.html" title="com.orientechnologies.orient.core.db.ODatabaseSchemaAware" alt="" coords="226,112,441,155"/>
+<area shape="rect" id="node2" href="./ODatabaseSchemaAware.html" title="&lt;TABLE&gt;" alt="" coords="215,107,451,160"/>
 <area shape="rect" id="node4_2" href="./document/ODatabaseDocument.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocument" alt="" coords="445,213,603,256"/>
 <area shape="rect" id="node4" href="./document/ODatabaseDocument.html" title="&lt;TABLE&gt;" alt="" coords="434,208,614,261"/>
-<area shape="rect" id="node5_3" href="../../object/db/ODatabasePojoAbstract.html" title="com.orientechnologies.orient.object.db.ODatabasePojoAbstract" alt="" coords="195,222,399,247"/>
+<area shape="rect" id="node3_3" href="./object/ODatabaseObject.html" title="com.orientechnologies.orient.core.db.object.ODatabaseObject" alt="" coords="16,213,149,256"/>
+<area shape="rect" id="node3" href="./object/ODatabaseObject.html" title="&lt;TABLE&gt;" alt="" coords="5,208,160,261"/>
+<area shape="rect" id="node5_4" href="../../object/db/ODatabasePojoAbstract.html" title="com.orientechnologies.orient.object.db.ODatabasePojoAbstract" alt="" coords="195,222,399,247"/>
 <area shape="rect" id="node5" href="../../object/db/ODatabasePojoAbstract.html" title="&lt;TABLE&gt;" alt="" coords="185,211,410,259"/>
-<area shape="rect" id="node2_4" href="./ODatabase.html" title="com.orientechnologies.orient.core.db.ODatabase" alt="" coords="350,11,471,53"/>
-<area shape="rect" id="node2" href="./ODatabase.html" title="&lt;TABLE&gt;" alt="" coords="339,5,482,59"/>
 </map>

@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.metadata.schema.OGlobalProperty
-	c1827342 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OGlobalProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OGlobalProperty.html">
+	c1827341 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OGlobalProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OGlobalProperty.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OGlobalProperty </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OGlobalProperty.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl
-	c1827351 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGlobalPropertyImpl.html">
+	c1827342 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OGlobalPropertyImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OGlobalPropertyImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OGlobalPropertyImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.schema.OGlobalPropertyImpl implements com.orientechnologies.orient.core.metadata.schema.OGlobalProperty
-	c1827342:p -> c1827351:p [dir=back,arrowtail=empty,style=dashed];
+	c1827341:p -> c1827342:p [dir=back,arrowtail=empty,style=dashed];
 }
 

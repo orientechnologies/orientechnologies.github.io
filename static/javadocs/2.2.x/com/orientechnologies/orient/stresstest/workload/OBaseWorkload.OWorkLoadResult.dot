@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OWorkLoadResult
-	c714879 [label=<<table title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OWorkLoadResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBaseWorkload.OWorkLoadResult.html">
+	c714877 [label=<<table title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OWorkLoadResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OBaseWorkload.OWorkLoadResult.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OWorkLoadResult </td></tr>
 		</table></td></tr>

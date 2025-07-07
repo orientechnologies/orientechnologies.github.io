@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OCommandExecutor.html" title="com.orientechnologies.orient.core.command.OCommandExecutor" alt="" coords="344,11,496,53"/>
-<area shape="rect" id="node1" href="./OCommandExecutor.html" title="&lt;TABLE&gt;" alt="" coords="333,5,507,59"/>
-<area shape="rect" id="node2_1" href="./OCommandExecutorAbstract.html" title="com.orientechnologies.orient.core.command.OCommandExecutorAbstract" alt="" coords="16,118,224,143"/>
-<area shape="rect" id="node2" href="./OCommandExecutorAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,107,235,155"/>
+<area shape="rect" id="node1_0" href="./OCommandExecutorAbstract.html" title="com.orientechnologies.orient.core.command.OCommandExecutorAbstract" alt="" coords="16,118,224,143"/>
+<area shape="rect" id="node1" href="./OCommandExecutorAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,107,235,155"/>
+<area shape="rect" id="node2_1" href="./OCommandExecutor.html" title="com.orientechnologies.orient.core.command.OCommandExecutor" alt="" coords="344,11,496,53"/>
+<area shape="rect" id="node2" href="./OCommandExecutor.html" title="&lt;TABLE&gt;" alt="" coords="333,5,507,59"/>
 <area shape="rect" id="node3_2" href="../sql/OCommandExecutorToOStatementWrapper.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorToOStatementWrapper" alt="" coords="270,118,570,143"/>
 <area shape="rect" id="node3" href="../sql/OCommandExecutorToOStatementWrapper.html" title="&lt;TABLE&gt;" alt="" coords="259,107,581,155"/>
 <area shape="rect" id="node4_3" href="../sql/parser/OMatchStatement.html" title="com.orientechnologies.orient.core.sql.parser.OMatchStatement" alt="" coords="615,118,753,143"/>

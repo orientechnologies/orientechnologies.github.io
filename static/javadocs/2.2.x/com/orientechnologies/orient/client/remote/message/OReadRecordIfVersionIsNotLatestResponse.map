@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../OBinaryResponse.html" title="com.orientechnologies.orient.client.remote.OBinaryResponse" alt="" coords="99,11,234,53"/>
-<area shape="rect" id="node1" href="../OBinaryResponse.html" title="&lt;TABLE&gt;" alt="" coords="89,5,245,59"/>
-<area shape="rect" id="node2_1" href="./OReadRecordIfVersionIsNotLatestResponse.html" title="com.orientechnologies.orient.client.remote.message.OReadRecordIfVersionIsNotLatestResponse" alt="" coords="16,118,317,143"/>
-<area shape="rect" id="node2" href="./OReadRecordIfVersionIsNotLatestResponse.html" title="&lt;TABLE&gt;" alt="" coords="5,107,328,155"/>
-</map>

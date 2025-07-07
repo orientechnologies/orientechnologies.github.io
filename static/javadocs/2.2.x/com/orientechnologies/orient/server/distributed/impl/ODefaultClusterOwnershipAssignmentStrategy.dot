@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.impl.ODefaultClusterOwnershipAssignmentStrategy
-	c1416278 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODefaultClusterOwnershipAssignmentStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODefaultClusterOwnershipAssignmentStrategy.html">
+	c1416272 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODefaultClusterOwnershipAssignmentStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODefaultClusterOwnershipAssignmentStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODefaultClusterOwnershipAssignmentStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODefaultClusterOwnershipAssignmentStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.OClusterOwnershipAssignmentStrategy
-	c1416282 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.OClusterOwnershipAssignmentStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OClusterOwnershipAssignmentStrategy.html">
+	c1416280 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.OClusterOwnershipAssignmentStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OClusterOwnershipAssignmentStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OClusterOwnershipAssignmentStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OClusterOwnershipAssignmentStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.ODefaultClusterOwnershipAssignmentStrategy implements com.orientechnologies.orient.server.distributed.impl.OClusterOwnershipAssignmentStrategy
-	c1416282:p -> c1416278:p [dir=back,arrowtail=empty,style=dashed];
+	c1416280:p -> c1416272:p [dir=back,arrowtail=empty,style=dashed];
 }
 

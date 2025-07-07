@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializer<LOCAL_TYPE, DB_TYPE>
-	c2667253 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OObjectSerializer.html">
+	c2667246 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OObjectSerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OObjectSerializer&lt;LOCAL_TYPE, DB_TYPE&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.serialization.OObjectSerializerContext
-	c2667747 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializerContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../object/serialization/OObjectSerializerContext.html">
+	c2667746 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectSerializerContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../object/serialization/OObjectSerializerContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectSerializerContext </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../object/serialization/OObjectSerializerContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.object.serialization.OObjectSerializerContext implements com.orientechnologies.orient.core.serialization.serializer.object.OObjectSerializer<LOCAL_TYPE, DB_TYPE>
-	c2667253:p -> c2667747:p [dir=back,arrowtail=empty,style=dashed];
+	c2667246:p -> c2667746:p [dir=back,arrowtail=empty,style=dashed];
 }
 

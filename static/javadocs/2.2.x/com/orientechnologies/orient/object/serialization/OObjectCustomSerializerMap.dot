@@ -9,34 +9,34 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap<TYPE>
+	c2606755 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OObjectCustomSerializerMap.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OObjectCustomSerializerMap&lt;TYPE&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OObjectCustomSerializerMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer<T>
-	c2606761 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectLazyCustomSerializer.html">
+	c2606760 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectLazyCustomSerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OObjectLazyCustomSerializer&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectLazyCustomSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap<TYPE>
-	c2606763 [label=<<table title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OObjectCustomSerializerMap.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OObjectCustomSerializerMap&lt;TYPE&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OObjectCustomSerializerMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap<TYPE> extends java.util.HashMap<java.lang.Object, java.lang.Object>
-	c2607305:p -> c2606763:p [dir=back,arrowtail=empty];
+	c2607301:p -> c2606755:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap<TYPE> implements java.io.Serializable
-	c2607306:p -> c2606763:p [dir=back,arrowtail=empty,style=dashed];
+	c2607302:p -> c2606755:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap<TYPE> implements com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer<T>
-	c2606761:p -> c2606763:p [dir=back,arrowtail=empty,style=dashed];
+	c2606760:p -> c2606755:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c2607306 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c2607302 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.util.HashMap<K, V>
-	c2607305 [label=<<table title="java.util.HashMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/HashMap.html">
+	c2607301 [label=<<table title="java.util.HashMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/HashMap.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HashMap&lt;K, V&gt; </td></tr>
 		</table></td></tr>

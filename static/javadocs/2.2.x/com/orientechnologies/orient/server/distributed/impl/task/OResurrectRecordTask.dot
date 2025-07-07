@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.impl.task.OResurrectRecordTask
-	c3166007 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OResurrectRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OResurrectRecordTask.html">
+	c3165993 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OResurrectRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OResurrectRecordTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OResurrectRecordTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OResurrectRecordTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OUpdateRecordTask
-	c3166023 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OUpdateRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUpdateRecordTask.html">
+	c3165996 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OUpdateRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OUpdateRecordTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OUpdateRecordTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OUpdateRecordTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.OResurrectRecordTask extends com.orientechnologies.orient.server.distributed.impl.task.OUpdateRecordTask
-	c3166023:p -> c3166007:p [dir=back,arrowtail=empty];
+	c3165996:p -> c3165993:p [dir=back,arrowtail=empty];
 }
 

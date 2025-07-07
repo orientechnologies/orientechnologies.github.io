@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AbstractExecutionStep.html" title="com.orientechnologies.orient.core.sql.executor.AbstractExecutionStep" alt="" coords="40,17,207,42"/>
-<area shape="rect" id="node1" href="./AbstractExecutionStep.html" title="&lt;TABLE&gt;" alt="" coords="29,5,217,53"/>
-<area shape="rect" id="node2_1" href="./FetchFromClassExecutionStep.html" title="com.orientechnologies.orient.core.sql.executor.FetchFromClassExecutionStep" alt="" coords="16,113,231,138"/>
-<area shape="rect" id="node2" href="./FetchFromClassExecutionStep.html" title="&lt;TABLE&gt;" alt="" coords="5,101,241,149"/>
-</map>

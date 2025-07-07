@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3518524 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractSQLMethod.html">
+	c3518510 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractSQLMethod.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractSQLMethod </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractSQLMethod.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase
-	c3518533 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodToUpperCase.html">
+	c3518531 [label=<<table title="com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLMethodToUpperCase.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLMethodToUpperCase </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLMethodToUpperCase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.method.misc.OSQLMethodToUpperCase extends com.orientechnologies.orient.core.sql.method.misc.OAbstractSQLMethod
-	c3518524:p -> c3518533:p [dir=back,arrowtail=empty];
+	c3518510:p -> c3518531:p [dir=back,arrowtail=empty];
 }
 

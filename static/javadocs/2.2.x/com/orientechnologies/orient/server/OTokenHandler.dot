@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.OTokenHandler
-	c4179687 [label=<<table title="com.orientechnologies.orient.server.OTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OTokenHandler.html">
+	c4179671 [label=<<table title="com.orientechnologies.orient.server.OTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OTokenHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OTokenHandler </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OTokenHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.token.OrientTokenHandler
-	c4179693 [label=<<table title="com.orientechnologies.orient.server.token.OrientTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./token/OrientTokenHandler.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OrientTokenHandler </td></tr>
-		</table></td></tr>
-		</table>>, URL="./token/OrientTokenHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.token.OTokenHandlerImpl
-	c4179697 [label=<<table title="com.orientechnologies.orient.server.token.OTokenHandlerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./token/OTokenHandlerImpl.html">
+	c4179688 [label=<<table title="com.orientechnologies.orient.server.token.OTokenHandlerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./token/OTokenHandlerImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OTokenHandlerImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./token/OTokenHandlerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.server.token.OrientTokenHandler implements com.orientechnologies.orient.server.OTokenHandler
-	c4179687:p -> c4179693:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.orient.server.token.OrientTokenHandler
+	c4179690 [label=<<table title="com.orientechnologies.orient.server.token.OrientTokenHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./token/OrientTokenHandler.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OrientTokenHandler </td></tr>
+		</table></td></tr>
+		</table>>, URL="./token/OrientTokenHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.token.OTokenHandlerImpl implements com.orientechnologies.orient.server.OTokenHandler
-	c4179687:p -> c4179697:p [dir=back,arrowtail=empty,style=dashed];
+	c4179671:p -> c4179688:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.server.token.OrientTokenHandler implements com.orientechnologies.orient.server.OTokenHandler
+	c4179671:p -> c4179690:p [dir=back,arrowtail=empty,style=dashed];
 }
 

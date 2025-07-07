@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.hook.ORecordHook.TYPE
-	c3008085 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHook.TYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordHook.TYPE.html">
+	c3008081 [label=<<table title="com.orientechnologies.orient.core.hook.ORecordHook.TYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordHook.TYPE.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TYPE </td></tr>

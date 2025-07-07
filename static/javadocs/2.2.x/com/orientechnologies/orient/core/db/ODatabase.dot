@@ -9,13 +9,13 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
-	c1306919 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseSchemaAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseSchemaAware.html">
+	// com.orientechnologies.orient.core.db.ODatabase<T>
+	c1306921 [label=<<table title="com.orientechnologies.orient.core.db.ODatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabase.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ODatabaseSchemaAware&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> ODatabase&lt;T&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ODatabaseSchemaAware.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ODatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.ODatabaseInternal<T>
 	c1306936 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseInternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseInternal.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -23,41 +23,41 @@ digraph G {
 <tr><td align="center" balign="center"> ODatabaseInternal&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseInternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.db.ODatabase<T>
-	c1306937 [label=<<table title="com.orientechnologies.orient.core.db.ODatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabase.html">
+	// com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
+	c1306940 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseSchemaAware" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseSchemaAware.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ODatabase&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> ODatabaseSchemaAware&lt;T&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ODatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ODatabaseSchemaAware.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.document.ODatabaseDocument
-	c1307018 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./document/ODatabaseDocument.html">
+	c1307023 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./document/ODatabaseDocument.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODatabaseDocument </td></tr>
 		</table></td></tr>
 		</table>>, URL="./document/ODatabaseDocument.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.util.OBackupable
-	c1307986 [label=<<table title="com.orientechnologies.orient.core.util.OBackupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/OBackupable.html">
+	c1307983 [label=<<table title="com.orientechnologies.orient.core.util.OBackupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/OBackupable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OBackupable </td></tr>
 		</table></td></tr>
 		</table>>, URL="../util/OBackupable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T> implements com.orientechnologies.orient.core.db.ODatabase<T>
-	c1306937:p -> c1306919:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.db.ODatabaseInternal<T> implements com.orientechnologies.orient.core.db.ODatabase<T>
-	c1306937:p -> c1306936:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.ODatabase<T> implements com.orientechnologies.orient.core.util.OBackupable
-	c1307986:p -> c1306937:p [dir=back,arrowtail=empty,style=dashed];
+	c1307983:p -> c1306921:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.ODatabase<T> implements java.io.Closeable
-	c1308756:p -> c1306937:p [dir=back,arrowtail=empty,style=dashed];
+	c1308754:p -> c1306921:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.db.ODatabaseInternal<T> implements com.orientechnologies.orient.core.db.ODatabase<T>
+	c1306921:p -> c1306936:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T> implements com.orientechnologies.orient.core.db.ODatabase<T>
+	c1306921:p -> c1306940:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.document.ODatabaseDocument implements com.orientechnologies.orient.core.db.ODatabase<T>
-	c1306937:p -> c1307018:p [dir=back,arrowtail=empty,style=dashed];
+	c1306921:p -> c1307023:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.document.ODatabaseDocument implements com.orientechnologies.orient.core.db.ODatabaseSchemaAware<T>
-	c1306919:p -> c1307018:p [dir=back,arrowtail=empty,style=dashed];
+	c1306940:p -> c1307023:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Closeable
-	c1308756 [label=<<table title="java.io.Closeable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Closeable.html">
+	c1308754 [label=<<table title="java.io.Closeable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Closeable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Closeable </td></tr>

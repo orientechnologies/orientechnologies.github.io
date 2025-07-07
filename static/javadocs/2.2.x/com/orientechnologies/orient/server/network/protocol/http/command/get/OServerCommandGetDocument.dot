@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetDocument
-	c3740876 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetDocument.html">
+	c3740856 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetDocument" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetDocument.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandGetDocument </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandGetDocument.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract
-	c3740888 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedDbAbstract.html">
+	c3740887 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedDbAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAuthenticatedDbAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandAuthenticatedDbAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetDocument extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract
-	c3740888:p -> c3740876:p [dir=back,arrowtail=empty];
+	c3740887:p -> c3740856:p [dir=back,arrowtail=empty];
 }
 

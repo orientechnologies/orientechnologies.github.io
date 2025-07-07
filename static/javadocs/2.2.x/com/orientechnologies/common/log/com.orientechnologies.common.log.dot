@@ -15,24 +15,24 @@ digraph G {
 <tr><td align="center" balign="center"> OAnsiLogFormatter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAnsiLogFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.common.log.OLogFormatter
-	c48938 [label=<<table title="com.orientechnologies.common.log.OLogFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLogFormatter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLogFormatter </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLogFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.log.OLogManager
-	c48939 [label=<<table title="com.orientechnologies.common.log.OLogManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLogManager.html">
+	c48938 [label=<<table title="com.orientechnologies.common.log.OLogManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLogManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLogManager </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLogManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.log.OLogManager.ShutdownLogManager
-	c48940 [label=<<table title="com.orientechnologies.common.log.OLogManager.ShutdownLogManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLogManager.ShutdownLogManager.html">
+	c48939 [label=<<table title="com.orientechnologies.common.log.OLogManager.ShutdownLogManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLogManager.ShutdownLogManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ShutdownLogManager </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLogManager.ShutdownLogManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.common.log.OLogFormatter
+	c48940 [label=<<table title="com.orientechnologies.common.log.OLogFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLogFormatter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLogFormatter </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLogFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.common.log.OAnsiCode
 	c48941 [label=<<table title="com.orientechnologies.common.log.OAnsiCode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAnsiCode.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -41,6 +41,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OAnsiCode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.common.log.OAnsiLogFormatter extends com.orientechnologies.common.log.OLogFormatter
-	c48938:p -> c48937:p [dir=back,arrowtail=empty];
+	c48940:p -> c48937:p [dir=back,arrowtail=empty];
 }
 

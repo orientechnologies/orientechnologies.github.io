@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.RecordReader
-	c1329378 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.RecordReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseDocumentTx.RecordReader.html">
+	c1329370 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.RecordReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODatabaseDocumentTx.RecordReader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RecordReader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseDocumentTx.RecordReader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.SimpleRecordReader
-	c1329379 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.SimpleRecordReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseDocumentTx.SimpleRecordReader.html">
+	c1329371 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.SimpleRecordReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseDocumentTx.SimpleRecordReader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SimpleRecordReader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseDocumentTx.SimpleRecordReader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.LatestVersionRecordReader
-	c1329380 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.LatestVersionRecordReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseDocumentTx.LatestVersionRecordReader.html">
+	c1329372 [label=<<table title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.LatestVersionRecordReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODatabaseDocumentTx.LatestVersionRecordReader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LatestVersionRecordReader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODatabaseDocumentTx.LatestVersionRecordReader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.SimpleRecordReader implements com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.RecordReader
-	c1329378:p -> c1329379:p [dir=back,arrowtail=empty,style=dashed];
+	c1329370:p -> c1329371:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.LatestVersionRecordReader implements com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.RecordReader
-	c1329378:p -> c1329380:p [dir=back,arrowtail=empty,style=dashed];
+	c1329370:p -> c1329372:p [dir=back,arrowtail=empty,style=dashed];
 }
 

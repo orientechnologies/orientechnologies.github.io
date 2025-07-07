@@ -9,27 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStaticContent
-	c3704298 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStaticContent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandGetStaticContent.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OServerCommandGetStaticContent </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OServerCommandGetStaticContent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandConfigurableAbstract
-	c3704303 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandConfigurableAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandConfigurableAbstract.html">
+	c3704288 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandConfigurableAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandConfigurableAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandConfigurableAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandConfigurableAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStaticContent
+	c3704301 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStaticContent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandGetStaticContent.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OServerCommandGetStaticContent </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OServerCommandGetStaticContent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract
-	c3704314 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAbstract.html">
+	c3704312 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStaticContent extends com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandConfigurableAbstract
-	c3704303:p -> c3704298:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandConfigurableAbstract extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract
-	c3704314:p -> c3704303:p [dir=back,arrowtail=empty];
+	c3704312:p -> c3704288:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetStaticContent extends com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandConfigurableAbstract
+	c3704288:p -> c3704301:p [dir=back,arrowtail=empty];
 }
 

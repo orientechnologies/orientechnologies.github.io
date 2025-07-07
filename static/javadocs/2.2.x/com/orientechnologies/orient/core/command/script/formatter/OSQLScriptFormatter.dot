@@ -9,20 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.command.script.formatter.OSQLScriptFormatter
-	c3538515 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OSQLScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLScriptFormatter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OSQLScriptFormatter </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLScriptFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter
-	c3538517 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScriptFormatter.html">
+	c3538509 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScriptFormatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OScriptFormatter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OScriptFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.script.formatter.OSQLScriptFormatter
+	c3538510 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OSQLScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLScriptFormatter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OSQLScriptFormatter </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLScriptFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.command.script.formatter.OSQLScriptFormatter implements com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter
-	c3538517:p -> c3538515:p [dir=back,arrowtail=empty,style=dashed];
+	c3538509:p -> c3538510:p [dir=back,arrowtail=empty,style=dashed];
 }
 

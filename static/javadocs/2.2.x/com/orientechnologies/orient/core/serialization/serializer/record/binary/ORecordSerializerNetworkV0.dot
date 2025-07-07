@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerNetworkV0
-	c3081771 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerNetworkV0" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializerNetworkV0.html">
+	c3081774 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerNetworkV0" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORecordSerializerNetworkV0.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORecordSerializerNetworkV0 </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORecordSerializerNetworkV0.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.serialization.serializer.record.binary.ODocumentSerializer
-	c3081781 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ODocumentSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODocumentSerializer.html">
+	c3081775 [label=<<table title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ODocumentSerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODocumentSerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODocumentSerializer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODocumentSerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerNetworkV0 implements com.orientechnologies.orient.core.serialization.serializer.record.binary.ODocumentSerializer
-	c3081781:p -> c3081771:p [dir=back,arrowtail=empty,style=dashed];
+	c3081775:p -> c3081774:p [dir=back,arrowtail=empty,style=dashed];
 }
 

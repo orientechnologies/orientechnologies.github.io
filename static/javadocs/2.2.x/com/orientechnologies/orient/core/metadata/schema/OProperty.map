@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OImmutableProperty.html" title="com.orientechnologies.orient.core.metadata.schema.OImmutableProperty" alt="" coords="16,219,172,245"/>
-<area shape="rect" id="node1" href="./OImmutableProperty.html" title="&lt;TABLE&gt;" alt="" coords="5,208,183,256"/>
-<area shape="rect" id="node2_1" href="./OPropertyAbstractDelegate.html" title="com.orientechnologies.orient.core.metadata.schema.OPropertyAbstractDelegate" alt="" coords="218,219,415,245"/>
-<area shape="rect" id="node2" href="./OPropertyAbstractDelegate.html" title="&lt;TABLE&gt;" alt="" coords="207,208,426,256"/>
-<area shape="rect" id="node3_2" href="./OPropertyImpl.html" title="com.orientechnologies.orient.core.metadata.schema.OPropertyImpl" alt="" coords="461,219,575,245"/>
-<area shape="rect" id="node3" href="./OPropertyImpl.html" title="&lt;TABLE&gt;" alt="" coords="451,208,585,256"/>
-<area shape="rect" id="node4_3" href="./OProperty.html" title="com.orientechnologies.orient.core.metadata.schema.OProperty" alt="" coords="270,112,363,155"/>
-<area shape="rect" id="node4" href="./OProperty.html" title="&lt;TABLE&gt;" alt="" coords="259,107,374,160"/>
-<area shape="rect" id="node5_4" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Comparable.html" title="java.lang.Comparable" alt="" coords="253,11,381,53"/>
-<area shape="rect" id="node5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Comparable.html" title="&lt;TABLE&gt;" alt="" coords="242,5,391,59"/>
+<area shape="rect" id="node1_0" href="./OProperty.html" title="com.orientechnologies.orient.core.metadata.schema.OProperty" alt="" coords="206,112,299,155"/>
+<area shape="rect" id="node1" href="./OProperty.html" title="&lt;TABLE&gt;" alt="" coords="195,107,310,160"/>
+<area shape="rect" id="node2_1" href="./OPropertyImpl.html" title="com.orientechnologies.orient.core.metadata.schema.OPropertyImpl" alt="" coords="16,219,129,245"/>
+<area shape="rect" id="node2" href="./OPropertyImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,208,140,256"/>
+<area shape="rect" id="node3_2" href="./OImmutableProperty.html" title="com.orientechnologies.orient.core.metadata.schema.OImmutableProperty" alt="" coords="175,219,331,245"/>
+<area shape="rect" id="node3" href="./OImmutableProperty.html" title="&lt;TABLE&gt;" alt="" coords="164,208,341,256"/>
+<area shape="rect" id="node4_3" href="./OPropertyAbstractDelegate.html" title="com.orientechnologies.orient.core.metadata.schema.OPropertyAbstractDelegate" alt="" coords="377,219,574,245"/>
+<area shape="rect" id="node4" href="./OPropertyAbstractDelegate.html" title="&lt;TABLE&gt;" alt="" coords="366,208,585,256"/>
+<area shape="rect" id="node5_4" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Comparable.html" title="java.lang.Comparable" alt="" coords="189,11,317,53"/>
+<area shape="rect" id="node5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Comparable.html" title="&lt;TABLE&gt;" alt="" coords="178,5,327,59"/>
 </map>

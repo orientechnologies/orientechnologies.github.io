@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetDatabase
-	c3734774 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetDatabase.html">
+	c3734770 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetDatabase.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandGetDatabase </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandGetDatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnect
-	c3734790 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnect" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandGetConnect.html">
+	c3734775 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnect" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandGetConnect.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandGetConnect </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandGetConnect.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetDatabase extends com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnect
-	c3734790:p -> c3734774:p [dir=back,arrowtail=empty];
+	c3734775:p -> c3734770:p [dir=back,arrowtail=empty];
 }
 

@@ -9,35 +9,35 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServer
-	c3732738 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandGetServer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OServerCommandGetServer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OServerCommandGetServer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnections
-	c3732741 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnections" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetConnections.html">
+	c3732732 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnections" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OServerCommandGetConnections.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandGetConnections </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandGetConnections.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServerVersion
-	c3732750 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServerVersion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandGetServerVersion.html">
+	c3732735 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServerVersion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandGetServerVersion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OServerCommandGetServerVersion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OServerCommandGetServerVersion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServer
+	c3732752 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OServerCommandGetServer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OServerCommandGetServer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OServerCommandGetServer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract
-	c3732763 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedServerAbstract.html">
+	c3732753 [label=<<table title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../OServerCommandAuthenticatedServerAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OServerCommandAuthenticatedServerAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../OServerCommandAuthenticatedServerAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServer extends com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnections
-	c3732741:p -> c3732738:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnections extends com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract
-	c3732763:p -> c3732741:p [dir=back,arrowtail=empty];
+	c3732753:p -> c3732732:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServerVersion extends com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnections
-	c3732741:p -> c3732750:p [dir=back,arrowtail=empty];
+	c3732732:p -> c3732735:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetServer extends com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetConnections
+	c3732732:p -> c3732752:p [dir=back,arrowtail=empty];
 }
 

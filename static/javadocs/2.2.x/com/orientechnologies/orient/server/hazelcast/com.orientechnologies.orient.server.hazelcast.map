@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ONetworkSimulator.html" title="com.orientechnologies.orient.server.hazelcast.ONetworkSimulator" alt="" coords="16,17,164,42"/>
-<area shape="rect" id="node1" href="./ONetworkSimulator.html" title="&lt;TABLE&gt;" alt="" coords="5,5,175,53"/>
-<area shape="rect" id="node2_1" href="./OHazelcastPlugin.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastPlugin" alt="" coords="210,17,343,42"/>
-<area shape="rect" id="node2" href="./OHazelcastPlugin.html" title="&lt;TABLE&gt;" alt="" coords="199,5,354,53"/>
-<area shape="rect" id="node3_2" href="./OHazelcastDistributedMap.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastDistributedMap" alt="" coords="389,17,583,42"/>
-<area shape="rect" id="node3" href="./OHazelcastDistributedMap.html" title="&lt;TABLE&gt;" alt="" coords="379,5,593,53"/>
-<area shape="rect" id="node4_3" href="./OHazelcastMergeStrategy.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy" alt="" coords="629,17,818,42"/>
-<area shape="rect" id="node4" href="./OHazelcastMergeStrategy.html" title="&lt;TABLE&gt;" alt="" coords="618,5,829,53"/>
+<area shape="rect" id="node1_0" href="./OHazelcastMergeStrategy.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy" alt="" coords="16,17,205,42"/>
+<area shape="rect" id="node1" href="./OHazelcastMergeStrategy.html" title="&lt;TABLE&gt;" alt="" coords="5,5,216,53"/>
+<area shape="rect" id="node2_1" href="./ONetworkSimulator.html" title="com.orientechnologies.orient.server.hazelcast.ONetworkSimulator" alt="" coords="251,17,399,42"/>
+<area shape="rect" id="node2" href="./ONetworkSimulator.html" title="&lt;TABLE&gt;" alt="" coords="241,5,410,53"/>
+<area shape="rect" id="node3_2" href="./OHazelcastPlugin.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastPlugin" alt="" coords="445,17,579,42"/>
+<area shape="rect" id="node3" href="./OHazelcastPlugin.html" title="&lt;TABLE&gt;" alt="" coords="435,5,589,53"/>
+<area shape="rect" id="node4_3" href="./OHazelcastDistributedMap.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastDistributedMap" alt="" coords="625,17,818,42"/>
+<area shape="rect" id="node4" href="./OHazelcastDistributedMap.html" title="&lt;TABLE&gt;" alt="" coords="614,5,829,53"/>
 </map>

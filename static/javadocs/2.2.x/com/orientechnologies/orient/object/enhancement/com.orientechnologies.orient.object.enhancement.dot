@@ -10,34 +10,34 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.object.enhancement.OObjectEntityEnhancer
-	c294078 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectEntityEnhancer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectEntityEnhancer.html">
+	c294077 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectEntityEnhancer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectEntityEnhancer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectEntityEnhancer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectEntityEnhancer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.enhancement.OObjectProxyMethodHandler
-	c294079 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectProxyMethodHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectProxyMethodHandler.html">
+	c294078 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectProxyMethodHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectProxyMethodHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectProxyMethodHandler </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectProxyMethodHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.object.enhancement.OObjectMethodFilter
-	c294080 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectMethodFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectMethodFilter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OObjectMethodFilter </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OObjectMethodFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.enhancement.OObjectEntitySerializer
-	c294081 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectEntitySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectEntitySerializer.html">
+	c294079 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectEntitySerializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectEntitySerializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectEntitySerializer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectEntitySerializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.object.enhancement.OObjectEntitySerializer.OObjectEntitySerializedSchema
-	c294082 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectEntitySerializer.OObjectEntitySerializedSchema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectEntitySerializer.OObjectEntitySerializedSchema.html">
+	c294080 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectEntitySerializer.OObjectEntitySerializedSchema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectEntitySerializer.OObjectEntitySerializedSchema.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OObjectEntitySerializedSchema </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OObjectEntitySerializer.OObjectEntitySerializedSchema.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.object.enhancement.OObjectMethodFilter
+	c294081 [label=<<table title="com.orientechnologies.orient.object.enhancement.OObjectMethodFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OObjectMethodFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OObjectMethodFilter </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OObjectMethodFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

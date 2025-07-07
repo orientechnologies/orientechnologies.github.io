@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.tinkerpop.rexster.OrientGraphConfiguration
-	c373638 [label=<<table title="com.tinkerpop.rexster.OrientGraphConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientGraphConfiguration.html">
+	c373637 [label=<<table title="com.tinkerpop.rexster.OrientGraphConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrientGraphConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OrientGraphConfiguration </td></tr>
 		</table></td></tr>

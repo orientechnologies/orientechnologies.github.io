@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter
-	c3201191 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScriptFormatter.html">
+	c3201184 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OScriptFormatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OScriptFormatter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OScriptFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.script.formatter.ORubyScriptFormatter
-	c3201193 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.ORubyScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORubyScriptFormatter.html">
+	c3201186 [label=<<table title="com.orientechnologies.orient.core.command.script.formatter.ORubyScriptFormatter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ORubyScriptFormatter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ORubyScriptFormatter </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORubyScriptFormatter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.command.script.formatter.ORubyScriptFormatter implements com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter
-	c3201191:p -> c3201193:p [dir=back,arrowtail=empty,style=dashed];
+	c3201184:p -> c3201186:p [dir=back,arrowtail=empty,style=dashed];
 }
 

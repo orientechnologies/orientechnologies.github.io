@@ -9,181 +9,181 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.command.OCommandExecutor
-	c112205 [label=<<table title="com.orientechnologies.orient.core.command.OCommandExecutor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutor.html">
+	// com.orientechnologies.orient.core.command.OCommandRequestInternal
+	c112205 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestInternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestInternal.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OCommandExecutor </td></tr>
+<tr><td align="center" balign="center"> OCommandRequestInternal </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandExecutor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandExecutorNotFoundException
-	c112206 [label=<<table title="com.orientechnologies.orient.core.command.OCommandExecutorNotFoundException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorNotFoundException.html">
+		</table>>, URL="./OCommandRequestInternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.OCommandManager
+	c112206 [label=<<table title="com.orientechnologies.orient.core.command.OCommandManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandExecutorNotFoundException </td></tr>
+<tr><td align="center" balign="center"> OCommandManager </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandExecutorNotFoundException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OBasicCommandContext
-	c112207 [label=<<table title="com.orientechnologies.orient.core.command.OBasicCommandContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBasicCommandContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OBasicCommandContext </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OBasicCommandContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OCommandManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandPredicate
-	c112208 [label=<<table title="com.orientechnologies.orient.core.command.OCommandPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandPredicate.html">
+	c112207 [label=<<table title="com.orientechnologies.orient.core.command.OCommandPredicate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandPredicate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandPredicate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandPredicate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandContext
-	c112209 [label=<<table title="com.orientechnologies.orient.core.command.OCommandContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandContext.html">
+	// com.orientechnologies.orient.core.command.OCommandOutputListener
+	c112208 [label=<<table title="com.orientechnologies.orient.core.command.OCommandOutputListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandOutputListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OCommandContext </td></tr>
+<tr><td align="center" balign="center"> OCommandOutputListener </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandContext.TIMEOUT_STRATEGY
-	c112210 [label=<<table title="com.orientechnologies.orient.core.command.OCommandContext.TIMEOUT_STRATEGY" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandContext.TIMEOUT_STRATEGY.html">
+		</table>>, URL="./OCommandOutputListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.OCommandExecutorAbstract
+	c112209 [label=<<table title="com.orientechnologies.orient.core.command.OCommandExecutorAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> TIMEOUT_STRATEGY </td></tr>
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorAbstract </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandContext.TIMEOUT_STRATEGY.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OCommandExecutorAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.OCommandRequestTextAbstract
+	c112210 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestTextAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestTextAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandRequestTextAbstract </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandRequestTextAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.ODocumentEqualityWrapper
 	c112211 [label=<<table title="com.orientechnologies.orient.core.command.ODocumentEqualityWrapper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODocumentEqualityWrapper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODocumentEqualityWrapper </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODocumentEqualityWrapper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandRequestInternal
-	c112212 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestInternal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestInternal.html">
+	// com.orientechnologies.orient.core.command.OCommandContext
+	c112212 [label=<<table title="com.orientechnologies.orient.core.command.OCommandContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OCommandRequestInternal </td></tr>
+<tr><td align="center" balign="center"> OCommandContext </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandRequestInternal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OCommandContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.OCommandContext.TIMEOUT_STRATEGY
+	c112213 [label=<<table title="com.orientechnologies.orient.core.command.OCommandContext.TIMEOUT_STRATEGY" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandContext.TIMEOUT_STRATEGY.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> TIMEOUT_STRATEGY </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandContext.TIMEOUT_STRATEGY.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.ODistributedCommand
+	c112214 [label=<<table title="com.orientechnologies.orient.core.command.ODistributedCommand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedCommand.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ODistributedCommand </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODistributedCommand.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandRequestAbstract
-	c112213 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestAbstract.html">
+	c112215 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandRequestAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandRequestAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandOutputListener
-	c112214 [label=<<table title="com.orientechnologies.orient.core.command.OCommandOutputListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandOutputListener.html">
+	// com.orientechnologies.orient.core.command.OCommandExecutor
+	c112216 [label=<<table title="com.orientechnologies.orient.core.command.OCommandExecutor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OCommandOutputListener </td></tr>
+<tr><td align="center" balign="center"> OCommandExecutor </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandOutputListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OCommandExecutor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest
-	c112215 [label=<<table title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandDistributedReplicateRequest.html">
+	c112217 [label=<<table title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandDistributedReplicateRequest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandDistributedReplicateRequest </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandDistributedReplicateRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.DISTRIBUTED_EXECUTION_MODE
-	c112216 [label=<<table title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.DISTRIBUTED_EXECUTION_MODE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandDistributedReplicateRequest.DISTRIBUTED_EXECUTION_MODE.html">
+	c112218 [label=<<table title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.DISTRIBUTED_EXECUTION_MODE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandDistributedReplicateRequest.DISTRIBUTED_EXECUTION_MODE.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> DISTRIBUTED_EXECUTION_MODE </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandDistributedReplicateRequest.DISTRIBUTED_EXECUTION_MODE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.DISTRIBUTED_RESULT_MGMT
-	c112217 [label=<<table title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.DISTRIBUTED_RESULT_MGMT" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandDistributedReplicateRequest.DISTRIBUTED_RESULT_MGMT.html">
+	c112219 [label=<<table title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.DISTRIBUTED_RESULT_MGMT" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandDistributedReplicateRequest.DISTRIBUTED_RESULT_MGMT.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> DISTRIBUTED_RESULT_MGMT </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandDistributedReplicateRequest.DISTRIBUTED_RESULT_MGMT.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.QUORUM_TYPE
-	c112218 [label=<<table title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.QUORUM_TYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandDistributedReplicateRequest.QUORUM_TYPE.html">
+	c112220 [label=<<table title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest.QUORUM_TYPE" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandDistributedReplicateRequest.QUORUM_TYPE.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> QUORUM_TYPE </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandDistributedReplicateRequest.QUORUM_TYPE.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandProcess<C extends com.orientechnologies.orient.core.command.OCommand, T, R>
-	c112219 [label=<<table title="com.orientechnologies.orient.core.command.OCommandProcess" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandProcess.html">
+	// com.orientechnologies.orient.core.command.OCommandRequestAsynch
+	c112221 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestAsynch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestAsynch.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandProcess&lt;C extends OCommand, T, R&gt; </font></td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OCommandRequestAsynch </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OCommandProcess.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OCommandRequestAsynch.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.OCommandRequest
+	c112222 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequest.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OCommandRequest </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.OCommandExecutorNotFoundException
+	c112223 [label=<<table title="com.orientechnologies.orient.core.command.OCommandExecutorNotFoundException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorNotFoundException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCommandExecutorNotFoundException </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandExecutorNotFoundException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandRequestText
-	c112220 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestText" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestText.html">
+	c112224 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestText" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestText.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandRequestText </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandRequestText.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommandResultListener
-	c112221 [label=<<table title="com.orientechnologies.orient.core.command.OCommandResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandResultListener.html">
+	c112225 [label=<<table title="com.orientechnologies.orient.core.command.OCommandResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandResultListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommandResultListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommandResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.command.OCommandProcess<C extends com.orientechnologies.orient.core.command.OCommand, T, R>
+	c112226 [label=<<table title="com.orientechnologies.orient.core.command.OCommandProcess" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandProcess.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandProcess&lt;C extends OCommand, T, R&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCommandProcess.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.command.OCommand
-	c112222 [label=<<table title="com.orientechnologies.orient.core.command.OCommand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommand.html">
+	c112227 [label=<<table title="com.orientechnologies.orient.core.command.OCommand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommand.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCommand </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCommand.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.ODistributedCommand
-	c112223 [label=<<table title="com.orientechnologies.orient.core.command.ODistributedCommand" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedCommand.html">
+	// com.orientechnologies.orient.core.command.OBasicCommandContext
+	c112228 [label=<<table title="com.orientechnologies.orient.core.command.OBasicCommandContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OBasicCommandContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ODistributedCommand </td></tr>
+<tr><td align="center" balign="center"> OBasicCommandContext </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ODistributedCommand.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandRequestAsynch
-	c112224 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestAsynch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestAsynch.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OCommandRequestAsynch </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandRequestAsynch.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandManager
-	c112225 [label=<<table title="com.orientechnologies.orient.core.command.OCommandManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandManager.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCommandManager </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandRequestTextAbstract
-	c112226 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequestTextAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequestTextAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandRequestTextAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandRequestTextAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandRequest
-	c112227 [label=<<table title="com.orientechnologies.orient.core.command.OCommandRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandRequest.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OCommandRequest </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.command.OCommandExecutorAbstract
-	c112228 [label=<<table title="com.orientechnologies.orient.core.command.OCommandExecutorAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCommandExecutorAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OCommandExecutorAbstract </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCommandExecutorAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.core.command.OBasicCommandContext implements com.orientechnologies.orient.core.command.OCommandContext
-	c112209:p -> c112207:p [dir=back,arrowtail=empty,style=dashed];
+		</table>>, URL="./OBasicCommandContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.command.OCommandRequestInternal implements com.orientechnologies.orient.core.command.OCommandRequest
-	c112227:p -> c112212:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.command.OCommandRequestAbstract implements com.orientechnologies.orient.core.command.OCommandRequestInternal
-	c112212:p -> c112213:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.command.OCommandRequestAbstract implements com.orientechnologies.orient.core.command.ODistributedCommand
-	c112223:p -> c112213:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.command.OCommandRequestText implements com.orientechnologies.orient.core.command.OCommandRequestInternal
-	c112212:p -> c112220:p [dir=back,arrowtail=empty,style=dashed];
-	//com.orientechnologies.orient.core.command.OCommandRequestTextAbstract extends com.orientechnologies.orient.core.command.OCommandRequestAbstract
-	c112213:p -> c112226:p [dir=back,arrowtail=empty];
-	//com.orientechnologies.orient.core.command.OCommandRequestTextAbstract implements com.orientechnologies.orient.core.command.OCommandRequestText
-	c112220:p -> c112226:p [dir=back,arrowtail=empty,style=dashed];
+	c112222:p -> c112205:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.command.OCommandExecutorAbstract implements com.orientechnologies.orient.core.command.OCommandExecutor
-	c112205:p -> c112228:p [dir=back,arrowtail=empty,style=dashed];
+	c112216:p -> c112209:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.command.OCommandRequestTextAbstract extends com.orientechnologies.orient.core.command.OCommandRequestAbstract
+	c112215:p -> c112210:p [dir=back,arrowtail=empty];
+	//com.orientechnologies.orient.core.command.OCommandRequestTextAbstract implements com.orientechnologies.orient.core.command.OCommandRequestText
+	c112224:p -> c112210:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.command.OCommandRequestAbstract implements com.orientechnologies.orient.core.command.OCommandRequestInternal
+	c112205:p -> c112215:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.command.OCommandRequestAbstract implements com.orientechnologies.orient.core.command.ODistributedCommand
+	c112214:p -> c112215:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.command.OCommandRequestText implements com.orientechnologies.orient.core.command.OCommandRequestInternal
+	c112205:p -> c112224:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.core.command.OBasicCommandContext implements com.orientechnologies.orient.core.command.OCommandContext
+	c112212:p -> c112228:p [dir=back,arrowtail=empty,style=dashed];
 }
 

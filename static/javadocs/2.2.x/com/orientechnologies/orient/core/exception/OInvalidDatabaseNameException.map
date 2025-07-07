@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../common/exception/OException.html" title="com.orientechnologies.common.exception.OException" alt="" coords="16,19,109,45"/>
-<area shape="rect" id="node1" href="../../../common/exception/OException.html" title="&lt;TABLE&gt;" alt="" coords="5,8,120,56"/>
-<area shape="rect" id="node3_1" href="./OInvalidDatabaseNameException.html" title="com.orientechnologies.orient.core.exception.OInvalidDatabaseNameException" alt="" coords="29,118,267,143"/>
-<area shape="rect" id="node3" href="./OInvalidDatabaseNameException.html" title="&lt;TABLE&gt;" alt="" coords="18,107,278,155"/>
-<area shape="rect" id="node2_2" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="155,11,314,53"/>
-<area shape="rect" id="node2" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="145,5,325,59"/>
-</map>

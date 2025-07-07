@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ODiskWriteAheadLog
-	c1488645 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ODiskWriteAheadLog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODiskWriteAheadLog.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODiskWriteAheadLog </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODiskWriteAheadLog.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog
-	c1488671 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractWriteAheadLog.html">
+	c1488648 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractWriteAheadLog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractWriteAheadLog </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractWriteAheadLog.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ODiskWriteAheadLog
+	c1488655 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ODiskWriteAheadLog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODiskWriteAheadLog.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODiskWriteAheadLog </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODiskWriteAheadLog.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ODiskWriteAheadLog extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog
-	c1488671:p -> c1488645:p [dir=back,arrowtail=empty];
+	c1488648:p -> c1488655:p [dir=back,arrowtail=empty];
 }
 

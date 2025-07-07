@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OBinaryCompareOperator.html" title="com.orientechnologies.orient.core.sql.parser.OBinaryCompareOperator" alt="" coords="16,11,204,53"/>
-<area shape="rect" id="node1" href="./OBinaryCompareOperator.html" title="&lt;TABLE&gt;" alt="" coords="5,5,215,59"/>
-<area shape="rect" id="node3_1" href="./OLeOperator.html" title="com.orientechnologies.orient.core.sql.parser.OLeOperator" alt="" coords="154,118,255,143"/>
-<area shape="rect" id="node3" href="./OLeOperator.html" title="&lt;TABLE&gt;" alt="" coords="143,107,266,155"/>
-<area shape="rect" id="node2_2" href="./SimpleNode.html" title="com.orientechnologies.orient.core.sql.parser.SimpleNode" alt="" coords="250,19,349,45"/>
-<area shape="rect" id="node2" href="./SimpleNode.html" title="&lt;TABLE&gt;" alt="" coords="239,8,359,56"/>
+<area shape="rect" id="node1_0" href="./OLeOperator.html" title="com.orientechnologies.orient.core.sql.parser.OLeOperator" alt="" coords="109,118,211,143"/>
+<area shape="rect" id="node1" href="./OLeOperator.html" title="&lt;TABLE&gt;" alt="" coords="99,107,221,155"/>
+<area shape="rect" id="node2_1" href="./SimpleNode.html" title="com.orientechnologies.orient.core.sql.parser.SimpleNode" alt="" coords="16,19,115,45"/>
+<area shape="rect" id="node2" href="./SimpleNode.html" title="&lt;TABLE&gt;" alt="" coords="5,8,125,56"/>
+<area shape="rect" id="node3_2" href="./OBinaryCompareOperator.html" title="com.orientechnologies.orient.core.sql.parser.OBinaryCompareOperator" alt="" coords="161,11,349,53"/>
+<area shape="rect" id="node3" href="./OBinaryCompareOperator.html" title="&lt;TABLE&gt;" alt="" coords="150,5,359,59"/>
 </map>

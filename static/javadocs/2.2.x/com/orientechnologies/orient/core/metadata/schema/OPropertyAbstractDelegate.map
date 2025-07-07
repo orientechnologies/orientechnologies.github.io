@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OPropertyAbstractDelegate.html" title="com.orientechnologies.orient.core.metadata.schema.OPropertyAbstractDelegate" alt="" coords="16,118,213,143"/>
-<area shape="rect" id="node1" href="./OPropertyAbstractDelegate.html" title="&lt;TABLE&gt;" alt="" coords="5,107,224,155"/>
-<area shape="rect" id="node3_1" href="../../../../../tinkerpop/blueprints/impls/orient/OrientVertexType.OrientVertexProperty.html" title="com.tinkerpop.blueprints.impls.orient.OrientVertexType.OrientVertexProperty" alt="" coords="37,214,193,239"/>
+<area shape="rect" id="node1_0" href="./OProperty.html" title="com.orientechnologies.orient.core.metadata.schema.OProperty" alt="" coords="68,11,161,53"/>
+<area shape="rect" id="node1" href="./OProperty.html" title="&lt;TABLE&gt;" alt="" coords="57,5,172,59"/>
+<area shape="rect" id="node2_1" href="./OPropertyAbstractDelegate.html" title="com.orientechnologies.orient.core.metadata.schema.OPropertyAbstractDelegate" alt="" coords="16,118,213,143"/>
+<area shape="rect" id="node2" href="./OPropertyAbstractDelegate.html" title="&lt;TABLE&gt;" alt="" coords="5,107,224,155"/>
+<area shape="rect" id="node3_2" href="../../../../../tinkerpop/blueprints/impls/orient/OrientVertexType.OrientVertexProperty.html" title="com.tinkerpop.blueprints.impls.orient.OrientVertexType.OrientVertexProperty" alt="" coords="37,214,193,239"/>
 <area shape="rect" id="node3" href="../../../../../tinkerpop/blueprints/impls/orient/OrientVertexType.OrientVertexProperty.html" title="&lt;TABLE&gt;" alt="" coords="26,203,203,251"/>
-<area shape="rect" id="node2_2" href="./OProperty.html" title="com.orientechnologies.orient.core.metadata.schema.OProperty" alt="" coords="68,11,161,53"/>
-<area shape="rect" id="node2" href="./OProperty.html" title="&lt;TABLE&gt;" alt="" coords="57,5,172,59"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OAbstractLock.html" title="com.orientechnologies.common.concur.lock.OAbstractLock" alt="" coords="18,118,131,143"/>
-<area shape="rect" id="node1" href="./OAbstractLock.html" title="&lt;TABLE&gt;" alt="" coords="7,107,142,155"/>
-<area shape="rect" id="node2_1" href="./OAdaptiveLock.html" title="com.orientechnologies.common.concur.lock.OAdaptiveLock" alt="" coords="16,214,133,239"/>
+<area shape="rect" id="node1_0" href="./OLock.html" title="com.orientechnologies.common.concur.lock.OLock" alt="" coords="28,11,121,53"/>
+<area shape="rect" id="node1" href="./OLock.html" title="&lt;TABLE&gt;" alt="" coords="17,5,132,59"/>
+<area shape="rect" id="node3_1" href="./OAbstractLock.html" title="com.orientechnologies.common.concur.lock.OAbstractLock" alt="" coords="18,118,131,143"/>
+<area shape="rect" id="node3" href="./OAbstractLock.html" title="&lt;TABLE&gt;" alt="" coords="7,107,142,155"/>
+<area shape="rect" id="node2_2" href="./OAdaptiveLock.html" title="com.orientechnologies.common.concur.lock.OAdaptiveLock" alt="" coords="16,214,133,239"/>
 <area shape="rect" id="node2" href="./OAdaptiveLock.html" title="&lt;TABLE&gt;" alt="" coords="5,203,144,251"/>
-<area shape="rect" id="node3_2" href="./OLock.html" title="com.orientechnologies.common.concur.lock.OLock" alt="" coords="28,11,121,53"/>
-<area shape="rect" id="node3" href="./OLock.html" title="&lt;TABLE&gt;" alt="" coords="17,5,132,59"/>
 </map>

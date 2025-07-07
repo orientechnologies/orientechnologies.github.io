@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.collate.ODefaultCollateFactory
-	c950029 [label=<<table title="com.orientechnologies.orient.core.collate.ODefaultCollateFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultCollateFactory.html">
+	c950026 [label=<<table title="com.orientechnologies.orient.core.collate.ODefaultCollateFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODefaultCollateFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODefaultCollateFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODefaultCollateFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.collate.OCollateFactory
-	c950031 [label=<<table title="com.orientechnologies.orient.core.collate.OCollateFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCollateFactory.html">
+	c950029 [label=<<table title="com.orientechnologies.orient.core.collate.OCollateFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCollateFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCollateFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCollateFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.collate.ODefaultCollateFactory implements com.orientechnologies.orient.core.collate.OCollateFactory
-	c950031:p -> c950029:p [dir=back,arrowtail=empty,style=dashed];
+	c950029:p -> c950026:p [dir=back,arrowtail=empty,style=dashed];
 }
 

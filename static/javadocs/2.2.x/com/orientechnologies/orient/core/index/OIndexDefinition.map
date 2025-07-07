@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OIndexCallback.html" title="com.orientechnologies.orient.core.index.OIndexCallback" alt="" coords="171,11,293,53"/>
-<area shape="rect" id="node1" href="./OIndexCallback.html" title="&lt;TABLE&gt;" alt="" coords="161,5,303,59"/>
-<area shape="rect" id="node3_1" href="./OIndexDefinition.html" title="com.orientechnologies.orient.core.index.OIndexDefinition" alt="" coords="168,112,296,155"/>
-<area shape="rect" id="node3" href="./OIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="157,107,307,160"/>
-<area shape="rect" id="node2_2" href="./OIndexDefinitionMultiValue.html" title="com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue" alt="" coords="16,213,213,256"/>
-<area shape="rect" id="node2" href="./OIndexDefinitionMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="5,208,224,261"/>
-<area shape="rect" id="node4_3" href="./OAbstractIndexDefinition.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" alt="" coords="259,222,443,247"/>
-<area shape="rect" id="node4" href="./OAbstractIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="248,211,453,259"/>
+<area shape="rect" id="node1_0" href="./OIndexDefinition.html" title="com.orientechnologies.orient.core.index.OIndexDefinition" alt="" coords="161,112,289,155"/>
+<area shape="rect" id="node1" href="./OIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="151,107,300,160"/>
+<area shape="rect" id="node2_1" href="./OAbstractIndexDefinition.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" alt="" coords="16,222,200,247"/>
+<area shape="rect" id="node2" href="./OAbstractIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="5,211,211,259"/>
+<area shape="rect" id="node4_2" href="./OIndexDefinitionMultiValue.html" title="com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue" alt="" coords="245,213,443,256"/>
+<area shape="rect" id="node4" href="./OIndexDefinitionMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="235,208,453,261"/>
+<area shape="rect" id="node3_3" href="./OIndexCallback.html" title="com.orientechnologies.orient.core.index.OIndexCallback" alt="" coords="165,11,286,53"/>
+<area shape="rect" id="node3" href="./OIndexCallback.html" title="&lt;TABLE&gt;" alt="" coords="154,5,297,59"/>
 </map>

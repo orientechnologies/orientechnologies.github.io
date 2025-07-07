@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.network.protocol.ONetworkProtocol
-	c2570336 [label=<<table title="com.orientechnologies.orient.server.network.protocol.ONetworkProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ONetworkProtocol.html">
+	c2570331 [label=<<table title="com.orientechnologies.orient.server.network.protocol.ONetworkProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ONetworkProtocol.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ONetworkProtocol </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../ONetworkProtocol.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary
-	c2570424 [label=<<table title="com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ONetworkProtocolBinary.html">
+	c2570419 [label=<<table title="com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ONetworkProtocolBinary.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ONetworkProtocolBinary </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ONetworkProtocolBinary.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary extends com.orientechnologies.orient.server.network.protocol.ONetworkProtocol
-	c2570336:p -> c2570424:p [dir=back,arrowtail=empty];
+	c2570331:p -> c2570419:p [dir=back,arrowtail=empty];
 }
 

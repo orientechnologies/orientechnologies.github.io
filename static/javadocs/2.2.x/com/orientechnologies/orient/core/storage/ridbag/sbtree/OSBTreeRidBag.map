@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../db/record/ridbag/ORidBagDelegate.html" title="com.orientechnologies.orient.core.db.record.ridbag.ORidBagDelegate" alt="" coords="16,11,151,53"/>
-<area shape="rect" id="node1" href="../../../db/record/ridbag/ORidBagDelegate.html" title="&lt;TABLE&gt;" alt="" coords="5,5,161,59"/>
-<area shape="rect" id="node2_1" href="./OSBTreeRidBag.html" title="com.orientechnologies.orient.core.storage.ridbag.sbtree.OSBTreeRidBag" alt="" coords="23,118,143,143"/>
-<area shape="rect" id="node2" href="./OSBTreeRidBag.html" title="&lt;TABLE&gt;" alt="" coords="13,107,154,155"/>
-</map>

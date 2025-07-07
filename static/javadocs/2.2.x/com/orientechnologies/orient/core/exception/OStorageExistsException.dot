@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.exception.OHighLevelException
-	c4023833 [label=<<table title="com.orientechnologies.common.exception.OHighLevelException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/exception/OHighLevelException.html">
+	c4023826 [label=<<table title="com.orientechnologies.common.exception.OHighLevelException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/exception/OHighLevelException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OHighLevelException </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../common/exception/OHighLevelException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OStorageException
-	c4024930 [label=<<table title="com.orientechnologies.orient.core.exception.OStorageException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageException.html">
+	c4024924 [label=<<table title="com.orientechnologies.orient.core.exception.OStorageException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OStorageException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.exception.OStorageExistsException
-	c4024933 [label=<<table title="com.orientechnologies.orient.core.exception.OStorageExistsException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageExistsException.html">
+	c4024926 [label=<<table title="com.orientechnologies.orient.core.exception.OStorageExistsException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OStorageExistsException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OStorageExistsException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OStorageExistsException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.exception.OStorageExistsException extends com.orientechnologies.orient.core.exception.OStorageException
-	c4024930:p -> c4024933:p [dir=back,arrowtail=empty];
+	c4024924:p -> c4024926:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.exception.OStorageExistsException implements com.orientechnologies.common.exception.OHighLevelException
-	c4023833:p -> c4024933:p [dir=back,arrowtail=empty,style=dashed];
+	c4023826:p -> c4024926:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<T>
-	c3323499 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMultiValueAbstract.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMultiValueAbstract&lt;T&gt; </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSQLFunctionMultiValueAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference
-	c3323511 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionDifference.html">
+	c3323498 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSQLFunctionDifference.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSQLFunctionDifference </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSQLFunctionDifference.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<T>
+	c3323507 [label=<<table title="com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSQLFunctionMultiValueAbstract.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSQLFunctionMultiValueAbstract&lt;T&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSQLFunctionMultiValueAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference extends com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionMultiValueAbstract<java.util.Set<java.lang.Object>>
-	c3323499:p -> c3323511:p [dir=back,arrowtail=empty];
+	c3323507:p -> c3323498:p [dir=back,arrowtail=empty];
 }
 

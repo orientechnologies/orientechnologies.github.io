@@ -1,10 +1,10 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="./OSecurityNull.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityNull" alt="" coords="16,118,124,143"/>
 <area shape="rect" id="node1" href="./OSecurityNull.html" title="&lt;TABLE&gt;" alt="" coords="5,107,135,155"/>
-<area shape="rect" id="node2_1" href="./OSecurity.html" title="com.orientechnologies.orient.core.metadata.security.OSecurity" alt="" coords="353,11,446,53"/>
-<area shape="rect" id="node2" href="./OSecurity.html" title="&lt;TABLE&gt;" alt="" coords="342,5,457,59"/>
-<area shape="rect" id="node3_2" href="./OSecurityProxy.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityProxy" alt="" coords="170,118,290,143"/>
-<area shape="rect" id="node3" href="./OSecurityProxy.html" title="&lt;TABLE&gt;" alt="" coords="159,107,301,155"/>
+<area shape="rect" id="node2_1" href="./OSecurityProxy.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityProxy" alt="" coords="170,118,290,143"/>
+<area shape="rect" id="node2" href="./OSecurityProxy.html" title="&lt;TABLE&gt;" alt="" coords="159,107,301,155"/>
+<area shape="rect" id="node3_2" href="./OSecurity.html" title="com.orientechnologies.orient.core.metadata.security.OSecurity" alt="" coords="353,11,446,53"/>
+<area shape="rect" id="node3" href="./OSecurity.html" title="&lt;TABLE&gt;" alt="" coords="342,5,457,59"/>
 <area shape="rect" id="node4_3" href="./OSecurityShared.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityShared" alt="" coords="335,118,463,143"/>
 <area shape="rect" id="node4" href="./OSecurityShared.html" title="&lt;TABLE&gt;" alt="" coords="325,107,474,155"/>
 <area shape="rect" id="node5_4" href="../../security/symmetrickey/OSymmetricKeySecurity.html" title="com.orientechnologies.orient.core.security.symmetrickey.OSymmetricKeySecurity" alt="" coords="509,118,687,143"/>

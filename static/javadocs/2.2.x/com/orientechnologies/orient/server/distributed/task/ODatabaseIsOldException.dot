@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.ODistributedException
-	c1363174 [label=<<table title="com.orientechnologies.orient.server.distributed.ODistributedException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ODistributedException.html">
+	c1363203 [label=<<table title="com.orientechnologies.orient.server.distributed.ODistributedException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ODistributedException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedException </td></tr>
 		</table></td></tr>
@@ -22,6 +22,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ODatabaseIsOldException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.task.ODatabaseIsOldException extends com.orientechnologies.orient.server.distributed.ODistributedException
-	c1363174:p -> c1363207:p [dir=back,arrowtail=empty];
+	c1363203:p -> c1363207:p [dir=back,arrowtail=empty];
 }
 

@@ -15,18 +15,18 @@ digraph G {
 <tr><td align="center" balign="center"> DoubleReferenceItem </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DoubleReferenceItem.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.db.record.ridbag.ORidBag
+	c65280 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.ORidBag" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORidBag.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ORidBag </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ORidBag.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.ridbag.ORidBagDelegate
-	c65280 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.ORidBagDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORidBagDelegate.html">
+	c65281 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.ORidBagDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORidBagDelegate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ORidBagDelegate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ORidBagDelegate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.db.record.ridbag.ORidBag
-	c65281 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.ORidBag" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ORidBag.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ORidBag </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ORidBag.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

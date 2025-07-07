@@ -16,22 +16,22 @@ digraph G {
 <tr><td align="center" balign="center"> OCommandResultListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../command/OCommandResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener
+	c2319666 [label=<<table title="com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLocalLiveResultListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OLocalLiveResultListener </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OLocalLiveResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.sql.query.OLiveResultListener
-	c2319672 [label=<<table title="com.orientechnologies.orient.core.sql.query.OLiveResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveResultListener.html">
+	c2319669 [label=<<table title="com.orientechnologies.orient.core.sql.query.OLiveResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OLiveResultListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OLiveResultListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLiveResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener
-	c2319676 [label=<<table title="com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLocalLiveResultListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OLocalLiveResultListener </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OLocalLiveResultListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener implements com.orientechnologies.orient.core.sql.query.OLiveResultListener
-	c2319672:p -> c2319676:p [dir=back,arrowtail=empty,style=dashed];
+	c2319669:p -> c2319666:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener implements com.orientechnologies.orient.core.command.OCommandResultListener
-	c2319195:p -> c2319676:p [dir=back,arrowtail=empty,style=dashed];
+	c2319195:p -> c2319666:p [dir=back,arrowtail=empty,style=dashed];
 }
 

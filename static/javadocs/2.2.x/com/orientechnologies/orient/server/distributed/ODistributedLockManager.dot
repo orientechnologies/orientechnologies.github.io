@@ -16,21 +16,21 @@ digraph G {
 <tr><td align="center" balign="center"> ODistributedLockManager </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedLockManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerRequester
-	c1532098 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerRequester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ODistributedLockManagerRequester.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODistributedLockManagerRequester </td></tr>
-		</table></td></tr>
-		</table>>, URL="./impl/ODistributedLockManagerRequester.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerExecutor
-	c1532108 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerExecutor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ODistributedLockManagerExecutor.html">
+	c1532088 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerExecutor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ODistributedLockManagerExecutor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedLockManagerExecutor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/ODistributedLockManagerExecutor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerRequester implements com.orientechnologies.orient.server.distributed.ODistributedLockManager
-	c1531856:p -> c1532098:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerRequester
+	c1532100 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerRequester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ODistributedLockManagerRequester.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODistributedLockManagerRequester </td></tr>
+		</table></td></tr>
+		</table>>, URL="./impl/ODistributedLockManagerRequester.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerExecutor implements com.orientechnologies.orient.server.distributed.ODistributedLockManager
-	c1531856:p -> c1532108:p [dir=back,arrowtail=empty,style=dashed];
+	c1531856:p -> c1532088:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.server.distributed.impl.ODistributedLockManagerRequester implements com.orientechnologies.orient.server.distributed.ODistributedLockManager
+	c1531856:p -> c1532100:p [dir=back,arrowtail=empty,style=dashed];
 }
 

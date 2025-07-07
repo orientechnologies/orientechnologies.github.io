@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../../common/factory/OConfigurableStatefulFactory.html" title="com.orientechnologies.common.factory.OConfigurableStatefulFactory" alt="" coords="16,19,273,45"/>
 <area shape="rect" id="node1" href="../../../common/factory/OConfigurableStatefulFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,8,284,56"/>
-<area shape="rect" id="node3_1" href="./OLocalRecordCacheFactoryImpl.html" title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactoryImpl" alt="" coords="169,118,393,143"/>
-<area shape="rect" id="node3" href="./OLocalRecordCacheFactoryImpl.html" title="&lt;TABLE&gt;" alt="" coords="158,107,403,155"/>
-<area shape="rect" id="node2_2" href="./OLocalRecordCacheFactory.html" title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactory" alt="" coords="319,11,515,53"/>
-<area shape="rect" id="node2" href="./OLocalRecordCacheFactory.html" title="&lt;TABLE&gt;" alt="" coords="308,5,525,59"/>
+<area shape="rect" id="node2_1" href="./OLocalRecordCacheFactoryImpl.html" title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactoryImpl" alt="" coords="169,118,393,143"/>
+<area shape="rect" id="node2" href="./OLocalRecordCacheFactoryImpl.html" title="&lt;TABLE&gt;" alt="" coords="158,107,403,155"/>
+<area shape="rect" id="node3_2" href="./OLocalRecordCacheFactory.html" title="com.orientechnologies.orient.core.cache.OLocalRecordCacheFactory" alt="" coords="319,11,515,53"/>
+<area shape="rect" id="node3" href="./OLocalRecordCacheFactory.html" title="&lt;TABLE&gt;" alt="" coords="308,5,525,59"/>
 </map>

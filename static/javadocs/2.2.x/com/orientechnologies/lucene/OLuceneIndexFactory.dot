@@ -10,28 +10,28 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.ODatabaseLifecycleListener
-	c2396159 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../orient/core/db/ODatabaseLifecycleListener.html">
+	c2396145 [label=<<table title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../orient/core/db/ODatabaseLifecycleListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ODatabaseLifecycleListener </td></tr>
 		</table></td></tr>
 		</table>>, URL="../orient/core/db/ODatabaseLifecycleListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OIndexFactory
-	c2397257 [label=<<table title="com.orientechnologies.orient.core.index.OIndexFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../orient/core/index/OIndexFactory.html">
+	c2397250 [label=<<table title="com.orientechnologies.orient.core.index.OIndexFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../orient/core/index/OIndexFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OIndexFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="../orient/core/index/OIndexFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.lucene.OLuceneIndexFactory
-	c2397867 [label=<<table title="com.orientechnologies.lucene.OLuceneIndexFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneIndexFactory.html">
+	c2397863 [label=<<table title="com.orientechnologies.lucene.OLuceneIndexFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OLuceneIndexFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OLuceneIndexFactory </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OLuceneIndexFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.lucene.OLuceneIndexFactory implements com.orientechnologies.orient.core.index.OIndexFactory
-	c2397257:p -> c2397867:p [dir=back,arrowtail=empty,style=dashed];
+	c2397250:p -> c2397863:p [dir=back,arrowtail=empty,style=dashed];
 	//com.orientechnologies.lucene.OLuceneIndexFactory implements com.orientechnologies.orient.core.db.ODatabaseLifecycleListener
-	c2396159:p -> c2397867:p [dir=back,arrowtail=empty,style=dashed];
+	c2396145:p -> c2397863:p [dir=back,arrowtail=empty,style=dashed];
 }
 

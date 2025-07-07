@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileCreatedWALRecord
-	c1752840 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileCreatedWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFileCreatedWALRecord.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OFileCreatedWALRecord </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OFileCreatedWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
-	c1752845 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitBodyRecord.html">
+	c1752821 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OOperationUnitBodyRecord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OOperationUnitBodyRecord </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OOperationUnitBodyRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileCreatedWALRecord
+	c1752831 [label=<<table title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileCreatedWALRecord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OFileCreatedWALRecord.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OFileCreatedWALRecord </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OFileCreatedWALRecord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileCreatedWALRecord extends com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord
-	c1752845:p -> c1752840:p [dir=back,arrowtail=empty];
+	c1752821:p -> c1752831:p [dir=back,arrowtail=empty];
 }
 

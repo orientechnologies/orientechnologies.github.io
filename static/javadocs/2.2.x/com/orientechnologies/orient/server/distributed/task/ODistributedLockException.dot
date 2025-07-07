@@ -10,29 +10,29 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.exception.OHighLevelException
-	c1528353 [label=<<table title="com.orientechnologies.common.exception.OHighLevelException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/exception/OHighLevelException.html">
+	c1528350 [label=<<table title="com.orientechnologies.common.exception.OHighLevelException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../common/exception/OHighLevelException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OHighLevelException </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../common/exception/OHighLevelException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.orientechnologies.orient.server.distributed.task.ODistributedOperationException
-	c1529840 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ODistributedOperationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedOperationException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ODistributedOperationException </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ODistributedOperationException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.task.ODistributedLockException
-	c1529843 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ODistributedLockException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedLockException.html">
+	c1529837 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ODistributedLockException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ODistributedLockException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODistributedLockException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ODistributedLockException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//com.orientechnologies.orient.server.distributed.task.ODistributedOperationException implements com.orientechnologies.common.exception.OHighLevelException
-	c1528353:p -> c1529840:p [dir=back,arrowtail=empty,style=dashed];
+	// com.orientechnologies.orient.server.distributed.task.ODistributedOperationException
+	c1529839 [label=<<table title="com.orientechnologies.orient.server.distributed.task.ODistributedOperationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ODistributedOperationException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ODistributedOperationException </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ODistributedOperationException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.task.ODistributedLockException extends com.orientechnologies.orient.server.distributed.task.ODistributedOperationException
-	c1529840:p -> c1529843:p [dir=back,arrowtail=empty];
+	c1529839:p -> c1529837:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.server.distributed.task.ODistributedLockException implements com.orientechnologies.common.exception.OHighLevelException
-	c1528353:p -> c1529843:p [dir=back,arrowtail=empty,style=dashed];
+	c1528350:p -> c1529837:p [dir=back,arrowtail=empty,style=dashed];
+	//com.orientechnologies.orient.server.distributed.task.ODistributedOperationException implements com.orientechnologies.common.exception.OHighLevelException
+	c1528350:p -> c1529839:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// com.orientechnologies.orient.core.index.OCompositeIndexDefinition
-	c1182054 [label=<<table title="com.orientechnologies.orient.core.index.OCompositeIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCompositeIndexDefinition.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OCompositeIndexDefinition </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OCompositeIndexDefinition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.index.OAbstractIndexDefinition
-	c1182069 [label=<<table title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractIndexDefinition.html">
+	c1182037 [label=<<table title="com.orientechnologies.orient.core.index.OAbstractIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractIndexDefinition.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractIndexDefinition </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractIndexDefinition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.orientechnologies.orient.core.index.OCompositeIndexDefinition
+	c1182043 [label=<<table title="com.orientechnologies.orient.core.index.OCompositeIndexDefinition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCompositeIndexDefinition.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OCompositeIndexDefinition </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OCompositeIndexDefinition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.index.OCompositeIndexDefinition extends com.orientechnologies.orient.core.index.OAbstractIndexDefinition
-	c1182069:p -> c1182054:p [dir=back,arrowtail=empty];
+	c1182037:p -> c1182043:p [dir=back,arrowtail=empty];
 }
 

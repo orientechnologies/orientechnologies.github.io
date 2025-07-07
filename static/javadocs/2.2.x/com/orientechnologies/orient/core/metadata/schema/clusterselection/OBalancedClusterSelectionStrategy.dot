@@ -16,13 +16,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OBalancedClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c687337 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OClusterSelectionStrategy.html">
+	c687335 [label=<<table title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OClusterSelectionStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OClusterSelectionStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OClusterSelectionStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.metadata.schema.clusterselection.OBalancedClusterSelectionStrategy implements com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy
-	c687337:p -> c687334:p [dir=back,arrowtail=empty,style=dashed];
+	c687335:p -> c687334:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OIndexManager.html" title="com.orientechnologies.orient.core.index.OIndexManager" alt="" coords="141,11,264,53"/>
-<area shape="rect" id="node1" href="./OIndexManager.html" title="&lt;TABLE&gt;" alt="" coords="131,5,275,59"/>
-<area shape="rect" id="node2_1" href="./OIndexManagerProxy.html" title="com.orientechnologies.orient.core.index.OIndexManagerProxy" alt="" coords="16,118,176,143"/>
-<area shape="rect" id="node2" href="./OIndexManagerProxy.html" title="&lt;TABLE&gt;" alt="" coords="5,107,187,155"/>
-<area shape="rect" id="node3_2" href="./OIndexManagerAbstract.html" title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" alt="" coords="221,118,397,143"/>
-<area shape="rect" id="node3" href="./OIndexManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="211,107,408,155"/>
+<area shape="rect" id="node1_0" href="./OIndexManagerProxy.html" title="com.orientechnologies.orient.core.index.OIndexManagerProxy" alt="" coords="16,118,176,143"/>
+<area shape="rect" id="node1" href="./OIndexManagerProxy.html" title="&lt;TABLE&gt;" alt="" coords="5,107,187,155"/>
+<area shape="rect" id="node2_1" href="./OIndexManagerAbstract.html" title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" alt="" coords="221,118,397,143"/>
+<area shape="rect" id="node2" href="./OIndexManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="211,107,408,155"/>
+<area shape="rect" id="node3_2" href="./OIndexManager.html" title="com.orientechnologies.orient.core.index.OIndexManager" alt="" coords="141,11,264,53"/>
+<area shape="rect" id="node3" href="./OIndexManager.html" title="&lt;TABLE&gt;" alt="" coords="131,5,275,59"/>
 </map>

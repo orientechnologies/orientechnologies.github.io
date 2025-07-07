@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.server.distributed.impl.task.OReadRecordIfNotLatestTask
-	c2948576 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OReadRecordIfNotLatestTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OReadRecordIfNotLatestTask.html">
+	c2948570 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OReadRecordIfNotLatestTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OReadRecordIfNotLatestTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OReadRecordIfNotLatestTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OReadRecordIfNotLatestTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.server.distributed.impl.task.OAbstractReadRecordTask
-	c2948578 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OAbstractReadRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractReadRecordTask.html">
+	c2948586 [label=<<table title="com.orientechnologies.orient.server.distributed.impl.task.OAbstractReadRecordTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OAbstractReadRecordTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OAbstractReadRecordTask </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OAbstractReadRecordTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.server.distributed.impl.task.OReadRecordIfNotLatestTask extends com.orientechnologies.orient.server.distributed.impl.task.OAbstractReadRecordTask
-	c2948578:p -> c2948576:p [dir=back,arrowtail=empty];
+	c2948586:p -> c2948570:p [dir=back,arrowtail=empty];
 }
 

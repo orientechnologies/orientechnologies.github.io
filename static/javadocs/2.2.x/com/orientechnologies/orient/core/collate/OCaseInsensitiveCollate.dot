@@ -10,27 +10,27 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.common.comparator.ODefaultComparator
-	c823187 [label=<<table title="com.orientechnologies.common.comparator.ODefaultComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/comparator/ODefaultComparator.html">
+	c823183 [label=<<table title="com.orientechnologies.common.comparator.ODefaultComparator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../common/comparator/ODefaultComparator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ODefaultComparator </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../common/comparator/ODefaultComparator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.collate.OCollate
-	c824039 [label=<<table title="com.orientechnologies.orient.core.collate.OCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCollate.html">
+	c824036 [label=<<table title="com.orientechnologies.orient.core.collate.OCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OCollate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OCollate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate
-	c824041 [label=<<table title="com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCaseInsensitiveCollate.html">
+	c824037 [label=<<table title="com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OCaseInsensitiveCollate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OCaseInsensitiveCollate </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OCaseInsensitiveCollate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate extends com.orientechnologies.common.comparator.ODefaultComparator
-	c823187:p -> c824041:p [dir=back,arrowtail=empty];
+	c823183:p -> c824037:p [dir=back,arrowtail=empty];
 	//com.orientechnologies.orient.core.collate.OCaseInsensitiveCollate implements com.orientechnologies.orient.core.collate.OCollate
-	c824039:p -> c824041:p [dir=back,arrowtail=empty,style=dashed];
+	c824036:p -> c824037:p [dir=back,arrowtail=empty,style=dashed];
 }
 

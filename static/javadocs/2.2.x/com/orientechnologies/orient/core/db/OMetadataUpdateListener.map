@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./OMetadataUpdateListener.html" title="com.orientechnologies.orient.core.db.OMetadataUpdateListener" alt="" coords="93,11,283,53"/>
-<area shape="rect" id="node1" href="./OMetadataUpdateListener.html" title="&lt;TABLE&gt;" alt="" coords="82,5,294,59"/>
-<area shape="rect" id="node2_1" href="../sql/parser/OExecutionPlanCache.html" title="com.orientechnologies.orient.core.sql.parser.OExecutionPlanCache" alt="" coords="16,118,176,143"/>
-<area shape="rect" id="node2" href="../sql/parser/OExecutionPlanCache.html" title="&lt;TABLE&gt;" alt="" coords="5,107,187,155"/>
-<area shape="rect" id="node3_2" href="../../server/OPushManager.html" title="com.orientechnologies.orient.server.OPushManager" alt="" coords="221,118,339,143"/>
-<area shape="rect" id="node3" href="../../server/OPushManager.html" title="&lt;TABLE&gt;" alt="" coords="211,107,349,155"/>
-</map>

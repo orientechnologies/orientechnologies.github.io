@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract
-	c3235509 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSBTreeCollectionManagerAbstract.html">
+	c3235504 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSBTreeCollectionManagerAbstract.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OSBTreeCollectionManagerAbstract </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSBTreeCollectionManagerAbstract.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManager
-	c3235517 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSBTreeCollectionManager.html">
+	c3235512 [label=<<table title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OSBTreeCollectionManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OSBTreeCollectionManager </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSBTreeCollectionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract implements com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManager
-	c3235517:p -> c3235509:p [dir=back,arrowtail=empty,style=dashed];
+	c3235512:p -> c3235504:p [dir=back,arrowtail=empty,style=dashed];
 }
 
