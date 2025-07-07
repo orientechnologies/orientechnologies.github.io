@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../common/util/OSizeable.html" title="com.orientechnologies.common.util.OSizeable" alt="" coords="16,11,109,53"/>
+<area shape="rect" id="node1" href="../../../common/util/OSizeable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,120,59"/>
+<area shape="rect" id="node4_1" href="./OLazyWrapperIterator.html" title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" alt="" coords="289,118,481,143"/>
+<area shape="rect" id="node4" href="./OLazyWrapperIterator.html" title="&lt;TABLE&gt;" alt="" coords="279,107,492,155"/>
+<area shape="rect" id="node2_2" href="../../../common/util/OResettable.html" title="com.orientechnologies.common.util.OResettable" alt="" coords="155,11,255,53"/>
+<area shape="rect" id="node2" href="../../../common/util/OResettable.html" title="&lt;TABLE&gt;" alt="" coords="145,5,266,59"/>
+<area shape="rect" id="node3_3" href="../db/record/OAutoConvertToRecord.html" title="com.orientechnologies.orient.core.db.record.OAutoConvertToRecord" alt="" coords="301,11,470,53"/>
+<area shape="rect" id="node3" href="../db/record/OAutoConvertToRecord.html" title="&lt;TABLE&gt;" alt="" coords="290,5,481,59"/>
+<area shape="rect" id="node5_4" href="../../../../tinkerpop/blueprints/impls/orient/OrientEdgeIterator.html" title="com.tinkerpop.blueprints.impls.orient.OrientEdgeIterator" alt="" coords="221,214,361,239"/>
+<area shape="rect" id="node5" href="../../../../tinkerpop/blueprints/impls/orient/OrientEdgeIterator.html" title="&lt;TABLE&gt;" alt="" coords="210,203,371,251"/>
+<area shape="rect" id="node6_5" href="../../../../tinkerpop/blueprints/impls/orient/OrientVertexIterator.html" title="com.tinkerpop.blueprints.impls.orient.OrientVertexIterator" alt="" coords="407,214,556,239"/>
+<area shape="rect" id="node6" href="../../../../tinkerpop/blueprints/impls/orient/OrientVertexIterator.html" title="&lt;TABLE&gt;" alt="" coords="396,203,567,251"/>
+<area shape="rect" id="node7_6" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="java.util.Iterator" alt="" coords="515,11,613,53"/>
+<area shape="rect" id="node7" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="&lt;TABLE&gt;" alt="" coords="505,5,623,59"/>
+<area shape="rect" id="node8_7" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="java.lang.Iterable" alt="" coords="658,11,758,53"/>
+<area shape="rect" id="node8" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="&lt;TABLE&gt;" alt="" coords="647,5,769,59"/>
+</map>

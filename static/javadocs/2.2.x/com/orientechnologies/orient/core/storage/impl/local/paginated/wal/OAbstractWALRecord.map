@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OCheckpointEndRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OCheckpointEndRecord" alt="" coords="16,214,188,239"/>
+<area shape="rect" id="node1" href="./OCheckpointEndRecord.html" title="&lt;TABLE&gt;" alt="" coords="5,203,199,251"/>
+<area shape="rect" id="node2_1" href="./OOperationUnitRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord" alt="" coords="234,214,399,239"/>
+<area shape="rect" id="node2" href="./OOperationUnitRecord.html" title="&lt;TABLE&gt;" alt="" coords="223,203,410,251"/>
+<area shape="rect" id="node3_2" href="./OAbstractCheckPointStartRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord" alt="" coords="445,214,677,239"/>
+<area shape="rect" id="node3" href="./OAbstractCheckPointStartRecord.html" title="&lt;TABLE&gt;" alt="" coords="434,203,687,251"/>
+<area shape="rect" id="node4_3" href="./OWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALRecord" alt="" coords="509,11,612,53"/>
+<area shape="rect" id="node4" href="./OWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="499,5,623,59"/>
+<area shape="rect" id="node7_4" href="./OAbstractWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord" alt="" coords="482,118,639,143"/>
+<area shape="rect" id="node7" href="./OAbstractWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="471,107,650,155"/>
+<area shape="rect" id="node5_5" href="./OFuzzyCheckpointEndRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointEndRecord" alt="" coords="722,214,930,239"/>
+<area shape="rect" id="node5" href="./OFuzzyCheckpointEndRecord.html" title="&lt;TABLE&gt;" alt="" coords="711,203,941,251"/>
+<area shape="rect" id="node6_6" href="./ONonTxOperationPerformedWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ONonTxOperationPerformedWALRecord" alt="" coords="976,214,1252,239"/>
+<area shape="rect" id="node6" href="./ONonTxOperationPerformedWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="965,203,1263,251"/>
+</map>

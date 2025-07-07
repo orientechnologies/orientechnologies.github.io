@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OStorageConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageConfiguration" alt="" coords="31,11,197,53"/>
+<area shape="rect" id="node1" href="./OStorageConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="20,5,208,59"/>
+<area shape="rect" id="node11_1" href="./OStorageConfigurationImpl.html" title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl" alt="" coords="16,118,212,143"/>
+<area shape="rect" id="node11" href="./OStorageConfigurationImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,107,223,155"/>
+<area shape="rect" id="node2_2" href="./OContextConfiguration.html" title="com.orientechnologies.orient.core.config.OContextConfiguration" alt="" coords="243,19,411,45"/>
+<area shape="rect" id="node2" href="./OContextConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="233,8,422,56"/>
+<area shape="rect" id="node3_3" href="./OStorageClusterHoleConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageClusterHoleConfiguration" alt="" coords="345,118,587,143"/>
+<area shape="rect" id="node3" href="./OStorageClusterHoleConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="334,107,598,155"/>
+<area shape="rect" id="node4_4" href="./OStorageDataHoleConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageDataHoleConfiguration" alt="" coords="633,118,861,143"/>
+<area shape="rect" id="node4" href="./OStorageDataHoleConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="623,107,872,155"/>
+<area shape="rect" id="node5_5" href="./OStorageSegmentConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageSegmentConfiguration" alt="" coords="691,19,915,45"/>
+<area shape="rect" id="node5" href="./OStorageSegmentConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="681,8,926,56"/>
+<area shape="rect" id="node6_6" href="./OStorageSegmentConfiguration.STATUS.html" title="com.orientechnologies.orient.core.config.OStorageSegmentConfiguration.STATUS" alt="" coords="961,11,1080,53"/>
+<area shape="rect" id="node6" href="./OStorageSegmentConfiguration.STATUS.html" title="&lt;TABLE&gt;" alt="" coords="951,5,1091,59"/>
+<area shape="rect" id="node7_7" href="./OStorageClusterConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageClusterConfiguration" alt="" coords="1125,11,1337,53"/>
+<area shape="rect" id="node7" href="./OStorageClusterConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="1115,5,1348,59"/>
+<area shape="rect" id="node13_8" href="./OStoragePaginatedClusterConfiguration.html" title="com.orientechnologies.orient.core.config.OStoragePaginatedClusterConfiguration" alt="" coords="1093,118,1369,143"/>
+<area shape="rect" id="node13" href="./OStoragePaginatedClusterConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="1083,107,1380,155"/>
+<area shape="rect" id="node8_9" href="./OStorageClusterConfiguration.STATUS.html" title="com.orientechnologies.orient.core.config.OStorageClusterConfiguration.STATUS" alt="" coords="1383,11,1501,53"/>
+<area shape="rect" id="node8" href="./OStorageClusterConfiguration.STATUS.html" title="&lt;TABLE&gt;" alt="" coords="1372,5,1512,59"/>
+<area shape="rect" id="node9_10" href="./OStorageEntryConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageEntryConfiguration" alt="" coords="1547,19,1747,45"/>
+<area shape="rect" id="node9" href="./OStorageEntryConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="1537,8,1758,56"/>
+<area shape="rect" id="node10_11" href="./OStorageFileConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageFileConfiguration" alt="" coords="457,19,646,45"/>
+<area shape="rect" id="node10" href="./OStorageFileConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="446,8,657,56"/>
+<area shape="rect" id="node12_12" href="./OStorageConfigurationImpl.IndexEngineData.html" title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl.IndexEngineData" alt="" coords="1793,19,1923,45"/>
+<area shape="rect" id="node12" href="./OStorageConfigurationImpl.IndexEngineData.html" title="&lt;TABLE&gt;" alt="" coords="1782,8,1934,56"/>
+<area shape="rect" id="node14_13" href="./OConfigurationChangeCallback.html" title="com.orientechnologies.orient.core.config.OConfigurationChangeCallback" alt="" coords="1969,11,2190,53"/>
+<area shape="rect" id="node14" href="./OConfigurationChangeCallback.html" title="&lt;TABLE&gt;" alt="" coords="1958,5,2201,59"/>
+<area shape="rect" id="node15_14" href="./OGlobalConfiguration.html" title="com.orientechnologies.orient.core.config.OGlobalConfiguration" alt="" coords="2236,11,2395,53"/>
+<area shape="rect" id="node15" href="./OGlobalConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="2225,5,2405,59"/>
+</map>

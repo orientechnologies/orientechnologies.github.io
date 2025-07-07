@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OServerCommandGetSupportedLanguages.html" title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetSupportedLanguages" alt="" coords="18,113,315,138"/>
+<area shape="rect" id="node1" href="./OServerCommandGetSupportedLanguages.html" title="&lt;TABLE&gt;" alt="" coords="7,101,326,149"/>
+<area shape="rect" id="node2_1" href="../OServerCommandAuthenticatedDbAbstract.html" title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" alt="" coords="16,17,317,42"/>
+<area shape="rect" id="node2" href="../OServerCommandAuthenticatedDbAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,5,328,53"/>
+</map>

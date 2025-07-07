@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" alt="" coords="16,17,279,42"/>
+<area shape="rect" id="node1" href="./OAbstractDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="5,5,289,53"/>
+<area shape="rect" id="node3_1" href="./OMajorityDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" alt="" coords="17,113,278,138"/>
+<area shape="rect" id="node3" href="./OMajorityDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="6,101,289,149"/>
+<area shape="rect" id="node2_2" href="./ODCDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver" alt="" coords="34,209,261,234"/>
+<area shape="rect" id="node2" href="./ODCDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="23,197,271,245"/>
+</map>

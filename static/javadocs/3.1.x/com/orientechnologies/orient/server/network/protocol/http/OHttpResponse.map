@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OHttpResponse.html" title="com.orientechnologies.orient.server.network.protocol.http.OHttpResponse" alt="" coords="136,17,256,42"/>
+<area shape="rect" id="node1" href="./OHttpResponse.html" title="&lt;TABLE&gt;" alt="" coords="125,5,267,53"/>
+<area shape="rect" id="node2_1" href="./OHttpGraphResponse.html" title="com.orientechnologies.orient.server.network.protocol.http.OHttpGraphResponse" alt="" coords="16,113,176,138"/>
+<area shape="rect" id="node2" href="./OHttpGraphResponse.html" title="&lt;TABLE&gt;" alt="" coords="5,101,187,149"/>
+<area shape="rect" id="node3_2" href="./OHttpResponseImpl.html" title="com.orientechnologies.orient.server.network.protocol.http.OHttpResponseImpl" alt="" coords="221,113,371,138"/>
+<area shape="rect" id="node3" href="./OHttpResponseImpl.html" title="&lt;TABLE&gt;" alt="" coords="211,101,381,149"/>
+</map>

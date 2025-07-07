@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../storage/config/OClusterBasedStorageConfiguration.html" title="com.orientechnologies.orient.core.storage.config.OClusterBasedStorageConfiguration" alt="" coords="16,118,268,143"/>
+<area shape="rect" id="node1" href="../storage/config/OClusterBasedStorageConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="5,107,279,155"/>
+<area shape="rect" id="node2_1" href="./OStorageConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageConfiguration" alt="" coords="328,11,495,53"/>
+<area shape="rect" id="node2" href="./OStorageConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="317,5,505,59"/>
+<area shape="rect" id="node3_2" href="./OStorageConfigurationImpl.html" title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl" alt="" coords="313,118,509,143"/>
+<area shape="rect" id="node3" href="./OStorageConfigurationImpl.html" title="&lt;TABLE&gt;" alt="" coords="303,107,520,155"/>
+<area shape="rect" id="node4_3" href="../../client/remote/OStorageConfigurationRemote.html" title="com.orientechnologies.orient.client.remote.OStorageConfigurationRemote" alt="" coords="555,118,772,143"/>
+<area shape="rect" id="node4" href="../../client/remote/OStorageConfigurationRemote.html" title="&lt;TABLE&gt;" alt="" coords="544,107,783,155"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OETLPipelineComponent.html" title="com.orientechnologies.orient.etl.OETLPipelineComponent" alt="" coords="19,11,199,53"/>
+<area shape="rect" id="node1" href="../OETLPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="8,5,209,59"/>
+<area shape="rect" id="node2_1" href="./OETLTransformer.html" title="com.orientechnologies.orient.etl.transformer.OETLTransformer" alt="" coords="44,112,173,155"/>
+<area shape="rect" id="node2" href="./OETLTransformer.html" title="&lt;TABLE&gt;" alt="" coords="33,107,184,160"/>
+<area shape="rect" id="node3_2" href="./OETLAbstractTransformer.html" title="com.orientechnologies.orient.etl.transformer.OETLAbstractTransformer" alt="" coords="16,219,201,245"/>
+<area shape="rect" id="node3" href="./OETLAbstractTransformer.html" title="&lt;TABLE&gt;" alt="" coords="5,208,212,256"/>
+</map>

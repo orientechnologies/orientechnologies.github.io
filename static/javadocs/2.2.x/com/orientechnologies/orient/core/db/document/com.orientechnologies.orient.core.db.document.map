@@ -1,0 +1,22 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseDocument.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocument" alt="" coords="16,11,175,53"/>
+<area shape="rect" id="node1" href="./ODatabaseDocument.html" title="&lt;TABLE&gt;" alt="" coords="5,5,185,59"/>
+<area shape="rect" id="node2_1" href="./ODatabaseDocumentPool.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentPool" alt="" coords="221,19,407,45"/>
+<area shape="rect" id="node2" href="./ODatabaseDocumentPool.html" title="&lt;TABLE&gt;" alt="" coords="210,8,418,56"/>
+<area shape="rect" id="node3_2" href="./ODocumentFieldWalker.html" title="com.orientechnologies.orient.core.db.document.ODocumentFieldWalker" alt="" coords="453,19,625,45"/>
+<area shape="rect" id="node3" href="./ODocumentFieldWalker.html" title="&lt;TABLE&gt;" alt="" coords="443,8,636,56"/>
+<area shape="rect" id="node4_3" href="./ODatabaseDocumentTxPooled.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxPooled" alt="" coords="649,118,867,143"/>
+<area shape="rect" id="node4" href="./ODatabaseDocumentTxPooled.html" title="&lt;TABLE&gt;" alt="" coords="638,107,878,155"/>
+<area shape="rect" id="node5_4" href="./ODocumentFieldVisitor.html" title="com.orientechnologies.orient.core.db.document.ODocumentFieldVisitor" alt="" coords="891,11,1060,53"/>
+<area shape="rect" id="node5" href="./ODocumentFieldVisitor.html" title="&lt;TABLE&gt;" alt="" coords="880,5,1071,59"/>
+<area shape="rect" id="node6_5" href="./ODatabaseDocumentTxInternal.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxInternal" alt="" coords="1106,19,1330,45"/>
+<area shape="rect" id="node6" href="./ODatabaseDocumentTxInternal.html" title="&lt;TABLE&gt;" alt="" coords="1095,8,1341,56"/>
+<area shape="rect" id="node7_6" href="./ODatabaseDocumentTx.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx" alt="" coords="671,19,845,45"/>
+<area shape="rect" id="node7" href="./ODatabaseDocumentTx.html" title="&lt;TABLE&gt;" alt="" coords="660,8,856,56"/>
+<area shape="rect" id="node8_7" href="./ODatabaseDocumentTx.RecordReader.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.RecordReader" alt="" coords="1376,11,1487,53"/>
+<area shape="rect" id="node8" href="./ODatabaseDocumentTx.RecordReader.html" title="&lt;TABLE&gt;" alt="" coords="1365,5,1497,59"/>
+<area shape="rect" id="node9_8" href="./ODatabaseDocumentTx.SimpleRecordReader.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.SimpleRecordReader" alt="" coords="1241,118,1397,143"/>
+<area shape="rect" id="node9" href="./ODatabaseDocumentTx.SimpleRecordReader.html" title="&lt;TABLE&gt;" alt="" coords="1231,107,1408,155"/>
+<area shape="rect" id="node10_9" href="./ODatabaseDocumentTx.LatestVersionRecordReader.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.LatestVersionRecordReader" alt="" coords="1443,118,1641,143"/>
+<area shape="rect" id="node10" href="./ODatabaseDocumentTx.LatestVersionRecordReader.html" title="&lt;TABLE&gt;" alt="" coords="1432,107,1652,155"/>
+</map>

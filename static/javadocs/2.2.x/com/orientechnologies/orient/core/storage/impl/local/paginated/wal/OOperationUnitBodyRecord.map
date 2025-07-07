@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractPageWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractPageWALRecord" alt="" coords="16,209,205,234"/>
+<area shape="rect" id="node1" href="./OAbstractPageWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="5,197,216,245"/>
+<area shape="rect" id="node2_1" href="./OOperationUnitRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord" alt="" coords="476,17,641,42"/>
+<area shape="rect" id="node2" href="./OOperationUnitRecord.html" title="&lt;TABLE&gt;" alt="" coords="465,5,652,53"/>
+<area shape="rect" id="node6_2" href="./OOperationUnitBodyRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" alt="" coords="459,113,658,138"/>
+<area shape="rect" id="node6" href="./OOperationUnitBodyRecord.html" title="&lt;TABLE&gt;" alt="" coords="449,101,669,149"/>
+<area shape="rect" id="node3_3" href="./OFileDeletedWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileDeletedWALRecord" alt="" coords="251,209,427,234"/>
+<area shape="rect" id="node3" href="./OFileDeletedWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="240,197,437,245"/>
+<area shape="rect" id="node4_4" href="./OAtomicUnitEndRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitEndRecord" alt="" coords="473,209,645,234"/>
+<area shape="rect" id="node4" href="./OAtomicUnitEndRecord.html" title="&lt;TABLE&gt;" alt="" coords="462,197,655,245"/>
+<area shape="rect" id="node5_5" href="./OFileCreatedWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileCreatedWALRecord" alt="" coords="691,209,867,234"/>
+<area shape="rect" id="node5" href="./OFileCreatedWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="680,197,877,245"/>
+<area shape="rect" id="node7_6" href="./OFileTruncatedWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileTruncatedWALRecord" alt="" coords="913,209,1101,234"/>
+<area shape="rect" id="node7" href="./OFileTruncatedWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="902,197,1111,245"/>
+</map>

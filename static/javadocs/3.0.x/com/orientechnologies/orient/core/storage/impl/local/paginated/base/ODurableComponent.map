@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../../../../../common/concur/resource/OSharedResourceAdaptive.html" title="com.orientechnologies.common.concur.resource.OSharedResourceAdaptive" alt="" coords="821,17,1013,42"/>
+<area shape="rect" id="node1" href="../../../../../../../common/concur/resource/OSharedResourceAdaptive.html" title="&lt;TABLE&gt;" alt="" coords="810,5,1023,53"/>
+<area shape="rect" id="node4_1" href="./ODurableComponent.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurableComponent" alt="" coords="839,113,995,138"/>
+<area shape="rect" id="node4" href="./ODurableComponent.html" title="&lt;TABLE&gt;" alt="" coords="828,101,1005,149"/>
+<area shape="rect" id="node2_2" href="../../../../cluster/OClusterPositionMap.html" title="com.orientechnologies.orient.core.storage.cluster.OClusterPositionMap" alt="" coords="16,209,172,234"/>
+<area shape="rect" id="node2" href="../../../../cluster/OClusterPositionMap.html" title="&lt;TABLE&gt;" alt="" coords="5,197,183,245"/>
+<area shape="rect" id="node3_3" href="../../../../cluster/OPaginatedCluster.html" title="com.orientechnologies.orient.core.storage.cluster.OPaginatedCluster" alt="" coords="217,209,357,234"/>
+<area shape="rect" id="node3" href="../../../../cluster/OPaginatedCluster.html" title="&lt;TABLE&gt;" alt="" coords="207,197,368,245"/>
+<area shape="rect" id="node5_4" href="../../../../index/sbtree/local/OSBTree.html" title="com.orientechnologies.orient.core.storage.index.sbtree.local.OSBTree" alt="" coords="403,209,524,234"/>
+<area shape="rect" id="node5" href="../../../../index/sbtree/local/OSBTree.html" title="&lt;TABLE&gt;" alt="" coords="392,197,535,245"/>
+<area shape="rect" id="node6_5" href="../../../../index/sbtree/multivalue/v2/CellBTreeMultiValueV2.html" title="com.orientechnologies.orient.core.storage.index.sbtree.multivalue.v2.CellBTreeMultiValueV2" alt="" coords="570,209,767,234"/>
+<area shape="rect" id="node6" href="../../../../index/sbtree/multivalue/v2/CellBTreeMultiValueV2.html" title="&lt;TABLE&gt;" alt="" coords="559,197,778,245"/>
+<area shape="rect" id="node7_6" href="../../../../index/sbtree/multivalue/v1/OCellBTreeMultiValueV1.html" title="com.orientechnologies.orient.core.storage.index.sbtree.multivalue.v1.OCellBTreeMultiValueV1" alt="" coords="813,209,1021,234"/>
+<area shape="rect" id="node7" href="../../../../index/sbtree/multivalue/v1/OCellBTreeMultiValueV1.html" title="&lt;TABLE&gt;" alt="" coords="802,197,1031,245"/>
+<area shape="rect" id="node8_7" href="../../../../index/sbtree/singlevalue/OCellBTreeSingleValue.html" title="com.orientechnologies.orient.core.storage.index.sbtree.singlevalue.OCellBTreeSingleValue" alt="" coords="1066,209,1263,234"/>
+<area shape="rect" id="node8" href="../../../../index/sbtree/singlevalue/OCellBTreeSingleValue.html" title="&lt;TABLE&gt;" alt="" coords="1055,197,1274,245"/>
+<area shape="rect" id="node9_8" href="../../../../index/hashindex/local/OHashTableDirectory.html" title="com.orientechnologies.orient.core.storage.index.hashindex.local.OHashTableDirectory" alt="" coords="1309,209,1465,234"/>
+<area shape="rect" id="node9" href="../../../../index/hashindex/local/OHashTableDirectory.html" title="&lt;TABLE&gt;" alt="" coords="1299,197,1476,245"/>
+<area shape="rect" id="node10_9" href="../../../../index/hashindex/local/OLocalHashTable.html" title="com.orientechnologies.orient.core.storage.index.hashindex.local.OLocalHashTable" alt="" coords="1511,209,1690,234"/>
+<area shape="rect" id="node10" href="../../../../index/hashindex/local/OLocalHashTable.html" title="&lt;TABLE&gt;" alt="" coords="1501,197,1701,245"/>
+<area shape="rect" id="node11_10" href="../../../../index/sbtreebonsai/local/OSBTreeBonsaiLocal.html" title="com.orientechnologies.orient.core.storage.index.sbtreebonsai.local.OSBTreeBonsaiLocal" alt="" coords="1735,209,1935,234"/>
+<area shape="rect" id="node11" href="../../../../index/sbtreebonsai/local/OSBTreeBonsaiLocal.html" title="&lt;TABLE&gt;" alt="" coords="1725,197,1946,245"/>
+</map>

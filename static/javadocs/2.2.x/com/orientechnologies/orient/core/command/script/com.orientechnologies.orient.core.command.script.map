@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseScriptManager.html" title="com.orientechnologies.orient.core.command.script.ODatabaseScriptManager" alt="" coords="16,19,201,45"/>
+<area shape="rect" id="node1" href="./ODatabaseScriptManager.html" title="&lt;TABLE&gt;" alt="" coords="5,8,212,56"/>
+<area shape="rect" id="node2_1" href="./OScriptDocumentDatabaseWrapper.html" title="com.orientechnologies.orient.core.command.script.OScriptDocumentDatabaseWrapper" alt="" coords="247,19,498,45"/>
+<area shape="rect" id="node2" href="./OScriptDocumentDatabaseWrapper.html" title="&lt;TABLE&gt;" alt="" coords="237,8,509,56"/>
+<area shape="rect" id="node3_2" href="./OCommandScriptException.html" title="com.orientechnologies.orient.core.command.script.OCommandScriptException" alt="" coords="543,19,741,45"/>
+<area shape="rect" id="node3" href="./OCommandScriptException.html" title="&lt;TABLE&gt;" alt="" coords="533,8,751,56"/>
+<area shape="rect" id="node4_3" href="./OCommandExecutorFunction.html" title="com.orientechnologies.orient.core.command.script.OCommandExecutorFunction" alt="" coords="786,19,994,45"/>
+<area shape="rect" id="node4" href="./OCommandExecutorFunction.html" title="&lt;TABLE&gt;" alt="" coords="775,8,1005,56"/>
+<area shape="rect" id="node5_4" href="./OCommandScript.html" title="com.orientechnologies.orient.core.command.script.OCommandScript" alt="" coords="1039,19,1173,45"/>
+<area shape="rect" id="node5" href="./OCommandScript.html" title="&lt;TABLE&gt;" alt="" coords="1029,8,1183,56"/>
+<area shape="rect" id="node6_5" href="./OCommandExecutorUtility.html" title="com.orientechnologies.orient.core.command.script.OCommandExecutorUtility" alt="" coords="1218,19,1410,45"/>
+<area shape="rect" id="node6" href="./OCommandExecutorUtility.html" title="&lt;TABLE&gt;" alt="" coords="1207,8,1421,56"/>
+<area shape="rect" id="node7_6" href="./OCommandExecutorScript.html" title="com.orientechnologies.orient.core.command.script.OCommandExecutorScript" alt="" coords="1455,19,1645,45"/>
+<area shape="rect" id="node7" href="./OCommandExecutorScript.html" title="&lt;TABLE&gt;" alt="" coords="1445,8,1655,56"/>
+<area shape="rect" id="node8_7" href="./OScriptInjection.html" title="com.orientechnologies.orient.core.command.script.OScriptInjection" alt="" coords="1690,11,1813,53"/>
+<area shape="rect" id="node8" href="./OScriptInjection.html" title="&lt;TABLE&gt;" alt="" coords="1679,5,1823,59"/>
+<area shape="rect" id="node9_8" href="./OScriptManager.html" title="com.orientechnologies.orient.core.command.script.OScriptManager" alt="" coords="1859,19,1983,45"/>
+<area shape="rect" id="node9" href="./OScriptManager.html" title="&lt;TABLE&gt;" alt="" coords="1848,8,1993,56"/>
+<area shape="rect" id="node10_9" href="./OCommandFunction.html" title="com.orientechnologies.orient.core.command.script.OCommandFunction" alt="" coords="2029,19,2181,45"/>
+<area shape="rect" id="node10" href="./OCommandFunction.html" title="&lt;TABLE&gt;" alt="" coords="2018,8,2191,56"/>
+<area shape="rect" id="node11_10" href="./OScriptOrientWrapper.html" title="com.orientechnologies.orient.core.command.script.OScriptOrientWrapper" alt="" coords="2227,19,2388,45"/>
+<area shape="rect" id="node11" href="./OScriptOrientWrapper.html" title="&lt;TABLE&gt;" alt="" coords="2216,8,2399,56"/>
+</map>

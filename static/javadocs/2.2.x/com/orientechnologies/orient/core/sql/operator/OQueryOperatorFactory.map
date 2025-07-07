@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../ODynamicSQLElementFactory.html" title="com.orientechnologies.orient.core.sql.ODynamicSQLElementFactory" alt="" coords="16,118,229,143"/>
+<area shape="rect" id="node1" href="../ODynamicSQLElementFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,107,240,155"/>
+<area shape="rect" id="node2_1" href="./OQueryOperatorFactory.html" title="com.orientechnologies.orient.core.sql.operator.OQueryOperatorFactory" alt="" coords="299,11,471,53"/>
+<area shape="rect" id="node2" href="./OQueryOperatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="289,5,482,59"/>
+<area shape="rect" id="node3_2" href="./ODefaultQueryOperatorFactory.html" title="com.orientechnologies.orient.core.sql.operator.ODefaultQueryOperatorFactory" alt="" coords="275,118,495,143"/>
+<area shape="rect" id="node3" href="./ODefaultQueryOperatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="265,107,506,155"/>
+<area shape="rect" id="node4_3" href="../../../../lucene/operator/OLuceneOperatorFactory.html" title="com.orientechnologies.lucene.operator.OLuceneOperatorFactory" alt="" coords="541,118,721,143"/>
+<area shape="rect" id="node4" href="../../../../lucene/operator/OLuceneOperatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="530,107,731,155"/>
+</map>

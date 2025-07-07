@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../core/db/ODatabaseInternal.html" title="com.orientechnologies.orient.core.db.ODatabaseInternal" alt="" coords="107,11,279,53"/>
+<area shape="rect" id="node1" href="../../core/db/ODatabaseInternal.html" title="&lt;TABLE&gt;" alt="" coords="96,5,289,59"/>
+<area shape="rect" id="node3_1" href="./ODatabasePojoAbstract.html" title="com.orientechnologies.orient.object.db.ODatabasePojoAbstract" alt="" coords="16,121,220,146"/>
+<area shape="rect" id="node3" href="./ODatabasePojoAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,109,231,157"/>
+<area shape="rect" id="node4_2" href="./OObjectDatabaseTx.html" title="com.orientechnologies.orient.object.db.OObjectDatabaseTx" alt="" coords="193,219,342,245"/>
+<area shape="rect" id="node4" href="./OObjectDatabaseTx.html" title="&lt;TABLE&gt;" alt="" coords="182,208,353,256"/>
+<area shape="rect" id="node2_3" href="../../core/db/object/ODatabaseObject.html" title="com.orientechnologies.orient.core.db.object.ODatabaseObject" alt="" coords="315,112,449,155"/>
+<area shape="rect" id="node2" href="../../core/db/object/ODatabaseObject.html" title="&lt;TABLE&gt;" alt="" coords="305,107,459,160"/>
+<area shape="rect" id="node5_4" href="./OObjectDatabaseTxPooled.html" title="com.orientechnologies.orient.object.db.OObjectDatabaseTxPooled" alt="" coords="171,315,364,341"/>
+<area shape="rect" id="node5" href="./OObjectDatabaseTxPooled.html" title="&lt;TABLE&gt;" alt="" coords="160,304,375,352"/>
+</map>

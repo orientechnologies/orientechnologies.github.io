@@ -1,0 +1,22 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSBTreeCollectionManagerAbstract.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract" alt="" coords="16,118,267,143"/>
+<area shape="rect" id="node1" href="./OSBTreeCollectionManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,107,277,155"/>
+<area shape="rect" id="node2_1" href="./OSBTreeCollectionManagerShared.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerShared" alt="" coords="21,214,261,239"/>
+<area shape="rect" id="node2" href="./OSBTreeCollectionManagerShared.html" title="&lt;TABLE&gt;" alt="" coords="11,203,272,251"/>
+<area shape="rect" id="node3_2" href="./OIndexRIDContainer.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OIndexRIDContainer" alt="" coords="285,19,437,45"/>
+<area shape="rect" id="node3" href="./OIndexRIDContainer.html" title="&lt;TABLE&gt;" alt="" coords="275,8,448,56"/>
+<area shape="rect" id="node4_3" href="./OSBTreeRidBag.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeRidBag" alt="" coords="483,19,603,45"/>
+<area shape="rect" id="node4" href="./OSBTreeRidBag.html" title="&lt;TABLE&gt;" alt="" coords="472,8,613,56"/>
+<area shape="rect" id="node5_4" href="./OSBTreeRidBag.Change.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeRidBag.Change" alt="" coords="648,11,741,53"/>
+<area shape="rect" id="node5" href="./OSBTreeRidBag.Change.html" title="&lt;TABLE&gt;" alt="" coords="637,5,752,59"/>
+<area shape="rect" id="node6_5" href="./OSBTreeRidBag.ChangeSerializationHelper.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeRidBag.ChangeSerializationHelper" alt="" coords="787,19,979,45"/>
+<area shape="rect" id="node6" href="./OSBTreeRidBag.ChangeSerializationHelper.html" title="&lt;TABLE&gt;" alt="" coords="776,8,989,56"/>
+<area shape="rect" id="node7_6" href="./OBonsaiCollectionPointer.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OBonsaiCollectionPointer" alt="" coords="1024,19,1208,45"/>
+<area shape="rect" id="node7" href="./OBonsaiCollectionPointer.html" title="&lt;TABLE&gt;" alt="" coords="1013,8,1219,56"/>
+<area shape="rect" id="node8_7" href="./OIndexRIDContainerSBTree.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OIndexRIDContainerSBTree" alt="" coords="1254,19,1450,45"/>
+<area shape="rect" id="node8" href="./OIndexRIDContainerSBTree.html" title="&lt;TABLE&gt;" alt="" coords="1243,8,1461,56"/>
+<area shape="rect" id="node9_8" href="./OSBTreeCollectionManager.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManager" alt="" coords="43,11,239,53"/>
+<area shape="rect" id="node9" href="./OSBTreeCollectionManager.html" title="&lt;TABLE&gt;" alt="" coords="33,5,250,59"/>
+<area shape="rect" id="node10_9" href="./ORidBagDeleter.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleter" alt="" coords="1495,19,1619,45"/>
+<area shape="rect" id="node10" href="./ORidBagDeleter.html" title="&lt;TABLE&gt;" alt="" coords="1485,8,1630,56"/>
+</map>

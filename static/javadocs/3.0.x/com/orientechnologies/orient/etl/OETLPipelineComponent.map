@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OETLAbstractPipelineComponent.html" title="com.orientechnologies.orient.etl.OETLAbstractPipelineComponent" alt="" coords="16,222,249,247"/>
+<area shape="rect" id="node1" href="./OETLAbstractPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="5,211,260,259"/>
+<area shape="rect" id="node2_1" href="./OETLComponent.html" title="com.orientechnologies.orient.etl.OETLComponent" alt="" coords="182,11,310,53"/>
+<area shape="rect" id="node2" href="./OETLComponent.html" title="&lt;TABLE&gt;" alt="" coords="171,5,321,59"/>
+<area shape="rect" id="node3_2" href="./OETLPipelineComponent.html" title="com.orientechnologies.orient.etl.OETLPipelineComponent" alt="" coords="156,112,336,155"/>
+<area shape="rect" id="node3" href="./OETLPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="145,107,347,160"/>
+<area shape="rect" id="node4_3" href="./transformer/OETLTransformer.html" title="com.orientechnologies.orient.etl.transformer.OETLTransformer" alt="" coords="295,213,424,256"/>
+<area shape="rect" id="node4" href="./transformer/OETLTransformer.html" title="&lt;TABLE&gt;" alt="" coords="284,208,435,261"/>
+</map>

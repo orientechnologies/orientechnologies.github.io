@@ -1,0 +1,30 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OShapeOperation.html" title="com.orientechnologies.spatial.shape.OShapeOperation" alt="" coords="31,11,164,53"/>
+<area shape="rect" id="node1" href="./OShapeOperation.html" title="&lt;TABLE&gt;" alt="" coords="20,5,175,59"/>
+<area shape="rect" id="node6_1" href="./OShapeOperationImpl.html" title="com.orientechnologies.spatial.shape.OShapeOperationImpl" alt="" coords="16,118,179,143"/>
+<area shape="rect" id="node6" href="./OShapeOperationImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,107,189,155"/>
+<area shape="rect" id="node2_2" href="./OShapeType.html" title="com.orientechnologies.spatial.shape.OShapeType" alt="" coords="215,11,334,53"/>
+<area shape="rect" id="node2" href="./OShapeType.html" title="&lt;TABLE&gt;" alt="" coords="205,5,345,59"/>
+<area shape="rect" id="node3_3" href="./OGeometryCollectionShapeBuilder.html" title="com.orientechnologies.spatial.shape.OGeometryCollectionShapeBuilder" alt="" coords="45,214,291,239"/>
+<area shape="rect" id="node3" href="./OGeometryCollectionShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="35,203,301,251"/>
+<area shape="rect" id="node4_4" href="./OMultiLineStringShapeBuilder.html" title="com.orientechnologies.spatial.shape.OMultiLineStringShapeBuilder" alt="" coords="336,214,549,239"/>
+<area shape="rect" id="node4" href="./OMultiLineStringShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="325,203,560,251"/>
+<area shape="rect" id="node5_5" href="./OMultiPolygonShapeBuilder.html" title="com.orientechnologies.spatial.shape.OMultiPolygonShapeBuilder" alt="" coords="805,310,1005,335"/>
+<area shape="rect" id="node5" href="./OMultiPolygonShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="795,299,1016,347"/>
+<area shape="rect" id="node7_6" href="./OMultiPointShapeBuilder.html" title="com.orientechnologies.spatial.shape.OMultiPointShapeBuilder" alt="" coords="595,214,776,239"/>
+<area shape="rect" id="node7" href="./OMultiPointShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="584,203,787,251"/>
+<area shape="rect" id="node8_7" href="./OShapeBuilder.html" title="com.orientechnologies.spatial.shape.OShapeBuilder" alt="" coords="385,19,631,45"/>
+<area shape="rect" id="node8" href="./OShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="375,8,641,56"/>
+<area shape="rect" id="node9_8" href="./OPointShapeBuilder.html" title="com.orientechnologies.spatial.shape.OPointShapeBuilder" alt="" coords="225,118,373,143"/>
+<area shape="rect" id="node9" href="./OPointShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="214,107,383,155"/>
+<area shape="rect" id="node13_9" href="./ORectangleShapeBuilder.html" title="com.orientechnologies.spatial.shape.ORectangleShapeBuilder" alt="" coords="418,118,598,143"/>
+<area shape="rect" id="node13" href="./ORectangleShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="407,107,609,155"/>
+<area shape="rect" id="node14_10" href="./OComplexShapeBuilder.html" title="com.orientechnologies.spatial.shape.OComplexShapeBuilder" alt="" coords="644,118,948,143"/>
+<area shape="rect" id="node14" href="./OComplexShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="633,107,959,155"/>
+<area shape="rect" id="node10_11" href="./OPolygonShapeBuilder.html" title="com.orientechnologies.spatial.shape.OPolygonShapeBuilder" alt="" coords="821,214,989,239"/>
+<area shape="rect" id="node10" href="./OPolygonShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="811,203,1000,251"/>
+<area shape="rect" id="node11_12" href="./OShapeFactory.html" title="com.orientechnologies.spatial.shape.OShapeFactory" alt="" coords="1035,214,1151,239"/>
+<area shape="rect" id="node11" href="./OShapeFactory.html" title="&lt;TABLE&gt;" alt="" coords="1025,203,1162,251"/>
+<area shape="rect" id="node12_13" href="./OLineStringShapeBuilder.html" title="com.orientechnologies.spatial.shape.OLineStringShapeBuilder" alt="" coords="1197,214,1377,239"/>
+<area shape="rect" id="node12" href="./OLineStringShapeBuilder.html" title="&lt;TABLE&gt;" alt="" coords="1186,203,1387,251"/>
+</map>

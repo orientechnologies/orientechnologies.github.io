@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORemoteTaskFactory.html" title="com.orientechnologies.orient.server.distributed.ORemoteTaskFactory" alt="" coords="315,11,471,53"/>
+<area shape="rect" id="node1" href="./ORemoteTaskFactory.html" title="&lt;TABLE&gt;" alt="" coords="305,5,482,59"/>
+<area shape="rect" id="node2_1" href="./impl/task/ODefaultRemoteTaskFactoryV2.html" title="com.orientechnologies.orient.server.distributed.impl.task.ODefaultRemoteTaskFactoryV2" alt="" coords="16,118,237,143"/>
+<area shape="rect" id="node2" href="./impl/task/ODefaultRemoteTaskFactoryV2.html" title="&lt;TABLE&gt;" alt="" coords="5,107,248,155"/>
+<area shape="rect" id="node3_2" href="./impl/task/ODefaultRemoteTaskFactoryV0.html" title="com.orientechnologies.orient.server.distributed.impl.task.ODefaultRemoteTaskFactoryV0" alt="" coords="283,118,504,143"/>
+<area shape="rect" id="node3" href="./impl/task/ODefaultRemoteTaskFactoryV0.html" title="&lt;TABLE&gt;" alt="" coords="272,107,515,155"/>
+<area shape="rect" id="node4_3" href="./impl/task/ODefaultRemoteTaskFactoryV1.html" title="com.orientechnologies.orient.server.distributed.impl.task.ODefaultRemoteTaskFactoryV1" alt="" coords="549,118,771,143"/>
+<area shape="rect" id="node4" href="./impl/task/ODefaultRemoteTaskFactoryV1.html" title="&lt;TABLE&gt;" alt="" coords="539,107,781,155"/>
+</map>

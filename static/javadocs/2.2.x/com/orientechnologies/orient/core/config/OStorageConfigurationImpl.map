@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../serialization/OSerializableStream.html" title="com.orientechnologies.orient.core.serialization.OSerializableStream" alt="" coords="217,11,369,53"/>
+<area shape="rect" id="node1" href="../serialization/OSerializableStream.html" title="&lt;TABLE&gt;" alt="" coords="207,5,380,59"/>
+<area shape="rect" id="node5_1" href="./OStorageConfigurationImpl.html" title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl" alt="" coords="298,118,494,143"/>
+<area shape="rect" id="node5" href="./OStorageConfigurationImpl.html" title="&lt;TABLE&gt;" alt="" coords="287,107,505,155"/>
+<area shape="rect" id="node2_2" href="../storage/impl/local/OStorageConfigurationSegment.html" title="com.orientechnologies.orient.core.storage.impl.local.OStorageConfigurationSegment" alt="" coords="16,214,240,239"/>
+<area shape="rect" id="node2" href="../storage/impl/local/OStorageConfigurationSegment.html" title="&lt;TABLE&gt;" alt="" coords="5,203,251,251"/>
+<area shape="rect" id="node3_3" href="../storage/impl/local/paginated/OStorageMemoryConfiguration.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.OStorageMemoryConfiguration" alt="" coords="286,214,506,239"/>
+<area shape="rect" id="node3" href="../storage/impl/local/paginated/OStorageMemoryConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="275,203,517,251"/>
+<area shape="rect" id="node4_4" href="./OStorageConfiguration.html" title="com.orientechnologies.orient.core.config.OStorageConfiguration" alt="" coords="415,11,582,53"/>
+<area shape="rect" id="node4" href="./OStorageConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="405,5,593,59"/>
+<area shape="rect" id="node6_5" href="../../client/remote/OStorageRemoteConfiguration.html" title="com.orientechnologies.orient.client.remote.OStorageRemoteConfiguration" alt="" coords="551,214,769,239"/>
+<area shape="rect" id="node6" href="../../client/remote/OStorageRemoteConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="541,203,779,251"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../storage/index/sbtree/local/OSBTreeException.html" title="com.orientechnologies.orient.core.storage.index.sbtree.local.OSBTreeException" alt="" coords="16,209,153,234"/>
+<area shape="rect" id="node1" href="../storage/index/sbtree/local/OSBTreeException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,164,245"/>
+<area shape="rect" id="node2_1" href="../storage/index/sbtree/multivalue/v2/CellBTreeMultiValueException.html" title="com.orientechnologies.orient.core.storage.index.sbtree.multivalue.v2.CellBTreeMultiValueException" alt="" coords="199,209,413,234"/>
+<area shape="rect" id="node2" href="../storage/index/sbtree/multivalue/v2/CellBTreeMultiValueException.html" title="&lt;TABLE&gt;" alt="" coords="189,197,423,245"/>
+<area shape="rect" id="node3_2" href="../storage/index/sbtree/multivalue/v1/OCellBTreeMultiValueException.html" title="com.orientechnologies.orient.core.storage.index.sbtree.multivalue.v1.OCellBTreeMultiValueException" alt="" coords="458,209,682,234"/>
+<area shape="rect" id="node3" href="../storage/index/sbtree/multivalue/v1/OCellBTreeMultiValueException.html" title="&lt;TABLE&gt;" alt="" coords="447,197,693,245"/>
+<area shape="rect" id="node4_3" href="../storage/index/sbtree/singlevalue/OCellBTreeSingleValueException.html" title="com.orientechnologies.orient.core.storage.index.sbtree.singlevalue.OCellBTreeSingleValueException" alt="" coords="728,209,959,234"/>
+<area shape="rect" id="node4" href="../storage/index/sbtree/singlevalue/OCellBTreeSingleValueException.html" title="&lt;TABLE&gt;" alt="" coords="717,197,969,245"/>
+<area shape="rect" id="node5_4" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="1051,17,1175,42"/>
+<area shape="rect" id="node5" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="1040,5,1185,53"/>
+<area shape="rect" id="node7_5" href="./ODurableComponentException.html" title="com.orientechnologies.orient.core.exception.ODurableComponentException" alt="" coords="1003,113,1223,138"/>
+<area shape="rect" id="node7" href="./ODurableComponentException.html" title="&lt;TABLE&gt;" alt="" coords="992,101,1233,149"/>
+<area shape="rect" id="node6_6" href="./OSBTreeBonsaiLocalException.html" title="com.orientechnologies.orient.core.exception.OSBTreeBonsaiLocalException" alt="" coords="1005,209,1221,234"/>
+<area shape="rect" id="node6" href="./OSBTreeBonsaiLocalException.html" title="&lt;TABLE&gt;" alt="" coords="994,197,1231,245"/>
+<area shape="rect" id="node8_7" href="./OPaginatedClusterException.html" title="com.orientechnologies.orient.core.exception.OPaginatedClusterException" alt="" coords="1265,209,1469,234"/>
+<area shape="rect" id="node8" href="./OPaginatedClusterException.html" title="&lt;TABLE&gt;" alt="" coords="1255,197,1480,245"/>
+<area shape="rect" id="node9_8" href="./OLocalHashTableException.html" title="com.orientechnologies.orient.core.exception.OLocalHashTableException" alt="" coords="1515,209,1710,234"/>
+<area shape="rect" id="node9" href="./OLocalHashTableException.html" title="&lt;TABLE&gt;" alt="" coords="1505,197,1721,245"/>
+<area shape="rect" id="node10_9" href="./OClusterPositionMapException.html" title="com.orientechnologies.orient.core.exception.OClusterPositionMapException" alt="" coords="1756,209,1976,234"/>
+<area shape="rect" id="node10" href="./OClusterPositionMapException.html" title="&lt;TABLE&gt;" alt="" coords="1745,197,1987,245"/>
+<area shape="rect" id="node11_10" href="./OHashTableDirectoryException.html" title="com.orientechnologies.orient.core.exception.OHashTableDirectoryException" alt="" coords="2021,209,2241,234"/>
+<area shape="rect" id="node11" href="./OHashTableDirectoryException.html" title="&lt;TABLE&gt;" alt="" coords="2011,197,2252,245"/>
+</map>

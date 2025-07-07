@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OProxedResource.html" title="com.orientechnologies.orient.core.db.record.OProxedResource" alt="" coords="443,17,607,42"/>
+<area shape="rect" id="node1" href="./OProxedResource.html" title="&lt;TABLE&gt;" alt="" coords="433,5,618,53"/>
+<area shape="rect" id="node2_1" href="../../metadata/sequence/OSequenceLibraryAbstract.html" title="com.orientechnologies.orient.core.metadata.sequence.OSequenceLibraryAbstract" alt="" coords="16,113,208,138"/>
+<area shape="rect" id="node2" href="../../metadata/sequence/OSequenceLibraryAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,101,219,149"/>
+<area shape="rect" id="node3_2" href="../../metadata/function/OFunctionLibraryProxy.html" title="com.orientechnologies.orient.core.metadata.function.OFunctionLibraryProxy" alt="" coords="254,113,421,138"/>
+<area shape="rect" id="node3" href="../../metadata/function/OFunctionLibraryProxy.html" title="&lt;TABLE&gt;" alt="" coords="243,101,431,149"/>
+<area shape="rect" id="node4_3" href="../../metadata/schema/OSchemaProxy.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaProxy" alt="" coords="466,113,585,138"/>
+<area shape="rect" id="node4" href="../../metadata/schema/OSchemaProxy.html" title="&lt;TABLE&gt;" alt="" coords="455,101,595,149"/>
+<area shape="rect" id="node5_4" href="../../schedule/OSchedulerProxy.html" title="com.orientechnologies.orient.core.schedule.OSchedulerProxy" alt="" coords="631,113,761,138"/>
+<area shape="rect" id="node5" href="../../schedule/OSchedulerProxy.html" title="&lt;TABLE&gt;" alt="" coords="620,101,772,149"/>
+<area shape="rect" id="node6_5" href="../../index/OIndexManagerProxy.html" title="com.orientechnologies.orient.core.index.OIndexManagerProxy" alt="" coords="807,113,967,138"/>
+<area shape="rect" id="node6" href="../../index/OIndexManagerProxy.html" title="&lt;TABLE&gt;" alt="" coords="796,101,977,149"/>
+</map>

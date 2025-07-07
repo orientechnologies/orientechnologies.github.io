@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ONeedRetryException.html" title="com.orientechnologies.common.concur.ONeedRetryException" alt="" coords="911,113,1073,138"/>
+<area shape="rect" id="node1" href="./ONeedRetryException.html" title="&lt;TABLE&gt;" alt="" coords="900,101,1084,149"/>
+<area shape="rect" id="node3_1" href="../../orient/core/exception/OConcurrentCreateException.html" title="com.orientechnologies.orient.core.exception.OConcurrentCreateException" alt="" coords="16,209,224,234"/>
+<area shape="rect" id="node3" href="../../orient/core/exception/OConcurrentCreateException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,235,245"/>
+<area shape="rect" id="node4_2" href="../../orient/core/exception/OCommandInterruptedException.html" title="com.orientechnologies.orient.core.exception.OCommandInterruptedException" alt="" coords="269,209,501,234"/>
+<area shape="rect" id="node4" href="../../orient/core/exception/OCommandInterruptedException.html" title="&lt;TABLE&gt;" alt="" coords="259,197,512,245"/>
+<area shape="rect" id="node5_3" href="../../orient/core/exception/OConcurrentModificationException.html" title="com.orientechnologies.orient.core.exception.OConcurrentModificationException" alt="" coords="547,209,791,234"/>
+<area shape="rect" id="node5" href="../../orient/core/exception/OConcurrentModificationException.html" title="&lt;TABLE&gt;" alt="" coords="537,197,802,245"/>
+<area shape="rect" id="node6_4" href="../../orient/server/distributed/ODistributedConfigurationChangedException.html" title="com.orientechnologies.orient.server.distributed.ODistributedConfigurationChangedException" alt="" coords="837,209,1147,234"/>
+<area shape="rect" id="node6" href="../../orient/server/distributed/ODistributedConfigurationChangedException.html" title="&lt;TABLE&gt;" alt="" coords="827,197,1157,245"/>
+<area shape="rect" id="node7_5" href="../../orient/server/distributed/task/ODistributedKeyLockedException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedKeyLockedException" alt="" coords="1192,209,1427,234"/>
+<area shape="rect" id="node7" href="../../orient/server/distributed/task/ODistributedKeyLockedException.html" title="&lt;TABLE&gt;" alt="" coords="1181,197,1437,245"/>
+<area shape="rect" id="node8_6" href="../../orient/server/distributed/task/ODistributedOperationException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedOperationException" alt="" coords="1472,209,1701,234"/>
+<area shape="rect" id="node8" href="../../orient/server/distributed/task/ODistributedOperationException.html" title="&lt;TABLE&gt;" alt="" coords="1461,197,1712,245"/>
+<area shape="rect" id="node9_7" href="../../orient/server/distributed/task/ODistributedRecordLockedException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedRecordLockedException" alt="" coords="1747,209,2003,234"/>
+<area shape="rect" id="node9" href="../../orient/server/distributed/task/ODistributedRecordLockedException.html" title="&lt;TABLE&gt;" alt="" coords="1736,197,2013,245"/>
+<area shape="rect" id="node2_8" href="../../orient/core/exception/OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="930,17,1054,42"/>
+<area shape="rect" id="node2" href="../../orient/core/exception/OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="919,5,1065,53"/>
+</map>

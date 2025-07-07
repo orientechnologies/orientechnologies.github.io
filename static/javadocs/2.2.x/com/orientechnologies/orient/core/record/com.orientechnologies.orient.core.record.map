@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORecordFactoryManager.html" title="com.orientechnologies.orient.core.record.ORecordFactoryManager" alt="" coords="16,19,195,45"/>
+<area shape="rect" id="node1" href="./ORecordFactoryManager.html" title="&lt;TABLE&gt;" alt="" coords="5,8,205,56"/>
+<area shape="rect" id="node2_1" href="./ORecordFactoryManager.ORecordFactory.html" title="com.orientechnologies.orient.core.record.ORecordFactoryManager.ORecordFactory" alt="" coords="239,11,361,53"/>
+<area shape="rect" id="node2" href="./ORecordFactoryManager.ORecordFactory.html" title="&lt;TABLE&gt;" alt="" coords="229,5,371,59"/>
+<area shape="rect" id="node3_2" href="./ORecordVersionHelper.html" title="com.orientechnologies.orient.core.record.ORecordVersionHelper" alt="" coords="407,19,572,45"/>
+<area shape="rect" id="node3" href="./ORecordVersionHelper.html" title="&lt;TABLE&gt;" alt="" coords="396,8,583,56"/>
+<area shape="rect" id="node4_3" href="./ORecordSchemaAware.html" title="com.orientechnologies.orient.core.record.ORecordSchemaAware" alt="" coords="617,11,785,53"/>
+<area shape="rect" id="node4" href="./ORecordSchemaAware.html" title="&lt;TABLE&gt;" alt="" coords="607,5,796,59"/>
+<area shape="rect" id="node5_4" href="./OIdentityChangeListener.html" title="com.orientechnologies.orient.core.record.OIdentityChangeListener" alt="" coords="831,11,1011,53"/>
+<area shape="rect" id="node5" href="./OIdentityChangeListener.html" title="&lt;TABLE&gt;" alt="" coords="821,5,1022,59"/>
+<area shape="rect" id="node6_5" href="./ORecordInternal.html" title="com.orientechnologies.orient.core.record.ORecordInternal" alt="" coords="1057,19,1181,45"/>
+<area shape="rect" id="node6" href="./ORecordInternal.html" title="&lt;TABLE&gt;" alt="" coords="1046,8,1191,56"/>
+<area shape="rect" id="node7_6" href="./ORecordAbstract.html" title="com.orientechnologies.orient.core.record.ORecordAbstract" alt="" coords="1209,118,1337,143"/>
+<area shape="rect" id="node7" href="./ORecordAbstract.html" title="&lt;TABLE&gt;" alt="" coords="1199,107,1348,155"/>
+<area shape="rect" id="node8_7" href="./ORecordListener.html" title="com.orientechnologies.orient.core.record.ORecordListener" alt="" coords="1366,11,1493,53"/>
+<area shape="rect" id="node8" href="./ORecordListener.html" title="&lt;TABLE&gt;" alt="" coords="1355,5,1503,59"/>
+<area shape="rect" id="node9_8" href="./ORecordListener.EVENT.html" title="com.orientechnologies.orient.core.record.ORecordListener.EVENT" alt="" coords="1538,11,1657,53"/>
+<area shape="rect" id="node9" href="./ORecordListener.EVENT.html" title="&lt;TABLE&gt;" alt="" coords="1527,5,1667,59"/>
+<area shape="rect" id="node10_9" href="./ORecordStringable.html" title="com.orientechnologies.orient.core.record.ORecordStringable" alt="" coords="1702,11,1842,53"/>
+<area shape="rect" id="node10" href="./ORecordStringable.html" title="&lt;TABLE&gt;" alt="" coords="1691,5,1853,59"/>
+<area shape="rect" id="node11_10" href="./ORecord.html" title="com.orientechnologies.orient.core.record.ORecord" alt="" coords="1227,11,1320,53"/>
+<area shape="rect" id="node11" href="./ORecord.html" title="&lt;TABLE&gt;" alt="" coords="1216,5,1331,59"/>
+</map>

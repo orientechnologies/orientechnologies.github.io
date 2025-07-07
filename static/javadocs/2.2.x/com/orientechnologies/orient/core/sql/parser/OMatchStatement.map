@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../command/OCommandExecutor.html" title="com.orientechnologies.orient.core.command.OCommandExecutor" alt="" coords="16,11,168,53"/>
+<area shape="rect" id="node1" href="../../command/OCommandExecutor.html" title="&lt;TABLE&gt;" alt="" coords="5,5,179,59"/>
+<area shape="rect" id="node3_1" href="./OMatchStatement.html" title="com.orientechnologies.orient.core.sql.parser.OMatchStatement" alt="" coords="229,118,366,143"/>
+<area shape="rect" id="node3" href="./OMatchStatement.html" title="&lt;TABLE&gt;" alt="" coords="218,107,377,155"/>
+<area shape="rect" id="node2_2" href="../OIterableRecordSource.html" title="com.orientechnologies.orient.core.sql.OIterableRecordSource" alt="" coords="213,11,381,53"/>
+<area shape="rect" id="node2" href="../OIterableRecordSource.html" title="&lt;TABLE&gt;" alt="" coords="203,5,392,59"/>
+<area shape="rect" id="node4_3" href="./OStatement.html" title="com.orientechnologies.orient.core.sql.parser.OStatement" alt="" coords="427,19,525,45"/>
+<area shape="rect" id="node4" href="./OStatement.html" title="&lt;TABLE&gt;" alt="" coords="417,8,535,56"/>
+</map>

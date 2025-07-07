@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODirectMemoryOnlyDiskCache.html" title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryOnlyDiskCache" alt="" coords="162,118,383,143"/>
+<area shape="rect" id="node1" href="./ODirectMemoryOnlyDiskCache.html" title="&lt;TABLE&gt;" alt="" coords="151,107,394,155"/>
+<area shape="rect" id="node2_1" href="../../cache/OAbstractWriteCache.html" title="com.orientechnologies.orient.core.storage.cache.OAbstractWriteCache" alt="" coords="16,19,175,45"/>
+<area shape="rect" id="node2" href="../../cache/OAbstractWriteCache.html" title="&lt;TABLE&gt;" alt="" coords="5,8,185,56"/>
+<area shape="rect" id="node3_2" href="../../cache/OWriteCache.html" title="com.orientechnologies.orient.core.storage.cache.OWriteCache" alt="" coords="221,11,325,53"/>
+<area shape="rect" id="node3" href="../../cache/OWriteCache.html" title="&lt;TABLE&gt;" alt="" coords="210,5,335,59"/>
+<area shape="rect" id="node4_3" href="../../cache/OReadCache.html" title="com.orientechnologies.orient.core.storage.cache.OReadCache" alt="" coords="371,11,473,53"/>
+<area shape="rect" id="node4" href="../../cache/OReadCache.html" title="&lt;TABLE&gt;" alt="" coords="360,5,484,59"/>
+</map>

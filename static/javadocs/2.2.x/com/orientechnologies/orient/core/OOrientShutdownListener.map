@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../common/concur/resource/OReentrantResourcePool.html" title="com.orientechnologies.common.concur.resource.OReentrantResourcePool" alt="" coords="16,121,245,146"/>
+<area shape="rect" id="node1" href="../../common/concur/resource/OReentrantResourcePool.html" title="&lt;TABLE&gt;" alt="" coords="5,109,256,157"/>
+<area shape="rect" id="node2_1" href="../../common/directmemory/OByteBufferPool.html" title="com.orientechnologies.common.directmemory.OByteBufferPool" alt="" coords="291,121,418,146"/>
+<area shape="rect" id="node2" href="../../common/directmemory/OByteBufferPool.html" title="&lt;TABLE&gt;" alt="" coords="281,109,429,157"/>
+<area shape="rect" id="node3_2" href="./OOrientListener.html" title="com.orientechnologies.orient.core.OOrientListener" alt="" coords="463,112,585,155"/>
+<area shape="rect" id="node3" href="./OOrientListener.html" title="&lt;TABLE&gt;" alt="" coords="453,107,595,160"/>
+<area shape="rect" id="node5_3" href="./OOrientListenerAbstract.html" title="com.orientechnologies.orient.core.OOrientListenerAbstract" alt="" coords="497,219,673,245"/>
+<area shape="rect" id="node5" href="./OOrientListenerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="487,208,684,256"/>
+<area shape="rect" id="node4_4" href="./OOrientShutdownListener.html" title="com.orientechnologies.orient.core.OOrientShutdownListener" alt="" coords="801,11,986,53"/>
+<area shape="rect" id="node4" href="./OOrientShutdownListener.html" title="&lt;TABLE&gt;" alt="" coords="790,5,997,59"/>
+<area shape="rect" id="node6_5" href="./db/record/ridbag/sbtree/OSBTreeCollectionManagerAbstract.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerAbstract" alt="" coords="681,121,932,146"/>
+<area shape="rect" id="node6" href="./db/record/ridbag/sbtree/OSBTreeCollectionManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="671,109,943,157"/>
+<area shape="rect" id="node7_6" href="./db/record/ridbag/sbtree/OSBTreeCollectionManagerShared.html" title="com.orientechnologies.orient.core.db.record.ridbag.sbtree.OSBTreeCollectionManagerShared" alt="" coords="733,219,973,245"/>
+<area shape="rect" id="node7" href="./db/record/ridbag/sbtree/OSBTreeCollectionManagerShared.html" title="&lt;TABLE&gt;" alt="" coords="723,208,984,256"/>
+<area shape="rect" id="node8_7" href="./metadata/schema/OSchemaShared.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" alt="" coords="1029,121,1155,146"/>
+<area shape="rect" id="node8" href="./metadata/schema/OSchemaShared.html" title="&lt;TABLE&gt;" alt="" coords="1018,109,1166,157"/>
+<area shape="rect" id="node9_8" href="./storage/impl/local/OAbstractPaginatedStorage.html" title="com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage" alt="" coords="1201,121,1399,146"/>
+<area shape="rect" id="node9" href="./storage/impl/local/OAbstractPaginatedStorage.html" title="&lt;TABLE&gt;" alt="" coords="1190,109,1410,157"/>
+<area shape="rect" id="node10_9" href="./index/OIndexAbstract.html" title="com.orientechnologies.orient.core.index.OIndexAbstract" alt="" coords="1445,121,1595,146"/>
+<area shape="rect" id="node10" href="./index/OIndexAbstract.html" title="&lt;TABLE&gt;" alt="" coords="1435,109,1605,157"/>
+<area shape="rect" id="node11_10" href="./index/OClassIndexManager.html" title="com.orientechnologies.orient.core.index.OClassIndexManager" alt="" coords="1640,121,1797,146"/>
+<area shape="rect" id="node11" href="./index/OClassIndexManager.html" title="&lt;TABLE&gt;" alt="" coords="1629,109,1808,157"/>
+</map>

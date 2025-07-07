@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseLifecycleListenerAbstract.html" title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListenerAbstract" alt="" coords="16,118,272,143"/>
+<area shape="rect" id="node1" href="./ODatabaseLifecycleListenerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,107,283,155"/>
+<area shape="rect" id="node2_1" href="./ODatabaseLifecycleListener.html" title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListener" alt="" coords="503,11,705,53"/>
+<area shape="rect" id="node2" href="./ODatabaseLifecycleListener.html" title="&lt;TABLE&gt;" alt="" coords="493,5,715,59"/>
+<area shape="rect" id="node3_2" href="../../server/plugin/livequery/OLiveQueryPlugin.html" title="com.orientechnologies.orient.server.plugin.livequery.OLiveQueryPlugin" alt="" coords="317,118,453,143"/>
+<area shape="rect" id="node3" href="../../server/plugin/livequery/OLiveQueryPlugin.html" title="&lt;TABLE&gt;" alt="" coords="307,107,464,155"/>
+<area shape="rect" id="node4_3" href="../../server/handler/OConfigurableHooksManager.html" title="com.orientechnologies.orient.server.handler.OConfigurableHooksManager" alt="" coords="499,118,709,143"/>
+<area shape="rect" id="node4" href="../../server/handler/OConfigurableHooksManager.html" title="&lt;TABLE&gt;" alt="" coords="489,107,719,155"/>
+<area shape="rect" id="node5_4" href="../../server/distributed/impl/ODistributedAbstractPlugin.html" title="com.orientechnologies.orient.server.distributed.impl.ODistributedAbstractPlugin" alt="" coords="754,118,950,143"/>
+<area shape="rect" id="node5" href="../../server/distributed/impl/ODistributedAbstractPlugin.html" title="&lt;TABLE&gt;" alt="" coords="743,107,961,155"/>
+<area shape="rect" id="node6_5" href="../../../lucene/OLuceneIndexFactory.html" title="com.orientechnologies.lucene.OLuceneIndexFactory" alt="" coords="995,118,1154,143"/>
+<area shape="rect" id="node6" href="../../../lucene/OLuceneIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="985,107,1165,155"/>
+</map>

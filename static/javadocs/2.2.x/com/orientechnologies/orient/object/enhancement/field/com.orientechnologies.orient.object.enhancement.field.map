@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODocumentFieldHandlingStrategyRegistry.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentFieldHandlingStrategyRegistry" alt="" coords="16,19,311,45"/>
+<area shape="rect" id="node1" href="./ODocumentFieldHandlingStrategyRegistry.html" title="&lt;TABLE&gt;" alt="" coords="5,8,321,56"/>
+<area shape="rect" id="node2_1" href="./ODocumentFieldHandlingStrategyFactory.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentFieldHandlingStrategyFactory" alt="" coords="357,19,645,45"/>
+<area shape="rect" id="node2" href="./ODocumentFieldHandlingStrategyFactory.html" title="&lt;TABLE&gt;" alt="" coords="346,8,655,56"/>
+<area shape="rect" id="node3_2" href="./ODocumentSingleRecordBytesOTypeHandlingStrategy.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentSingleRecordBytesOTypeHandlingStrategy" alt="" coords="312,118,684,143"/>
+<area shape="rect" id="node3" href="./ODocumentSingleRecordBytesOTypeHandlingStrategy.html" title="&lt;TABLE&gt;" alt="" coords="301,107,695,155"/>
+<area shape="rect" id="node4_3" href="./ODocumentFieldHandler.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentFieldHandler" alt="" coords="1015,19,1194,45"/>
+<area shape="rect" id="node4" href="./ODocumentFieldHandler.html" title="&lt;TABLE&gt;" alt="" coords="1005,8,1205,56"/>
+<area shape="rect" id="node5_4" href="./ODocumentSimpleFieldHandlingStrategy.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentSimpleFieldHandlingStrategy" alt="" coords="1217,118,1502,143"/>
+<area shape="rect" id="node5" href="./ODocumentSimpleFieldHandlingStrategy.html" title="&lt;TABLE&gt;" alt="" coords="1206,107,1513,155"/>
+<area shape="rect" id="node9_5" href="./ODocumentSmartFieldHandlingStrategy.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentSmartFieldHandlingStrategy" alt="" coords="1219,214,1499,239"/>
+<area shape="rect" id="node9" href="./ODocumentSmartFieldHandlingStrategy.html" title="&lt;TABLE&gt;" alt="" coords="1209,203,1510,251"/>
+<area shape="rect" id="node6_6" href="./ODocumentFieldHandlingStrategy.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentFieldHandlingStrategy" alt="" coords="1239,11,1479,53"/>
+<area shape="rect" id="node6" href="./ODocumentFieldHandlingStrategy.html" title="&lt;TABLE&gt;" alt="" coords="1229,5,1490,59"/>
+<area shape="rect" id="node7_7" href="./ODocumentSplitRecordBytesOTypeHandlingStrategy.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentSplitRecordBytesOTypeHandlingStrategy" alt="" coords="730,118,1090,143"/>
+<area shape="rect" id="node7" href="./ODocumentSplitRecordBytesOTypeHandlingStrategy.html" title="&lt;TABLE&gt;" alt="" coords="719,107,1101,155"/>
+<area shape="rect" id="node8_8" href="./ODocumentFieldOTypeHandlingStrategy.html" title="com.orientechnologies.orient.object.enhancement.field.ODocumentFieldOTypeHandlingStrategy" alt="" coords="690,11,970,53"/>
+<area shape="rect" id="node8" href="./ODocumentFieldOTypeHandlingStrategy.html" title="&lt;TABLE&gt;" alt="" coords="679,5,981,59"/>
+</map>

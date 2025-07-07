@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSessionStoragePerformanceStatistic.IndexCountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.IndexCountersHolder" alt="" coords="16,214,172,239"/>
+<area shape="rect" id="node1" href="./OSessionStoragePerformanceStatistic.IndexCountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="5,203,183,251"/>
+<area shape="rect" id="node2_1" href="./OSessionStoragePerformanceStatistic.RidbagCountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.RidbagCountersHolder" alt="" coords="218,214,383,239"/>
+<area shape="rect" id="node2" href="./OSessionStoragePerformanceStatistic.RidbagCountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="207,203,394,251"/>
+<area shape="rect" id="node3_2" href="./OSessionStoragePerformanceStatistic.PerformanceCountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder" alt="" coords="199,118,403,143"/>
+<area shape="rect" id="node3" href="./OSessionStoragePerformanceStatistic.PerformanceCountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="188,107,413,155"/>
+<area shape="rect" id="node5_3" href="./OClusterCountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder" alt="" coords="429,214,605,239"/>
+<area shape="rect" id="node5" href="./OClusterCountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="418,203,615,251"/>
+<area shape="rect" id="node4_4" href="./OSessionStoragePerformanceStatistic.CountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder" alt="" coords="145,11,457,53"/>
+<area shape="rect" id="node4" href="./OSessionStoragePerformanceStatistic.CountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="134,5,467,59"/>
+</map>
