@@ -3,7 +3,7 @@ description: 'OrientDB website deploy'
 author: 'Tglman'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'ghcr.io/orientechnologies/orientechnologies.github.io:main'
 branding:
   icon: 'zap'  
   color: 'green'
