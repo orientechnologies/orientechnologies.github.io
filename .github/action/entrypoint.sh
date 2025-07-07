@@ -82,6 +82,12 @@ main() {
     rm orientdb-book/.git -rf 
     mv orientdb-book/ ../public/docs/3.2.x/
 
+    echo "building docs for develop"    
+    git switch develop
+    mdbook build
+    rm orientdb-book/.git -rf 
+    mv orientdb-book/ ../public/docs/develop/
+
     cd ../
     export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
 
