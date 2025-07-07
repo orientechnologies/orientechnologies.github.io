@@ -1,0 +1,10 @@
+_book
+*~
+*#
+.#*
+deploy/*
+node_modules
+npm-debug.log
+Icon*
+.idea/
+*.swp
