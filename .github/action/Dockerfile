@@ -19,7 +19,7 @@ RUN cd zola && git checkout v0.19.2 && cargo install --path . --locked
 
 RUN cd ..
 
-RUN cargo install mdbook --locked && cargo install mdbook-variables --locked
+RUN cargo install mdbook --locked --version="^0.4" && cargo install mdbook-variables --locked --version="^0.2"
 
 COPY entrypoint.sh /entrypoint.sh
 
