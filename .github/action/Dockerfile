@@ -21,6 +21,6 @@ RUN cd ..
 
 RUN cargo install mdbook --locked --version="^0.4" && cargo install mdbook-variables --locked --version="^0.2"
 
-COPY entrypoint.sh /entrypoint.sh
+COPY .github/action/entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
