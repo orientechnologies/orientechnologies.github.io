@@ -97,7 +97,7 @@ main() {
     echo "building javadocs for develop"    
     git checkout develop 
     mvn clean javadoc:aggregate
-    mv target/site/apidocs/ ../public/javadocs/develop/
+    mv target/reports/apidocs/ ../public/javadocs/develop/
 
     cd ../
 
