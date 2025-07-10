@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../core/storage/OStorage.html" title="com.orientechnologies.orient.core.storage.OStorage" alt="" coords="16,11,109,53"/>
+<area shape="rect" id="node1" href="../../../core/storage/OStorage.html" title="&lt;TABLE&gt;" alt="" coords="5,5,120,59"/>
+<area shape="rect" id="node4_1" href="./ODistributedStorage.html" title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" alt="" coords="160,118,312,143"/>
+<area shape="rect" id="node4" href="./ODistributedStorage.html" title="&lt;TABLE&gt;" alt="" coords="149,107,323,155"/>
+<area shape="rect" id="node2_2" href="../../../core/storage/OAutoshardedStorage.html" title="com.orientechnologies.orient.core.storage.OAutoshardedStorage" alt="" coords="155,11,317,53"/>
+<area shape="rect" id="node2" href="../../../core/storage/OAutoshardedStorage.html" title="&lt;TABLE&gt;" alt="" coords="145,5,327,59"/>
+<area shape="rect" id="node3_3" href="../../../core/storage/impl/local/OFreezableStorageComponent.html" title="com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent" alt="" coords="362,11,579,53"/>
+<area shape="rect" id="node3" href="../../../core/storage/impl/local/OFreezableStorageComponent.html" title="&lt;TABLE&gt;" alt="" coords="351,5,590,59"/>
+</map>

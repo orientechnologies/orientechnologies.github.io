@@ -1,0 +1,551 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Security v2.2 Code Changes - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="new-security-features---code-changes"><a class="header" href="#new-security-features---code-changes">New Security Features - Code Changes</a></h1>
+<p>The motivation behind creating a new security layer for OrientDB was to meet the requirements of several customers who needed external authentication (specifically Kerberos and SPNEGO support), the ability to import users from specific groups via LDAP, password validation, and new auditing capabilities.</p>
+<p>The OrientDB <em>Client</em>, <em>Core</em>, <em>Server</em>, and <em>Enterprise Agent</em> modules were all affected by the new security system.  At the heart is a new interface called <code>OSecuritySystem</code> that provides most of the high-level methods required for implementing the main features.  The <code>Orient</code> instance in the <em>Core</em> stores a reference to the <code>OSecuritySystem</code> instance, and it can be accessed by calling <code>Orient.instance().getSecurity().</code>  Note that this only applies when called from the Server.  Otherwise, <code>getSecurity()</code> will just return null.</p>
+<p>Another main interface, called <code>OServerSecurity</code>, is derived from <code>OSecuritySystem</code>, and it provides some additional methods that are specific to the server.  In <code>OServer</code>, an implementation of <code>OServerSecurity</code>, called <code>ODefaultServerSecurity</code>, is created and stored. It can be accessed via a public method, <code>getSecurity()</code>, from the server instance.  When <code>ODefaultServerSecurity</code> is created in <code>OServer</code>, its instance is registered with <code>Orient</code>.</p>
+<p><code>ODefaultServerSecurity</code> handles loading the new JSON security configuration file that is stored under <em>config</em> and is called <em>security.json</em> by default.  Currently, <em>security.json</em> has five main sections: "server", "authentication", "passwordValidator", "ldapImporter", and "auditing".</p>
+<p>The most important thing to take away from this implementation is the concept of <em>authenticators</em> which can be chained together to support multiple kinds of authentication.  As an example, the primary <em>authenticator</em> could be for Kerberos, followed by an NTLM <em>authenticator</em>, followed by a password <em>authenticator</em> (which allows usernames, passwords, and resources to be stored in the <em>security.json</em> file), and then followed by an <code>OServer</code> config <em>authenticator</em> (which supports the users section in <em>orientdb-server-config.xml</em>).  If authentication fails for the first <em>authenticator</em> then the next one in the chain is attempted.  This continues until all <em>authenticators</em> are tried.</p>
+<p>Authorization works in a similar way.  The primary <em>authenticator</em> implementation is tried first to see if the specified user has the required resource permissions.  If not successful, the second <em>authenticator</em> is then tried, and so forth.</p>
+<p>Lastly, for the type of HTTP authentication that each <em>authenticator</em> supports, an authentication header will be created using each <em>authenticator</em>, starting with the primary.  As an example, this allows for a Kerberos "Negotiate" header to be returned as well as a "Basic" authentication header for fallback purposes.</p>
+<p>On the <em>Client</em> side, there's a new interface, called <code>OCredentialInterceptor</code>, which allows for providing single sign-on security implementations (such as for Kerberos, NTLM) while still working with the OrientDB authentication framework.</p>
+<p>The other significant change is in the <em>Core</em> and happens in <code>OMetadataDefault</code> in its <code>init()</code> method.  Previously, an instance of <code>OSecurityShared</code> was created.  Now, an <code>OSecurity</code> instance is created by calling <code>OSecurityManager.instance().newSecurity()</code>.  The reason for this is to support different OSecurity implementations depending on the authentication requirements.  As an example, for external authentication, an <code>OSecurityExternal</code> instance will be created.  <code>OSecurityExternal</code> derives from <code>OSecurityShared</code> but overrides <code>authenticate()</code>, calling the security system's <code>authenticate()</code> method instead (<code>Orient.instance().getSecurity().authenticate()</code>).</p>
+<p>Enterpise auditing has some new capabilities as well.  Tracking of creating and dropping classes has been added as well as when nodes join and leave the cluster in a distributed setup.  Writing to Syslog as part of the auditing log has been added too.</p>
+<h2 id="client"><a class="header" href="#client">Client</a></h2>
+<h3 id="oserveradmin"><a class="header" href="#oserveradmin">OServerAdmin</a></h3>
+<p>Modified the <code>connect()</code> method to create a new <code>OCredentialInterceptor</code> from the security manager and, if successful, calls its <code>intercept()</code> method, and then retrieves the username and password from the interceptor.</p>
+<pre><code>OCredentialInterceptor ci = OSecurityManager.instance().newCredentialInterceptor();
+			
+if(ci != null)
+{
+  ci.intercept(storage.getURL(), iUserName, iUserPassword);
+  username = ci.getUsername();
+  password = ci.getPassword();
+}
+</code></pre>
+<h3 id="ostorageremote"><a class="header" href="#ostorageremote">OStorageRemote</a></h3>
+<p>Modified the <code>open()</code> method to create a new <code>OCredentialInterceptor</code> from the security manager and, if successful, calls its <code>intercept()</code> method, and then retrieves the username and password from the interceptor.</p>
+<pre><code>OCredentialInterceptor ci = OSecurityManager.instance().newCredentialInterceptor();
+
+if(ci != null)
+{	
+  ci.intercept(getURL(), iUserName, iUserPassword);
+  connectionUserName = ci.getUsername();
+  connectionUserPassword = ci.getPassword();
+}
+else // Do Nothing
+{
+  connectionUserName = iUserName;
+  connectionUserPassword = iUserPassword;
+}
+</code></pre>
+<h2 id="core"><a class="header" href="#core">Core</a></h2>
+<h3 id="orient"><a class="header" href="#orient">Orient</a></h3>
+<p>Added getter and setter methods for the OSecuritySystem variable.</p>
+<pre><code>private volatile OSecuritySystem security;
+
+public OSecuritySystem getSecurity() { return this.security; }
+public void setSecurity(final OSecuritySystem security) {
+  this.security = security;
+
+}
+</code></pre>
+<h3 id="oglobalconfiguration"><a class="header" href="#oglobalconfiguration">OGlobalConfiguration</a></h3>
+<p>Added several new properties to support Kerberos on the client and other server-related security properties.</p>
+<p>These properties are OrientDB client-specific only:</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"client.krb5.config"</td><td>Specifies the location of the Kerberos configuration file (typically krb5.conf).</td></tr>
+<tr><td>"client.krb5.ccname"</td><td>Specifies the location of the Kerberos credential cache file.</td></tr>
+<tr><td>"client.krb5.ktname"</td><td>Specifies the location of the Kerberos keytab file.</td></tr>
+<tr><td>"client.credentialinterceptor"</td><td>Specifies the name of the credential interceptor class to use.</td></tr>
+</tbody></table>
+</div>
+<p>These properties are OrientDB server-specific only:</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"security.createDefaultUsers"</td><td>Indicates if "default users" should be created.  When set to true and the server instance is new, the default users in orientdb-server-config.xml will be created.  Also, if set to true, when a new database is created the default database users will be created.</td></tr>
+<tr><td>"server.security.file"</td><td>Specifies the location (and name) of the JSON security configuration file.  By default, the file is named <em>security.json</em> and is located in the <em>config</em> directory.</td></tr>
+</tbody></table>
+</div>
+<h3 id="ometadatadefault"><a class="header" href="#ometadatadefault">OMetadataDefault</a></h3>
+<p>In the <code>init()</code> method, notice that <code>final OSecurityShared instance = new OSecurityShared();</code></p>
+<pre><code>new Callable&lt;OSecurityShared&gt;() {
+ public OSecurityShared call() {
+   final OSecurityShared instance = new OSecurityShared();
+   if (iLoad) {
+     security = instance;
+     instance.load();
+   }
+   return instance;
+ }
+}), database);
+</code></pre>
+<p>is changed to <code>final OSecurity instance = OSecurityManager.instance().newSecurity();</code></p>
+<pre><code>new Callable&lt;OSecurity&gt;() {
+ public OSecurity call() {
+   final OSecurity instance = OSecurityManager.instance().newSecurity();
+   if (iLoad) {
+     security = instance;
+     instance.load();
+   }
+   return instance;
+ }
+}), database);
+</code></pre>
+<h3 id="oschemashared"><a class="header" href="#oschemashared">OSchemaShared</a></h3>
+<p>In the <code>dropClassInternal()</code> method, added calls to <code>onDropClass()</code> for all the <em>ODatabaseLifecycleListener</em> listeners.</p>
+<pre><code>// WAKE UP DB LIFECYCLE LISTENER
+for (Iterator&lt;ODatabaseLifecycleListener&gt; it = Orient.instance().getDbLifecycleListeners(); it.hasNext(); )
+  it.next().onDropClass(getDatabase(), cls);
+</code></pre>
+<h3 id="osecuritymanager"><a class="header" href="#osecuritymanager">OSecurityManager</a></h3>
+<p>Added four new methods to support the credential interceptor, security factory, and new OSecurity instances.  Created a default OSecurityFactory instance.</p>
+<pre><code>private OSecurityFactory securityFactory = new OSecuritySharedFactory();
+	
+public OCredentialInterceptor newCredentialInterceptor()
+	// Dynamically creates an OCredentialInterceptor instance using the OGlobalConfiguration.CLIENT_CREDENTIAL_INTERCEPTOR property.
+
+public OSecurityFactory getSecurityFactory() { return securityFactory; }
+
+public void setSecurityFactory(OSecurityFactory factory) { securityFactory = factory; }  
+
+public OSecurity newSecurity()
+{
+  if(securityFactory != null) return securityFactory.newSecurity();
+    
+  return null;
+}
+
+</code></pre>
+<h3 id="osecurityshared"><a class="header" href="#osecurityshared">OSecurityShared</a></h3>
+<p>In the <code>isAllowed()</code> method, added a fix to check for if <code>iAllowAll</code> is null.  Also added a check for <code>areDefaultUsersCreated()</code> when calling <code>createUser()</code>.</p>
+<pre><code>if(Orient.instance().getSecurity() == null || Orient.instance().getSecurity().areDefaultUsersCreated())
+	createUser(…)
+</code></pre>
+<p>Also changed the protection of the <code>getDatabase()</code> method from private to protected.</p>
+<h3 id="ousertrigger"><a class="header" href="#ousertrigger">OUserTrigger</a></h3>
+<p>In the <code>encodePassword()</code> method, added a call to the security system's <code>validatePassword()</code> method.</p>
+<pre><code>if(Orient.instance().getSecurity() != null)
+{
+  Orient.instance().getSecurity().validatePassword(password);
+}
+</code></pre>
+<h3 id="new-files---added-to-orientcoresecurity"><a class="header" href="#new-files---added-to-orientcoresecurity">New Files - Added to orient/core/security</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody>
+<tr><td>OCredentialInterceptor.java</td><td>Provides a basic credential interceptor interface with three methods: getUsername(), getPassword(), and intercept().</td></tr>
+<tr><td>OInvalidPasswordException.java</td><td>Provides a specific exception used by password validator implementations for failed validation.  Derives from OSecurityException.</td></tr>
+<tr><td>OPasswordValidator.java</td><td>Provides a simple interface for validating passwords.  Contains one method: validatePassword().</td></tr>
+<tr><td>OSecurityExternal.java</td><td>Extends OSecurityShared, providing external authentication by calling Orient.instance().getSecurity().authenticate().</td></tr>
+<tr><td>OSecurityFactory.java</td><td>Provides an interface for creating new OSecurity instances.  Contains one method: newSecurity().</td></tr>
+<tr><td>OSecuritySharedFactory.java</td><td>Implements the OSecurityFactory interface for OSecurityShared instances.  Its newSecurity() method returns a new OSecurityShared instance.</td></tr>
+<tr><td>OSecuritySystem.java</td><td>Provides a basic interface for a modular security system supporting external authenticators.</td></tr>
+<tr><td>OSecuritySystemException.java</td><td>Provides a specific exception used by OSecuritySystem implementations.</td></tr>
+</tbody></table>
+</div>
+<h3 id="osecuritysystem"><a class="header" href="#osecuritysystem">OSecuritySystem</a></h3>
+<p>OSecuritySystem is a base interface and requires the following methods:</p>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Description</th></tr></thead><tbody>
+<tr><td>authenticate()</td><td>Takes a username and password and returns the authenticated <em>principal</em> (on success) or null (on failure).</td></tr>
+<tr><td>areDefaultUsersCreated()</td><td>Returns a boolean indicating if the "createDefaultUsers" security property is set to true or false.  When set to true and the server instance is new, the default users in orientdb-server-config.xml will be created.  Also, if set to true, when a new database is created the default database users will be created.</td></tr>
+<tr><td>getAuthenticationHeader()</td><td>Returns the current HTTP authentication header.  Depending on which <em>authenticator(s)</em> is installed, multiple authentication headers may be returned to support primary, secondary, and fallback browser authentication types.</td></tr>
+<tr><td>isAuthorized()</td><td>Takes a username and resource list (as a String).  Walks through the installed <em>authenticators</em> and returns true if a matching username is found that has the required authorization for the specified resource list.</td></tr>
+<tr><td>isDefaultAllowed()</td><td>Returns a boolean indicating if the "authentication"."allowDefault" property is set to true or false.  When set to true and authentication fails using the installed <em>authenticators</em>, the default database authentication may also be used.</td></tr>
+<tr><td>isEnabled()</td><td>Returns a boolean indicating if the security system is enabled.</td></tr>
+<tr><td>isSingleSignOnSupported()</td><td>Returns a boolean that indicates if the primary authenticator supports single sign-on.</td></tr>
+<tr><td>validatePassword()</td><td>Takes a password and, if a password validator is installed, throws an OInvalidPasswordException if the provided password fails to meet the validation criteria.</td></tr>
+</tbody></table>
+</div>
+<h3 id="new-directory-kerberos---added-to-orientcoresecurity"><a class="header" href="#new-directory-kerberos---added-to-orientcoresecurity">New Directory (kerberos) - Added to orient/core/security</a></h3>
+<p>Added a new kerberos directory under orient/core/security.</p>
+<h3 id="new-files---added-to-orientcoresecuritykerberos"><a class="header" href="#new-files---added-to-orientcoresecuritykerberos">New Files - Added to orient/core/security/kerberos</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody>
+<tr><td>OKerberosCredentialInterceptor.java</td><td>Provides an implementation of OCredentialInterceptor, specific to Kerberos.</td></tr>
+<tr><td>OKrb5ClientLoginModuleConfig.java</td><td>Provides a custom Kerberos client login <code>Configuration</code> implementation.</td></tr>
+</tbody></table>
+</div>
+<h2 id="server"><a class="header" href="#server">Server</a></h2>
+<h3 id="oserver"><a class="header" href="#oserver">OServer</a></h3>
+<p>Added a new variable for an <code>OServerSecurity</code> instance along with getter/setter methods.</p>
+<p>Created a new method called <code>authenticateUser()</code>.  If the <code>OServerSecurity</code> instance is enabled, it calls its <code>authenticate()</code> method; and if a valid <em>principal</em> is returned, then its <code>isAuthorized()</code> method is called.  If <code>OServerSecurity</code> is not enabled, then the default <code>OServer</code> authentication and authorization methods are used.</p>
+<p>Modified the <code>activate()</code> method, adding the creation of a new <code>ODefaultServerSecurity</code> instance, assigning it to the <code>serverSecurity</code> variable, and calling <code>Orient.instance.setSecurity(serverSecurity)</code>.</p>
+<p>Changed the <code>serverLogin()</code> method, calling <code>authenticateUser()</code> instead.</p>
+<p>Modified the <code>authenticate()</code> method, also calling <code>authenticateUser()</code> instead.</p>
+<p>Updated the <code>isAllowed()</code> method, calling the server security's <code>isAuthorized()</code> method, if the security module is enabled.  Otherwise, the default implementation is used.</p>
+<p>Changed the <code>getUser()</code> method, calling the server security's <code>getUser()</code> method, if the security module is enabled.  Otherwise, the default implementation is used.</p>
+<p>Modified the <code>openDatabase()</code> method, checking and using the returned value of <code>serverLogin()</code>.  This is done because in some security implementations the user is embedded inside a ticket of some kind that must be decrypted in order to retrieve the actual user identity.  If serverLogin() is successful that user identity is returned.</p>
+<p>Updated the <code>loadUsers()</code> method, adding a check to <code>serverSecurity.areDefaultUsersCreated()</code> before calling <code>createDefaultServerUsers()</code>.</p>
+<p>Changed <code>createDefaultServerUsers()</code>, immediately returning if <code>serverSecurity.arePasswordsStored()</code> returns false.</p>
+<p>Added a try/catch block in <code>registerPlugins()</code> around the handler loading.  This prevents a bad plugin from keeping the entire system from starting.</p>
+<h3 id="ohttputils"><a class="header" href="#ohttputils">OHttpUtils</a></h3>
+<p>Added SPNEGO negotiate header support.</p>
+<pre><code>public static final String HEADER_AUTHENTICATE_NEGOTIATE = "WWW-Authenticate: Negotiate";
+public static final String AUTHORIZATION_NEGOTIATE       = "Negotiate";
+</code></pre>
+<h3 id="onetworkprotocolhttpabstract"><a class="header" href="#onetworkprotocolhttpabstract">ONetworkProtocolHttpAbstract</a></h3>
+<p>Changed the <code>handlerError()</code> method, using <code>server.getSecurity().getAuthenticationHeader()</code> to set the <code>responseHeaders</code> variable.</p>
+<p>Modified <code>readAllContent()</code>, adding "Negotiate" support.</p>
+<p>Added two new commands, <code>OServerCommandGetSSO()</code> and <code>OServerCommandGetPing()</code>, in <code>registerStatelessCommands()</code>.</p>
+<h3 id="oservercommandauthenticateddbabstract"><a class="header" href="#oservercommandauthenticateddbabstract">OServerCommandAuthenticatedDbAbstract</a></h3>
+<p>Replaced in <code>sendAuthorizationRequest()</code> the assignment to <code>header</code> of "Basic" authentication with the result of calling <code>server.getSecurity().getAuthenticationHeader(iDatabaseName)</code>.</p>
+<h3 id="oservercommandauthenticatedserverabstract"><a class="header" href="#oservercommandauthenticatedserverabstract">OServerCommandAuthenticatedServerAbstract</a></h3>
+<p>Replaced in <code>sendAuthorizationRequest()</code> the assignment to <code>header</code> of "Basic" authentication with the result of calling <code>server.getSecurity().getAuthenticationHeader(iDatabaseName)</code>.</p>
+<h3 id="oservercommandpostauthtoken"><a class="header" href="#oservercommandpostauthtoken">OServerCommandPostAuthToken</a></h3>
+<p>Replaced in <code>sendAuthorizationRequest()</code> the assignment to <code>header</code> of "Basic" authentication with the result of calling <code>server.getSecurity().getAuthenticationHeader(iDatabaseName)</code>.</p>
+<h3 id="oserverconfigurationmanager"><a class="header" href="#oserverconfigurationmanager">OServerConfigurationManager</a></h3>
+<p>In the <code>setUser()</code> method, removed the check for <code>iServerUserPasswd</code> being empty, as some security implementations do not require a password.</p>
+<h3 id="new-file---added-to-orientservernetwork"><a class="header" href="#new-file---added-to-orientservernetwork">New File - Added to orient/server/network</a></h3>
+<p>Added one new file, <code>OServerTLSSocketFactory.java</code>.</p>
+<h3 id="oservertlssocketfactory"><a class="header" href="#oservertlssocketfactory">OServerTLSSocketFactory</a></h3>
+<p>OServerTLSSocketFactory simply extends OServerSSLSocketFactory to make it clear that OrientDB does support TLS encryption by default.</p>
+<h3 id="new-files---added-to-orientservernetworkprotocolhttpcommandget"><a class="header" href="#new-files---added-to-orientservernetworkprotocolhttpcommandget">New Files - Added to orient/server/network/protocol/http/command/get</a></h3>
+<p>Added two new commands, <code>OServerCommandGetPing</code> and <code>OServerCommandGetSSO</code>.</p>
+<h3 id="oservercommandgetping"><a class="header" href="#oservercommandgetping">OServerCommandGetPing</a></h3>
+<p>Added a very simple Get <em>Ping</em> command, used by Studio, to test if the HTTP server is still alive.  As opposed to <em>listDatabases</em>, this command requires no authentication and no special authorization.  This is important for heavyweight <em>authenticators</em>, such as SPNEGO/Kerberos.</p>
+<h3 id="oservercommandgetsso"><a class="header" href="#oservercommandgetsso">OServerCommandGetSSO</a></h3>
+<p>This Get command is also used by Studio to determine if the primary <em>authenticator</em> supports single sign-on.  If single sign-on is supported, then the <em>username</em> and <em>password</em> credentials in the login dialog are not required.</p>
+<h3 id="new-file---added-to-orientservernetworkprotocolhttpcommandpost"><a class="header" href="#new-file---added-to-orientservernetworkprotocolhttpcommandpost">New File - Added to orient/server/network/protocol/http/command/post</a></h3>
+<p>Added one new command, <code>OServerCommandPostSecurityReload</code>.</p>
+<h3 id="oservercommandpostsecurityreload"><a class="header" href="#oservercommandpostsecurityreload">OServerCommandPostSecurityReload</a></h3>
+<p>This command is designed to reload the current <code>OServerSecurity</code> module and accepts a path to the security JSON file to use.</p>
+<h3 id="new-files---added-to-orientserversecurity"><a class="header" href="#new-files---added-to-orientserversecurity">New Files - Added to orient/server/security</a></h3>
+<p>The following files were added to the security directory:</p>
+<ul>
+<li>OAuditingService.java</li>
+<li>ODefaultPasswordAuthenticator.java</li>
+<li>ODefaultServerSecurity.java</li>
+<li>OSecurityAuthenticator.java</li>
+<li>OSecurityAuthenticatorAbstract.java</li>
+<li>OSecurityAuthenticatorException.java</li>
+<li>OSecurityComponent.java</li>
+<li>OServerConfigAuthenticator.java</li>
+<li>OServerSecurity.java</li>
+<li>OSyslog.java</li>
+</ul>
+<h3 id="oauditingservice"><a class="header" href="#oauditingservice">OAuditingService</a></h3>
+<p>Provides a simple auditing service interface, and specifies three <code>log()</code> methods.  Extends the <code>OSecurityComponent</code> interface.</p>
+<h3 id="odefaultpasswordauthenticator"><a class="header" href="#odefaultpasswordauthenticator">ODefaultPasswordAuthenticator</a></h3>
+<p>Extends the <code>OSecurityAuthenticatorAbstract</code> class, providing a default <em>authenticator</em> that supports a username, password, and resource list.</p>
+<h3 id="odefaultserversecurity"><a class="header" href="#odefaultserversecurity">ODefaultServerSecurity</a></h3>
+<p>Provides the default server security implementation, supporting these interfaces: <code>OSecurityFactory</code>, <code>OServerLifecycleListener</code>, and <code>OServerSecurity</code>.</p>
+<h3 id="osecurityauthenticator"><a class="header" href="#osecurityauthenticator">OSecurityAuthenticator</a></h3>
+<p>Provides an interface for implementing a security <em>authenticator</em>.  Extends the <code>OSecurityComponent</code> interface.</p>
+<p>Requires the following methods.</p>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Description</th></tr></thead><tbody>
+<tr><td>authenticate()</td><td>Authenticates the specifed username and password.  The authenticated <em>principal</em> is returned if successful, otherwise null.</td></tr>
+<tr><td>getAuthenticationHeader()</td><td>Returns the HTTP authentication header supported by this <em>authenticator</em>.</td></tr>
+<tr><td>getClientSubject()</td><td>If supported by this <em>authenticator</em>, returns a <code>Subject</code> object with this <em>authenticator's</em> credentials.</td></tr>
+<tr><td>getName()</td><td>Returns the name of this <code>OSecurityAuthenticator</code>.</td></tr>
+<tr><td>getUser()</td><td>Returns an <code>OServerUserConfiguration</code> object if the matching username is found for this <em>authenticator</em>.  Returns null otherwise.</td></tr>
+<tr><td>isAuthorized()</td><td>Takes a username and resource list (as a String).  Returns true if a matching username is found for this <em>authenticator</em> that has the required authorization for the specified resource list.</td></tr>
+<tr><td>isSingleSignOnSupported()</td><td>Returns a boolean that indicates if this <em>authenticator</em> supports single sign-on.</td></tr>
+</tbody></table>
+</div>
+<h3 id="osecurityauthenticatorabstract"><a class="header" href="#osecurityauthenticatorabstract">OSecurityAuthenticatorAbstract</a></h3>
+<p>Provides an abstract implementation of <code>OSecurityAuthenticator</code>upon which most <em>authenticators</em> are derived.</p>
+<h3 id="osecurityauthenticatorexception"><a class="header" href="#osecurityauthenticatorexception">OSecurityAuthenticatorException</a></h3>
+<p>Provides a custom OException that security <em>authenticators</em> can throw.</p>
+<h3 id="osecuritycomponent"><a class="header" href="#osecuritycomponent">OSecurityComponent</a></h3>
+<p>Provides an interface for creating security components that all modules in the security JSON configuration implement.</p>
+<p><code>OSecurityComponent</code> consists of four methods: <code>active()</code>, <code>config()</code>, <code>dispose()</code>, and <code>isEnabled()</code>.</p>
+<h3 id="oserverconfigauthenticator"><a class="header" href="#oserverconfigauthenticator">OServerConfigAuthenticator</a></h3>
+<p>Provides an <code>OSecurityAuthenticator</code> implementation that supports the users listed in orientdb-server-config.xml.  It extends <code>OSecurityAuthenticatorAbstract</code>.</p>
+<h3 id="oserversecurity"><a class="header" href="#oserversecurity">OServerSecurity</a></h3>
+<p>Provides an interface for server-specific security features.  It extends <code>OSecuritySystem</code>.</p>
+<p>Requires the following methods.</p>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Description</th></tr></thead><tbody>
+<tr><td>getAuthenticator()</td><td>Returns the <code>authenticator</code> based on name, if one exists.</td></tr>
+<tr><td>getPrimaryAuthenticator()</td><td>Returns the first <code>authenticator</code> in the chain of <code>authenticators</code>, which is the primary authenticator.</td></tr>
+<tr><td>getUser()</td><td>Some <code>authenticators</code> support maintaining a list of users and associated resources (and sometimes passwords).  Returns the associated <code>OServerUserConfiguration</code> if one exists for the specified <em>username</em>.</td></tr>
+<tr><td>openDatabase()</td><td>Opens the specified <em>dbName</em>, if it exists, as the <em>superuser</em>.</td></tr>
+<tr><td>registerAuditingService()</td><td>Supports a pluggable, external <code>OAuditingService</code> instance.</td></tr>
+<tr><td>registerSecurityClass()</td><td>Supports multiple, pluggable, external security components.</td></tr>
+<tr><td>reload()</td><td>Reloads the server security module using the specified <em>cfgPath</em>.</td></tr>
+</tbody></table>
+</div>
+<h3 id="osyslog"><a class="header" href="#osyslog">OSyslog</a></h3>
+<p>Provides an interface to syslog (and other such event logging systems) and specifies three <code>log()</code> methods.  Extends the <code>OSecurityComponent</code> interface.</p>
+<h2 id="graphdbconfig"><a class="header" href="#graphdbconfig">graphdb/config</a></h2>
+<h3 id="orientdb-server-configxml"><a class="header" href="#orientdb-server-configxml">orientdb-server-config.xml</a></h3>
+<p>Replaced OServerSSLSocketFactory with OServerTLSSocketFactory.</p>
+<h3 id="securityjson"><a class="header" href="#securityjson">security.json</a></h3>
+<p>Added a default security.json implementation file.</p>
+<h2 id="security-plugin"><a class="header" href="#security-plugin">Security Plugin</a></h2>
+<p>To support a single location for all the new security component implementations, a new project, <em>orientdb-security</em>, has been created.</p>
+<p>The following security components now reside here:</p>
+<ul>
+<li>ODefaultAuditing</li>
+<li>ODefaultPasswordAuthenticator</li>
+<li>ODefaultPasswordValidator</li>
+<li>ODefaultSyslog</li>
+<li>OKerberosAuthenticator</li>
+<li>OLDAPImporter</li>
+<li>OServerConfigAuthenticator</li>
+</ul>
+<h2 id="enterprise-agent"><a class="header" href="#enterprise-agent">Enterprise Agent</a></h2>
+<h3 id="oauditinghook"><a class="header" href="#oauditinghook">OAuditingHook</a></h3>
+<p>[This was moved into <em>orientdb-security</em>.]</p>
+<p>Added support for auditing of CREATECLASS and DROPCLASS events.</p>
+<p>Added optional support for <em>syslog</em> audit logging as well.</p>
+<h3 id="oauditinglistener"><a class="header" href="#oauditinglistener">OAuditingListener</a></h3>
+<p>[This was moved into <em>orientdb-security</em> and renamed <code>ODefaultAuditing</code>.]</p>
+<p>Implemented two new interfaces, <code>OAuditingService</code> and <code>ODistributedLifecycleListener</code>.</p>
+<p>Also moved <code>Orient.instance().addDbLifecycleListener(this)</code> to the <code>active()</code> method.</p>
+<h3 id="oenterpriseagent"><a class="header" href="#oenterpriseagent">OEnterpriseAgent</a></h3>
+<p>[This was removed from the agent and added to <code>OSecurityPlugin</code> in <em>orientdb-security</em>.]</p>
+<p>Added a new method, <code>registerSecurityComponents()</code>, for registering Enterprise-only security components in the security system.</p>
+<p>Added a call to <code>registerSecurityComponents()</code> in the <code>startup()</code> method.</p>
+<h3 id="agentkerberos"><a class="header" href="#agentkerberos">agent/kerberos</a></h3>
+<p>[This was moved into <em>orientdb-security</em>.]</p>
+<p>Added a new <em>kerberos</em> directory and the following new files.</p>
+<div class="table-wrapper"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody>
+<tr><td>OKerberosAuthenticator.java</td><td>Implements a Kerberos-specific security <em>authenticator</em> that extends <code>OSecurityAuthenticatorAbstract</code>.</td></tr>
+<tr><td>OKerberosLibrary.java</td><td>Provides a collection of static methods used by the Kerberos <em>authenticator</em>.</td></tr>
+<tr><td>OKrb5LoginModuleConfig.java</td><td>Provides a custom Kerberos login <code>Configuration</code> implementation.</td></tr>
+</tbody></table>
+</div>
+<h3 id="agentldap"><a class="header" href="#agentldap">agent/ldap</a></h3>
+<p>[This was moved into <em>orientdb-security</em>.]</p>
+<p>Added a new <em>ldap</em> directory and the following new files.</p>
+<div class="table-wrapper"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody>
+<tr><td>OLDAPImporter.java</td><td>Provides LDAP user/group importer into a database.  Implements the <code>OSecurityComponent</code> interface.</td></tr>
+<tr><td>OLDAPLibrary.java</td><td>Provides a collection of static methods used by the LDAP importer.</td></tr>
+<tr><td>OLDAPServer.java</td><td>Provides a simple class used by OLDAPImporter and OLDAPLibrary for specifying LDAP servers.</td></tr>
+</tbody></table>
+</div>
+<h3 id="agentsecurity"><a class="header" href="#agentsecurity">agent/security</a></h3>
+<p>[This was moved into <em>orientdb-security</em>.]</p>
+<p>Added a new <em>security</em> directory and the following new files.</p>
+<div class="table-wrapper"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody>
+<tr><td>ODefaultPasswordValidator.java</td><td>Provides a default implementation for validating passwords.  Implements <code>OPasswordValidator</code> and <code>OSecurityComponent</code>.</td></tr>
+<tr><td>ODefaultSyslog.java</td><td>Provides a default implementation of the <code>OSyslog</code> interface.</td></tr>
+</tbody></table>
+</div>
+<h3 id="resources"><a class="header" href="#resources">resources</a></h3>
+<p>[This was moved into <em>orientdb-security</em>.]</p>
+<p>Modified the default-auditing-config.json file, adding class support for "onCreateClassEnabled", "onCreateClassMessage", "onDropClassEnabled", and "onDropClassMessage".</p>
+<h3 id="pomxml"><a class="header" href="#pomxml">pom.xml</a></h3>
+<p>[This was moved into <em>orientdb-security</em>.]</p>
+<p>Added the dependency for CloudBees <em>syslog</em> client support:</p>
+<pre><code>&lt;dependency&gt;
+   &lt;groupId&gt;com.cloudbees&lt;/groupId&gt;
+   &lt;artifactId&gt;syslog-java-client&lt;/artifactId&gt;
+   &lt;version&gt;1.0.9-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../security/Security-Kerberos-Client-Examples.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../security/Security-OrientDB-New-Security-Features.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../security/Security-Kerberos-Client-Examples.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../security/Security-OrientDB-New-Security-Features.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Troubleshooting - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
+<p>This page aims to link all the guides to Problems and Troubleshooting.</p>
+<h2 id="sub-sections"><a class="header" href="#sub-sections">Sub sections</a></h2>
+<ul>
+<li><a href="Troubleshooting-Java.html">Troubleshooting Java API</a></li>
+</ul>
+<h2 id="topics"><a class="header" href="#topics">Topics</a></h2>
+<h4 id="best-practice-to-map-the-rid-in-rest-full-friendly-id-representation"><a class="header" href="#best-practice-to-map-the-rid-in-rest-full-friendly-id-representation">Best practice to map the <a href="../datamodeling/Concepts.html#record-id">RID</a> in REST Full friendly ID representation</a></h4>
+<p>Take a look at <a href="http://hashids.org/">HashID</a>. HashID should get you a hashed Rid, which is also convertible, so it won't take up more storage space (like with a UUID). It will just take a small bit of CPU time.</p>
+<p>Please note, this little tool is not in any way a true hash, as in, it makes it very hard to crack the hash. It is more about good obfuscation. If you are at all worried about the Rids being known, this isn't a proper solution.</p>
+<h4 id="why-cant-i-see-all-the-edges"><a class="header" href="#why-cant-i-see-all-the-edges">Why can't I see all the edges?</a></h4>
+<p>OrientDB, by default, manages edges as "lightweight" edges if they have no properties. This means that if an edge has no properties, it's not stored as physical record. But don't worry, your edge is still there but encoded in a separate data structure. For this reason if you execute a <code>select from E</code>no edges or less edges than expected are returned. It's extremely rare the need to have the list of edges, but if this is your case you can disable this feature by issuing this command once (with a slow down and a bigger database size):</p>
+<pre><code class="language-sql">ALTER DATABASE custom useLightweightEdges=false
+</code></pre>
+<h4 id="use-iso-8601-dates"><a class="header" href="#use-iso-8601-dates">Use ISO 8601 Dates</a></h4>
+<p>According to ISO 8601, Combined date and time in UTC: 2014-12-20T00:00:00. To use this standard change the datetimeformat in the database:</p>
+<pre><code class="language-sql">ALTER DATABASE DATETIMEFORMAT yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+</code></pre>
+<h4 id="jvm-crash-on-solaris-and-other-nix-platforms"><a class="header" href="#jvm-crash-on-solaris-and-other-nix-platforms">JVM crash on Solaris and other *NIX platforms.</a></h4>
+<p>The reason of this issue is massive usage of sun.misc.Unsafe which may have different contract than it is
+implemented for Linux and Windows JDKs. To avoid this error please use following settings during server start:</p>
+<pre><code>java ... -Dmemory.useUnsafe=false and -Dstorage.compressionMethod=gzip ...
+</code></pre>
+<h4 id="error-occurred-while-locking-memory-unable-to-lock-jvm-memory-this-can-result-in-part-of-the-jvm-being-swapped-out-especially-if-mmapping-of-files-enabled-increase-rlimit_memlock-or-run-orientdb-server-as-rootenomem"><a class="header" href="#error-occurred-while-locking-memory-unable-to-lock-jvm-memory-this-can-result-in-part-of-the-jvm-being-swapped-out-especially-if-mmapping-of-files-enabled-increase-rlimit_memlock-or-run-orientdb-server-as-rootenomem">Error occurred while locking memory: Unable to lock JVM memory. This can result in part of the JVM being swapped out, especially if mmapping of files enabled. Increase RLIMIT_MEMLOCK or run OrientDB server as root(ENOMEM)</a></h4>
+<p>Don't be scared about it: your OrientDB installation will work perfectly, just it could be slower with database larger than memory.</p>
+<p>This lock is needed in case of you work on OS which uses aggressive swapping like Linux. If there is the case when amount of available RAM is not enough to cache all MMAP content OS can swap out rarely used parts of Java heap to the disk and when GC is started to collect garbage we will have performance degradation, to prevent such situation Java heap is locked into memory and prohibited to be flushed on the disk.</p>
+<h4 id="comorientechnologiesorientcoreexceptionostorageexception-error-on-reading-record-from-file-default0oda-position-2333-size-12214mb-the-record-size-is-bigger-then-the-file-itself-23399kb"><a class="header" href="#comorientechnologiesorientcoreexceptionostorageexception-error-on-reading-record-from-file-default0oda-position-2333-size-12214mb-the-record-size-is-bigger-then-the-file-itself-23399kb">com.orientechnologies.orient.core.exception.OStorageException: Error on reading record from file 'default.0.oda', position 2333, size 122,14Mb: the record size is bigger then the file itself (233,99Kb)</a></h4>
+<p>This usually happens because the database has been corrupted by a hw/sw crash or a hard kill of the process during the writing to disk. If this happens on index clusters just rebuild indexes, otherwise re-import a previously exported database.</p>
+<h4 id="class-ouser-or-orole-was-not-found-in-current-database"><a class="header" href="#class-ouser-or-orole-was-not-found-in-current-database">Class 'OUSER' or 'OROLE' was not found in current database</a></h4>
+<p>Look at: <a href="../security/Server-Security.html#restoring-the-user-admin">Restore admin user</a>.</p>
+<h4 id="user-admin-was-not-found-in-current-database"><a class="header" href="#user-admin-was-not-found-in-current-database">User 'admin' was not found in current database</a></h4>
+<p>Look at: <a href="../security/Server-Security.html#restoring-the-user-admin">Restore admin user</a>.</p>
+<h4 id="warning-connection-re-acquired-transparently-after-xxxms-and-y-retries-no-errors-will-be-thrown-at-application-level"><a class="header" href="#warning-connection-re-acquired-transparently-after-xxxms-and-y-retries-no-errors-will-be-thrown-at-application-level">WARNING: Connection re-acquired transparently after XXXms and Y retries: no errors will be thrown at application level</a></h4>
+<p>This means that probably default timeouts are too low and server side operation need more time to complete. Follow these  <a href="../tuning/Performance-Tuning.html">Performance Tuning</a>.</p>
+<h4 id="record-id-invalid--1-2"><a class="header" href="#record-id-invalid--1-2">Record id invalid -1:-2</a></h4>
+<p>This message is relative to a temporary record id generated inside a transaction. For more information look at <a href="../internals/Transactions.html">Transactions</a>. This means that the record hasn't been correctly serialized.</p>
+<h4 id="brand-new-records-are-created-with-version-greater-than-0"><a class="header" href="#brand-new-records-are-created-with-version-greater-than-0">Brand new records are created with version greater than 0</a></h4>
+<p>This happens in graphs. Think to this graph of records:</p>
+<p>A -&gt; B -&gt; C -&gt; A</p>
+<p>When OrientDB starts to serialize records goes recursively from the root A. When A is encountered again to avoid loops it saves the record as empty just to get the RecordID to store into the record C. When the serialization stack ends the record A (that was the first of the stack) is updated because has been created as first but empty.</p>
+<h4 id="error-comorientechnologiesorientcoreexceptionostorageexception-cannot-open-local-storage-tmpdatabasesdemo-with-moderw"><a class="header" href="#error-comorientechnologiesorientcoreexceptionostorageexception-cannot-open-local-storage-tmpdatabasesdemo-with-moderw">Error: com.orientechnologies.orient.core.exception.OStorageException: Cannot open local storage '/tmp/databases/demo' with mode=rw</a></h4>
+<h4 id="comorientechnologiescommonconcurlockolockexception-file-tmpdatabasesdemodefault0oda-is-locked-by-another-process-maybe-the-database-is-in-use-by-another-process-use-the-remote-mode-with-a-orientdb-server-to-allow-multiple-access-to-the-same-database"><a class="header" href="#comorientechnologiescommonconcurlockolockexception-file-tmpdatabasesdemodefault0oda-is-locked-by-another-process-maybe-the-database-is-in-use-by-another-process-use-the-remote-mode-with-a-orientdb-server-to-allow-multiple-access-to-the-same-database">com.orientechnologies.common.concur.lock.OLockException: File '/tmp/databases/demo/default.0.oda' is locked by another process, maybe the database is in use by another process. Use the remote mode with a OrientDB server to allow multiple access to the same database</a></h4>
+<p>Both errors have the same meaning: a "plocal" database can't be opened by multiple JVM at the same time. To fix:</p>
+<ul>
+<li>check if there's no process using OrientDB (most of the times a OrientDB Server is running i the background). Just shutdown that server and retry</li>
+<li>if you need multiple access to the same database, don't use "plocal" directly, but rather start a server and access to the database by using "remote" protocol. In this way the server is able to share the same database with multiple clients.</li>
+</ul>
+<h4 id="caused-by-javalangnumberformatexception-for-input-string-500mb"><a class="header" href="#caused-by-javalangnumberformatexception-for-input-string-500mb">Caused by: java.lang.NumberFormatException: For input string: "500Mb"</a></h4>
+<p>You're using different version of libraries. For example the client is using 1.3 and the server 1.4. Align the libraries to the same version (last is suggested). Or probably you've different versions of the same jars in the classpath.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../distributed/Data-Centers.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../misc/Troubleshooting-Java.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../distributed/Data-Centers.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../misc/Troubleshooting-Java.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

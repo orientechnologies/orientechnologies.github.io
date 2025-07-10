@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSQLFunctionFactory.html" title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionFactory" alt="" coords="384,11,540,53"/>
+<area shape="rect" id="node1" href="./OSQLFunctionFactory.html" title="&lt;TABLE&gt;" alt="" coords="373,5,551,59"/>
+<area shape="rect" id="node3_1" href="./OSQLFunctionFactoryTemplate.html" title="com.orientechnologies.orient.core.sql.functions.OSQLFunctionFactoryTemplate" alt="" coords="353,118,571,143"/>
+<area shape="rect" id="node3" href="./OSQLFunctionFactoryTemplate.html" title="&lt;TABLE&gt;" alt="" coords="342,107,582,155"/>
+<area shape="rect" id="node2_2" href="./ODefaultSQLFunctionFactory.html" title="com.orientechnologies.orient.core.sql.functions.ODefaultSQLFunctionFactory" alt="" coords="16,214,220,239"/>
+<area shape="rect" id="node2" href="./ODefaultSQLFunctionFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,203,231,251"/>
+<area shape="rect" id="node4_3" href="../../../graph/sql/functions/OGraphFunctionFactory.html" title="com.orientechnologies.orient.graph.sql.functions.OGraphFunctionFactory" alt="" coords="266,214,437,239"/>
+<area shape="rect" id="node4" href="../../../graph/sql/functions/OGraphFunctionFactory.html" title="&lt;TABLE&gt;" alt="" coords="255,203,447,251"/>
+<area shape="rect" id="node5_4" href="../../../../spatial/functions/OSpatialFunctionsFactory.html" title="com.orientechnologies.spatial.functions.OSpatialFunctionsFactory" alt="" coords="482,214,666,239"/>
+<area shape="rect" id="node5" href="../../../../spatial/functions/OSpatialFunctionsFactory.html" title="&lt;TABLE&gt;" alt="" coords="471,203,677,251"/>
+<area shape="rect" id="node6_5" href="../../../../lucene/functions/OLuceneFunctionsFactory.html" title="com.orientechnologies.lucene.functions.OLuceneFunctionsFactory" alt="" coords="711,214,895,239"/>
+<area shape="rect" id="node6" href="../../../../lucene/functions/OLuceneFunctionsFactory.html" title="&lt;TABLE&gt;" alt="" coords="701,203,906,251"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseDocumentTx.RecordReader.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.RecordReader" alt="" coords="149,11,260,53"/>
+<area shape="rect" id="node1" href="./ODatabaseDocumentTx.RecordReader.html" title="&lt;TABLE&gt;" alt="" coords="139,5,271,59"/>
+<area shape="rect" id="node2_1" href="./ODatabaseDocumentTx.SimpleRecordReader.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.SimpleRecordReader" alt="" coords="16,118,172,143"/>
+<area shape="rect" id="node2" href="./ODatabaseDocumentTx.SimpleRecordReader.html" title="&lt;TABLE&gt;" alt="" coords="5,107,183,155"/>
+<area shape="rect" id="node3_2" href="./ODatabaseDocumentTx.LatestVersionRecordReader.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx.LatestVersionRecordReader" alt="" coords="217,118,416,143"/>
+<area shape="rect" id="node3" href="./ODatabaseDocumentTx.LatestVersionRecordReader.html" title="&lt;TABLE&gt;" alt="" coords="207,107,427,155"/>
+</map>

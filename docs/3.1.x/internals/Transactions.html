@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Transactions - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="transactions"><a class="header" href="#transactions">Transactions</a></h1>
+<p>A transaction comprises a unit of work performed within a database management system (or similar system) against a database, and treated in a coherent and reliable way independent of other transactions. Transactions in a database environment have two main purposes:</p>
+<ul>
+<li>to provide reliable units of work that allow correct recovery from failures and keep a database consistent even in cases of system failure, when execution stops (completely or partially) and many operations upon a database remain uncompleted, with unclear status</li>
+<li>to provide isolation between programs accessing a database concurrently. If this isolation is not provided, the program's outcome are possibly erroneous.</li>
+</ul>
+<p>A database transaction, by definition, must be <a href="#atomicity">atomic</a>, <a href="#consistency">consistent</a>, <a href="#isolation">isolated</a> and <a href="#durability">durable</a>. Database practitioners often refer to these properties of database transactions using the acronym <a href="#acid-properties">ACID</a>.
+--- <a href="http://en.wikipedia.org/wiki/Database_transaction">Wikipedia</a></p>
+<p>OrientDB is an <a href="#acid-properties">ACID</a> compliant DBMS.</p>
+<blockquote>
+<p><strong>NOTE</strong>: OrientDB keeps the transaction on client RAM, so the transaction size is affected by the available RAM (Heap memory) on JVM. For transactions involving many records, consider to split it in multiple transactions.</p>
+</blockquote>
+<h2 id="acid-properties"><a class="header" href="#acid-properties">ACID properties</a></h2>
+<h3 id="atomicity"><a class="header" href="#atomicity">Atomicity</a></h3>
+<p>"Atomicity requires that each transaction is 'all or nothing': if one part of the transaction fails, the entire transaction fails, and the database state is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors, and crashes. To the outside world, a committed transaction appears (by its effects on the database) to be indivisible ("atomic"), and an aborted transaction does not happen." - <a href="http://en.wikipedia.org/wiki/ACID">WikiPedia</a></p>
+<h3 id="consistency"><a class="header" href="#consistency">Consistency</a></h3>
+<p>"The consistency property ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules, including but not limited to constraints, cascades, triggers, and any combination thereof. This does not guarantee correctness of the transaction in all ways the application programmer might have wanted (that is the responsibility of application-level code) but merely that any programming errors do not violate any defined rules." - <a href="http://en.wikipedia.org/wiki/ACID">WikiPedia</a></p>
+<p>OrientDB uses the MVCC to assure consistency. The difference between the management of MVCC on transactional and not-transactional cases is that with transactional, the exception rollbacks the entire transaction before to be caught by the application.</p>
+<p>Look at this example:</p>
+<div class="table-wrapper"><table><thead><tr><th>Sequence</th><th>Client/Thread 1</th><th>Client/Thread 2</th><th>Version of record X</th></tr></thead><tbody>
+<tr><td>1</td><td>Begin of Transaction</td><td></td><td></td></tr>
+<tr><td>2</td><td>read(x)</td><td></td><td>10</td></tr>
+<tr><td>3</td><td></td><td>Begin of Transaction</td><td></td></tr>
+<tr><td>4</td><td></td><td>read(x)</td><td>10</td></tr>
+<tr><td>5</td><td></td><td>write(x)</td><td>10</td></tr>
+<tr><td>6</td><td></td><td>commit</td><td>10 -&gt; 11</td></tr>
+<tr><td>7</td><td>write(x)</td><td></td><td>10</td></tr>
+<tr><td>8</td><td>commit</td><td></td><td>10 -&gt; 11 = Error, in database x already is at 11</td></tr>
+</tbody></table>
+</div>
+<h3 id="isolation"><a class="header" href="#isolation">Isolation</a></h3>
+<p>"The isolation property ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were executed serially, i.e. one after the other. Providing isolation is the main goal of concurrency control. Depending on concurrency control method, the effects of an incomplete transaction might not even be visible to another transaction." - <a href="http://en.wikipedia.org/wiki/ACID">WikiPedia</a></p>
+<p>OrientDB has different levels of isolation based on settings and configuration:</p>
+<ul>
+<li><code>READ COMMITTED</code>, the default and the only one available with <code>remote</code> protocol</li>
+<li><code>REPEATABLE READS</code>, allowed only with <code>plocal</code> and <code>memory</code> protocols. This mode consumes more memory than <code>READ COMMITTED</code>, because any read, query, etc. keep the records in memory to assure the same copy on further access</li>
+</ul>
+<p>To change default Isolation Level, use the Java API:</p>
+<pre><code class="language-java">db.begin()
+db.getTransaction().setIsolationLevel(OTransaction.ISOLATION_LEVEL.REPEATABLE_READ);
+</code></pre>
+<p>Using <code>remote</code> access all the commands are executed on the server, so out of transaction scope. Look below for more information.</p>
+<p>Look at this examples:</p>
+<p>|Sequence| Client/Thread 1 | Client/Thread 2 |
+|-----|-----|-------|------|
+|1| Begin of Transaction |  |
+|2| read(x) |  |
+|3|  | Begin of Transaction |
+|4|  | read(x) |
+|5|  |  write(x) |
+|6|  |  commit |
+|7| read(x)  |  |
+|8| commit |  |</p>
+<p>At operation 7 the client 1 continues to read the same version of x read in operation 2.</p>
+<p>|Sequence| Client/Thread 1 | Client/Thread 2 |
+|-----|-----|-------|------|
+|1| Begin of Transaction |  |
+|2| read(x) |  |
+|3|  | Begin of Transaction |
+|4|  | read(y) |
+|5|  |  write(y) |
+|6|  |  commit |
+|7| read(y)  |  |
+|8| commit |  |</p>
+<p>At operation 7 the client 1 reads the version of y which was written at operation 6 by client 2. This is because it never reads y before.</p>
+<p><strong>Breaking of ACID properties when using remote protocol and Commands (SQL, Gremlin, JS, etc)</strong></p>
+<p>Transactions are client-side only until the commit. This means that if you're using the "remote" protocol the server can't see local changes.</p>
+<p><img src="http://www.orientdb.org/images/transaction-remote.png" alt="Transaction in Remote context" /></p>
+<p>In this scenario you can have different isolation levels with commands. This issue will be solved with OrientDB v3.0 where the transaction will be flushed to the server before to execute the command.</p>
+<h3 id="durability"><a class="header" href="#durability">Durability</a></h3>
+<p>"Durability means that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors. In a relational database, for instance, once a group of SQL statements execute, the results need to be stored permanently (even if the database crashes immediately thereafter). To defend against power loss, transactions (or their effects) must be recorded in a non-volatile memory." - <a href="http://en.wikipedia.org/wiki/ACID">WikiPedia</a></p>
+<h4 id="fail-over"><a class="header" href="#fail-over">Fail-over</a></h4>
+<p>An OrientDB instance can fail for several reasons:</p>
+<ul>
+<li>HW problems, such as loss of power or disk error</li>
+<li>SW problems, such as a Operating System crash</li>
+<li>Application problem, such as a bug that crashes your application that is  connected to the Orient engine.</li>
+</ul>
+<p>You can use the OrientDB engine directly in the same process of your application. This gives superior performance due to the lack of inter-process communication. In this case, should your application crash (for any reason), the OrientDB Engine also crashes.</p>
+<p>If you're using an OrientDB Server connected remotely, if your application crashes the engine continue to work, but any pending transaction owned by the client will be rolled back.</p>
+<h4 id="auto-recovery"><a class="header" href="#auto-recovery">Auto-recovery</a></h4>
+<p>At start-up the OrientDB Engine checks to if it is restarting from a crash. In this case, the auto-recovery phase starts which rolls back all pending transactions.</p>
+<p>OrientDB has different levels of durability based on storage type, configuration and settings.</p>
+<h2 id="transaction-types"><a class="header" href="#transaction-types">Transaction types</a></h2>
+<h3 id="no-transaction"><a class="header" href="#no-transaction">No Transaction</a></h3>
+<p>Default mode. Each operation is executed instantly.</p>
+<p>Calls to <code>begin()</code>,  <code>commit()</code> and  <code>rollback()</code> have no effect.</p>
+<h3 id="optimistic-transaction"><a class="header" href="#optimistic-transaction">Optimistic Transaction</a></h3>
+<p>This mode uses the well known <a href="http://en.wikipedia.org/wiki/Multiversion_concurrency_control">Multi Version Control System (MVCC)</a> by allowing multiple reads and writes on the same records. The integrity check is made on commit. If the record has been saved by another transaction in the interim, then an OConcurrentModificationException will be thrown. The application can choose either to repeat the transaction or abort it.</p>
+<blockquote>
+<p><strong>NOTE</strong>: OrientDB keeps the transaction on client RAM, so the transaction size is affected by the available RAM (Heap) memory on JVM. For transactions involving many records, consider to split it in multiple transactions.</p>
+</blockquote>
+<p>With <a href="../java/Graph-Database-Tinkerpop.html#transactions">Graph API</a> transaction begins automatically, with Document API is explicit by using the <code>begin()</code> method. With Graphs you can change the <a href="../java/Graph-Consistency.html">consistency level</a>.</p>
+<p>Example with Document API:</p>
+<pre><code class="language-java">db.open("remote:localhost:7777/petshop");
+
+try{
+  db.begin(TXTYPE.OPTIMISTIC);
+  ...
+  // WRITE HERE YOUR TRANSACTION LOGIC
+  ...
+  db.commit();
+}catch( Exception e ){
+  db.rollback();
+} finally{
+  db.close();
+}
+</code></pre>
+<p>In Optimistic transaction new records take temporary <a href="../datamodeling/Concepts.html#record-id">Record ID</a>s to avoid to ask to the server a new <a href="../datamodeling/Concepts.html#record-id">Record ID</a> every time. Temporary <a href="../datamodeling/Concepts.html#record-id">Record ID</a>s have Cluster Id -1 and Cluster Position &lt; -1. When a new transaction begun the counter is reset to -1:-2. So if you create 3 new records you'll have:</p>
+<ul>
+<li>-1:-2</li>
+<li>-1:-3</li>
+<li>-1:-4</li>
+</ul>
+<p>At commit time, these temporary records <a href="../datamodeling/Concepts.html#record-id">Record ID</a>s will be converted in the final ones.</p>
+<h3 id="pessimistic-transaction"><a class="header" href="#pessimistic-transaction">Pessimistic Transaction</a></h3>
+<p>This mode is not yet supported by the engine.</p>
+<h2 id="nested-transactions-and-propagation"><a class="header" href="#nested-transactions-and-propagation">Nested transactions and propagation</a></h2>
+<p>OrientDB doesn't support nested transaction. If further <code>begin()</code> are called after a transaction is already begun, then the current transaction keeps track of call stack to let to the final commit() call to effectively commit the transaction. Look at <a href="../java/Transaction-propagation.html">Transaction Propagation</a> more information.</p>
+<h2 id="record-ids"><a class="header" href="#record-ids">Record IDs</a></h2>
+<p>OrientDB uses temporary <a href="../datamodeling/Concepts.html#record-id">Record ID's</a> with transaction as scope that will be transformed to finals once the transactions is successfully committed to the database. This avoid to ask for a free slot every time a client creates a record.</p>
+<h2 id="tuning"><a class="header" href="#tuning">Tuning</a></h2>
+<p>In some situations transactions can improve performance, typically in the client/server scenario. If you use an Optimistic Transaction, the OrientDB engine optimizes the network transfer between the client and server, saving both CPU and bandwidth.</p>
+<p>For further information look at <a href="../tuning/Performance-Tuning.html#wise-use-of-transactions">Transaction tuning</a> to know more.</p>
+<h2 id="distributed-environment"><a class="header" href="#distributed-environment">Distributed environment</a></h2>
+<p>Transactions can be committed across a distributed architecture. Look at <a href="../distributed/Distributed-Architecture.html#distributed-transactions">Distributed Transactions</a> for more information.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../general/Managing-Dates.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../internals/Embedded-Server.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../general/Managing-Dates.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../internals/Embedded-Server.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OTransactionNoTx.html" title="com.orientechnologies.orient.core.tx.OTransactionNoTx" alt="" coords="16,214,153,239"/>
+<area shape="rect" id="node1" href="./OTransactionNoTx.html" title="&lt;TABLE&gt;" alt="" coords="5,203,164,251"/>
+<area shape="rect" id="node2_1" href="./OTransactionAbstract.html" title="com.orientechnologies.orient.core.tx.OTransactionAbstract" alt="" coords="109,118,268,143"/>
+<area shape="rect" id="node2" href="./OTransactionAbstract.html" title="&lt;TABLE&gt;" alt="" coords="99,107,279,155"/>
+<area shape="rect" id="node4_2" href="./OTransactionRealAbstract.html" title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract" alt="" coords="199,214,387,239"/>
+<area shape="rect" id="node4" href="./OTransactionRealAbstract.html" title="&lt;TABLE&gt;" alt="" coords="188,203,397,251"/>
+<area shape="rect" id="node3_3" href="./OTransaction.html" title="com.orientechnologies.orient.core.tx.OTransaction" alt="" coords="137,11,241,53"/>
+<area shape="rect" id="node3" href="./OTransaction.html" title="&lt;TABLE&gt;" alt="" coords="126,5,251,59"/>
+</map>

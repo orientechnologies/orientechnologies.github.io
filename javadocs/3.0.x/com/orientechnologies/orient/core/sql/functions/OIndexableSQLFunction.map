@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OIndexableSQLFunction.html" title="com.orientechnologies.orient.core.sql.functions.OIndexableSQLFunction" alt="" coords="353,112,527,155"/>
+<area shape="rect" id="node1" href="./OIndexableSQLFunction.html" title="&lt;TABLE&gt;" alt="" coords="343,107,537,160"/>
+<area shape="rect" id="node3_1" href="../../../../spatial/functions/OSpatialFunctionAbstractIndexable.html" title="com.orientechnologies.spatial.functions.OSpatialFunctionAbstractIndexable" alt="" coords="16,219,264,245"/>
+<area shape="rect" id="node3" href="../../../../spatial/functions/OSpatialFunctionAbstractIndexable.html" title="&lt;TABLE&gt;" alt="" coords="5,208,275,256"/>
+<area shape="rect" id="node4_2" href="../../../../lucene/functions/OLuceneSearchMoreLikeThisFunction.html" title="com.orientechnologies.lucene.functions.OLuceneSearchMoreLikeThisFunction" alt="" coords="310,219,570,245"/>
+<area shape="rect" id="node4" href="../../../../lucene/functions/OLuceneSearchMoreLikeThisFunction.html" title="&lt;TABLE&gt;" alt="" coords="299,208,581,256"/>
+<area shape="rect" id="node5_3" href="../../../../lucene/functions/OLuceneSearchFunctionTemplate.html" title="com.orientechnologies.lucene.functions.OLuceneSearchFunctionTemplate" alt="" coords="616,219,851,245"/>
+<area shape="rect" id="node5" href="../../../../lucene/functions/OLuceneSearchFunctionTemplate.html" title="&lt;TABLE&gt;" alt="" coords="605,208,861,256"/>
+<area shape="rect" id="node2_4" href="./OSQLFunction.html" title="com.orientechnologies.orient.core.sql.functions.OSQLFunction" alt="" coords="385,11,495,53"/>
+<area shape="rect" id="node2" href="./OSQLFunction.html" title="&lt;TABLE&gt;" alt="" coords="375,5,505,59"/>
+</map>

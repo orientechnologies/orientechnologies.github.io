@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODistributedTxContext.html" title="com.orientechnologies.orient.server.distributed.ODistributedTxContext" alt="" coords="173,11,341,53"/>
+<area shape="rect" id="node1" href="./ODistributedTxContext.html" title="&lt;TABLE&gt;" alt="" coords="163,5,352,59"/>
+<area shape="rect" id="node2_1" href="./impl/ONewDistributedTxContextImpl.html" title="com.orientechnologies.orient.server.distributed.impl.ONewDistributedTxContextImpl" alt="" coords="16,118,243,143"/>
+<area shape="rect" id="node2" href="./impl/ONewDistributedTxContextImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,107,253,155"/>
+<area shape="rect" id="node3_2" href="./impl/ODistributedTxContextImpl.html" title="com.orientechnologies.orient.server.distributed.impl.ODistributedTxContextImpl" alt="" coords="288,118,485,143"/>
+<area shape="rect" id="node3" href="./impl/ODistributedTxContextImpl.html" title="&lt;TABLE&gt;" alt="" coords="277,107,496,155"/>
+</map>

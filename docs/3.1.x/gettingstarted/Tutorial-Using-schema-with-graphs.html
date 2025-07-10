@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Using Schema with Graphs - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-11-26 SAM -->
+<h1 id="using-schema-with-graphs"><a class="header" href="#using-schema-with-graphs">Using Schema with Graphs</a></h1>
+<p>OrientDB, through the Graph API, offers a number of features above and beyond the traditional Graph Databases given that it supports concepts drawn from both the Document Database and the Object Oriented worlds. For instance, consider the power of graphs, when used in conjunction with schemas and constraints.</p>
+<h2 id="use-case-car-database"><a class="header" href="#use-case-car-database">Use Case: Car Database</a></h2>
+<p>For this example, consider a graph database that maps the relationship between individual users and their cars.  First, create the graph schema for the <code>Person</code> and <code>Car</code> vertex classes, as well as the <code>Owns</code> edge class to connect the two:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Person EXTENDS V</code>
+
+orientdb> <code class="lang-sql userinput">CREATE CLASS Car EXTENDS V</code>
+
+orientdb> <code class="lang-sql userinput">CREATE CLASS Owns EXTENDS E</code>
+</pre>
+<p>These commands lay out the schema for your graph database.  That is, they define two vertex classes and an edge class to indicate the relationship between the two.  With that, you can begin to populate the database with vertices and edges.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE VERTEX Person SET name = 'Luca'</code>
+
+Created vertex 'Person#11:0{name:Luca} v1' in 0,012000 sec(s).
+
+
+orientdb> <code class="lang-sql userinput">CREATE VERTEX Car SET name = 'Ferrari Modena'</code>
+
+Created vertex 'Car#12:0{name:Ferrari Modena} v1' in 0,001000 sec(s).
+
+
+orientdb> <code class="lang-sql userinput">CREATE EDGE Owns FROM ( SELECT FROM Person ) TO ( SELECT FROM Car )</code>
+
+Created edge '[e[#11:0->#12:0][#11:0-Owns->#12:0]]' in 0,005000 sec(s).
+</pre>
+<h3 id="querying-the-car-database"><a class="header" href="#querying-the-car-database">Querying the Car Database</a></h3>
+<p>In the above section, you create a car database and populated it with vertices and edges to map out the relationship between drivers and their cars.  Now you can begin to query this database, showing what those connections are.  For example, what is Luca's car?  You can find out by traversing from the vertex Luca to the outgoing vertices following the <code>Owns</code> relationship.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT name FROM ( SELECT EXPAND( OUT('Owns') ) FROM Person
+          WHERE name='Luca' )</code>
+
+----+-------+-----------------+
+ #  | @RID  | name            |
+----+-------+-----------------+
+ 0  | #-2:1 | Ferrari Modena  |
+----+-------+-----------------+
+</pre>
+<p>As you can see, the query returns that Luca owns a Ferrari Modena.  Now consider expanding your database to track where each person lives.</p>
+<h3 id="adding-a-location-vertex"><a class="header" href="#adding-a-location-vertex">Adding a Location Vertex</a></h3>
+<p>Consider a situation, in which you might want to keep track of the countries in which each person lives. In practice, there are a number of reasons why you might want to do this, for instance, for the purposes of promotional material or in a larger database to analyze the connections to see how residence affects car ownership.</p>
+<p>To begin, create a vertex class for the country, in which the person lives and an edge class that connects the individual to the place.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Country EXTENDS V</code>
+
+orientdb> <code class="lang-sql userinput">CREATE CLASS Lives EXTENDS E</code>
+
+</pre>
+<p>This creates the schema for the feature you're adding to the cars database.  The vertex class <code>Country</code> recording countries in which people live and the edge class <code>Lives</code> to connect individuals in the vertex class <code>Person</code> to entries in <code>Country</code>.</p>
+<p>With the schema laid out, create a vertex for the United Kingdom and connect it to the person Luca.</p>
+<pre>
+
+orientdb> <code class="lang-sql userinput">CREATE VERTEX Country SET name='UK'</code>
+
+Created vertex 'Country#14:0{name:UK} v1' in 0,004000 sec(s).
+
+
+orientdb> <code class="lang-sql userinput">CREATE EDGE Lives FROM ( SELECT FROM Person ) TO ( SELECT FROM Country</code>
+
+Created edge '[e[#11:0->#14:0][#11:0-Lives->#14:0]]' in 0,006000 sec(s).
+</pre>
+<p>The second command creates an edge connecting the person Luca to the country United Kingdom.  Now that your cars database is defined and populated, you can query it, such as a search that shows the countries where there are users that own a Ferrari.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT name FROM ( SELECT EXPAND( IN('Owns').OUT('Lives') )
+          FROM Car WHERE name LIKE '%Ferrari%' )</code>
+
+---+-------+--------+
+ # | @RID  | name   |
+---+-------+--------+
+ 0 | #-2:1 | UK     |
+---+-------+--------+
+</pre>
+<h3 id="using-in-and-out-constraints-on-edges"><a class="header" href="#using-in-and-out-constraints-on-edges">Using <code>in</code> and <code>out</code> Constraints on Edges</a></h3>
+<p>In the above sections, you modeled the graph using a schema without any constraints, but you might find it useful to use some.  For instance, it would be good to require that an <code>Owns</code> relationship only exist between the vertex <code>Person</code> and the vertex <code>Car</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE PROPERTY Owns.out LINK Person</code>
+
+orientdb> <code class="lang-sql userinput">CREATE PROPERTY Owns.in LINK Car</code>
+</pre>
+<p>These commands link outgoing vertices of the <code>Person</code> class to incoming vertices of the <code>Car</code> class.  That is, it configures your database so that a user can own a car, but a car cannot own a user.</p>
+<h3 id="using-mandatory-constraints-on-edges"><a class="header" href="#using-mandatory-constraints-on-edges">Using <code>MANDATORY</code> Constraints on Edges</a></h3>
+<p>By default, when OrientDB creates an edge that lacks properties, it creates it as a Lightweight Edge.  That is, it creates an edge that has no physical record in the database.  Using the <code>MANDATORY</code> setting, you can stop this behavior, forcing it to create the standard Edge, without outright disabling Lightweight Edges.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Owns.out MANDATORY TRUE</code>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Owns.in MANDATORY TRUE</code>
+</pre>
+<h3 id="using-unique-with-edges"><a class="header" href="#using-unique-with-edges">Using <code>UNIQUE</code> with Edges</a></h3>
+<p>For the sake of simplicity, consider a case where you want to limit the way people are connected to cars to where the user can only match to the car once.  That is, if Luca owns a Ferrari Modena, you might prefer not to have a double entry for that car in the event that he buys a new one a few years later.  This is particularly important given that our database covers make and model, but not year.</p>
+<p>To manage this, you need to define a <code>UNIQUE</code> index against both the out and in properties.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE INDEX UniqueOwns ON Owns(out,in) UNIQUE</code>
+
+Created index successfully with 0 entries in 0,023000 sec(s).
+</pre>
+<p>The index returns tells us that no entries are indexed.  You have already created the <code>Onws</code> relationship between Luca and the Ferrari Modena.  In that case, however, OrientDB had created a Lightweight Edge before you set the rule to force the creation of documents for <code>Owns</code> instances.  To fix this, you need to drop and recreate the edge.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">DELETE EDGE FROM #11:0 TO #12:0</code>
+orientdb> <code class="lang-sql userinput">CREATE EDGE Owns FROM ( SELECT FROM Person ) TO ( SELECT FROM Car )</code>
+</pre>
+<p>To confirm that this was successful, run a query to check that a record was created:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Owns</code>
+
+---+-------+-------+--------+
+ # | @RID  | out   | in     |
+---+-------+-------+--------+
+ 0 | #13:0 | #11:0 | #12:0  |
+---+-------+-------+--------+
+</pre>
+<p>This shows that a record was indeed created.  To confirm that the constraints work, attempt to create an edge in <code>Owns</code> that connects Luca to the United Kingdom.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE EDGE Owns FROM ( SELECT FROM Person ) TO ( SELECT FROM Country )</code>
+
+Error: com.orientechnologies.orient.core.exception.OCommandExecutionException:
+Error on execution of command: sql.create edge Owns from (select from Person)...
+Error: com.orientechnologies.orient.core.exception.OValidationException: The
+field 'Owns.in' has been declared as LINK of type 'Car' but the value is the
+document #14:0 of class 'Country'
+</pre>
+<p>This shows that the constraints effectively blocked the creation, generating a set of errors to explain why it was blocked.</p>
+<p>You now have a typed graph with constraints.  For more information, see <a href="../java/Graph-Schema.html">Graph Schema</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../gettingstarted/Tutorial-Working-with-graphs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../gettingstarted/tutorials/Tutorial-Setup-a-distributed-database.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../gettingstarted/Tutorial-Working-with-graphs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../gettingstarted/tutorials/Tutorial-Setup-a-distributed-database.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

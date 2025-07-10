@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAtomicUnitStartRecordV1.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitStartRecordV1" alt="" coords="16,219,212,245"/>
+<area shape="rect" id="node1" href="./OAtomicUnitStartRecordV1.html" title="&lt;TABLE&gt;" alt="" coords="5,208,223,256"/>
+<area shape="rect" id="node2_1" href="./OFileDeletedWALRecordV1.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileDeletedWALRecordV1" alt="" coords="257,219,451,245"/>
+<area shape="rect" id="node2" href="./OFileDeletedWALRecordV1.html" title="&lt;TABLE&gt;" alt="" coords="247,208,461,256"/>
+<area shape="rect" id="node3_2" href="./OperationIdRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OperationIdRecord" alt="" coords="609,11,779,53"/>
+<area shape="rect" id="node3" href="./OperationIdRecord.html" title="&lt;TABLE&gt;" alt="" coords="598,5,790,59"/>
+<area shape="rect" id="node4_3" href="./OperationUnitOperationId.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OperationUnitOperationId" alt="" coords="601,112,787,155"/>
+<area shape="rect" id="node4" href="./OperationUnitOperationId.html" title="&lt;TABLE&gt;" alt="" coords="590,107,798,160"/>
+<area shape="rect" id="node5_4" href="./OUpdatePageRecordV1.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OUpdatePageRecordV1" alt="" coords="496,219,665,245"/>
+<area shape="rect" id="node5" href="./OUpdatePageRecordV1.html" title="&lt;TABLE&gt;" alt="" coords="485,208,676,256"/>
+<area shape="rect" id="node6_5" href="./OFileCreatedWALRecordV1.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileCreatedWALRecordV1" alt="" coords="711,219,904,245"/>
+<area shape="rect" id="node6" href="./OFileCreatedWALRecordV1.html" title="&lt;TABLE&gt;" alt="" coords="700,208,915,256"/>
+<area shape="rect" id="node7_6" href="./OAtomicUnitEndRecordV1.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitEndRecordV1" alt="" coords="949,219,1137,245"/>
+<area shape="rect" id="node7" href="./OAtomicUnitEndRecordV1.html" title="&lt;TABLE&gt;" alt="" coords="939,208,1148,256"/>
+<area shape="rect" id="node8_7" href="./OFileTruncatedWALRecordV1.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFileTruncatedWALRecordV1" alt="" coords="1183,219,1389,245"/>
+<area shape="rect" id="node8" href="./OFileTruncatedWALRecordV1.html" title="&lt;TABLE&gt;" alt="" coords="1173,208,1399,256"/>
+</map>

@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Data Modeling - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-11-26 SAM -->
+<h1 id="multi-model"><a class="header" href="#multi-model">Multi-Model</a></h1>
+<p>The OrientDB engine supports <strong>Graph</strong>, <strong>Document</strong>, <strong>Key/Value</strong>, and <strong>Object</strong> models, so you can use OrientDB as a replacement for a product in any of these categories. However, the main reason why users choose OrientDB is because of its true <strong>Multi-Model</strong> DBMS abilities, which combine all the features of the four models into the core. These abilities are not just interfaces to the database engine, but rather the engine itself was built to support all four models. This is also the main difference to other multi-model DBMSs, as they implement an additional layer with an API, which mimics additional models. However, under the hood, they're truly only one model, therefore they are limited in speed and scalability.</p>
+<h2 id="the-document-model"><a class="header" href="#the-document-model">The Document Model</a></h2>
+<p>The data in this model is stored inside documents. A document is a set of key/value pairs (also referred to as fields or properties), where the key allows access to its value. Values can hold primitive data types, embedded documents, or arrays of other values. Documents are not typically forced to have a schema, which can be advantageous, because they remain flexible and easy to modify. Documents are stored in collections, enabling developers to group data as they decide. OrientDB uses the concepts of "<a href="Concepts.html#class">classes</a>" and "<a href="../internals/Clusters.html">clusters</a>" as its form of "collections" for grouping documents. This provides several benefits, which we will discuss in further sections of the documentation.</p>
+<p>OrientDB's Document model also adds the concept of a "<a href="Concepts.html#relationships">LINK</a>" as a relationship between documents. With OrientDB, you can decide whether to embed documents or link to them directly. When you fetch a document, all the links are automatically resolved by OrientDB. This is a major difference to other Document Databases, like MongoDB or CouchDB, where the developer must handle any and all relationships between the documents herself.</p>
+<p>The table below illustrates the comparison between the relational model, the document model, and the OrientDB document model:</p>
+<div class="table-wrapper"><table><thead><tr><th>Relational Model</th><th>Document Model</th><th>OrientDB Document Model</th></tr></thead><tbody>
+<tr><td>Table</td><td>Collection</td><td><a href="Concepts.html#class">Class</a> or <a href="../internals/Clusters.html">Cluster</a></td></tr>
+<tr><td>Row</td><td>Document</td><td><a href="Concepts.html#document">Document</a></td></tr>
+<tr><td>Column</td><td>Key/value pair</td><td>Document field</td></tr>
+<tr><td>Relationship</td><td>not available</td><td><a href="Concepts.html#relationships">Link</a></td></tr>
+</tbody></table>
+</div>
+<h2 id="the-graph-model"><a class="header" href="#the-graph-model">The Graph Model</a></h2>
+<p>A graph represents a network-like structure consisting of Vertices (also known as Nodes) interconnected by Edges (also known as Arcs). OrientDB's graph model is represented by the concept of a property graph, which defines the following:</p>
+<ul>
+<li>
+<p><strong>Vertex</strong> - an entity that can be linked with other Vertices and has the following mandatory properties:</p>
+<ul>
+<li>unique identifier</li>
+<li>set of incoming Edges</li>
+<li>set of outgoing Edges</li>
+</ul>
+</li>
+<li>
+<p><strong>Edge</strong> - an entity that links two Vertices and has the following mandatory properties:</p>
+<ul>
+<li>unique identifier</li>
+<li>link to an incoming Vertex (also known as head)</li>
+<li>link to an outgoing Vertex (also known as tail)</li>
+<li>label that defines the type of connection/relationship between head and tail vertex</li>
+</ul>
+</li>
+</ul>
+<p>In addition to mandatory properties, each vertex or edge can also hold a set of custom properties. These properties can be defined by users, which can make vertices and edges appear similar to documents. In the table below, you can find a comparison between the graph model, the relational data model, and the OrientDB graph model:</p>
+<div class="table-wrapper"><table><thead><tr><th>Relational Model</th><th>Graph Model</th><th>OrientDB Graph Model</th></tr></thead><tbody>
+<tr><td>Table</td><td>Vertex and Edge Class</td><td><a href="Concepts.html#class">Class</a> that extends "V" (for Vertex) and "E" (for Edges)</td></tr>
+<tr><td>Row</td><td>Vertex</td><td>Vertex</td></tr>
+<tr><td>Column</td><td>Vertex and Edge property</td><td>Vertex and Edge property</td></tr>
+<tr><td>Relationship</td><td>Edge</td><td>Edge</td></tr>
+</tbody></table>
+</div>
+<h2 id="the-keyvalue-model"><a class="header" href="#the-keyvalue-model">The Key/Value Model</a></h2>
+<p>This is the simplest model of the three. Everything in the database can be reached by a key, where the values can be simple and complex types. OrientDB supports Documents and Graph Elements as values allowing for a richer model, than what you would normally find in the classic Key/Value model. The classic Key/Value model provides "buckets" to group key/value pairs in different containers. The most classic use cases of the Key/Value Model are:</p>
+<ul>
+<li>POST the value as payload of the HTTP call -&gt; <code>/&lt;bucket&gt;/&lt;key&gt;</code></li>
+<li>GET the value as payload from the HTTP call -&gt; <code>/&lt;bucket&gt;/&lt;key&gt;</code></li>
+<li>DELETE the value by Key, by calling the HTTP call -&gt; <code>/&lt;bucket&gt;/&lt;key&gt;</code></li>
+</ul>
+<p>The table below illustrates the comparison between the relational model, the Key/Value model, and the OrientDB Key/Value model:</p>
+<div class="table-wrapper"><table><thead><tr><th>Relational Model</th><th>Key/Value Model</th><th>OrientDB Key/Value Model</th></tr></thead><tbody>
+<tr><td>Table</td><td>Bucket</td><td><a href="Concepts.html#class">Class</a> or <a href="../internals/Clusters.html">Cluster</a></td></tr>
+<tr><td>Row</td><td>Key/Value pair</td><td><a href="Concepts.html#document">Document</a></td></tr>
+<tr><td>Column</td><td>not available</td><td>Document field or Vertex/Edge property</td></tr>
+<tr><td>Relationship</td><td>not available</td><td><a href="Concepts.html#relationships">Link</a></td></tr>
+</tbody></table>
+</div>
+<h2 id="the-object-model"><a class="header" href="#the-object-model">The Object Model</a></h2>
+<p>This model has been inherited by <a href="http://en.wikipedia.org/wiki/Object-oriented_programming">Object Oriented programming</a> and supports <strong>Inheritance</strong> between types (sub-types extends the super-types), <strong>Polymorphism</strong> when you refer to a base class and <strong>Direct binding</strong> from/to Objects used in programming languages.</p>
+<p>The table below illustrates the comparison between the relational model, the Object model, and the OrientDB Object model:</p>
+<div class="table-wrapper"><table><thead><tr><th>Relational Model</th><th>Object Model</th><th>OrientDB Object Model</th></tr></thead><tbody>
+<tr><td>Table</td><td>Class</td><td><a href="Concepts.html#class">Class</a> or <a href="../internals/Clusters.html">Cluster</a></td></tr>
+<tr><td>Row</td><td>Object</td><td><a href="Concepts.html#document">Document</a> or Vertex</td></tr>
+<tr><td>Column</td><td>Object property</td><td>Document field or Vertex/Edge property</td></tr>
+<tr><td>Relationship</td><td>Pointer</td><td><a href="Concepts.html#relationships">Link</a></td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../plugins/Plugins.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../datamodeling/Multi-Tenant.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../plugins/Plugins.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../datamodeling/Multi-Tenant.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

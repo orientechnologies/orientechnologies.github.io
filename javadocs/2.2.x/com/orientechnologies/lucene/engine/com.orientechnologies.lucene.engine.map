@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OLuceneIndexEngineAbstract.html" title="com.orientechnologies.lucene.engine.OLuceneIndexEngineAbstract" alt="" coords="16,118,256,143"/>
+<area shape="rect" id="node1" href="./OLuceneIndexEngineAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,107,267,155"/>
+<area shape="rect" id="node6_1" href="./OLuceneFullTextIndexEngine.html" title="com.orientechnologies.lucene.engine.OLuceneFullTextIndexEngine" alt="" coords="33,214,239,239"/>
+<area shape="rect" id="node6" href="./OLuceneFullTextIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="23,203,249,251"/>
+<area shape="rect" id="node2_2" href="./OLuceneFacetManager.html" title="com.orientechnologies.lucene.engine.OLuceneFacetManager" alt="" coords="259,19,426,45"/>
+<area shape="rect" id="node2" href="./OLuceneFacetManager.html" title="&lt;TABLE&gt;" alt="" coords="249,8,437,56"/>
+<area shape="rect" id="node3_3" href="./OLuceneStorage.html" title="com.orientechnologies.lucene.engine.OLuceneStorage" alt="" coords="472,19,597,45"/>
+<area shape="rect" id="node3" href="./OLuceneStorage.html" title="&lt;TABLE&gt;" alt="" coords="461,8,608,56"/>
+<area shape="rect" id="node4_4" href="./OLuceneIndexEngine.html" title="com.orientechnologies.lucene.engine.OLuceneIndexEngine" alt="" coords="58,11,214,53"/>
+<area shape="rect" id="node4" href="./OLuceneIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="47,5,225,59"/>
+<area shape="rect" id="node5_5" href="./OLuceneClassIndexContext.html" title="com.orientechnologies.lucene.engine.OLuceneClassIndexContext" alt="" coords="643,19,840,45"/>
+<area shape="rect" id="node5" href="./OLuceneClassIndexContext.html" title="&lt;TABLE&gt;" alt="" coords="632,8,851,56"/>
+<area shape="rect" id="node7_6" href="./OLuceneFullTextIndexEngine.LuceneIndexCursor.html" title="com.orientechnologies.lucene.engine.OLuceneFullTextIndexEngine.LuceneIndexCursor" alt="" coords="885,19,1029,45"/>
+<area shape="rect" id="node7" href="./OLuceneFullTextIndexEngine.LuceneIndexCursor.html" title="&lt;TABLE&gt;" alt="" coords="875,8,1040,56"/>
+<area shape="rect" id="node8_7" href="./OLuceneDirectoryFactory.html" title="com.orientechnologies.lucene.engine.OLuceneDirectoryFactory" alt="" coords="1075,19,1258,45"/>
+<area shape="rect" id="node8" href="./OLuceneDirectoryFactory.html" title="&lt;TABLE&gt;" alt="" coords="1065,8,1269,56"/>
+<area shape="rect" id="node9_8" href="./OLuceneIndexWriterFactory.html" title="com.orientechnologies.lucene.engine.OLuceneIndexWriterFactory" alt="" coords="1303,19,1502,45"/>
+<area shape="rect" id="node9" href="./OLuceneIndexWriterFactory.html" title="&lt;TABLE&gt;" alt="" coords="1293,8,1513,56"/>
+</map>
