@@ -2,7 +2,7 @@
 title = "OrientDB work in progress update 2025 Q2"
 description = "OrientDB work in progress update 2025 Q2"
 insert_anchor_links = "none"
-date="2025-04-22"
+date="2025-07-15"
 [extra]
 menu = false
 +++
