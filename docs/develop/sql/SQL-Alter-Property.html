@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Alter Property - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sql---alter-property"><a class="header" href="#sql---alter-property">SQL - <code>ALTER PROPERTY</code></a></h1>
+<p>Updates attributes on the existing property and class in the schema.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-xml">ALTER PROPERTY &lt;class&gt;.&lt;property&gt; &lt;attribute-name&gt; &lt;attribute-value&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;class&gt;</code></strong> Defines the class to which the property belongs.</li>
+<li><strong><code>&lt;property&gt;</code></strong> Defines the property you want to update.</li>
+<li><strong><code>&lt;attribute-name&gt;</code></strong> Defines the attribute you want to change.</li>
+<li><strong><code>&lt;attribute-value&gt;</code></strong> Defines the value you want to set on the attribute.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Change the name of the property <code>age</code> in the class <code>Account</code> to <code>born</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Account.age NAME "born"</code>
+</pre>
+</li>
+<li>
+<p>Update a property to make it mandatory:</p>
+<pre>
+orientdb><code class="lang-sql userinput">ALTER PROPERTY Account.age MANDATORY TRUE</code>
+</pre>
+</li>
+<li>
+<p>Define a Regular Expression as constraint:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Account.gender REGEXP "[M|F]"</code>
+</pre>
+</li>
+<li>
+<p>Define a field as case-insensitive to comparisons:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Employee.name COLLATE "ci"</code>
+</pre>
+</li>
+<li>
+<p>Define a custom field on a property:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Foo.bar1 custom stereotype="visible"</code>
+</pre>
+</li>
+<li>
+<p>Set the default value for the current date:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Client.created DEFAULT "sysdate()"</code>
+</pre>
+</li>
+<li>
+<p>Define a unique id that cannot be changed after creation:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Client.id DEFAULT "uuid()" READONLY</code>
+orientdb> <code class="lang-sql userinput">ALTER PROPERTY Client.id READONLY TRUE</code>
+</pre>
+</li>
+</ul>
+<h2 id="supported-attributes"><a class="header" href="#supported-attributes">Supported Attributes</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Attribute</th><th>Type</th><th>Support</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>LINKEDCLASS</code></td><td>String</td><td></td><td>Defines the linked class name.  Use <code>NULL</code> to remove an existing value.</td></tr>
+<tr><td><code>LINKEDTYPE</code></td><td>String</td><td></td><td>Defines the <a href="../general/Types.html">link type</a>.  Use <code>NULL</code> to remove an existing value.</td></tr>
+<tr><td><code>MIN</code></td><td>Integer</td><td></td><td>Defines the minimum value as a constraint.  Use <code>NULL</code> to remove an existing constraint.  On String attributes, it defines the minimum length of the string.  On Integer attributes, it defines the minimum value for the number.  On Date attributes, the earliest date accepted.  For multi-value attributes (lists, sets and maps), it defines the fewest number of entries.</td></tr>
+<tr><td><code>MANDATORY</code></td><td>Boolean</td><td></td><td>Defines whether the property requires a value.</td></tr>
+<tr><td><code>MAX</code></td><td>Integer</td><td></td><td>Defines the maximum value as a constraint.  Use <code>NULL</code> to remove an existing constraint.  On String attributes, it defines the greatest length of the string.  On Integer attributes, it defines the maximum value for the number.  On Date attributes, the last date accepted.  For multi-value attributes (lists, sets and maps), it defines the highest number of entries.</td></tr>
+<tr><td><code>NAME</code></td><td>String</td><td></td><td>Defines the property name.</td></tr>
+<tr><td><code>NOTNULL</code></td><td>Boolean</td><td></td><td>Defines whether the property can have a null value.</td></tr>
+<tr><td><code>REGEXP</code></td><td>String</td><td></td><td>Defines a Regular Expression as constraint.  Use <code>NULL</code> to remove an existing constraint.</td></tr>
+<tr><td><code>TYPE</code></td><td>String</td><td></td><td>Defines a <a href="../general/Types.html">property type</a>.</td></tr>
+<tr><td><code>COLLATE</code></td><td>String</td><td></td><td>Sets collate to one of the defined comparison strategies.  By default, it is set to case-sensitive (<code>cs</code>).  You can also set it to case-insensitive (<code>ci</code>).</td></tr>
+<tr><td><code>READONLY</code></td><td>Boolean</td><td></td><td>Defines whether the property value is immutable.  That is, if it is possible to change it after the first assignment.  Use with <code>DEFAULT</code> to have immutable values on creation.</td></tr>
+<tr><td><code>CUSTOM</code></td><td>String</td><td></td><td>Defines custom properties.  The syntax for custom properties is <code>&lt;custom-name&gt; = &lt;custom-value&gt;</code>, such as <code>stereotype = icon</code>. The custom name is an identifier, so it has to be back-tick quoted if it contains special characters (eg. dots); the value is a string, so it has to be quoted with single or double quotes.</td></tr>
+<tr><td><code>DEFAULT</code></td><td></td><td></td><td>Defines the default value or function.  Feature introduced in version 2.1, (see the section above for examples). Use <code>NULL</code> to remove an existing constraint.</td></tr>
+</tbody></table>
+</div>
+<p>When altering <code>NAME</code> or <code>TYPE</code> this command runs a data update that may take some time, depending on the amount of data.  Don't shut the database down during this migration. When altering property name, the old value is copied to the new property name.</p>
+<blockquote>
+<p>To create a property, use the <a href="SQL-Create-Property.html"><code>CREATE PROPERTY</code></a> command, to remove a property the <a href="SQL-Drop-Property.html"><code>DROP PROPERTY</code></a> command.<br />
+For more information on other commands, please refer to <a href="../console/Console-Commands.html">Console Commands</a> and <a href="SQL-Commands.html">SQL Commands</a>.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sql/SQL-Alter-Database.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/SQL-Alter-Security-Policy.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sql/SQL-Alter-Database.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/SQL-Alter-Security-Policy.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

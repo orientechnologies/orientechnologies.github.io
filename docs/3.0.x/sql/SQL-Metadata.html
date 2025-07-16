@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Querying Metadata - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!--email_off-->
+<h1 id="querying-metadata"><a class="header" href="#querying-metadata">Querying Metadata</a></h1>
+<p>OrientDB provides the <code>metadata:</code> target to retrieve information about OrientDB's metadata:</p>
+<ul>
+<li><code>schema</code>, to get classes and properties</li>
+<li><code>indexmanager</code>, to get information about indexes</li>
+<li><code>database</code>, to get information about the database</li>
+<li><code>storage</code>, to get information about the storage</li>
+</ul>
+<h2 id="querying-the-schema"><a class="header" href="#querying-the-schema">Querying the Schema</a></h2>
+<p>Get all the configured classes:</p>
+<pre><code>select expand(classes) from metadata:schema
+
+----+-----------+---------+----------------+----------+--------+--------+----------+----------+------------+----------
+#   |name       |shortName|defaultClusterId|strictMode|abstract|overSize|clusterIds|properties|customFields|superClass
+----+-----------+---------+----------------+----------+--------+--------+----------+----------+------------+----------
+0   |UserGroup  |null     |13              |false     |false   |0.0     |[1]       |[2]       |null        |V
+1   |WallPost   |null     |15              |false     |false   |0.0     |[1]       |[4]       |null        |V
+2   |Owner      |null     |12              |false     |false   |0.0     |[1]       |[1]       |null        |E
+3   |OTriggered |null     |-1              |false     |true    |0.0     |[1]       |[0]       |null        |null
+4   |E          |E        |10              |false     |false   |0.0     |[1]       |[0]       |null        |null
+5   |OUser      |null     |5               |false     |false   |0.0     |[1]       |[4]       |null        |OIdentity
+6   |OSchedule  |null     |7               |false     |false   |0.0     |[1]       |[7]       |null        |null
+7   |ORestricted|null     |-1              |false     |true    |0.0     |[1]       |[4]       |null        |null
+8   |AssignedTo |null     |11              |false     |false   |0.0     |[1]       |[1]       |null        |E
+9   |V          |null     |9               |false     |false   |2.0     |[1]       |[0]       |null        |null
+10  |OFunction  |null     |6               |false     |false   |0.0     |[1]       |[5]       |null        |null
+11  |ORole      |null     |4               |false     |false   |0.0     |[1]       |[4]       |null        |OIdentity
+12  |ORIDs      |null     |8               |false     |false   |0.0     |[1]       |[0]       |null        |null
+13  |OIdentity  |null     |-1              |false     |true    |0.0     |[1]       |[0]       |null        |null
+14  |User       |null     |14              |false     |false   |0.0     |[1]       |[2]       |null        |V
+----+-----------+---------+----------------+----------+--------+--------+----------+----------+------------+----------
+</code></pre>
+<p>Get all the configured properties for the class OUser:</p>
+<pre><code>select expand(properties) from (
+   select expand(classes) from metadata:schema
+) where name = 'OUser'
+
+----+--------+----+---------+--------+-------+----+----+------+------------+-----------
+#   |name    |type|mandatory|readonly|notNull|min |max |regexp|customFields|linkedClass
+----+--------+----+---------+--------+-------+----+----+------+------------+-----------
+0   |status  |7   |true     |false   |true   |null|null|null  |null        |null
+1   |roles   |15  |false    |false   |false  |null|null|null  |null        |ORole
+2   |password|7   |true     |false   |true   |null|null|null  |null        |null
+3   |name    |7   |true     |false   |true   |null|null|null  |null        |null
+----+--------+----+---------+--------+-------+----+----+------+------------+-----------
+</code></pre>
+<p>Get only the configured <code>customFields</code> properties for OUser (assuming you added CUSTOM metadata like foo=bar):</p>
+<pre><code>select customFields from (
+    select expand(classes) from metadata:schema 
+) where name="OUser"
+
+----+------+------------
+#   |@CLASS|customFields
+----+------+------------
+0   |null  |{foo=bar}
+----+------+------------
+</code></pre>
+<p>Or, if you wish to get only the configured <code>customFields</code>  of an attribute, like if you had a comment for the password attribute for the OUser class.</p>
+<pre><code>select customFields from (
+  select expand(properties) from (
+     select expand(classes) from metadata:schema 
+  ) where name="OUser"
+) where name="password"
+
+
+----+------+----------------------------------------------------
+#   |@CLASS|customFields
+----+------+----------------------------------------------------
+0   |null  |{comment=Foo Bar your password to keep it secure!}
+----+------+----------------------------------------------------
+
+</code></pre>
+<h2 id="querying-the-available-indexes"><a class="header" href="#querying-the-available-indexes">Querying the available Indexes</a></h2>
+<p>Get all the configured indexes:</p>
+<pre><code>select expand(indexes) from metadata:indexmanager
+
+----+------+------+--------+---------+---------+------------------------------------+------------------------------------------------------
+#   |@RID  |mapRid|clusters|type     |name     |indexDefinition                     |indexDefinitionClass
+----+------+------+--------+---------+---------+------------------------------------+------------------------------------------------------
+0   |#-1:-1|#2:0  |[0]     |DICTIO...|dictio...|{keyTypes:[1]}                      |com.orientechnologies.orient.core.index.OSimpleKeyI...
+1   |#-1:-1|#1:1  |[1]     |UNIQUE   |OUser....|{className:OUser,field:name,keyTy...|com.orientechnologies.orient.core.index.OPropertyIn...
+2   |#-1:-1|#1:0  |[1]     |UNIQUE   |ORole....|{className:ORole,field:name,keyTy...|com.orientechnologies.orient.core.index.OPropertyIn...
+----+------+------+--------+---------+---------+------------------------------------+-----------------------------------------
+</code></pre>
+<h2 id="querying-database-and-storage-metadata"><a class="header" href="#querying-database-and-storage-metadata">Querying database and storage metadata</a></h2>
+<p>Querying database metadata:</p>
+<pre><code>SELECT FROM metadata:database
+</code></pre>
+<p>Querying storage metadata:</p>
+<pre><code>SELECT FROM metadata:storage
+</code></pre>
+<!--/email_off-->
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sql/SQL-Introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/SQL-Syntax.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sql/SQL-Introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/SQL-Syntax.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

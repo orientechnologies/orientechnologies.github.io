@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../parser/OExplainResultSet.html" title="com.orientechnologies.orient.core.sql.parser.OExplainResultSet" alt="" coords="16,219,156,245"/>
+<area shape="rect" id="node1" href="../parser/OExplainResultSet.html" title="&lt;TABLE&gt;" alt="" coords="5,208,167,256"/>
+<area shape="rect" id="node2_1" href="../parser/OLocalResultSetLifecycleDecorator.html" title="com.orientechnologies.orient.core.sql.parser.OLocalResultSetLifecycleDecorator" alt="" coords="202,219,450,245"/>
+<area shape="rect" id="node2" href="../parser/OLocalResultSetLifecycleDecorator.html" title="&lt;TABLE&gt;" alt="" coords="191,208,461,256"/>
+<area shape="rect" id="node3_2" href="../parser/OLocalResultSet.html" title="com.orientechnologies.orient.core.sql.parser.OLocalResultSet" alt="" coords="495,219,621,245"/>
+<area shape="rect" id="node3" href="../parser/OLocalResultSet.html" title="&lt;TABLE&gt;" alt="" coords="485,208,631,256"/>
+<area shape="rect" id="node4_3" href="./OInternalResultSet.html" title="com.orientechnologies.orient.core.sql.executor.OInternalResultSet" alt="" coords="666,219,807,245"/>
+<area shape="rect" id="node4" href="./OInternalResultSet.html" title="&lt;TABLE&gt;" alt="" coords="655,208,818,256"/>
+<area shape="rect" id="node5_4" href="./OIteratorResultSet.html" title="com.orientechnologies.orient.core.sql.executor.OIteratorResultSet" alt="" coords="853,219,993,245"/>
+<area shape="rect" id="node5" href="./OIteratorResultSet.html" title="&lt;TABLE&gt;" alt="" coords="843,208,1004,256"/>
+<area shape="rect" id="node6_5" href="./OResultSet.html" title="com.orientechnologies.orient.core.sql.executor.OResultSet" alt="" coords="690,112,783,155"/>
+<area shape="rect" id="node6" href="./OResultSet.html" title="&lt;TABLE&gt;" alt="" coords="679,107,794,160"/>
+<area shape="rect" id="node7_6" href="../../../client/remote/message/ORemoteResultSet.html" title="com.orientechnologies.orient.client.remote.message.ORemoteResultSet" alt="" coords="1039,219,1181,245"/>
+<area shape="rect" id="node7" href="../../../client/remote/message/ORemoteResultSet.html" title="&lt;TABLE&gt;" alt="" coords="1028,208,1192,256"/>
+<area shape="rect" id="node8_7" href="../../../server/distributed/impl/sql/executor/ODistributedResultSet.html" title="com.orientechnologies.orient.server.distributed.impl.sql.executor.ODistributedResultSet" alt="" coords="1227,219,1391,245"/>
+<area shape="rect" id="node8" href="../../../server/distributed/impl/sql/executor/ODistributedResultSet.html" title="&lt;TABLE&gt;" alt="" coords="1216,208,1401,256"/>
+<area shape="rect" id="node9_8" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Spliterator.html" title="java.util.Spliterator" alt="" coords="525,11,642,53"/>
+<area shape="rect" id="node9" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Spliterator.html" title="&lt;TABLE&gt;" alt="" coords="514,5,653,59"/>
+<area shape="rect" id="node10_9" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="java.util.Iterator" alt="" coords="688,11,785,53"/>
+<area shape="rect" id="node10" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="&lt;TABLE&gt;" alt="" coords="677,5,796,59"/>
+<area shape="rect" id="node11_10" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/AutoCloseable.html" title="java.lang.AutoCloseable" alt="" coords="831,11,944,53"/>
+<area shape="rect" id="node11" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/AutoCloseable.html" title="&lt;TABLE&gt;" alt="" coords="820,5,955,59"/>
+</map>

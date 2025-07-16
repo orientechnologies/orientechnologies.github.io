@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../command/OCommandDistributedReplicateRequest.html" title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest" alt="" coords="16,11,299,53"/>
+<area shape="rect" id="node1" href="../command/OCommandDistributedReplicateRequest.html" title="&lt;TABLE&gt;" alt="" coords="5,5,309,59"/>
+<area shape="rect" id="node2_1" href="./OCommandExecutorSQLTruncateCluster.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLTruncateCluster" alt="" coords="169,118,447,143"/>
+<area shape="rect" id="node2" href="./OCommandExecutorSQLTruncateCluster.html" title="&lt;TABLE&gt;" alt="" coords="159,107,457,155"/>
+<area shape="rect" id="node3_2" href="./OCommandExecutorSQLAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" alt="" coords="344,19,576,45"/>
+<area shape="rect" id="node3" href="./OCommandExecutorSQLAbstract.html" title="&lt;TABLE&gt;" alt="" coords="333,8,587,56"/>
+</map>

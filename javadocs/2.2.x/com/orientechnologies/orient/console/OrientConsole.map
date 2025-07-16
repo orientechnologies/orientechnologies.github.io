@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../common/console/OConsoleApplication.html" title="com.orientechnologies.common.console.OConsoleApplication" alt="" coords="16,19,171,45"/>
+<area shape="rect" id="node1" href="../../common/console/OConsoleApplication.html" title="&lt;TABLE&gt;" alt="" coords="5,8,181,56"/>
+<area shape="rect" id="node4_1" href="./OrientConsole.html" title="com.orientechnologies.orient.console.OrientConsole" alt="" coords="125,118,237,143"/>
+<area shape="rect" id="node4" href="./OrientConsole.html" title="&lt;TABLE&gt;" alt="" coords="115,107,248,155"/>
+<area shape="rect" id="node2_2" href="./OConsoleDatabaseApp.html" title="com.orientechnologies.orient.console.OConsoleDatabaseApp" alt="" coords="97,214,265,239"/>
+<area shape="rect" id="node2" href="./OConsoleDatabaseApp.html" title="&lt;TABLE&gt;" alt="" coords="87,203,276,251"/>
+<area shape="rect" id="node3_3" href="./OTableFormatter.OTableOutput.html" title="com.orientechnologies.orient.console.OTableFormatter.OTableOutput" alt="" coords="217,11,325,53"/>
+<area shape="rect" id="node3" href="./OTableFormatter.OTableOutput.html" title="&lt;TABLE&gt;" alt="" coords="206,5,335,59"/>
+</map>

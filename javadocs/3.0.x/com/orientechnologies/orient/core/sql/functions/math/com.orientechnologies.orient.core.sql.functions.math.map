@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSQLFunctionMathAbstract.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract" alt="" coords="587,17,783,42"/>
+<area shape="rect" id="node1" href="./OSQLFunctionMathAbstract.html" title="&lt;TABLE&gt;" alt="" coords="577,5,794,53"/>
+<area shape="rect" id="node2_1" href="./OSQLFunctionSum.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionSum" alt="" coords="16,113,155,138"/>
+<area shape="rect" id="node2" href="./OSQLFunctionSum.html" title="&lt;TABLE&gt;" alt="" coords="5,101,165,149"/>
+<area shape="rect" id="node3_2" href="./OSQLFunctionAverage.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionAverage" alt="" coords="200,113,363,138"/>
+<area shape="rect" id="node3" href="./OSQLFunctionAverage.html" title="&lt;TABLE&gt;" alt="" coords="189,101,373,149"/>
+<area shape="rect" id="node4_3" href="./OSQLFunctionDecimal.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionDecimal" alt="" coords="409,113,573,138"/>
+<area shape="rect" id="node4" href="./OSQLFunctionDecimal.html" title="&lt;TABLE&gt;" alt="" coords="398,101,583,149"/>
+<area shape="rect" id="node5_4" href="./OSQLFunctionMin.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMin" alt="" coords="619,113,752,138"/>
+<area shape="rect" id="node5" href="./OSQLFunctionMin.html" title="&lt;TABLE&gt;" alt="" coords="608,101,763,149"/>
+<area shape="rect" id="node6_5" href="./OSQLFunctionEval.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionEval" alt="" coords="798,113,935,138"/>
+<area shape="rect" id="node6" href="./OSQLFunctionEval.html" title="&lt;TABLE&gt;" alt="" coords="787,101,946,149"/>
+<area shape="rect" id="node7_6" href="./OSQLFunctionAbsoluteValue.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionAbsoluteValue" alt="" coords="981,113,1184,138"/>
+<area shape="rect" id="node7" href="./OSQLFunctionAbsoluteValue.html" title="&lt;TABLE&gt;" alt="" coords="971,101,1195,149"/>
+<area shape="rect" id="node8_7" href="./OSQLFunctionMax.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMax" alt="" coords="1230,113,1367,138"/>
+<area shape="rect" id="node8" href="./OSQLFunctionMax.html" title="&lt;TABLE&gt;" alt="" coords="1219,101,1378,149"/>
+</map>

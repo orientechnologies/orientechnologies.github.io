@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Disk-Cache - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="plocal-disk-cache"><a class="header" href="#plocal-disk-cache">PLocal Disk-Cache</a></h1>
+<p>OrientDB Disk cache consists of two separate cache components that work together:</p>
+<ul>
+<li><strong>Read Cache</strong>, based on <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.54.392">2Q</a> cache algorithm</li>
+<li><strong>Write Cache</strong>, based on <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.108.8729">WOW</a> cache algorithm</li>
+</ul>
+<p>Starting from v2.1, OrientDB exposes internal metrics through <a href="../admin/JMX.html">JMX Beans</a>. Use this information to track and profile OrientDB.</p>
+<h2 id="read-cache"><a class="header" href="#read-cache">Read Cache</a></h2>
+<p>It contains the following queues:</p>
+<ul>
+<li><strong>a1</strong>, as FIFO queue for pages which were not in the read cache and accessed for the first time</li>
+<li><strong>am</strong>, as FIFO queue for the hot pages (pages which are accessed frequently during db lifetime). The most used pages stored in <strong>a1</strong> becomes "hot pages" and are moved into the <strong>am</strong> queue.</li>
+</ul>
+<h3 id="a1-queue"><a class="header" href="#a1-queue">a1 Queue</a></h3>
+<p>a1 queue is split in two queues:</p>
+<ul>
+<li><strong>a1in</strong> that contains pointers to the pages are cached in memory</li>
+<li><strong>a1out</strong> that contains pointers to the pages which were in <strong>a1in</strong>, but was not accessed for some time and were removed from RAM. <strong>a1out</strong> contains pointers to the pages located on the disk, not in RAM.</li>
+</ul>
+<h3 id="loading-a-page"><a class="header" href="#loading-a-page">Loading a page</a></h3>
+<p>When a page is read for the first time, it's loaded from the disk and put in the <strong>a1in</strong> queue. If there isn't enough space in RAM, the page is moved to <strong>a1out</strong> queue.</p>
+<p>If the same page is accessed again, then:</p>
+<ol>
+<li>if it is in <strong>a1in</strong> queue, nothing</li>
+<li>if it is in <strong>a1out</strong> queue, the page is supposed to be a "hot page" (that is page which is accessed several times, but doesn't follow the pattern when the page is accessed several times for short interval, and then not accessed at all) we put it in <strong>am</strong> queue</li>
+<li>if it is in <strong>am</strong> queue, we put the page at the top of am queue</li>
+</ol>
+<h3 id="queue-sizes"><a class="header" href="#queue-sizes">Queue sizes</a></h3>
+<p>By default this is the configuration of queues:</p>
+<ul>
+<li><strong>a1in</strong> queue is 25% of Read Cache size</li>
+<li><strong>a1out</strong> queue is 50% of Read Cache size</li>
+<li><strong>am</strong> is 75% of Read Cache size.</li>
+</ul>
+<p>When OrientDB starts, both caches are empty, so all the accessed pages are put in <strong>a1in</strong> queue, and the size of this queue is 100% of the size of the Read Cache.</p>
+<p>But then, when there is no more room for new pages in <strong>a1in</strong>, the old pages are moved from <strong>a1in</strong> to <strong>a1out</strong>. Eventually when <strong>a1out</strong> contains requested pages we need room for <strong>am</strong> queue pages, so once again we move pages from <strong>a1in</strong> queue to <strong>a1out</strong> queue, <strong>a1in</strong> queue is truncated till it is reached 25% size of read cache.</p>
+<p>To make more clear how RAM and pages are distributed through queues lets look at example.
+Lets suppose we have cache which should cache in RAM 4 pages, and we have 8 pages stored on disk (which have indexes from 0 till 7 accordingly).</p>
+<p>When we start database server all queues contain 0 pages:</p>
+<ul>
+<li>am - []</li>
+<li>a1in - []</li>
+<li>a1out - []</li>
+</ul>
+<p>Then we read first 4 pages from the disk.
+So we have:</p>
+<ul>
+<li>am - []</li>
+<li>a1in - [3, 2, 1, 0]</li>
+<li>a1out - []</li>
+</ul>
+<p>Then we read 5-th page from the disk and then 6-th , because only 4 pages can be fit into RAM we remove the last pages with indexes 0 and 1, free memory which is consumed by those pages and put them in a1out.
+So we have:</p>
+<ul>
+<li>am - []</li>
+<li>a1in - [5, 4, 3, 2]</li>
+<li>a1out - [1, 0]</li>
+</ul>
+<p>lets read pages with indexes from 6 till 7 (last 2 pages) but a1out can contain only 2 pages (50% of cache size) so the first pages will be removed from o1out.
+We have here:</p>
+<ul>
+<li>am - []</li>
+<li>a1in - [7, 6, 5, 4]</li>
+<li>a1out - [3, 2]</li>
+</ul>
+<p>Then if we will read pages 2, 3 then we mark them (obviously) as hot pages and we put them in am queue but we do not have enough memory for these pages, so we remove pages 5 and 4 from a1in queue and free memory which they consumed.
+Here we have:</p>
+<ul>
+<li>am - [3, 2]</li>
+<li>a1in - [7, 6]</li>
+<li>a1out - [5, 4]</li>
+</ul>
+<p>Then we read page 4  because we read it several times during long time interval it is hot page and we put it in am queue.
+So we have:</p>
+<ul>
+<li>am - [4, 3, 5]</li>
+<li>a1in - [7]</li>
+<li>a1out - [6, 5]</li>
+</ul>
+<p>We reached state when queues can not grow any more so we reached stable, from point of view of memory distribution, state.</p>
+<p>This is the used algorithm in pseudo code:</p>
+<pre>
+On accessing a page X
+begin:
+ if X is in Am then
+   move X to the head of Am
+else if (X is in A1out) then
+ removeColdestPageIfNeeded
+ add X to the head of Am
+else if (X is in A1in)
+ // do nothing
+else
+ removeColdestPageIfNeeded
+ add X to the head of A1in
+end if
+end
+
+removeColdestPageIfNeeded
+begin
+ if there is enough RAM do nothing
+ else if( A1in.size > A1inMaxSize)
+  free page out the tail of A1in, call it Y
+  add identifier of Y to the head of A1out
+ if(A1out.size > A1OutMaxSize)
+  remove page from the tail of Alout
+ end if
+ else
+  remove page out the tail of Am
+  // do not put it on A1out; it hasn’t been
+  // accessed for a while
+ end if
+end
+</pre>
+<h2 id="write-cache"><a class="header" href="#write-cache">Write cache</a></h2>
+<p>The main target of the write cache is to eliminate disk I/O overhead, by using the following approaches:</p>
+<ol>
+<li>All the pages are grouped by 4 adjacent pages (group 0 contains pages from 0 to 3, group 1 contains pages from 4 to 7, etc. ). Groups are sorted by position on the disk. Groups are flushed in sorted order, in such way we reduce the random I/O disk head seek overhead. Group's container is implemented as SortedMap: when we reach the end of the map we start again from the beginning. You can think about this data structure as a "ring buffer"</li>
+<li>All the groups have "recency bit", this bit is set when group is changed. It is needed to avoid to flush  pages that are updated too often, it will be wasting of I/O time</li>
+<li>Groups are continuously flushed by background thread, so until there is enough free memory, all data operations do not suffer of I/O overhead because all operations are performed in memory</li>
+</ol>
+<p>Below the pseudo code for write cache algorithms:</p>
+<p>Add changed page in cache:</p>
+<pre>
+begin
+ try to find page in page group.
+ if such page exist
+  replace page in page group
+  set group's "recency bit" to true
+ end if
+ else
+  add page group
+  set group's "recency bit" to true
+ end if
+end
+</pre>
+<p>On periodical background flush</p>
+<pre>
+begin
+ calculate amount of groups to flush
+ start from group next to flushed in previous flush iteration
+ set "force sync" flag to false
+
+ for each group
+  if "recency bit" set to true and "force sync" set to false
+   set "recency bit" to false
+  else
+   flush pages in group
+   remove group from ring buffer
+  end if
+ end for
+
+  if we need to flush more than one group and not all of them are flushed repeat "flush loop" with "force sync" flag set to true.
+end
+</pre>
+<p>The collection of groups to flush is calculated in following way:</p>
+<ol>
+<li>if amount of RAM consumed by pages is less than 80%, then 1 group is flushed.</li>
+<li>if amount of RAM consumed by pages is more than 80%, then 20% of groups is flushed.</li>
+<li>if amount of RAM consumed by pages is more than 90%, then 40% of groups is flushed.</li>
+</ol>
+<h2 id="interaction-between-read-and-write-caches"><a class="header" href="#interaction-between-read-and-write-caches">Interaction between Read and Write Caches</a></h2>
+<p>By default the maximum size of Read Cache is 70% of cache RAM and 30% for Write Cache.</p>
+<p>When a page is requested, the Read Cache looks into the cached pages. If it's not present, the Read Cache requests page from the Write Cache. Write Cache looks for the page inside the Ring Buffer: if it is absent, it reads the page from the disk and returns it directly to the Read Cache without caching it inside of Write Cache Ring Buffer.</p>
+<h3 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h3>
+<p>Page which is used by storage data structure (such as cluster or index) can not be evicted (removed from memory) so each page pointer also has "usage counter" when page is requested by cache user, "usage counter" is incremented and decremented when page is released. So removeColdestPageIfNeeded() method does not remove tail page, but removes page closest to tail which usage counter is 0, if such pages do not exit either exception is thrown or cache size is automatically increased and warning message is added to server log (default) (it is controlled by properties <strong>server.cache.2q.increaseOnDemand</strong> and <strong>server.cache.2q.increaseStep</strong>, the last one is amount of percent of RAM from original size on which cache size will be increased).</p>
+<p>When a page is changed, the cache page pointer (data structure which is called OCacheEntry) is marked as dirty by cache user before release. If cache page is dirty it is put in write cache by read cache during call of OReadWriteDiskCache#release() method. Strictly speaking memory content of page is not copied, it will be too  slow, but pointer to the page is passed. This pointer (OCachePointer) tracks amount of referents if no one references this pointer, it frees referenced page.</p>
+<p>Obviously caches work in multithreaded environment, so to prevent data inconsistencies each page is not accessed directly. Read cache returns data structure which is called cache pointer. This pointer contains pointer to the page and lock object. Cache user should acquire read or write lock before it will use this page. The same read lock is acquired by write cache for each page in group before flush, so inconsistent data will not be flushed to the disk. There is interesting nuance here, write cache tries to acquire read lock and if it is used by cache user it will not wait but will try to flush other group.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../internals/plocal-storage-engine.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../internals/Write-Ahead-Log.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../internals/plocal-storage-engine.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../internals/Write-Ahead-Log.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

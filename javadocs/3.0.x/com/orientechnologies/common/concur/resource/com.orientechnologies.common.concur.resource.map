@@ -1,0 +1,34 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSharedContainer.html" title="com.orientechnologies.common.concur.resource.OSharedContainer" alt="" coords="31,11,168,53"/>
+<area shape="rect" id="node1" href="./OSharedContainer.html" title="&lt;TABLE&gt;" alt="" coords="20,5,179,59"/>
+<area shape="rect" id="node14_1" href="./OSharedContainerImpl.html" title="com.orientechnologies.common.concur.resource.OSharedContainerImpl" alt="" coords="16,118,183,143"/>
+<area shape="rect" id="node14" href="./OSharedContainerImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,107,193,155"/>
+<area shape="rect" id="node2_2" href="./OSharedResourceAdaptiveExternal.html" title="com.orientechnologies.common.concur.resource.OSharedResourceAdaptiveExternal" alt="" coords="291,118,537,143"/>
+<area shape="rect" id="node2" href="./OSharedResourceAdaptiveExternal.html" title="&lt;TABLE&gt;" alt="" coords="280,107,548,155"/>
+<area shape="rect" id="node3_3" href="./OReentrantResourcePool.html" title="com.orientechnologies.common.concur.resource.OReentrantResourcePool" alt="" coords="645,118,874,143"/>
+<area shape="rect" id="node3" href="./OReentrantResourcePool.html" title="&lt;TABLE&gt;" alt="" coords="634,107,885,155"/>
+<area shape="rect" id="node4_4" href="./OSharedResourceAbstract.html" title="com.orientechnologies.common.concur.resource.OSharedResourceAbstract" alt="" coords="888,19,1076,45"/>
+<area shape="rect" id="node4" href="./OSharedResourceAbstract.html" title="&lt;TABLE&gt;" alt="" coords="877,8,1087,56"/>
+<area shape="rect" id="node5_5" href="./OPartitionedObjectPoolFactory.html" title="com.orientechnologies.common.concur.resource.OPartitionedObjectPoolFactory" alt="" coords="1122,19,1386,45"/>
+<area shape="rect" id="node5" href="./OPartitionedObjectPoolFactory.html" title="&lt;TABLE&gt;" alt="" coords="1111,8,1397,56"/>
+<area shape="rect" id="node6_6" href="./OPartitionedObjectPoolFactory.ObjectFactoryFactory.html" title="com.orientechnologies.common.concur.resource.OPartitionedObjectPoolFactory.ObjectFactoryFactory" alt="" coords="1431,11,1634,53"/>
+<area shape="rect" id="node6" href="./OPartitionedObjectPoolFactory.ObjectFactoryFactory.html" title="&lt;TABLE&gt;" alt="" coords="1421,5,1645,59"/>
+<area shape="rect" id="node7_7" href="./OSharedResourceTimeout.html" title="com.orientechnologies.common.concur.resource.OSharedResourceTimeout" alt="" coords="1680,19,1868,45"/>
+<area shape="rect" id="node7" href="./OSharedResourceTimeout.html" title="&lt;TABLE&gt;" alt="" coords="1669,8,1879,56"/>
+<area shape="rect" id="node8_8" href="./OSharedResourceAdaptive.html" title="com.orientechnologies.common.concur.resource.OSharedResourceAdaptive" alt="" coords="214,19,406,45"/>
+<area shape="rect" id="node8" href="./OSharedResourceAdaptive.html" title="&lt;TABLE&gt;" alt="" coords="203,8,417,56"/>
+<area shape="rect" id="node9_9" href="./OSharedResource.html" title="com.orientechnologies.common.concur.resource.OSharedResource" alt="" coords="452,11,587,53"/>
+<area shape="rect" id="node9" href="./OSharedResource.html" title="&lt;TABLE&gt;" alt="" coords="441,5,597,59"/>
+<area shape="rect" id="node10_10" href="./OResourcePoolListener.html" title="com.orientechnologies.common.concur.resource.OResourcePoolListener" alt="" coords="1913,11,2131,53"/>
+<area shape="rect" id="node10" href="./OResourcePoolListener.html" title="&lt;TABLE&gt;" alt="" coords="1903,5,2141,59"/>
+<area shape="rect" id="node11_11" href="./OPartitionedObjectPool.html" title="com.orientechnologies.common.concur.resource.OPartitionedObjectPool" alt="" coords="2177,19,2377,45"/>
+<area shape="rect" id="node11" href="./OPartitionedObjectPool.html" title="&lt;TABLE&gt;" alt="" coords="2166,8,2387,56"/>
+<area shape="rect" id="node12_12" href="./OPartitionedObjectPool.ObjectFactory.html" title="com.orientechnologies.common.concur.resource.OPartitionedObjectPool.ObjectFactory" alt="" coords="2422,11,2561,53"/>
+<area shape="rect" id="node12" href="./OPartitionedObjectPool.ObjectFactory.html" title="&lt;TABLE&gt;" alt="" coords="2411,5,2571,59"/>
+<area shape="rect" id="node13_13" href="./OPartitionedObjectPool.PoolEntry.html" title="com.orientechnologies.common.concur.resource.OPartitionedObjectPool.PoolEntry" alt="" coords="2606,19,2718,45"/>
+<area shape="rect" id="node13" href="./OPartitionedObjectPool.PoolEntry.html" title="&lt;TABLE&gt;" alt="" coords="2595,8,2729,56"/>
+<area shape="rect" id="node15_14" href="./OCloseable.html" title="com.orientechnologies.common.concur.resource.OCloseable" alt="" coords="2763,11,2857,53"/>
+<area shape="rect" id="node15" href="./OCloseable.html" title="&lt;TABLE&gt;" alt="" coords="2753,5,2867,59"/>
+<area shape="rect" id="node16_15" href="./OResourcePool.html" title="com.orientechnologies.common.concur.resource.OResourcePool" alt="" coords="677,19,842,45"/>
+<area shape="rect" id="node16" href="./OResourcePool.html" title="&lt;TABLE&gt;" alt="" coords="666,8,853,56"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../../common/util/OSizeable.html" title="com.orientechnologies.common.util.OSizeable" alt="" coords="236,11,329,53"/>
+<area shape="rect" id="node1" href="../../../../common/util/OSizeable.html" title="&lt;TABLE&gt;" alt="" coords="225,5,340,59"/>
+<area shape="rect" id="node6_1" href="./ORecordLazyMultiValue.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" alt="" coords="340,112,513,155"/>
+<area shape="rect" id="node6" href="./ORecordLazyMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="329,107,524,160"/>
+<area shape="rect" id="node2_2" href="./ORecordLazyList.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyList" alt="" coords="16,222,144,247"/>
+<area shape="rect" id="node2" href="./ORecordLazyList.html" title="&lt;TABLE&gt;" alt="" coords="5,211,155,259"/>
+<area shape="rect" id="node3_3" href="./ODetachable.html" title="com.orientechnologies.orient.core.db.record.ODetachable" alt="" coords="375,11,479,53"/>
+<area shape="rect" id="node3" href="./ODetachable.html" title="&lt;TABLE&gt;" alt="" coords="364,5,489,59"/>
+<area shape="rect" id="node4_4" href="./ORecordLazySet.html" title="com.orientechnologies.orient.core.db.record.ORecordLazySet" alt="" coords="189,222,315,247"/>
+<area shape="rect" id="node4" href="./ORecordLazySet.html" title="&lt;TABLE&gt;" alt="" coords="179,211,325,259"/>
+<area shape="rect" id="node5_5" href="./ORecordLazyMap.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyMap" alt="" coords="361,222,493,247"/>
+<area shape="rect" id="node5" href="./ORecordLazyMap.html" title="&lt;TABLE&gt;" alt="" coords="350,211,503,259"/>
+<area shape="rect" id="node8_6" href="./ridbag/ORidBag.html" title="com.orientechnologies.orient.core.db.record.ridbag.ORidBag" alt="" coords="538,222,614,247"/>
+<area shape="rect" id="node8" href="./ridbag/ORidBag.html" title="&lt;TABLE&gt;" alt="" coords="527,211,625,259"/>
+<area shape="rect" id="node9_7" href="./ridbag/ORidBagDelegate.html" title="com.orientechnologies.orient.core.db.record.ridbag.ORidBagDelegate" alt="" coords="659,213,794,256"/>
+<area shape="rect" id="node9" href="./ridbag/ORidBagDelegate.html" title="&lt;TABLE&gt;" alt="" coords="649,208,805,261"/>
+<area shape="rect" id="node7_8" href="./OAutoConvertToRecord.html" title="com.orientechnologies.orient.core.db.record.OAutoConvertToRecord" alt="" coords="525,11,694,53"/>
+<area shape="rect" id="node7" href="./OAutoConvertToRecord.html" title="&lt;TABLE&gt;" alt="" coords="514,5,705,59"/>
+</map>

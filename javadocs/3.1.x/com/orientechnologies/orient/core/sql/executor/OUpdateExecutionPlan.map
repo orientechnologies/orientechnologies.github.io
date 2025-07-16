@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSelectExecutionPlan.html" title="com.orientechnologies.orient.core.sql.executor.OSelectExecutionPlan" alt="" coords="235,17,395,42"/>
+<area shape="rect" id="node1" href="./OSelectExecutionPlan.html" title="&lt;TABLE&gt;" alt="" coords="225,5,406,53"/>
+<area shape="rect" id="node5_1" href="./OUpdateExecutionPlan.html" title="com.orientechnologies.orient.core.sql.executor.OUpdateExecutionPlan" alt="" coords="231,113,399,138"/>
+<area shape="rect" id="node5" href="./OUpdateExecutionPlan.html" title="&lt;TABLE&gt;" alt="" coords="221,101,410,149"/>
+<area shape="rect" id="node2_2" href="./OForEachExecutionPlan.html" title="com.orientechnologies.orient.core.sql.executor.OForEachExecutionPlan" alt="" coords="16,209,188,234"/>
+<area shape="rect" id="node2" href="./OForEachExecutionPlan.html" title="&lt;TABLE&gt;" alt="" coords="5,197,199,245"/>
+<area shape="rect" id="node3_3" href="./ODeleteExecutionPlan.html" title="com.orientechnologies.orient.core.sql.executor.ODeleteExecutionPlan" alt="" coords="233,209,397,234"/>
+<area shape="rect" id="node3" href="./ODeleteExecutionPlan.html" title="&lt;TABLE&gt;" alt="" coords="223,197,408,245"/>
+<area shape="rect" id="node4_4" href="./ORetryExecutionPlan.html" title="com.orientechnologies.orient.core.sql.executor.ORetryExecutionPlan" alt="" coords="443,209,599,234"/>
+<area shape="rect" id="node4" href="./ORetryExecutionPlan.html" title="&lt;TABLE&gt;" alt="" coords="432,197,609,245"/>
+</map>

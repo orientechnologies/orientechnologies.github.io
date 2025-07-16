@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Create your First Graph and Run Queries - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="orientdb-for-java-developers-in-five-minutes"><a class="header" href="#orientdb-for-java-developers-in-five-minutes">OrientDB for Java Developers in Five Minutes</a></h1>
+<p>In the <a href="java-3.html">previous step</a> you established a DB connection from Java, then you created the DB schema (two classes and an index)</p>
+<p>Now it's time to insert and query some data</p>
+<h2 id="step-55---create-and-query-a-graph"><a class="header" href="#step-55---create-and-query-a-graph">Step 5/5 - Create and Query a Graph</a></h2>
+<p>First of all, let's create three vertices: Alice, Bob and Jim</p>
+<h4 id="creating-vertices"><a class="header" href="#creating-vertices">Creating vertices</a></h4>
+<p>We are good Java developers, aren't we? Let's encapsulate a single vertex creation in a method:</p>
+<pre><code class="language-java">  private static OVertex createPerson(ODatabaseSession db, String name, String surname) {
+    OVertex result = db.newVertex("Person");
+    result.setProperty("name", name);
+    result.setProperty("surname", surname);
+    result.save();
+    return result;
+  }
+</code></pre>
+<p><em>Wow, we never mentioned that people have a <code>surname</code>!!! In the previous section we just defined the schema for <code>name</code> property...</em></p>
+<p>OrientDB can work <em>schemaful</em> (with all the property names and types defined), <em>schemaless</em> (schema-free, no schema defined) or <em>schema-mixed</em> like in this case, where we define a part of the schema (ie. the <code>name</code>) but we leave the developer the ability to add new properties at run time, without having to deal with further schema definitions.</p>
+<p>Now let's create the three vertices:</p>
+<pre><code class="language-java">  private static void createPeople(ODatabaseSession db){
+    OVertex alice = createPerson(db, "Alice", "Foo");
+    OVertex bob = createPerson(db, "Bob", "Bar");
+    OVertex jim = createPerson(db, "Jim", "Baz");
+  }
+</code></pre>
+<h4 id="creating-edges"><a class="header" href="#creating-edges">Creating edges</a></h4>
+<p>Suppose that Alice is a friend of Bob and that Bob is a friend of Jim:</p>
+<pre><code>Alice --FriendOf--&gt; Bob --FriendOf--&gt; Jim
+</code></pre>
+<p>Let's create the edges in the database:</p>
+<pre><code class="language-java">    OEdge edge1 = alice.addEdge(bob, "FriendOf");
+    edge1.save();
+    OEdge edge2 = bob.addEdge(jim, "FriendOf");
+    edge2.save();
+</code></pre>
+<p>Please consider that edges are plain documents, so you can get/set properties on them exactly like for vertices.</p>
+<h4 id="executing-queries"><a class="header" href="#executing-queries">Executing queries</a></h4>
+<p>Last step of this journey: let's write and execute a simple query that finds friends of friends (FoaF) of a person.
+We will use a <a href="../sql/SQL-Query.html">SELECT</a> for this.</p>
+<pre><code class="language-java">  private static void executeAQuery(ODatabaseSession db) {
+    String query = "SELECT expand(out('FriendOf').out('FriendOf')) from Person where name = ?";
+    OResultSet rs = db.query(query, "Alice");
+
+    while (rs.hasNext()) {
+      OResult item = rs.next();
+      System.out.println("friend: " + item.getProperty("name"));
+    }
+
+    rs.close(); //REMEMBER TO ALWAYS CLOSE THE RESULT SET!!!
+  }
+</code></pre>
+<p>or, if you prefer Java Streams API:</p>
+<pre><code class="language-java">  private static void executeAQuery(ODatabaseSession db) {
+    String query = "SELECT expand(out('FriendOf').out('FriendOf')) from Person where name = ?";
+    OResultSet rs = db.query(query, "Alice");
+    rs.stream().forEach(x -&gt; System.out.println("friend: " + x.getProperty("name")));
+    rs.close();
+  }
+</code></pre>
+<p>Let's try a more complex query, let's find all the people that are friends of both Alice and Jim.
+We will use a <a href="../sql/SQL-Match.html">MATCH</a> for this.</p>
+<pre><code class="language-java">  private static void executeAnotherQuery(ODatabaseSession db) {
+    String query =
+        " MATCH                                           " +
+        "   {class:Person, as:a, where: (name = :name1)}, " +
+        "   {class:Person, as:b, where: (name = :name2)}, " +
+        "   {as:a} -FriendOf-&gt; {as:x} -FriendOf-&gt; {as:b}  " +
+        " RETURN x.name as friend                         ";
+
+    Map&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();
+    params.put("name1", "Alice");
+    params.put("name2", "Jim");
+
+    OResultSet rs = db.query(query, params);
+
+    while (rs.hasNext()) {
+      OResult item = rs.next();
+      System.out.println("friend: " + item.getProperty("name"));
+    }
+
+    rs.close();
+  }
+</code></pre>
+<h3 id="good-job-this-is-your-first-orientdb-java-program"><a class="header" href="#good-job-this-is-your-first-orientdb-java-program">Good job!!! This is your first OrientDB Java program!</a></h3>
+<p>Here is the full source code of the main class:</p>
+<pre><code class="language-java">import com.orientechnologies.orient.core.db.ODatabaseSession;
+import com.orientechnologies.orient.core.db.OrientDB;
+import com.orientechnologies.orient.core.db.OrientDBConfig;
+import com.orientechnologies.orient.core.metadata.schema.OClass;
+import com.orientechnologies.orient.core.metadata.schema.OType;
+import com.orientechnologies.orient.core.record.OEdge;
+import com.orientechnologies.orient.core.record.OVertex;
+import com.orientechnologies.orient.core.sql.executor.OResult;
+import com.orientechnologies.orient.core.sql.executor.OResultSet;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+
+  public static void main(String[] args) {
+
+    OrientDB orient = new OrientDB("remote:localhost", OrientDBConfig.defaultConfig());
+    ODatabaseSession db = orient.open("test", "admin", "admin");
+
+    createSchema(db);
+
+    createPeople(db);
+
+    executeAQuery(db);
+
+    executeAnotherQuery(db);
+
+    db.close();
+    orient.close();
+
+  }
+
+  private static void createSchema(ODatabaseSession db) {
+    OClass person = db.getClass("Person");
+
+    if (person == null) {
+      person = db.createVertexClass("Person");
+    }
+
+    if (person.getProperty("name") == null) {
+      person.createProperty("name", OType.STRING);
+      person.createIndex("Person_name_index", OClass.INDEX_TYPE.NOTUNIQUE, "name");
+    }
+
+    if (db.getClass("FriendOf") == null) {
+      db.createEdgeClass("FriendOf");
+    }
+
+  }
+
+  private static void createPeople(ODatabaseSession db) {
+    OVertex alice = createPerson(db, "Alice", "Foo");
+    OVertex bob = createPerson(db, "Bob", "Bar");
+    OVertex jim = createPerson(db, "Jim", "Baz");
+
+    OEdge edge1 = alice.addEdge(bob, "FriendOf");
+    edge1.save();
+    OEdge edge2 = bob.addEdge(jim, "FriendOf");
+    edge2.save();
+  }
+
+  private static OVertex createPerson(ODatabaseSession db, String name, String surname) {
+    OVertex result = db.newVertex("Person");
+    result.setProperty("name", name);
+    result.setProperty("surname", surname);
+    result.save();
+    return result;
+  }
+
+  private static void executeAQuery(ODatabaseSession db) {
+    String query = "SELECT expand(out('FriendOf').out('FriendOf')) from Person where name = ?";
+    OResultSet rs = db.query(query, "Alice");
+
+    while (rs.hasNext()) {
+      OResult item = rs.next();
+      System.out.println("friend: " + item.getProperty("name"));
+    }
+
+    rs.close(); //REMEMBER TO ALWAYS CLOSE THE RESULT SET!!!
+  }
+
+  private static void executeAnotherQuery(ODatabaseSession db) {
+    String query =
+        " MATCH                                           " +
+        "   {class:Person, as:a, where: (name = :name1)}, " +
+        "   {class:Person, as:b, where: (name = :name2)}, " +
+        "   {as:a} -FriendOf-&gt; {as:x} -FriendOf-&gt; {as:b}  " +
+        " RETURN x.name as friend                         ";
+
+    Map&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();
+    params.put("name1", "Alice");
+    params.put("name2", "Jim");
+
+    OResultSet rs = db.query(query, params);
+
+    while (rs.hasNext()) {
+      OResult item = rs.next();
+      System.out.println("friend: " + item.getProperty("friend"));
+    }
+
+    rs.close();
+  }
+
+}
+</code></pre>
+<h2 id="next-steps"><a class="header" href="#next-steps">Next steps:</a></h2>
+<p>You may be interested in:</p>
+<ul>
+<li><a href="../java/Java-MultiModel-API.html">More details about the Java Multi-Model API</a></li>
+<li><a href="../sql/README.html">Full SQL Syntax</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../fiveminute/java-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../gettingstarted/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../fiveminute/java-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../gettingstarted/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

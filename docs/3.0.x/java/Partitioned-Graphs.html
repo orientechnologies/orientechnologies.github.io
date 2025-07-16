@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Partitioned - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="partitioned-graphs"><a class="header" href="#partitioned-graphs">Partitioned Graphs</a></h1>
+<p>You can partition graphs using the <a href="../security/Database-Security.html#record-level-security">Record-level Security</a> feature.  This allows you to separate database records as sandboxes, where "restricted" records are inaccessible to unauthorized users. For more information about other solution for Multi-Tenant applications, look at <a href="../datamodeling/Multi-Tenant.html">Multi-Tenant</a>.</p>
+<p>This tutorial provides a demonstration of sandboxing with the Graph API and the <a href="Graph-Database-Tinkerpop.html">TinkerPop</a> stack.  Partitioned Graph Databases allow you to build <a href="http://en.wikipedia.org/wiki/Multitenancy">Multi-tenant</a> applications.</p>
+<blockquote>
+<p><strong>Requirements</strong>:</p>
+<ul>
+<li>OrientDB 1.2.0-SNAPSHOT or higher</li>
+<li>TinkerPop Blueprints 2.2.0 or higher</li>
+</ul>
+</blockquote>
+<h2 id="creating-a-graph-database"><a class="header" href="#creating-a-graph-database">Creating a Graph Database</a></h2>
+<p>To create a Partitioned Graph Database, you first need to create a database in which to partition.  For instance, the example below covers creating a <code>blog</code> database of the Graph type on the local file system:</p>
+<pre>
+$ <code class="lang-sh userinput">cd $ORIENTDB_HOME/bin</code>
+$ <code class="lang-sh userinput">./console.sh</code>
+OrientDB console v.1.2.0-SNAPSHOT www.orientechnologies.com
+Type 'help' to display all the commands supported.
+
+Installing extensions for GREMLIN language v.2.2.0-SNAPSHOT
+
+orientdb> <code class="lang-sql userinput">CREATE DATABASE local::../databases/blog 
+          admin admin_passwd local graph</code>
+Creating database [local:../databases/blog] using the storage type [local]...
+Database created successfully.
+
+Current database is: local:../databases/blog
+</pre>
+<h2 id="enabling-partitioned-graphs"><a class="header" href="#enabling-partitioned-graphs">Enabling Partitioned Graphs</a></h2>
+<p>Once you have created the Graph Database instance, you need to enable partitioning.  Alter the <code>V</code> and <code>E</code> classes to extend the <code>ORestricted</code>.  Doing so allows you to restrict vertex and edge instances.</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">ALTER CLASS V SUPERCLASS ORestricted</code>
+Class updated successfully
+
+orientdb {db=blog}> <code class="lang-sql userinput">ALTER CLASS E SUPERCLASS ORestricted</code>
+Class updated successfully
+</pre>
+<h2 id="create-users"><a class="header" href="#create-users">Create Users</a></h2>
+<p>With the database online and the vertex and edge classes altered to restricted, create two test users, (<code>luca</code> and <code>steve</code>), to use in exploring how sandboxing works on a Partioned Graph Database.</p>
+<p>These users represent users who blog on the application you're building.  Their level of permissions and authorization relates to the <code>writer</code> role.  First, ensure that the <code>writer</code> role exists on your database:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">SELECT RID, name, rules FROM ORole 
+                    WHERE name = "writer"</code>
+
+---+------+--------+-----------------------------------------------
+ # | RID  | name   | rules
+---+------+--------+-----------------------------------------------
+ 0 | #4:2 | writer | {database=2, database.schema=7, 
+   |      |        | database.cluster.internal=2,
+   |      |        | database.cluster.orole=2, 
+   |      |        | database.cluster.ouser=2,
+   |      |        | database.class.*=15, database.cluster.*=15,
+   |      |        | database.command=15, database.hook.record=15}
+---+------+--------+-----------------------------------------------
+
+3 item(s) found. Query executed in 0.045 sec(s).
+</pre>
+<p>Running these commands shows that you do in fact have a <code>writer</code> role configured on your database and that it uses a Record ID of <code>#4:2</code>.  You can now create the users.  There are two methods available to you, depending on which version of OrientDB you use.</p>
+<h3 id="creating-users"><a class="header" href="#creating-users">Creating Users</a></h3>
+<p>Beginning with version 2.1, OrientDB now features a <a href="../sql/SQL-Create-User.html"><code>CREATE USER</code></a> command. This allows you to create a new user in the current database, as opposed to inserting the credentials into the <code>OUser</code> and <code>ORole</code> classes.</p>
+<p>To create users for Luca and Steve, run the following commands:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE USER luca IDENTIFIED BY luca_passwd
+                    ROLE writer</code>
+
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE USER steve IDENTIFIED BY steve_passwd 
+                    ROLE writer</code>
+</pre>
+<p>The users are now active on your database as <code>luca</code> and <code>steve</code>.</p>
+<h3 id="inserting-users"><a class="header" href="#inserting-users">Inserting Users</a></h3>
+<p>For older implementations of OrientDB, there is no <a href="../sql/SQL-Create-User.html"><code>CREATE USER</code></a> command available to you.  To add users before version 2.1, you need to use <a href="../sql/SQL-Insert.html"><code>INSERT</code></a> statements to add the new values into the <code>OUser</code> class, using the record ID for the <code>writer</code> role, which you found above as <code>#4:2</code>:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">INSERT INTO OUser SET name = 'luca', 
+                    status = 'ACTIVE', password = 'luca_passwd', 
+					roles = [#4:2]</code>
+
+Inserted record 'OUser#5:4{name:luca,password: {SHA-256}D70F47790F
+689414789EEFF231703429C7F88A10210775906460EDBF38589D90,roles:[1]} 
+v1' in 0,001000 sec(s).
+
+orientdb {db=blog}> <code class="lang-sql userinput">INSERT INTO OUser SET name = 'steve', 
+                    status = 'ACTIVE', password = 'steve_passwd', 
+					roles = [#4:2]</code>
+
+Inserted record 'OUser#5:3{name:steve,password: {SHA-256}F148389D0
+80CFE85952998A8A367E2F7EAF35F2D72D2599A5B0412FE4094D65C,roles:[1]}
+v1' in 0,001000 sec(s).
+</pre>
+<h2 id="creating-graphs"><a class="header" href="#creating-graphs">Creating Graphs</a></h2>
+<p>In order to work with the partition, you need to create graphs for each user on the database.  This requires that you log out from the <code>admin</code> user and log back in as Luca and then Steve, then create vertexes and edges with which to work.</p>
+<h3 id="create-a-graph-for-luca"><a class="header" href="#create-a-graph-for-luca">Create a Graph for Luca</a></h3>
+<p>First, using <a href="../console/Console-Command-Disconnect.html"><code>DISCONNECT</code></a> and <a href="../console/Console-Command-Connect.html"><code>CONNECT</code></a> disconnect from your admin session on the <code>blog</code> database and reconnect as Luca's user.</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">DISCONNECT</code>
+Disconnecting from the database [blog]...OK
+
+orientdb> <code class="lang-sql userinput">CONNECT local:../databases/blog luca luca_passwd</code>
+Connecting to database [local:../databases/blog] with user 'luca'...OK
+
+orientdb {db=blog}>
+</pre>
+<p>Now that you're logged in under Luca's user, using the <a href="../sql/SQL-Create-Vertex.html"><code>CREATE VERTEX</code></a> command, create two vertices: one for restaurants and one for pizza.</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE VERTEX SET label = 'food', 
+                    name = 'Pizza'</code>
+Created vertex 'V#9:0{label:food,name:Pizza,_allow:[1]} v0' in 0,001000 sec(s).
+
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE VERTEX SET label = 'restaurant', 
+                    name = "Dante's Pizza"</code>
+Created vertex 'V#9:1{label:restaurant,name:Dante's Pizza,_allow:[1]} v0' in 0,000000 sec(s).
+</pre>
+<p>Connect these vertices with an edge for menus, using <a href="../sql/SQL-Create-Edge.html"><code>CREATE EDGE</code></a>:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE EDGE FROM #9:0 TO #9:1 SET label = 'menu'</code>
+Created edge '[E#10:0{out:#9:0,in:#9:1,label:menu,_allow:[1]} 
+v1]' in 0,003000 sec(s).
+</pre>
+<p>You can check the status using <a href="../sql/SQL-Query.html"><code>SELECT</code></a> against these vertices:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">SELECT FROM V</code>
+
+ ---+------+------------+---------------+-----------------
+  # | RID  | label      | name          | _allow | out
+ ---+------+------------+---------------+--------+--------
+  0 | #9:0 | food       | Pizza         | [1]    | [1]
+  1 | #9:1 | restaurant | Dante's Pizza | [1]    | null
+ ---+------+------------+---------------+--------+--------
+ 2 item(s) found. Query executed in 0.034 sec(s).
+</pre>
+<h3 id="creating-a-graph-for-steve"><a class="header" href="#creating-a-graph-for-steve">Creating a Graph for Steve</a></h3>
+<p>Now let's connect to the database using the 'Steve' user and check if there are vertices:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">DISCONNECT</code>
+Disconnecting from the database [blog]...OK
+
+orientdb> <code class="lang-sql userinput">CONNECT local:../databases/blog steve steve_passwd</code>
+Connecting to database [local:../databases/blog] with user 'steve'...OK
+
+orientdb {db=blog}> <code class="lang-sql userinput">SELECT FROM V</code>
+
+0 item(s) found. Query executed in 0.0 sec(s).
+</pre>
+<p>This confirms that the user Steve does not have access to vertices created by Luca.  Now, create some as Steve:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE VERTEX SET label = 'car', 
+                    name = 'Ferrari Modena'</code>
+
+Created vertex 'V#9:2{label:car,name:Ferrari Modena,_allow:[1]} v0' in 0,000000 sec(s).
+
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE VERTEX SET label = 'driver', 
+                    name = 'steve'</code>
+
+Created vertex 'V#9:3{label:driver,name:steve,_allow:[1]} v0' in 0,000000 sec(s).
+
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE EDGE FROM #9:2 TO #9:3 
+                    SET label = 'drive'</code>
+					
+Created edge '[E#10:1{out:#9:2,in:#9:3,label:drive,_allow:[1]} v1]' in 0,002000 sec(s).
+</pre>
+<p>Run the <a href="../sql/SQL-Query.html"><code>SELECT</code></a> query from earlier to see the vertices you've created:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">SELECT FROM V</code>
+
+---+------+--------+----------------+--------+------
+ # | RID  | label  | name           | _allow | out
+---+------+--------+----------------+--------+------
+ 0 | #9:2 | car    | Ferrari Modena | [1]    | [1]
+ 1 | #9:3 | driver | steve          | [1]    | null
+---+------+--------+----------------+--------+------
+
+2 item(s) found. Query executed in 0.034 sec(s).
+</pre>
+<p>As you can see, Steve's user still can't see vertices and edged that were created by other users. For the sake of example, see what happens when you try to create an edge that connects vertices from different users:</p>
+<pre>
+orientdb {db=blog}> <code class="lang-sql userinput">CREATE EDGE FROM #9:2 TO #9:0 
+                    SET label = 'security-test'</code>
+
+Error: com.orientechnologies.orient.core.exception.OCommandExecutionException: 
+Error on execution of command: OCommandSQL [text=create edge from #9:2 to #
+9:0 set label = 'security-test'] 
+Error: java.lang.IllegalArgumentException: Source vertex '#9:0' does not exist
+</pre>
+<p>The partition used by Luca remains totally isolated from the one used by Steve.  OrientDB operates on the assumption that the other partition doesn't exist, it remains invisible to the current user while still present in the database.</p>
+<h2 id="tinkerpop-stack"><a class="header" href="#tinkerpop-stack">TinkerPop Stack</a></h2>
+<p>The <a href="../security/Database-Security.html#record-level-security">Record-level Security</a> feature is very powerful because it acts at a low-level within the OrientDB engine.  This allows for better integration of security features with the Java API and the <a href="Graph-Database-Tinkerpop.html">TinkerPop</a> stack.</p>
+<p>For instance, try to display all vertices and edges using <a href="../gremlin/Gremlin.html">Gremlin</a>:</p>
+<pre>
+gremlin> <code class="lang-javascript userinput">g.V</code>
+==> [v[#9:2], v[#9:3]]
+Script executed in 0,448000 sec(s).
+
+gremlin> <code class="lang-javascript userinput">g.E</code>
+==> e[#10:1][#9:2-drive->#9:3]
+Script executed in 0,123000 sec(s).
+</pre>
+<blockquote>
+<p>This feature works with other technologies that rely on TinkerPop Blueprints:</p>
+<ul>
+<li><a href="https://github.com/tinkerpop/rexster/wiki">TinkerPop Rexter</a></li>
+<li><a href="https://github.com/tinkerpop/pipes/wiki">TinkerPop Pipes</a></li>
+<li><a href="https://github.com/tinkerpop/furnace/wiki">TinkerPop Furnace</a></li>
+<li><a href="https://github.com/tinkerpop/frames/wiki">TinkerPop Frames</a></li>
+<li><a href="http://thinkaurelius.github.com/faunus/">ThinkAurelius Faunus</a></li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Graph-Schema-Property.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Lightweight-Edges.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Graph-Schema-Property.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Lightweight-Edges.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

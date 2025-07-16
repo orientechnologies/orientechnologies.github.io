@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Run the console - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-11-26 SAM -->
+<h1 id="running-the-orientdb-console"><a class="header" href="#running-the-orientdb-console">Running the OrientDB Console</a></h1>
+<p>Once the server is running there are various methods you can use to connect to your database server to an individual databases.  Two such methods are the <a href="../internals/Network-Binary-Protocol.html">Network Binary</a> and <a href="../misc/OrientDB-REST.html">HTTP/REST</a> protocols.  In addition to these OrientDB provides a command-line interface for connecting to and working with the database server.</p>
+<p><img src="../images/runConsole-connectToDatabase.png" alt="consoleOverview" /></p>
+<h2 id="starting-the-orientdb-console"><a class="header" href="#starting-the-orientdb-console">Starting the OrientDB Console</a></h2>
+<p>In the OrientDB installation directory (that is, <code>$ORIENTDB_HOME</code>, where you installed the database) under <code>bin</code>, there is a file called <code>console.sh</code> for Unix-based systems or <code>console.bat</code> for Windows users.</p>
+<p>To launch the OrientDB console, run the following command after you start the database server:</p>
+<pre>
+$ <code class="lang-sh userinput">cd $ORIENTDB_HOME/bin</code>
+$ <code class="lang-sh userinput">./console.sh</code>
+
+OrientDB console v.X.X.X (build 0) www.orientdb.com
+Type 'HELP' to display all the commands supported.
+Installing extensions for GREMLIN language v.X.X.X
+
+orientdb>
+</pre>
+<p>The OrientDB console is now running.  From this prompt you can connect to and manage any remote or local databases available to you.</p>
+<h2 id="using-the-help-command"><a class="header" href="#using-the-help-command">Using the <code>HELP</code> Command</a></h2>
+<p>In the event that you are unfamiliar with OrientDB and the available commands, or if you need help at any time, you can use the <code>HELP</code> command, or type <code>?</code> into the console prompt.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">HELP</code>
+
+AVAILABLE COMMANDS:
+ * alter class &lt;command-text&gt;   Alter a class in the database schema
+ * alter cluster &lt;command-text&gt; Alter class in the database schema
+ ...                            ...
+ * help                         Print this help
+ * exit                         Close the console
+</pre>
+<p>For each console command available to you, <code>HELP</code> documents its basic use and what it does.  If you know the particular command and need details on its use, you can provide arguments to <code>HELP</code> for further clarification.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">HELP SELECT</code>
+
+COMMAND: SELECT
+- Execute a query against the database and display the results.
+SYNTAX: select &lt;query-text&gt;
+WHERE:
+- &lt;query-text&gt;: The query to execute
+</pre>
+<h2 id="connecting-to-server-instances"><a class="header" href="#connecting-to-server-instances">Connecting to Server Instances</a></h2>
+<p>There are some console commands, such as <code>LIST DATABASES</code> or <code>CREATE DATABASE</code>, which you can only run while connected to a server instance.  For other commands, however, you must also connect to a database, before they run without error.</p>
+<blockquote>
+<p>Before you can connect to a fresh server instance and fully control it, you need to know the <a href="../security/Server-Security.html">root password</a> for the database.</p>
+</blockquote>
+<p>With the required credentials, you can connect to the database server instance on your system, or establish a remote connection to one running on a different machine.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CONNECT remote:localhost root my_root_password</code>
+
+Connecting to remote Server instance [remote:localhost] with user 'root'...OK
+</pre>
+<p>Once you have established a connection to the database server, you can begin to execute commands on that server, such as <code>LIST DATABASES</code> and <code>CREATE DATABASE</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">LIST DATABASES</code>
+
+Found 1 databases:
+* GratefulDeadConcerts (plocal)
+ </pre>
+<p>To connect to this database or to a different one, use the <code>CONNECT</code> command from the console and specify the server URL, username, and password.  By default, each database has an <code>admin</code> user with a password of <code>admin</code>.</p>
+<blockquote>
+<p><strong>Warning</strong>: Always <a href="../security/Database-Security.html#users">change the default password</a> on production databases.</p>
+</blockquote>
+<p>The above <code>LIST DATABASES</code> command shows a <code>GratefulDeadConcerts</code> installed on the local server.  To connect to this database, run the following command:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CONNECT remote:localhost/GratefulDeadConcerts admin admin</code>
+
+Connecting to database [remote:localhost/GratefulDeadConcerts] with user 'admin'...OK
+</pre>
+<p>The <code>CONNECT</code> command takes a specific syntax for its URL.  That is, <code>remote:localhost/GratefulDeadConcerts</code> in the example.  It has three parts:</p>
+<ul>
+<li>
+<p><strong>Protocol</strong>: The first part of the database address is the protocol the console should use in the connection.  In the example, this is <code>remote</code>, indicating that it should use the TCP/IP protocol.</p>
+</li>
+<li>
+<p><strong>Address</strong>: The second part of the database address is hostname or IP address of the database server that you want the console to connect to.  In the example, this is <code>localhost</code>, since the connection is made to a server instance running on the local file system.</p>
+</li>
+<li>
+<p><strong>Database</strong>: The third part of the address is the name of the database that you want to use.  In the case of the example, this is <code>GratefulDeadConcerts</code>.</p>
+</li>
+</ul>
+<p>For more detailed information about the commands, see <a href="../console/Console-Commands.html">Console Commands</a>.</p>
+<blockquote>
+<p><strong>Note</strong>: The OrientDB distribution comes with the bundled database <code>GratefulDeadConcerts</code> which represents the Graph of the <a href="http://en.wikipedia.org/wiki/Grateful_Dead">Grateful Dead's</a> concerts. This database can be used by anyone to start exploring the features and characteristics of OrientDB.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../gettingstarted/Tutorial-Run-the-server.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../gettingstarted/Tutorial-Run-the-studio.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../gettingstarted/Tutorial-Run-the-server.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../gettingstarted/Tutorial-Run-the-studio.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>What&#x27;s new in OrientDB 3.0? - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="whats-new-in-orientdb-30"><a class="header" href="#whats-new-in-orientdb-30">What's new in OrientDB 3.0?</a></h2>
+<h3 id="new-database-administration-access-and-pooling-api"><a class="header" href="#new-database-administration-access-and-pooling-api">New database administration, access and pooling API</a></h3>
+<p>OrientDB v 3.0 has a new API that is specifically intended to manipulate database instances (ie. creating and dropping databases, checking that a DB exists, creating single db connections and connection pools).</p>
+<p>Using this API is as simple as doing:</p>
+<pre><code class="language-java">OrientDB orientDB = new OrientDB("embedded:/tmp/",OrientDBConfig.defaultConfig());
+orientDB.create("test",ODatabaseType.PLOCAL);
+
+try(ODatabaseDocument db = orientDB.open("test","admin","admin");) {
+     // Enter your code here...
+}
+
+orientDB.close();
+</code></pre>
+<p>You can also instantiate a connection pool as follows:</p>
+<pre><code class="language-java">ODatabasePool pool = new ODatabasePool(orientDB,"test","admin","admin");
+// OPEN DATABASE
+try (ODatabaseDocument db = pool.acquire() {
+   // YOUR CODE
+   ...
+}
+</code></pre>
+<p>More information <a href="../../java/Document-API-Database.html">HERE</a></p>
+<h3 id="graph-document-concepts-unification-in-core-api"><a class="header" href="#graph-document-concepts-unification-in-core-api">Graph-document concepts unification in core API</a></h3>
+<p><strong>Core Graph API</strong></p>
+<p>In v 3.0 TinkerPop is just an alternative graph API. The main graph API provided by OrientDB is in the Core module:</p>
+<p><img src="../../images/ORecordHierarchy.png" alt="AddVertex1" /></p>
+<p><strong>Create documents and graphs with the same API</strong></p>
+<p>With the <a href="../../java/ref/ODatabaseDocument.html"><code>ODatabaseDocument</code></a> API you can now create simple documents:</p>
+<pre><code class="language-java">  OElement doc = db.newInstance("ADocumentClass");
+</code></pre>
+<p>or graphs</p>
+<pre><code class="language-java">  OVertex vertex1 = db.newVertex("AVertexClass");
+  OVertex vertex2 = db.newVertex("AVertexClass");  
+  vertex1.addEdge("AnEdgeClass", vertex2);
+</code></pre>
+<p><strong>Unified and more powerful API for properties</strong></p>
+<p>Now documents, vertices and edges have a single, unified API to get and set property names:</p>
+<pre><code class="language-java">  document.setProperty("name", "foo");
+  vertex.setProperty("name", "foo");
+  edge.setProperty("name", "foo");
+  
+  document.getProperty("name");
+  vertex.getProperty("name");
+  edge.getProperty("name");
+</code></pre>
+<blockquote>
+<p>No more <code>doc.field("name")</code>  and <code>vertex.getProperty("name")</code>!!!</p>
+</blockquote>
+<p>Property names can now contain <strong>any character</strong>, including blank spaces, dots, brackets and special characters.</p>
+<p>More information <a href="../../java/Java-MultiModel-API.html">HERE</a></p>
+<h3 id="new-execution-plan-based-query-engine"><a class="header" href="#new-execution-plan-based-query-engine">New execution plan based query engine</a></h3>
+<p>OrientDB team completely re-wrote the SQL query engine. The new query engine is more strict, more accurate and explicit in the execution planning and of course faster!</p>
+<p>An example of the new execution planning:</p>
+<pre><code class="language-sql">SELECT sum(Amount), OrderDate 
+FROM Orders 
+WHERE OrderDate &gt; date("2012-12-09", "yyyy-MM-dd")
+GROUP BY OrderDate
+</code></pre>
+<pre><code>+ FETCH FROM INDEX Orders.OrderDate
+  OrderDate &gt; date("2012-12-09", "yyyy-MM-dd")
++ EXTRACT VALUE FROM INDEX ENTRY
++ FILTER ITEMS BY CLASS 
+  Orders
++ CALCULATE PROJECTIONS
+  Amount AS _$$$OALIAS$$_1, OrderDate
++ CALCULATE AGGREGATE PROJECTIONS
+      sum(_$$$OALIAS$$_1) AS _$$$OALIAS$$_0, OrderDate
+  GROUP BY OrderDate
++ CALCULATE PROJECTIONS
+  _$$$OALIAS$$_0 AS `sum(Amount)`, OrderDate
+</code></pre>
+<p>You can also obtain statistics about the cost of each step in the query execution:</p>
+<pre><code>+ FETCH FROM INDEX Orders.OrderDate (1.445μs)
+  OrderDate &gt; date("2012-12-09", "yyyy-MM-dd")
++ EXTRACT VALUE FROM INDEX ENTRY
++ FILTER ITEMS BY CLASS 
+  Orders
++ CALCULATE PROJECTIONS (5.065μs)
+  Amount AS _$$$OALIAS$$_1, OrderDate
++ CALCULATE AGGREGATE PROJECTIONS (3.182μs)
+      sum(_$$$OALIAS$$_1) AS _$$$OALIAS$$_0, OrderDate
+  GROUP BY OrderDate
++ CALCULATE PROJECTIONS (1.116μs)
+  _$$$OALIAS$$_0 AS `sum(Amount)`, OrderDate
+</code></pre>
+<p>More information about <a href="../../sql/SQL-Select-Execution.html">SELECT execution planning</a>, <a href="../../sql/SQL-Explain.html">EXPLAIN</a>, <a href="../../sql/SQL-Profile.html">PROFILE</a></p>
+<h3 id="support-for-query-on-remote-transactions"><a class="header" href="#support-for-query-on-remote-transactions">Support for query on remote transactions</a></h3>
+<p>Until V 2.2 remote connection did not allow to mix API operations and SQL statements in the same transaction.
+Version 3.0 finally solves this limitation, now you can mix SQL and API operations in a single, remote transaction and the tx isolation will be guaranteed by OrientDB, transparently.</p>
+<h3 id="support-streaming-of-query-result-set"><a class="header" href="#support-streaming-of-query-result-set">Support streaming of query result set</a></h3>
+<p>In V 3.0 we re-designed the binary protocol and the ResultSet API to support streaming on query result sets. This means:</p>
+<ul>
+<li>lower latency in query execution</li>
+<li>much smaller memory footprint for query result sets, both on the server and on the client</li>
+<li>(if you are a Java developer) a new, modern Java 8 API based on Streams to manipulate query result sets</li>
+</ul>
+<p>More information about <a href="../../java/Java-Query-API.html">HERE</a></p>
+<h3 id="integration-with-apache-tinkerpop-3x"><a class="header" href="#integration-with-apache-tinkerpop-3x">Integration with Apache TinkerPop 3.x</a></h3>
+<p>OrientDB v3.0 is compliant with TinkerPop 3.x through an external plugin.</p>
+<p>More information <a href="../../tinkerpop3/OrientDB-TinkerPop3.html">HERE</a></p>
+<h3 id="integration-with-apache-tinkerpop-2x"><a class="header" href="#integration-with-apache-tinkerpop-2x">Integration with Apache TinkerPop 2.x</a></h3>
+<p>OrientDB v3.0 is backward compatible with TinkerPop 2.6.x API through an external plugin. If you built your application with OrientDB 2.2 or minor and you don't want to migrate to the new API (the new Multi-Model or the new TinkerPop 3.x APIs), then download the version with TP2 plugin included.</p>
+<h3 id="externalization-of-object-api"><a class="header" href="#externalization-of-object-api">Externalization of object API</a></h3>
+<p>The Object Database API is now part of a separate module. If your existent application is using it, please include this module. For new application we don't suggest to use the Object Database API, but rather the new Multi-Model API.</p>
+<h3 id="improvements-of-storage-caching-for-reduce-latency"><a class="header" href="#improvements-of-storage-caching-for-reduce-latency">Improvements of storage caching for reduce latency</a></h3>
+<h3 id="new-demo-db-social-travel-agency"><a class="header" href="#new-demo-db-social-travel-agency">New Demo DB 'Social Travel Agency'</a></h3>
+<p>Starting with OrientDB v.3.0 a new demo database is included. More information on the new demo database can be found <a href="../../gettingstarted/demodb/README.html">here</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../release/3.0/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../release/3.0/Available-Packages.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../release/3.0/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../release/3.0/Available-Packages.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
