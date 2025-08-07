@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseTool.html" title="com.orientechnologies.orient.core.db.tool.ODatabaseTool" alt="" coords="305,17,423,42"/>
+<area shape="rect" id="node1" href="./ODatabaseTool.html" title="&lt;TABLE&gt;" alt="" coords="295,5,433,53"/>
+<area shape="rect" id="node4_1" href="./ODatabaseImpExpAbstract.html" title="com.orientechnologies.orient.core.db.tool.ODatabaseImpExpAbstract" alt="" coords="267,113,461,138"/>
+<area shape="rect" id="node4" href="./ODatabaseImpExpAbstract.html" title="&lt;TABLE&gt;" alt="" coords="256,101,472,149"/>
+<area shape="rect" id="node2_2" href="./ODatabaseExport.html" title="com.orientechnologies.orient.core.db.tool.ODatabaseExport" alt="" coords="16,209,149,234"/>
+<area shape="rect" id="node2" href="./ODatabaseExport.html" title="&lt;TABLE&gt;" alt="" coords="5,197,160,245"/>
+<area shape="rect" id="node3_3" href="./ODatabaseCompare.html" title="com.orientechnologies.orient.core.db.tool.ODatabaseCompare" alt="" coords="195,209,346,234"/>
+<area shape="rect" id="node3" href="./ODatabaseCompare.html" title="&lt;TABLE&gt;" alt="" coords="185,197,357,245"/>
+<area shape="rect" id="node5_4" href="./ODatabaseImport.html" title="com.orientechnologies.orient.core.db.tool.ODatabaseImport" alt="" coords="391,209,526,234"/>
+<area shape="rect" id="node5" href="./ODatabaseImport.html" title="&lt;TABLE&gt;" alt="" coords="381,197,537,245"/>
+<area shape="rect" id="node6_5" href="../../../client/remote/ODatabaseImportRemote.html" title="com.orientechnologies.orient.client.remote.ODatabaseImportRemote" alt="" coords="571,209,757,234"/>
+<area shape="rect" id="node6" href="../../../client/remote/ODatabaseImportRemote.html" title="&lt;TABLE&gt;" alt="" coords="561,197,767,245"/>
+</map>

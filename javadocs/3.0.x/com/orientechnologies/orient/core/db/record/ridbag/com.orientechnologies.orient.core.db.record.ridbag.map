@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./DoubleReferenceItem.html" title="com.orientechnologies.orient.core.db.record.ridbag.DoubleReferenceItem" alt="" coords="16,19,177,45"/>
+<area shape="rect" id="node1" href="./DoubleReferenceItem.html" title="&lt;TABLE&gt;" alt="" coords="5,8,188,56"/>
+<area shape="rect" id="node2_1" href="./ORidBagDeleter.html" title="com.orientechnologies.orient.core.db.record.ridbag.ORidBagDeleter" alt="" coords="223,19,347,45"/>
+<area shape="rect" id="node2" href="./ORidBagDeleter.html" title="&lt;TABLE&gt;" alt="" coords="212,8,357,56"/>
+<area shape="rect" id="node3_2" href="./ORidBagDelegate.html" title="com.orientechnologies.orient.core.db.record.ridbag.ORidBagDelegate" alt="" coords="392,11,527,53"/>
+<area shape="rect" id="node3" href="./ORidBagDelegate.html" title="&lt;TABLE&gt;" alt="" coords="381,5,537,59"/>
+<area shape="rect" id="node4_3" href="./ORidBag.html" title="com.orientechnologies.orient.core.db.record.ridbag.ORidBag" alt="" coords="572,19,648,45"/>
+<area shape="rect" id="node4" href="./ORidBag.html" title="&lt;TABLE&gt;" alt="" coords="561,8,659,56"/>
+</map>

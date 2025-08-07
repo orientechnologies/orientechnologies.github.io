@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../record/ORecord.html" title="com.orientechnologies.orient.core.record.ORecord" alt="" coords="16,213,109,256"/>
+<area shape="rect" id="node1" href="../record/ORecord.html" title="&lt;TABLE&gt;" alt="" coords="5,208,120,261"/>
+<area shape="rect" id="node2_1" href="../id/ORID.html" title="com.orientechnologies.orient.core.id.ORID" alt="" coords="155,213,248,256"/>
+<area shape="rect" id="node2" href="../id/ORID.html" title="&lt;TABLE&gt;" alt="" coords="144,208,259,261"/>
+<area shape="rect" id="node3_2" href="./OSerializableStream.html" title="com.orientechnologies.orient.core.serialization.OSerializableStream" alt="" coords="297,112,449,155"/>
+<area shape="rect" id="node3" href="./OSerializableStream.html" title="&lt;TABLE&gt;" alt="" coords="287,107,460,160"/>
+<area shape="rect" id="node4_3" href="./serializer/record/binary/OSerializableWrapper.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.OSerializableWrapper" alt="" coords="293,222,453,247"/>
+<area shape="rect" id="node4" href="./serializer/record/binary/OSerializableWrapper.html" title="&lt;TABLE&gt;" alt="" coords="283,211,464,259"/>
+<area shape="rect" id="node5_4" href="../storage/OPhysicalPosition.html" title="com.orientechnologies.orient.core.storage.OPhysicalPosition" alt="" coords="499,222,635,247"/>
+<area shape="rect" id="node5" href="../storage/OPhysicalPosition.html" title="&lt;TABLE&gt;" alt="" coords="488,211,645,259"/>
+<area shape="rect" id="node6_5" href="../config/OStorageConfigurationImpl.html" title="com.orientechnologies.orient.core.config.OStorageConfigurationImpl" alt="" coords="681,222,877,247"/>
+<area shape="rect" id="node6" href="../config/OStorageConfigurationImpl.html" title="&lt;TABLE&gt;" alt="" coords="670,211,887,259"/>
+<area shape="rect" id="node7_6" href="../../../../tinkerpop/blueprints/impls/orient/OrientElement.html" title="com.tinkerpop.blueprints.impls.orient.OrientElement" alt="" coords="922,222,1035,247"/>
+<area shape="rect" id="node7" href="../../../../tinkerpop/blueprints/impls/orient/OrientElement.html" title="&lt;TABLE&gt;" alt="" coords="911,211,1046,259"/>
+<area shape="rect" id="node8_7" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html" title="java.io.Serializable" alt="" coords="169,11,265,53"/>
+<area shape="rect" id="node8" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html" title="&lt;TABLE&gt;" alt="" coords="159,5,276,59"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./KeyNormalizer.html" title="com.orientechnologies.orient.core.storage.index.nkbtree.normalizers.KeyNormalizer" alt="" coords="48,11,164,53"/>
+<area shape="rect" id="node1" href="./KeyNormalizer.html" title="&lt;TABLE&gt;" alt="" coords="37,5,175,59"/>
+<area shape="rect" id="node2_1" href="./DateTimeKeyNormalizer.html" title="com.orientechnologies.orient.core.storage.index.nkbtree.normalizers.DateTimeKeyNormalizer" alt="" coords="16,118,196,143"/>
+<area shape="rect" id="node2" href="./DateTimeKeyNormalizer.html" title="&lt;TABLE&gt;" alt="" coords="5,107,207,155"/>
+</map>

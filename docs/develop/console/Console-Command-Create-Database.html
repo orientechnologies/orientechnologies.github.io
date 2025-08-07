@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Create Database - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-01-07 SAM -->
+<h1 id="console---create-database"><a class="header" href="#console---create-database">Console - <code>CREATE DATABASE</code></a></h1>
+<blockquote>
+<p>WARNING: OrientDB v 3.2 includes some important changes to DB creation; in particular, default database users/passwords are not created anymore. The console command <code>CREATE DATABASE</code> had a specific behaviour that relied on default users: it created the database and THEN connected to the DB using admin/admin. This is not possible anymore, so we had to change the syntax AND the semantics of the command</p>
+</blockquote>
+<p>Creates and connects to a new database.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-sql">CREATE DATABASE &lt;database-name&gt; &lt;storage-type&gt; [users ( (&lt;username&gt; identified by &lt;password&gt; role &lt;rolename&gt;)* )]
+</code></pre>
+<ul>
+<li><strong><code>&lt;database-name&gt;</code></strong> Defines the name of the database you want to create.</li>
+<li><strong><code>&lt;storage-type&gt;</code></strong> Defines the storage type that you want to use.  You can choose between <code>PLOCAL</code> and <code>MEMORY</code>.</li>
+<li><strong><code>&lt;username&gt;</code></strong> The name of a user to create</li>
+<li><strong><code>&lt;password&gt;</code></strong> The password of this newly created user</li>
+<li><strong><code>&lt;rolename&gt;</code></strong> The role name of this user</li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Create a local database <code>demo</code> without default users:</p>
+<pre>
+
+orientdb> <code class="lang-sql userinput">CONNECT ENV embedded:/my/databases/dir root root</code>
+  
+orientdb> <code class="lang-sql userinput">CREATE DATABASE demo plocal </code>
+
+Database created successfully.
+</pre>
+</li>
+<li>
+<p>Create a remote database <code>demo</code> without default users:</p>
+<pre>
+
+orientdb> <code class="lang-sql userinput">CONNECT ENV remote:localhost root root</code>
+  
+orientdb> <code class="lang-sql userinput">CREATE DATABASE demo plocal </code>
+
+Database created successfully.
+</pre>
+</li>
+<li>
+<p>Create a remote database <code>demo</code> with an "admin" and a "reader" user:</p>
+<pre>
+
+orientdb> <code class="lang-sql userinput">CONNECT ENV remote:localhost root root</code>
+  
+orientdb> <code class="lang-sql userinput">CREATE DATABASE demo plocal users (admin identified by 'MyAdminPassword' role admin, reader identified by 'MyReaderPw' role reader) </code>
+
+Database created successfully.
+</pre>
+</li>
+</ul>
+<p><strong>Old Syntax</strong></p>
+<p>(still compatible in v 3.2)</p>
+<pre><code class="language-sql">CREATE DATABASE &lt;database-url&gt; [&lt;user&gt; &lt;password&gt; &lt;storage-type&gt; [&lt;db-type&gt;]] [-restore=&lt;backup-path&gt;]
+</code></pre>
+<ul>
+<li><strong><code>&lt;database-url&gt;</code></strong> Defines the URL of the database you want to connect to. It uses the format <code>&lt;mode&gt;:&lt;path&gt;</code>
+<ul>
+<li><em><code>&lt;mode&gt;</code></em> Defines the mode you want to use in connecting to the database.  It can be <code>PLOCAL</code> or <code>REMOTE</code>.</li>
+<li><em><code>&lt;path&gt;</code></em> Defines the path to the database.</li>
+</ul>
+</li>
+<li><strong><code>&lt;user&gt;</code></strong> Defines the user you want to connect to the database with.</li>
+<li><strong><code>&lt;password&gt;</code></strong> Defines the password needed to connect to the database, with the defined user.</li>
+<li><strong><code>&lt;storage-type&gt;</code></strong> Defines the storage type that you want to use.  You can choose between <code>PLOCAL</code> and <code>MEMORY</code>.</li>
+<li><strong><code>&lt;db-type&gt;</code></strong> Defines the database type.  You can choose between <code>GRAPH</code> and <code>DOCUMENT</code>.  The default is <code>GRAPH</code>.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Create a local database <code>demo</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE DATABASE PLOCAL:/usr/local/orientdb/databases/demo</code>
+
+Creating database [plocal:/usr/local/orientdb/databases/demo]...
+Connecting to database [plocal:/usr/local/orientdb/databases/demo]...OK
+Database created successfully.
+
+Current database is: plocal:/usr/local/orientdb/databases/demo
+
+orientdb {db=demo}>
+</pre>
+</li>
+<li>
+<p>Create a remote database <code>trick</code>:</p>
+<pre>
+orientdb> <code class='lang-sql userinput'>CREATE DATABASE REMOTE:192.168.1.1/trick root 
+          E30DD873203AAA245952278B4306D94E423CF91D569881B7CAD7D0B6D1A20CE9 PLOCAL</code>
+
+Creating database [remote:192.168.1.1/trick ]...
+Connecting to database [remote:192.168.1.1/trick ]...OK
+Database created successfully.
+
+Current database is: remote:192.168.1.1/trick
+
+orientdb {db=trick}>
+</pre>
+</li>
+</ul>
+<blockquote>
+<p>To create a static database to use from the server, see <a href="../internals/DB-Server.html#storages"><code>Server pre-configured storage types</code></a>.</p>
+<p>To remove a database, see <a href="Console-Command-Drop-Database.html"><code>DROP DATABASE</code></a>.  To change database configurations after creation, see <a href="../sql/SQL-Alter-Database.html"><code>ALTER DATABASE</code></a>.</p>
+<p>For more information on other commands, see <a href="Console-Commands.html">Console Commands</a>.</p>
+</blockquote>
+<p><strong>Incremental restore option</strong></p>
+<p>You can execute an incremental restore at creation time through the option <code>-restore</code> specifying as value the path where your backup is placed. Let's suppose we want create a new fresh database "mydb" and restore data from a backup, located in <code>/tmp/backup</code>, performed from another database in one shot. In this case we can type:</p>
+<pre><code>orientdb&gt; create database remote:localhost/mydb root root plocal graph -restore=/tmp/backup
+
+Creating database [remote:localhost/mydb] using the storage type [plocal]...
+Connecting to database [remote:localhost/mydb] with user 'admin'...OK
+
+Database created successfully.
+
+Current database is: remote:localhost/mydb
+</code></pre>
+<p>For further details on incremental backup and restore you can refer to the page <a href="../admin/Incremental-Backup-And-Restore.html">Incremental Backup and Restore</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../console/Console-Command-Connect-Env.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../console/Console-Command-Declare-Intent.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../console/Console-Command-Connect-Env.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../console/Console-Command-Declare-Intent.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

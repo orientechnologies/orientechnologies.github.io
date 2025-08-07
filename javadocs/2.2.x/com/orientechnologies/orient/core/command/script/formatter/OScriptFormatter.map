@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OScriptFormatter.html" title="com.orientechnologies.orient.core.command.script.formatter.OScriptFormatter" alt="" coords="342,11,473,53"/>
+<area shape="rect" id="node1" href="./OScriptFormatter.html" title="&lt;TABLE&gt;" alt="" coords="331,5,483,59"/>
+<area shape="rect" id="node2_1" href="./OSQLScriptFormatter.html" title="com.orientechnologies.orient.core.command.script.formatter.OSQLScriptFormatter" alt="" coords="16,118,172,143"/>
+<area shape="rect" id="node2" href="./OSQLScriptFormatter.html" title="&lt;TABLE&gt;" alt="" coords="5,107,183,155"/>
+<area shape="rect" id="node3_2" href="./ORubyScriptFormatter.html" title="com.orientechnologies.orient.core.command.script.formatter.ORubyScriptFormatter" alt="" coords="217,118,381,143"/>
+<area shape="rect" id="node3" href="./ORubyScriptFormatter.html" title="&lt;TABLE&gt;" alt="" coords="207,107,392,155"/>
+<area shape="rect" id="node4_3" href="./OGroovyScriptFormatter.html" title="com.orientechnologies.orient.core.command.script.formatter.OGroovyScriptFormatter" alt="" coords="427,118,604,143"/>
+<area shape="rect" id="node4" href="./OGroovyScriptFormatter.html" title="&lt;TABLE&gt;" alt="" coords="416,107,615,155"/>
+<area shape="rect" id="node5_4" href="./OJSScriptFormatter.html" title="com.orientechnologies.orient.core.command.script.formatter.OJSScriptFormatter" alt="" coords="649,118,792,143"/>
+<area shape="rect" id="node5" href="./OJSScriptFormatter.html" title="&lt;TABLE&gt;" alt="" coords="639,107,803,155"/>
+</map>

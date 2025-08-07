@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./NodeOperationTask.html" title="com.orientechnologies.orient.server.distributed.operation.NodeOperationTask" alt="" coords="16,19,163,45"/>
+<area shape="rect" id="node1" href="./NodeOperationTask.html" title="&lt;TABLE&gt;" alt="" coords="5,8,173,56"/>
+<area shape="rect" id="node2_1" href="./NodeOperation.html" title="com.orientechnologies.orient.server.distributed.operation.NodeOperation" alt="" coords="208,11,325,53"/>
+<area shape="rect" id="node2" href="./NodeOperation.html" title="&lt;TABLE&gt;" alt="" coords="197,5,336,59"/>
+<area shape="rect" id="node3_2" href="./NodeOperationTaskResponse.html" title="com.orientechnologies.orient.server.distributed.operation.NodeOperationTaskResponse" alt="" coords="371,19,581,45"/>
+<area shape="rect" id="node3" href="./NodeOperationTaskResponse.html" title="&lt;TABLE&gt;" alt="" coords="361,8,591,56"/>
+<area shape="rect" id="node4_3" href="./NodeOperationResponse.html" title="com.orientechnologies.orient.server.distributed.operation.NodeOperationResponse" alt="" coords="626,11,806,53"/>
+<area shape="rect" id="node4" href="./NodeOperationResponse.html" title="&lt;TABLE&gt;" alt="" coords="615,5,817,59"/>
+<area shape="rect" id="node5_4" href="./NodeOperationResponseFailed.html" title="com.orientechnologies.orient.server.distributed.operation.NodeOperationResponseFailed" alt="" coords="607,118,825,143"/>
+<area shape="rect" id="node5" href="./NodeOperationResponseFailed.html" title="&lt;TABLE&gt;" alt="" coords="596,107,836,155"/>
+</map>

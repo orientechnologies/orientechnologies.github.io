@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Gremlin API - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="gremlin-api"><a class="header" href="#gremlin-api">Gremlin API</a></h1>
+<p><a href="http://gremlindocs.com">Gremlin</a> is a language specialized to work with <a href="https://github.com/tinkerpop/gremlin/wiki/Defining-a-Property-Graph">Property Graphs</a>. <a href="http://gremlindocs.com">Gremlin</a> is part of <a href="http://www.tinkerpop.com">TinkerPop</a> Open Source products. For more information:</p>
+<ul>
+<li><a href="http://gremlindocs.com">Gremlin Documentation</a></li>
+<li><a href="https://github.com/tinkerpop/gremlin/wiki">Gremlin WiKi</a></li>
+<li><a href="https://github.com/tinkerpop/blueprints/wiki/OrientDB-Implementation">OrientDB adapter to use it inside Gremlin</a></li>
+<li><a href="../java/Graph-Database-Tinkerpop.html">OrientDB implementation of TinkerPop Blueprints</a></li>
+</ul>
+<p>To know more about <a href="http://gremlindocs.com">Gremlin</a> and <a href="http://www.tinkerpop.com">TinkerPop</a>'s products subscribe to the <a href="http://groups.google.com/forum/#!forum/gremlin-users">Gremlin Group</a>.</p>
+<h1 id="get-started"><a class="header" href="#get-started">Get Started</a></h1>
+<p>Launch the <strong>gremlin.sh</strong> (or gremlin.bat on Windows OS) console script located in the <strong>bin</strong> directory:</p>
+<pre><code class="language-java">&gt; gremlin.bat
+
+         \,,,/
+         (o o)
+-----oOOo-(_)-oOOo-----
+</code></pre>
+<h1 id="open-the-graph-database"><a class="header" href="#open-the-graph-database">Open the graph database</a></h1>
+<p>Before playing with <a href="http://gremlindocs.com">Gremlin</a> you need a valid <strong><a href="../java/Graph-Database-Tinkerpop.html">OrientGraph</a></strong> instance that points to an OrientDB database. To know all the database types look at <a href="../datamodeling/Concepts.html#database-url">Storage types</a>.</p>
+<p>When you're working with a local or an in-memory database, if the database does not exist it's created for you automatically. Using the remote connection you need to create the database on the target server before using it. This is due to security restrictions.</p>
+<p>Once created the <strong><a href="../java/Graph-Database-Tinkerpop.html">OrientGraph</a></strong> instance with a proper URL is necessary to assign it to a variable. <a href="http://gremlindocs.com">Gremlin</a> is written in Groovy, so it supports all the Groovy syntax, and both can be mixed to create very powerful scripts!</p>
+<p>Example with a local database (see below for more information about it):</p>
+<pre><code class="language-java">gremlin&gt; g = org.apache.tinkerpop.gremlin.orientdb.OrientGraph.open("plocal:/home/gremlin/db/demo");
+==&gt;orientgraph[plocal:/home/gremlin/db/demo]
+</code></pre>
+<p>Some useful links:</p>
+<ul>
+<li><a href="https://github.com/tinkerpop/gremlin/wiki/Gremlin-Methods">All Gremlin methods</a></li>
+<li><a href="https://github.com/tinkerpop/gremlin/wiki/Gremlin-Steps">All available steps</a></li>
+</ul>
+<h2 id="working-with-local-database"><a class="header" href="#working-with-local-database">Working with local database</a></h2>
+<p>This is the most often used mode. The console opens and locks the database for exclusive use. This doesn't require starting an OrientDB server.</p>
+<pre><code class="language-java">gremlin&gt; graph = org.apache.tinkerpop.gremlin.orientdb.OrientGraph.open("plocal:/home/gremlin/db/demo");
+==&gt;orientgraph[plocal:/home/gremlin/db/demo]
+</code></pre>
+<h2 id="working-with-a-remote-database"><a class="header" href="#working-with-a-remote-database">Working with a remote database</a></h2>
+<p>To open a database on a remote server be sure the server is up and running first. To start the server just launch <strong>server.sh</strong> (or server.bat on Windows OS) script. For more information look at <a href="../internals/DB-Server.html">OrientDB Server</a></p>
+<pre><code class="language-java">gremlin&gt; graph = org.apache.tinkerpop.gremlin.orientdb.OrientGraph.open("remote:localhost/demo");
+==&gt;orientgraph[remote:localhost/demo]
+</code></pre>
+<h2 id="working-with-in-memory-database"><a class="header" href="#working-with-in-memory-database">Working with in-memory database</a></h2>
+<p>In this mode the database is volatile and all the changes will be not persistent. Use this in a clustered configuration (the database life is assured by the cluster itself) or just for test.</p>
+<pre><code class="language-java">gremlin&gt; graph = org.apache.tinkerpop.gremlin.orientdb.OrientGraph.open("memory:demo");
+==&gt;orientgraph[memory:demo]
+</code></pre>
+<h2 id="use-security"><a class="header" href="#use-security">Use security</a></h2>
+<p>OrientDB supports security by creating multiple users and roles associated with certain privileges. To know more look at <a href="../security/Security.html">Security</a>. To open the graph database with a different user than the default, pass the user and password as additional parameters:</p>
+<pre><code class="language-java">gremlin&gt; graph = org.apache.tinkerpop.gremlin.orientdb.OrientGraph.open("memory:demo", "reader", "reader");
+==&gt;orientgraph[memory:demo]
+</code></pre>
+<h1 id="create-a-new-vertex"><a class="header" href="#create-a-new-vertex">Create a new Vertex</a></h1>
+<p>To create a new vertex, use the <strong>addVertex()</strong> method. The vertex will be created and a unique id will be displayed as the return value.</p>
+<pre><code class="language-java">graph.addVertex();
+==&gt;v[#5:0]
+</code></pre>
+<h1 id="create-an-edge"><a class="header" href="#create-an-edge">Create an edge</a></h1>
+<p>To create a new edge between two vertices, use the <strong>addEdge(v1, v2, label)</strong> method. The edge will be created with the label specified.</p>
+<p>In the example below two vertices are created and assigned to a variable (Gremlin is based on Groovy), then an edge is created between them.</p>
+<pre><code class="language-java">gremlin&gt; v1 = graph.addVertex();
+==&gt;v[#5:0]
+
+gremlin&gt; v2 = graph.addVertex();
+==&gt;v[#5:1]
+
+gremlin&gt; e = graph.addEdge(v1, v2, 'friend');
+==&gt;e[#6:0][#5:0-friend-&gt;#5:1]
+</code></pre>
+<h1 id="retrieve-a-vertex"><a class="header" href="#retrieve-a-vertex">Retrieve a vertex</a></h1>
+<p>To retrieve a vertex by its ID, use the <strong>v(id)</strong> method passing the <a href="../datamodeling/Concepts.html#record-id">RecordId</a> as an argument (with or without the prefix '#'). This example retrieves the first vertex created in the above example.</p>
+<pre><code class="language-java">gremlin&gt; g = graph.traversal()
+gremlin&gt; g.V('5:0')
+==&gt;v[#5:0]
+</code></pre>
+<h2 id="get-all-the-vertices"><a class="header" href="#get-all-the-vertices">Get all the vertices</a></h2>
+<p>To retrieve all the vertices in the opened graph use <strong>.V</strong> (V in upper-case):</p>
+<pre><code class="language-java">gremlin&gt; g.V()
+==&gt;v[#5:0]
+==&gt;v[#5:1]
+</code></pre>
+<h1 id="retrieve-an-edge"><a class="header" href="#retrieve-an-edge">Retrieve an edge</a></h1>
+<p>Retrieving an edge is very similar to retrieving a vertex.  Use the <em>e(id)</em> method passing the <a href="../datamodeling/Concepts.html#record-id">RecordId</a> as an argument (with or without the prefix '#'). This example retrieves the first edge created in the previous example.</p>
+<pre><code class="language-java">gremlin&gt; g.e('6:0')
+==&gt;e[#6:0][#5:0-friend-&gt;#5:1]
+</code></pre>
+<h2 id="get-all-the-edges"><a class="header" href="#get-all-the-edges">Get all the edges</a></h2>
+<p>To retrieve all the edges in the opened graph use <strong>.E</strong> (E in upper-case):</p>
+<pre><code class="language-java">gremlin&gt; g.E()
+==&gt;e[#6:0][#5:0-friend-&gt;#5:1]
+</code></pre>
+<h1 id="traversal"><a class="header" href="#traversal">Traversal</a></h1>
+<p>The power of Gremlin is in traversal. Once you have a graph loaded in your database you can traverse it in many different ways.</p>
+<h2 id="basic-traversal"><a class="header" href="#basic-traversal">Basic Traversal</a></h2>
+<p>To display all the outgoing edges of the first vertex just created append the <strong>.outE</strong> at the vertex. Example:</p>
+<pre><code class="language-java">gremlin&gt; v1.outE()
+==&gt;e[#6:0][#5:0-friend-&gt;#5:1]
+</code></pre>
+<p>To display all the incoming edges of the second vertex created in the previous examples append the <strong>.inE</strong> at the vertex. Example:</p>
+<pre><code class="language-java">gremlin&gt; v2.inE()
+==&gt;e[#6:0][#5:0-friend-&gt;#5:1]
+</code></pre>
+<p>In this case the edge is the same because it's the outgoing edge of 5:0 and the incoming edge of 5:1.</p>
+<p>For more information look at the <a href="https://github.com/tinkerpop/gremlin/wiki/Basic-Graph-Traversals">Basic Traversal with Gremlin</a>.</p>
+<h2 id="filter-results"><a class="header" href="#filter-results">Filter results</a></h2>
+<p>This example returns all the outgoing edges of all the vertices with label equal to 'friend'.</p>
+<pre><code class="language-java">gremlin&gt; g.V().outE('friend')
+==&gt;e[#6:0][#5:0-friend-&gt;#5:1]
+</code></pre>
+<h1 id="close-the-database"><a class="header" href="#close-the-database">Close the database</a></h1>
+<p>To close a graph use the <strong>shutdown()</strong> method:</p>
+<pre><code class="language-java">gremlin&gt; g.shutdown()
+==&gt;null
+</code></pre>
+<p>This is not strictly necessary because OrientDB always closes the database when the <a href="http://gremlindocs.com">Gremlin</a> console quits.</p>
+<h1 id="create-complex-paths"><a class="header" href="#create-complex-paths">Create complex paths</a></h1>
+<p><a href="http://gremlindocs.com">Gremlin</a> allows you to concatenate expressions to create more complex traversals in a single line:</p>
+<pre><code class="language-java">v1.outE().inV()
+</code></pre>
+<p>Of course this could be much more complex. Below is an example with the graph taken from the official documentation:</p>
+<pre><code class="language-java">// calculate basic collaborative filtering for vertex 1
+m = [:]
+g.v(1).out('likes').in('likes').out('likes').groupCount(m)
+m.sort{a,b -&gt; a.value &lt;=&gt; b.value}
+
+// calculate the primary eigenvector (eigenvector centrality) of a graph
+m = [:]; c = 0;
+g.V.out.groupCount(m).loop(2){c++ &lt; 1000}
+m.sort{a,b -&gt; a.value &lt;=&gt; b.value}
+</code></pre>
+<h1 id="passing-input-parameters"><a class="header" href="#passing-input-parameters">Passing input parameters</a></h1>
+<p>Some <a href="http://gremlindocs.com">Gremlin</a> expressions require declaration of input parameters to be
+run. This is the case, for example, of bound variables, as described
+in <a href="https://github.com/tinkerpop/gremlin/wiki/Using-Gremlin-through-Java">JSR223 Gremlin Script Engine</a>. OrientDB has enabled a mechanism to
+pass variables to a <a href="http://gremlindocs.com">Gremlin</a> pipeline declared in a command as
+described below:</p>
+<pre><code class="language-java">Map&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();
+params.put("map1", new HashMap());
+params.put("map2", new HashMap());
+db.command(new OCommandSQL("select gremlin('
+current.as('id').outE.label.groupCount(map1).optional('id').sideEffect{map2=it.map();map2+=map1;}
+')")).execute(params);
+</code></pre>
+<h2 id="gremlinpipeline"><a class="header" href="#gremlinpipeline">GremlinPipeline</a></h2>
+<p>You can also use native Java GremlinPipeline like:</p>
+<pre><code class="language-java">new GremlinPipeline(g.getVertex(1)).out("knows").property("name").filter(new PipeFunction&lt;String,Boolean&gt;() {
+  public Boolean compute(String argument) {
+    return argument.startsWith("j");
+  }
+}).back(2).out("created");
+</code></pre>
+<p>For more information: <a href="https://github.com/tinkerpop/gremlin/wiki/Using-Gremlin-through-Java">Using Gremlin through Java</a></p>
+<h1 id="declaring-output"><a class="header" href="#declaring-output">Declaring output</a></h1>
+<p>In the simplest case, the output of the last step (https://github.com/tinkerpop/gremlin/wiki/Gremlin-Steps) in the Gremlin pipeline corresponds to the output of the overall Gremlin expression. However, it is possible to instruct the Gremlin engine to consider any of the input variables as output. This can be declared as:</p>
+<pre><code class="language-java">Map&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();
+params.put("map1", new HashMap());
+params.put("map2", new HashMap());
+params.put("output", "map2");
+db.command(new OCommandSQL("select gremlin('
+current.as('id').outE.label.groupCount(map1).optional('id').sideEffect{map2=it.map();map2+=map1;}
+')")).execute(params);
+</code></pre>
+<p>There are more possibilities to define the output in the <a href="http://gremlindocs.com">Gremlin</a> pipelines.  So this mechanism is expected to be extended in the future. Please, contact OrientDB mailing list to discuss customized outputs.</p>
+<h1 id="conclusions"><a class="header" href="#conclusions">Conclusions</a></h1>
+<p>Now you've learned how to use <a href="http://gremlindocs.com">Gremlin</a> on top of OrientDB.  The best place to go in depth with this powerful language is the <a href="https://github.com/tinkerpop/gremlin/wiki">Gremlin WiKi</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../misc/OrientDB-REST.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../security/Security.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../misc/OrientDB-REST.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../security/Security.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

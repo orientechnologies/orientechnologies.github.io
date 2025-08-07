@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../orient/core/db/ODatabaseListener.html" title="com.orientechnologies.orient.core.db.ODatabaseListener" alt="" coords="16,11,160,53"/>
+<area shape="rect" id="node1" href="../../orient/core/db/ODatabaseListener.html" title="&lt;TABLE&gt;" alt="" coords="5,5,171,59"/>
+<area shape="rect" id="node3_1" href="./OAuditingHook.html" title="com.orientechnologies.security.auditing.OAuditingHook" alt="" coords="128,118,245,143"/>
+<area shape="rect" id="node3" href="./OAuditingHook.html" title="&lt;TABLE&gt;" alt="" coords="117,107,256,155"/>
+<area shape="rect" id="node2_2" href="../../orient/core/hook/ORecordHookAbstract.html" title="com.orientechnologies.orient.core.hook.ORecordHookAbstract" alt="" coords="205,19,368,45"/>
+<area shape="rect" id="node2" href="../../orient/core/hook/ORecordHookAbstract.html" title="&lt;TABLE&gt;" alt="" coords="195,8,379,56"/>
+</map>

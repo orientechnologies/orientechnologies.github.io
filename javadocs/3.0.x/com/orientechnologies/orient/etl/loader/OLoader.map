@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OETLComponent.html" title="com.orientechnologies.orient.etl.OETLComponent" alt="" coords="72,11,200,53"/>
+<area shape="rect" id="node1" href="../OETLComponent.html" title="&lt;TABLE&gt;" alt="" coords="61,5,211,59"/>
+<area shape="rect" id="node3_1" href="./OLoader.html" title="com.orientechnologies.orient.etl.loader.OLoader" alt="" coords="89,112,183,155"/>
+<area shape="rect" id="node3" href="./OLoader.html" title="&lt;TABLE&gt;" alt="" coords="79,107,193,160"/>
+<area shape="rect" id="node2_2" href="./OAbstractLoader.html" title="com.orientechnologies.orient.etl.loader.OAbstractLoader" alt="" coords="16,219,144,245"/>
+<area shape="rect" id="node2" href="./OAbstractLoader.html" title="&lt;TABLE&gt;" alt="" coords="5,208,155,256"/>
+<area shape="rect" id="node4_3" href="./OOrientDBLoader.html" title="com.orientechnologies.orient.etl.loader.OOrientDBLoader" alt="" coords="70,315,202,341"/>
+<area shape="rect" id="node4" href="./OOrientDBLoader.html" title="&lt;TABLE&gt;" alt="" coords="59,304,213,352"/>
+</map>

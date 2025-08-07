@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>JDBC Driver - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="jdbc-driver"><a class="header" href="#jdbc-driver">JDBC Driver</a></h1>
+<blockquote>
+<p>GroupId: <strong>com.orientechnologies</strong> ArtifactId: <strong>orientdb-jdbc</strong></p>
+</blockquote>
+<p>The JDBC driver for OrientDB allows connecting to an OrientDB database using the standard way of interacting with databases in the Java world.</p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>The driver is registered to the Java SQL DriverManager and can be used to work with all the OrientDB database types:</p>
+<ul>
+<li>memory</li>
+<li>plocal</li>
+<li>remote</li>
+</ul>
+<p>The driver's class is <code>com.orientechnologies.orient.jdbc.OrientJdbcDriver</code>.</p>
+<h2 id="getting-a-connection"><a class="header" href="#getting-a-connection">Getting a Connection</a></h2>
+<pre><code class="language-java">Properties info = new Properties();
+info.put("user", "admin");
+info.put("password", "admin");
+
+Connection conn = (OrientJdbcConnection) DriverManager.getConnection("jdbc:orient:remote:localhost/test", info);
+</code></pre>
+<p>Then execute a Statement and get the ResultSet:</p>
+<pre><code class="language-java">Statement stmt = conn.createStatement();
+
+ResultSet rs = stmt.executeQuery("SELECT stringKey, intKey, text, length, date FROM Item");
+
+rs.next();
+
+rs.getInt("@version");
+rs.getString("@class");
+rs.getString("@rid");
+
+rs.getString("stringKey");
+rs.getInt("intKey");
+
+rs.close();
+stmt.close();
+</code></pre>
+<h2 id="writing-queries"><a class="header" href="#writing-queries">Writing Queries</a></h2>
+<p>The OrientDB JDBC Driver maps types returned by OrientDB, gathering metadata at the database and resultset level. For better naming and type mapping, the suggested approach is to always define aliases when aggregation functions are used.</p>
+<pre><code class="language-java">stmt.execute("SELECT DISTINCT(published) AS pub FROM Item ")
+ 
+stmt.execute("SELECT SUM(score) AS totalScore FROM Item ")
+ 
+</code></pre>
+<p>Using aliases helps the driver in the name mapping phase, and it is a good practice anyway.</p>
+<h2 id="advanced-features"><a class="header" href="#advanced-features">Advanced Features</a></h2>
+<h3 id="connection-pool"><a class="header" href="#connection-pool">Connection Pool</a></h3>
+<p>By default a new database instance is created every time you ask for a JDBC connection. The OrientDB JDBC driver provides a Connection Pool out of the box. Set the connection pool parameters before creating a connection:</p>
+<pre><code class="language-java">Properties info = new Properties();
+info.put("user", "admin");
+info.put("password", "admin");
+
+info.put("db.usePool", "true"); // USE THE POOL
+info.put("db.pool.min", "3");   // MINIMUM POOL SIZE
+
+Connection conn = (OrientJdbcConnection) DriverManager.getConnection("jdbc:orient:remote:localhost/test", info);
+</code></pre>
+<h3 id="spark-compatibility"><a class="header" href="#spark-compatibility">Spark Compatibility</a></h3>
+<p><a href="http://spark.apache.org/">Apache Spark</a> allows reading and writing of DataFrames from JDBC data sources.
+The driver can be used to load data from an OrientDB database.</p>
+<p>The driver offers a compatibility mode to enable loading of a DataFrame from an OrientDB class or query.</p>
+<pre><code class="language-java">Map&lt;String, String&gt; options = new HashMap&lt;String, String&gt;() {{
+    put("url", "jdbc:orient:remote:localhost/sparkTest");
+    put("user", "admin");
+    put("password", "admin");
+    put("spark", "true"); // ENABLE Spark compatibility
+    put("dbtable", "Item");
+}};
+
+SQLContext sqlCtx = new SQLContext(ctx);
+
+DataFrame jdbcDF = sqlCtx.read().format("jdbc").options(options).load();
+</code></pre>
+<h2 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h2>
+<p>The OrientDB JDBC driver is dependent on the following jars (they can be found in the lib directory of an OrientDB installation):</p>
+<ul>
+<li>concurrentlinkedhashmap-lru-x.x.x.jar</li>
+<li>jna-x.x.x.jar</li>
+<li>orientdb-client-x.x.x.jar</li>
+<li>orientdb-core-x.x.x.jar</li>
+<li>orientdb-jdbc-x.x.x.jar</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/JPA-Configuration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../scala/Scala-Language.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/JPA-Configuration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../scala/Scala-Language.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

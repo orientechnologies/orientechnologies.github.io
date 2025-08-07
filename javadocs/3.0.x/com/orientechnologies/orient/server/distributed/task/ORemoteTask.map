@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../operation/NodeOperationTask.html" title="com.orientechnologies.orient.server.distributed.operation.NodeOperationTask" alt="" coords="16,118,163,143"/>
+<area shape="rect" id="node1" href="../operation/NodeOperationTask.html" title="&lt;TABLE&gt;" alt="" coords="5,107,173,155"/>
+<area shape="rect" id="node2_1" href="./ORemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.ORemoteTask" alt="" coords="135,11,244,53"/>
+<area shape="rect" id="node2" href="./ORemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="124,5,255,59"/>
+<area shape="rect" id="node3_2" href="./OAbstractRemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRemoteTask" alt="" coords="209,118,373,143"/>
+<area shape="rect" id="node3" href="./OAbstractRemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="198,107,383,155"/>
+</map>

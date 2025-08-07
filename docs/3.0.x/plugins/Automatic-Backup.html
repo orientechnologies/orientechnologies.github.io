@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Automatic Backup - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="automatic-backup-server-plugin"><a class="header" href="#automatic-backup-server-plugin">Automatic Backup Server Plugin</a></h1>
+<p>Using this server plugin, OrientDB executes regular backups on the databases.  It implements the Java class:</p>
+<pre><code class="language-java">com.orientechnologies.orient.server.handler.OAutomaticBackup
+</code></pre>
+<h2 id="plugin-configuration"><a class="header" href="#plugin-configuration">Plugin Configuration</a></h2>
+<p>Beginning with version 2.2, OrientDB manages the server plugin configuration from a separate JSON.  You can update this file manually or through OrientDB Studio.</p>
+<p>To enable automatic backups, use the following <code>&lt;handler&gt;</code> section in the <code>config/orientdb-server-config.xml</code> configuration file:</p>
+<pre><code class="language-xml">&lt;!-- AUTOMATIC BACKUP, TO TURN ON SET THE 'ENABLED' PARAMETER TO 'true' --&gt;
+&lt;handler class="com.orientechnologies.orient.server.handler.OAutomaticBackup"&gt;
+    &lt;parameters&gt;
+        &lt;parameter name="enabled" value="false"/&gt;
+        &lt;!-- LOCATION OF JSON CONFIGURATION FILE --&gt;
+        &lt;parameter name="config" value="${ORIENTDB_HOME}/config/automatic-backup.json"/&gt;
+    &lt;/parameters&gt;
+&lt;/handler&gt;
+</code></pre>
+<p>This section tells the OrientDB server to read the file at <code>$ORIENTDB_HOME/config/automatic-backup.json</code> for the automatic backup configuration.</p>
+<pre><code class="language-json">{
+  "enabled": true,
+  "mode": "FULL_BACKUP",
+  "exportOptions": "",
+  "delay": "4h",
+  "firstTime": "23:00:00",
+  "targetDirectory": "backup",
+  "targetFileName": "${DBNAME}-${DATE:yyyyMMddHHmmss}.zip",
+  "compressionLevel": 9,
+  "bufferSize": 1048576
+}
+</code></pre>
+<ul>
+<li><strong><code>"enabled"</code></strong> Defines whether it uses automatic backups.  The supported values are:
+<ul>
+<li><em><code>true</code></em> Enables automatic backups.</li>
+<li><em><code>false</code></em> Disables automatic backups.  This is the default setting.</li>
+</ul>
+</li>
+<li><strong><code>"mode"</code></strong> Defines the backup mode.  The supported values are:
+<ul>
+<li><em><code>"FULL_BACKUP"</code></em> Executes a full backup.  Prior to version 2.2, this was the only mode available.  This operation blocks the database.</li>
+<li><em><code>"INCREMENTAL_BACKUP"</code></em> Executes an <a href="../admin/Incremental-Backup-And-Restore.html">incremental backup</a>.  This is available only in the <a href="../ee/Enterprise-Edition.html">Enterprise Edition</a>.  It uses one directory per database.  This operation doesn't block the database.</li>
+<li><em><code>"EXPORT"</code></em> Executes an database export, using gziped JSON format. This operation is not blocking.</li>
+</ul>
+</li>
+<li><strong><code>"exportOptions"</code></strong> Defines export options to use with that mode.  This feature was introduced in version 2.2.</li>
+<li><strong><code>"delay"</code></strong> Defines the delay time for each backup.  Supports the following suffixes:
+<ul>
+<li><em><code>ms</code></em> Delay measured in milliseconds.</li>
+<li><em><code>s</code></em> Delay measured in seconds.</li>
+<li><em><code>m</code></em> Delay measured in minutes.</li>
+<li><em><code>h</code></em> Delay measured in hours.</li>
+<li><em><code>d</code></em> Delay measured in days.</li>
+</ul>
+</li>
+<li><strong><code>"firstTime"</code></strong> Defines when to initiate the first backup in the schedule.  It uses the format of <code>HH:mm:ss</code> in the GMT time zone, on the current day.</li>
+<li><strong><code>"targetDirectory"</code></strong> Defines the target directory to write backups.  By default, it is set to the <code>backup/</code> directory.</li>
+<li><strong><code>"targetFileName"</code></strong> Defines the target filename.  This parameter supports the use of the following variables, (that is, <code>"${DBNAME}-backup.zip"</code> produces <code>mydatabase-backup.zip</code>):
+<ul>
+<li><em><code>${DBNAME}</code></em> Renders the database name.</li>
+<li><em><code>${DATE}</code></em> Renders the current date, using the <a href="http://download.oracle.com/javase/1,5.0/docs/api/java/text/SimpleDateFormat.html">Java DateTime syntax</a> format.</li>
+</ul>
+</li>
+<li><strong><code>"dbInclude"</code></strong> Defines in a list the databases to include in the automatic backups.  If empty, it backs up all databases.</li>
+<li><strong><code>"dbExclude"</code></strong> Defines in a list the databases to exclude from the automatic backups.</li>
+<li><strong><code>"bufferSize"</code></strong> Defines the in-memory buffer sizes to use in compression.  By default, it is set to <code>1MB</code>.  Larger buffers mean faster backups, but they in turn consume more RAM.</li>
+<li><strong><code>"compressionLevel"</code></strong> Defines the compression level for the resulting ZIP file.  By default it is set to the maximum level of <code>9</code>.  Set it to a lower value if you find that the backup takes too much time.</li>
+</ul>
+<h2 id="legacy-plugin-configuration"><a class="header" href="#legacy-plugin-configuration">Legacy Plugin Configuration</a></h2>
+<p>In versions prior to 2.2, the only option in configuring automatic backups is to use the <code>config/orientdb-server-config.xml</code> configuration file.   Beginning with version 2.2 you can manage automatic backup configuration through a separate JSON file or use the legacy approach.</p>
+<p>The example below configures automatic backups/exports on the database as a <a href="../internals/DB-Server.html#plugins">Server Plugin</a>.</p>
+<pre><code class="language-xml">&lt;!-- AUTOMATIC BACKUP, TO TURN ON SET THE 'ENABLED' PARAMETER TO 'true' --&gt;
+&lt;handler class="com.orientechnologies.orient.server.handler.OAutomaticBackup"&gt;
+  &lt;parameters&gt;
+    &lt;parameter name="enabled" value="false" /&gt;
+     &lt;!-- CAN BE: FULL_BACKUP, INCREMENTAL_BACKUP, EXPORT --&gt;
+     &lt;parameter name="mode" value="FULL_BACKUP"/&gt;
+     &lt;!-- OPTION FOR EXPORT --&gt;
+     &lt;parameter name="exportOptions" value=""/&gt;
+    &lt;parameter name="delay" value="4h" /&gt;
+    &lt;parameter name="target.directory" value="backup" /&gt;
+    &lt;!-- ${DBNAME} AND ${DATE:} VARIABLES ARE SUPPORTED --&gt;
+    &lt;parameter name="target.fileName" value="${DBNAME}-${DATE:yyyyMMddHHmmss}.zip" /&gt;
+    &lt;!-- DEFAULT: NO ONE, THAT MEANS ALL DATABASES. 
+	     USE COMMA TO SEPARATE MULTIPLE DATABASE NAMES --&gt;
+    &lt;parameter name="db.include" value="" /&gt;
+    &lt;!-- DEFAULT: NO ONE, THAT MEANS ALL DATABASES. 
+	     USE COMMA TO SEPARATE MULTIPLE DATABASE NAMES --&gt;
+    &lt;parameter name="db.exclude" value="" /&gt;
+    &lt;parameter name="compressionLevel" value="9"/&gt;
+    &lt;parameter name="bufferSize" value="1048576"/&gt;
+  &lt;/parameters&gt;
+&lt;/handler&gt;
+</code></pre>
+<ul>
+<li><strong><code>enabled</code></strong> Defines whether it uses automatic backups.  Supported values are:
+<ul>
+<li><em><code>true</code></em> Enables automatic backups.</li>
+<li><em><code>false</code></em> Disables automatic backups.  This is the default setting.</li>
+</ul>
+</li>
+<li><strong><code>mode/&gt;</code></strong> Defines the backup mode.  Supported values are:
+<ul>
+<li><em><code>FULL_BACKUP</code></em> Executes a full backup.  For versions prior to 2.2, this is the only option available.  This operation blocks the database.</li>
+<li><em><code>INCREMENTAL_BACKUP</code></em> Executes an incremental backup.  Uses one directory per database.  This operation doesn't block the database.</li>
+<li>*<code>EXPORT</code> Executes an export of the database in gzipped JSON format, instead of a backup.  This operation doesn't block the database.</li>
+</ul>
+</li>
+<li><strong><code>exportOptions</code></strong> Defines export options to use with that mode.  This feature was introduced in version 2.2.</li>
+<li><strong><code>delay</code></strong> Defines the delay time.  Supports the following suffixes:
+<ul>
+<li><em><code>ms</code></em> Delay measured in milliseconds.</li>
+<li><em><code>s</code></em> Delay measured in seconds.</li>
+<li><em><code>m</code></em> Delay measured in minutes.</li>
+<li><em><code>h</code></em> Delay measured in hours.</li>
+<li><em><code>d</code></em> Delay measured in days.</li>
+</ul>
+</li>
+<li><strong><code>firstTime</code></strong> Defines when to initiate the first backup in the schedule.  It uses the format of <code>HH:mm:ss</code> in the GMT time zone, on the current day.</li>
+<li><strong><code>target.directory</code></strong> Defines the target directory to write backups.  By default, it is set to the <code>backup/</code> directory.</li>
+<li><strong><code>target.fileName</code></strong> Defines the target file name.  The parameter supports the use of the following variables, (that is, <code>&lt;parameter name="target.filename" value="${DBNAME}-backup.zip"/&gt;</code> produces a <code>mydatabase-backup.zip</code> file).
+<ul>
+<li><em><code>${DBNAME}</code></em> Renders the database name.</li>
+<li><em><code>${DATE}</code></em> Renders the current date, using the <a href="http://download.oracle.com/javase/1,5.0/docs/api/java/text/SimpleDateFormat.html">Java DateTime syntax</a> format.</li>
+</ul>
+</li>
+<li><strong><code>db.include</code></strong> Defines in a list the databases to include in the automatic backups.  If left empty, it backs up all databases.</li>
+<li><strong><code>db.exclude</code></strong> Defines in a list the databases to exclude from automatic backups.</li>
+<li><strong><code>bufferSize</code></strong> Defines the in-memory buffer sizes to use in compression.  By default it is set to <code>1MB</code>.  Larger buffers mean faster backups, but use more RAM.  This feature was introduced in version 1.7.</li>
+<li><strong><code>compressionLevel</code></strong> Defines the compression level for the resulting ZIP file.  By default, it is set to the maximum level of <code>9</code>.  Set it to a lower value if you find that the backup takes too much time.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../plugins/Extend-Server.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../plugins/SysLog-Plugin.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../plugins/Extend-Server.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../plugins/SysLog-Plugin.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
