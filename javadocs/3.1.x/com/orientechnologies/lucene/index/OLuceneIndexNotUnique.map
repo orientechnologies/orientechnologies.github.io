@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../orient/core/index/OIndexAbstract.html" title="com.orientechnologies.orient.core.index.OIndexAbstract" alt="" coords="55,19,175,45"/>
+<area shape="rect" id="node1" href="../../orient/core/index/OIndexAbstract.html" title="&lt;TABLE&gt;" alt="" coords="45,8,186,56"/>
+<area shape="rect" id="node4_1" href="./OLuceneIndexNotUnique.html" title="com.orientechnologies.lucene.index.OLuceneIndexNotUnique" alt="" coords="105,118,285,143"/>
+<area shape="rect" id="node4" href="./OLuceneIndexNotUnique.html" title="&lt;TABLE&gt;" alt="" coords="95,107,296,155"/>
+<area shape="rect" id="node2_2" href="../../spatial/index/OLuceneSpatialIndex.html" title="com.orientechnologies.spatial.index.OLuceneSpatialIndex" alt="" coords="16,214,172,239"/>
+<area shape="rect" id="node2" href="../../spatial/index/OLuceneSpatialIndex.html" title="&lt;TABLE&gt;" alt="" coords="5,203,183,251"/>
+<area shape="rect" id="node3_3" href="../OLuceneIndex.html" title="com.orientechnologies.lucene.OLuceneIndex" alt="" coords="221,11,333,53"/>
+<area shape="rect" id="node3" href="../OLuceneIndex.html" title="&lt;TABLE&gt;" alt="" coords="210,5,343,59"/>
+<area shape="rect" id="node5_4" href="./OLuceneFullTextIndex.html" title="com.orientechnologies.lucene.index.OLuceneFullTextIndex" alt="" coords="217,214,379,239"/>
+<area shape="rect" id="node5" href="./OLuceneFullTextIndex.html" title="&lt;TABLE&gt;" alt="" coords="207,203,389,251"/>
+</map>

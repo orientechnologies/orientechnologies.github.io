@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OStreamSerializerSBTreeIndexRIDContainer.html" title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerSBTreeIndexRIDContainer" alt="" coords="16,17,320,42"/>
+<area shape="rect" id="node1" href="./OStreamSerializerSBTreeIndexRIDContainer.html" title="&lt;TABLE&gt;" alt="" coords="5,5,331,53"/>
+<area shape="rect" id="node2_1" href="./OMixedIndexRIDContainerSerializer.html" title="com.orientechnologies.orient.core.serialization.serializer.stream.OMixedIndexRIDContainerSerializer" alt="" coords="366,17,618,42"/>
+<area shape="rect" id="node2" href="./OMixedIndexRIDContainerSerializer.html" title="&lt;TABLE&gt;" alt="" coords="355,5,629,53"/>
+<area shape="rect" id="node3_2" href="./OStreamSerializerAnyStreamable.html" title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerAnyStreamable" alt="" coords="663,17,900,42"/>
+<area shape="rect" id="node3" href="./OStreamSerializerAnyStreamable.html" title="&lt;TABLE&gt;" alt="" coords="652,5,911,53"/>
+<area shape="rect" id="node4_3" href="./OStreamSerializerRID.html" title="com.orientechnologies.orient.core.serialization.serializer.stream.OStreamSerializerRID" alt="" coords="945,17,1105,42"/>
+<area shape="rect" id="node4" href="./OStreamSerializerRID.html" title="&lt;TABLE&gt;" alt="" coords="935,5,1116,53"/>
+</map>

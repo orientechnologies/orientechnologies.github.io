@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Importing the movie Database from Neo4j - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>search:
+keywords: ['import', 'Neo4j', 'migration', 'GraphML', 'movie', 'cypher', 'tutorial']</h2>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><img src="../../images/warning.png" alt="" /></td><td>This is a legacy strategy to migrate from Neo4j. The new strategy is to migrate using the <a href="../../neo4j-to-orientdb-importer/README.html">Neo4j to OrientDB Importer</a>.</td></tr>
+</tbody></table>
+</div>
+<h1 id="tutorial-importing-the-movie-database-from-neo4j"><a class="header" href="#tutorial-importing-the-movie-database-from-neo4j">Tutorial: Importing the <em>movie</em> Database from Neo4j</a></h1>
+<p>In this tutorial we will follow the steps described in the <a href="../../admin/Import-from-Neo4j-using-GraphML.html">Import from Neo4j using GraphML</a> section to import the Neo4j's <em>movie</em> example database into OrientDB.</p>
+<p>We will also provide some examples of queries using the OrientDB's <a href="../../sql/SQL-Match.html">MATCH</a> syntax, making a comparison with the corresponding Neo4j's Cypher query language.</p>
+<p>For general information on the possible Neo4j to OrientDB migration strategies, please refer to the <a href="../../admin/Import-from-Neo4j-into-OrientDB.html">Import from Neo4j</a> section.</p>
+<blockquote>
+<p>Neo4j and Cypher are registered trademark of Neo Technology, Inc.</p>
+</blockquote>
+<h2 id="exporting-from-neo4j"><a class="header" href="#exporting-from-neo4j">Exporting from Neo4j</a></h2>
+<p>Assuming you have already downloaded and unpacked the <a href="https://github.com/jexp/neo4j-shell-tools">Neo4j Shell Tools</a>, and restarted the Neo4j Server, as described in the Section <a href="../../admin/Import-from-Neo4j-using-GraphML.html#exporting-graphml">Exporting GraphML</a>, you can export the <em>movie</em> database using <code>neo4j-shell</code> with a command like the following one:</p>
+<pre><code>D:\neo4j\neo4j-community-3.0.6\bin&gt;neo4j-shell.bat
+
+Welcome to the Neo4j Shell! Enter 'help' for a list of commands
+NOTE: Remote Neo4j graph database service 'shell' at port 1337
+
+neo4j-sh (?)$ export-graphml -t -o d:/movie.graphml
+Wrote to GraphML-file d:/movies.graphml 0. 100%: nodes = 171 rels = 253 properties = 564 time 270 ms total 270 ms
+</code></pre>
+<p>In the example above the exported <em>movie</em> graph is stored under <code>D:\movie.graphml</code>.</p>
+<h2 id="importing-into-orientdb"><a class="header" href="#importing-into-orientdb">Importing into OrientDB</a></h2>
+<p>In this tutorial we will import in OrientDB the file <code>movie.graphml</code> using the OrientDB's <a href="../../console/README.html">Console</a>. For other GraphML import methods, please refer to the section <a href="../../admin/Import-from-Neo4j-using-GraphML.html#importing-graphml">Importing GraphML</a>.</p>
+<p>The OrientDB's Console output generated during the import process is similar to the following (note that first we create a <em>movie</em> database using the command <code>CREATE DATABASE</code>, and then we do the actual import using the command <code>IMPORT DATABASE</code>):</p>
+<pre><code>D:\orientdb\orientdb-enterprise-2.2.8\bin&gt;console.bat
+
+OrientDB console v.2.2.8-SNAPSHOT (build 2.2.x@r39259e190e16045fe1425b1c0485f8562fca055b; 2016-08-23 14:38:49+0000) www.orientdb.com
+Type 'help' to display all the supported commands.
+Installing extensions for GREMLIN language v.2.6.0
+
+orientdb&gt; CREATE DATABASE PLOCAL:D:/orientdb/orientdb-enterprise-2.2.8/databases/movie
+
+Creating database [PLOCAL:D:/orientdb/orientdb-enterprise-2.2.8/databases/movie] using the storage type [PLOCAL]...
+Database created successfully.
+
+Current database is: PLOCAL:D:/orientdb/orientdb-enterprise-2.2.8/databases/movie
+orientdb {db=movie}&gt; IMPORT DATABASE D:/movie.graphml
+
+Importing GRAPHML database from D:/movie.graphml with options ()...
+Done: imported 171 vertices and 253 edges
+orientdb {db=movie}&gt;
+</code></pre>
+<p>As you can see from the output above, as a result of the import 171 vertices and 253 edges have been created in OrientDB. This is exactly the same number of nodes and relationships exported from Neo4j.</p>
+<p>For more tips and tricks related to the import process, please refer to <a href="../../admin/Import-from-Neo4j-using-GraphML.html#import-tips-and-tricks">this</a> section.</p>
+<h2 id="query-comparison"><a class="header" href="#query-comparison">Query Comparison</a></h2>
+<p>Once the <em>movie</em> database has been imported into OrientDB, you may use several ways to access its data.</p>
+<p>The <code>MATCH</code> <a href="../../sql/SQL-Match.html">syntax</a> and the tool <a href="../../studio/README.html">Studio</a> can be used, for instance, in a similar way to the Neo4j's Cypher and Browser.</p>
+<p>The following sections include a comparison of the Neo4j's Cypher and OrientDB's <code>MATCH</code> syntax for some queries that you can execute against the <em>movie</em> database.</p>
+<h3 id="find-the-actor-named-tom-hanks"><a class="header" href="#find-the-actor-named-tom-hanks">Find the actor named "Tom Hanks"</a></h3>
+<p>Neo4j's Cypher:</p>
+<pre><code>MATCH (tom:Person {name: "Tom Hanks"}) 
+RETURN tom
+</code></pre>
+<p>OrientDB's MATCH:</p>
+<pre><code>MATCH {class: Person, as: tom, where: (name = 'Tom Hanks')} 
+RETURN $pathElements
+</code></pre>
+<h3 id="find-the-movie-with-title-cloud-atlas"><a class="header" href="#find-the-movie-with-title-cloud-atlas">Find the movie with title "Cloud Atlas"</a></h3>
+<p>Neo4j's Cypher:</p>
+<pre><code>MATCH (cloudAtlas:Movie {title: "Cloud Atlas"}) 
+RETURN cloudAtlas
+</code></pre>
+<p>OrientDB's MATCH:</p>
+<pre><code>MATCH {class: Movie, as: cloudAtlas, where: (title = 'Cloud Atlas')} 
+RETURN $pathElements
+</code></pre>
+<h3 id="find-10-people"><a class="header" href="#find-10-people">Find 10 people</a></h3>
+<p>Neo4j's Cypher:</p>
+<pre><code>MATCH (people:Person) 
+RETURN people.name 
+LIMIT 10
+</code></pre>
+<p>OrientDB's MATCH:</p>
+<pre><code>MATCH {class: Person, as: people} 
+RETURN people.name
+LIMIT 10
+</code></pre>
+<h3 id="find-the-movies-released-in-the-1990s"><a class="header" href="#find-the-movies-released-in-the-1990s">Find the movies released in the 1990s</a></h3>
+<p>Neo4j's Cypher:</p>
+<pre><code>MATCH (nineties:Movie) 
+WHERE nineties.released &gt; 1990 AND nineties.released &lt; 2000 
+RETURN nineties.title
+</code></pre>
+<p>OrientDB's MATCH:</p>
+<pre><code>MATCH {class: Movie, as: nineties, WHERE: (released &gt; 1990 AND released &lt; 2000 )} 
+RETURN nineties.title
+</code></pre>
+<h3 id="list-all-tom-hanks-movies"><a class="header" href="#list-all-tom-hanks-movies">List all Tom Hanks movies</a></h3>
+<p>Neo4j's Cypher:</p>
+<pre><code>MATCH (tom:Person {name: "Tom Hanks"})-[:ACTED_IN]-&gt;(tomHanksMovies) 
+RETURN tom, tomHanksMovies
+</code></pre>
+<p>OrientDB's MATCH:</p>
+<pre><code>MATCH {class: Person, as: tom, where: (name = 'Tom Hanks')}-ACTED_IN-&gt;{as: tomHanksMovies}
+RETURN $pathElements
+</code></pre>
+<h3 id="find-out-who-directed-cloud-atlas"><a class="header" href="#find-out-who-directed-cloud-atlas">Find out who directed "Cloud Atlas"</a></h3>
+<p>Neo4j's Cypher:</p>
+<pre><code>MATCH (cloudAtlas {title: "Cloud Atlas"})&lt;-[:DIRECTED]-(directors)
+RETURN directors.name
+</code></pre>
+<p>OrientDB's MATCH:</p>
+<pre><code>MATCH {class: Movie, as: cloudAtlas, where: (title = 'Cloud Atlas')}&lt;-DIRECTED-{as: directors}
+RETURN directors.name
+</code></pre>
+<h3 id="find-tom-hanks-co-actors"><a class="header" href="#find-tom-hanks-co-actors">Find Tom Hanks' co-actors</a></h3>
+<p>Neo4j's Cypher:</p>
+<pre><code>MATCH (tom:Person {name:"Tom Hanks"})-[:ACTED_IN]-&gt;(m)&lt;-[:ACTED_IN]-(coActors) 
+RETURN DISTINCT coActors.name
+</code></pre>
+<p>OrientDB's MATCH:</p>
+<pre><code>MATCH {class: Person, as: tom, where: (name = 'Tom Hanks')}-ACTED_IN-&gt;{as: m}&lt;-ACTED_IN-{class: Person,as: coActors}
+RETURN coActors.name
+</code></pre>
+<h3 id="find-how-people-are-related-to-cloud-atlas"><a class="header" href="#find-how-people-are-related-to-cloud-atlas">Find how people are related to "Cloud Atlas"</a></h3>
+<p>Neo4j's Cypher:</p>
+<pre><code>MATCH (people:Person)-[relatedTo]-(:Movie {title: "Cloud Atlas"}) 
+RETURN people.name, Type(relatedTo), relatedTo
+</code></pre>
+<p>OrientDB's MATCH:</p>
+<pre><code>MATCH {class: Person, as: people}--{as: m, where: (title = 'Cloud Atlas')}
+RETURN $pathElements
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../gettingstarted/tutorials/Tutorial-Importing-the-northwind-Database-from-Neo4j.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../general/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../gettingstarted/tutorials/Tutorial-Importing-the-northwind-Database-from-Neo4j.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../general/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

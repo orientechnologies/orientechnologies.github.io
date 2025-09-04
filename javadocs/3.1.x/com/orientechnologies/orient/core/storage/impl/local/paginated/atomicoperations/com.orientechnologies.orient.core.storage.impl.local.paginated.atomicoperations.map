@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAtomicOperationsManager.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OAtomicOperationsManager" alt="" coords="16,19,220,45"/>
+<area shape="rect" id="node1" href="./OAtomicOperationsManager.html" title="&lt;TABLE&gt;" alt="" coords="5,8,231,56"/>
+<area shape="rect" id="node2_1" href="./OCacheEntryChanges.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OCacheEntryChanges" alt="" coords="266,19,426,45"/>
+<area shape="rect" id="node2" href="./OCacheEntryChanges.html" title="&lt;TABLE&gt;" alt="" coords="255,8,437,56"/>
+<area shape="rect" id="node3_2" href="./AtomicOperationStatus.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.AtomicOperationStatus" alt="" coords="471,11,642,53"/>
+<area shape="rect" id="node3" href="./AtomicOperationStatus.html" title="&lt;TABLE&gt;" alt="" coords="461,5,653,59"/>
+<area shape="rect" id="node4_3" href="./OAtomicOperation.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OAtomicOperation" alt="" coords="688,11,828,53"/>
+<area shape="rect" id="node4" href="./OAtomicOperation.html" title="&lt;TABLE&gt;" alt="" coords="677,5,839,59"/>
+<area shape="rect" id="node5_4" href="./AtomicOperationsTable.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.AtomicOperationsTable" alt="" coords="874,19,1045,45"/>
+<area shape="rect" id="node5" href="./AtomicOperationsTable.html" title="&lt;TABLE&gt;" alt="" coords="863,8,1055,56"/>
+<area shape="rect" id="node6_5" href="./OAtomicOperationMetadata.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.OAtomicOperationMetadata" alt="" coords="1090,11,1322,53"/>
+<area shape="rect" id="node6" href="./OAtomicOperationMetadata.html" title="&lt;TABLE&gt;" alt="" coords="1079,5,1333,59"/>
+<area shape="rect" id="node7_6" href="./ONestedRollbackException.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.ONestedRollbackException" alt="" coords="1368,19,1564,45"/>
+<area shape="rect" id="node7" href="./ONestedRollbackException.html" title="&lt;TABLE&gt;" alt="" coords="1357,8,1575,56"/>
+</map>

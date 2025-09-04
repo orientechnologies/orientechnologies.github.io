@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Distributed Architecture - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="distributed-architecture"><a class="header" href="#distributed-architecture">Distributed Architecture</a></h1>
+<p>OrientDB can be distributed across different servers and used in different ways to achieve the maximum of performance, scalability and robustness.</p>
+<p>OrientDB uses the <a href="http://www.hazelcast.com">Hazelcast Open Source project</a> for auto-discovering of nodes, storing the runtime cluster configuration and synchronize certain operations between nodes. Some of the references in this page are linked to the Hazelcast official documentation to get more information about such topic.</p>
+<p><em>NOTE: When you run in distributed mode, OrientDB needs more RAM. The minimum is 2GB of heap, but we suggest to use at least 4GB of heap memory. To change the heap modify the Java memory settings in the file <code>bin/server.sh</code> (or server.bat on Windows).</em></p>
+<h2 id="main-topics"><a class="header" href="#main-topics">Main topics</a></h2>
+<ul>
+<li><a href="Distributed-Architecture-Lifecycle.html">Distributed Architecture Lifecycle</a></li>
+<li><a href="Distributed-Configuration.html">Configure the Cluster of servers</a></li>
+<li><a href="Replication.html">Replication</a> of databases</li>
+<li><a href="Distributed-Sharding.html">Sharding</a></li>
+<li><a href="Data-Centers.html">Data Centers</a></li>
+<li><a href="../gettingstarted/tutorials/Tutorial-Setup-a-distributed-database.html">Tutorial to setup a distributed database</a></li>
+<li><a href="Distributed-Configuration-Tuning.html">Tuning</a></li>
+</ul>
+<h2 id="basic-concepts"><a class="header" href="#basic-concepts">Basic concepts</a></h2>
+<h3 id="server-roles"><a class="header" href="#server-roles">Server roles</a></h3>
+<p>OrientDB has a multi-master distributed architecture (called also as "master-less") where each server can read and write. Starting from v2.1, OrientDB support the role of "REPLICA", where the server is in read-only mode, accepting only idempotent commands, like Reads and Query. Furthermore when the server joins the distributed cluster as "REPLICA", own record clusters are not created like does the "MASTER" nodes.</p>
+<p>Starting from v2.2, the biggest advantage of having many REPLICA servers is that they don't concur in <code>writeQuorum</code>, so if you have 3 MASTER servers and 100 REPLICA servers, every write operation will be replicated across 103 servers, but the majority of the <code>writeQuorum</code> would be just 2, because given N/2+1, N is the number of MASTER servers. In this case after the operation is executed locally, the server coordinator of the write operation has to wait only for one more MASTER server.</p>
+<h3 id="cluster-ownership"><a class="header" href="#cluster-ownership">Cluster Ownership</a></h3>
+<p>When new records (documents, vertices and edges) are created in distributed mode, the <a href="../datamodeling/Concepts.html#record-id">RID</a> is assigned by following the "cluster locality", where every server defines a "own" record cluster where it is able to create records. If you have the class <code>Customer</code> and 3 server nodes (node1, node2, node3), you'll have these clusters (names can be different):</p>
+<ul>
+<li><code>customer</code> with id=#15 (this is the default one, assigned to node1)</li>
+<li><code>customer_node2</code> with id=#16</li>
+<li><code>customer_node3</code> with id=#17</li>
+</ul>
+<p>So if you create a new Customer on node1, it will get the <a href="../datamodeling/Concepts.html#record-id">RID</a> with cluster-id of "customer" cluster: #15. The same operation on node2 will generate a <a href="../datamodeling/Concepts.html#record-id">RID</a> with cluster-id=16 and 17 on node3. In this way <a href="../datamodeling/Concepts.html#record-id">RID</a> never collides and each node can be a master on insertion without any conflicts, because each node manages own <a href="../datamodeling/Concepts.html#record-id">RIDs</a>. Starting from v2.2, if a node has more than one cluster per class, a round robin strategy is used to balance the assignment between all the available local clusters.</p>
+<p>Ownership configuration is stored in the <a href="Distributed-Configuration.html#default-distributed-db-configjson">default-distributed-db-config.json</a> file. By default the server owner of the cluster is the first in the list of servers. For example with this configuration:</p>
+<pre><code class="language-json">"client_usa": {
+  "servers" : [ "usa", "europe", "asia" ]
+},
+"client_europe": {
+  "servers" : [ "europe", "asia", "usa" ]
+}
+</code></pre>
+<p>The server node "usa" is the owner for cluster <code>client_usa</code>, so "usa" is the only server can create records on such cluster. Since every server node has own cluster per class, every node is able to create records, but on different clusters. Since the record clusters are part of a class, when the user executes a <code>INSERT INTO client SET name = "Jay"</code>, the local cluster is selected automatically by OrientDB to store the new "client" record. If this INSERT operation is executed on the server "usa", the "client_usa" cluster is selected. If the sam eoperation is executed on the server "europe", then the cluster "client_europe" would be selected. The important thing is that from a logical point of view, both records from clusters "client_usa" and "client_europe" are always instances of "client" class, so if you execute the following query <code>SELECT * FROM client</code>, both record would be retrieved.</p>
+<h4 id="static-owner"><a class="header" href="#static-owner">Static Owner</a></h4>
+<p>Starting from v2.2, you can stick a node as owner, no matter the runtime configuration. We call this "static owner". For this purpose use the <code>"owner" : "&lt;NODE_NAME&gt;"</code>. Example:</p>
+<pre><code class="language-json">"client_usa": {
+  "owner": "usa",
+  "servers" : [ "usa", "europe", "asia" ]
+}
+</code></pre>
+<p>With the configuration above, if the "usa" server is unreachable, the ownership of the cluster "client_usa" is not reassigned, so you can't create new records on that cluster until the server "usa" is back online. The static owner comes useful when you want to partition your database to be sure all the inserts come to a particular node.</p>
+<h3 id="distributed-transactions"><a class="header" href="#distributed-transactions">Distributed transactions</a></h3>
+<p>OrientDB supports distributed transactions. When a transaction is committed, all the updated records are sent across all the servers, so each server is responsible to commit the transaction. In case one or more nodes fail on commit, the quorum is checked. If the quorum has been respected, then the failing nodes are aligned to the winner nodes, otherwise all the nodes rollback the transaction.</p>
+<p>When running distributed, the transactions use a 2 phase lock like protocol, with the cool thing that everything is optimistic, so no locks between the begin and the commit, but everything is executed at commit time only.</p>
+<p>During the commit time, OrientDB acquires locks on the touched records and check the version of records (optimistic MVCC approach). At this point this could happen:</p>
+<ul>
+<li>All the record can be locked and nobody touched the records since the beginning of the tx, so the transaction is committed. Cool.</li>
+<li>If somebody modified any of the records that are part of the transaction, the transaction fails and the client can retry it</li>
+<li>If at commit time, another transaction locked any of the same records, the transaction fails, but the retry in this case is automatic and configurable</li>
+</ul>
+<p>If you have 5 servers, and writeQuorum is the majority (N/2+1 = 3), this could happen:</p>
+<ul>
+<li>All the 5 servers commit the TX: cool</li>
+<li>1 or 2 servers report any error, the TX is still committed (quorum passes) and the 1 or 2 servers will be forced to have the same result as the others</li>
+<li>3 servers or more have different results/errors, so the tx is rollbacked on all the servers to the initial state</li>
+</ul>
+<h4 id="what-about-the-visibility-during-distributed-transaction"><a class="header" href="#what-about-the-visibility-during-distributed-transaction">What about the visibility during distributed transaction?</a></h4>
+<p>During the distributed transaction, in case of rollback, there could be an amount of time when the records appear changed before they are rollbacked.</p>
+<h2 id="split-brain-network-problem"><a class="header" href="#split-brain-network-problem">Split brain network problem</a></h2>
+<p>OrientDB guarantees strong consistency if it's configured to have a <code>writeQuorum</code> set to a value as the majority of the number of nodes. If you have 5 nodes, it's 3, but if you have 4 nodes, it's still 3 to have a majority. While <code>writeQuorum</code> setting can be configured at database and cluster level too, it's not suggested to set a value minor than the majority of nodes, because in case of re-merge of the 2 split networks, you'd have both network partitions with updated data and OrientDB doesn't support (yet) the merging of 2 non read-only networks. So the suggestion is to always provide a <code>writeQuorum</code> with a value to, at least, the majority of the nodes.</p>
+<h2 id="conflict-resolution-policy"><a class="header" href="#conflict-resolution-policy">Conflict Resolution Policy</a></h2>
+<p>In case of an even number of servers or when database are not aligned, OrientDB uses a Conflict Resolution Strategy chain. This default chain is defined as a global setting (<code>distributed.conflictResolverRepairerChain</code>):</p>
+<p><code>-Ddistributed.conflictResolverRepairerChain=majority,content,version</code></p>
+<p>The Conflict Resolution Strategy implementation are called in chain following the declaration order until a winner is selected. In the default configuration (above):</p>
+<ul>
+<li>is first checked if there is a <strong>strict majority</strong> for the record in terms of record versions. If the majority exists, the winner is selected</li>
+<li>if no strict majority was found, the <strong>record content</strong> is analyzed. If the majority is reached by founding a record with different versions but equal content, then that record will be the winner by using the higher version between them</li>
+<li>if no majority has been found with the content, then the <strong>higher version</strong> wins (supposing an higher version means the most update record)</li>
+</ul>
+<p>OrientDB Enterprise Edition supports the additional <a href="Data-Centers.html">Data Center</a> Conflict Resolution (<code>dc</code>).</p>
+<p>At the end of the chain, if no winner is found, the records are untouched and only a manual intervention can decide who is the winner. In this case a WARNING message is displayed in the console with text <code>Auto repair cannot find a winner for record &lt;rid&gt; and the following groups of contents: [&lt;records&gt;]</code>.</p>
+<h2 id="limitations"><a class="header" href="#limitations">Limitations</a></h2>
+<p>OrientDB v2.2.x has some limitations you should notice when you work in Distributed Mode:</p>
+<ul>
+<li>In memory database is not supported.</li>
+<li>Importing a database while running distributed is not supported. Import the database in non-distributed mode and then run the OrientDB in distributed mode.</li>
+<li>With releases &lt; v2.2.6 the creation of a database on multiple nodes could cause synchronization problems when clusters are automatically created. Please create the databases before to run in distributed mode.</li>
+<li>Constraints with distributed databases could cause problems because some operations are executed at 2 steps: create + update. For example in some circumstance edges could be first created, then updated, but constraints like MANDATORY and NOTNULL against fields would fail at the first step making the creation of edges not possible on distributed mode.</li>
+<li>Auto-Sharding is not supported in the common meaning of Distributed Hash Table (DHT). Selecting the right shard (cluster) is up to the application. This will be addressed by next releases.</li>
+<li>Sharded Indexes are not supported yet, so creating a UNIQUE index against a sharded class doesn't guarantee a key to be unique. This will be addressed with Auto-sharding in the further releases.</li>
+<li>Hot change of distributed configuration is available only in Enterprise Edition (commercial licensed).</li>
+<li>Not complete merging of results for all the projections when running on sharder configuration. Some functions like AVG() doesn’t work on map/reduce.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../security/Security-Symmetric-Key-Authentication.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../distributed/Distributed-Architecture-Lifecycle.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../security/Security-Symmetric-Key-Authentication.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../distributed/Distributed-Architecture-Lifecycle.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

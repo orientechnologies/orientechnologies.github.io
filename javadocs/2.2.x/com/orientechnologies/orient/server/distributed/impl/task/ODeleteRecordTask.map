@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../task/OAbstractRecordReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" alt="" coords="16,17,244,42"/>
+<area shape="rect" id="node1" href="../../task/OAbstractRecordReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="5,5,255,53"/>
+<area shape="rect" id="node2_1" href="./ODeleteRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ODeleteRecordTask" alt="" coords="57,113,203,138"/>
+<area shape="rect" id="node2" href="./ODeleteRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="46,101,214,149"/>
+<area shape="rect" id="node3_2" href="./OFixCreateRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OFixCreateRecordTask" alt="" coords="47,209,213,234"/>
+<area shape="rect" id="node3" href="./OFixCreateRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="37,197,223,245"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORecordSerializerSchemaAware2CSV.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerSchemaAware2CSV" alt="" coords="16,209,279,234"/>
+<area shape="rect" id="node1" href="./ORecordSerializerSchemaAware2CSV.html" title="&lt;TABLE&gt;" alt="" coords="5,197,289,245"/>
+<area shape="rect" id="node2_1" href="./ORecordSerializerCSVAbstract.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerCSVAbstract" alt="" coords="39,113,255,138"/>
+<area shape="rect" id="node2" href="./ORecordSerializerCSVAbstract.html" title="&lt;TABLE&gt;" alt="" coords="29,101,266,149"/>
+<area shape="rect" id="node3_2" href="./ORecordSerializerStringAbstract.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract" alt="" coords="33,17,261,42"/>
+<area shape="rect" id="node3" href="./ORecordSerializerStringAbstract.html" title="&lt;TABLE&gt;" alt="" coords="23,5,272,53"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OCloseable.html" title="com.orientechnologies.common.concur.resource.OCloseable" alt="" coords="631,11,724,53"/>
+<area shape="rect" id="node1" href="./OCloseable.html" title="&lt;TABLE&gt;" alt="" coords="620,5,735,59"/>
+<area shape="rect" id="node2_1" href="../../console/OCommandStream.html" title="com.orientechnologies.common.console.OCommandStream" alt="" coords="16,112,160,155"/>
+<area shape="rect" id="node2" href="../../console/OCommandStream.html" title="&lt;TABLE&gt;" alt="" coords="5,107,171,160"/>
+<area shape="rect" id="node3_2" href="../../../orient/core/metadata/security/OSecurityShared.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityShared" alt="" coords="205,121,333,146"/>
+<area shape="rect" id="node3" href="../../../orient/core/metadata/security/OSecurityShared.html" title="&lt;TABLE&gt;" alt="" coords="195,109,344,157"/>
+<area shape="rect" id="node4_3" href="../../../orient/core/metadata/schema/OSchemaShared.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" alt="" coords="379,121,506,146"/>
+<area shape="rect" id="node4" href="../../../orient/core/metadata/schema/OSchemaShared.html" title="&lt;TABLE&gt;" alt="" coords="369,109,517,157"/>
+<area shape="rect" id="node5_4" href="../../../orient/core/storage/ridbag/sbtree/OSBTreeCollectionManagerAbstract.html" title="com.orientechnologies.orient.core.storage.ridbag.sbtree.OSBTreeCollectionManagerAbstract" alt="" coords="552,121,803,146"/>
+<area shape="rect" id="node5" href="../../../orient/core/storage/ridbag/sbtree/OSBTreeCollectionManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="541,109,813,157"/>
+<area shape="rect" id="node6_5" href="../../../orient/core/index/OIndexManagerAbstract.html" title="com.orientechnologies.orient.core.index.OIndexManagerAbstract" alt="" coords="848,121,1024,146"/>
+<area shape="rect" id="node6" href="../../../orient/core/index/OIndexManagerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="837,109,1035,157"/>
+<area shape="rect" id="node7_6" href="../../../orient/core/query/live/OLiveQueryHook.OLiveQueryOps.html" title="com.orientechnologies.orient.core.query.live.OLiveQueryHook.OLiveQueryOps" alt="" coords="1069,121,1189,146"/>
+<area shape="rect" id="node7" href="../../../orient/core/query/live/OLiveQueryHook.OLiveQueryOps.html" title="&lt;TABLE&gt;" alt="" coords="1059,109,1200,157"/>
+<area shape="rect" id="node8_7" href="../../../orient/core/query/live/OLiveQueryHookV2.OLiveQueryOps.html" title="com.orientechnologies.orient.core.query.live.OLiveQueryHookV2.OLiveQueryOps" alt="" coords="1235,121,1355,146"/>
+<area shape="rect" id="node8" href="../../../orient/core/query/live/OLiveQueryHookV2.OLiveQueryOps.html" title="&lt;TABLE&gt;" alt="" coords="1224,109,1365,157"/>
+</map>

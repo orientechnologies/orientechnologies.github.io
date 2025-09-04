@@ -1,0 +1,36 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.ORemoteTask" alt="" coords="1643,11,1753,53"/>
+<area shape="rect" id="node1" href="./ORemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="1633,5,1763,59"/>
+<area shape="rect" id="node2_1" href="./OAbstractRemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRemoteTask" alt="" coords="1616,118,1780,143"/>
+<area shape="rect" id="node2" href="./OAbstractRemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="1605,107,1791,155"/>
+<area shape="rect" id="node3_2" href="./OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="16,214,199,239"/>
+<area shape="rect" id="node3" href="./OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="5,203,209,251"/>
+<area shape="rect" id="node4_3" href="../impl/OSynchronizedTaskWrapper.html" title="com.orientechnologies.orient.server.distributed.impl.OSynchronizedTaskWrapper" alt="" coords="245,214,445,239"/>
+<area shape="rect" id="node4" href="../impl/OSynchronizedTaskWrapper.html" title="&lt;TABLE&gt;" alt="" coords="234,203,455,251"/>
+<area shape="rect" id="node5_4" href="../impl/task/OUpdateDatabaseStatusTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OUpdateDatabaseStatusTask" alt="" coords="490,214,698,239"/>
+<area shape="rect" id="node5" href="../impl/task/OUpdateDatabaseStatusTask.html" title="&lt;TABLE&gt;" alt="" coords="479,203,709,251"/>
+<area shape="rect" id="node6_5" href="../impl/task/OUpdateDatabaseConfigurationTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OUpdateDatabaseConfigurationTask" alt="" coords="744,214,999,239"/>
+<area shape="rect" id="node6" href="../impl/task/OUpdateDatabaseConfigurationTask.html" title="&lt;TABLE&gt;" alt="" coords="733,203,1009,251"/>
+<area shape="rect" id="node7_6" href="../impl/task/OFetchQueryPageTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OFetchQueryPageTask" alt="" coords="1044,214,1208,239"/>
+<area shape="rect" id="node7" href="../impl/task/OFetchQueryPageTask.html" title="&lt;TABLE&gt;" alt="" coords="1033,203,1219,251"/>
+<area shape="rect" id="node8_7" href="../impl/task/ORestartServerTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ORestartServerTask" alt="" coords="1253,214,1401,239"/>
+<area shape="rect" id="node8" href="../impl/task/ORestartServerTask.html" title="&lt;TABLE&gt;" alt="" coords="1243,203,1412,251"/>
+<area shape="rect" id="node9_8" href="../impl/task/OStopServerTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OStopServerTask" alt="" coords="1447,214,1576,239"/>
+<area shape="rect" id="node9" href="../impl/task/OStopServerTask.html" title="&lt;TABLE&gt;" alt="" coords="1436,203,1587,251"/>
+<area shape="rect" id="node10_9" href="../impl/task/ODropDatabaseTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ODropDatabaseTask" alt="" coords="1622,214,1774,239"/>
+<area shape="rect" id="node10" href="../impl/task/ODropDatabaseTask.html" title="&lt;TABLE&gt;" alt="" coords="1611,203,1785,251"/>
+<area shape="rect" id="node11_10" href="../impl/task/ORunQueryExecutionPlanTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ORunQueryExecutionPlanTask" alt="" coords="1819,214,2033,239"/>
+<area shape="rect" id="node11" href="../impl/task/ORunQueryExecutionPlanTask.html" title="&lt;TABLE&gt;" alt="" coords="1809,203,2043,251"/>
+<area shape="rect" id="node12_11" href="../impl/task/OEnterpriseStatsTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OEnterpriseStatsTask" alt="" coords="2078,214,2235,239"/>
+<area shape="rect" id="node12" href="../impl/task/OEnterpriseStatsTask.html" title="&lt;TABLE&gt;" alt="" coords="2067,203,2246,251"/>
+<area shape="rect" id="node13_12" href="../impl/task/OCloseQueryTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OCloseQueryTask" alt="" coords="2281,214,2414,239"/>
+<area shape="rect" id="node13" href="../impl/task/OCloseQueryTask.html" title="&lt;TABLE&gt;" alt="" coords="2270,203,2425,251"/>
+<area shape="rect" id="node14_13" href="../impl/task/OGossipTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OGossipTask" alt="" coords="2460,214,2563,239"/>
+<area shape="rect" id="node14" href="../impl/task/OGossipTask.html" title="&lt;TABLE&gt;" alt="" coords="2449,203,2573,251"/>
+<area shape="rect" id="node15_14" href="../impl/task/ORequestDatabaseConfigurationTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ORequestDatabaseConfigurationTask" alt="" coords="2608,214,2868,239"/>
+<area shape="rect" id="node15" href="../impl/task/ORequestDatabaseConfigurationTask.html" title="&lt;TABLE&gt;" alt="" coords="2597,203,2879,251"/>
+<area shape="rect" id="node16_15" href="../impl/task/OUnreachableServerLocalTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OUnreachableServerLocalTask" alt="" coords="2914,214,3130,239"/>
+<area shape="rect" id="node16" href="../impl/task/OUnreachableServerLocalTask.html" title="&lt;TABLE&gt;" alt="" coords="2903,203,3141,251"/>
+<area shape="rect" id="node17_16" href="../impl/task/OUpdateDatabaseSequenceStatusTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OUpdateDatabaseSequenceStatusTask" alt="" coords="3175,214,3447,239"/>
+<area shape="rect" id="node17" href="../impl/task/OUpdateDatabaseSequenceStatusTask.html" title="&lt;TABLE&gt;" alt="" coords="3165,203,3458,251"/>
+</map>

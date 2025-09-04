@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="41,11,199,53"/>
+<area shape="rect" id="node1" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="30,5,210,59"/>
+<area shape="rect" id="node3_1" href="./OAccessToSBtreeCollectionManagerIsProhibitedException.html" title="com.orientechnologies.orient.core.exception.OAccessToSBtreeCollectionManagerIsProhibitedException" alt="" coords="16,118,411,143"/>
+<area shape="rect" id="node3" href="./OAccessToSBtreeCollectionManagerIsProhibitedException.html" title="&lt;TABLE&gt;" alt="" coords="5,107,421,155"/>
+<area shape="rect" id="node2_2" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="245,19,369,45"/>
+<area shape="rect" id="node2" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="234,8,379,56"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OMemoryWriteAheadLog.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OMemoryWriteAheadLog" alt="" coords="16,214,199,239"/>
+<area shape="rect" id="node1" href="./OMemoryWriteAheadLog.html" title="&lt;TABLE&gt;" alt="" coords="5,203,209,251"/>
+<area shape="rect" id="node2_1" href="./OAbstractWriteAheadLog.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWriteAheadLog" alt="" coords="124,118,307,143"/>
+<area shape="rect" id="node2" href="./OAbstractWriteAheadLog.html" title="&lt;TABLE&gt;" alt="" coords="113,107,317,155"/>
+<area shape="rect" id="node3_2" href="./ODiskWriteAheadLog.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.ODiskWriteAheadLog" alt="" coords="245,214,402,239"/>
+<area shape="rect" id="node3" href="./ODiskWriteAheadLog.html" title="&lt;TABLE&gt;" alt="" coords="234,203,413,251"/>
+<area shape="rect" id="node4_3" href="./OWriteAheadLog.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWriteAheadLog" alt="" coords="151,11,279,53"/>
+<area shape="rect" id="node4" href="./OWriteAheadLog.html" title="&lt;TABLE&gt;" alt="" coords="141,5,290,59"/>
+</map>

@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lucene Spatial Index - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="lucene-spatial"><a class="header" href="#lucene-spatial">Lucene Spatial</a></h1>
+<p>(Versions 2.2 and after only, otherwise look at <a href="Spatial-Index.html#legacy">Legacy</a> section)</p>
+<p>Since v 3.0, this module is provided in-bundle with the main distribution (Community and Enterprise Editions).</p>
+<h2 id="install"><a class="header" href="#install">Install</a></h2>
+<p>In versions prior to v 3.0 the spatial plugin was a separate component and needed to be installed manually.
+This is not the case in v 3.0, where the spatial plugin is included in the main distribution, so there is no need to install it.</p>
+<h2 id="geometry-data"><a class="header" href="#geometry-data">Geometry Data</a></h2>
+<p>OrientDB supports the following Geometry objects :</p>
+<ul>
+<li>Point (<strong>OPoint</strong>)</li>
+<li>Line (<strong>OLine</strong>)</li>
+<li>Polygon (<strong>OPolygon)</strong></li>
+<li>MultiPoint (<strong>OMultiPoint</strong>)</li>
+<li>MultiLine (<strong>OMultiline</strong>)</li>
+<li>MultiPolygon (<strong>OMultiPlygon</strong>)</li>
+<li>Geometry Collections</li>
+</ul>
+<p>OrientDB stores those objects like embedded documents with special classes.
+The module creates abstract classes that represent each Geometry object type, and those classes
+can be embedded in user defined classes to provide geospatial information.</p>
+<p>Each spatial classes (Geometry Collection excluded) comes with field coordinates that will be used to store the geometry structure.
+The "coordinates" field of a geometry object is composed of one position (Point), an array of positions (LineString or MultiPoint), an array of arrays of positions (Polygons, MultiLineStrings) or a multidimensional array of positions (MultiPolygon).</p>
+<h3 id="geometry-data-example"><a class="header" href="#geometry-data-example">Geometry data Example</a></h3>
+<p>Restaurants Domain</p>
+<pre><code class="language-SQL">CREATE class Restaurant
+CREATE PROPERTY Restaurant.name STRING
+CREATE PROPERTY Restaurant.location EMBEDDED OPoint
+</code></pre>
+<p>To insert restaurants with location</p>
+<p>From SQL</p>
+<pre><code class="language-SQL">INSERT INTO  Restaurant SET name = 'Dar Poeta', location = {"@class": "OPoint","coordinates" : [12.4684635,41.8914114]}
+</code></pre>
+<p>or as an alternative, if you use <a href="https://it.wikipedia.org/wiki/Well-Known_Text">WKT</a> format you can use the function <code>ST_GeomFromText</code> to create the OrientDB geometry object.</p>
+<pre><code class="language-SQL">INSERT INTO  Restaurant SET name = 'Dar Poeta', location = St_GeomFromText("POINT (12.4684635 41.8914114)")
+</code></pre>
+<p>From JAVA</p>
+<pre><code class="language-JAVA">ODocument location = new ODocument("OPoint");
+location.field("coordinates", Arrays.asList(12.4684635, 41.8914114));
+
+ODocument doc = new ODocument("Restaurant");
+doc.field("name","Dar Poeta");
+doc.field("location",location);
+
+doc.save();
+</code></pre>
+<p>A spatial index on the <em>location</em> field s defined by</p>
+<pre><code class="language-SQL">CREATE INDEX Restaurant.location ON Restaurant(location) SPATIAL ENGINE LUCENE"
+</code></pre>
+<h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
+<p>OrientDB follows The Open Geospatial Consortium <a href="http://www.opengeospatial.org/standards/sfs">OGC</a> for extending SQL to support spatial data.
+OrientDB implements a subset of SQL-MM functions with ST prefix (Spatial Type)</p>
+<h3 id="st_astext"><a class="header" href="#st_astext">ST_AsText</a></h3>
+<p>Syntax : ST_AsText(geom)</p>
+<p>Example</p>
+<pre><code class="language-SQL">SELECT ST_AsText({"@class": "OPoint","coordinates" : [12.4684635,41.8914114]})
+
+Result
+----------
+POINT (12.4684635 41.8914114)
+</code></pre>
+<h3 id="st_geomfromtext"><a class="header" href="#st_geomfromtext">ST_GeomFromText</a></h3>
+<p>Syntax : ST_GeomFromText(text)</p>
+<p>Example</p>
+<pre><code class="language-SQL">select ST_GeomFromText("POINT (12.4684635 41.8914114)")
+
+Result
+----------------------------------------------------------------------------------
+{"@type":"d","@version":0,"@class":"OPoint","coordinates":[12.4684635,41.8914114]}
+
+</code></pre>
+<h3 id="st_asgeojson"><a class="header" href="#st_asgeojson">ST_AsGeoJSON</a></h3>
+<p>Syntax : ST_AsGeoJSON(geom)</p>
+<p>Example</p>
+<pre><code class="language-SQL">select ST_AsGeoJSON(ST_GeomFromText("POINT (12.4684635 41.8914114)"))
+
+Result
+----------
+{"type":"Point","coordinates":[12.468464,41.891411]}
+</code></pre>
+<h3 id="st_geomfromgeojson"><a class="header" href="#st_geomfromgeojson">ST_GeomFromGeoJSON</a></h3>
+<p>Syntax : ST_GeomFromGeoJSON(getJsonText)</p>
+<p>Example</p>
+<pre><code class="language-SQL">select ST_GeomFromGeoJSON('{"type":"Point","coordinates":[12.4684635,41.8914114]}')
+
+Result
+----------------------------------------------------------------------------------
+{"@type":"d","@version":0,"@class":"OPoint","coordinates":[12.4684635,41.8914114]}
+
+
+
+### ST_Equals
+
+Returns true if geom1 is spatially equal to geom2
+
+Syntax : ST_Equals(geom1,geom2)
+
+Example
+```SQL
+
+SELECT ST_Equals(ST_GeomFromText('LINESTRING(0 0, 10 10)'), ST_GeomFromText('LINESTRING(0 0, 5 5, 10 10)'))
+
+Result
+-----------
+true
+</code></pre>
+<h3 id="st_within"><a class="header" href="#st_within">ST_Within</a></h3>
+<p>Returns true if geom1 is inside geom2</p>
+<p>Syntax : ST_Within(geom1,geom2)</p>
+<p>This function will use an index if available.</p>
+<p>Example</p>
+<pre><code class="language-SQL">select * from City where  ST_WITHIN(location,'POLYGON ((12.314015 41.8262816, 12.314015 41.963125, 12.6605063 41.963125, 12.6605063 41.8262816, 12.314015 41.8262816))') = true
+</code></pre>
+<h3 id="st_dwithin"><a class="header" href="#st_dwithin">ST_DWithin</a></h3>
+<p>Returns true if the geometries are within the specified distance of one another</p>
+<p>Syntax : ST_DWithin(geom1,geom2,distance)</p>
+<p>Example</p>
+<pre><code class="language-SQL">SELECT ST_DWithin(ST_GeomFromText('POLYGON((0 0, 10 0, 10 5, 0 5, 0 0))'), ST_GeomFromText('POLYGON((12 0, 14 0, 14 6, 12 6, 12 0))'), 2.0d) as distance
+</code></pre>
+<pre><code class="language-SQL">SELECT from Polygon where ST_DWithin(geometry, ST_GeomFromText('POLYGON((12 0, 14 0, 14 6, 12 6, 12 0))'), 2.0) = true
+</code></pre>
+<h3 id="st_contains"><a class="header" href="#st_contains">ST_Contains</a></h3>
+<p>Returns true if geom1 contains geom2</p>
+<p>Syntax : ST_Contains(geom1,geom2)</p>
+<p>This function will use an index if available.</p>
+<p>Example</p>
+<pre><code class="language-SQL">SELECT ST_Contains(ST_Buffer(ST_GeomFromText('POINT(0 0)'),10),ST_GeomFromText('POINT(0 0)'))
+
+Result
+----------
+true
+</code></pre>
+<pre><code class="language-SQL">SELECT ST_Contains(ST_Buffer(ST_GeomFromText('POINT(0 0)'),10),ST_Buffer(ST_GeomFromText('POINT(0 0)'),20))
+
+Result
+----------
+false
+</code></pre>
+<h3 id="st_disjoint"><a class="header" href="#st_disjoint">ST_Disjoint</a></h3>
+<p>Returns true if geom1 does not spatially intersects geom2</p>
+<p>Syntax: St_Disjoint(geom1,geom2)</p>
+<p>This function does not use indexes</p>
+<p>Example</p>
+<pre><code class="language-SQL">SELECT ST_Disjoint(ST_GeomFromText('POINT(0 0)'), ST_GeomFromText('LINESTRING ( 2 0, 0 2 )'));
+
+Result
+-----------------
+true
+</code></pre>
+<pre><code class="language-SQL">SELECT ST_Disjoint(ST_GeomFromText('POINT(0 0)'), ST_GeomFromText('LINESTRING ( 0 0, 0 2 )'));
+
+Result
+-----------------
+false
+</code></pre>
+<h3 id="st_intersects"><a class="header" href="#st_intersects">ST_Intersects</a></h3>
+<p>Returns true if geom1 spatially intersects geom2</p>
+<p>Syntax: ST_Intersects(geom1,geom2)</p>
+<p>Example</p>
+<pre><code class="language-SQL">SELECT ST_Intersects(ST_GeomFromText('POINT(0 0)'), ST_GeomFromText('LINESTRING ( 2 0, 0 2 )'));
+
+Result
+-------------
+false
+</code></pre>
+<pre><code class="language-SQL">SELECT ST_Intersects(ST_GeomFromText('POINT(0 0)'), ST_GeomFromText('LINESTRING ( 0 0, 0 2 )'));
+
+Result
+-------------
+true
+</code></pre>
+<h3 id="st_asbinary"><a class="header" href="#st_asbinary">ST_AsBinary</a></h3>
+<p>Returns the Well-Known Binary (WKB) representation of the geometry</p>
+<p>Syntax :  ST_AsBinary(geometry)</p>
+<p>Example</p>
+<pre><code class="language-SQL">SELECT ST_AsBinary(ST_GeomFromText('POINT(0 0)'))
+</code></pre>
+<h3 id="st_envelope"><a class="header" href="#st_envelope">ST_Envelope</a></h3>
+<p>Returns a geometry representing the bounding box of the supplied geometry</p>
+<p>Syntax : ST_Envelope(geometry)</p>
+<p>Example</p>
+<pre><code class="language-SQL">SELECT ST_AsText(ST_Envelope(ST_GeomFromText('POINT(1 3)')));
+
+Result
+----------
+POINT (1 3)
+</code></pre>
+<pre><code class="language-SQL">SELECT ST_AsText(ST_Envelope(ST_GeomFromText('LINESTRING(0 0, 1 3)')))
+
+Result
+-----------------------------------
+POLYGON ((0 0, 0 3, 1 3, 1 0, 0 0))
+</code></pre>
+<h3 id="st_buffer"><a class="header" href="#st_buffer">ST_Buffer</a></h3>
+<p>Returns a geometry that represents all points whose distance from this Geometry is less than or equal to distance.</p>
+<p>Syntax:  ST_Buffer(geometry,distance [,config])</p>
+<p>where config is an additional parameter (JSON) that can be use to set:</p>
+<p>quadSegs: int  -&gt;  number of segments used to approximate a quarter circle (defaults to 8).</p>
+<pre><code class="language-JSON">{ 
+  quadSegs : 1
+}
+</code></pre>
+<p>endCap : round|flat|square -&gt;  endcap style (defaults to "round").</p>
+<pre><code class="language-JSON">{
+  endCap : 'square'
+}
+</code></pre>
+<p>join : round|mitre|bevel  -&gt; join style (defaults to "round")</p>
+<pre><code class="language-JSON">{ 
+  join : 'bevel'
+}
+</code></pre>
+<p>mitre : double  -&gt; mitre ratio limit (only affects mitered join style).</p>
+<pre><code class="language-JSON">{ 
+  join : 'mitre', 
+  mitre : 5.0
+}
+</code></pre>
+<p>Example</p>
+<pre><code class="language-SQL">SELECT ST_AsText(ST_Buffer(ST_GeomFromText('POINT(100 90)'),50))
+</code></pre>
+<pre><code class="language-SQL">SELECT ST_AsText(ST_Buffer(ST_GeomFromText('POINT(100 90)'), 50, { quadSegs : 2 }));
+</code></pre>
+<h2 id="operators"><a class="header" href="#operators">Operators</a></h2>
+<h3 id="a--b"><a class="header" href="#a--b">A &amp;&amp; B</a></h3>
+<p>Overlaps operator. Returns true if bounding box of A overlaps bounding box of B.
+This operator will use an index if available.</p>
+<p>Example</p>
+<pre><code class="language-SQL">CREATE CLASS TestLineString
+CREATE PROPERTY TestLineString.location EMBEDDED OLineString
+INSERT INTO TestLineSTring SET name = 'Test1' , location = St_GeomFromText("LINESTRING(0 0, 3 3)")
+INSERT INTO TestLineSTring SET name = 'Test2' , location = St_GeomFromText("LINESTRING(0 1, 0 5)")
+SELECT FROM TestLineString WHERE location &amp;&amp; "LINESTRING(1 2, 4 6)"
+</code></pre>
+<h2 id="spatial-indexes"><a class="header" href="#spatial-indexes">Spatial Indexes</a></h2>
+<p>To speed up spatial search and match condition, spatial operators and functions can use a spatial index if defined to avoid sequential full scan of every records.</p>
+<p>The current spatial index implementation is built upon lucene-spatial.</p>
+<p>The syntax for creating a spatial index on a geometry field is :</p>
+<pre><code class="language-SQL">CREATE INDEX &lt;name&gt; ON &lt;class-name&gt; (geometry-field) SPATIAL ENGINE LUCENE
+</code></pre>
+<h2 id="legacy"><a class="header" href="#legacy">Legacy</a></h2>
+<p>Before v2.2, OrientDB was able to only index Points. Other Shapes like rectangles and polygons are managed starting from v2.2 (look above). This is the legacy section for databases created before v2.2.</p>
+<h3 id="how-to-create-a-spatial-index"><a class="header" href="#how-to-create-a-spatial-index">How to create a Spatial Index</a></h3>
+<p>The index can be created on a class that has two fields declared as <code>DOUBLE</code> (<code>latitude</code>,<code>longitude</code>) that are the coordinates of the Point.</p>
+<p>For example we have a class <code>Place</code> with 2 double fields <code>latitude</code> and <code>longitude</code>.  To create the spatial index on <code>Place</code> use this syntax.</p>
+<pre><code class="language-sql">CREATE INDEX Place.l_lon ON Place(latitude,longitude) SPATIAL ENGINE LUCENE
+</code></pre>
+<p>The Index can also be created with the Java Api. Example:</p>
+<pre><code class="language-java">OSchema schema = databaseDocumentTx.getMetadata().getSchema();
+OClass oClass = schema.createClass("Place");
+oClass.createProperty("latitude", OType.DOUBLE);
+oClass.createProperty("longitude", OType.DOUBLE);
+oClass.createProperty("name", OType.STRING);
+oClass.createIndex("Place.latitude_longitude", "SPATIAL", null, null, "LUCENE", new String[] { "latitude", "longitude" });
+</code></pre>
+<h3 id="how-to-query-the-spatial-index"><a class="header" href="#how-to-query-the-spatial-index">How to query the Spatial Index</a></h3>
+<p>Two custom operators has been added to query the Spatial Index:</p>
+<ol>
+<li><code>NEAR</code>: to find all Points near a given location (<code>latitude</code>, <code>longitude</code>)</li>
+<li><code>WITHIN</code>: to find all Points that are within a given Shape</li>
+</ol>
+<h4 id="near-operator"><a class="header" href="#near-operator">NEAR operator</a></h4>
+<p>Finds all Points near a given location (<code>latitude</code>, <code>longitude</code>).</p>
+<h5 id="syntax"><a class="header" href="#syntax">Syntax</a></h5>
+<pre><code class="language-sql">SELECT FROM Class WHERE [&lt;lat-field&gt;,&lt;long-field&gt;] NEAR [lat,lon]
+</code></pre>
+<p>To specify <code>maxDistance</code> we have to pass a special variable in the context:</p>
+<pre><code class="language-sql">SELECT FROM Class WHERE [&lt;lat-field&gt;,&lt;long-field&gt;,$spatial] NEAR [lat,lon,{"maxDistance": distance}]
+</code></pre>
+<p>The <code>maxDistance</code> field has to be in kilometers, not radians. Results are sorted from nearest to farthest.</p>
+<p>To know the exact distance between your Point and the Points matched, use the special variable in the context
+$distance.</p>
+<pre><code class="language-sql">SELECT *, $distance FROM Class WHERE [&lt;lat-field&gt;,&lt;long-field&gt;,$spatial] NEAR [lat,lon,{"maxDistance": distance}]
+</code></pre>
+<h5 id="examples"><a class="header" href="#examples">Examples</a></h5>
+<p>Let's take the example we have written before. We have a Spatial Index on Class <code>Place</code> on properties <code>latitude</code> and <code>longitude</code>.</p>
+<p>Example: How to find the nearest Place of a given point:</p>
+<pre><code class="language-sql">SELECT *,$distance FROM Place WHERE [latitude,longitude,$spatial] NEAR [51.507222,-0.1275,{"maxDistance":1}]
+</code></pre>
+<h4 id="within-operator"><a class="header" href="#within-operator">WITHIN operator</a></h4>
+<p>Finds all Points that are within a given Shape.</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><img src="../images/warning.png" alt="" /></td><td>The current release supports only <strong>Bounding Box</strong> shape</td></tr>
+</tbody></table>
+</div>
+<h5 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h5>
+<pre><code class="language-sql">SELECT FROM Class WHERE [&lt;lat field&gt;,&lt;long field&gt;] WITHIN [ [ &lt;lat1&gt;, &lt;lon1&gt; ] , [ &lt;lat2&gt;, &lt;lon2&gt; ] ... ]
+</code></pre>
+<h5 id="examples-1"><a class="header" href="#examples-1">Examples</a></h5>
+<p>Example with previous configuration:</p>
+<pre><code class="language-sql">SELECT * FROM Places WHERE [latitude,longitude] WITHIN [[51.507222,-0.1275],[55.507222,-0.1275]]
+</code></pre>
+<p>This query will return all Places within the given Bounding Box.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../indexing/Full-Text-Index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../general/Managing-Dates.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../indexing/Full-Text-Index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../general/Managing-Dates.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

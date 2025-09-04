@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OMatchPathItem.html" title="com.orientechnologies.orient.core.sql.parser.OMatchPathItem" alt="" coords="435,113,563,138"/>
+<area shape="rect" id="node1" href="./OMatchPathItem.html" title="&lt;TABLE&gt;" alt="" coords="425,101,574,149"/>
+<area shape="rect" id="node2_1" href="./OOutPathItem.html" title="com.orientechnologies.orient.core.sql.parser.OOutPathItem" alt="" coords="16,209,127,234"/>
+<area shape="rect" id="node2" href="./OOutPathItem.html" title="&lt;TABLE&gt;" alt="" coords="5,197,137,245"/>
+<area shape="rect" id="node3_2" href="./OInPathItem.html" title="com.orientechnologies.orient.core.sql.parser.OInPathItem" alt="" coords="172,209,272,234"/>
+<area shape="rect" id="node3" href="./OInPathItem.html" title="&lt;TABLE&gt;" alt="" coords="161,197,283,245"/>
+<area shape="rect" id="node4_3" href="./OMultiMatchPathItem.html" title="com.orientechnologies.orient.core.sql.parser.OMultiMatchPathItem" alt="" coords="318,209,478,234"/>
+<area shape="rect" id="node4" href="./OMultiMatchPathItem.html" title="&lt;TABLE&gt;" alt="" coords="307,197,489,245"/>
+<area shape="rect" id="node5_4" href="./OMatchPathItemFirst.html" title="com.orientechnologies.orient.core.sql.parser.OMatchPathItemFirst" alt="" coords="524,209,680,234"/>
+<area shape="rect" id="node5" href="./OMatchPathItemFirst.html" title="&lt;TABLE&gt;" alt="" coords="513,197,691,245"/>
+<area shape="rect" id="node7_5" href="./OFieldMatchPathItem.html" title="com.orientechnologies.orient.core.sql.parser.OFieldMatchPathItem" alt="" coords="725,209,884,234"/>
+<area shape="rect" id="node7" href="./OFieldMatchPathItem.html" title="&lt;TABLE&gt;" alt="" coords="715,197,895,245"/>
+<area shape="rect" id="node8_6" href="./OBothPathItem.html" title="com.orientechnologies.orient.core.sql.parser.OBothPathItem" alt="" coords="930,209,1047,234"/>
+<area shape="rect" id="node8" href="./OBothPathItem.html" title="&lt;TABLE&gt;" alt="" coords="919,197,1058,245"/>
+<area shape="rect" id="node6_7" href="./SimpleNode.html" title="com.orientechnologies.orient.core.sql.parser.SimpleNode" alt="" coords="450,17,549,42"/>
+<area shape="rect" id="node6" href="./SimpleNode.html" title="&lt;TABLE&gt;" alt="" coords="439,5,559,53"/>
+</map>

@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Incremental Backup and Restore - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="incremental-backup-and-restore"><a class="header" href="#incremental-backup-and-restore">Incremental Backup and Restore</a></h1>
+<p>(Since v2.2 - Enterprise Edition only)</p>
+<p>An incremental backup generates smaller backup files by storing only the delta between two versions of the database. This is useful when you execute a backup on a regular basis and you want to avoid having to back up the entire database each time. The easiest way to execute a backup and a restore is using <a href="../studio/backups-imports-exports/Studio-Backup-Management.html">Studio</a>.</p>
+<blockquote>
+<p><strong>NOTE</strong>: This feature is available only in the <a href="http://orientdb.com/orientdb-enterprise">OrientDB Enterprise Edition</a>. If you are interested in a commercial license look at <a href="http://orientdb.com/support">OrientDB Subscription Packages</a>.</p>
+</blockquote>
+<p>NOTE: Lucene Indexes are not supported yet in the incremental backup/restore process. Once the incremental restore is finished the indexes rebuild is necessary see (here)[https://github.com/orientechnologies/orientdb/issues/5958]</p>
+<h2 id="see-also"><a class="header" href="#see-also">See also</a></h2>
+<ul>
+<li><a href="Backup-and-Restore.html">Backup and Restore</a></li>
+<li><a href="../console/Console-Command-Backup.html">BACKUP DATABASE console command</a></li>
+<li><a href="../console/Console-Command-Restore.html">RESTORE DATABASE console command</a></li>
+</ul>
+<h2 id="how-does-it-work"><a class="header" href="#how-does-it-work">How does it work?</a></h2>
+<p>Every time a backup is executed, OrientDB writes a file named <code>last-backup.json</code> in the database directory. This is an example of the content:</p>
+<pre><code class="language-json">{
+  "lsn": 8438432,
+  "startedOn": "2015-08-17 10:33:23.943",
+  "completedOn": "2015-08-17 10:33:45.121"
+}
+</code></pre>
+<p>The most important information is the <code>lsn</code> field that is the WAL LSN (Last Serial Number). Thanks to this number, OrientDB is able to understand the last change in the database, so the next incremental backup will be done starting from last <code>lsn</code> + 1.</p>
+<h2 id="executing-an-incremental-backup"><a class="header" href="#executing-an-incremental-backup">Executing an Incremental Backup</a></h2>
+<h3 id="incremental-backup-via-console"><a class="header" href="#incremental-backup-via-console">Incremental Backup via Console</a></h3>
+<p><a href="../console/Console-Command-Backup.html">Backup Database console command</a> accepts <code>-incremental</code> as an optional parameter to execute an incremental backup. In this case the new backup is executed from the last backup (file <code>last-backup.json</code> is read if present). If this is the first incremental backup, a full backup is executed. Example:</p>
+<pre><code>orientdb&gt; connect plocal:/databases/mydb admin admin
+orientdb {db=Whisky}&gt; backup database /tmp/backup -incremental
+</code></pre>
+<p>The incremental backup setting also allows you to specify an LSN version to start with. Example:</p>
+<pre><code>orientdb&gt; connect plocal:/databases/mydb admin admin
+orientdb {db=Whisky}&gt; backup database /tmp/backup -incremental=93222
+</code></pre>
+<h3 id="incremental-backup-via-java-api"><a class="header" href="#incremental-backup-via-java-api">Incremental Backup via Java API</a></h3>
+<p>You can perform an incremental backup via the Java API too.</p>
+<p><strong>NOTE</strong> The <code>remote</code> protocol is supported, but the specified <em>path</em> is relative to the server.</p>
+<p>If you are managing an ODocumentDatabase you have to call the <code>incrementalBackup()</code> method that accepts a String <em>path</em> parameter to the backup directory:</p>
+<pre><code>ODatabaseDocumentTx documentDatabase = new ODatabaseDocumentTx(dbURL);
+documentDatabase.open("root", "password");
+documentDatabase.incrementalBackup("/tmp/backup");
+</code></pre>
+<p>If you are using the OrientGraph interface you have to get the raw graph before calling the <code>incrementalBackup()</code> method:</p>
+<pre><code>OrientGraph graphDatabase = new OrientGraphNoTx(dbURL);
+graphDatabase.open("root", "password");
+graphDatabase.getRawGraph().incrementalBackup("/tmp/backup");
+</code></pre>
+<h2 id="executing-an-incremental-restore"><a class="header" href="#executing-an-incremental-restore">Executing an Incremental Restore</a></h2>
+<h3 id="incremental-restore-via-the-console"><a class="header" href="#incremental-restore-via-the-console">Incremental Restore via the Console</a></h3>
+<p><a href="../console/Console-Command-Restore.html">Restore Database console command</a> automatically recognizes if a backup contains incremental data. Restoring an incremental backup creates a new database with the restored content.  You cannot perform an in-place incremental restore on an existing database. The execution of the create database command with the option <code>-restore</code> builds a fresh database and performs the incremental restore starting from the backup path.</p>
+<p>Example:</p>
+<pre><code>orientdb&gt; create database remote:localhost/mydb root root plocal graph -restore=/tmp/backup
+
+Creating database [remote:localhost/mydb] using the storage type [plocal]...
+Connecting to database [remote:localhost/mydb] with user 'admin'...OK
+
+Database created successfully.
+
+Current database is: remote:localhost/mydb
+</code></pre>
+<p>In distributed mode restore will success only with a single node in the cluster. If you have 2 nodes or more in your cluster you have to use the standard restore procedure.</p>
+<h3 id="incremental-restore-via-the-java-api"><a class="header" href="#incremental-restore-via-the-java-api">Incremental Restore via the Java API</a></h3>
+<p>You can perform an incremental restore via the Java API too.
+To create a database from an incremental backup you can call from Java <code>ODatabase#create(path-to-incremental-backup-directory)</code>.</p>
+<h3 id="incremental-restore-in-distributed-architecture"><a class="header" href="#incremental-restore-in-distributed-architecture">Incremental Restore in Distributed Architecture</a></h3>
+<p>The incremental restore affects only the local node where the restore command is executed.<br />
+Let's suppose we have 3 nodes and we execute an incremental restore on node1. If we execute an incremental restore on node1 a new fresh database is created on all the 3 nodes, but only on node1 the restore procedure is performed. Thus we obtain the database correctly restored on node1 but an empty database on node2 and node 3.<br />
+You can overcome this inconsistency by executing a shutdown on all the nodes of the cluster not involved in the restore procedure (node2 and node3 in our example), so once restarted they will get the full database from node1.</p>
+<h2 id="distributed-architecture"><a class="header" href="#distributed-architecture">Distributed Architecture</a></h2>
+<p>The incremental backup is used in the <a href="../distributed/Distributed-Architecture.html">Distributed Architecture</a> when a server node restarts. This avoids having to backup and transfer the entire database across the network.</p>
+<h2 id="internals"><a class="header" href="#internals">Internals</a></h2>
+<h3 id="file-format"><a class="header" href="#file-format">File Format</a></h3>
+<p>In case of incremental backup, the content of the zip file is not the database directory, but rather meta files needed to update the database with the delta. Example of the content:</p>
+<pre><code>- Employee.pcl
+- Person.pcl.incremental
+- Person.pcm.incremental
+</code></pre>
+<p>This means only three files are changed.  Employee.pcl is a full file, while the other two files with extension ".incremental" are incremental. Incremental files contain all the page changes and have the following format:</p>
+<pre><code>+----------------+-----------------+
+| PAGE NUMBER    | PAGE CONTENT    |
+| (long)         | byte[]          |
++----------------+-----------------+
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../admin/Backup-and-Restore.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../admin/Export-and-Import.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../admin/Backup-and-Restore.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../admin/Export-and-Import.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

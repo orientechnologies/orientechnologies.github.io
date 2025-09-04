@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OReadCache.html" title="com.orientechnologies.orient.core.storage.cache.OReadCache" alt="" coords="187,11,289,53"/>
+<area shape="rect" id="node1" href="./OReadCache.html" title="&lt;TABLE&gt;" alt="" coords="176,5,300,59"/>
+<area shape="rect" id="node2_1" href="./chm/AsyncReadCache.html" title="com.orientechnologies.orient.core.storage.cache.chm.AsyncReadCache" alt="" coords="16,118,148,143"/>
+<area shape="rect" id="node2" href="./chm/AsyncReadCache.html" title="&lt;TABLE&gt;" alt="" coords="5,107,159,155"/>
+<area shape="rect" id="node3_2" href="./local/twoq/O2QCache.html" title="com.orientechnologies.orient.core.storage.cache.local.twoq.O2QCache" alt="" coords="194,118,282,143"/>
+<area shape="rect" id="node3" href="./local/twoq/O2QCache.html" title="&lt;TABLE&gt;" alt="" coords="183,107,293,155"/>
+<area shape="rect" id="node4_3" href="../memory/ODirectMemoryOnlyDiskCache.html" title="com.orientechnologies.orient.core.storage.memory.ODirectMemoryOnlyDiskCache" alt="" coords="327,118,549,143"/>
+<area shape="rect" id="node4" href="../memory/ODirectMemoryOnlyDiskCache.html" title="&lt;TABLE&gt;" alt="" coords="317,107,559,155"/>
+</map>

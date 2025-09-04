@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OAbstractETLPipelineComponent.html" title="com.orientechnologies.orient.etl.OAbstractETLPipelineComponent" alt="" coords="688,19,921,45"/>
+<area shape="rect" id="node1" href="../OAbstractETLPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="677,8,932,56"/>
+<area shape="rect" id="node7_1" href="./OAbstractTransformer.html" title="com.orientechnologies.orient.etl.transformer.OAbstractTransformer" alt="" coords="831,118,994,143"/>
+<area shape="rect" id="node7" href="./OAbstractTransformer.html" title="&lt;TABLE&gt;" alt="" coords="821,107,1005,155"/>
+<area shape="rect" id="node2_2" href="./OCodeTransformer.html" title="com.orientechnologies.orient.etl.transformer.OCodeTransformer" alt="" coords="16,214,156,239"/>
+<area shape="rect" id="node2" href="./OCodeTransformer.html" title="&lt;TABLE&gt;" alt="" coords="5,203,167,251"/>
+<area shape="rect" id="node3_3" href="./OJSONTransformer.html" title="com.orientechnologies.orient.etl.transformer.OJSONTransformer" alt="" coords="201,214,341,239"/>
+<area shape="rect" id="node3" href="./OJSONTransformer.html" title="&lt;TABLE&gt;" alt="" coords="191,203,352,251"/>
+<area shape="rect" id="node4_4" href="./OBlockTransformer.html" title="com.orientechnologies.orient.etl.transformer.OBlockTransformer" alt="" coords="387,214,531,239"/>
+<area shape="rect" id="node4" href="./OBlockTransformer.html" title="&lt;TABLE&gt;" alt="" coords="377,203,542,251"/>
+<area shape="rect" id="node5_5" href="./OCSVTransformer.html" title="com.orientechnologies.orient.etl.transformer.OCSVTransformer" alt="" coords="577,214,710,239"/>
+<area shape="rect" id="node5" href="./OCSVTransformer.html" title="&lt;TABLE&gt;" alt="" coords="566,203,721,251"/>
+<area shape="rect" id="node6_6" href="./OLogTransformer.html" title="com.orientechnologies.orient.etl.transformer.OLogTransformer" alt="" coords="755,214,886,239"/>
+<area shape="rect" id="node6" href="./OLogTransformer.html" title="&lt;TABLE&gt;" alt="" coords="745,203,897,251"/>
+<area shape="rect" id="node8_7" href="./OVertexTransformer.html" title="com.orientechnologies.orient.etl.transformer.OVertexTransformer" alt="" coords="931,214,1081,239"/>
+<area shape="rect" id="node8" href="./OVertexTransformer.html" title="&lt;TABLE&gt;" alt="" coords="921,203,1091,251"/>
+<area shape="rect" id="node10_8" href="./OFieldTransformer.html" title="com.orientechnologies.orient.etl.transformer.OFieldTransformer" alt="" coords="1126,214,1265,239"/>
+<area shape="rect" id="node10" href="./OFieldTransformer.html" title="&lt;TABLE&gt;" alt="" coords="1115,203,1275,251"/>
+<area shape="rect" id="node11_9" href="./OAbstractLookupTransformer.html" title="com.orientechnologies.orient.etl.transformer.OAbstractLookupTransformer" alt="" coords="1311,214,1520,239"/>
+<area shape="rect" id="node11" href="./OAbstractLookupTransformer.html" title="&lt;TABLE&gt;" alt="" coords="1300,203,1531,251"/>
+<area shape="rect" id="node12_10" href="./OCommandTransformer.html" title="com.orientechnologies.orient.etl.transformer.OCommandTransformer" alt="" coords="1565,214,1740,239"/>
+<area shape="rect" id="node12" href="./OCommandTransformer.html" title="&lt;TABLE&gt;" alt="" coords="1555,203,1751,251"/>
+<area shape="rect" id="node13_11" href="./OFlowTransformer.html" title="com.orientechnologies.orient.etl.transformer.OFlowTransformer" alt="" coords="1786,214,1925,239"/>
+<area shape="rect" id="node13" href="./OFlowTransformer.html" title="&lt;TABLE&gt;" alt="" coords="1775,203,1935,251"/>
+<area shape="rect" id="node9_12" href="./OTransformer.html" title="com.orientechnologies.orient.etl.transformer.OTransformer" alt="" coords="967,11,1075,53"/>
+<area shape="rect" id="node9" href="./OTransformer.html" title="&lt;TABLE&gt;" alt="" coords="956,5,1085,59"/>
+</map>
