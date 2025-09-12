@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Importing the northwind Database from Neo4j - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>search:
+keywords: ['neo4j to orientdb importer', 'import', 'Neo4j', 'migration', 'northwind', 'cypher', 'tutorial']</h2>
+<h1 id="tutorial-importing-the-northwind-database-from-neo4j"><a class="header" href="#tutorial-importing-the-northwind-database-from-neo4j">Tutorial: Importing the <em>northwind</em> Database from Neo4j</a></h1>
+<p>In this tutorial we will use the <a href="../../neo4j-to-orientdb-importer/README.html"><em>Neo4j to OrientDB Importer</em></a> to import the Neo4j <em>northwind</em> example database into OrientDB.</p>
+<p>For general information on the possible Neo4j to OrientDB migration strategies, please refer to the <a href="../../admin/Import-from-Neo4j-into-OrientDB.html">Import from Neo4j</a> section.</p>
+<blockquote>
+<p>Neo4j and Cypher are registered trademark of Neo Technology, Inc.</p>
+</blockquote>
+<h2 id="preparing-for-the-migration"><a class="header" href="#preparing-for-the-migration">Preparing for the migration</a></h2>
+<p>Please download and install OrientDB:</p>
+<pre><code class="lang-sh">$ wget https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.1.0-beta1/orientdb-3.1.0-beta1.tar.gz -O orientdb-community-tp2-3.2.4.tar.gz
+$ tar xvf orientdb-community-tp2-3.2.4.tar.gz</code></pre>
+<p>Download and install the <em>Neo4j to OrientDB Importer</em>:</p>
+<pre><code class="lang-sh">$ wget http://central.maven.org/maven2/com/orientechnologies/orientdb-neo4j-importer/3.2.4/orientdb-neo4j-importer-3.2.4.tar.gz
+$ tar xfv orientdb-neo4j-importer-3.2.4.tar.gz -C orientdb-community-3.2.4 --strip-components=1 </code></pre>
+<p>For further information on the OrientDB's installation, please refer to this <a href="../Tutorial-Installation.html">section</a>.</p>
+<p>For further information on the <em>Neo4j to OrientDB Importer</em> installation, please refer to this <a href="../../neo4j-to-orientdb-importer/README.html#installation">section</a>.</p>
+<h2 id="starting-the-migration"><a class="header" href="#starting-the-migration">Starting the migration</a></h2>
+<p>Assuming that:</p>
+<ul>
+<li>
+<p><code>/home/santo/neo4j/neo4j-community-3.0.7/lib</code> is the full path to the directory that includes the Neo4j's libraries</p>
+</li>
+<li>
+<p><code>/home/santo/data/graph.db_northwind</code> is the full path to the directory that contains the Neo4j's <em>northwind</em> database</p>
+</li>
+<li>
+<p><code>/home/santo/orientdb/orientdb-community-2.2.12/databases/northwind_import</code> is the full path to the directory where you would like to migrate the <em>northwind</em> database</p>
+</li>
+<li>
+<p>that no Neo4j and OrientDB servers are running on those directories</p>
+</li>
+</ul>
+<p>you can import the <em>northwind</em> database with a command similar to the following:</p>
+<pre><code>./orientdb-neo4j-importer.sh \
+  -neo4jlibdir /home/santo/neo4j/neo4j-community-3.0.7/lib \
+  -neo4jdbdir /home/santo/neo4j/data/graph.db_northwind \
+  -odbdir /home/santo/orientdb/orientdb-community-2.2.12/databases/northwind_import
+</code></pre>
+<p>For further information on how to use the <em>Neo4j to OrientDB Importer</em>, please refer to this <a href="../../neo4j-to-orientdb-importer/README.html#usage">section</a>.</p>
+<h2 id="migration-output"><a class="header" href="#migration-output">Migration output</a></h2>
+<p>The following is the output that is written by the <em>Neo4j to OrientDB Importer</em> during the <code>northwind</code> database migration:</p>
+<pre><code>Neo4j to OrientDB Importer v.2.2.12-SNAPSHOT - Copyrights (c) 2016 OrientDB LTD
+
+WARNING: 'o' option not found. Defaulting to 'false'.
+
+Please make sure that there are no running servers on:
+  '/home/santo/neo4j/data/graph.db_northwind' (Neo4j)
+and:
+  '/home/santo/orientdb/orientdb-community-2.2.12/databases/northwind_import' (OrientDB)
+
+Initializing Neo4j...Done
+
+Initializing OrientDB...Done
+
+Importing Neo4j database:
+  '/home/santo/neo4j/data/graph.db_northwind'
+into OrientDB database:
+  '/home/santo/orientdb/orientdb-community-2.2.12/databases/northwind_import'
+
+Getting all Nodes from Neo4j and creating corresponding Vertices in OrientDB...
+  1035 OrientDB Vertices have been created (100% done)
+Done
+
+Creating internal Indices on property 'Neo4jNodeID' on all OrientDB Vertices Classes...
+  5 OrientDB Indices have been created (100% done)
+Done
+
+Getting all Relationships from Neo4j and creating corresponding Edges in OrientDB...
+  3139 OrientDB Edges have been created (100% done)
+Done
+
+Getting Constraints from Neo4j and creating corresponding ones in OrientDB...
+  0 OrientDB Indices have been created
+Done
+
+Getting Indices from Neo4j and creating corresponding ones in OrientDB...
+  5 OrientDB Indices have been created (100% done)
+Done
+
+Import completed!
+
+Shutting down OrientDB...Done
+Shutting down Neo4j...Done
+
+===============
+Import Summary:
+===============
+
+- Found Neo4j Nodes                                                        : 1035
+-- With at least one Label                                                 :  1035
+--- With multiple Labels                                                   :   0
+-- Without Labels                                                          :  0
+- Imported OrientDB Vertices                                               : 1035 (100%)
+
+- Found Neo4j Relationships                                                : 3139
+- Imported OrientDB Edges                                                  : 3139 (100%)
+
+- Found Neo4j Constraints                                                  : 0
+- Imported OrientDB Constraints (Indices created)                          : 0
+
+- Found Neo4j (non-constraint) Indices                                     : 5
+- Imported OrientDB Indices                                                : 5 (100%)
+
+- Additional created Indices (on vertex properties 'Neo4jNodeID')          : 5
+
+- Total Import time:                                                       : 29 seconds
+-- Initialization time                                                     :  7 seconds
+-- Time to Import Nodes                                                    :  6 seconds (181.67 nodes/sec)
+-- Time to Import Relationships                                            :  7 seconds (459.79 rels/sec)
+-- Time to Import Constraints and Indices                                  :  4 seconds (1.21 indices/sec)
+-- Time to create internal Indices (on vertex properties 'Neo4jNodeID')    :  4 seconds (1.22 indices/sec)
+</code></pre>
+<h2 id="connecting-to-the-newly-imported-database"><a class="header" href="#connecting-to-the-newly-imported-database">Connecting to the newly imported Database</a></h2>
+<p>General information on how to connect to a newly imported database can be found in <a href="../../neo4j-to-orientdb-importer/README.html#connecting-to-the-newly-imported-database">this</a> section.</p>
+<p>The following is a partial visualization of the <em>northwind</em> database done with the Graph Editor included in the OrientDB's <a href="../../studio/README.html">Studio</a> tool:</p>
+<p><img src="../../images/import_from_neo4j/northwind/northwind_graph_editor.PNG" alt="" /></p>
+<p>As you can see from the <em>Limit</em> field, the visualization is limited to 200 vertices.</p>
+<p>The following, instead, is the graph returned by the following <a href="../../sql/SQL-Match.html"><code>MATCH</code></a> query (the query returns all nodes connected to the Order with <code>orderID</code> 10344):</p>
+<pre><code class="language-sql">MATCH {class: Order, where: (orderID = 10344)}--{as: n} RETURN $pathelements
+</code></pre>
+<p><img src="../../images/import_from_neo4j/northwind/northwind_match_query.PNG" alt="" /></p>
+<p>From Studio's <a href="../../studio/working-with-schemas/README.html">Schema Manager</a>, you can check all imported Vertex Classes (node Labels in Neo4j), Edge Classes (Relationship Types in Neo4j), and Indexes:</p>
+<p><img src="/images/import_from_neo4j/northwind/northwind_schema_manager.PNG" alt="" /></p>
+<p><code>V</code> and <code>E</code> are special classes: they include all Vertices and all Edges.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../gettingstarted/tutorials/Import-the-Database-of-Beers.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../gettingstarted/tutorials/Tutorial-Importing-the-Movie-Database-from-Neo4j.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../gettingstarted/tutorials/Import-the-Database-of-Beers.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../gettingstarted/tutorials/Tutorial-Importing-the-Movie-Database-from-Neo4j.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

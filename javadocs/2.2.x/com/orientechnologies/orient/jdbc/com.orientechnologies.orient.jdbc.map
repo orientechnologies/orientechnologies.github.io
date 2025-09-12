@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OrientJdbcConnection.html" title="com.orientechnologies.orient.jdbc.OrientJdbcConnection" alt="" coords="16,17,176,42"/>
+<area shape="rect" id="node1" href="./OrientJdbcConnection.html" title="&lt;TABLE&gt;" alt="" coords="5,5,187,53"/>
+<area shape="rect" id="node2_1" href="./OrientBlob.html" title="com.orientechnologies.orient.jdbc.OrientBlob" alt="" coords="221,17,309,42"/>
+<area shape="rect" id="node2" href="./OrientBlob.html" title="&lt;TABLE&gt;" alt="" coords="211,5,320,53"/>
+<area shape="rect" id="node3_2" href="./OrientDataSource.html" title="com.orientechnologies.orient.jdbc.OrientDataSource" alt="" coords="355,17,490,42"/>
+<area shape="rect" id="node3" href="./OrientDataSource.html" title="&lt;TABLE&gt;" alt="" coords="345,5,501,53"/>
+<area shape="rect" id="node4_3" href="./OrientJdbcPreparedStatement.html" title="com.orientechnologies.orient.jdbc.OrientJdbcPreparedStatement" alt="" coords="507,113,719,138"/>
+<area shape="rect" id="node4" href="./OrientJdbcPreparedStatement.html" title="&lt;TABLE&gt;" alt="" coords="497,101,730,149"/>
+<area shape="rect" id="node5_4" href="./OrientJdbcDatabaseMetaData.html" title="com.orientechnologies.orient.jdbc.OrientJdbcDatabaseMetaData" alt="" coords="737,17,949,42"/>
+<area shape="rect" id="node5" href="./OrientJdbcDatabaseMetaData.html" title="&lt;TABLE&gt;" alt="" coords="726,5,959,53"/>
+<area shape="rect" id="node6_5" href="./OrientJdbcResultSet.html" title="com.orientechnologies.orient.jdbc.OrientJdbcResultSet" alt="" coords="994,17,1142,42"/>
+<area shape="rect" id="node6" href="./OrientJdbcResultSet.html" title="&lt;TABLE&gt;" alt="" coords="983,5,1153,53"/>
+<area shape="rect" id="node7_6" href="./OrientJdbcResultSetMetaData.html" title="com.orientechnologies.orient.jdbc.OrientJdbcResultSetMetaData" alt="" coords="1187,17,1399,42"/>
+<area shape="rect" id="node7" href="./OrientJdbcResultSetMetaData.html" title="&lt;TABLE&gt;" alt="" coords="1177,5,1410,53"/>
+<area shape="rect" id="node8_7" href="./OrientJdbcStatement.html" title="com.orientechnologies.orient.jdbc.OrientJdbcStatement" alt="" coords="536,17,691,42"/>
+<area shape="rect" id="node8" href="./OrientJdbcStatement.html" title="&lt;TABLE&gt;" alt="" coords="525,5,701,53"/>
+<area shape="rect" id="node9_8" href="./OrientJdbcDriver.html" title="com.orientechnologies.orient.jdbc.OrientJdbcDriver" alt="" coords="1445,17,1571,42"/>
+<area shape="rect" id="node9" href="./OrientJdbcDriver.html" title="&lt;TABLE&gt;" alt="" coords="1434,5,1582,53"/>
+<area shape="rect" id="node10_9" href="./OrientRowId.html" title="com.orientechnologies.orient.jdbc.OrientRowId" alt="" coords="1617,17,1717,42"/>
+<area shape="rect" id="node10" href="./OrientRowId.html" title="&lt;TABLE&gt;" alt="" coords="1606,5,1727,53"/>
+<area shape="rect" id="node11_10" href="./OrientJdbcUtils.html" title="com.orientechnologies.orient.jdbc.OrientJdbcUtils" alt="" coords="1762,17,1878,42"/>
+<area shape="rect" id="node11" href="./OrientJdbcUtils.html" title="&lt;TABLE&gt;" alt="" coords="1751,5,1889,53"/>
+</map>

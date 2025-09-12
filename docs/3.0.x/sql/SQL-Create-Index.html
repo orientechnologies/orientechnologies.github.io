@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Create Index - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sql---create-index"><a class="header" href="#sql---create-index">SQL - <code>CREATE INDEX</code></a></h1>
+<p>Creates a new index.  Indexes can be</p>
+<ul>
+<li><strong>Unique</strong> Where they don't allow duplicates.</li>
+<li><strong>Not Unique</strong> Where they allow duplicates.</li>
+<li><strong>Full Text</strong> Where they index any single word of text.</li>
+</ul>
+<blockquote>
+<p>There are several index algorithms available to determine how OrientDB indexes your database.  For more information on these, see <a href="../indexing/Indexes.html">Indexes</a>.</p>
+</blockquote>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-sql">CREATE INDEX &lt;name&gt; 
+[ IF NOT EXISTS ]
+[ ON &lt;class&gt; (&lt;property&gt;)] 
+&lt;index-type&gt; [&lt;key-type&gt;]
+METADATA [{&lt;json&gt;}]
+</code></pre>
+<ul>
+<li>
+<p><strong><code>&lt;name&gt;</code></strong> Defines the logical name for the index.  If a schema already exists, you can use <code>&lt;class&gt;.&lt;property&gt;</code> to create automatic indexes bound to the schema property.  Because of this, you cannot use the period "<code>.</code>" character in index names.</p>
+</li>
+<li>
+<p><strong>IF NOT EXISTS</strong> Specifying this option, the index creation will just be ignored if the index already exists (instead of failing with an error)</p>
+</li>
+<li>
+<p><strong><code>&lt;class&gt;</code></strong> Defines the class to create an automatic index for.  The class must already exist.</p>
+</li>
+<li>
+<p><strong><code>&lt;property&gt;</code></strong> Defines the property you want to automatically index.  The property must already exist.</p>
+<blockquote>
+<p>If the property is one of the Map types, such as <code>LINKMAP</code> or <code>EMBEDDEDMAP</code>, you can specify the keys or values to use in index generation, using the <code>BY KEY</code> or <code>BY VALUE</code> clause.</p>
+</blockquote>
+</li>
+<li>
+<p><strong><code>&lt;index-type&gt;</code></strong> Defines the index type you want to use.  For a complete list, see <a href="../indexing/Indexes.html">Indexes</a>.</p>
+</li>
+<li>
+<p><strong><code>&lt;key-type&gt;</code></strong> Defines the key type.  With automatic indexes, the key type is automatically selected when the database reads the target schema property.  For manual indexes, when not specified, it selects the key at run-time during the first insertion by reading the type of the class.  In creating composite indexes, it uses a comma-separated list of types.</p>
+</li>
+<li>
+<p><strong><code>METADATA</code></strong> Defines additional metadata through JSON.</p>
+</li>
+</ul>
+<p>To create an automatic index bound to the schema property, use the <code>ON</code> clause, or use a <code>&lt;class&gt;.&lt;property&gt;</code> name for the index.  In order to create an index, the schema must already exist in your database.</p>
+<p>In the event that the <code>ON</code> and <code>&lt;key-type&gt;</code> clauses both exist, the database validates the specified property types.  If the property types don't equal those specified in the key type list, it throws an exception.</p>
+<blockquote>
+<p>You can use list key types when creating manual composite indexes, but bear in mind that such indexes are not yet fully supported.</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Create a manual index to store dates:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE INDEX mostRecentRecords UNIQUE DATE</code>
+</pre>
+</li>
+<li>
+<p>Create an automatic index bound to the new property <code>id</code> in the class <code>User</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE PROPERTY User.id BINARY</code>
+orientdb> <code class="lang-sql userinput">CREATE INDEX User.id UNIQUE</code>
+</pre>
+</li>
+<li>
+<p>Create a series automatic indexes for the <code>thumbs</code> property in the class <code>Movie</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE INDEX thumbsAuthor ON Movie (thumbs) UNIQUE</code>
+orientdb> <code class="lang-sql userinput">CREATE INDEX thumbsAuthor ON Movie (thumbs BY KEY) UNIQUE</code>
+orientdb> <code class="lang-sql userinput">CREATE INDEX thumbsValue ON Movie (thumbs BY VALUE) UNIQUE</code>
+</pre>
+</li>
+<li>
+<p>Create a series of properties and on them create a composite index:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE PROPERTY Book.author STRING</code>
+orientdb> <code class="lang-sql userinput">CREATE PROPERTY Book.title STRING</code>
+orientdb> <code class="lang-sql userinput">CREATE PROPERTY Book.publicationYears EMBEDDEDLIST INTEGER</code>
+orientdb> <code class="lang-sql userinput">CREATE INDEX books ON Book (author, title, publicationYears) UNIQUE</code>
+</pre>
+</li>
+<li>
+<p>Create an index on an edge's date range:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS File EXTENDS V</code>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Has EXTENDS E</code>
+orientdb> <code class="lang-sql userinput">CREATE PROPERTY Has.started DATETIME</code>
+orientdb> <code class="lang-sql userinput">CREATE PROPERTY Has.ended DATETIME</code>
+orientdb> <code class="lang-sql userinput">CREATE INDEX Has.started_ended ON Has (started, ended) NOTUNIQUE</code>
+</pre>
+<blockquote>
+<p>You can create indexes on edge classes only if they contain the begin and end date range of validity.  This is use case is very common with historical graphs, such as the example above.</p>
+</blockquote>
+</li>
+<li>
+<p>Using the above index, retrieve all the edges that existed in the year 2014:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM Has WHERE started >= '2014-01-01 00:00:00.000' AND 
+          ended < '2015-01-01 00:00:00.000'</code>
+</pre>
+</li>
+<li>
+<p>Using the above index, retrieve all edges that existed in 2014 and write them to the parent file:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT outV() FROM Has WHERE started >= '2014-01-01 00:00:00.000' 
+          AND ended < '2015-01-01 00:00:00.000'</code>
+</pre>
+</li>
+<li>
+<p>Using the above index, retrieve all the 2014 edges and connect them to children files:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT inV() FROM Has WHERE started >= '2014-01-01 00:00:00.000' 
+          AND ended < '2015-01-01 00:00:00.000'</code>
+</pre>
+</li>
+<li>
+<p>Create an index that includes null values.</p>
+<p>By default, indexes ignore null values.  Queries against null values that use an index returns no entries.  To index null values, see <code>{ ignoreNullValues: false }</code> as metadata.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE INDEX addresses ON Employee (address) NOTUNIQUE
+           METADATA { ignoreNullValues : false }</code>
+</pre>
+</li>
+</ul>
+<blockquote>
+<p>For more information, see</p>
+<ul>
+<li><a href="SQL-Drop-Index.html"><code>DROP INDEX</code></a></li>
+<li><a href="../indexing/Indexes.html">Indexes</a></li>
+<li><a href="SQL-Commands.html">SQL Commands</a></li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sql/SQL-Create-Function.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/SQL-Create-Link.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sql/SQL-Create-Function.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/SQL-Create-Link.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

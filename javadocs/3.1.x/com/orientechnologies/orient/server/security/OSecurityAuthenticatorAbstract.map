@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSecurityAuthenticatorAbstract.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticatorAbstract" alt="" coords="375,118,599,143"/>
+<area shape="rect" id="node1" href="./OSecurityAuthenticatorAbstract.html" title="&lt;TABLE&gt;" alt="" coords="365,107,610,155"/>
+<area shape="rect" id="node3_1" href="./authenticator/OSystemUserAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator" alt="" coords="16,214,212,239"/>
+<area shape="rect" id="node3" href="./authenticator/OSystemUserAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="5,203,223,251"/>
+<area shape="rect" id="node4_2" href="./authenticator/OServerConfigAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.OServerConfigAuthenticator" alt="" coords="258,214,458,239"/>
+<area shape="rect" id="node4" href="./authenticator/OServerConfigAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="247,203,469,251"/>
+<area shape="rect" id="node5_3" href="./authenticator/ODefaultPasswordAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.ODefaultPasswordAuthenticator" alt="" coords="503,214,730,239"/>
+<area shape="rect" id="node5" href="./authenticator/ODefaultPasswordAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="493,203,741,251"/>
+<area shape="rect" id="node6_4" href="../../../security/kerberos/OKerberosAuthenticator.html" title="com.orientechnologies.security.kerberos.OKerberosAuthenticator" alt="" coords="776,214,951,239"/>
+<area shape="rect" id="node6" href="../../../security/kerberos/OKerberosAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="765,203,961,251"/>
+<area shape="rect" id="node2_5" href="./OSecurityAuthenticator.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticator" alt="" coords="402,11,573,53"/>
+<area shape="rect" id="node2" href="./OSecurityAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="391,5,583,59"/>
+</map>

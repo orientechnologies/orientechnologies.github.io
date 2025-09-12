@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon-orientdb.png">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #212127;
+        /* Primary theme text color */
+        --primary-text-color: #ee521b;
+        /* Primary theme link color */
+        --primary-link-color: #ee521b;
+        /* Secondary color: the background body color */
+        --secondary-color: #ffffff;
+        --secondary-text-color: #212127;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #ee521b;
+    }
+    .logo img {
+        width:auto !important;
+    }
+    .nav-item:hover {
+        color:#ffffff !important;
+    }
+</style>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://orientdb.dev/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;">
+    <div class="logo">
+        <img src="https://orientdb.dev/logo.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;downloads&#x2F;">Download</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;getting-started&#x2F;">Getting Started</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;documentation&#x2F;">Docs</a>
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;support&#x2F;">Support</a>
+        
+    
+    
+        
+        <a class="nav-item subtitle-text" href="&#x2F;news&#x2F;">News</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        <div class="content text">
+            
+    <h1 class="heading-text" >News</h1>
+
+    <ul>
+        
+        <li><a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;news&#x2F;orientdb-work-in-progress-update-2025-q2&#x2F;">OrientDB work in progress update 2025 Q2</a></li>
+        
+        <li><a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;news&#x2F;orientdb-work-in-progress-update-2025-q1&#x2F;">OrientDB work in progress update 2025 Q1</a></li>
+        
+        <li><a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;news&#x2F;orientdb-development-stats-2024&#x2F;">OrientDB development statistics of 2024</a></li>
+        
+        <li><a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;news&#x2F;orientdb-first-changes-done&#x2F;">OrientDB first set of changes done</a></li>
+        
+        <li><a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;news&#x2F;status-and-backlog&#x2F;">Current status and backlog for the future releases</a></li>
+        
+        <li><a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;news&#x2F;enterprise-agent-open-source&#x2F;">A New Chapter: SAP Enterprise OrientDB joining the Open-Source Community!</a></li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://orientdb.dev">OrientDB.dev</a>
+            <a rel="me" href="https://fosstodon.org/@orientdb">Mastodon</a>
+            <a href="https://matrix.to/#/#orientdb:matrix.org">Matrix Chat</a>
+        </small>
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

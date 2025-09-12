@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OrientDB work in progress update 2025 Q1 |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon-orientdb.png">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #212127;
+        /* Primary theme text color */
+        --primary-text-color: #ee521b;
+        /* Primary theme link color */
+        --primary-link-color: #ee521b;
+        /* Secondary color: the background body color */
+        --secondary-color: #ffffff;
+        --secondary-text-color: #212127;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #ee521b;
+    }
+    .logo img {
+        width:auto !important;
+    }
+    .nav-item:hover {
+        color:#ffffff !important;
+    }
+</style>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://orientdb.dev/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;">
+    <div class="logo">
+        <img src="https://orientdb.dev/logo.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;downloads&#x2F;">Download</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;getting-started&#x2F;">Getting Started</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;documentation&#x2F;">Docs</a>
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;support&#x2F;">Support</a>
+        
+    
+    
+        
+        <a class="nav-item subtitle-text" href="&#x2F;news&#x2F;">News</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        <div class="content text">
+            
+<div class="heading-text">OrientDB work in progress update 2025 Q1</div>
+2025-04-22
+<h1 id=""></h1>
+<p>Since the last update have passed a few months so here is an update on what happened on the develop branch in the meanwhile.</p>
+<p>As mentioned in the original work post, most of the effort for the 4.0 is removed long deprecated things,
+and in this few months have been removed two main legacy APIs. If you have been using OrientDB for a while you may be a bit affectionate to them as they were the main APIs before the 3.x,
+but now <code>ODadabaseDocumentTx</code> and <code>OServerAdmin</code> are not part of the codebase anymore, together with them have been removed some related helpers, and the underlying implementations that they required,
+this was not a big amount of code, but these APIs where used in a lot of tests, so it has been long effort to convert all legacy tests to new APIs</p>
+<p>Some other refactor work that was not mentioned in early posts was also done, mostly around the client implementation,
+traditionally OrientDB used as interface for network layer the storage interface, the time revealed that was not a good design choice, making way more complex handle evolution of remote network and disk persistence,
+resulting in actual storage implementation details leak around the codebase, without respecting the interface, now the network implementation do not implement the storage interface anymore,
+making the client implementation actually look like a client implementation without low level storage concepts in it, and the storage interface is now again the separation layer between raw data persistence and database logic,
+more work still need to be done to split clearly the storage implementation and the higher level implementations and make the persistence engine pluggable again like in OrientDB 1.x, this will probably be done during the development of 4.x.</p>
+<p>The last and the biggest set of work was done around one really important issue, that was the memory usage of the query engine,
+in 3.x you could drain all the memory of the server with a properly crafted not too complex query, this was due to the algorithm that was used to find the indexes to use in the query,
+this algorithm has been redesigned from scratch resulting in a way lower memory usage for complex query with multiple conditions, with this redesign though some of the optimization
+that existed in the previous implementation that improved the performance for simple queries are not there anymore and need to be re-done, an example of this is avoiding to check the condition already handled by the index lookup,
+these optimizations are not critical for a 4.0.0 release, but will be good if they will be included before the final release, also with the new implementation additional optimization are now possible.
+So the current implementation has slightly different performance characteristics compared to 3.x, some simpler query may be a bit slower and some more complex query will be way faster, later
+on in the implementation will be done some profiling and optimization to make sure to have only performance improvements and not regressions.</p>
+<p>Going back to the original list of things to do here is the update status:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Remove legacy query engine APIs</li>
+<li><input disabled="" type="checkbox"/>
+Remove legacy document store APIs</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Remove legacy database APIs</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Fix major issues in query engine and query performance improvement</li>
+<li><input disabled="" type="checkbox"/>
+Transactional DDLs</li>
+<li><input disabled="" type="checkbox"/>
+In memory database backup &amp; restore</li>
+<li><input disabled="" type="checkbox"/>
+Support for distributed "in memory" databases</li>
+<li><input disabled="" type="checkbox"/>
+Split distributed transaction log from WAL</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Remove of TP2(aka blueprints) APIs from code</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Include of TP3(aka gremlin) APIs in main repository</li>
+<li><input disabled="" type="checkbox"/>
+Rewrite distributed node discovery</li>
+<li><input disabled="" type="checkbox"/>
+Introduce proper consensus based algorithm for distributed topology management</li>
+<li><input disabled="" type="checkbox"/>
+New minimum java versions as 17, with migrations with the next major</li>
+<li><input disabled="" type="checkbox"/>
+Lucene integration improvements</li>
+<li><input disabled="" type="checkbox"/>
+Review of data types trying to remove redundant one potentially adding new types</li>
+<li><input disabled="" type="checkbox"/>
+Add &amp; Complete server commands</li>
+<li><input disabled="" type="checkbox"/>
+Review the console to integrate server commands</li>
+<li><input disabled="" type="checkbox"/>
+Introduce a third party http server</li>
+<li><input disabled="" type="checkbox"/>
+Review and improve non java clients</li>
+<li><input disabled="" type="checkbox"/>
+Review and upgrades in studio dependencies</li>
+<li><input disabled="" type="checkbox"/>
+Review metrics, maybe integration of OpenTelemetry</li>
+</ul>
+<p>Again this list do not need to be all complete to release a 4.0.0, but few more critical points need to be done before releasing the 4.0.0</p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://orientdb.dev">OrientDB.dev</a>
+            <a rel="me" href="https://fosstodon.org/@orientdb">Mastodon</a>
+            <a href="https://matrix.to/#/#orientdb:matrix.org">Matrix Chat</a>
+        </small>
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

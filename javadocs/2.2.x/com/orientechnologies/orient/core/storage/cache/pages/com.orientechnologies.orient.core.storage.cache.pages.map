@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OLruPageCache.html" title="com.orientechnologies.orient.core.storage.cache.pages.OLruPageCache" alt="" coords="16,118,136,143"/>
+<area shape="rect" id="node1" href="./OLruPageCache.html" title="&lt;TABLE&gt;" alt="" coords="5,107,147,155"/>
+<area shape="rect" id="node2_1" href="./OPageCache.html" title="com.orientechnologies.orient.core.storage.cache.pages.OPageCache" alt="" coords="195,11,295,53"/>
+<area shape="rect" id="node2" href="./OPageCache.html" title="&lt;TABLE&gt;" alt="" coords="185,5,306,59"/>
+<area shape="rect" id="node3_2" href="./OTinyPageCache.html" title="com.orientechnologies.orient.core.storage.cache.pages.OTinyPageCache" alt="" coords="181,118,309,143"/>
+<area shape="rect" id="node3" href="./OTinyPageCache.html" title="&lt;TABLE&gt;" alt="" coords="171,107,320,155"/>
+<area shape="rect" id="node4_3" href="./OPassthroughPageCache.html" title="com.orientechnologies.orient.core.storage.cache.pages.OPassthroughPageCache" alt="" coords="355,118,535,143"/>
+<area shape="rect" id="node4" href="./OPassthroughPageCache.html" title="&lt;TABLE&gt;" alt="" coords="345,107,546,155"/>
+</map>

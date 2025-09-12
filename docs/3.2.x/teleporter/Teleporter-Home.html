@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Teleporter - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="teleporter"><a class="header" href="#teleporter">Teleporter</a></h1>
+<p><strong>OrientDB Teleporter</strong> is a tool that synchronizes a RDBMS to OrientDB database. You can use Teleporter to:</p>
+<ul>
+<li>Import your existing RDBMS to OrientDB</li>
+<li>Keep your OrientDB database synchronized with changes from the RDBMS. In this case the database on RDBMS remains the primary and the database on OrientDB a synchronized copy. <a href="Teleporter-Sequential-Executions-and-One-Way-Synchronizer.html">Synchronization</a> is one way, so all the changes in OrientDB database will not be propagated to the RDBMS</li>
+</ul>
+<p>Teleporter is fully compatible with several RDBMS that have a JDBC driver: we successfully tested Teleporter with Oracle, SQLServer, MySQL, PostgreSQL and HyperSQL. Teleporter manages all the necessary type conversions between the different DBMSs and imports all your data as Graph in OrientDB.</p>
+<p><strong>NOTE</strong>: This feature is available both for the <a href="http://orientdb.com/orientdb-enterprise">OrientDB Enterprise Edition</a> and the <a href="http://orientdb.dev/downloads/">OrientDB Community Edition</a>. <strong>But beware</strong>: in <strong>community edition</strong> you can migrate your source relational database but <strong>you cannot enjoy the synchronize feature</strong>, only available in the enterprise edition.</p>
+<h2 id="how-teleporter-works"><a class="header" href="#how-teleporter-works">How Teleporter works</a></h2>
+<p>Teleporter looks for the specific DBMS meta-data in order to perform a logical inference of the source DB schema for the building of a corresponding graph model. Eventually the data importing phase is performed.</p>
+<p>Teleporter has a pluggable importing strategy. Two strategies are provided out of the box:</p>
+<ul>
+<li><strong>naive</strong> strategy, the simplest one</li>
+<li><strong>naive-aggregate</strong> strategy. It performs a "naive" import of the data source. The data source schema is translated semi-directly in a correspondent and coherent graph model using an aggregation policy on the junction tables of dimension equals to 2</li>
+</ul>
+<p>To learn more about the two different execution strategies <a href="Teleporter-Execution-Strategies.html">click here.</a></p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>Teleporter is a tool written in Java, but can be used as a tool thanks to the teleporter.sh script (or .bat on Windows).</p>
+<pre><code>./oteleporter.sh -jdriver &lt;jdbc-driver&gt; -jurl &lt;jdbc-url&gt; -juser &lt;username&gt; 
+                -jpasswd &lt;password&gt; -ourl &lt;orientdb-url&gt; [-s &lt;strategy&gt;]
+                [-nr &lt;name-resolver&gt;] [-v &lt;verbose-level&gt;] 
+                ([-include &lt;table-names&gt;] | [-exclude &lt;table-names&gt;]) 
+                [-inheritance &lt;orm-technology&gt;:&lt;ORM-file-url&gt;] 
+                [-conf &lt;configuration-file-location&gt;]
+</code></pre>
+<h3 id="arguments"><a class="header" href="#arguments">Arguments</a></h3>
+<ul>
+<li><strong>-jdriver</strong> is the driver name of the DBMS from which you want to execute the import (it's not case sensitive)</li>
+<li><strong>-jurl</strong> is the JDBC URL giving the location of the source database to import</li>
+<li><strong>-ourl</strong> is the URL for the destination OrientDB graph database</li>
+<li><strong>-juser (optional)</strong> is the username to access the source database</li>
+<li><strong>-jpasswd (optional)</strong> is the password to access the source database</li>
+<li><strong>-s (optional)</strong> is the strategy adopted during the importing phase. If not specified naive-aggregate strategy is adopted. Possible values:</li>
+<li><strong>naive</strong>: performs a "naive" import of the data source. The data source schema is translated semi-directly in a correspondent and coherent graph model</li>
+<li><strong>naive-aggregate</strong>: performs a "naive" import of the data source. The data source schema is translated semi-directly in a correspondent and coherent graph model using an aggregation policy on the junction tables of dimension equals to 2</li>
+<li><strong>-nr (optional)</strong> is the name of the resolver which transforms the names of all the elements of the source database
+according to a specific convention (if not specified original convention is adopted). Possible values:</li>
+<li><strong>original</strong>: maintains the original name convention</li>
+<li><strong>java</strong>: performs name transformations on all the elements of the data source according to the Java convention</li>
+<li><strong>-v (optional)</strong> is the level of verbosity printed to the output during the execution (if not specified INFO level will be adopted). Levels:</li>
+<li><strong>0</strong>: NO logging messages will be printed</li>
+<li><strong>1</strong>: DEBUG level logging messages</li>
+<li><strong>2</strong>: INFO level logging messages (default)</li>
+<li><strong>3</strong>: WARNING level logging messages</li>
+<li><strong>4</strong>: ERROR level logging messages</li>
+<li><strong>-include (optional)</strong> allows you to import only the listed tables</li>
+<li><strong>-exclude (optional)</strong> excludes the listed tables from the importing process</li>
+<li><strong>-inheritance (optional)</strong> executes the import taking advantage of OrientDB's polymorphism</li>
+<li><strong>-config</strong> allows you to define a custom configuration for your importing job</li>
+</ul>
+<h2 id="access-credentials"><a class="header" href="#access-credentials">Access Credentials</a></h2>
+<p>By convention three users are always created by default each time a new database is built. Passwords are the same as the user name. Default users are:</p>
+<ul>
+<li><code>admin</code>, with default password "<code>admin</code>", has access to all functions without limitation.</li>
+<li><code>reader</code>, with default password "<code>reader</code>", is the classic read-only user. The reader can read any records but can't modify or delete them and has no access to internal information such as users and roles, themselves.</li>
+<li><code>writer</code>, with the default password "<code>writer</code>", is like the user reader but can also create, update, and delete records.</li>
+</ul>
+<p>For further informations about the Security of the OrientDB database <a href="https://github.com/orientechnologies/orientdb-docs/blob/master/Database-Security.md">click here.</a></p>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<h3 id="importing-testdb-from-postgresql-dbms-with-default-parameters"><a class="header" href="#importing-testdb-from-postgresql-dbms-with-default-parameters">Importing "testdb" from PostgreSQL DBMS with default parameters</a></h3>
+<p>Using plocal connection:</p>
+<pre><code>./oteleporter.sh -jdriver postgresql -jurl jdbc:postgresql://localhost:5432/testdb 
+                -juser username -jpasswd password -ourl plocal:$ORIENTDB_HOME/databases/testdb
+</code></pre>
+<p>Using remote connection:</p>
+<pre><code>./oteleporter.sh -jdriver postgresql -jurl jdbc:postgresql://localhost:5432/testdb 
+                -juser username -jpasswd password -ourl remote:localhost/testdb
+</code></pre>
+<p>With these parameters it will be performed an import according to the default settings:</p>
+<ul>
+<li>strategy adopted: <strong>naive-aggregate</strong></li>
+<li>name resolver: <strong>original name resolver</strong></li>
+<li>level of verbosity: <strong>INFO</strong> (2nd level)</li>
+</ul>
+<h3 id="importing-testdb-from-postgresql-dbms-with-customized-optional-parameters"><a class="header" href="#importing-testdb-from-postgresql-dbms-with-customized-optional-parameters">Importing "testdb" from PostgreSQL DBMS with customized optional parameters</a></h3>
+<p>Using plocal connection:</p>
+<pre><code>./oteleporter.sh -jdriver postgresql -jurl jdbc:postgresql://localhost:5432/testdb 
+                -juser username -jpasswd password -ourl plocal:$ORIENTDB_HOME/databases/testdb 
+                -s naive -nr java -v 1
+</code></pre>
+<p>Using remote connection:</p>
+<pre><code>./oteleporter.sh -jdriver postgresql -jurl jdbc:postgresql://localhost:5432/testdb 
+                -juser username -jpasswd password -ourl remote:localhost/testdb 
+                -s naive -nr java -v 1
+</code></pre>
+<p>With these parameters it will be performed an import according to the chosen settings:</p>
+<ul>
+<li>strategy adopted: <strong>naive</strong></li>
+<li>name resolver: <strong>java name resolver</strong></li>
+<li>level of verbosity: <strong>DEBUG</strong> (1st level)</li>
+</ul>
+<h2 id="teleporter-execution"><a class="header" href="#teleporter-execution">Teleporter Execution</a></h2>
+<p>Teleporter execution consists of 4 steps:</p>
+<ol>
+<li><strong>Source DB Schema Building:</strong> the source database schema is built by querying the source DB metadata.</li>
+<li><strong>Graph Model Building:</strong> a correspondent and coherent Graph Model is built.</li>
+<li><strong>OrientDB Schema Writing:</strong> the OrientDB schema is written according to the Graph Model in memory.</li>
+<li><strong>OrientDB importing:</strong> importing data from source database to OrientDB.</li>
+</ol>
+<p>Thus the whole workflow is:</p>
+<p><img src="../images/teleporter-whole-workflow.png" alt="Whole Workflow" /></p>
+<p>Below is reported a Teleporter execution dump:</p>
+<p><img src="../images/teleporter-execution-dump.png" alt="Execution Dump" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../serverlevel/Exists-System-User.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../teleporter/Teleporter-Installation-and-Configuration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../serverlevel/Exists-System-User.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../teleporter/Teleporter-Installation-and-Configuration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../common/concur/resource/OSharedContainer.html" title="com.orientechnologies.common.concur.resource.OSharedContainer" alt="" coords="565,11,703,53"/>
+<area shape="rect" id="node1" href="../../../common/concur/resource/OSharedContainer.html" title="&lt;TABLE&gt;" alt="" coords="555,5,713,59"/>
+<area shape="rect" id="node2_1" href="./OStorage.html" title="com.orientechnologies.orient.core.storage.OStorage" alt="" coords="405,112,498,155"/>
+<area shape="rect" id="node2" href="./OStorage.html" title="&lt;TABLE&gt;" alt="" coords="394,107,509,160"/>
+<area shape="rect" id="node4_2" href="./OStorageAbstract.html" title="com.orientechnologies.orient.core.storage.OStorageAbstract" alt="" coords="573,222,706,247"/>
+<area shape="rect" id="node4" href="./OStorageAbstract.html" title="&lt;TABLE&gt;" alt="" coords="562,211,717,259"/>
+<area shape="rect" id="node3_3" href="./OStorageProxy.html" title="com.orientechnologies.orient.core.storage.OStorageProxy" alt="" coords="16,213,132,256"/>
+<area shape="rect" id="node3" href="./OStorageProxy.html" title="&lt;TABLE&gt;" alt="" coords="5,208,143,261"/>
+<area shape="rect" id="node6_4" href="./OIdentifiableStorage.html" title="com.orientechnologies.orient.core.storage.OIdentifiableStorage" alt="" coords="178,213,330,256"/>
+<area shape="rect" id="node6" href="./OIdentifiableStorage.html" title="&lt;TABLE&gt;" alt="" coords="167,208,341,261"/>
+<area shape="rect" id="node8_5" href="../../server/distributed/impl/ODistributedStorage.html" title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" alt="" coords="375,222,527,247"/>
+<area shape="rect" id="node8" href="../../server/distributed/impl/ODistributedStorage.html" title="&lt;TABLE&gt;" alt="" coords="365,211,538,259"/>
+<area shape="rect" id="node5_6" href="./OStorageInfo.html" title="com.orientechnologies.orient.core.storage.OStorageInfo" alt="" coords="261,11,365,53"/>
+<area shape="rect" id="node5" href="./OStorageInfo.html" title="&lt;TABLE&gt;" alt="" coords="250,5,375,59"/>
+<area shape="rect" id="node7_7" href="../util/OBackupable.html" title="com.orientechnologies.orient.core.util.OBackupable" alt="" coords="410,11,514,53"/>
+<area shape="rect" id="node7" href="../util/OBackupable.html" title="&lt;TABLE&gt;" alt="" coords="399,5,525,59"/>
+</map>

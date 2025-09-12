@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Teleporter - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <blockquote>
+<p>Only users with grant <code>server.importers</code> can see this section</p>
+</blockquote>
+<h1 id="teleporter"><a class="header" href="#teleporter">Teleporter</a></h1>
+<p>In Studio 2.2 you can configure the execution of the new Teleporter plugin, which allows you to import your relational database into OrientDB in few simple steps.
+If you are interested in a detailed description of the tool, of its inner workings and features you can view the <a href="../teleporter/Teleporter-Home.html">Teleporter Documentation</a>.</p>
+<p><strong>NOTE</strong>: This feature is available both for the <a href="http://orientdb.com/orientdb-enterprise">OrientDB Enterprise Edition</a> and the <a href="http://orientdb.dev/downloads/">OrientDB Community Edition</a>. <strong>But beware</strong>: in <strong>Community Edition</strong> you can migrate your source relational database but <strong>you cannot enjoy the synchronize feature</strong>, only available in the <strong>Enterprise Edition</strong>.</p>
+<p>This visual tool consists in a wizard composed of 4 steps, where just <strong>Step 1</strong> and <strong>Step 2</strong> are strictly necessary in order to perform your migration.
+Let's have a look at each configuration step.</p>
+<h3 id="step-1"><a class="header" href="#step-1">Step 1</a></h3>
+<p>In the first step you have to type the following required parameters:</p>
+<ul>
+<li><code>Database Driver</code>, as the driver name of the DBMS from which you want to execute the import. You have to choose among:
+<ul>
+<li>Oracle</li>
+<li>SQLServer</li>
+<li>Mysql</li>
+<li>PostgreSQL</li>
+<li>HyperSQL</li>
+</ul>
+</li>
+<li><code>Database Host</code>, as the host where your DBMS instance is running on</li>
+<li><code>Port</code>, as the port where your DBMS is listening on</li>
+<li><code>Database Name</code>, as the name of the source database</li>
+<li><code>User Name</code>, as the username to access the source database (it may be blank)</li>
+<li><code>Password</code>, as the password to access the source database (it may be blank)</li>
+</ul>
+<p>After you typed all the required parameters for the migration you can test the connection.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step1-tryConnection.png" alt="Test Connection" /></p>
+<h3 id="step-2"><a class="header" href="#step-2">Step 2</a></h3>
+<p>In the second step you have to specify all the parameters about the OrientDB target database:</p>
+<ul>
+<li><code>Connection protocol</code>, as the protocol adopted to write in OrientDB. You have to choose among:
+<ul>
+<li>plocal</li>
+<li>memory</li>
+</ul>
+</li>
+<li><code>OrientDB Database Name</code>, as the name of the target database in OrientDB</li>
+<li><code>Strategy</code>, as the strategy adopted during the migration (<a href="../teleporter/Teleporter-Home.html">More</a> about strategies)</li>
+<li><code>Name Resolver</code>, as the basic name resolver to adopt during names' resolution</li>
+<li><code>Inheritance descriptor</code>, as the XML file's path. In this descriptor you can report all the info describing inheritance relationships present between the tables in the source database</li>
+<li><code>Log Level</code>, as the log level adopted by Teleporter during the migration. You can choose among:
+<ul>
+<li>NO</li>
+<li>DEBUG</li>
+<li>INFO</li>
+<li>WARNING</li>
+<li>ERROR</li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/studio-teleporter/studio-teleporter-step2.png" alt="Teleporter Job Running" /></p>
+<p>Once we have collected all the minimal info needed for the migration, you can run your configured job through the <code>START MIGRATION</code> button, then the job progress monitor will be displayed:</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-job-running.png" alt="Teleporter Job Running" /></p>
+<p>At the end of the migration, statistics and warnings about the process are reported as shown below:</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-job-completed.png" alt="Teleporter Job Completed" /></p>
+<p>Otherwise you can go on in your migrations customisation jumping to the next step.</p>
+<h3 id="step-3"><a class="header" href="#step-3">Step 3</a></h3>
+<p>Here you can exploit Teleporter's filtering features: in the panel on the left all the tables present in the source database are reported. If you want migrate just a subset of these tables, you just have to select and move them in the right panel through the specific buttons (you can also drag-and-drop the selected items).</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step3-filtering-1.png" alt="Teleporter Job Running" /></p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step3-filtering-2.png" alt="Teleporter Job Running" /></p>
+<p>You can perform the same operations also in the opposite direction, that is excluding some tables during the migration just moving them from the right panel to the left one.</p>
+<p>If the right panel is empty, no filters will be applied. Instead, if the right panel is not empty, just the selected tables in the right panel will be imported while all the others will be filtered out.
+Thus, for example, these two configurations are equivalent:</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step3-filtering-3.png" alt="Teleporter Job Running" /></p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step3-filtering-4.png" alt="Teleporter Job Running" /></p>
+<p>Here too you can start your migration or go to the 4th and last configuration step.</p>
+<h3 id="step-4"><a class="header" href="#step-4">Step 4</a></h3>
+<p>In the last step Teleporter will provide you a Graph Model coming from the translation of the ER-Model inferred from the source database schema. The correspondent Graph Model is built according to basic mapping rules and your choices as well (filters applied, chosen strategy, name resolver adopted etc.).
+This step has two aims:</p>
+<ul>
+<li>it gives you an idea of how your source database will appear once imported in OrientDB</li>
+<li>it allows you to edit the graph model</li>
+</ul>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-only-graph.png" alt="Teleporter Job Running" /></p>
+<p>You can see two panels, the Graph Model Panel on the left, containing the Graph Model built from Teleporter, and the Details Panel on the right, reporting all the details about the current selected element in the left panel.</p>
+<p>The Details Panel is divided into two sections:</p>
+<ol>
+<li>in the top area you can enjoy a graph perspective of the element selected in the Graph Panel: you can inspect info about the OrientDB schema, like class name and properties.</li>
+<li>in the bottom area you have a source-schema perspective, where you got the source-schema items the information above comes from.</li>
+</ol>
+<p>This step is conceived to make very easy the graph model editing and to change the mapping with the source database schema. In fact you can modify the basic mapping</p>
+<ul>
+<li>Renaming classes (both for Vertex and Edge classes)</li>
+<li>Excluding/re-including a property mapped with a column in the correspondent source table</li>
+<li>Adding new properties</li>
+<li>Dropping existent properties</li>
+<li>Editing properties</li>
+<li>Adding new Edge classes and/or instances</li>
+<li>Inspecting original schema data, both for tables and relationships</li>
+</ul>
+<p>Let's have a deeper look at each of these operations.</p>
+<h4 id="inspecting-classes-and-source-correspondent-elements"><a class="header" href="#inspecting-classes-and-source-correspondent-elements">Inspecting Classes and source correspondent elements</a></h4>
+<p>Via the Details Panel you can inspect information about:</p>
+<ol>
+<li>Vertex class</li>
+</ol>
+<p>If you select a Vertex Class, you can inspect the correspondence between each column in the source table and the correspondent property in the translated Vertex class. Columns and properties are strongly bound: you can exclude, include or rename a property, but the bindings with the correspondent column will remain.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-graph+selected-vertex.png" alt="Teleporter Job Running" /></p>
+<ol start="2">
+<li>Edge Class</li>
+</ol>
+<p>Everytime you select an edge in the graph, you can find out about the original relationship it comes from in the bottom section in the Details Panel. We can have 2 kinds of relationships, and coherently 2 kinds of edge rendering.</p>
+<ul>
+<li>
+<p>1-N Relationship</p>
+<p>Edges coming from 1-N Relationships are represented through a continuous arrow.</p>
+</li>
+</ul>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-simple-edge-rendering.png" alt="Teleporter Job Running" /></p>
+<p>The rendered Relationship involves just two tables of course, the starting table (aka <strong>foreign table</strong>) and the arrival table (aka <strong>parent table</strong>). Clicking the question mark you can also see for each table all the columns involved in the relationship.</p>
+<p align="center">
+<img src="./images/studio-teleporter/studio-teleporter-step4-simple-edge-rel-view.png" width="580" height="628" />
+</p>
+<ul>
+<li>
+<p>N-N Relationship</p>
+<p>Let's suppose you have got the following graph, obtained performing join tables aggregation through the naive-aggregate strategy.</p>
+</li>
+</ul>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-aggregated-graph+legend.png" alt="Teleporter Job Running" /></p>
+<p>Edges coming from N-N Relationships are represented through a dashed arrow and in the bottom you can see the 2 relationships involving two external tables and the join table between them.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-aggr-edge-rendering.png" alt="Teleporter Job Running" /></p>
+<p>Here too, clicking the question mark you can inspect the involved columns for both the relationships.</p>
+<p align="center">
+<img src="./images/studio-teleporter/studio-teleporter-step4-aggr-edge-rel-view-1.png" width="430" height="465" /> <img src="./images/studio-teleporter/studio-teleporter-step4-aggr-edge-rel-view-2.png" width="430" height="465" />
+</p>
+<h4 id="search-bar"><a class="header" href="#search-bar">Search Bar</a></h4>
+<p>In the Graph Panel a useful search bar is provided to allow you fast vertex selection according to the vertex class name or the source table name.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-search-bar.png" alt="Teleporter Job Running" /></p>
+<p>In the example above you can see that for each class we have two items, the vertex class name and the source table name. In this case each couple of items are equal because no classes were renamed nor a name resolver was adoted during the basic graph model building.</p>
+<h4 id="class-renaming"><a class="header" href="#class-renaming">Class Renaming</a></h4>
+<p>You can rename a class just selecting an element in the graph (vertex or edge) and clicking the "Rename Class" button in the "Edit Class" dropdown menu.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-rename-class-button.png" alt="Teleporter Job Running" /></p>
+<p>Then you just have to choose the new name for the specific class.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-rename-class-modal.png" alt="Teleporter Job Running" /></p>
+<p>The class name will be updated in the graph, in the search bar and in the Details Panel of course.</p>
+<h4 id="property-excluding"><a class="header" href="#property-excluding">Property Excluding</a></h4>
+<p>We have two ways to exclude a property mapped with a column in the source table:</p>
+<ol>
+<li>
+<p>Unflagging the correspondent column name in the source table perspective.</p>
+</li>
+<li>
+<p>Dropping the property from the class perspective.</p>
+</li>
+</ol>
+<p align="center">
+<img src="./images/studio-teleporter/studio-teleporter-step4-excluded-props.png" width="580" height="628" />
+</p>
+<h4 id="property-dropping"><a class="header" href="#property-dropping">Property Dropping</a></h4>
+<p>You can also drop a property via the specific button.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-drop-prop-modal.png" alt="Teleporter Job Running" /></p>
+<p>You can have 2 different behaviours depending on whether the property is bound with a column in the source table or not.</p>
+<ul>
+<li>
+<p>If the property is bound with a source column, when you drop it you will get the same result as when you exclude it, so it will not be migrated in OrientDB but you can always include it again, as the binding is not deleted at all.</p>
+</li>
+<li>
+<p>If the property is not bound with a source column, then when you drop it the property will be definitively deleted.</p>
+</li>
+</ul>
+<h4 id="property-adding"><a class="header" href="#property-adding">Property Adding</a></h4>
+<p>You can add new properties just clicking the "Add property" button in the "Edit Class" dropdown menu.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-add-prop-button.png" alt="Teleporter Job Running" /></p>
+<p>In the just opened window you can choose to add a new property never defined before, selecting the "Add new property" radio button,</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-add-prop-modal1.png" alt="Teleporter Job Running" /></p>
+<p>or re-include some excluded properties if any, selecting the "Include Property" radio button.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-add-prop-modal2.png" alt="Teleporter Job Running" /></p>
+<h4 id="property-editing"><a class="header" href="#property-editing">Property Editing</a></h4>
+<p>You can also edit an existing property: you can choose a different name, type, or just add/remove some constraints.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-edit-prop-modal.png" alt="Teleporter Job Running" /></p>
+<h4 id="property-including"><a class="header" href="#property-including">Property Including</a></h4>
+<p>We have two ways to include a property mapped with a column in the source table:</p>
+<ol>
+<li>
+<p>Flagging the correspondent column name in the source table perspective.</p>
+</li>
+<li>
+<p>Including the property from the OrientDB class perspective through the "Add property" button as shown above.</p>
+</li>
+</ol>
+<p align="center">
+<img src="./images/studio-teleporter/studio-teleporter-step4-reincluded-props.png" width="580" height="628" />
+</p>
+<h4 id="edge-adding"><a class="header" href="#edge-adding">Edge Adding</a></h4>
+<p>Often you need to add an edge in your graph model, if it's missing for some reason.
+For example, if you didn't defined some foreign keys between the tables on which you usually perform join operations, you will lose this kind of info during the importing process and you will not have any edges in your final Graph Database.
+Sometimes you just want to enrich the model adding new edges.
+In both the cases you have to select a vertex in the graph and then click the "Add Edge" button in the "Action" dropdown menu.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-add-edge-button.png" alt="Teleporter Job Running" /></p>
+<p>Then you have to drag the edge till the target vertex and click over it.</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-add-edge-drag.png" alt="Teleporter Job Running" /></p>
+<p>A new window will open where you have to specify the name of the Edge class for the new edge instance and some mapping info:</p>
+<ul>
+<li>fromTable: the foreign table that imports the primary key of the parent table.</li>
+<li>fromColumns: the attributes involved in the foreign key.</li>
+<li>toTable: the parent table whose primary key is imported by the foreign table.</li>
+<li>toColumns: the attributes involved in the imported primary key.</li>
+</ul>
+<p>As said above, when we want to create a new edge instance, we can create a new Edge class</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-add-edge-modal1.png" alt="Teleporter Job Running" /></p>
+<p>or just choose a preexisting Edge class</p>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-add-edge-modal2.png" alt="Teleporter Job Running" /></p>
+<h4 id="edge-dropping"><a class="header" href="#edge-dropping">Edge Dropping</a></h4>
+<p>When you select an edge in the graph model, you have 2 choices:</p>
+<ol>
+<li>Delete the Edge class with all its instances</li>
+</ol>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-drop-edge-class.png" alt="Teleporter Job Running" /></p>
+<ol start="2">
+<li>Delete only the selected instance of the specific Edge Class</li>
+</ol>
+<p><img src="./images/studio-teleporter/studio-teleporter-step4-drop-edge-instance.png" alt="Teleporter Job Running" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ee/Security.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ee/Neo4j-Importer.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ee/Security.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ee/Neo4j-Importer.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

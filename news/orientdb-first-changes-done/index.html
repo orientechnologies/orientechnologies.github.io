@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OrientDB first set of changes done |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon-orientdb.png">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #212127;
+        /* Primary theme text color */
+        --primary-text-color: #ee521b;
+        /* Primary theme link color */
+        --primary-link-color: #ee521b;
+        /* Secondary color: the background body color */
+        --secondary-color: #ffffff;
+        --secondary-text-color: #212127;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #ee521b;
+    }
+    .logo img {
+        width:auto !important;
+    }
+    .nav-item:hover {
+        color:#ffffff !important;
+    }
+</style>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://orientdb.dev/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;">
+    <div class="logo">
+        <img src="https://orientdb.dev/logo.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;downloads&#x2F;">Download</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;getting-started&#x2F;">Getting Started</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;documentation&#x2F;">Docs</a>
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;support&#x2F;">Support</a>
+        
+    
+    
+        
+        <a class="nav-item subtitle-text" href="&#x2F;news&#x2F;">News</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        <div class="content text">
+            
+<div class="heading-text">OrientDB first set of changes done</div>
+2025-01-13
+<h1 id=""></h1>
+<p>As mentioned in the previous <a href="/news/status-and-backlog/">post</a>, there was some work in progress to remove some legacy APIs and implementation from the OrientDB code,
+this work is key for a future major release allowing to work on a more recent, small and stable codebase.</p>
+<p>Most of the work consisted of migrate some thousand of tests to the new APIs, and removing few tests that do not make sense with the current API, this work as been going on for last few years and resulted as well in the discovery of some compatibility and implementation issues, that have made the work harder and longer, but resulted in a quite sizeable set of issues to be resolved, these fixes have been also ported to 3.2.x actually a big part of the last 10 patch releases in 3.2.x are result of this work.</p>
+<p>Now all this work is done and the legacy query APIs based on <code>OCommandSQL</code>, <code>OAsyncQuery</code>, <code>OSyncQuery</code>, <code>OCommandScript</code>, have been removed from the code, together with the relative implementation.</p>
+<p>In terms of code statistics, the removing of the legacy query engine resulted in this set of changes:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>291 files changed, 888 insertions(+), 37760 deletions(-)
+</span></code></pre>
+<p>This is quite big delete of code of the majority of it is actually "production" code, most of the test code is actually converted to the new implementation to guarantee compatibility.</p>
+<p>Also in terms of removing of legacy APIs one implementation supported in 3.2.x was thinkerpop 2.x that then was renamed to gremlin in the version 3.x, the tinkerpop APIs has been deprecated since long time so was now time to remove it from the main repository, together with this work was the promotion of the gremlin driver to the main repository that will be supported for foreseen future.</p>
+<p>The code statistics of removing of the thinkerpop 2.x code are:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>177 files changed, 57748 deletions(-)
+</span></code></pre>
+<p>The main repository did see some additional code imported, but this was anyway maintained before in different repositories, so do not have much of an impact on the overall statistics</p>
+<p>There are still some legacy APIs to be removed in the code, one over all is the historical class <code>ODatabaseDocumentTx</code> that has been there since 0.x, this will be for sure removed before the release of the next major.</p>
+<p>Checking the general work on progress of the original status post what we get now is:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Remove legacy query engine APIs</li>
+<li><input disabled="" type="checkbox"/>
+Remove legacy document store APIs</li>
+<li><input disabled="" type="checkbox"/>
+Remove legacy database APIs</li>
+<li><input disabled="" type="checkbox"/>
+Fix major issues in query engine and query performance improvement</li>
+<li><input disabled="" type="checkbox"/>
+Transactional DDLs</li>
+<li><input disabled="" type="checkbox"/>
+In memory database backup &amp; restore</li>
+<li><input disabled="" type="checkbox"/>
+Support for distributed "in memory" databases</li>
+<li><input disabled="" type="checkbox"/>
+Split distributed transaction log from WAL</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Remove of TP2(aka blueprints) APIs from code</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Include of TP3(aka gremlin) APIs in main repository</li>
+<li><input disabled="" type="checkbox"/>
+Rewrite distributed node discovery</li>
+<li><input disabled="" type="checkbox"/>
+Introduce proper consensus based algorithm for distributed topology management</li>
+<li><input disabled="" type="checkbox"/>
+New minimum java versions as 17, with migrations with the next major</li>
+<li><input disabled="" type="checkbox"/>
+Lucene integration improvements</li>
+<li><input disabled="" type="checkbox"/>
+Review of data types trying to remove redundant one potentially adding new types</li>
+<li><input disabled="" type="checkbox"/>
+Add &amp; Complete server commands</li>
+<li><input disabled="" type="checkbox"/>
+Review the console to integrate server commands</li>
+<li><input disabled="" type="checkbox"/>
+Introduce a third party http server</li>
+<li><input disabled="" type="checkbox"/>
+Review and improve non java clients</li>
+<li><input disabled="" type="checkbox"/>
+Review and upgrades in studio dependencies</li>
+<li><input disabled="" type="checkbox"/>
+Review metrics, maybe integration of OpenTelemetry</li>
+</ul>
+<p>This is already a bit of progress, making the next major release close, as well not all of this will probably be implemented in the next major, some of these points can be shipped also in a minor, so a major can be done earlier.</p>
+<p>There have been more work done in the last few months that is not listed here, and probably will be part of a next work in progress update, but for now this is all.</p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://orientdb.dev">OrientDB.dev</a>
+            <a rel="me" href="https://fosstodon.org/@orientdb">Mastodon</a>
+            <a href="https://matrix.to/#/#orientdb:matrix.org">Matrix Chat</a>
+        </small>
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

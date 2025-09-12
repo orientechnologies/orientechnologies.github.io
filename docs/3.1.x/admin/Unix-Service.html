@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Install as Service on Unix - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="install-as-service-on-unixlinux"><a class="header" href="#install-as-service-on-unixlinux">Install as Service on Unix/Linux</a></h1>
+<p>Following the installation guide above, whether you choose to download binaries or build from source, does not install OrientDB at a system-level.  There are a few additional steps you need to take in order to manage the database system as a service.</p>
+<p>OrientDB ships with a script, which allows you to manage the database server as a system-level daemon.  You can find it in the <code>bin/</code> path of your installation directory, (that is, at <code>$ORIENTDB_HOME/bin/orientdb.sh</code>.</p>
+<p>The script supports three parameters:</p>
+<ul>
+<li><code>start</code></li>
+<li><code>stop</code></li>
+<li><code>status</code></li>
+</ul>
+<h2 id="configuring-the-script"><a class="header" href="#configuring-the-script">Configuring the Script</a></h2>
+<p>In order to use the script on your system, you need to edit the file to define two variables: the path to the installation directory and the user you want to run the database server.</p>
+<pre>
+$ <code class="lang-sh userinput">vi $ORIENTDB_HOME/bin/orientdb.sh</code>
+
+#!/bin/sh
+# OrientDB service script
+#
+# Copyright (c) Orient Technologies LTD (http://www.orientechnologies.com)
+
+# chkconfig: 2345 20 80
+# description: OrientDb init script
+# processname: orientdb.sh
+
+# You have to SET the OrientDB installation directory here
+ORIENTDB_DIR="YOUR_ORIENTDB_INSTALLATION_PATH"
+ORIENTDB_USER="USER_YOU_WANT_ORIENTDB_RUN_WITH"
+</pre>
+<p>Edit the <code>ORIENTDB_DIR</code> variable to indicate the installation directory.  Edit the <code>ORIENTDB_USER</code> variable to indicate the user you want to run the database server, (for instance, <code>orientdb</code>).</p>
+<h2 id="installing-the-script"><a class="header" href="#installing-the-script">Installing the Script</a></h2>
+<p>Different operating systems and Linux distributions have different procedures when it comes to managing system daemons, as well as the procedure for starting and stopping them during boot up and shutdown.  Below are generic guides for init and systemd based unix systems as well Mac OS X.  For more information, check the documentation for your particular system.</p>
+<h3 id="installing-for-init"><a class="header" href="#installing-for-init">Installing for init</a></h3>
+<p>Many Unix-like operating systems such as FreeBSD, most older distributions of Linux, as well as current releases of Debian, Ubuntu and their derivatives use variations on SysV-style init for these processes.  These are typically the systems that manage such processes using the <code>service</code> command.</p>
+<p>To install OrientDB as a service on an init-based unix or Linux system, copy the modified <code>orientdb.sh</code> file from <code>$ORIENTDB_HOME/bin</code> into <code>/etc/init.d/</code>:</p>
+<pre>
+# <code class="lang-sh userinput">cp $ORIENTDB_HOME/bin/orientdb.sh /etc/init.d/orientdb</code>
+</pre>
+<p>Once this is done, you can start and stop OrientDB using the <code>service</code> command:</p>
+<pre>
+# <code class="lang-sh userinput">service orientdb start</code>
+Starting OrientDB server daemon...
+</pre>
+<h3 id="installing-for-systemd"><a class="header" href="#installing-for-systemd">Installing for systemd</a></h3>
+<p>Most newer releases of Linux, especially among the RPM-based distributions like Red Hat, Fedora, and CentOS, as well as future releases of Debian and Ubuntu use systemd for these processes.  These are the systems that manage such processes using the <code>systemctl</code> command.</p>
+<p>The OrientDB's  package  contains a service descriptor file for systemd based distros. The  <code>orientdb.service</code> is placed in the <code>bin</code> directory. To install OrientDB copy the <code>orientdb.service</code> to<code>/etc/systemd/system</code>  directory (check this, may depend on distro). Edit the file:</p>
+<pre>
+# <code class="lang-sh userinput">vi /etc/systemd/system/orientdb.service</code>
+
+#
+# Copyright (c) OrientDB LTD (http://http://orientdb.dev/)
+#
+
+[Unit]
+Description=OrientDB Server
+After=network.target
+After=syslog.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+User=ORIENTDB_USER
+Group=ORIENTDB_GROUP
+ExecStart=$ORIENTDB_HOME/bin/server.sh
+
+</pre>
+<p>Set the right user and group. You may want to use the absolute path instead of the environment variable <code>$ORIENTDB_HOME</code>.  Once this file is saved, you can start and stop the OrientDB server using the <code>systemctl</code> command:</p>
+<pre>
+# <code class="lang-sh userinput">systemctl start orientdb.service</code>
+</pre>
+<p>Additionally, with the <code>orientdb.service</code> file saved, you can set systemd to start the database server automatically during boot by issuing the <code>enable</code> command:</p>
+<pre>
+# <code class="lang-sh userinput">systemctl enable orientdb.service</code>
+Synchronizing state of orientdb.service with SysV init with /usr/lib/systemd/systemd-sysv-install...
+Executing /usr/lib/systemd/systemd-sysv-install enable orientdb
+Created symlink from /etc/systemd/system/multi-user.target.wants/orientdb.service to /etc/systemd/system/orientdb.service.
+</pre>
+<h2 id="installing-for-mac-os-x"><a class="header" href="#installing-for-mac-os-x">Installing for Mac OS X</a></h2>
+<h3 id="manual-install"><a class="header" href="#manual-install">Manual install</a></h3>
+<p>For Mac OS X:</p>
+<ul>
+<li>follow the steps described above, in the <code>Configuring the Script</code> section</li>
+<li>create an alias to the OrientDB system daemon script and the console.</li>
+</ul>
+<pre><code class="language-sh">$ alias orientdb-server=/path/to/$ORIENTDB_HOME/bin/orientdb.sh
+$ alias orientdb-console=/path/to/$ORIENTDB_HOME/bin/console.sh
+</code></pre>
+<p>You can now start the OrientDB database server using the following command:</p>
+<pre><code class="language-sh">$ orientdb-server start
+</code></pre>
+<p>Once the database starts, it is accessible through the console script.</p>
+<pre>
+$ <code class="lang-sh userinput">orientdb-console</code>
+
+OrientDB console v.1.6 www.orientechnologies.com
+Type 'HELP' to display all the commands supported.
+
+orientdb>
+</pre>
+<h3 id="brew"><a class="header" href="#brew">Brew</a></h3>
+<p>OrientDB is available through <a href="http://brew.sh/">brew</a>.</p>
+<pre>
+$ <code class="lang-sh userinput">brew install orientdb</code>
+</pre>
+<p>The installation process gives an output similar to the following one:</p>
+<pre><code class="language-sh">...
+==&gt; Downloading https://orientdb.dev/download.php?file=orientdb-community-&lt;ORIENTDB_VERSION&gt;.tar.gz
+==&gt; /usr/bin/nohup  /usr/local/Cellar/orientdb/&lt;ORIENTDB_VERSION&gt;/libexec/bin/server.sh &amp;
+==&gt; /usr/local/Cellar/orientdb/&lt;ORIENTDB_VERSION&gt;/libexec/bin/shutdown.sh
+==&gt; OrientDB installed, server's root user password is 'changeme'
+==&gt; Please, follow the instruction on the link below to reset it
+==&gt; http://orientdb.dev/docs/2.2/Server-Security.html#restoring-the-servers-user-root
+...
+</code></pre>
+<p>The installation process setups a default server's root user password that <strong>must</strong> be changed.
+The <code>orientdb-server-config.xml</code> file is installed in <code>/usr/local/Cellar/orientdb/&lt;ORIENTDB_VERSION&gt;/libexec/config/</code>.
+Open the file and remove the "root" user entry.
+Remove the tag <isAfterFirstTime>true</isAfterFirstTime> at the end of the file.
+Start the server on interactive console:</p>
+<pre><code class="language-sh">/usr/local/Cellar/orientdb/&lt;ORIENTDB_VERSION&gt;/libexec/bin/server.sh
+</code></pre>
+<p>The script asks for a new password for the database's root user.</p>
+<h2 id="other-resources"><a class="header" href="#other-resources">Other resources</a></h2>
+<p>To learn more about how to install OrientDB on specific environment please follow the guide below:</p>
+<ul>
+<li><a href="http://famvdploeg.com/blog/2013/01/setting-up-an-orientdb-server-on-ubuntu/">Install on Linux Ubuntu</a></li>
+<li><a href="http://team.ops4j.org/wiki/display/ORIENT/Installation+on+JBoss+AS">Install on JBoss AS</a></li>
+<li><a href="http://team.ops4j.org/wiki/display/ORIENT/Installation+on+GlassFish">Install on GlassFish</a></li>
+<li><a href="https://www.digitalocean.com/community/articles/how-to-install-and-use-orientdb-on-an-ubuntu-12-04-vps">Install on Ubuntu 12.04 VPS (DigitalOcean)</a></li>
+<li><a href="Unix-Service.html">Install as service on Unix, Linux and MacOSX</a></li>
+<li><a href="Windows-Service.html">Install as service on Windows</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../admin/installation/Installation-from-Source.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../admin/Windows-Service.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../admin/installation/Installation-from-Source.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../admin/Windows-Service.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

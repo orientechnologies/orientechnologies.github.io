@@ -1,0 +1,13 @@
+{
+  "demodb": {
+    "description": "The demo database from 3.0.x version, documentation and sample queries: https://orientdb.dev/docs/3.0.x/gettingstarted/demodb/",
+    "license": "Creative Commons",
+    "versions": {
+      "02.00.00": {
+        "compatibleFrom": "02.02.20",
+        "releasedOn": "2017-06-12",
+        "url": "https://data.orientdb.dev/public-databases/3.0.x/demodb.zip"
+      }
+    }
+  }
+}

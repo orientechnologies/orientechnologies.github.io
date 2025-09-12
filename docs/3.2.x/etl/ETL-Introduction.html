@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ETL - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-12-11 SAM -->
+<h1 id="etl"><a class="header" href="#etl">ETL</a></h1>
+<p>The Extractor Transformer and Loader, or ETL, module for OrientDB provides support for moving data to and from OrientDB databases using <a href="http://en.wikipedia.org/wiki/Extract,_transform,_load">ETL processes</a>.</p>
+<ul>
+<li><a href="Configuration-File.html">Configuration</a>: The ETL module uses a configuration file, written in JSON.</li>
+<li><a href="Extractor.html">Extractor</a> Pulls data from the source database.</li>
+<li><a href="Transformer.html">Transformers</a> Convert the data in the pipeline from its source format to one accessible to the target database.</li>
+<li><a href="Loader.html">Loader</a> loads the data into the target database.</li>
+</ul>
+<h2 id="how-etl-works"><a class="header" href="#how-etl-works">How ETL Works</a></h2>
+<p>The ETL module receives a backup file from another database, it then converts the fields into an accessible format and loads it into OrientDB.</p>
+<pre><code>EXTRACTOR =&gt; TRANSFORMERS[] =&gt; LOADER
+</code></pre>
+<p>For example, consider the process for a CSV file.  Using the ETL module, OrientDB loads the file, applies whatever changes it needs, then stores the record as a document into the current OrientDB database.</p>
+<pre><code>+-----------+-----------------------+-----------+
+|           |              PIPELINE             |
++ EXTRACTOR +-----------------------+-----------+
+|           |     TRANSFORMERS      |  LOADER   |
++-----------+-----------------------+-----------+
+|   FILE   ==&gt;  CSV-&gt;FIELD-&gt;MERGE  ==&gt; OrientDB |
++-----------+-----------------------+-----------+
+</code></pre>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>To use the ETL module, run the <code>oetl.sh</code> script with the configuration file given as an argument.</p>
+<pre>
+$ <code class="lang-sh userinput">$ORIENTDB_HOME/bin/oetl.sh config-dbpedia.json</code>
+</pre>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><img src="../images/warning.png" alt="NOTE" /></td><td><em>NOTE: If you are importing data for use in a distributed database, then you must set <code>ridBag.embeddedToSbtreeBonsaiThreshold=Integer.MAX\_VALUE</code> for the ETL process to avoid replication errors, when the database is updated online.</em></td></tr>
+</tbody></table>
+</div>
+<h3 id="run-time-configuration"><a class="header" href="#run-time-configuration">Run-time Configuration</a></h3>
+<p>When you run the ETL module, you can define its configuration variables by passing it a JSON file, which the ETL module resolves at run-time by passing them as it starts up.</p>
+<p>You could also define the values for these variables through command-line options.  For example, you could assign the database URL as <code>${databaseURL}</code>, then pass the relevant argument through the command-line:</p>
+<pre>
+$ <code class="lang-sh userinput">$ORIENTDB_HOME/bin/oetl.sh config-dbpedia.json \
+      -databaseURL=plocal:/tmp/mydb</code>
+</pre>
+<p>When the ETL module initializes, it pulls <code>/tmp/mydb</code> from the command-line to define this variable in the configuration file.</p>
+<h2 id="available-components"><a class="header" href="#available-components">Available Components</a></h2>
+<ul>
+<li><a href="Block.html">Blocks</a></li>
+<li><a href="Source.html">Sources</a></li>
+<li><a href="Extractor.html">Extractors</a></li>
+<li><a href="Transformer.html">Transformers</a></li>
+<li><a href="Loader.html">Loaders</a></li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><a href="../gettingstarted/tutorials/Import-the-Database-of-Beers.html">Import the database of Beers</a></li>
+<li><a href="Import-from-CSV-to-a-Graph.html">Import from CSV to a Graph</a></li>
+<li><a href="Import-from-JSON.html">Import from JSON</a></li>
+<li><a href="Import-from-DBPedia.html">Import DBPedia</a></li>
+<li><a href="Import-from-DBMS.html">Import from a DBMS</a></li>
+<li><a href="Import-from-PARSE.html">Import from Parse (Facebook)</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../teleporter/Teleporter-Import-Configuration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../etl/Configuration-File.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../teleporter/Teleporter-Import-Configuration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../etl/Configuration-File.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

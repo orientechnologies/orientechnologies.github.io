@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Fetching Strategies - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-11-26 SAM -->
+<h1 id="fetching-strategies"><a class="header" href="#fetching-strategies">Fetching Strategies</a></h1>
+<h2 id="deprecated-since-v-30"><a class="header" href="#deprecated-since-v-30">(Deprecated since v 3.0)</a></h2>
+<p><em>Fetchplans</em> are used in two different scopes:</p>
+<ol>
+<li>A Connection that uses the <a href="../internals/Network-Binary-Protocol.html">Binary Protocol</a> can <em>early load</em> records to the client. On traversing of connected records, the client doesn't have to execute further remote calls to the server, because the requested records are already in the client's cache.</li>
+<li>A Connection that uses the <a href="../misc/OrientDB-REST.html">HTTP/JSON Protocol</a> can <em>expand the resulting JSON</em> to include connected records as embedded in the same JSON. This is useful with the HTTP protocol to fetch all the connected records in just one call.</li>
+</ol>
+<h2 id="format-for-fetch-plans"><a class="header" href="#format-for-fetch-plans">Format for Fetch Plans</a></h2>
+<p>In both scopes, the fetchplan syntax is the same.  In terms of their use, Fetch Plans are strings that you can use at run-time on queries and record loads.  The syntax for these strings is:</p>
+<pre>
+[[<code class="replaceable">levels</code>]]<code class="replaceable">fieldPath</code>:<code class="replaceable">depthLevel</code>
+</pre>
+<ul>
+<li><strong>Levels</strong> Is an optional value that indicates which levels to use with the Fetch Plans.  Levels start from <code>0</code>.  As of version 2.1, levels use the following syntax:
+<ul>
+<li><em>Level</em> The specific level on which to use the Fetch Plan.  For example, using the level <code>[0]</code> would apply only to the first level.</li>
+<li><em>Range</em> The range of levels on which to use the Fetch Plan.  For example, <code>[0-2]</code> means to use it on the first through third levels.  You can also use the partial range syntax: <code>[-3]</code> which means from the first to fourth levels, while <code>[4-]</code> means from the fifth level to infinity.</li>
+<li><em>Any</em> The wildcard variable indicates that you want to use the Fetch Plan on all levels.  For example, <code>[*]</code>.</li>
+</ul>
+</li>
+<li><strong>Field Path</strong> Is the field name path, which OrientDB expects in dot notation.  The path begins from either the root record or the wildcard variable <code>*</code> to indicate any field.  You can also use the wildcard at the end of the path to specify all paths that start for a name.</li>
+<li><strong>Depth Level</strong> Is the depth of the level requested.  The depth level variable uses the following syntax:
+<ul>
+<li><code>0</code> Indicates to load the current record.</li>
+<li><code>1-N</code> Indicates to load the current record to the <em>n</em>th record.</li>
+<li><code>-1</code> Indicates an unlimited level.</li>
+<li><code>-2</code> Indicates an excluded level.</li>
+</ul>
+</li>
+</ul>
+<p>In the event that you want to express multiple rules for your Fetch Plans, separate them by spaces.</p>
+<p>Consider the following Fetch Plans for use with the example above:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Fetch Plan</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>*:-1</code></td><td style="text-align: left">Fetches recursively the entire tree.</td></tr>
+<tr><td style="text-align: left"><code>*:-1 orders:0</code></td><td style="text-align: left">Fetches recursively all records, but uses the field <code>orders</code> in the root class.  Note that the field <code>orders</code> only loads its direct content, (that is, the records <code>8:12</code>, <code>8:19</code>, and <code>8:23</code>).  No other records inside of them load.</td></tr>
+<tr><td style="text-align: left"><code>*:0 address.city.country:0</code></td><td style="text-align: left">Fetches only non-document fields in the root class and the field <code>address.city.country</code>, (that is, records <code>10:1</code>,<code>11:2</code> and <code>12:3</code>).</td></tr>
+<tr><td style="text-align: left"><code>[*]in_*:-2 out_*:-2</code></td><td style="text-align: left">Fetches all properties, except for edges at any level.</td></tr>
+</tbody></table>
+</div>
+<h2 id="early-loading-of-records"><a class="header" href="#early-loading-of-records">Early loading of records</a></h2>
+<p>By default, OrientDB loads linked records in a lazy manner.  That is to say, it does not load linked fields until it traverses these fields.  In situations where you need the entire tree of a record, this can prove costly to performance.  For instance,</p>
+<pre><code>Invoice
+ 3:100
+   |
+   | customer
+   +---------&gt; Customer
+   |            5:233
+   | address            city            country
+   +---------&gt; Address---------&gt; City ---------&gt; Country
+   |            10:1             11:2             12:3
+   |
+   | orders
+   +---------&gt;* [OrderItem OrderItem OrderItem]
+                [  8:12      8:19      8:23   ]
+</code></pre>
+<p>Here, you have a class, <code>Invoice</code>, with linked fields <code>customer</code>, <code>city</code>, and <code>orders</code>.  If you were to run a <a href="../sql/SQL-Query.html"><code>SELECT</code></a> query on <code>Invoice</code>, it would not load the linked class, and it would require seven different loads to build the returned value.  In the event that you have a remote connection, that means seven network calls as well.</p>
+<p>In order to avoid performance issues that may arise from this behavior, OrientDB supports fetching strategies, called Fetch Plans, that allow you to customize how it loads linked records.  The aim of a Fetch Plan is to pre-load connected records in a single call, rather than several.  The best use of Fetch Plans is on records loaded through remote connections and when using JSON serializers to produce JSON with nested records.</p>
+<blockquote>
+<p><strong>NOTE</strong> OrientDB handles circular dependencies to avoid any loops while it fetches linking records.</p>
+</blockquote>
+<h3 id="remote-connections"><a class="header" href="#remote-connections">Remote Connections</a></h3>
+<p>Under the default configuration, when a client executes a query or loads a single record directly from a remote database, it continues to send network calls for each linked record involved in the query, (that is, through <code>OLazyRecordList</code>).  You can mitigate this with a Fetch Plan.</p>
+<p>When the client executes a query, set a Fetch Plan with a level different from <code>0</code>.  This causes the server to traverse all the records of the return result-set, sending them in response to a single call.  OrientDB loads all connected records into the local client, meaning that the collections remain lazy, but when accessing content, the record is loaded from the local cache to mitigate the need for additional connections.</p>
+<h2 id="examples-using-sql"><a class="header" href="#examples-using-sql">Examples using SQL</a></h2>
+<h3 id="deprecated-since-v-30-1"><a class="header" href="#deprecated-since-v-30-1">(Deprecated since v 3.0)</a></h3>
+<p>Acquire Profile and its first level friendships</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT OUT("out_Friend") as friends from Profile fetchplan friends:1</code>
+</pre>
+<p>This will provide a result set of Profile records with a field called <code>friends</code> that contains an array of vertices connected via an <code>out_Friend</code> edge.  Only the <code>friends</code> field is part of the fetchplan in this instance, any further fields will be treated as normal.</p>
+<h2 id="examples-using-the-java-apis"><a class="header" href="#examples-using-the-java-apis">Examples using the Java APIs</a></h2>
+<h3 id="execute-a-query-with-a-custom-fetch-plan"><a class="header" href="#execute-a-query-with-a-custom-fetch-plan">Execute a query with a custom fetch plan</a></h3>
+<pre><code class="language-java">List&lt;ODocument&gt; resultset = database.query(new OSQLSynchQuery&lt;ODocument&gt;("select * from Profile").setFetchPlan("*:-1"));
+</code></pre>
+<h3 id="export-a-document-and-its-nested-documents-in-json"><a class="header" href="#export-a-document-and-its-nested-documents-in-json">Export a document and its nested documents in JSON</a></h3>
+<p>Export an invoice and its customer:</p>
+<pre><code class="language-java">invoice.toJSON("fetchPlan:customer:1");
+</code></pre>
+<p>Export an invoice, its customer, and orders:</p>
+<pre><code class="language-java">invoice.toJSON("fetchPlan:customer:1 orders:2");
+</code></pre>
+<p>Export an invoice and all the connected records up to 3rd level of depth:</p>
+<pre><code class="language-java">invoice.toJSON("fetchPlan:*:3");
+</code></pre>
+<p>From SQL:</p>
+<pre><code class="language-sql">SELECT @this.toJSON('fetchPlan:out_Friend:4') FROM #10:20
+</code></pre>
+<p>Export path in outgoing direction by removing all the incoming edges by using wildcards (Since 2.0):</p>
+<pre><code class="language-sql">SELECT @this.toJSON('fetchPlan:in_*:-2') FROM #10:20
+</code></pre>
+<blockquote>
+<p><strong>NOTES:</strong>:</p>
+<ul>
+<li>To avoid looping, the record already traversed by fetching are exported only by their <a href="../datamodeling/Concepts.html#record-id">RIDs</a> (RecordID) form</li>
+<li>"fetchPlan" setting is case sensitive</li>
+</ul>
+</blockquote>
+<h3 id="browse-objects-using-a-custom-fetch-plan"><a class="header" href="#browse-objects-using-a-custom-fetch-plan">Browse objects using a custom fetch plan</a></h3>
+<pre><code class="language-java">for (Account a : database.browseClass(Account.class).setFetchPlan("*:0 addresses:-1")) {
+  System.out.println( a.getName() );
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE:</strong> Fetching Object will mean their presence inside your domain entities. So if you load an object using fetchplan <code>*:0</code> all LINK type references won't be loaded.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Transaction-propagation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Binary-Data.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Transaction-propagation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Binary-Data.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

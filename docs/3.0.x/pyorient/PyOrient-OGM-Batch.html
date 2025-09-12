@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Batch - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="pyorient-ogm---batch-operations"><a class="header" href="#pyorient-ogm---batch-operations">PyOrient OGM - Batch Operations</a></h1>
+<p>The Object-Graph Mapper provides basic support for transactions.  This allows you to group several operations together and execute them in a batch on the OrientDB database.  You may find this useful in ensuring concurrency as well as reducing the round-trip time on the given operation.</p>
+<h2 id="using-batch-transactions"><a class="header" href="#using-batch-transactions">Using Batch Transactions</a></h2>
+<p>Transactions in PyOrient use a similar workflow to transactions in OrientDB.  That is, you start by beginning the transaction, perform various operations as part of it, then commit those changes to the database.</p>
+<h3 id="initializing-batch-transactions"><a class="header" href="#initializing-batch-transactions">Initializing Batch Transactions</a></h3>
+<p>Unlike standard operations with the OGM, batch transactions operate on a separate object from the OGM <code>Graph</code> class.  Instead, you use the <code>batch()</code> method to initialize a control object for the transaction.  You can then direct operations on OrientDB through this object, only committing it to OrientDB when you're ready.</p>
+<pre><code class="language-py"># Initialize Batch Transaction
+batch = graph.batch()
+</code></pre>
+<h3 id="performing-operations"><a class="header" href="#performing-operations">Performing Operations</a></h3>
+<p>Once you've initialized the control object through the <code>batch()</code> method, you can begin building the transaction.  For instance, consider the example of a smart home application that uses OrientDB for back-end storage.  While home built systems often have the database server on premises, let's say that you expect some homes to rely on a remote database accessed through the internet.</p>
+<p>In situations like this, database initialization can prove difficult, since it would involve multiple network requests to OrientDB.  Instead you can group this process into a batch transaction handled through a single network operation.</p>
+<h4 id="initialize-classes"><a class="header" href="#initialize-classes">Initialize Classes</a></h4>
+<p>In preparing a batch operation to initialize the database, you might start by initializing the classes that you want to create:</p>
+<pre><code class="language-py"># Initialize Sensor Class
+class Sensor(Node):
+   element_type = 'sensor'
+   element_plural = 'sensors'
+
+   name = String(multibyte = False, unique = True)
+   node_type = String(multibyte = False)
+
+# Initialize Zone Class
+class Zone(Node):
+   element_type = 'zone'
+   element_plural = 'zones'
+
+   name = String(multibyte = False, unique = True)
+   zone_type = String(multibyte = False)
+
+# Initialize Position Class
+class SensorPosition(Relationship):
+   label = 'position'
+</code></pre>
+<p>Here, you create three classes: two vertex classes for sensors and zones in the house, and an edge class for to position the sensors in particular zones.  The special attribute <code>element_type</code> is redundant here, but it allows you to tell the mapper what name to use for the corresponding schema class.</p>
+<h4 id="creating-vertices"><a class="header" href="#creating-vertices">Creating Vertices</a></h4>
+<p>With the classes created, you can create particular instances of these classes, then adding them to the batch transaction:</p>
+<pre><code class="language-py"># Create Pollen Sensor
+batch['pollen-sensor-1452'] = batch.sensors.create(
+   name = 'ARDUINO-UNO-1432', 
+   node_type = 'pollen')
+
+# Create Light Sensor
+batch['light-sensor-259'] = batch.sensors.create(
+   name = 'ARDUINO-UNO-259',
+   node_type = 'light-sensor')
+
+# Create Bedroom Zone
+batch['master-bedroom'] = batch.zones.create(
+   name = 'master',
+   zone_type = 'bedroom'
+</code></pre>
+<p>This creates three vertices in the batch: one for an Arduino device built as a pollen sensor, one for a light sensor,  and one for a zone for the master bedroom.</p>
+<h4 id="creating-edges"><a class="header" href="#creating-edges">Creating Edges</a></h4>
+<p>With the vertices created, you can also create edges to connect them.  In doing so, you have the option of two syntax methods for the operation.</p>
+<pre><code class="language-py"># Place Pollen Sensor (Method 1)
+batch[:] = batch.position.create(
+   batch[:'pollen-sensor-1452'],
+   batch[:'master-bedroom']).retry(20)
+
+# Place Light Sensor (Method 2)
+batch[:] = batch[:'light-sensor-259'](SensorPosition) &gt; batch[:'master-bedroom']
+</code></pre>
+<p>In the example, notice that in both cases the code defines the relationship using slice syntax.  You can do this in cases where you don't need to reference the edge later in the batch transaction.</p>
+<h4 id="return-values"><a class="header" href="#return-values">Return Values</a></h4>
+<p>In the event that you would like to perform further operations on the code before committing the transaction, batches provide an optional return value.  You can retrieve this value from the control object:</p>
+<pre><code class="language-py"># Fetch Pollen Sensor Return Value
+pollen = batch['$pollen-sensor-1452']
+</code></pre>
+<p>This retrieves the return value and sets it on the <code>pollen</code> variable.</p>
+<h3 id="committing-batch-transactions"><a class="header" href="#committing-batch-transactions">Committing Batch Transactions</a></h3>
+<p>When you're finished with the batch transaction, you can commit it to OrientDB using the <code>commit()</code> method.</p>
+<pre><code class="language-py"># Cmmmit Batch Transaction
+batch.commit()
+</code></pre>
+<p>When you issue this method, PyOrient sends a network request to OrientDB, then executes each operation in the batch through that single request, without the need for the usual back and forth between the two.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../pyorient/PyOrient-OGM-Brokers.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../pyorient/PyOrient-OGM-Scripts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../pyorient/PyOrient-OGM-Brokers.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../pyorient/PyOrient-OGM-Scripts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

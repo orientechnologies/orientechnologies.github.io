@@ -1,0 +1,583 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Security Configuration - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="orientdb-security-configuration"><a class="header" href="#orientdb-security-configuration">OrientDB Security Configuration</a></h1>
+<p>The new OrientDB security system uses a JSON configuration file that's located by default in the <em>config</em> directory.  The default name of the file is <em>security.json</em>, but it can be overridden by setting the "server.security.file" property in <em>orientdb-server-config.xml</em> or by setting the global server property, "server.security.file".</p>
+<p>The security.json configuration file may contain up to eight global properties: "enabled", "debug", "server", "authentication", "passwordValidator", "ldapImporter", and "auditing".</p>
+<p>Here's a description of each top-level property in the security.json file.</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"enabled"</td><td>If set to true (the default), the OrientDB security module that provides external authentication, authorization, password validation, LDAP import, and advanced auditing will be enabled.</td></tr>
+<tr><td>"debug"</td><td>When set to true (false is the default), additional context information will be written to the OrientDB server log pertaining to the security system's operation.</td></tr>
+<tr><td>"server"</td><td>This property is an object with one sub-property, "createDefaultUsers".  It is described below.</td></tr>
+<tr><td>"authentication"</td><td>This property is an object with two sub-properties, "allowDefault" and "authenticators", and it is described in greater detail below.  Its purpose defines the available security authenticators.</td></tr>
+<tr><td>"passwordValidator"</td><td>This property is also an object and defines the parameters required for the security system's password validator when enabled.  It is described in detail below.</td></tr>
+<tr><td>"ldapImporter"</td><td>This property is an object with up to five sub-properties, and it defines the LDAP importer object.  See below for more details.</td></tr>
+<tr><td>"auditing"</td><td>This property is also an object and contains two sub-properties, "class" and "enabled", and is described below.</td></tr>
+</tbody></table>
+</div>
+<h2 id="server"><a class="header" href="#server">"server"</a></h2>
+<p>The "server" object contains one property called "createDefaultUsers".</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"createDefaultUsers"</td><td>When set to true (the default), the default OrientDB users will be created for new databases and the default orientdb-server-config.xml users will be created on the first run of the server.</td></tr>
+</tbody></table>
+</div>
+<h2 id="authentication"><a class="header" href="#authentication">"authentication"</a></h2>
+<p>The "authentication" object specifies security authenticators for OrientDB and their order.  Here's an example:</p>
+<pre><code>"authentication" :
+{
+	"allowDefault" : true,
+
+	"authenticators" :
+	[
+		{
+			"name"		: "Kerberos",
+			"class"		: "com.orientechnologies.security.kerberos.OKerberosAuthenticator",
+			"enabled"	: true,
+			"debug"		: false,
+	
+			"krb5_config"	: "/etc/krb5.conf",
+			
+			"service" :
+			{
+				"ktname" 	: "/etc/keytab/kerberosuser",
+				"principal"	: "kerberosuser/kerberos.domain.com@REALM.COM"
+			},
+	
+			"spnego" :
+			{
+				"ktname" 	: "/etc/keytab/kerberosuser",
+				"principal"	: "HTTP/kerberos.domain.com@REALM.COM"
+			},
+	
+			"client" :
+			{
+				"useTicketCache"	: true,
+				"principal" 		: "kerberosuser@REALM.COM",
+				"renewalPeriod"		: 300
+			}
+		},
+		
+		{
+			"name"				: "Password",
+			"class"				: "com.orientechnologies.orient.server.security.authenticator.ODefaultPasswordAuthenticator",
+			"enabled"			: true,
+			"users" 			:
+			[
+				{ "username" : "guest", "resources" : "connect,server.listDatabases,server.dblist" }
+			]
+		},
+
+		{
+			"name"				: "ServerConfig",
+			"class"				: "com.orientechnologies.orient.server.security.authenticator.OServerConfigAuthenticator",
+			"enabled"			: true
+		},
+
+		{
+			"name"				: "SystemAuthenticator",
+			"class"				: "com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator",
+			"enabled"			: true
+		}	]
+}
+</code></pre>
+<p>Notice that "authentication" has two sub-properties, "allowDefault" and "authenticators".  The "allowDefault" property, when set to true, tells the security system that if authentication fails for all the specified authenticators to allow OrientDB's default (built-in) authentication mechanism to also try.</p>
+<p>The "authenticators" property is an array of authenticator objects.  The order of the authenticators is significant, as the first is the primary authenticator.  Subsequent authenticators in the list are called, if the first authenticator fails.  This continues until either authentication succeeds or the list of authenticators is exhausted.  If the "allowDefault" property is true and authentication is being called for a database, then OrientDB's native database security will then be attempted.</p>
+<p>Each authenticator object supports at least three properties: "name", "class", and "enabled".</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"name"</td><td>The "name" property must be unique among the authenticators and can be used by other security components to reference which authenticator is used to authenticate a service.</td></tr>
+<tr><td>"class"</td><td>The "class" property defines which authenticator component is instantiated for the security authenticator.  The available authenticators are: ODefaultPasswordAuthenticator, OKerberosAuthenticator, OServerConfigAuthenticator, and OSystemUserAuthenticator.  All are described below.</td></tr>
+<tr><td>"enabled"</td><td>When set to true, the authenticator is used as part of the chain of authenticators.  If set to false, the authenticator is ignored.</td></tr>
+</tbody></table>
+</div>
+<h3 id="odefaultpasswordauthenticator"><a class="header" href="#odefaultpasswordauthenticator">ODefaultPasswordAuthenticator</a></h3>
+<p><em>ODefaultPasswordAuthenticator</em> supports an additional "users" property which contains an array of user objects.  Each user object must contain "username" and "resource" properties.  An optional "password" property is also permitted if authentication using a password is required.</p>
+<p>Each user object can be used for authorization of the specified resources as well as authentication, if a password is present.</p>
+<p>The full classpath for the "class" property is "com.orientechnologies.orient.server.security.authenticator.ODefaultPasswordAuthenticator".</p>
+<p>Here's an example of the "users" property:</p>
+<pre><code>	"users" 				:
+	[
+		{ "username" : "someuser", "resources" : "*" }
+	]
+</code></pre>
+<p>The "resources" property uses the same format as the "resources" property for each <code>&lt;user&gt;</code> in the <code>&lt;users&gt;</code> section of the orientdb-server-config.xml file.</p>
+<p>Additionally, <em>ODefaultPasswordAuthenticator</em> supports a "caseSensitive" property.  It defaults to true.  When set to false, usernames are not case-sensitive when retrieved for password or resources look-up.</p>
+<h3 id="oserverconfigauthenticator"><a class="header" href="#oserverconfigauthenticator">OServerConfigAuthenticator</a></h3>
+<p><em>OServerConfigAuthenticator</em> utilizes the <users> element in the orientdb-server-config.xml file and permits its list of server users to be used for authentication and authorization of resources.  Beyond "name", "class", and "enabled", <em>OServerConfigAuthenticator</em> requires no additional properties.</p>
+<p>The full classpath for the "class" property is "com.orientechnologies.orient.server.security.authenticator.OServerConfigAuthenticator".</p>
+<p><em>OServerConfigAuthenticator</em>'s "caseSensitive" property is always false, meaning that usernames are not case-sensitive when retrieved for password or resources look-up.</p>
+<h3 id="osystemuserauthenticator"><a class="header" href="#osystemuserauthenticator">OSystemUserAuthenticator</a></h3>
+<p><em>OSystemUserAuthenticator</em> implements authentication and authorization support for <em>system users</em> that reside in the OrientDB system database.  Beyond "name", "class", and "enabled", <em>OSystemUserAuthenticator</em> requires no additional properties.</p>
+<p>The full classpath for the "class" property is "com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator".</p>
+<h3 id="osecuritysymmetrickeyauth"><a class="header" href="#osecuritysymmetrickeyauth">OSecuritySymmetricKeyAuth</a></h3>
+<p><em>OSecuritySymmetricKeyAuth</em> implements support for symmetric key authentication for server users.</p>
+<p>Here's an example:</p>
+<pre><code>"authenticators": [
+	{
+		"name": "SymmetricKey-Key",
+		"class": "com.orientechnologies.agent.security.authenticator.OSecuritySymmetricKeyAuth",
+		"enabled": true,
+		"users": [
+			{
+				"username": "sysadmin",
+				"resources": "*",
+				"properties" :
+				{
+					"key" : "8BC7LeGkFbmHEYNTz5GwDw==",
+					"keyAlgorithm" : "AES"
+				}
+			}
+		]
+	}
+]
+</code></pre>
+<p>The authenticator class is "com.orientechnologies.agent.security.authenticator.OSecuritySymmetricKeyAuth".</p>
+<p>Each <code>user</code> has a "properties" field that can specify an actual key, a path pointing to a file with the key inside, or a KeyStore containing the key.  Each is mutually exclusive.</p>
+<h4 id="key"><a class="header" href="#key">"key"</a></h4>
+<p>The <code>key</code> property is a Base64-encoded string of a secret key.  The <code>keyAlgorithm</code> property must also be used with <code>key</code>.</p>
+<h4 id="keyfile"><a class="header" href="#keyfile">"keyFile"</a></h4>
+<p>The <code>keyFile</code> property is a path to a file containing a Base64-encoded secret key string.  The <code>keyAlgorithm</code> property must also be used with <code>keyFile</code>.</p>
+<p>Here's an example:</p>
+<pre><code>"properties" :
+{
+	"keyFile" : "${ORIENTDB_HOME}/config/AES.key",
+	"keyAlgorithm" : "AES"
+}
+</code></pre>
+<h4 id="keystore"><a class="header" href="#keystore">"keyStore"</a></h4>
+<p>The <code>keyStore</code> property is a JSON object that contains four sub-properties.</p>
+<p>Here's an example of the <code>keyStore</code> property and its sub-properties.</p>
+<p>"properties" :
+{
+"keyStore" :
+{
+"file" 			: "${ORIENTDB_HOME}/config/test.jks",
+"password" 		: "password",
+"keyAlias"		: "keyAlias",
+"keyPassword"	: "password"
+}
+}</p>
+<h5 id="file"><a class="header" href="#file">"file"</a></h5>
+<p>The <code>file</code> property is a path to a Java KeyStore file that contains the secret key.  Note that the <code>JCEKS</code> KeyStore format must be used to hold secret keys.</p>
+<h5 id="password"><a class="header" href="#password">"password"</a></h5>
+<p>The <code>password</code> property holds the password for the KeyStore file.  It is optional.</p>
+<h5 id="keyalias"><a class="header" href="#keyalias">"keyAlias"</a></h5>
+<p>The <code>keyAlias</code> property is the alias name of the secret key in the KeyStore file.  It is required.</p>
+<h5 id="keypassword"><a class="header" href="#keypassword">"keyPassword"</a></h5>
+<p>The <code>keyPassword</code> property holds the password for the secret key in the KeyStore and is optional.</p>
+<h3 id="osystemsymmetrickeyauth"><a class="header" href="#osystemsymmetrickeyauth">OSystemSymmetricKeyAuth</a></h3>
+<p><em>OSystemSymmetricKeyAuth</em> implements support for symmetric key authentication for system users.</p>
+<p>Here's an example:</p>
+<pre><code>"authenticators": [
+	{
+		"name": "OSystemSymmetricKey",
+		"class": "com.orientechnologies.agent.security.authenticator.OSystemSymmetricKeyAuth",
+		"enabled": true
+	}
+]
+</code></pre>
+<p>The authenticator class is "com.orientechnologies.agent.security.authenticator.OSystemSymmetricKeyAuth".</p>
+<p>Each system user will have an embedded-JSON "properties" field that supports the same sub-properties as the <code>OSecuritySymmetricKeyAuth</code> authenticator.</p>
+<h3 id="okerberosauthenticator"><a class="header" href="#okerberosauthenticator">OKerberosAuthenticator</a></h3>
+<p><em>OKerberosAuthenticator</em> provides support for Kerberos/SPNEGO authentication.  In addition to the usual "name", "class", and "enabled" properties, the <em>OKerberosAuthenticator</em> component also supports "debug", "krb5_config", "service", "spnego", and "client" properties.  All of these properties are defined in greater detail below.</p>
+<p>The full classpath for the "class" property is "com.orientechnologies.security.kerberos.OKerberosAuthenticator".</p>
+<h4 id="debug"><a class="header" href="#debug">"debug"</a></h4>
+<p>When set to true, all of the Kerberos and SPNEGO authentication are displayed in the server's logfile.  This can be very useful when debugging authentication problems.</p>
+<h4 id="krb5_config"><a class="header" href="#krb5_config">"krb5_config"</a></h4>
+<p>By default, the KRB5_CONFIG environment variable is used to tell the Java Kerberos libraries the location of the krb5.conf file.  However, the krb5_config property may be used to override this.</p>
+<h4 id="service"><a class="header" href="#service">"service"</a></h4>
+<p>The "service" property contains two sub-properties, "ktname" and "principal".</p>
+<div class="table-wrapper"><table><thead><tr><th>Sub-Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"ktname"</td><td>This specifies the location of the keytab file used to obtain the key for decrypting OrientDB client service tickets.  By default, the KRB5_KTNAME environment variable is used to determine the location of the server's keytab file.  However, the ktname property may be used to override this.</td></tr>
+<tr><td>"principal"</td><td>This specifies the LDAP/AD user that's associated with the OrientDB SPN.  This is used to obtain the correct service key to decrypt service tickets from OrientDB clients.  This is a mandatory property.</td></tr>
+</tbody></table>
+</div>
+<h4 id="spnego"><a class="header" href="#spnego">"spnego"</a></h4>
+<p>The "spnego" property contains two sub-properties, "ktname" and "principal".</p>
+<div class="table-wrapper"><table><thead><tr><th>Sub-Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"ktname"</td><td>This specifies the location of the keytab file used to obtain the key for decrypting OrientDB SPNEGO service tickets.  By default (and the same as the "service" property), the KRB5_KTNAME environment variable is used to determine the location of the server's keytab file.  However, the "ktname" property may be used to override this.</td></tr>
+<tr><td>"principal"</td><td>This specifies the LDAP/AD user that's associated with the OrientDB SPN.  This is used to obtain the correct service key to decrypt service tickets from OrientDB SPNEGO clients.  This is a mandatory property.</td></tr>
+</tbody></table>
+</div>
+<h4 id="client"><a class="header" href="#client">"client"</a></h4>
+<p>The "client" property is used by OrientDB for configuring the LDAP/AD importer user, and it may contain five different sub-properties: "ccname", "ktname", "principal", "useTicketCache", and "renewalPeriod".</p>
+<div class="table-wrapper"><table><thead><tr><th>Sub-Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"ccname"</td><td>By default, the KRB5CCNAME environment variable is used to determine the location of the local credential cache file.  However, the "ccname" property may be used to override this.  This is only used if "useTicketCache" is set to true.</td></tr>
+<tr><td>"ktname"</td><td>By default, the KRB5_CLIENT_KTNAME environment variable is used to determine the location of the server's client keytab file.  However, the "ktname" property may be used to override this.  This is only used if "useTicketCache" is set to false.</td></tr>
+<tr><td>"principal"</td><td>This is the name of the principal used with the client credentials when accessing the LDAP service.  It is a required property.</td></tr>
+<tr><td>"useTicketCache"</td><td>Defaults to false.  If true, the local ticket cache will be used to provide the client credentials to the LDAP service.  The KRB5CCNAME environment variable is used to determine the location of the ticket cache if the "ccname" property is not specified.  If false (or not present) then the specified keytab file (ktname) is used.</td></tr>
+<tr><td>"renewalPeriod"</td><td>This is an optional property, and it specifies how often the LDAP client service ticket is renewed (in minutes).   It defaults to 5 hours.</td></tr>
+</tbody></table>
+</div>
+<h2 id="passwordvalidator"><a class="header" href="#passwordvalidator">"passwordValidator"</a></h2>
+<p>The "passwordValidator" object specifies an optional password validator that the OrientDB security system uses when applying new passwords.  The supported properties of the password validator object depend on the type of object specified but always contain at least "class" and "enabled".  The "class" property defines which password validator component is instantiated.  The "enabled" property (defaults to true) specifies whether the password validator component is active or not.</p>
+<p>OrientDB ships with an <em>ODefaultPasswordValidator</em> component.  Its properties are defined below, and each is only required if it's included in the "passwordValidator" property.</p>
+<p>The full classpath for the "class" property is "com.orientechnologies.security.password.ODefaultPasswordValidator".</p>
+<h3 id="odefaultpasswordvalidator"><a class="header" href="#odefaultpasswordvalidator">ODefaultPasswordValidator</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"minimumLength"</td><td>This property defines the minimum number of characters required in the password.</td></tr>
+<tr><td>"numberRegEx"</td><td>This property defines the regular expression for the minimum count of required numbers and what symbols are considered numbers.</td></tr>
+<tr><td>"uppercaseRegEx"</td><td>This property defines the regular expression for the minimum count of required uppercase characters and what symbols are considered uppercase characters.</td></tr>
+<tr><td>"specialRegEx"</td><td>This property defines the regular expression for the minimum count of special characters and what symbols are considered special characters.</td></tr>
+</tbody></table>
+</div>
+<p>Here is an example of the <em>ODefaultPasswordValidator</em>'s configuration in the security.json file:</p>
+<pre><code>"passwordValidator" :
+{
+	"class"				: "com.orientechnologies.security.password.ODefaultPasswordValidator",
+	"minimumLength"		: 5,
+	"numberRegEx"		: "(?:[0-9].*){2}",
+	"uppercaseRegEx"	: "(?:[A-Z].*){3}",
+	"specialRegEx"		: "(?:[^a-zA-Z0-9 ].*){2}"
+}
+</code></pre>
+<h2 id="ldapimporter"><a class="header" href="#ldapimporter">"ldapImporter"</a></h2>
+<p>The "ldapImporter" object defines the properties for the LDAP importer security component.  As with the other security components, the LDAP importer object always has a "class" property and optional "enabled" and "debug" properties.  The "class" property defines which LDAP importer component is instantiated.  The "enabled" property (defaults to true) specifies whether the LDAP importer component is active or not.</p>
+<p>OrientDB provides a default OLDAPImporter component, and its properties are defined below.  The full classpath for the "class" property is "com.orientechnologies.security.ldap.OLDAPImporter".</p>
+<h3 id="oldapimporter"><a class="header" href="#oldapimporter">OLDAPImporter</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"period"</td><td>This property is in seconds and determines how often the LDAP synchronization occurs.</td></tr>
+<tr><td>"databases"</td><td>This property contains an array of objects.  Each object represents an OrientDB database along with LDAP domains to import.</td></tr>
+</tbody></table>
+</div>
+<h4 id="database-object"><a class="header" href="#database-object">Database Object</a></h4>
+<p>Each database object contains three properties: "database", "ignoreLocal", and "domains".  The "database" property is just the name of the OrientDB database.  The "ignoreLocal" property is an optional boolean property that defaults to true.  When true it indicates that existing users in the specified database will not be deleted if they are not present in the imported LDAP users list.  The "domains" property is described below.</p>
+<h5 id="domains"><a class="header" href="#domains">"domains"</a></h5>
+<p>The "domains" property contains an array of objects, each with "domain", "servers", and "users" properties, and an optional "authentication" property.</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"domain"</td><td>This property must be unique for each database object and is primarily used with the <em>_OLDAPUser</em> class within each OrientDB database.</td></tr>
+<tr><td>"authentication"</td><td>The "authentication" property specifies which authentication mechanism should be used to communicate with the LDAP server.  Two options are currently supported: "GSSAPI" and "Simple".  If none is specified, then "GSSAPI" (Kerberos) is used.</td></tr>
+<tr><td>"servers"</td><td>This property is an array of server objects, each specifying the URL of the LDAP server.  It is described below.</td></tr>
+<tr><td>"users"</td><td>This property is an array of user objects, each specifying the baseDN, filter, and roles to use for importing.  It is described below.</td></tr>
+</tbody></table>
+</div>
+<h6 id="servers"><a class="header" href="#servers">"servers"</a></h6>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"url"</td><td>This property specifies the LDAP server's URL.  (ldaps is supported.)</td></tr>
+<tr><td>"isAlias"</td><td>This is a boolean property.  When true, the hostname specified in the URL is treated as an alias, and the real address is queried followed by a reverse DNS lookup.  This is useful for a hostname that is an alias for multiple LDAP servers.  The "isAlias" property defaults to false and is not a mandatory property.</td></tr>
+<tr><td>"principal"</td><td>When "authentication" is set to "Simple", this specifies the principal (user) value to use.</td></tr>
+<tr><td>"credentials"</td><td>When "authentication" is set to "Simple", this specifies the credentials (password) value to use.</td></tr>
+</tbody></table>
+</div>
+<h6 id="users"><a class="header" href="#users">"users"</a></h6>
+<p>LDAP users are imported based on a starting location within the directory and filtered using a standard LDAP filter rule.</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"baseDN"</td><td>The "basedDN" property specifies the distinguished name of the starting point for the LDAP import, e.g., "CN=Users,DC=ad,DC=domain,DC=com".</td></tr>
+<tr><td>"filter"</td><td>This property specifies the LDAP filter to use for importing users.  Here's a simple example: "(&amp;(objectCategory=person)(objectclass=user)(memberOf=CN=ODBUser,CN=Users,DC=ad,DC=domain,DC=com))".</td></tr>
+<tr><td>"roles"</td><td>This is an array of strings, specifying the corresponding OrientDB roles that will be assigned to each user that is imported from the current group.</td></tr>
+</tbody></table>
+</div>
+<p>As an alternative to the "users" property in the security configuration file, <em>OLDAPImporter</em> also supports using a class in the database, called <em>_OLDAPUser</em>, for importing LDAP users based on the same properties.  See below for more details.</p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p>Here's an example of the "ldapImporter" property:</p>
+<pre><code>"ldapImporter" :
+{
+	"class"		: "com.orientechnologies.security.ldap.OLDAPImporter",
+	"enabled"	: true,
+	"debug"		: false,
+	"period"	: 60,
+	"databases" :
+	[
+		{
+			"database"		: "MyDB",
+			"ignoreLocal"	: true,
+			"domains"		: 
+			[
+				{
+					"domain"		: "ad.domain.com",
+					"authentication" : "GSSAPI",
+					
+					"servers"	:
+					[
+						{
+							"url"		: "ldap://alias.ad.domain.com:389",
+							"isAlias"	: true
+						}
+					],
+					
+					"users" :
+					[
+						{
+							"baseDN"	: "CN=Users,DC=ad,DC=domain,DC=com",
+							"filter"	: "(&amp;(objectCategory=person)(objectclass=user)(memberOf=CN=ODBUser,CN=Users,DC=ad,DC=domain,DC=com))",
+							"roles"		: ["reader", "writer"]
+						},
+						{
+							"baseDN"	: "CN=Users,DC=ad,DC=domain,DC=com",
+							"filter"	: "(&amp;(objectCategory=person)(objectclass=user)(memberOf=CN=ODBAdminGroup,CN=Users,DC=ad,DC=domain,DC=com))",
+							"roles"		: ["admin"]
+						}
+					]
+				}
+			]
+		}
+	]
+}
+</code></pre>
+<h3 id="_oldapuser-class"><a class="header" href="#_oldapuser-class"><em>_OLDAPUser</em> Class</a></h3>
+<p>The OrientDB <em>_OLDAPUser</em> class can be used in place of or in addition to the "users" section of "ldapImporter".</p>
+<p>The class has four properties defined: <em>Domain</em>, <em>BaseDN</em>, <em>Filter</em>, and <em>Roles</em>.</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>Domain</td><td>The <em>Domain</em> property must match the "domain" property of a domain object in the "domains" array of an "ldapImporter" database object.</td></tr>
+<tr><td>BaseDN</td><td>This property is equivalent to the "baseDN" property of a user object in the "users" array.</td></tr>
+<tr><td>Filter</td><td>This property is equivalent to the "filter" property of a user object in the "users" array.</td></tr>
+<tr><td>Roles</td><td>The <em>Roles</em> property is equivalent to the "roles" array of a user object in the "users" array.  However, the value of <em>Roles</em> is a single string, and each role is separated by a comma.</td></tr>
+</tbody></table>
+</div>
+<h2 id="auditing"><a class="header" href="#auditing">"auditing"</a></h2>
+<p>The <em>auditing</em> component of the new security system is configured with the "auditing" object.  It has four possible properties, the usual "class" and "enabled" properties, and "distributed" and "systemImport" properties.</p>
+<h3 id="distributed"><a class="header" href="#distributed">"distributed"</a></h3>
+<p>The <em>distributed</em> property is an object and is used to configure what node events are recorded in the auditing log.</p>
+<p>The <em>distributed</em> object may contain these properties:</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody>
+<tr><td>"onNodeJoinedEnabled"</td><td>If <code>true</code>, enables auditing of node joined events. The default is <code>false</code>.</td></tr>
+<tr><td>"onNodeJoinedMessage"</td><td>This is a custom message stored in the <code>note</code> field of the auditing record on node joined events. It supports the dynamic binding of values, see <em>Customing the Message</em> below.</td></tr>
+<tr><td>"onNodeLeftEnabled"</td><td>If <code>true</code>, enables auditing of node left events. The default is <code>false</code>.</td></tr>
+<tr><td>"onNodeLeftMessage"</td><td>This is a custom message stored in the <code>note</code> field of the auditing record on node left events. It supports the dynamic binding of values, see <em>Customing the Message</em> below.</td></tr>
+</tbody></table>
+</div>
+<h4 id="customing-the-message"><a class="header" href="#customing-the-message">Customing the Message</a></h4>
+<p>The variable <code>${node}</code> will be substituted in the specified message, if node joined or node left auditing is enabled.</p>
+<h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
+<p>Here's an example of a "distributed" section:</p>
+<pre><code>  "auditing": {
+    "class": "com.orientechnologies.security.auditing.ODefaultAuditing",
+    "enabled": true,
+    "distributed": {
+      "onNodeJoinedEnabled": true,
+      "onNodeJoinedMessage": "Node ${node} has joined...",
+      "onNodeLeftEnabled": true,
+      "onNodeLeftMessage": "Node ${node} has left..."
+    }
+  }
+</code></pre>
+<h3 id="systemimport"><a class="header" href="#systemimport">"systemImport"</a></h3>
+<p>The <em>systemImport</em> property is an object and is used for importing a database's auditing log into the system database, where all new auditing is stored.</p>
+<p>Each auditing log record from the specified databases is moved to a cluster in the new system database with the name <em>databasename</em>_auditing.</p>
+<p>The <em>systemImport</em> object may contain these properties:</p>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Description</th><th>Default Value</th></tr></thead><tbody>
+<tr><td>"enabled"</td><td>When set to true, the audit log importer will run for the specified databases.</td><td>false</td></tr>
+<tr><td>"databases"</td><td>This property is a list of database names that will have their auditing logs imported.</td><td>none</td></tr>
+<tr><td>"auditingClass"</td><td>This specifies the name of the auditing class used in the database being imported.</td><td><em>AuditingLog</em></td></tr>
+<tr><td>"limit"</td><td>The <em>limit</em> property indicates how many records will be imported during each <em>iteration</em> of the importer.  To reduce the impact on the system, the importer retrieves a block of auditing log records for each <em>iteration</em> and then sleeps before beginning again.</td><td>1000</td></tr>
+<tr><td>"sleepPeriod"</td><td>This represents (in milliseconds) how long the importer sleeps after each <em>iteration</em>.</td><td>1000</td></tr>
+</tbody></table>
+</div>
+<p>The importer stops for each database once all the auditing log records have been transferred to the system database.</p>
+<p>Here's an example of a "systemImport" section:</p>
+<pre><code>  "auditing": {
+    "class": "com.orientechnologies.security.auditing.ODefaultAuditing",
+    "enabled": true,
+    "systemImport": {
+      "enabled": true,
+      "databases": ["MyDB", "MyOtherDB", "OneMoreDB"],
+      "auditingClass": "AuditingLog",
+      "limit": 1000,
+      "sleepPeriod": 2000
+    }
+  }
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../security/Using-SSL-with-OrientDB.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../security/Security-Kerberos-Client-Examples.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../security/Using-SSL-with-OrientDB.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../security/Security-Kerberos-Client-Examples.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

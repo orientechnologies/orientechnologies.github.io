@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>TinkerPop 2.6 Graph API - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="graph-api"><a class="header" href="#graph-api">Graph API</a></h1>
+<blockquote>
+<p>GroupId: <strong>com.orientechnologies</strong>  ArtifactId: <strong>orientdb-graphdb</strong></p>
+</blockquote>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p><a href="http://www.tinkerpop.com">Tinkerpop</a> provides a complete stack to handle Graph Databases:</p>
+<ul>
+<li>
+<p><a href="http://wiki.github.com/tinkerpop/blueprints"><strong>Blueprints</strong></a> Provides a collection of interfaces and implementations to common, complex data structures.</p>
+<p>In short, Blueprints provides a one-stop shop for implemented interfaces to help developers create software without getting tied down to the particular, underlying data management systems.</p>
+</li>
+<li>
+<p><a href="http://pipes.tinkerpop.com"><strong>Pipes</strong></a> Provides a graph-based data flow framework for Java 1.6+.</p>
+<p>Process graphs are composed of a set of process vertices connected to one another by a set of communication edges.  Pipes supports the splitting, merging, and transformation of data from input to output/</p>
+</li>
+<li>
+<p><a href="http://wiki.github.com/tinkerpop/gremlin"><strong>Gremlin</strong></a> Provides a Turing-complete graph-based programming language designed for key/value pairs in multi-relational graphs.  Gremlin makes use of an XPath-like syntax to support complex graph traversals.  This language has applications in the areas of graph query, analysis, and manipulation.</p>
+</li>
+<li>
+<p><a href="http://rexster.tinkerpop.com"><strong>Rexster</strong></a> Provides a RESTful graph shell that exposes any Blueprints graph as a standalone server.</p>
+<p>Extensions support standard traversal goals such as search, score, rank, and (in concert) recommendation.  Rexster makes extensive use of Blueprints, Pipes, and Gremlin.  In this way it's possible to run Rexster over various graph systems.  to configure Rexster to work with OrientDB, see the guide <a href="../plugins/Rexster.html">Rexster Configuration</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tinkerpop/blueprints/wiki/Sail-Ouplementation"><strong>Sail Ouplementation</strong></a> Provides support for using OrientDB as an RDF Triple Store.</p>
+</li>
+</ul>
+<h2 id="getting-started-with-blueprints"><a class="header" href="#getting-started-with-blueprints">Getting Started with Blueprints</a></h2>
+<p>OrientDB supports three different kinds of storages, depending on the <a href="../datamodeling/Concepts.html#database-url">Database URL</a> used:</p>
+<ul>
+<li><strong>Persistent Embedded Graph Database</strong>: Links to the application as a JAR, (that is, with no network transfer).  Use <a href="../internals/Paginated-Local-Storage.html">PLocal</a> with the <code>plocal</code> prefix.  For instance, <code>plocal:/tmp/graph/test</code>.</li>
+<li><strong>In-Memory Embedded Graph Database</strong>: Keeps all data in memory.  Use the <code>memory</code> prefix, for instance <code>memory:test</code>.</li>
+<li><strong>Persistent Remote Graph Database</strong> Uses a binary protocol to send and receive data from a remote OrientDB server.  Use the <code>remote</code> prefix, for instance <code>remote:localhost/test</code> Note that this requires an OrientDB server instance up and running at the specific address, (in this case, localhost).  Remote databases can be persistent or in-memory as well.</li>
+</ul>
+<p>In order to use the Graph API, you need to create an instance of the <a href="http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientGraph.html"><code>OrientGraph</code></a> class.  The constructor receives a <a href="../datamodeling/Concepts.html#database-url">Database URL</a> that is the location of the database.  If the database already exists, the Graph API opens it.  If it doesn't exist, the Graph API creates it.</p>
+<blockquote>
+<p><strong>NOTE</strong>: When creating a database through the Graph API, you can only create PLocal and Memory databases.  Remote databases must already exist.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE</strong>: In v. 2.2 and following releases, when using PLocal or Memory,please set MaxDirectMemorySize (JVM setting) to a high value, like 512g <code>-XX:MaxDirectMemorySize=512g</code></p>
+</blockquote>
+<p>When building multi-threaded application, use one instance of <a href="http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientGraph.html"><code>OrientGraph</code></a> per thread.  Bear in mind that all graph components, such as vertices and edges, are not thread safe.  So, sharing them between threads may result in unpredictable results.</p>
+<p>Remember to always close the graph instance when you are done with it, using the <code>.shutdown()</code> method.  For instance:</p>
+<pre><code class="language-java">OrientGraph graph = new OrientGraph("plocal:C:/temp/graph/db");
+try {
+  ...
+} finally {
+  graph.shutdown();
+}
+</code></pre>
+<h3 id="using-the-factory"><a class="header" href="#using-the-factory">Using the Factory</a></h3>
+<p>Beginning with version 1.7, OrientDB introduces the <a href="http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientGraphFactory.html"><code>OrientGraphFactory</code></a> class as new method for creating graph database instances through the API.</p>
+<pre><code class="language-java">// AT THE BEGINNING
+OrientGraphFactory factory = new OrientGraphFactory("plocal:/tmp/graph/db").setupPool(1,10);
+
+// EVERY TIME YOU NEED A GRAPH INSTANCE
+OrientGraph graph = factory.getTx();
+try {
+  ...
+
+} finally {
+   graph.shutdown();
+}
+</code></pre>
+<blockquote>
+<p>For more information, see <a href="Graph-Factory.html">Graph Factory</a>.</p>
+</blockquote>
+<h2 id="transactions"><a class="header" href="#transactions">Transactions</a></h2>
+<p>Prior to version 2.1.7, whenever you modify the graph database instance, OrientDB automatically starts an implicit transaction, in the event that no previous transactions are running.  When you close the graph instance, it commits the transaction automatically by calling the <code>.shutdown()</code> method or through <code>.commit()</code>.  This allows you to roll changes back where necessary, using the <code>.rollback()</code> method.</p>
+<p>Beginning in version 2.1.8, you can set the <a href="Graph-Consistency.html">Consistency Level</a>.  Changes within the transaction remain temporary until the commit or the closing of the graph database instance.  Concurrent threads or external clients can only see the changes after you fully commit the transaction.</p>
+<p>For instance,</p>
+<pre><code class="language-java">try{
+  Vertex luca = graph.addVertex(null); // 1st OPERATION: IMPLICITLY BEGINS TRANSACTION
+  luca.setProperty( "name", "Luca" );
+  Vertex marko = graph.addVertex(null);
+  marko.setProperty( "name", "Marko" );
+  Edge lucaKnowsMarko = graph.addEdge(null, luca, marko, "knows");
+  graph.commit();
+} catch( Exception e ) {
+  graph.rollback();
+}
+</code></pre>
+<p>By surrounding the transaction in <code>try</code> and <code>catch</code>, you ensure that any errors that occur roll the transaction back to its previous state for all relevant elements.  For more information, see <a href="../general/Concurrency.html">Concurrency</a>.</p>
+<blockquote>
+<p><strong>NOTE</strong>: Prior to version 2.1.7, to work with a graph always use transactional <a href="http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientGraph.html"><code>OrientGraph</code></a> instances and never the non-transactional instances to avoid graph corruption from multi-threaded updates.</p>
+<p>Non-transactional graph instances are created with</p>
+<pre><code class="language-java">OrientGraphNoTx graph = factor.getNoTx();
+</code></pre>
+<p>This instance is only useful when you don't work with data, but want to define the <a href="Graph-Schema.html">database schema</a> or for <a href="#using-non-transactional-graphs">bulk inserts</a>.</p>
+</blockquote>
+<h3 id="optimistic-transactions"><a class="header" href="#optimistic-transactions">Optimistic Transactions</a></h3>
+<p>OrientDB supports optimistic transactions.  This means that no lock is kept when a transaction runs, but at commit time each graph element version is checked to see if there has been an update by another client.</p>
+<p>For this reason, write your code to handle the concurrent updating case:</p>
+<pre><code class="language-java">for (int retry = 0; retry &lt; maxRetries; ++retry) {
+    try {
+        // LOOKUP FOR THE INVOICE VERTEX
+        Iterable&lt;Vertex&gt; invoices = graph.getVertices("invoiceId", 2323);
+        Vertex invoice = invoices.iterator().next();
+        
+        // CREATE A NEW ITEM
+        Vertex invoiceItem = graph.addVertex("class:InvoiceItem");
+        invoiceItem.field("price", 1000);
+        // ADD IT TO THE INVOICE
+        invoice.addEdge(invoiceItem);
+        graph.commit();
+
+        // OK, EXIT FROM RETRY LOOP
+        break;
+    } catch( ONeedRetryException e ) {
+        // SOMEONE HAVE UPDATE THE INVOICE VERTEX AT THE SAME TIME, RETRY IT
+    }
+}
+</code></pre>
+<h3 id="using-non-transactional-graphs"><a class="header" href="#using-non-transactional-graphs">Using Non-Transactional Graphs</a></h3>
+<p>In cases such as massive insertions, you may find the standard transactional graph <code>OrientGraph</code> is too slow for your needs.  You can speed the operations up by using the non-transactional <code>OrientGraphNoTx</code> graph.</p>
+<p>With the non-transactional graph, each operation is <em>atomic</em> and it updates data on each operation.  When the method returns, the underlying storage updates.  This works best for bulk inserts and massive operations, or for schema definitions.</p>
+<blockquote>
+<p><strong>NOTE</strong>: Using non-transactional graphs may cause corruption in the graph in cases where changes are made through multiple threads at the same time.  It is recommended that you only use non-transactional graph instances for single-threaded operations.</p>
+</blockquote>
+<h2 id="graph-configuration"><a class="header" href="#graph-configuration">Graph Configuration</a></h2>
+<p>Beginning in version 1.6 of OrientDB, you can configure the graph by setting all of its properties during construction:</p>
+<ul>
+<li>
+<p><strong><code>blueprints.orientdb.url</code></strong>	Defines the database URL.</p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.username</code></strong> Defines the username</p>
+<p>Default: <code>admin</code></p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.password</code></strong> Defines the user password.</p>
+<p>Default: <code>admin</code></p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.saveOriginalIds</code></strong> Defines whether it saves the original element ID's by using the property <code>id</code>.  You may find this useful when importing a graph to preserve original ID's.</p>
+<p>Default: <code>false</code></p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.keepInMemoryReferences</code></strong> Defines whether it avoids keeping records in memory, by using only Record ID's.</p>
+<p>Default: <code>false</code></p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.useCustomClassesForEdges</code></strong> Defines whether it uses the edge label as the OrientDB class.  If the class doesn't exist, it creates it for you.</p>
+<p>Default: <code>true</code></p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.useCustomClassesForVertex</code></strong> Defines whether it uses the vertex label as the OrientDB class.  If the class doesn't exist, it creates it for you.</p>
+<p>Default: <code>true</code></p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.useVertexFieldsForEdgeLabels</code></strong> Defines whether it stores the edge relationship in the vertex by using the edge class.  This allows you to use multiple fields and makes traversals by the edge label (class) faster.</p>
+<p>Default: <code>true</code></p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.lightweightEdges</code></strong> Defines whether it uses <a href="Lightweight-Edges.html">Lightweight Edges</a>.  This allows you to avoid creating a physical document per edge.  Documents are only created when edges have properties.</p>
+<p>Default: <code>false</code></p>
+</li>
+<li>
+<p><strong><code>blueprints.orientdb.autoStartTx</code></strong> Defines whether it auto-starts transactions when the graph is changed by adding or removing vertices, edges and properties.</p>
+<p>Default: <code>true</code></p>
+</li>
+</ul>
+<h2 id="using-gremlin"><a class="header" href="#using-gremlin">Using Gremlin</a></h2>
+<p>You can also use the Gremlin language with OrientDB.  To do so, initialize it, using <code>OGremlinHelper</code>:</p>
+<pre><code class="language-java">OGremlinHelper.global().create()
+</code></pre>
+<blockquote>
+<p>For more information on Gremlin usage, see:</p>
+<ul>
+<li><a href="../gremlin/Gremlin.html">How to use the Gremlin language with OrientDB</a></li>
+<li><a href="http://github.com/tinkerpop/gremlin/wiki/Getting-Started">Getting started with Gremlin</a></li>
+<li><a href="https://github.com/tinkerpop/rexster/wiki/Using-Gremlin">Usage of Gremlin through HTTP/RESTful API using the Rexter project</a>.</li>
+</ul>
+</blockquote>
+<h2 id="multi-threaded-applications"><a class="header" href="#multi-threaded-applications">Multi-Threaded Applications</a></h2>
+<p>In order to use the OrientDB Graph API with multi-threaded applications, you must use one <code>OrientGraph</code> instance per thread.</p>
+<p>For more information about multi-threading look at <a href="Java-Multi-Threading.html">Java Multi Threading</a>. Bear in mind, graph components (such as, Vertices and Edges) are not thread-safe.  Sharing them between threads could cause unpredictable errors.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/ref/OVertex/getVertices.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Tutorial-Java.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/ref/OVertex/getVertices.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Tutorial-Java.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

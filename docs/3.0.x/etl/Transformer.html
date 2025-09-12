@@ -1,0 +1,734 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Transformers - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-12-11 SAM -->
+<h1 id="etl-transformers"><a class="header" href="#etl-transformers">ETL Transformers</a></h1>
+<p>When OrientDB runs the ETL module, transformer components execute in a pipeline to modify the data before it gets loaded into the OrientDB database.  The operate on received input and return output.</p>
+<p>Before execution, it always initalizes the <code>$input</code> variable, so that if you need to you can access it at run-time.</p>
+<ul>
+<li><a href="#csv-transformer">CSV</a></li>
+<li><a href="#field-transformer">FIELD</a></li>
+<li><a href="#load-transformer">LOAD</a></li>
+<li><a href="#merge-transformer">MERGE</a></li>
+<li><a href="#vertex-transformer">VERTEX</a></li>
+<li><a href="#code-transformer">CODE</a></li>
+<li><a href="#link-transformer">LINK</a></li>
+<li><a href="#edge-transformer">EDGE</a></li>
+<li><a href="#flow-transformer">FLOW</a></li>
+<li><a href="#flow-transformer">LOG</a></li>
+<li><a href="#block-transformer">BLOCK</a></li>
+<li><a href="#command-transformer">COMMAND</a></li>
+</ul>
+<h2 id="csv-transformer"><a class="header" href="#csv-transformer">CSV Transformer</a></h2>
+<blockquote>
+<p>Beginning with version 2.1.4, the CSV Transformer has been deprecated in favor of the <a href="Extractor.html#csv-extractor">CSV Extractor</a>.</p>
+</blockquote>
+<p>Converts a string in a Document, parsing it as CSV</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>csv</strong></li>
+<li>Supported inputs types: [<strong>String</strong>]</li>
+<li>Output: <strong>ODocument</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"separator"</code></td><td>Defines the column separator.</td><td>char</td><td></td><td><code>,</code></td></tr>
+<tr><td><code>"columnsOnFirstLine"</code></td><td>Defines whether the first line contains column descriptions.</td><td>boolean</td><td></td><td><code>true</code></td></tr>
+<tr><td><code>"columns"</code></td><td>Defines array containing column names, you can define types by postfixing the names with <code>:&lt;type&gt;</code>.</td><td>string array</td><td></td><td></td></tr>
+<tr><td><code>"nullValue"</code></td><td>Defines the value to interpret as null.</td><td>string</td><td></td><td></td></tr>
+<tr><td><code>"stringCharacter"</code></td><td>Defines string character delimiter.</td><td>char</td><td></td><td><code>"</code></td></tr>
+<tr><td><code>"skipFrom"</code></td><td>Defines the line number to skip from.</td><td>integer</td><td>yes</td><td></td></tr>
+<tr><td><code>"skipTo"</code></td><td>Defines the line number to skip to.</td><td>integer</td><td>yes</td><td></td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>For the <code>"columns"</code> parameter, specifying type guarantees better performance.</p>
+</blockquote>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Transforms a row in CSV (as <code>ODocument</code> class), using commas as the separator, considering <code>NULL</code> as a null value and skipping rows two through four.</p>
+<pre><code class="language-json">{ "csv": { "separator": ",", "nullValue": "NULL",
+           "skipFrom": 1, "skipTo": 3 } }
+</code></pre>
+</li>
+</ul>
+<h2 id="field-transformer"><a class="header" href="#field-transformer">Field Transformer</a></h2>
+<p>When the ETL module calls the Field Transformer, it executes an SQL transformer against the field.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>vertex</strong></li>
+<li>Supported inputs types: [<strong>ODocument</strong>]</li>
+<li>Output: <strong>ODocument</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"fieldName"</code></td><td>Defines the document field name to use.</td><td>string</td><td></td><td></td></tr>
+<tr><td><code>"expression"</code></td><td>Defines the expression you want to evaluate, using OrientDB SQL.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"value"</code></td><td>Defines the value to set.  If the value is taken or computed at run-time, use <code>"expression"</code> instead.</td><td>any</td><td></td><td></td></tr>
+<tr><td><code>"operation"</code></td><td>Defines the operation to execute against the fields: <code>SET</code> or <code>REMOVE</code>.</td><td>string</td><td></td><td><code>SET</code></td></tr>
+<tr><td><code>"save"</code></td><td>Defines whether to save the vertex, edge or document right after setting the fields.</td><td>boolean</td><td></td><td><code>false</code></td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>The <code>"fieldName"</code> parameter was introduced in version 2.1.</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Transforms the field <code>class</code> into the <code>ODocument</code> class, by prefixing it with <code>_</code>:</p>
+<pre><code class="language-json">{ "field": 
+  { "fieldName": "@class", 
+    "expression": "class.prefix('_')"
+  } 
+}
+</code></pre>
+</li>
+<li>
+<p>Applies the class name, based on the value of another field:</p>
+<pre><code class="language-json">{ "field": 
+  { "fieldName": "@class", 
+    "expression": "if( ( fileCount &gt;= 0 ), 'D', 'F')"
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Assigns the last part of a path to the <code>name</code> field:</p>
+<pre><code class="language-json">{ "field": 
+  { "fieldName": "name",
+    "expression": "path.substring( eval( '$current.path.lastIndexOf(\"/\") + 1') )" 
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Asigns the field a fixed value:</p>
+<pre><code class="language-json">{ "field": 
+  { "fieldName": "counter", 
+    "value": 0
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Renames the field from <code>salary</code> to <code>renumeration</code>:</p>
+<pre><code class="language-json">{ "field": 
+  { "fieldName": "remuneration", 
+    "expression": "salary"
+  } 
+},
+{ "field": 
+  { "fieldName": "salary", 
+    "operation": "remove"
+  } 
+}
+</code></pre>
+</li>
+<li>
+<p>Renames multiple fields in one call.</p>
+<pre><code class="language-json">{ "field": 
+  { "fieldNames": 
+    [ "remuneration", "salary" ], 
+    "operation": "remove"
+  } 
+}
+</code></pre>
+<p>This feature was introduced in version 2.1.</p>
+</li>
+</ul>
+<h2 id="load-transformer"><a class="header" href="#load-transformer">Load Transformer</a></h2>
+<p>When the ETL module calls the Load Transformer, it takes input from one <code>ODocument</code> instance to output into another, loaded by lookup.  THe lookup can either be a lookup against an index or a <a href="../sql/SQL-Query.html"><code>SELECT</code></a> query.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>load</strong></li>
+<li>Supported inputs types: [<strong>ODocument</strong>, <strong>OrientVertex</strong>]</li>
+<li>Output: one or multiple <strong>ODocument</strong> instances</li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"joinFieldName"</code></td><td>Defines the field containing the join value.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"lookup"</code></td><td>Defines the index on which to execute th elookup, or a <a href="../sql/SQL-Query.html"><code>SELECT</code></a> query.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"unresolvedLinkAction"</code></td><td>Defines the action to execute in the event that the join hasn't been resolved.</td><td>string</td><td></td><td><code>NOTHING</code></td></tr>
+</tbody></table>
+</div>
+<p>For the <code>"unresolvedLinkAction"</code> parameter, the supported actions are:</p>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>NOTHING</code></td><td>Tells the transformer to do nothing.</td></tr>
+<tr><td><code>WARNING</code></td><td>Tells the transformer to increment warnings.</td></tr>
+<tr><td><code>ERROR</code></td><td>Tells the transformer to increment errors.</td></tr>
+<tr><td><code>HALT</code></td><td>Tells the transformer to interrupt the process.</td></tr>
+<tr><td><code>SKIP</code></td><td>Tells the transformer to skip the current row.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Loads the current record against the record returned by the lookup on index <code>V.URI</code>, with the value contained in the field <code>URI</code> of the input document:</p>
+<pre><code class="language-json">{ "load": 
+  { "joinFieldName": "URI", 
+    "lookup":"V.URI" 
+  } 
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="merge-transformer"><a class="header" href="#merge-transformer">Merge Transformer</a></h2>
+<p>When the ETL module calls the Merge Transformer, it takes input from one <code>ODocument</code> instance to output into another, loaded by lookup.  THe lookup can either be a lookup against an index or a <a href="../sql/SQL-Query.html"><code>SELECT</code></a> query.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>merge</strong></li>
+<li>Supported inputs types: [<strong>ODocument</strong>, <strong>OrientVertex</strong>]</li>
+<li>Output: <strong>ODocument</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"joinFieldName"</code></td><td>Defines the field containing the join value.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"lookup"</code></td><td>Defines the index on which to execute th elookup, or a <a href="../sql/SQL-Query.html"><code>SELECT</code></a> query.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"unresolvedLinkAction"</code></td><td>Defines the action to execute in the event that the join hasn't been resolved.</td><td>string</td><td></td><td><code>NOTHING</code></td></tr>
+</tbody></table>
+</div>
+<p>For the <code>"unresolvedLinkAction"</code> parameter, the supported actions are:</p>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>NOTHING</code></td><td>Tells the transformer to do nothing.</td></tr>
+<tr><td><code>WARNING</code></td><td>Tells the transformer to increment warnings.</td></tr>
+<tr><td><code>ERROR</code></td><td>Tells the transformer to increment errors.</td></tr>
+<tr><td><code>HALT</code></td><td>Tells the transformer to interrupt the process.</td></tr>
+<tr><td><code>SKIP</code></td><td>Tells the transformer to skip the current row.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Merges the current record against the record returned by the lookup on index <code>V.URI</code>, with the value contained in the field <code>URI</code> of the input document:</p>
+<pre><code class="language-json">{ "merge": 
+  { "joinFieldName": "URI", 
+    "lookup":"V.URI" 
+  } 
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="vertex-transformer"><a class="header" href="#vertex-transformer">Vertex Transformer</a></h2>
+<p>When the ETL module runs the Vertex Transformer, it transforms <code>ODocument</code> input to output <code>OrientVertex</code>.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>vertex</strong></li>
+<li>Supported inputs types: [<strong>ODocument</strong>, <strong>OrientVertex</strong>]</li>
+<li>Output: <strong>OrientVertex</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"class"</code></td><td>Defines the vertex class to use.</td><td>string</td><td></td><td><code>V</code></td></tr>
+<tr><td><code>"skipDuplicates"</code></td><td>Defines whether it skips duplicates.  When class has a <code>UNIQUE</code> constraint, ETL ignores duplicates.</td><td>boolean</td><td></td><td><code>false</code></td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>The <code>"skipDuplicates"</code> parameter was introduced in version 2.1.</p>
+</blockquote>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Transforms <code>ODocument</code> input into a vertex, setting the class value to the <code>$classname</code> variable:</p>
+<pre><code class="language-json">{ "vertex": 
+  { "class": "$className", 
+    "skipDuplicates": true 
+  } 
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="edge-transformer"><a class="header" href="#edge-transformer">Edge Transformer</a></h2>
+<p>When the ETL modules calls the Edge Transformer, it converts join values in one or more edges between the current vertex and all vertices returned by the lookup.  The lookup can either be made against an index or a <a href="../sql/SQL-Query.html"><code>SELECT</code></a>.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>EDGE</strong></li>
+<li>Supported inputs types: [<strong>ODocument</strong>, <strong>OrientVertex</strong>]</li>
+<li>Output: <strong>OrientVertex</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"joinFieldName"</code></td><td>Defines the field containing the join value.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"direction"</code></td><td>Defines the edge direction.</td><td>string</td><td></td><td><code>out</code></td></tr>
+<tr><td><code>"class"</code></td><td>Defines the edge class.</td><td>string</td><td></td><td><code>E</code></td></tr>
+<tr><td><code>"lookup"</code></td><td>Defines the index on which to execute the lookup or a <a href="../sql/SQL-Query.html"><code>SELECT</code></a>.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"targetVertexFields"</code></td><td>Defines the field on which to set the target vertex.</td><td>object</td><td></td><td></td></tr>
+<tr><td><code>"edgeFields"</code></td><td>Defines the fields to set in th eedge.</td><td>object</td><td></td><td></td></tr>
+<tr><td><code>"skipDuplicates"</code></td><td>Defines whether to skip duplicate edges when the <code>UNIQUE</code> constraint is set on both the <code>out</code> and <code>in</code> properties.</td><td>boolean</td><td></td><td><code>false</code></td></tr>
+<tr><td><code>"unresolvedLinkAction"</code></td><td>Defines the action to execute in the event that the join hasn't been resolved.</td><td>string</td><td></td><td><code>NOTHING</code></td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>The <code>"targetVertexFields"</code> andx <code>"edgeFields"</code> parameter were introduced in version 2.1.</p>
+</blockquote>
+<p>For the <code>"unresolvedLinkAction"</code> parameter, the following actions are supported:</p>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>NOTHING</code></td><td>Tells the transformer to do nothing.</td></tr>
+<tr><td><code>CREATE</code></td><td>Tells the transformer to create an instance of <code>OrientVertex</code>, setting the primary key to the join value.</td></tr>
+<tr><td><code>WARNING</code></td><td>Tells the transformer to increment warnings.</td></tr>
+<tr><td><code>ERROR</code></td><td>Tells the transformer to increment errors.</td></tr>
+<tr><td><code>HALT</code></td><td>Tells the transformer to interrupt the process.</td></tr>
+<tr><td><code>SKIP</code></td><td>Tells the transformer to skup the current row.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Creates an edge from the current vertex, with the class set to <code>Parent</code>, to all vertices returned by the lookup on the <code>D.inode</code> index with the value contained in the filed <code>inode_parent</code> of the input's vertex:</p>
+<pre><code class="language-json">{ "edge": 
+  { "class": "Parent", 
+    "joinFieldName": "inode_parent",
+    "lookup":"D.inode",    
+    "unresolvedLinkAction": "CREATE"
+  } 
+}
+</code></pre>
+</li>
+<li>
+<p>Transformer a single-line CSV that contains both vertices and edges:</p>
+<pre><code class="language-json">{ "source": 
+  { "content": 
+    { "value": "id,name,surname,friendSince,friendId,friendName,friendSurname\n0,Jay,Miner,1996,1,Luca,Garulli"
+    }
+  },
+  "extractor": 
+    { "row": {} },
+  "transformers": 
+    [ 
+      { "csv": {} },
+      { "vertex": 
+  	  { "class": "V1" }
+      },
+      { "edge": 
+  	  { "unresolvedLinkAction": "CREATE",
+          "class": "Friend",
+          "joinFieldName": "friendId",
+          "lookup": "V2.fid",
+          "targetVertexFields": 
+  		  { "name": "${input.friendName}",
+               "surname": "${input.friendSurname}"
+            },
+            "edgeFields": 
+  		    { "since": "${input.friendSince}" }
+              }
+        },
+        { "field": 
+  	    { "fieldNames": 
+  		  [ "friendSince",
+              "friendId",
+              "friendName",
+              "friendSurname"
+            ],
+            "operation": "remove"
+          }
+        }
+      ],
+      "loader": 
+  	  { "orientdb": 
+  	    { "dbURL": "memory:ETLBaseTest",
+            "dbType": "graph",
+            "useLightweightEdges": false
+          }
+      }
+  }
+</code></pre>
+</li>
+</ul>
+<h2 id="flow-transformer"><a class="header" href="#flow-transformer">Flow Transformer</a></h2>
+<p>When the ETL module calls the Flow Transformer, it modifies the flow through the pipeline.  Supported operations are <code>skip</code> and <code>halt</code>.  Typically, this transformer operates with the <code>if</code> attribute.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>flow</strong></li>
+<li>Supported inputs types: <strong>Any</strong></li>
+<li>Output: same type as input</li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"operation"</code></td><td>Defines the flow operation: <code>skip</code> or <code>halt</code>.</td><td>string</td><td>yes</td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Skips the current record if <code>name</code> is null:</p>
+<pre><code class="language-json">{ "flow": 
+  { "if": "name is null", 
+    "operation" : "skip" 
+  } 
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="code-transformer"><a class="header" href="#code-transformer">Code Transformer</a></h2>
+<p>When the ETL module calls the Code Transformer, it executes a snippet of code in any JVM supported language.  The default is JavaScript.  The last object in the code is returned as output.</p>
+<p>In the execution context:</p>
+<ul>
+<li><code>input</code> The input object received.</li>
+<li><code>record</code> The record extracted from the input object, when possible.  In the event that input object is a vertex or edge, it assigns the underlying <code>ODocument</code> to the variable.</li>
+</ul>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>code</strong></li>
+<li>Supported inputs types: [<strong>Object</strong>]</li>
+<li>Output: <strong>Object</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<p>| Parameter | Description | Type | Mandatory | Default value |
+|-----------|-------------|-----------|-----------|
+| <code>"language"</code> | Defines the programming language to use. | string | | JavaScript |
+| <code>"code"</code> | Defines the code to execute. | string | yes | |</p>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Displays the current record and return the parent:</p>
+<pre><code class="language-json">{ "code": 
+  { "language": "Javascript",
+    "code": "print('Current record: ' + record); record.field('parent');"
+  }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="link-transformer"><a class="header" href="#link-transformer">Link Transformer</a></h2>
+<p>When the ETL module calls the Link Transformer, it converts join values into links within the current record, using the result of the lookup.  The lookup can be made against an index or a <a href="../sql/SQL-Query.html"><code>SELECT</code></a>.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>link</strong></li>
+<li>Supported inputs types: [<strong>ODocument</strong>, <strong>OrientVertex</strong>]</li>
+<li>Output: <strong>ODocument</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"joinFieldName"</code></td><td>Defines the field containing hte join value.</td><td>string</td><td></td><td></td></tr>
+<tr><td><code>"joinValue"</code></td><td>Defines the value to look up.</td><td>string</td><td></td><td></td></tr>
+<tr><td><code>"linkFieldName"</code></td><td>Defines the field containing the link to set.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"linkFieldType"</code></td><td>Defines the link type.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"lookup"</code></td><td>Defines the index on which to execute the lookup or a <a href="../sql/SQL-Query.html"><code>SELECT</code></a> query.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"unresolvedLinkAction"</code></td><td>Defines the action to execute in the event that the join doesn't resolve.</td><td>string</td><td></td><td><code>NOTHING</code></td></tr>
+</tbody></table>
+</div>
+<p>For the <code>"linkFieldType"</code> parameter, supported link types are: <code>LINK</code>, <code>LINKSET</code> and <code>LINKLIST</code>.</p>
+<p>For the <code>"unresolvedLinkAction"</code> parameter the following actions are supported:</p>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>NOTHING</code></td><td>Tells the transformer to do nothing.</td></tr>
+<tr><td><code>CREATE</code></td><td>Tells the transformer to create an <code>ODocument</code> instance, setting the primary key as the join value.</td></tr>
+<tr><td><code>WARNING</code></td><td>Tells the transformer to increment warnings.</td></tr>
+<tr><td><code>ERROR</code></td><td>Tells the transformer to increment errors.</td></tr>
+<tr><td><code>HALT</code></td><td>Tells the transformer to interrupt the process.</td></tr>
+<tr><td><code>SKIP</code></td><td>Tells the transformer to skip the current row.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Transforms a JSON value into a link within the current record, set as <code>parent</code> of the type <code>LINK</code>, with the result of the lookup on the index <code>D.node</code> with the value contained in the field <code>inode_parent</code> on the input document.</p>
+<pre><code class="language-json">{ "link": 
+  { "linkFieldName": "parent", 
+    "linkFieldType": "LINK",
+    "joinFieldName": "inode_parent", 
+    "lookup":"D.inode",  
+    "unresolvedLinkAction":"CREATE"
+  } 
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="log-transformer"><a class="header" href="#log-transformer">Log Transformer</a></h2>
+<p>When the ETL module uses the Log Transformer, it logs the input object to <code>System.out</code>.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>log</strong></li>
+<li>Supported inputs types: <strong>Any</strong></li>
+<li>Output: <strong>Any</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"prefix"</code></td><td>Defines what it writes before the content.</td><td>string</td><td></td><td></td></tr>
+<tr><td><code>"postfix"</code></td><td>Defines what it writes after the content.</td><td>string</td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Logs the current value:</p>
+<pre><code class="language-json">{ "log": {} }
+</code></pre>
+</li>
+<li>
+<p>Logs the currnt value with <code>-&gt;</code> as the prefix:</p>
+<pre><code class="language-json">{ "log": 
+  { "prefix" : "-&gt; " } 
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="block-transformer"><a class="header" href="#block-transformer">Block Transformer</a></h2>
+<p>When the ETL module calls the Block Transformer, it executes an ETL <a href="Block.html">Block</a> component as a transformation step.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>block</strong></li>
+<li>Supported inputs types: [<strong>Any</strong>]</li>
+<li>Output: <strong>Any</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"block"</code></td><td>Defines the block to execute.</td><td>document</td><td>yes</td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Log the current value:</p>
+<pre><code class="language-json">{ "block": 
+  { "let": 
+    { "name": "id",
+      "value": "={eval('$input.amount * 2')}"
+    }
+  }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="command-transformer"><a class="header" href="#command-transformer">Command Transformer</a></h2>
+<p>When the ETL module calls the Command Transformer, it executes the given command.</p>
+<p>Component description.</p>
+<ul>
+<li>Component name: <strong>command</strong></li>
+<li>Supported inputs types: [<strong>ODocument</strong>]</li>
+<li>Output: <strong>ODocument</strong></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"language"</code></td><td>Defines the command language: SQL or Gremlin.</td><td>string</td><td></td><td><code>sql</code></td></tr>
+<tr><td><code>"command"</code></td><td>Defines the command to execute.</td><td>string</td><td>yes</td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Executes a <a href="../sql/SQL-Query.html"><code>SELECT</code></a> and output an edge:</p>
+<pre><code class="language-json">{ "command" : 
+  { "command" : "SELECT FROM E WHERE id = ${input.edgeid}",
+    "output" : "edge"
+  }
+}
+</code></pre>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../etl/Extractor.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../etl/Loader.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../etl/Extractor.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../etl/Loader.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

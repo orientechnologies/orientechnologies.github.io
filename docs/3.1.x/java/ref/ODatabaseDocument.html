@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ODatabaseDocument - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>search:
+keywords: ['java', 'ODocumentDatabase', 'document database']</h2>
+<h1 id="java-api---odatabasedocument"><a class="header" href="#java-api---odatabasedocument">Java API - ODatabaseDocument</a></h1>
+<p>This class provides a unified Mulit-Model interface for managing and administering OrientDB Document and Graph databases.</p>
+<h2 id="managing-databases"><a class="header" href="#managing-databases">Managing Databases</a></h2>
+<p>In previous versions of OrientDB, separate classes were used for Document and Graph databases.  This is because OrientDB began as a Document database and added support for Graph databases later, based on the Apache TinkerPop 2.x standard.  Beginning in version 3.0.x using this class, OrientDB provides a common interface for both database types.  It can be found at <code>com.orientechnologies.orient.core.db.document</code> .  For instance,</p>
+<pre><code class="language-java">import com.orientechnologies.orient.core.db.document.ODatabaseDocument;
+</code></pre>
+<p>Once you've imported the class to your application, you can use one of the constructors to build a particular instance in your code.</p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p>In order to operate on an instance of this class, you need to create it on the OrientDB Server, then open it through an <a href="OrientDB.html"><code>OrientDB()</code></a> or <a href="OServer.html"><code>OServer</code></a> instance.  For example, in your own application you might want to streamline the startup process, so that it creates a working database in the event that one isn't ready, then opens it.</p>
+<pre><code class="language-java">// INITIALIZE VARIABLES
+private OrientDB orientdb;
+
+// OPEN/CREATE DATABASE
+public static ODatabaseDocument openDatabase(String name) {
+
+   // Initialize Server Connection
+   orientdb = new OrientDB("embedded:/tmp/", OrientDBConfig.defaultConfig());
+
+   // Check if Database Exists
+   if (!orientdb.exists(name)){
+      orientdb.create(name, ODatabaseType.PLOCAL);
+   }
+
+   return orientdb.open(name, "admin", "admin");
+
+}
+</code></pre>
+<p>Here, the method uses the <a href="OrientDB/exists.html"><code>exists</code></a> method to determine of the database exists, runs the <a href="OrientDB/create.html"><code>create()</code></a> if it doesn't, then uses <a href="OrientDB/open.html"><code>open()</code></a> with default credentials to open the <code>ODatabaseDocument</code> instance in your application.</p>
+<h2 id="methods"><a class="header" href="#methods">Methods</a></h2>
+<!--
+### Managing Databases
+- checkSecurity
+- freeze
+- isPooled
+- isValidationEnabled
+- isRetainRecords
+- release
+- setRetainRecords
+- setValidationEnabled
+-->
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Return Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="ODatabaseDocument/close.html"><strong><code>close()</code></strong></a></td><td><code>void</code></td><td>Closes the database</td></tr>
+<tr><td><a href="ODatabaseDocument/command.html"><strong><code>command()</code></strong></a></td><td><a href="OResultSet.html"><code>OResultSet</code></a></td><td>Executes idempotent or non-idempotent query</td></tr>
+<tr><td><a href="ODatabaseDocument/execute.html"><strong><code>execute()</code></strong></a></td><td><a href="OResultSet.html"><code>OResultSet</code></a></td><td>Executes a query</td></tr>
+<tr><td><a href="ODatabaseDocument/getMetadata.html"><strong><code>getMetadata()</code></strong></a></td><td><a href="OMetadata.html"><code>OMetadata</code></a></td><td>Retrieves the database metadata</td></tr>
+<tr><td><a href="ODatabaseDocument/getName.html"><strong><code>getName()</code></strong></a></td><td><code>String</code></td><td>Retrieves the logical name of the database</td></tr>
+<tr><td><a href="ODatabaseDocument/getURL.html"><strong><code>getURL()</code></strong></a></td><td><code>String</code></td><td>Retrieves the database URL</td></tr>
+<tr><td><a href="ODatabaseDocument/getUser.html"><strong><code>getUser()</code></strong></a></td><td><a href="OSecurityUser.html"><code>OSecurityUser</code></a></td><td>Retrieves the current user</td></tr>
+<tr><td><a href="ODatabaseDocument/incrementalBackup.html"><strong><code>incrementalBackup()</code></strong></a></td><td><code>String</code></td><td>Performs an incremental backup of the database to the given path</td></tr>
+<tr><td><a href="ODatabaseDocument/isActiveOnCurrentThread.html"><strong><code>isActiveOnCurrentThread()</code></strong></a></td><td><code>boolean</code></td><td>Checks whether the current database is active on the current thread</td></tr>
+<tr><td><a href="ODatabaseDocument/isClosed.html"><strong><code>isClosed()</code></strong></a></td><td><code>boolean</code></td><td>Checks whether the database is closed</td></tr>
+<tr><td><a href="ODatabaseDocument/live.html"><strong><code>live()</code></strong></a></td><td><a href="OLiveQueryMonitor.html"><code>OLiveQueryMonitor</code></a></td><td>Subscribes query as a live query</td></tr>
+<tr><td><a href="ODatabaseDocument/load.html"><strong><code>load()</code></strong></a></td><td><code>&lt;RET extends T&gt; RET</code></td><td>Loads a record by its Record ID</td></tr>
+<tr><td><a href="ODatabaseDocument/query.html"><strong><code>query()</code></strong></a></td><td><a href="OResultSet.html"><code>OResultSet</code></a></td><td>Queries the database</td></tr>
+<tr><td><a href="ODatabaseDocument/registerListener.html"><strong><code>registerListener()</code></strong></a></td><td><code>void</code></td><td>Subscribes the given listener to database events</td></tr>
+<tr><td><a href="ODatabaseDocument/save.html"><strong><code>save()</code></strong></a></td><td><code>T</code></td><td>Saves the given entity to the database</td></tr>
+<tr><td><a href="ODatabaseDocument/unregisterListener.html"><strong><code>unregisterListener()</code></strong></a></td><td><code>void</code></td><td>Unsubscribes the given listener from database events</td></tr>
+</tbody></table>
+</div>
+<h3 id="managing-classes-and-clusters"><a class="header" href="#managing-classes-and-clusters">Managing Classes and Clusters</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Return Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="ODatabaseDocument/addCluster.html"><strong><code>addCluster()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html"><code>int</code></a></td><td>Adds a cluster to the database.</td></tr>
+<tr><td><a href="ODatabaseDocument/browseClass.html"><strong><code>browseClass</code></strong></a></td><td><code>ORecordIteratorClass&lt;ODocument&gt;</code></td><td>Retrieves all records of the given database class</td></tr>
+<tr><td><a href="ODatabaseDocument/browseCluster.html"><strong><code>browseCluster()</code></strong></a></td><td><code>&lt;REC extends ORecord&gt; ORecordIteratorCluster&lt;REC&gt;</code></td><td>Retrieves all records of the given cluster</td></tr>
+<tr><td><a href="ODatabaseDocument/countClass.html"><strong><code>countClass()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html"><code>long</code></a></td><td>Retrieves the number of records in the given database class</td></tr>
+<tr><td><a href="ODatabaseDocument/countClusterElements.html"><strong><code>countClusterElements()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html"><code>long</code></a></td><td>Counts all entities in the specified cluster.</td></tr>
+<tr><td><a href="ODatabaseDocument/createClass.html"><strong><code>createClass()</code></strong></a></td><td><a href="OClass.html"><code>OClass</code></a></td><td>Creates a new database class</td></tr>
+<tr><td><a href="ODatabaseDocument/createClassIfNotExists.html"><strong><code>createClassIfNotExists()</code></strong></a></td><td><a href="OClass.html"><code>OClass</code></a></td><td>Creates a new database class, if not exists</td></tr>
+<tr><td><a href="ODatabaseDocument/createEdgeClass.html"><strong><code>createEdgeClass()</code></strong></a></td><td><a href="OClass.html"><code>OClass</code></a></td><td>Creates a database class as an extension of the <code>E</code> edge class</td></tr>
+<tr><td><a href="ODatabaseDocument/createVertexClass.html"><strong><code>createVertexClass()</code></strong></a></td><td><a href="OClass.html"><code>OClass</code></a></td><td>Creates a database class as an extension of the <code>V</code> vertex class</td></tr>
+<tr><td><a href="ODatabaseDocument/dropCluster.html"><strong><code>dropCluster()</code></strong></a></td><td><code>boolean</code></td><td>Removes cluster from database</td></tr>
+<tr><td><a href="ODatabaseDocument/existsCluster.html"><strong><code>existsCluster()</code></strong></a></td><td><code>boolean</code></td><td>Determines whether a cluster exists on the database</td></tr>
+<tr><td><a href="ODatabaseDocument/getClass.html"><strong><code>getClass()</code></strong></a></td><td><a href="OClass.html"><code>OClass</code></a></td><td>Retrieves the given class from the database</td></tr>
+<tr><td><a href="ODatabaseDocument/getClusterIdByName.html"><strong><code>getClusterIdByName()</code></strong></a></td><td><code>int</code></td><td>Retrieves the Cluster ID for the given cluster name</td></tr>
+<tr><td><a href="ODatabaseDocument/getClusterNameById.html"><strong><code>getClusterNameById()</code></strong></a></td><td><code>String</code></td><td>Retrieves the cluster name for the given ID</td></tr>
+<tr><td><a href="ODatabaseDocument/getClusters.html"><strong><code>getClusters()</code></strong></a></td><td><code>int</code></td><td>Returns the number of clusters on the database</td></tr>
+<tr><td><a href="ODatabaseDocument/getDefaultClusterId.html"><strong><code>getDefaultClusterId()</code></strong></a></td><td><code>int</code></td><td>Returns the default Cluster ID</td></tr>
+<tr><td><a href="ODatabaseDocument/truncateCluster.html"><strong><code>truncateCluster()</code></strong></a></td><td><code>void</code></td><td>Removes all data from the given cluster</td></tr>
+</tbody></table>
+</div><!--
+- addBlobCluster
+-->
+<h3 id="managing-records"><a class="header" href="#managing-records">Managing Records</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Return Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="ODatabaseDocument/delete.html"><strong><code>delete()</code></strong></a></td><td><code>ODatabase&lt;T&gt;</code></td><td>Removes a record from the database</td></tr>
+<tr><td><a href="ODatabaseDocument/getRecord.html"><strong><code>getRecord()</code></strong></a></td><td><code>&lt;RET extends ORecord&gt; RET</code></td><td>Retrieves a record from the database</td></tr>
+<tr><td><a href="ODatabaseDocument/getRecordType.html"><strong><code>getRecordType()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Byte.html"><code>byte</code></a></td><td>Returns the default record type</td></tr>
+<tr><td><a href="ODatabaseDocument/newBlob.html"><strong><code>newBlob()</code></strong></a></td><td><code>OBlob</code></td><td>Creates a new instance of a binary blob containing the given bytes</td></tr>
+<tr><td><a href="ODatabaseDocument/newEdge.html"><strong><code>newEdge()</code></strong></a></td><td><a href="OEdge.html"><code>OEdge</code></a></td><td>Creates a new edge between the given vertices</td></tr>
+<tr><td><a href="ODatabaseDocument/newElement.html"><strong><code>newElement()</code></strong></a></td><td><a href="OElement.html"><code>OElement</code></a></td><td>Creates a new element (that is, a document, vertex or edge)</td></tr>
+<tr><td><a href="ODatabaseDocument/newInstance.html"><strong><code>newInstance()</code></strong></a></td><td><code>RET</code></td><td>Creates a new document, vertex or edge</td></tr>
+<tr><td><a href="ODatabaseDocument/newVertex.html"><strong><code>newVertex()</code></strong></a></td><td><a href="OVertex.html"><code>OVertex</code></a></td><td>Creates a new vertex</td></tr>
+</tbody></table>
+</div>
+<h3 id="managing-transactions"><a class="header" href="#managing-transactions">Managing Transactions</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Return Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="ODatabaseDocument/begin.html"><strong><code>begin()</code></strong></a></td><td><code>ODatabase&lt;T&gt;</code></td><td>Initiates a transaction</td></tr>
+<tr><td><a href="ODatabaseDocument/commit.html"><strong><code>commit()</code></strong></a></td><td><code>ODatabase&lt;T&gt;</code></td><td>Commits a transaction</td></tr>
+<tr><td><a href="ODatabaseDocument/getTransaction.html"><strong><code>getTransaction()</code></strong></a></td><td><a href="OTransaction.html"><code>OTransaction</code></a></td><td>Retrieves the current transaction</td></tr>
+<tr><td><a href="ODatabaseDocument/rollback.html"><strong><code>rollback()</code></strong></a></td><td><code>ODatabase&lt;T&gt;</code></td><td>Reverts changes</td></tr>
+</tbody></table>
+</div>
+<h3 id="managing-intents"><a class="header" href="#managing-intents">Managing Intents</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Return Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="ODatabaseDocument/declareIntent.html"><strong><code>declareIntent()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html"><code>boolean</code></a></td><td>Declares an intent for the database.</td></tr>
+<tr><td><a href="ODatabaseDocument/getActiveIntent.html"><strong><code>getActiveIntent()</code></strong></a></td><td><a href="OIntent.html"><code>OIntent</code></a></td><td>Returns the Intent active for the current session</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../java/ref/OCluster/updateRecord.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../java/ref/ODatabaseDocument/addCluster.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../java/ref/OCluster/updateRecord.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../java/ref/ODatabaseDocument/addCluster.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

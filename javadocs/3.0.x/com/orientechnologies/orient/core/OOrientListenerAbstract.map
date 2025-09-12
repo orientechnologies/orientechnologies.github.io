@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../common/concur/resource/OPartitionedObjectPoolFactory.html" title="com.orientechnologies.common.concur.resource.OPartitionedObjectPoolFactory" alt="" coords="16,315,280,341"/>
+<area shape="rect" id="node1" href="../../common/concur/resource/OPartitionedObjectPoolFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,304,291,352"/>
+<area shape="rect" id="node2_1" href="../../common/concur/resource/OPartitionedObjectPool.html" title="com.orientechnologies.common.concur.resource.OPartitionedObjectPool" alt="" coords="325,315,525,341"/>
+<area shape="rect" id="node2" href="../../common/concur/resource/OPartitionedObjectPool.html" title="&lt;TABLE&gt;" alt="" coords="315,304,536,352"/>
+<area shape="rect" id="node3_2" href="./OOrientStartupListener.html" title="com.orientechnologies.orient.core.OOrientStartupListener" alt="" coords="283,112,451,155"/>
+<area shape="rect" id="node3" href="./OOrientStartupListener.html" title="&lt;TABLE&gt;" alt="" coords="272,107,461,160"/>
+<area shape="rect" id="node6_3" href="./OOrientListenerAbstract.html" title="com.orientechnologies.orient.core.OOrientListenerAbstract" alt="" coords="469,219,645,245"/>
+<area shape="rect" id="node6" href="./OOrientListenerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="459,208,656,256"/>
+<area shape="rect" id="node4_4" href="./OOrientListener.html" title="com.orientechnologies.orient.core.OOrientListener" alt="" coords="497,112,618,155"/>
+<area shape="rect" id="node4" href="./OOrientListener.html" title="&lt;TABLE&gt;" alt="" coords="486,107,629,160"/>
+<area shape="rect" id="node5_5" href="./OOrientShutdownListener.html" title="com.orientechnologies.orient.core.OOrientShutdownListener" alt="" coords="519,11,705,53"/>
+<area shape="rect" id="node5" href="./OOrientShutdownListener.html" title="&lt;TABLE&gt;" alt="" coords="509,5,715,59"/>
+<area shape="rect" id="node7_6" href="./db/OPartitionedDatabasePoolFactory.html" title="com.orientechnologies.orient.core.db.OPartitionedDatabasePoolFactory" alt="" coords="571,315,807,341"/>
+<area shape="rect" id="node7" href="./db/OPartitionedDatabasePoolFactory.html" title="&lt;TABLE&gt;" alt="" coords="561,304,818,352"/>
+<area shape="rect" id="node8_7" href="./db/OPartitionedDatabasePool.html" title="com.orientechnologies.orient.core.db.OPartitionedDatabasePool" alt="" coords="853,315,1043,341"/>
+<area shape="rect" id="node8" href="./db/OPartitionedDatabasePool.html" title="&lt;TABLE&gt;" alt="" coords="843,304,1053,352"/>
+</map>

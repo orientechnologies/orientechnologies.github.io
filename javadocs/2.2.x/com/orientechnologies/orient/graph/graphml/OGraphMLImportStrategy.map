@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OIgnoreGraphMLImportStrategy.html" title="com.orientechnologies.orient.graph.graphml.OIgnoreGraphMLImportStrategy" alt="" coords="16,118,243,143"/>
+<area shape="rect" id="node1" href="./OIgnoreGraphMLImportStrategy.html" title="&lt;TABLE&gt;" alt="" coords="5,107,253,155"/>
+<area shape="rect" id="node2_1" href="./OGraphMLImportStrategy.html" title="com.orientechnologies.orient.graph.graphml.OGraphMLImportStrategy" alt="" coords="175,11,361,53"/>
+<area shape="rect" id="node2" href="./OGraphMLImportStrategy.html" title="&lt;TABLE&gt;" alt="" coords="165,5,371,59"/>
+<area shape="rect" id="node3_2" href="./ORenameGraphMLImportStrategy.html" title="com.orientechnologies.orient.graph.graphml.ORenameGraphMLImportStrategy" alt="" coords="288,118,528,143"/>
+<area shape="rect" id="node3" href="./ORenameGraphMLImportStrategy.html" title="&lt;TABLE&gt;" alt="" coords="277,107,539,155"/>
+</map>

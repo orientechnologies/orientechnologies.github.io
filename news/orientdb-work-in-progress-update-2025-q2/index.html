@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OrientDB work in progress update 2025 Q2 |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon-orientdb.png">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #212127;
+        /* Primary theme text color */
+        --primary-text-color: #ee521b;
+        /* Primary theme link color */
+        --primary-link-color: #ee521b;
+        /* Secondary color: the background body color */
+        --secondary-color: #ffffff;
+        --secondary-text-color: #212127;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #ee521b;
+    }
+    .logo img {
+        width:auto !important;
+    }
+    .nav-item:hover {
+        color:#ffffff !important;
+    }
+</style>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://orientdb.dev/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;">
+    <div class="logo">
+        <img src="https://orientdb.dev/logo.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;downloads&#x2F;">Download</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;getting-started&#x2F;">Getting Started</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;documentation&#x2F;">Docs</a>
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;support&#x2F;">Support</a>
+        
+    
+    
+        
+        <a class="nav-item subtitle-text" href="&#x2F;news&#x2F;">News</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        <div class="content text">
+            
+<div class="heading-text">OrientDB work in progress update 2025 Q2</div>
+2025-07-15
+<p>A new quarter passed and a new update on OrientDB development is here.</p>
+<p>This last few months saw the start of work on one of the most complex part of OrientDB,
+the distributed implementation, as mentioned in the original post and in few places in the support forum,
+most of the needed work is around the redesign of the topology management, and this is where the progress happened, in the details:</p>
+<p>For better performances the data protocol require having some strategy to reduce conflicts when allocating record Ids,
+the metadata for this logic used to be stored together with the topology metadata, this now has been moved to the schema in the specific inside the class definition,
+allowing a more specialized allocation strategy in the future, and simplifying the topology management, keeping data related to the database in the database.</p>
+<p>Another are of improvement was around DDLs operations, in 3.x versions to guarantee consistency of DDLs was used a distributed exclusive lock provided by Hazelcast,
+anyway the recent protocol to execute DDLs can handle consistency without the need of this lock, so the logic was refactored to just use the OrientDB distributed protocol to handle DDLs,
+removing the requirement of Hazelcast in this case.</p>
+<p>Hazelcast is used also to keep information about the topology, using distributed hash maps where keys are based on nodes and database names,
+and values contains documents with the topology data, all this documents store the data in schema-less way,
+this is has been proved hard to maintain because in many places documents where passed around without much metadata about the content,
+so a refactor has been done to wrap this documents on some java types, so their content is actually well-defined now,
+and is easy to track what is used and where, to allow in the more long term plan is to remove Hazelcast DHT, and use OrientDB protocols to manage this data.</p>
+<p>Work not related to distributed flow it happens mostly around the studio UI, where dependencies are slowly updated,
+as well more fix and refactors have been done in remote client and the query engine, following as well 3.2.x fixes.</p>
+<p>On the operational side there have been also some challenges in the last few months,
+the orientdb.com and orientdb.org went offline, I lost a bit the track of who handle that domains, and I haven't been notified before they went offline,
+so I spent some time rebuild ad republishing the most important content, that are mainly docs that you can find on this website specifically <a href="https://orientdb.dev/documentation/">here</a>,
+also the source of this website is on the open ( <a href="https://github.com/orientechnologies/orientechnologies.github.io/">here</a> ), so is going to be easier to keep it up in the future, hopefully
+this issues not happen again in the future.</p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://orientdb.dev">OrientDB.dev</a>
+            <a rel="me" href="https://fosstodon.org/@orientdb">Mastodon</a>
+            <a href="https://matrix.to/#/#orientdb:matrix.org">Matrix Chat</a>
+        </small>
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

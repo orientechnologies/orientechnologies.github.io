@@ -1,0 +1,26 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractCommandTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractCommandTask" alt="" coords="16,209,196,234"/>
+<area shape="rect" id="node1" href="./OAbstractCommandTask.html" title="&lt;TABLE&gt;" alt="" coords="5,197,207,245"/>
+<area shape="rect" id="node2_1" href="./OAbstractRemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRemoteTask" alt="" coords="1119,17,1283,42"/>
+<area shape="rect" id="node2" href="./OAbstractRemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="1108,5,1293,53"/>
+<area shape="rect" id="node3_2" href="./OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="1109,113,1292,138"/>
+<area shape="rect" id="node3" href="./OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="1099,101,1303,149"/>
+<area shape="rect" id="node4_3" href="../impl/task/OCopyDatabaseChunkTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OCopyDatabaseChunkTask" alt="" coords="242,209,437,234"/>
+<area shape="rect" id="node4" href="../impl/task/OCopyDatabaseChunkTask.html" title="&lt;TABLE&gt;" alt="" coords="231,197,447,245"/>
+<area shape="rect" id="node5_4" href="../impl/task/OSQLCommandTaskFirstPhase.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSQLCommandTaskFirstPhase" alt="" coords="483,209,700,234"/>
+<area shape="rect" id="node5" href="../impl/task/OSQLCommandTaskFirstPhase.html" title="&lt;TABLE&gt;" alt="" coords="472,197,711,245"/>
+<area shape="rect" id="node6_5" href="../impl/task/OTransactionPhase2Task.html" title="com.orientechnologies.orient.server.distributed.impl.task.OTransactionPhase2Task" alt="" coords="745,209,925,234"/>
+<area shape="rect" id="node6" href="../impl/task/OTransactionPhase2Task.html" title="&lt;TABLE&gt;" alt="" coords="735,197,936,245"/>
+<area shape="rect" id="node7_6" href="../impl/task/OSyncDatabaseNewDeltaTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSyncDatabaseNewDeltaTask" alt="" coords="971,209,1187,234"/>
+<area shape="rect" id="node7" href="../impl/task/OSyncDatabaseNewDeltaTask.html" title="&lt;TABLE&gt;" alt="" coords="961,197,1198,245"/>
+<area shape="rect" id="node8_7" href="../impl/task/ONewSQLCommandTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ONewSQLCommandTask" alt="" coords="1233,209,1413,234"/>
+<area shape="rect" id="node8" href="../impl/task/ONewSQLCommandTask.html" title="&lt;TABLE&gt;" alt="" coords="1223,197,1424,245"/>
+<area shape="rect" id="node9_8" href="../impl/task/OAbstractSyncDatabaseTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OAbstractSyncDatabaseTask" alt="" coords="1459,209,1665,234"/>
+<area shape="rect" id="node9" href="../impl/task/OAbstractSyncDatabaseTask.html" title="&lt;TABLE&gt;" alt="" coords="1448,197,1676,245"/>
+<area shape="rect" id="node10_9" href="../impl/task/OTransactionPhase1Task.html" title="com.orientechnologies.orient.server.distributed.impl.task.OTransactionPhase1Task" alt="" coords="1711,209,1891,234"/>
+<area shape="rect" id="node10" href="../impl/task/OTransactionPhase1Task.html" title="&lt;TABLE&gt;" alt="" coords="1700,197,1901,245"/>
+<area shape="rect" id="node11_10" href="../impl/task/OSyncClusterTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSyncClusterTask" alt="" coords="1937,209,2073,234"/>
+<area shape="rect" id="node11" href="../impl/task/OSyncClusterTask.html" title="&lt;TABLE&gt;" alt="" coords="1926,197,2083,245"/>
+<area shape="rect" id="node12_11" href="../impl/task/OSQLCommandTaskSecondPhase.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSQLCommandTaskSecondPhase" alt="" coords="2119,209,2355,234"/>
+<area shape="rect" id="node12" href="../impl/task/OSQLCommandTaskSecondPhase.html" title="&lt;TABLE&gt;" alt="" coords="2108,197,2365,245"/>
+</map>

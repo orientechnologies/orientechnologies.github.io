@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Supported Types - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-11-26 SAM -->
+<h1 id="supported-data-types"><a class="header" href="#supported-data-types">Supported Data Types</a></h1>
+<p>OrientDB supports several data types natively. Below is the complete table.</p>
+<div class="table-wrapper"><table><thead><tr><th>#id</th><th>Type</th><th>SQL type</th><th>Description</th><th>Java type</th><th>Minimum<br>Maximum</th><th>Auto-conversion from/to</th></tr></thead><tbody>
+<tr><td>0</td><td>Boolean</td><td>BOOLEAN</td><td>Handles only the values <em>True</em> or <em>False</em></td><td><code>java.lang.Boolean</code> or <code>boolean</code></td><td>0<br>1</td><td>String</td></tr>
+<tr><td>1</td><td>Integer</td><td>INTEGER</td><td>32-bit signed Integers</td><td><code>java.lang.Integer</code> or <code>int</code></td><td>-2,147,483,648<br>+2,147,483,647</td><td>Any Number, String</td></tr>
+<tr><td>2</td><td>Short</td><td>SHORT</td><td>Small 16-bit signed integers</td><td><code>java.lang.Short</code> or <code>short</code></td><td>-32,768<br>32,767</td><td>Any Number, String</td></tr>
+<tr><td>3</td><td>Long</td><td>LONG</td><td>Big 64-bit signed integers</td><td><code>java.lang.Long</code> or <code>long</code></td><td>-2<sup>63</sup><br>+2<sup>63</sup>-1</td><td>Any Number, String</td></tr>
+<tr><td>4</td><td>Float</td><td>FLOAT</td><td>Decimal numbers</td><td><code>java.lang.Float</code> or <code>float</code></td><td>2<sup>-149</sup><br>(2-2<sup>-23</sup>)*2<sup>127</sup></td><td>Any Number, String</td></tr>
+<tr><td>5</td><td>Double</td><td>DOUBLE</td><td>Decimal numbers with high precision</td><td><code>java.lang.Double</code> or <code>double</code></td><td>2<sup>-1074</sup><br>(2-2<sup>-52</sup>)*2<sup>1023</sup></td><td>Any Number, String</td></tr>
+<tr><td>6</td><td>Datetime</td><td>DATETIME</td><td>Any date with the precision up to milliseconds. To know more about it, look at <a href="Managing-Dates.html">Managing Dates</a></td><td><code>java.util.Date</code></td><td>-<br>1002020303</td><td>Date, Long, String</td></tr>
+<tr><td>7</td><td>String</td><td>STRING</td><td>Any string as alphanumeric sequence of chars</td><td><code>java.lang.String</code></td><td>-<br>-</td><td>-</td></tr>
+<tr><td>8</td><td>Binary</td><td>BINARY</td><td>Can contain any value as byte array</td><td><code>byte[]</code></td><td>0<br>2,147,483,647</td><td>String</td></tr>
+<tr><td>9</td><td>Embedded</td><td>EMBEDDED</td><td>The Record is contained inside the owner. The contained Record has no <a href="../datamodeling/Concepts.html#record-id">Record ID</a></td><td><code>ORecord</code></td><td>-<br>-</td><td>ORecord</td></tr>
+<tr><td>10</td><td>Embedded list</td><td>EMBEDDEDLIST</td><td>The Records are contained inside the owner. The contained records have no <a href="../datamodeling/Concepts.html#record-id">Record ID's</a> and are reachable only by navigating the owner record</td><td><code>List&lt;Object&gt;</code></td><td>0<br>41,000,000 items</td><td>String</td></tr>
+<tr><td>11</td><td>Embedded set</td><td>EMBEDDEDSET</td><td>The Records are contained inside the owner. The contained Records have no <a href="../datamodeling/Concepts.html#record-id">Record ID</a> and are reachable only by navigating the owner record</td><td><code>Set&lt;Object&gt;</code></td><td>0<br>41,000,000 items</td><td>String</td></tr>
+<tr><td>12</td><td>Embedded map</td><td>EMBEDDEDMAP</td><td>The Records are contained inside the owner as values of the entries, while the keys can only be Strings. The contained ords e no <a href="../datamodeling/Concepts.html#record-id">Record ID</a>s and are reachable only by navigating the owner Record</td><td><code>Map&lt;String, ORecord&gt;</code></td><td>0<br>41,000,000 items</td><td><code>Collection&lt;? extends ORecord&lt;?&gt;&gt;</code>, <code>String</code></td></tr>
+<tr><td>13</td><td>Link</td><td>LINK</td><td>Link to another Record. It's a common <a href="../datamodeling/Concepts.html#11-and-1n-referenced-relationships">one-to-one relationship</a></td><td><code>ORID</code>, <code>&lt;? extends ORecord&gt;</code></td><td>1:-1<br>32767:2^63-1</td><td>String</td></tr>
+<tr><td>14</td><td>Link list</td><td>LINKLIST</td><td>Links to other Records. It's a common <a href="../datamodeling/Concepts.html#1n-and-nn-embedded-relationships">one-to-many relationship</a> where only the <a href="../datamodeling/Concepts.html#record-id">Record ID</a>s are stored</td><td><code>List&lt;? extends ORecord</code></td><td>0<br>41,000,000 items</td><td>String</td></tr>
+<tr><td>15</td><td>Link set</td><td>LINKSET</td><td>Links to other Records. It's a common <a href="../datamodeling/Concepts.html#1n-and-nn-embedded-relationships">one-to-many relationship</a></td><td><code>Set&lt;? extends ORecord&gt;</code></td><td>0<br>41,000,000 items</td><td><code>Collection&lt;? extends ORecord&gt;</code>, <code>String</code></td></tr>
+<tr><td>16</td><td>Link map</td><td>LINKMAP</td><td>Links to other Records as value of the entries, while keys can only be Strings. It's a common <a href="../datamodeling/Concepts.html#1n-and-nn-embedded-relationships">One-to-Many Relationship</a>. Only the <a href="../datamodeling/Concepts.html#record-id">Record ID</a>s are stored</td><td><code>Map&lt;String,<br>    ? extends Record&gt;</code></td><td>0<br>41,000,000 items</td><td>String</td></tr>
+<tr><td>17</td><td>Byte</td><td>BYTE</td><td>Single byte. Useful to store small 8-bit signed integers</td><td><code>java.lang.Byte</code> or <code>byte</code></td><td>-128<br>+127</td><td>Any Number, String</td></tr>
+<tr><td>18</td><td>Transient</td><td>TRANSIENT</td><td>Any value not stored on database</td><td></td><td></td><td></td></tr>
+<tr><td>19</td><td>Date</td><td>DATE</td><td>Any date as year, month and day. To know more about it, look at <a href="Managing-Dates.html">Managing Dates</a></td><td><code>java.util.Date</code></td><td>-<bonetomanyr>-</td><td>Date, Long, String</td></tr>
+<tr><td>20</td><td>Custom</td><td>CUSTOM</td><td>used to store a custom type providing the marshall and unmarshall methods</td><td><code>OSerializableStream</code></td><td>0<br>X</td><td>-</td></tr>
+<tr><td>21</td><td>Decimal</td><td>DECIMAL</td><td>Decimal numbers without rounding</td><td><code>java.math.BigDecimal</code></td><td>?<br>?</td><td>Any Number, String</td></tr>
+<tr><td>22</td><td>LinkBag</td><td>LINKBAG</td><td>List of <a href="../datamodeling/Concepts.html#record-id">Record ID</a>s as spec <a href="../internals/RidBag.html">RidBag</a></td><td><code>ORidBag</code></td><td>?<br>?</td><td>-</td></tr>
+<tr><td>23</td><td>Any</td><td>ANY</td><td>Not determinated type, used to specify Collections of mixed type, and null</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../general/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../general/Schema.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../general/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../general/Schema.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

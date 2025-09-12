@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Concurrency - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-11-26 SAM -->
+<h1 id="concurrency"><a class="header" href="#concurrency">Concurrency</a></h1>
+<p>OrientDB uses an optimistic approach to concurrency.  Optimistic Concurrency Control, or <a href="http://en.wikipedia.org/wiki/Optimistic_concurrency_control">OCC</a> assumes that multiple transactions can compete frequently without interfering with each other. It's very important that you don't share instances of databases, graphs, records, documents, vertices and edges between threads because they are non thread-safe. For more information look at <a href="../java/Java-Multi-Threading.html">Multi-Threading</a>.</p>
+<h2 id="how-does-it-work"><a class="header" href="#how-does-it-work">How does it work?</a></h2>
+<p>Consider the following scenario, where 2 clients, A and B, want to update the amount of a bank account:</p>
+<pre><code>       Client A                               Client B
+       
+           |                                     |
+          (t1)                                   |
+   Read record #13:22                            |
+     amount is 100                              (t2)
+           |                             Read record #13:22                   
+          (t3)                             amount is 100
+  Update record #13:22                           |
+set amount = amount + 10                        (t4)
+           |                            Update record #13:22
+           |                           set amount = amount + 10
+           |                                     |
+</code></pre>
+<p>Client A (t1) and B (t2) read the record #13:22 and both receive the last amount as USD 100. Client A updates the amount by adding USD 10 (t3), then the Client B is trying to do the same thing: updates the amount by adding USD 10. Here is the problem: Client B is doing an operation based on current information: the amount was USD 100. But at the moment of update, such information is changed (by Client A on t3), so the amount is USD 110 in the database. Should the update succeed by setting the new amount to USD 120?</p>
+<p>In some cases this could be totally fine, in others not. It depends by the use case. For example, in your application there could be a logic where you are donating USD 10 to all the accounts where the amount is &lt;=100. The owner of the account behind the record #13:22 is more lucky than the others, because it receives the donation even if it has USD 110 at that moment.</p>
+<p>For this reason in OrientDB when this situation happens a <code>OConcurrentModificationException</code> exception is thrown, so the application can manage it properly. Usually the 3 most common strategies to handle this exceptions are:</p>
+<ol>
+<li><strong>Retry</strong> doing the same operation by reloading the record #13:22 first with the updated amount</li>
+<li><strong>Ignore</strong> the change, because the basic condition is changed</li>
+<li><strong>Propagate the exception to the user</strong>, so he can decide what to do in this case</li>
+</ol>
+<h2 id="optimistic-concurrency-in-orientdb"><a class="header" href="#optimistic-concurrency-in-orientdb">Optimistic Concurrency in OrientDB</a></h2>
+<p>Optimistic concurrency control is used in environments with low data contention.  That is, where conflicts are rare and transactions can complete without the expense of managing locks and without having transactions wait for locks to clear. This means a reduced throughput over other concurrency control methods.</p>
+<p>OrientDB uses OCC for both <a href="Concurrency.html#atomic-operations">Atomic Operations</a> and <a href="Concurrency.html#transactions">Transactions</a>.</p>
+<h3 id="atomic-operations"><a class="header" href="#atomic-operations">Atomic Operations</a></h3>
+<p>OrientDB supports Multi-Version Concurrency Control, or <a href="http://en.wikipedia.org/wiki/Multiversion_concurrency_control">MVCC</a>, with atomic operations. This allows it to avoid locking server side resources. At the same time, it checks the version in the database. If the version is equal to the record version contained in the operation, the operation is successful. If the version found is higher than the record version contained in the operation, then another thread or user has already updated the same record.  In this case, OrientDB generates an <code>OConcurrentModificationException</code> exception.</p>
+<p>Given that behavior of this kind is normal on systems that use optimistic concurrency control, developers need to write concurrency-proof code.  Under this design, the application retries transactions <em>x</em> times before reporting the error.  It does this by catching the exception, reloading the affected records and attempting to update them again.  For example, consider the code for saving a document,</p>
+<pre><code class="language-java">int maxRetries = 10;
+List&lt;ODocument&gt; result = db.query("SELECT FROM Client WHERE id = '39w39D32d2d'");
+ODocument address = result.get(0);
+
+for (int retry = 0; retry &lt; maxRetries; ++retry) {
+     try {
+          // LOOKUP FOR THE INVOICE VERTEX
+          address.field( "street", street );
+          address.field( "zip", zip );
+          address.field( "city", cityName );
+          address.field( "country", countryName );
+
+          address.save();
+
+          // EXIT FROM RETRY LOOP
+          break;
+	 }
+	 catch( ONeedRetryException e ) {
+          // IF SOMEONE UPDATES THE ADDRESS DOCUMENT
+          // AT THE SAME TIME, RETRY IT.
+     }
+}
+</code></pre>
+<h3 id="transactions"><a class="header" href="#transactions">Transactions</a></h3>
+<p>OrientDB supports optimistic transactions. The database does not use locks when transactions are running, but when the transaction commits, each record (document or graph element) version is checked to see if there have been updates from another client. For this reason, you need to code your applications to be concurrency-proof.</p>
+<p>Optimistic concurrency requires that you retire the transaction in the event of conflicts.  For example, consider a case where you want to connect a new vertex to an existing vertex:</p>
+<pre><code class="language-java">int maxRetries = 10;
+for (int retry = 0; retry &lt; maxRetries; ++retry) {
+     try {
+          // LOOKUP FOR THE INVOICE VERTEX
+          Vertex invoice = graph.getVertices("invoiceId", 2323);
+		  
+          // CREATE A NEW ITEM
+          Vertex invoiceItem = graph.addVertex("class:InvoiceItem");
+          invoiceItem.field("price", 1000);
+		  
+          // ADD IT TO THE INVOICE
+          invoice.addEdge(invoiceItem);
+
+          graph.commit();
+
+          // EXIT FROM RETRY LOOP
+          break;
+     }
+	 catch( OConcurrentModificationException e ) {
+          // SOMEONE HAS UPDATED THE INVOICE VERTEX
+		  // AT THE SAME TIME, RETRY IT
+     }
+}
+</code></pre>
+<h4 id="concurrency-level"><a class="header" href="#concurrency-level">Concurrency Level</a></h4>
+<p>Before v2.2.4, transactions acquire an exclusive lock on the storage, so no matter if you have 1 or 100 cores, the execution was always serialized. With 2.2.4 and further, transactions are executed in parallel only if they involve different <a href="../datamodeling/Concepts.html#cluster">clusters</a> and indexes.</p>
+<p>In order to use the transaction parallelism, the domain has to be slightly changed by using the OrientDB inheritance by creating a base class and multiple sub-classes, one per core. Example of creating the class Log with 4 sub-classes (4 cores) and the indexed property 'id':</p>
+<pre><code class="language-sql">CREATE CLASS Log ABSTRACT
+
+CREATE CLASS Log_1 EXTENDS Log
+CREATE PROPERTY Log_1.id STRING
+CREATE INDEX Log1Id ON Log_1(id) UNIQUE_HASHINDEX
+
+CREATE CLASS Log_2 EXTENDS Log
+CREATE PROPERTY Log_2.id STRING
+CREATE INDEX Log1Id ON Log_2(id) UNIQUE_HASHINDEX
+
+CREATE CLASS Log_3 EXTENDS Log
+CREATE PROPERTY Log_3.id STRING
+CREATE INDEX Log1Id ON Log_3(id) UNIQUE_HASHINDEX
+
+CREATE CLASS Log_4 EXTENDS Log
+CREATE PROPERTY Log_4.id STRING
+CREATE INDEX Log1Id ON Log_4(id) UNIQUE_HASHINDEX
+</code></pre>
+<p>After creating multiple sub-classes, you should bind your threads/client (it depends, respectively, if you are working in embedded mode or client/server) to a different sub-class. For example with 4 cores, you have 4 sub-classes (like above) and this could be the binding for the class "Log":</p>
+<ul>
+<li>Thread/Client 1 -&gt; Class <strong>Log_1</strong></li>
+<li>Thread/Client 2 -&gt; Class <strong>Log_2</strong></li>
+<li>Thread/Client 3 -&gt; Class <strong>Log_3</strong></li>
+<li>Thread/Client 4 -&gt; Class <strong>Log_4</strong></li>
+</ul>
+<p>If you are working with graphs, it's a good practice to apply the same rule to both vertex and edge classes. In this example we have 4 cores, so 4 clusters per vertex class and 4 clusters per edge class:</p>
+<ul>
+<li>Thread/Client 1 -&gt; Classes <strong>User_1</strong> and <strong>City_1</strong> for vertices and Class <strong>Born_1</strong> for edges</li>
+<li>Thread/Client 2 -&gt; Classes <strong>User_2</strong> and <strong>City_2</strong> for vertices and Class <strong>Born_2</strong> for edges</li>
+<li>Thread/Client 3 -&gt; Classes <strong>User_3</strong> and <strong>City_3</strong> for vertices and Class <strong>Born_3</strong> for edges</li>
+<li>Thread/Client 4 -&gt; Classes <strong>User_4</strong> and <strong>City_4</strong> for vertices and Class <strong>Born_4</strong> for edges</li>
+</ul>
+<p>Now look at these 2 SQL scripts:</p>
+<p>Client 1:</p>
+<pre><code class="language-sql">BEGIN
+LET v1 = CREATE VERTEX User_1 SET name = 'Luca'
+LET v2 = CREATE VERTEX City_1 SET name = 'Rome'
+CREATE EDGE Born_1 FROM $v1 TO $v2
+COMMIT RETRY 10
+</code></pre>
+<p>Client 2:</p>
+<pre><code class="language-sql">BEGIN
+LET v1 = CREATE VERTEX User_2 SET name = 'Luca'
+LET v2 = CREATE VERTEX City_2 SET name = 'Rome'
+CREATE EDGE Born_2 FROM $v1 TO $v2
+COMMIT RETRY 10
+</code></pre>
+<p>In this case the two transactions go in parallel with no conflict, because they work on different classes and indexes.</p>
+<p>Thanks to the OrientDB polymorphism, sub-classes are <code>instance of</code> the abstract class, so you can still execute queries by using the base class as target and OrientDB will consider all the sub-classes, so your model remains clean at application level. Example:</p>
+<pre><code class="language-sql">SELECT * FROM User WHERE name = 'Luca'
+</code></pre>
+<p>But if you already know that Luca if exists is in the 2nd partition of the User class (User_2 sub class), you can also execute:</p>
+<pre><code class="language-sql">SELECT * FROM User_2 WHERE name = 'Luca'
+</code></pre>
+<p>When it's possible to pre-determine there the record is saved, using the sub-class as target has better performance.</p>
+<h2 id="concurrency-when-adding-edges"><a class="header" href="#concurrency-when-adding-edges">Concurrency when Adding Edges</a></h2>
+<p>Consider the case where multiple clients attempt to add edges on the same vertex.  OrientDB could throw the <code>OConcurrentModificationException</code> exception.  This occurs because collections of edges are kept on vertices,  meaning that, every time OrientDB adds or removes an edge, both vertices update and their versions increment.  You can avoid this issue by using <a href="../internals/RidBag.html">RIDBAG Bonsai structure</a>, which are never embedded, so the edge never updates the vertices.</p>
+<p>To use this configuration at run-time, before launching OrientDB, use this code:</p>
+<pre><code class="language-java">OGlobalConfiguration.RID_BAG_EMBEDDED_TO_SBTREEBONSAI_THRESHOLD.setValue(-1);
+</code></pre>
+<p>Alternatively, you can set a parameter for the Java virtual-machine on startup, or even at run-time, before OrientDB is used:</p>
+<pre>
+$ <code class="lang-sql userinput">java -DridBag.embeddedToSbtreeBonsaiThreshold=-1</code>
+</pre>
+<div class="table-wrapper"><table><thead><tr><th><img src="../images/warning.png" alt="NOTE" /></th><th style="text-align: left">While running in distributed mode SBTrees are not supported. If using a distributed database then you must set <pre>ridBag.embeddedToSbtreeBonsaiThreshold = Integer.MAX_VALUE</pre>  to avoid replication errors.</th></tr></thead><tbody>
+</tbody></table>
+</div>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="reduce-transaction-size"><a class="header" href="#reduce-transaction-size">Reduce Transaction Size</a></h3>
+<p>On occasion, OrientDB throws the <code>OConcurrentModificationException</code> exception even when you concurrently update the first element. In particularly large transactions, where you have thousands of records involved in a transaction, one changed record is enough to roll the entire process back with an <code>OConcurrentModificationException</code> exception.</p>
+<p>To avoid issues of this kind, if you plan to update many elements in the same transaction with high-concurrency on the same vertices, a best practice is to reduce the transaction size.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../general/Inheritance.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../indexing/Indexes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../general/Inheritance.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../indexing/Indexes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

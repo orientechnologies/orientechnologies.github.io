@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OStatement.html" title="com.orientechnologies.orient.core.sql.parser.OStatement" alt="" coords="55,17,153,42"/>
+<area shape="rect" id="node1" href="./OStatement.html" title="&lt;TABLE&gt;" alt="" coords="45,5,163,53"/>
+<area shape="rect" id="node3_1" href="./OUpdateStatement.html" title="com.orientechnologies.orient.core.sql.parser.OUpdateStatement" alt="" coords="32,113,176,138"/>
+<area shape="rect" id="node3" href="./OUpdateStatement.html" title="&lt;TABLE&gt;" alt="" coords="21,101,187,149"/>
+<area shape="rect" id="node2_2" href="./OUpdateEdgeStatement.html" title="com.orientechnologies.orient.core.sql.parser.OUpdateEdgeStatement" alt="" coords="16,209,192,234"/>
+<area shape="rect" id="node2" href="./OUpdateEdgeStatement.html" title="&lt;TABLE&gt;" alt="" coords="5,197,203,245"/>
+</map>

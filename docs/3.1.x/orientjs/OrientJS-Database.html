@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Database API - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="orientjs-database-api"><a class="header" href="#orientjs-database-api">OrientJS Database API</a></h1>
+<p>Once you have initialized the <a href="OrientJS-Server.html">Server API</a>, you can begin to interact with the databases on the OrientDB Server.  In your code, this starts with initializing a database instance for your application, which is managed through the OrientJS Database API.</p>
+<blockquote>
+<p>By convention, the variable on which you initialize the Database API is called <code>db</code>.  This designation is arbitrary and used only for convenience.</p>
+</blockquote>
+<h2 id="initializing-the-database-api"><a class="header" href="#initializing-the-database-api">Initializing the Database API</a></h2>
+<p>In order to work with an OrientDB database in your Node.js application, you need to initialize an instance of the Database API.  This provides your application with the tools it needs to access, manipulate and otherwise interact with specific databases.  The initialization process is handled through the Server API, which is here called <code>server</code>, by convention.</p>
+<p>For instance, with an existing database,</p>
+<pre><code class="language-js">var db = server.use('BaseballStats')
+console.log('Using Database:'  + db.name);
+</code></pre>
+<p>Using this code, your application would attempt to connect to the <code>BaseballStats</code> database.  When it succeeds, it logs a message to the console to tell the user which database they're on.</p>
+<p>When you're done with the database, be sure to close the instance,</p>
+<pre><code class="language-js">db.close();
+</code></pre>
+<h3 id="using-credentials"><a class="header" href="#using-credentials">Using Credentials</a></h3>
+<p>In the above example, the Database API attempts to load the database using the default credentials, that is the <code>admin</code> user with the password <code>admin</code>.  That's fine for a database that collects baseball statistics, but may prove problematic in the event that you want to store sensitive information.  You can pass additional objects to the <code>server.use()</code> method to use credentials when you initialize the database instance.</p>
+<pre><code class="language-js">var db = server.use({
+   name:     'SmartHomeData',
+   username:     'smarthome_user',
+   password: 'smarthome_passwd'
+});
+</code></pre>
+<p>Here, you have a database for logging information from various smart home devices.  By passing in the <code>user</code> and <code>password</code> arguments, you can now use application specific credentials when interacting with the database.  This allows you to implement better security practices on the database, (for instance, by restricting what <code>smarthome_user</code> can do).</p>
+<h3 id="using-standalone-databases"><a class="header" href="#using-standalone-databases">Using Standalone Databases</a></h3>
+<p>Beginning in version 2.1.11 of OrientJS, you can initialize a database instance without needing to connect to the OrientDB Server.  This is managed through the <code>ODatabase</code> class.</p>
+<p>For instance, here the application connects to the <code>GratefulDeadConcerts</code> database and queries the vertex class, returns its length, then closes the database instance.</p>
+<pre><code class="language-js">var ODatabase = require('orientjs').ODatabase;
+var db = new ODatabase({
+   host:     'localhost',
+   port:     2424,
+   username: 'admin',
+   password: 'admin',
+   name:     'GratefulDeadCocnerts'
+});
+
+db.open().then(function() {
+   return db.query('SELECT FROM V LIMIT 1');
+}).then(function(res){
+   console.log(res.length);
+   db.close().then(function(){
+      console.log('closed');
+   });
+});
+</code></pre>
+<h2 id="working-with-databases"><a class="header" href="#working-with-databases">Working with Databases</a></h2>
+<p>Methods are tied to the variable you initialize the Database API to: <code>db.&lt;method&gt;</code>.  These can also be used to define and call other API's in the OrientJS driver.</p>
+<h3 id="using-the-record-api"><a class="header" href="#using-the-record-api">Using the Record API</a></h3>
+<p>Methods tied to the Record API are called through the <code>db.record</code> object.  These methods allow you to access and manipulate records directly through the Record ID.  For instance, say you want to get the data from the record #1:1:</p>
+<pre><code class="language-js">var rec = db.record.get('#1:1');
+</code></pre>
+<p>For more information on the Record API and other methods available, see <a href="OrientJS-Record.html">Record API</a>.</p>
+<h3 id="using-the-class-api"><a class="header" href="#using-the-class-api">Using the Class API</a></h3>
+<p>Methods tied to the Class API are called through the <code>db.class</code> object.  These methods allow you to create, access and manipulate classes directly through their class names.  For instance, say you wanted to create a class in a baseball database for players,</p>
+<pre><code class="language-js">var Player = db.class.create('Player', 'V');
+</code></pre>
+<p>For more information on the Class API and other methods available, see <a href="OrientJS-Class.html">Class API</a>.</p>
+<h3 id="using-the-index-api"><a class="header" href="#using-the-index-api">Using the Index API</a></h3>
+<p>Methods tied to the Index API are called through the <code>db.index</code> object.  These methods all you to create and fetch index properties for a given class.  For instance, say you want create an index on the <code>Player</code> class in your baseball database for the players' names,</p>
+<pre><code class="language-js">var indexName = db.index.create({
+   name: 'Player.name',
+   type: 'fulltext'
+});
+</code></pre>
+<p>For more information on the Index API and other methods, see <a href="OrientJS-Index.html">Index API</a>.  For more information on indices in general, see <a href="../indexing/Indexes.html">Indexes</a>.</p>
+<h3 id="using-the-function-api"><a class="header" href="#using-the-function-api">Using the Function API</a></h3>
+<p>Using the Database API, you can access the Function API through the <code>db.createFn()</code> method.  This allows you to create custom functions to operate on your data.  For instance, in the example of a database for baseball statistics, you might want a function to calculate a player's batting average.</p>
+<pre><code class="language-js">db.createFn("batAvg", function(hits, atBats){
+   return hits / atBats;
+});
+</code></pre>
+<p>For more information, see <a href="OrientJS-Functions.html">Function API</a>.</p>
+<h3 id="querying-the-database"><a class="header" href="#querying-the-database">Querying the Database</a></h3>
+<p>Unlike the above operations, querying the database does not require that you call a dedicated API.  You can call these methods on the Database API directly, without setting or defining an additional object, using the <code>db.query()</code> method.</p>
+<p>The <code>db.query</code> method executes an SQL query against the opened database.  You can either define these values directly in SQL, or define arbitrary parameters through additional arguments.</p>
+<p>For instance, using the baseball database, say that you want to allow users to retrieve statistical information on players.  They provide the parameters and your application sorts and displays the results.</p>
+<pre><code class="language-js">var targetAvg = 0.3;
+var targetTeam = 'Red Sox';
+
+var hitters = db.query(
+   'SELECT name, battavg FROM Player WHERE battavg &gt;= :ba AND team = :team',
+   {params: {
+      ba: targetAvg,
+      team: targetTeam
+    },limit: 20 }
+).then(
+   function(players){
+      console.log(players);
+   }
+);
+</code></pre>
+<p>Here, the variables <code>targetAvg</code> and <code>targetTeam</code> are defined at the start, then the query is run against the <code>Player</code> class for Red Sox players with batting averages greater than or equal to .300, printing the return value to the console.</p>
+<p>There are a number of more specialized query related methods supported by the Database API.  For more information, see the <a href="OrientJS-Query.html">Query</a> guide.</p>
+<h3 id="transactions"><a class="header" href="#transactions">Transactions</a></h3>
+<p>The Database API supports transactions through the <code>db.let()</code> and <code>db.commit()</code> methods.  These allow you to string together a series of changes to the database and then commit them together.  For instance, here is a transaction to add the player Shoeless Joe Jackson to the database:</p>
+<pre><code class="language-js">var trx = db.let('player',
+   function(p){
+      p.create('VERTEX', 'Player')
+         .set({
+            name:      'Shoeless Joe Jackson',
+            birthDate: '1887-07-16',
+            deathDate: '1951-12-05',
+            batted:    'left',
+            threw:     'right'
+         })
+   }).commit()
+   .return('$player').all();
+</code></pre>
+<p>For more information, see <a href="OrientJS-Transactions.html">Transactions</a>.</p>
+<h3 id="events"><a class="header" href="#events">Events</a></h3>
+<p>You may find it useful to run additional code around queries outside of the normal operations for your application.  For instance, as part of a logging or debugging process, to record the queries made and how OrientDB or your application performed in serving the data.</p>
+<p>Using the <code>db.on()</code> method, you can set custom code to run on certain events, such as the beginning and ending of queries.  For instance,</p>
+<pre><code class="language-js">db.on("endQuery", function(obj){
+   console.log("DEBUG QUERY:", obj);
+});
+</code></pre>
+<p>For more information, see <a href="OrientJS-Events.html">Events</a>.</p>
+<h3 id="closing-the-database"><a class="header" href="#closing-the-database">Closing the Database</a></h3>
+<p>When you initialize a database instance, OrientDB begins to reserve system resources for the client to access and manipulate data through the server.  In order to free up these resources when you're done, you need to close the open database instance, using the <code>db.close()</code> method.</p>
+<pre><code class="language-js">db.close();
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../orientjs/OrientJS-Server.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../orientjs/OrientJS-Record.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../orientjs/OrientJS-Server.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../orientjs/OrientJS-Record.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

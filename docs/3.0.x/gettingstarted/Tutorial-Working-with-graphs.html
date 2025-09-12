@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Working with Graphs - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="working-with-graphs"><a class="header" href="#working-with-graphs">Working with Graphs</a></h1>
+<p>In graph databases, the database system graphs data into network-like structures consisting of vertices and edges. In the OrientDB <a href="../datamodeling/Tutorial-Document-and-graph-model.html#the-graph-model">Graph model</a>, the database represents data through the concept of a property graph, which defines a vertex as an entity linked with other vertices and an edge, as an entity that links two vertices.</p>
+<p>OrientDB ships with a generic vertex persistent class, called <code>V</code>, as well as a class for edges, called <code>E</code>. As an example, you can create a new vertex using the <a href="../sql/SQL-Insert.html"><code>INSERT</code></a> command with <code>V</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">INSERT INTO V SET name='Jay'</code>
+
+Created record with RID #9:0
+</pre>
+<p>In effect, the Graph model database works on top of the underlying document model. But, in order to simplify this process, OrientDB introduces a new set of commands for managing graphs from the console. Instead of <a href="../sql/SQL-Insert.html"><code>INSERT</code></a>, use <a href="../sql/SQL-Create-Vertex.html"><code>CREATE VERTEX</code></a></p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE VERTEX V SET name='Jay'</code>
+
+Created vertex with RID #9:1
+</pre>
+<p>By using the graph commands over the standard SQL syntax, OrientDB ensures that your graphs remain consistent. For more information on the particular commands, see the following pages:</p>
+<ul>
+<li><a href="../sql/SQL-Create-Vertex.html">CREATE VERTEX</a></li>
+<li><a href="../sql/SQL-Delete-Vertex.html">DELETE VERTEX</a></li>
+<li><a href="../sql/SQL-Create-Edge.html">CREATE EDGE</a></li>
+<li><a href="../sql/SQL-Update-Edge.html">UPDATE EDGE</a></li>
+<li><a href="../sql/SQL-Delete-Edge.html">DELETE EDGE</a></li>
+</ul>
+<h2 id="use-case-social-network-for-restaurant-patrons"><a class="header" href="#use-case-social-network-for-restaurant-patrons">Use Case: Social Network for Restaurant Patrons</a></h2>
+<p>While you have the option of working with vertexes and edges in your database as they are, you can also extend the standard <code>V</code> and <code>E</code> classes to suit the particular needs of your application. The advantages of this approach are,</p>
+<ul>
+<li>It grants better understanding about the meaning of these entities.</li>
+<li>It allows for optional constraints at the class level.</li>
+<li>It improves performance through better partitioning of entities.</li>
+<li>It allows for object-oriented inheritance among the graph elements.</li>
+</ul>
+<p>For example, consider a social network based on restaurants. You need to start with a class for individual customers and another for the restaurants they patronize. Create these classes to extend the <code>V</code> class.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Person EXTENDS V</code>
+
+orientdb> <code class="lang-sql userinput">CREATE CLASS Restaurant EXTENDS V</code>
+</pre>
+<p>Doing this creates the schema for your social network. Now that the schema is ready, populate the graph with data.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE VERTEX Person SET name='Luca'</code>
+
+Created record with RID #11:0
+
+
+orientdb> <code class="lang-sql userinput">CREATE VERTEX Person SET name='Bill'</code>
+
+Created record with RID #11:1
+
+
+orientdb> <code class="lang-sql userinput">CREATE VERTEX Person SET name='Jay'</code>
+
+Created record with RID #11:2
+
+
+orientdb> <code class="lang-sql userinput">CREATE VERTEX Restaurant SET name='Dante', type='Pizza'</code>
+
+Created record with RID #12:0
+
+
+orientdb> <code class="lang-sql userinput">CREATE VERTEX Restaurant SET name='Charlie', type='French'</code>
+
+Created record with RID #12:1
+</pre>
+<p>This adds three vertices to the <code>Person</code> class, representing individual users in the social network. It also adds two vertices to the <code>Restaurant</code> class, representing the restaurants that they patronize.</p>
+<h4 id="creating-edges"><a class="header" href="#creating-edges">Creating Edges</a></h4>
+<p>For the moment, these vertices are independent of one another, tied together only by the classes to which they belong. That is, they are not yet connected by edges. Before you can make these connections, you first need to create a class that extends <code>E</code>.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Eat EXTENDS E</code>
+</pre>
+<p>This creates the class <code>Eat</code>, which extends the class <code>E</code>. <code>Eat</code> represents the relationship between the vertex <code>Person</code> and the vertex <code>Restaurant</code>.</p>
+<p>When you create the edge from this class, note that the orientation of the vertices is important, because it gives the relationship its meaning. For instance, creating an edge in the opposite direction, (from <code>Restaurant</code> to <code>Person</code>), would call for a separate class, such as <code>Attendee</code>.</p>
+<p>The user Luca eats at the pizza joint Dante. Create an edge that represents this connection:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE EDGE Eat FROM ( SELECT FROM Person WHERE name='Luca' )
+          TO ( SELECT FROM Restaurant WHERE name='Dante' )</code>
+</pre>
+<h4 id="creating-edges-from-record-id"><a class="header" href="#creating-edges-from-record-id">Creating Edges from Record ID</a></h4>
+<p>In the event that you know the <a href="../datamodeling/Concepts.html#record-id">Record ID</a> of the vertices, you can connect them directly with a shorter and faster command. For example, the person Bill also eats at the restaurant Dante and the person Jay eats at the restaurant Charlie. Create edges in the class <code>Eat</code> to represent these connections.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE EDGE Eat FROM #11:1 TO #12:0</code>
+
+orientdb> <code class="lang-sql userinput">CREATE EDGE Eat FROM #11:2 TO #12:1</code>
+</pre>
+<h4 id="querying-graphs"><a class="header" href="#querying-graphs">Querying Graphs</a></h4>
+<p>In the above example you created and populated a small graph of a social network of individual users and the restaurants at which they eat. You can now begin to experiment with queries on a graph database.</p>
+<p>To cross edges, you can use special graph functions, such as:</p>
+<ul>
+<li><code>OUT()</code> To retrieve the adjacent outgoing vertices</li>
+<li><code>IN()</code> To retrieve the adjacent incoming vertices</li>
+<li><code>BOTH()</code> To retrieve the adjacent incoming and outgoing vertices</li>
+</ul>
+<p>For example, to know all of the people who eat in the restaurant Dante, which has a Record ID of <code>#12:0</code>, you can access the record for that restaurant and traverse the incoming edges to discover which entries in the <code>Person</code> class connect to it.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT IN() FROM Restaurant WHERE name='Dante'</code>
+
+-------+----------------+
+ @RID  | in             |
+-------+----------------+
+ #-2:1 | [#11:0, #11:1] |
+-------+----------------+
+</pre>
+<p>This query displays the record ID's from the <code>Person</code> class that connect to the restaurant Dante. In cases such as this, you can use the <code>EXPAND()</code> special function to transform the vertex collection in the result-set by expanding it.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT EXPAND( IN() ) FROM Restaurant WHERE name='Dante'</code>
+
+-------+-------------+-------------+---------+
+ @RID  | @CLASS      | Name        | out_Eat |
+-------+-------------+-------------+---------+
+ #11:0 | Person      | Luca        | #12:0   |
+ #11:1 | Person      | Bill        | #12:0   |
+-------+-------------+-------------+---------+
+</pre>
+<h4 id="creating-edge-to-connect-users"><a class="header" href="#creating-edge-to-connect-users">Creating Edge to Connect Users</a></h4>
+<p>Your application at this point shows connections between individual users and the restaurants they patronize. While this is interesting, it does not yet function as a social network. To do so, you need to establish edges that connect the users to one another.</p>
+<p>To begin, as before, create a new class that extends <code>E</code>:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE CLASS Friend EXTENDS E</code>
+</pre>
+<p>The users Luca and Jay are friends. They have Record ID's of <code>#11:0</code> and <code>#11:2</code>. Create an edge that connects them.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE EDGE Friend FROM #11:0 TO #11:2</code>
+</pre>
+<p>In the <code>Friend</code> relationship, orientation is not important. That is, if Luca is a friend of Jay's then Jay is a friend of Luca's. Therefore, you should use the <code>BOTH()</code> function.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT EXPAND( BOTH( 'Friend' ) ) FROM Person WHERE name = 'Luca'</code>
+
+-------+-------------+-------------+---------+-----------+
+ @RID  | @CLASS      | Name        | out_Eat | in_Friend |
+-------+-------------+-------------+---------+-----------+
+ #11:2 | Person      | Jay         | #12:1   | #11:0     |
+-------+-------------+-------------+---------+-----------+
+</pre>
+<p>Here, the <code>BOTH()</code> function takes the edge class <code>Friend</code> as an argument, crossing only relationships of the Friend kind, (that is, it skips the <code>Eat</code> class, at this time). Note in the result-set that the relationship with Luca, with a Record ID of <code>#11:0</code> in the <code>in_</code> field.</p>
+<p>You can also now view all the restaurants patronized by friends of Luca.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT EXPAND( BOTH('Friend').out('Eat') ) FROM Person
+          WHERE name='Luca'</code>
+
+-------+-------------+-------------+-------------+--------+
+ @RID  | @CLASS      | Name        | Type        | in_Eat |
+-------+-------------+-------------+-------------+--------+
+ #12:1 | Restaurant  | Charlie     | French      | #11:2  |
+-------+-------------+-------------+-------------+--------+
+</pre>
+<h2 id="lightweight-edges"><a class="header" href="#lightweight-edges">Lightweight Edges</a></h2>
+<p>In version 1.4.x, OrientDB begins to manage some edges as Lightweight Edges. Lightweight Edges do not have Record ID's, but are physically stored as links within vertices. Note that OrientDB only uses a Lightweight Edge only when the edge has no properties, otherwise it uses the standard Edge.</p>
+<p>From the logic point of view, Lightweight Edges are Edges in all effects, so that all graph functions work with them. This is to improve performance and reduce disk space.</p>
+<p>Because Lightweight Edges don't exist as separate records in the database, some queries won't work as expected. For instance,</p>
+<pre>
+orientdb> <code class="lang-sql userinput">SELECT FROM E</code>
+</pre>
+<p>For most cases, an edge is used connecting vertices, so this query would not cause any problems in particular. But, it would not return Lightweight Edges in the result-set. In the event that you need to query edges directly, including those with no properties, disable the Lightweight Edge feature.</p>
+<p>To disable the Lightweight Edge feature, execute the following command.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER DATABASE CUSTOM useLightweightEdges=FALSE
+</pre>
+<p>You only need to execute this command once. OrientDB now generates new edges as the standard Edge, rather than the Lightweight Edge. Note that this does not affect existing edges.</p>
+<p>For troubleshooting information on Lightweight Edges, see <a href="../misc/Troubleshooting.html#why-cant-i-see-all-the-edges">Why I can't see all the edges</a>. For more information in the Graph model in OrientDB, see <a href="../java/Graph-Database-Tinkerpop.html">Graph API</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../gettingstarted/tutorials/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../gettingstarted/Tutorial-Using-schema-with-graphs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../gettingstarted/tutorials/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../gettingstarted/Tutorial-Using-schema-with-graphs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

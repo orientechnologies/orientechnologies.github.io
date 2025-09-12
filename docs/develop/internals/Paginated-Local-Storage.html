@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>PLocal storage - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="plocal-storage"><a class="header" href="#plocal-storage">PLocal Storage</a></h1>
+<p>The Paginated Local Storage, "<strong>plocal</strong>" from now, is a disk based storage which works with data using page model.</p>
+<p>plocal storage consists of several components each of those components use disk data through <strong><a href="plocal-storage-disk-cache.html">disk cache</a></strong>.</p>
+<p>Below is list of plocal storage components and short description of each of them:</p>
+<ol>
+<li><strong>Clusters</strong> are managed by 2 kinds of files:</li>
+</ol>
+<ul>
+<li><strong>.pcl</strong> files contain the cluster data</li>
+<li><strong>.cpm</strong> files contain the mapping between record's cluster position and real physical position</li>
+</ul>
+<ol start="2">
+<li><strong>Write Ahead (operation) Log (<a href="Write-Ahead-Log.html">WAL</a>)</strong> are managed by 2 kinds of files:</li>
+</ol>
+<ul>
+<li><strong>.wal</strong> to store the log content</li>
+<li><strong>.wmr</strong> contains timing about synchronization operations between storage cache and disk system</li>
+</ul>
+<ol start="3">
+<li><strong>SBTree Index</strong>, it uses files with extensions <strong>.sbt</strong>.</li>
+<li><strong>Hash Index</strong>, it uses files with extensions <strong>.hit</strong>, <strong>.him</strong> and <strong>.hib</strong>.</li>
+<li><strong>Index Containers</strong> to store values of single entries of not unique index (Index RID Set). It uses files with extension <strong>.irs</strong>.</li>
+<li><strong>File mapping</strong>, maps between file names and file ids (used internally). It's a single file with name: <strong>name_id_map.cm</strong>.</li>
+</ol>
+<h2 id="file-system"><a class="header" href="#file-system">File System</a></h2>
+<p>Since PLOCAL is disk-based, all pages are flushed to physical files. You can specify any mounted partitions on your machine, backed by Disks, SSD, Flash Disks or DRAM.</p>
+<h2 id="cluster"><a class="header" href="#cluster">Cluster</a></h2>
+<p><strong>Cluster</strong> is logical piece of disk space where storage stores records data. Each cluster is split in pages. <strong>Page</strong> is a single atomic unit, which is used by cluster.</p>
+<p>Each page contains system information and records data. System information includes "magic number" and a crc32 check sum of the page content. This information is used to check storage integrity after a DB crash. To start an integrity check run command "check database" from console.</p>
+<p>Each cluster has 2 sub components:</p>
+<ul>
+<li>data file, with extension .pcl</li>
+<li>mapping between physical position of record in the data file and cluster position, with extension .cpm</li>
+</ul>
+<h3 id="file-system-1"><a class="header" href="#file-system-1">File System</a></h3>
+<p>To speed up access to the most requested clusters it's recommended to use the cluster files to a SSD or any faster support than disk. To do that, move the files to the mounted partitions and create symbolic links to them on original path. OrientDB will follow symbolic links and will open cluster files everywhere are reachable.</p>
+<h3 id="cluster-pointers"><a class="header" href="#cluster-pointers">Cluster pointers</a></h3>
+<p>The mapping between data file and physical position is managed with a list. Each entry in this list is a fixed size element, which is the pointer to the physical position of the record in the data file.</p>
+<p>Because the data file is paginated, this pointer will consist of 2 items: a page index (long value) and the position of the record inside the page (int value). Each record pointer consumes 12 bytes.</p>
+<h3 id="creation-of-new-records-in-cluster"><a class="header" href="#creation-of-new-records-in-cluster">Creation of new records in cluster</a></h3>
+<p>When a new record is inserted, a pointer is added to the list. The index of this pointer is the cluster position. The list is an append only data structure, so if you add a new record its cluster position will be unique and will not be reused.</p>
+<h3 id="deletion-of-records-in-cluster"><a class="header" href="#deletion-of-records-in-cluster">Deletion of records in cluster</a></h3>
+<p>When you delete a record, the page index and record position are set to -1. So the record pointer is transformed into a "tombstone". You can think of a record id like a <strong>uuid</strong>.. It is unique and never reused.</p>
+<p>Usually when you delete records you lose very small amount of disk space. This can be mitigated with a periodic "offline compaction", by performing a database export/import. During this process, cluster positions will be changed (tombstones will be ignored during export) and the lost space will be recovered. So during the import process, the cluster positions can change.</p>
+<h4 id="migration-of-rid"><a class="header" href="#migration-of-rid">Migration of RID</a></h4>
+<p>The OrientDB import tool uses a manual hash index (by default the name is '___exportImportRIDMap') to map the old record ids to new record ids.</p>
+<h2 id="write-ahead-operation-log-wal"><a class="header" href="#write-ahead-operation-log-wal">Write Ahead (operation) Log (WAL)</a></h2>
+<p>The <a href="Write-Ahead-Log.html">Write Ahead Log</a> (or WAL) is used to restore storage data after a non-soft shutdown:</p>
+<ul>
+<li>Hard kill of the OrientDB process</li>
+<li>Crash/Failure of the Java Virtual Machine that runs OrientDB</li>
+<li>Crash/Failure of the Operating System that is hosting OrientDB</li>
+</ul>
+<p>All the operations on <strong>plocal</strong> components are logged in WAL before they are performed. WAL is an append only data structure. You can think of it as a list of records which contain information about operations performed on storage components.</p>
+<h3 id="wal-flush"><a class="header" href="#wal-flush">WAL flush</a></h3>
+<p>WAL content is flushed to the disk on these events:</p>
+<ul>
+<li>every 1 second in background thread (flush interval can be changed in <strong>storage.wal.commitTimeout</strong> configuration property)</li>
+<li>synchronously if the amount of RAM used by WAL exceeds 65Mb (can be changed in <strong>storage.wal.cacheSize</strong> configuration property).</li>
+</ul>
+<p>As result if OrientDB crashes, all data changes done during &lt;=1 second interval before crash will be lost. This is a trade off between performance and durability.</p>
+<h3 id="put-the-wal-on-a-separate-disk"><a class="header" href="#put-the-wal-on-a-separate-disk">Put the WAL on a separate disk</a></h3>
+<p>It's strongly recommended that WAL records are stored on a different disk than the disk used to store the DB content. In this way data I/O operations will not be interrupted by WAL I/O operations. This can be done by setting the <strong>storage.wal.path</strong> property to the folder where storage WAL files will be placed.</p>
+<h3 id="how-indexes-use-wal"><a class="header" href="#how-indexes-use-wal">How Indexes use WAL?</a></h3>
+<p>Indexes can work with WAL in 2 modes:</p>
+<ul>
+<li><strong>ROLLBACK_ONLY</strong> (default mode) and</li>
+<li><strong>FULL</strong></li>
+</ul>
+<p>In ROLLBACK_ONLY mode only the data needed to rollback transactions is stored. This means that WAL records can not be used to restore index content after a crash. In the case of a crash, the indexes will be rebuilt automatically.</p>
+<p>In FULL mode, indexes can be restored after DB crash without a rebuild. You can change index durability mode by setting the property <strong>index.txMode</strong>.</p>
+<p>You can find more details about WAL <strong><a href="Write-Ahead-Log.html">here</a></strong>.</p>
+<h2 id="file-types"><a class="header" href="#file-types">File types</a></h2>
+<p>PLocal stores data on the file system using different files, using the following extensions:</p>
+<ul>
+<li><strong>.cpm</strong>, contains the mapping between real physical positions and cluster positions. If you delete a record, the tombstone is placed here. Each tombstone consumes about 12 bytes.</li>
+<li><strong>.pcl</strong>, data file</li>
+<li><strong>.sbt</strong>, is index file</li>
+<li><strong>.wal</strong> and <strong>.wmr</strong>, are Journal Write Ahead (operation) Log files</li>
+<li><strong>.cm</strong>, is the mapping between file id and real file name (used internally)</li>
+<li><strong>.irs</strong>, is the RID set file for non-unique indexes</li>
+</ul>
+<h2 id="how-it-works-internal"><a class="header" href="#how-it-works-internal">How it works (Internal)</a></h2>
+<p>Paginated storage is a 2-level disk cache that works together with the write ahead log.</p>
+<p>Every file is spit into pages, and each file operation is atomic at a page level. The 2-level disk cache allows:</p>
+<ol>
+<li>Cache frequently accessed pages in memory.</li>
+<li>Automatically separate pages which are rarely accessed from frequently accessed and rid off the first from cache memory.</li>
+<li>Minimize amount of disk head seeks during data writes.</li>
+<li>In case of low or middle write data load allows to mitigate pauses are needed to write data to the disk by flushing all changed or newly added pages to the disk in background thread.</li>
+<li>Works together with WAL to make any set changes on single page look like atomic operation.</li>
+</ol>
+<p>2-level cache itself consist of a <strong>Read Cache</strong> (implementation is based on 2Q cache algorithm) and a *<em>Write cache</em> (implementation is based on WOW cache algorithm).</p>
+<p>Typical set of operations are needed to work with any file looks like following:</p>
+<ol>
+<li>Open file using OReadWriteDiskCache#openFile operation and get id of open file. If the file does not exist it will be automatically created. The id of file is stored in a special meta data file and will always belong to the given file till it will be deleted.</li>
+<li>Allocate new page OReadWriteDiskCache#allocateNewPage or load existing one ORreadWriteDiskCache#load into off-heap memory.</li>
+<li>Retrieve pointer to the allocated area of off-heap memory OCacheEntry#getCachePointer().</li>
+<li>If you plan to change page data acquire a write lock, or a read lock if you read data and your single file page is shared across several data structures. Write lock must be acquired whether a single page is used between several data structures or not. The write lock is needed to prevent flushing inconsistent pages to the disk by the “data flush” thread of the write cache. OCachePointer#acquireExclusiveLock.</li>
+<li>Update/read data in off heap memory.</li>
+<li>Release write lock if needed. OCachePointer#releaseExclusiveLock.</li>
+<li>Mark page as dirty if you changed page data. It will allow write cache to flush pages which are really changed OCacheEntry#markDirty.</li>
+<li>Push record back to the disk cache: indicate to the cache that you will not use this page any more so it can be safely evicted from the memory to make room to other pages OReadWriteDiskCache#release.</li>
+</ol>
+<h3 id="so-what-is-going-on-underneath-when-we-load-and-release-pages"><a class="header" href="#so-what-is-going-on-underneath-when-we-load-and-release-pages">So what is going on underneath when we load and release pages?</a></h3>
+<p>When we load page the Read Cache looks it in one of its two LRU lists. One list is for data that was accessed several times and then not accessed for very long period of time. It consumes 25% of memory. The second is for data that is accessed frequently for a long period of time. It consumes 75% of memory.</p>
+<p>If the page is not in either LRU queue, the Read Cache asks the Write Cache to load page from the disk.</p>
+<p>If we are lucky and the page is queued to flush but is still in the Write Queue of Write Cache it will be retrieved from there. Otherwise, the Write Cache will load the page from disk.</p>
+<p>When data will be read from file by Write Cache, it will be put in LRU queue which contains “short living” pages. Eventually, if this pages will be accessed frequently during long time interval, loaded page will be moved to the LRU of “long living” pages.</p>
+<p>When we release a page and the page is marked as dirty, it is put into the Write Cache which adds it to the Write Queue. The Write Queue can be considered as ring buffer where all the pages are sorted by their position on the disk. This trick allows to minimize disk head movements during pages flush. What is more interesting is that pages are always flushed in the background in the “background flush” thread. This approach allows to mitigate I/O bottleneck if we have enough RAM to work in memory only and flush data in background.</p>
+<p>So it was about how disk cache works. But how we achieve durability of changes on page level and what is more interesting on the level when we work with complex data structures like Trees or Hash Maps (these data structures are used in indexes).</p>
+<p>If we look back on set of operations which we perform to manipulate file data you see that step 5 does not contains any references to OrientDB API. That is because there are two ways to work with off heap pages: durable and not durable.</p>
+<p>The simple (not durable way) is to work with methods of direct memory pointer com.orientechnologies.common.directmemory.ODirectMemoryPointer(setLong/getLong, setInt/getInt and so on).
+If you would like to make all changes in your data structures durable you should not work with direct memory pointer but should create a component that will present part of your data structure by extending com.orientechnologies.orient.core.storage.impl.local.paginated.ODurablePage class. This class has similar methods for manipulation of data in off heap pages, but it also tracks all changes made to the page. It can return the diff between the old/new states of page using the com.orientechnologies.orient.core.storage.impl.local.paginated.ODurablePage#getPageChanges method. Also this class allows to apply given diff to the old/new snapshot of given pages to repeat/revert (restoreChanges()/revertChanges()) changes are done for this page.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../internals/Memory-storage.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../internals/plocal-storage-engine.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../internals/Memory-storage.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../internals/plocal-storage-engine.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

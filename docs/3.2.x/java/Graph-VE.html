@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Vertices and Edges - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="vertices-and-edges"><a class="header" href="#vertices-and-edges">Vertices and Edges</a></h1>
+<p>Similar to the Console interface, you can also create, manage and control vertices and edges through the Graph API.</p>
+<h2 id="vertices"><a class="header" href="#vertices">Vertices</a></h2>
+<p>To create a new vertex in the current Graph Database instance, call the [<code>Vertex OrientGraph.addVertex(Object id)</code>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientBaseGraph.html#addVertex(java.lang.Object) method.  Note that this ignores the <code>id</code> parameter, given that the OrientDB implementation assigns a unique ID once it creates the vertex.  To return the unique ID, run the [<code>Vertex.getId()</code>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientElement.html#getId() method on the object.</p>
+<p>For instance,</p>
+<pre><code class="language-java">Vertex v = graph.addVertex(null);
+System.out.println("Created vertex: " + v.getId());
+</code></pre>
+<h3 id="retrieving-vertices"><a class="header" href="#retrieving-vertices">Retrieving Vertices</a></h3>
+<p>To retrieve all vertices on the object, use the <code>getVertices()</code> method.  For instance,</p>
+<pre><code class="language-java">for (Vertex v : graph.getVertices()) {
+    System.out.println(v.getProperty("name"));
+}
+</code></pre>
+<p>To lookup vertices by a key, call the <code>getVertices()</code> method by passing the field name and the value to match. Remember that in order to use indexes, you should use the "class" dot (.) "property name" as field name. Example:</p>
+<pre><code class="language-java">for( Vertex v : graph.getVertices("Account.id", "23876JS2") ) {
+  System.out.println("Found vertex: " + v );
+}
+</code></pre>
+<p>To know more about how to define indexes look at: <a href="http://orientdb.dev/docs/3.2.x/Performance-Tuning-Graph.html#use-indexes-to-lookup-vertices-by-an-id">Using Graph Indexes</a>.</p>
+<h3 id="removing-vertices"><a class="header" href="#removing-vertices">Removing Vertices</a></h3>
+<p>To remove a vertex from the current Graph Database, call the [<code>OrientGraph.removeVertex(Vertex vertex)</code>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientBaseGraph.html#removeVertex(Vertex) method.  This disconnects the vertex from the graph database and then removes it.  Disconnection deletes all vertex edges as well.</p>
+<p>For instance,</p>
+<pre><code class="language-java">graph.removeVertex(luca);
+</code></pre>
+<p>Disconnects and removes the vertex <code>luca</code>.</p>
+<h2 id="edges"><a class="header" href="#edges">Edges</a></h2>
+<p>Edges link two vertices in the database.  The vertices must exist already.  To create a new edge in the current Graph Database, call the [<code>Edge OrientGraph.addEdge(Object id, Vertex outVertex, Vertex inVertex, String label )</code>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientBaseGraph.html#addEdge(java.lang.Object,-Vertex,-Vertex,-java.lang.String) method.</p>
+<p>Bear in mind that OrientDB ignores the <code>id</code> parameter, given that it assigns a unique ID when it creates the edge.  To access this ID, use the [<code>Edge.getId()</code>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientElement.html#getId() method.  <code>outVertex</code> refers to the vertex instance where the edge starts and <code>inVertex</code> refers to where the edge ends.  <code>label</code> indicates the edge label.  Specify it as <code>null</code> if you don't want to assign a label.</p>
+<p>For instance,</p>
+<pre><code class="language-java">Vertex luca = graph.addVertex(null);
+luca.setProperty("name", "Luca");
+
+Vertex marko = graph.addVertex(null);
+marko.setProperty("name", "Marko");
+
+Edge lucaKnowsMarko = graph.addEdge(null, luca, marko, "knows");
+System.out.println("Created edge: " + lucaKnowsMarko.getId());
+</code></pre>
+<p>For more information on optimizing edge creation through concurrent threads and clients, see <a href="../general/Concurrency.html#concurrency-when-adding-edges">Concurrency on Adding Edges</a>.</p>
+<h3 id="retrieving-edges"><a class="header" href="#retrieving-edges">Retrieving Edges</a></h3>
+<p>To retrieve all edges use the [getEdges()](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientBaseGraph.html#getEdges() method:</p>
+<pre><code class="language-java">for (Edge e : graph.getEdges()) {
+    System.out.println(e.getProperty("age"));
+}
+</code></pre>
+<p>When using <a href="Lightweight-Edges.html">Lightweight Edges</a>, OrientDB stores edges as links rather than records.  This improves performance, but as a consequence, the <code>.getEdges()</code> method only retrieves records of the class <code>E</code>.  When using Lightweight Edges, OrientDB only creates records in class <code>E</code> under certain circumstances, such as when the edge has properties.  Otherwise, the edges exist as links on the in and out vertices.</p>
+<p>If you want to use <code>.getEdges()</code> to return all edges, disable the Lightweight Edges feature by executing the following command:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">ALTER DATABASE my_db useLightweightEdges=FALSE</code>
+</pre>
+<p>You only need to run this command once to disable Lightweight Edges.  The change only takes effect on edges you create after running it.  For existing edges, you need to convert them from links to actual edges before the <code>.getEdges()</code> method returns all edges.  For more information, see <a href="../misc/Troubleshooting.html#why-cant-i-see-all-the-edges">Troubleshooting</a>.</p>
+<blockquote>
+<p><strong>NOTE</strong>: Since version 2.0 of OrientDB, the Lightweight Edges feature is disabled by default.</p>
+</blockquote>
+<h3 id="removing-edges"><a class="header" href="#removing-edges">Removing Edges</a></h3>
+<p>To remove an edge from the current Graph Database, call the [<code>OrientGraph.removeEdge(Edge edge)</code>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientBaseGraph.html#removeEdge(Edge) method.  It removes the edge connecting two vertices.</p>
+<p>For instance,</p>
+<pre><code class="language-java">graph.removeEdge(lucaKnowsMarko);
+</code></pre>
+<h2 id="vertex-and-edge-properties"><a class="header" href="#vertex-and-edge-properties">Vertex and Edge Properties</a></h2>
+<p>Vertices and Edges can have multiple properties.  The key to this property is a String, the value any <a href="../general/Types.html">Types</a> supported by OrientDB.</p>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Description</th></tr></thead><tbody>
+<tr><td>[<strong><code>setProperty(String key, Object value)</code></strong>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientElement.html#setProperty(java.lang.String,-java.lang.Object)</td><td>Sets the property.</td></tr>
+<tr><td>[<strong><code>Object getProperty(String key)</code></strong>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientElement.html#getProperty(java.lang.String)</td><td>Retrieves the property.</td></tr>
+<tr><td>[<strong><code>void removeProperty(String key)</code></strong>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientElement.html#removeProperty(java.lang.String)</td><td>Removes the property.</td></tr>
+</tbody></table>
+</div>
+<p>For instance,</p>
+<pre><code class="language-java">vertex2.setProperty("x", 30.0f);
+vertex2.setProperty("y", ((float) vertex1.getProperty( "y" )) / 2);
+
+for (String property : vertex2.getPropertyKeys()) {
+      System.out.println("Property: " + property + "=" + vertex2.getProperty(property));
+}
+
+vertex1.removeProperty("y");
+</code></pre>
+<h3 id="setting-multiple-properties"><a class="header" href="#setting-multiple-properties">Setting Multiple Properties</a></h3>
+<p>The OrientDB implementation of the Blueprints extension supports setting multiple properties in one command against vertices and edges, using the [<code>setProperties(Object ...)</code>](http://www.orientechnologies.com/javadoc/latest/com/tinkerpop/blueprints/impls/orient/OrientElement.html#setProperties(java.lang.Object...) method.  This improves performance by allowing you to avoid saving the graph element each time you set a property.</p>
+<p>For instance,</p>
+<pre><code class="language-java">vertex.setProperties( "name", "Jill", "age", 33, "city", "Rome", "born", "Victoria, TX" );
+</code></pre>
+<p>You can also pass a Map of values as the first argument.  In this case all map entries are set as element properties:</p>
+<pre><code class="language-java">Map&lt;String,Object&gt; props = new HashMap&lt;String,Object&gt;();
+props.put("name", "Jill");
+props.put("age", 33);
+props.put("city", "Rome");
+props.put("born", "Victoria, TX");
+vertex.setProperties(props);
+</code></pre>
+<h3 id="creating-element-and-properties-together"><a class="header" href="#creating-element-and-properties-together">Creating Element and Properties Together</a></h3>
+<p>In addition to the above methods, using the OrientDB Blueprint implementation, you can also set the initial properties while creating vertices or edges.</p>
+<p>For instance,</p>
+<ul>
+<li>
+<p>To create a vertex and set the initial properties:</p>
+<pre><code class="language-java">graph.addVertex("class:Customer", "name", "Jill", 
+    "age", 33, "city", "Rome", "born", "Victoria, TX");
+</code></pre>
+<p>This line creates a new vertex of the class <code>Customer</code>.  It sets the initial properties for <code>name</code>, <code>age</code>, <code>city</code>, and <code>born</code>.</p>
+</li>
+<li>
+<p>The same procedure also works for edges.</p>
+<pre><code class="language-java">person1.addEdge("class:Friend", person1, person2, null, 
+    "since", "2013-07-30");
+</code></pre>
+<p>This creates an edge of the class <code>Friend</code> between the vertices <code>person1</code> and <code>person2</code> with the property <code>since</code>.</p>
+</li>
+</ul>
+<p>Both methods accept <code>Map&lt;String, Object&gt;</code> as a parameter, allowing you to set one property per map entry, such as in the above example.</p>
+<h2 id="using-indices"><a class="header" href="#using-indices">Using Indices</a></h2>
+<p>OrientDB allows query execution against any field of a vertex or edge, indexed or non-indexed.  To speed up queries, set up indices on key properties that use in the query.</p>
+<ul>
+<li>For instance, say that you have a query that looks for all vertices with the name <code>OrientDB</code>.  For instance,</li>
+</ul>
+<pre><code class="language-java">graph.getVertices("name", "OrientDB");
+</code></pre>
+<ul>
+<li>
+<p>Without an index against the property <code>name</code>, this query can take up a lot of time.  You can improve performance by creating a new index against the <code>name</code> property:</p>
+<pre><code class="language-java">graph.createKeyIndex("name", Vertex.class);
+</code></pre>
+</li>
+<li>
+<p>In cases where the name must be unique, you can enforce this constraint by setting the index as <code>UNIQUE</code>.  (This feature is only available in OrientDB).</p>
+<pre><code class="language-java">graph.createKeyIndex("name", Vertex.class, new Parameter("type", "UNIQUE"));
+</code></pre>
+<p>It applies this constraint to vertices and sub-type instances.</p>
+</li>
+<li>
+<p>To create an index against a custom type, such as the <code>Customer</code> vertex, use the additional <code>class</code> parameter:</p>
+</li>
+</ul>
+<pre><code class="language-java">graph.createKeyIndex("name", Vertex.class, new Parameter("class", "Customer"));
+</code></pre>
+<ul>
+<li>
+<p>You can also have both unique indices against custom types:</p>
+<pre><code class="language-java">graph.createKeyIndex("name", Vertex.class, new Parameter("type", "UNIQUE"), new Parameter("class", "Customer"));
+</code></pre>
+</li>
+<li>
+<p>To create a case-insensitive index, use the <code>collate</code> parameter:</p>
+<pre><code class="language-java">graph.createKeyIndex("name", Vertex.class, new Parameter("type", "UNIQUE"), new Parameter("class", "Customer"),new Parameter("collate", "ci"));
+</code></pre>
+</li>
+<li>
+<p>To get a vertex or edge by key prefix, use the class name before the property.  For example above, you would use <code>Customer.name</code> instead of just <code>name</code> to create the index against the field of that class:</p>
+<pre><code class="language-java">for (Vertex v : graph.getVertices("Customer.name", "Jay")) {
+    System.out.println("Found vertex: " + v);
+}
+</code></pre>
+</li>
+<li>
+<p>In the event that the class name is not passed, it uses <code>V</code> for vertices and <code>E</code> for edges:</p>
+<pre><code class="language-java">graph.getVertices("name", "Jay");
+graph.getEdges("age", 20);
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>For more information, see <a href="../indexing/Indexes.html">Indexes</a>.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Tutorial-Java.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Graph-Blueprints.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Tutorial-Java.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Graph-Blueprints.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OPartitionedLockManager.html" title="com.orientechnologies.common.concur.lock.OPartitionedLockManager" alt="" coords="16,118,232,143"/>
+<area shape="rect" id="node1" href="./OPartitionedLockManager.html" title="&lt;TABLE&gt;" alt="" coords="5,107,243,155"/>
+<area shape="rect" id="node2_1" href="./OLockManager.html" title="com.orientechnologies.common.concur.lock.OLockManager" alt="" coords="348,11,495,53"/>
+<area shape="rect" id="node2" href="./OLockManager.html" title="&lt;TABLE&gt;" alt="" coords="337,5,505,59"/>
+<area shape="rect" id="node3_2" href="./OIndexOneEntryPerKeyLockManager.html" title="com.orientechnologies.common.concur.lock.OIndexOneEntryPerKeyLockManager" alt="" coords="277,118,565,143"/>
+<area shape="rect" id="node3" href="./OIndexOneEntryPerKeyLockManager.html" title="&lt;TABLE&gt;" alt="" coords="267,107,576,155"/>
+<area shape="rect" id="node4_3" href="./OOneEntryPerKeyLockManager.html" title="com.orientechnologies.common.concur.lock.OOneEntryPerKeyLockManager" alt="" coords="611,118,863,143"/>
+<area shape="rect" id="node4" href="./OOneEntryPerKeyLockManager.html" title="&lt;TABLE&gt;" alt="" coords="601,107,874,155"/>
+</map>

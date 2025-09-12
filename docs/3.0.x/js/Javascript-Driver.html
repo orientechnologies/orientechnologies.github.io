@@ -1,0 +1,744 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Javascript API - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="javascript-api"><a class="header" href="#javascript-api">Javascript API</a></h1>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><img src="../images/warning.png" alt="" /></td><td>This API has been deprecated, please use HTTP calls from the browser by using the <a href="../misc/OrientDB-REST.html">HTTP RESTful protocol</a>.</td></tr>
+</tbody></table>
+</div>
+<hr />
+<p>This driver wraps the most common use cases in database usage. All parameters required by methods or constructor are Strings. This library works on top of <a href="../misc/OrientDB-REST.html">HTTP RESTful protocol</a>.</p>
+<p><em>Note: Due to cross-domain XMLHttpRequest restriction this API works, for now, only placed in the server deployment. To use it with cross-site look at <a href="Javascript-Driver.html#cross-site-scripting">Cross-site scripting</a>.</em></p>
+<p>The full source code is available here: <strong><a href="https://github.com/nuvolabase/orientdb/blob/master/server/src/site/js/orientdb-api.js">oriendb-api.js</a></strong>.</p>
+<h2 id="see-also"><a class="header" href="#see-also">See also</a></h2>
+<ul>
+<li><a href="Javascript-Command.html">Javascript-Command</a></li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code class="language-javascript">var database = new ODatabase('http://localhost:2480/demo');
+databaseInfo = database.open();
+queryResult = database.query('select from Address where city.country.name = \'Italy\'');
+if (queryResult["result"].length == 0){
+  commandResult = database.executeCommand('insert into Address (street,type) values (\'Via test 1\',\'Tipo test\')');
+} else {
+  commandResult = database.executeCommand('update Address set street = \'Via test 1\' where city.country.name = \'Italy\'');
+}
+database.close();
+</code></pre>
+<h2 id="api"><a class="header" href="#api">API</a></h2>
+<h3 id="odatabase-object"><a class="header" href="#odatabase-object">ODatabase object</a></h3>
+<p>ODatabase object requires server URL and database name:</p>
+<p>Syntax: <code>new ODatabase(http://<host>:<port>/<databaseName>)</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">var orientServer = new ODatabase('http://localhost:2480/demo');
+</code></pre>
+<p>Once created database instance is ready to be used. Every method return the operation result when it succeeded, null elsewhere. <br/>
+In case of null result the database instance will have the error message obtainable by the <a href="#errors">getErrorMessage()</a> method.</p>
+<h3 id="open"><a class="header" href="#open">Open</a></h3>
+<p>Method that connects to the server, it returns database information in JSON format.<br/></p>
+<h4 id="browser-authentication"><a class="header" href="#browser-authentication">Browser Authentication</a></h4>
+<p>Syntax: <code>&lt;databaseInstance&gt;.open()</code><br/>
+<em>Note: This implementation asks to the browser to provide user and password.</em></p>
+<p>Example:</p>
+<pre><code class="language-javascript">orientServer = new ODatabase('http://localhost:2480/demo');
+databaseInfo = orientServer.open();
+</code></pre>
+<h4 id="javascript-authentication"><a class="header" href="#javascript-authentication">Javascript Authentication</a></h4>
+<p>Syntax: <code>&lt;databaseInstance&gt;.open(username,userpassword)</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">orientServer = new ODatabase('http://localhost:2480/demo');
+databaseInfo = orientServer.open('admin','admin');
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{"classes": [
+    {
+      "id": 0,
+      "name": "ORole",
+      "clusters": [3],
+      "defaultCluster": 3, "records": 3,
+      "properties": [
+        {
+        "id": 0,
+        "name": "mode",
+        "type": "BYTE",
+        "mandatory": false,
+        "notNull": false,
+        "min": null,
+        "max": null,
+        "indexed": false
+      },
+        {
+        "id": 1,
+        "name": "rules",
+        "linkedType": "BYTE",
+        "type": "EMBEDDEDMAP",
+        "mandatory": false,
+        "notNull": false,
+        "min": null,
+        "max": null,
+        "indexed": false
+      }
+  ]},
+],
+"dataSegments": [
+    {"id": -1, "name": "default", "size": 10485760, "filled": 1380391, "maxSize": "0", "files": "[${STORAGE_PATH}/default.0.oda]"}
+  ],
+
+"clusters": [
+    {"id": 0, "name": "internal", "type": "PHYSICAL", "records": 4, "size": 1048576, "filled": 60, "maxSize": "0", "files": "[${STORAGE_PATH}/internal.0.ocl]"},
+],
+
+"txSegment": [
+    {"totalLogs": 0, "size": 1000000, "filled": 0, "maxSize": "50mb", "file": "${STORAGE_PATH}/txlog.otx"}
+  ], "users": [
+    {"name": "admin", "roles": "[admin]"},
+    {"name": "reader", "roles": "[reader]"},
+    {"name": "writer", "roles": "[writer]"}
+  ],
+
+  "roles": [
+    {"name": "admin", "mode": "ALLOW_ALL_BUT",
+      "rules": []
+    },
+    {"name": "reader", "mode": "DENY_ALL_BUT",
+      "rules": [{
+        "name": "database", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.cluster.internal", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.cluster.orole", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.cluster.ouser", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.class.*", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.cluster.*", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.query", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.command", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.hook.record", "create": false, "read": true, "update": false, "delete": false
+        }]
+    },
+],
+
+  "config":{
+    "values": [
+      {"name": "dateFormat", "value": "yyyy-MM-dd"},
+      {"name": "dateTimeFormat", "value": "yyyy-MM-dd hh:mm:ss"},
+      {"name": "localeCountry", "value": ""},
+      {"name": "localeLanguage", "value": "en"},
+      {"name": "definitionVersion", "value": 0}
+    ],
+    "properties": [
+    ]
+  }
+}
+</code></pre>
+<h3 id="query"><a class="header" href="#query">Query</a></h3>
+<p>Method that executes the query, it returns query results in JSON format.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.query(&lt;queryText&gt;, [limit], [fetchPlan])</code></p>
+<p>Limit and <a href="../java/Fetching-Strategies.html">fetchPlan</a> are optional.</p>
+<p>Simple Example:</p>
+<pre><code class="language-javascript">queryResult = orientServer.query('select from Address where city.country.name = \'Italy\'');
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{ "result": [{
+      "@rid": "12:0", "@class": "Address",
+      "street": "Piazza Navona, 1",
+      "type": "Residence",
+      "city": "#13:0"
+    }, {
+      "@rid": "12:1", "@class": "Address",
+      "street": "Piazza di Spagna, 111",
+      "type": "Residence",
+      "city": "#13:0"
+    }
+  ]
+}
+</code></pre>
+<p>Fetched Example: fetching of all fields except "type"</p>
+<pre><code class="language-javascript">queryResult = orientServer.query('select from Address where city.country.name = \'Italy\'',null,'*:-1 type:0');
+</code></pre>
+<p>Return Example 1:</p>
+<pre><code class="language-json">{ "result": [{
+      "@rid": "12:0", "@class": "Address",
+      "street": "Piazza Navona, 1",
+      "city":{
+        "@rid": "13:0", "@class": "City",
+        "name": "Rome",
+        "country":{
+          "@rid": "14:0", "@class": "Country",
+          "name": "Italy"
+        }
+      }
+    }, {
+      "@rid": "12:1", "@version": 1, "@class": "Address",
+      "street": "Piazza di Spagna, 111",
+      "city":{
+        "@rid": "13:0", "@class": "City",
+        "name": "Rome",
+        "country":{
+          "@rid": "14:0", "@class": "Country",
+          "name": "Italy"
+        }
+      }
+    }
+  ]
+}
+</code></pre>
+<p>Fetched Example: fetching of all fields except "city" (Class)</p>
+<pre><code class="language-javascript">queryResult = orientServer.query('select from Address where city.country.name = \'Italy\'',null,'*:-1 city:0');
+</code></pre>
+<p>Return Example 2:</p>
+<pre><code class="language-json">{ "result": [{
+       "@rid": "12:0", "@class": "Address",
+       "street": "Piazza Navona, 1",
+       "type": "Residence"
+     }, {
+       "@rid": "12:1", "@version": 1, "@class": "Address",
+       "street": "Piazza di Spagna, 111",
+       "type": "Residence"
+    }
+  ]
+}
+</code></pre>
+<p>Fetched Example: fetching of all fields except "country" of City class</p>
+<pre><code class="language-javascript">queryResult = orientServer.query('select from Address where city.country.name = \'Italy\'',null,'*:-1 City.country:0');
+</code></pre>
+<p>Return Example 3:</p>
+<pre><code class="language-json">{ "result": [{
+      "@rid": "12:0", "@class": "Address",
+      "street": "Piazza Navona, 1",
+      "type": "Residence",
+      "city":{
+          "@rid": "13:0", "@class": "City",
+          "name": "Rome"
+      }
+    }
+  ]
+}
+</code></pre>
+<h3 id="execute-command"><a class="header" href="#execute-command">Execute Command</a></h3>
+<p>Method that executes arbitrary commands, it returns command result in text format.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.executeCommand(&lt;commandText&gt;)</code></p>
+<p>Example 1 (insert):</p>
+<pre><code class="language-javascript">commandResult = orientServer.executeCommand('insert into Address (street,type) values (\'Via test 1\',\'Tipo test\')');
+</code></pre>
+<p>Return Example 1 (created record):</p>
+<pre><code class="language-javascript">Address@14:177{street:Via test 1,type:Tipo test}
+</code></pre>
+<br/>
+Example 2 (delete):
+```javascript
+commandResult = orientServer.executeCommand('delete from Address where street = \'Via test 1\' and type = \'Tipo test\'');
+```
+<p>Return Example 2 (records deleted):</p>
+<pre><code class="language-json">{ "value" : 5 }
+</code></pre>
+<p><em>Note: Delete example works also with update command</em></p>
+<h3 id="load"><a class="header" href="#load">Load</a></h3>
+<p>Method that loads a record from the record ID, it returns the record informations in JSON format.</p>
+<p>Syntax: `<databaseInstance>.load(<recordID>, [fetchPlan]);</p>
+<p>Simple Example:</p>
+<pre><code class="language-javascript">queryResult = orientServer.load('12:0');
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{
+"@rid": "12:0", "@class": "Address",
+      "street": "Piazza Navona, 1",
+      "type": "Residence",
+      "city": "#13:0"
+    }
+</code></pre>
+<p>Fetched Example: all fields fetched except "type"</p>
+<pre><code class="language-javascript">queryResult = orientServer.load('12:0', '*:-1 type:0');
+</code></pre>
+<p>Return Example 1:</p>
+<pre><code class="language-json">{
+"@rid": "12:0", "@class": "Address",
+      "street": "Piazza Navona, 1",
+      "city":{
+         "@rid": "13:0",
+         "name": "Rome",
+         "country":{
+         "@rid": "14:0",
+             "name": "Italy"
+          }
+      }
+    }
+</code></pre>
+<h3 id="class-info"><a class="header" href="#class-info">Class Info</a></h3>
+<p>Method that retrieves information of a class, it returns the class informations in JSON format.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.classInfo(&lt;className&gt;)</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">addressInfo = orientServer.classInfo('Address');
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{ "result": [{
+      "@rid": "14:0", "@class": "Address",
+      "street": "WA 98073-9717",
+      "type": "Headquarter",
+      "city": "#12:1"
+    }, {
+      "@rid": "14:1", "@class": "Address",
+      "street": "WA 98073-9717",
+      "type": "Headquarter",
+      "city": "#12:1"
+    }
+  ]
+}
+</code></pre>
+<h3 id="browse-cluster"><a class="header" href="#browse-cluster">Browse Cluster</a></h3>
+<p>Method that retrieves information of a cluster, it returns the class informations in JSON format.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.browseCluster(&lt;className&gt;)</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">addressInfo = orientServer.browseCluster('Address');
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{ "result": [{
+      "@rid": "14:0", "@class": "Address",
+      "street": "WA 98073-9717",
+      "type": "Headquarter",
+      "city": "#12:1"
+    }, {
+      "@rid": "14:1", "@class": "Address",
+      "street": "WA 98073-9717",
+      "type": "Headquarter",
+      "city": "#12:1"
+    }
+  ]
+}
+</code></pre>
+<h3 id="server-information"><a class="header" href="#server-information">Server Information</a></h3>
+<p>Method that retrieves server informations, it returns the server informations in JSON format.</p>
+<blockquote>
+<p><strong>Note</strong>: Server information needs the root username and password.  For more information, see <a href="../security/Server-Security.html">OrientDB Server Security</a>.</p>
+</blockquote>
+<p>Syntax: <code>&lt;databaseInstance&gt;.serverInfo()</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">serverInfo = orientServer.serverInfo();
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{
+  "connections": [{
+    "id": "64",
+    "id": "64",
+    "remoteAddress": "127.0.0.1:51459",
+    "db": "-",
+    "user": "-",
+    "protocol": "HTTP-DB",
+    "totalRequests": "1",
+    "commandInfo": "Server status",
+    "commandDetail": "-",
+    "lastCommandOn": "2010-12-23 12:53:38",
+    "lastCommandInfo": "-",
+    "lastCommandDetail": "-",
+    "lastExecutionTime": "0",
+    "totalWorkingTime": "0",
+    "connectedOn": "2010-12-23 12:53:38"
+    }],
+  "dbs": [{
+    "db": "demo",
+    "user": "admin",
+    "open": "open",
+    "storage": "OStorageLocal"
+    }],
+  "storages": [{
+    "name": "temp",
+    "type": "OStorageMemory",
+    "path": "",
+    "activeUsers": "0"
+    }, {
+    "name": "demo",
+    "type": "OStorageLocal",
+    "path": "/home/molino/Projects/Orient/releases/0.9.25-SNAPSHOT/db/databases/demo",
+    "activeUsers": "1"
+    }],
+    "properties": [
+      {"name": "server.cache.staticResources", "value": "false"
+      },
+      {"name": "log.console.level", "value": "info"
+      },
+      {"name": "log.file.level", "value": "fine"
+      }
+    ]
+}
+</code></pre>
+<h3 id="schema"><a class="header" href="#schema">Schema</a></h3>
+<p>Method that retrieves database Schema, it returns an array of classes (JSON parsed Object).</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.schema()</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">schemaInfo = orientServer.schema();
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{"classes": [
+    {
+      "id": 0,
+      "name": "ORole",
+      "clusters": [3],
+      "defaultCluster": 3, "records": 3,
+      "properties": [
+        {
+        "id": 0,
+        "name": "mode",
+        "type": "BYTE",
+        "mandatory": false,
+        "notNull": false,
+        "min": null,
+        "max": null,
+        "indexed": false
+      },
+        {
+        "id": 1,
+        "name": "rules",
+        "linkedType": "BYTE",
+        "type": "EMBEDDEDMAP",
+        "mandatory": false,
+        "notNull": false,
+        "min": null,
+        "max": null,
+        "indexed": false
+      }
+  ]},
+]
+}
+</code></pre>
+<h3 id="getclass"><a class="header" href="#getclass">getClass()</a></h3>
+<p>Return a schema class from the schema.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.getClass(&lt;className&gt;)</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">var customerClass = orientServer.getClass('Customer');
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{
+  "id": 0,
+  "name": "Customer",
+  "clusters": [3],
+  "defaultCluster": 3, "records": 3,
+  "properties": [
+    {
+      "id": 0,
+      "name": "name",
+      "type": "STRING",
+    },
+    {
+      "id": 1,
+      "name": "surname",
+      "type": "STRING",
+    }
+  ]
+}
+</code></pre>
+<h3 id="security"><a class="header" href="#security">Security</a></h3>
+<h4 id="roles"><a class="header" href="#roles">Roles</a></h4>
+<p>Method that retrieves database Security Roles, it returns an array of Roles (JSON parsed Object).</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.securityRoles()</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">roles = orientServer.securityRoles();
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{ "roles": [
+    {"name": "admin", "mode": "ALLOW_ALL_BUT",
+      "rules": []
+    },
+    {"name": "reader", "mode": "DENY_ALL_BUT",
+      "rules": [{
+        "name": "database", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.cluster.internal", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.cluster.orole", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.cluster.ouser", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.class.*", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.cluster.*", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.query", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.command", "create": false, "read": true, "update": false, "delete": false
+        }, {
+        "name": "database.hook.record", "create": false, "read": true, "update": false, "delete": false
+        }]
+    }
+  ]
+}
+</code></pre>
+<h4 id="users"><a class="header" href="#users">Users</a></h4>
+<p>Method that retrieves database Security Users, it returns an array of Users (JSON parsed Object).</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.securityUsers()</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">users = orientServer.securityUsers();
+</code></pre>
+<p>Return Example:</p>
+<pre><code class="language-json">{ "users": [
+    {"name": "admin", "roles": "[admin]"},
+    {"name": "reader", "roles": "[reader]"},
+    {"name": "writer", "roles": "[writer]"}
+  ]
+}
+</code></pre>
+<h3 id="close"><a class="header" href="#close">close()</a></h3>
+<p>Method that disconnects from the server.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.close()</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">orientServer.close();
+</code></pre>
+<h3 id="change-server-url"><a class="header" href="#change-server-url">Change server URL</a></h3>
+<p>Method that changes server URL in the database instance.<br/>
+You'll need to call the <a href="#open">open</a> method to reconnect to the new server.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.setDatabaseUrl(&lt;newDatabaseUrl&gt;)</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">orientServer.setDatabaseUrl('http://localhost:3040')
+</code></pre>
+<h3 id="change-database-name"><a class="header" href="#change-database-name">Change database name</a></h3>
+<p>Method that changes database name in the database instance.<br/>
+You'll need to call the <a href="#open">open</a> method to reconnect to the new database.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.setDatabaseName(&lt;newDatabaseName&gt;)</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">orientServer.setDatabaseName('demo2');
+</code></pre>
+<h3 id="setting-return-type"><a class="header" href="#setting-return-type">Setting return type</a></h3>
+<p>This API allows you to chose the return type, Javascript Object or JSON plain text. Default return is Javascript Object.</p>
+<p><strong>Important</strong>: the javascript object is not always the evaluation of JSON plain text: for each document (identified by its Record ID) the JSON file contains only one expanded object, all other references are just its Record ID as String, so the API will reconstruct the real structure by re-linking all references to the matching javascript object.</p>
+<p>Syntax: <code>orientServer.setEvalResponse(&lt;boolean&gt;)</code></p>
+<p>Examples:</p>
+<pre><code class="language-javascript">orientServer.setEvalResponse(true);
+</code></pre>
+<p>Return types will be Javascript Objects.</p>
+<pre><code class="language-javascript">orientServer.setEvalResponse(false);
+</code></pre>
+<p>Return types will be JSON plain text.</p>
+<h3 id="cross-site-scripting"><a class="header" href="#cross-site-scripting">Cross-site scripting</a></h3>
+<p>To invoke OrientDB cross-site you can use the <code>query</code> command in GET and the JSONP protocol. Example:</p>
+<pre><code class="language-xml">&lt;script type="text/javascript" src='http://127.0.0.1:2480/query/database/sql/select+from+XXXX?jsoncallback=var datajson='&gt;&lt;/script&gt;
+</code></pre>
+<p>This will put the result of the query <em><strong><code>select from XXXX&lt;/code&gt;</strong></em> into the <em><strong>&lt;code&gt;datajson</code></strong></em> variable.</p>
+<h3 id="errors"><a class="header" href="#errors">Errors</a></h3>
+<p>In case of errors the error message will be stored inside the database instance, retrievable by getErrorMessage() method.</p>
+<p>Syntax: <code>&lt;databaseInstance&gt;.getErrorMessage()</code></p>
+<p>Example:</p>
+<pre><code class="language-javascript">if (orientServer.getErrorMessage() != null){
+       //write error message
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../js/Javascript-Command.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../misc/OrientDB-REST.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../js/Javascript-Command.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../misc/OrientDB-REST.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

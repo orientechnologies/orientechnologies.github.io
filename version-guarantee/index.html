@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OrientDB Guarantee to the users |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon-orientdb.png">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #212127;
+        /* Primary theme text color */
+        --primary-text-color: #ee521b;
+        /* Primary theme link color */
+        --primary-link-color: #ee521b;
+        /* Secondary color: the background body color */
+        --secondary-color: #ffffff;
+        --secondary-text-color: #212127;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #ee521b;
+    }
+    .logo img {
+        width:auto !important;
+    }
+    .nav-item:hover {
+        color:#ffffff !important;
+    }
+</style>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://orientdb.dev/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;">
+    <div class="logo">
+        <img src="https://orientdb.dev/logo.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;downloads&#x2F;">Download</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;getting-started&#x2F;">Getting Started</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;documentation&#x2F;">Docs</a>
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;support&#x2F;">Support</a>
+        
+    
+    
+        
+        <a class="nav-item subtitle-text" href="&#x2F;news&#x2F;">News</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        <div class="content text">
+            
+<div class="heading-text">OrientDB Guarantee to the users</div>
+
+<p>When using and updating OrientDB as a user you may expect some level of guarantees, this level may not be the same by all open source projects, so here we are outlining the guarantee we do provide to our users.</p>
+<p>OrientDB follow semantic versioning in a quite strict way in the specific:</p>
+<p>the version is composed by 3 numbers like 2.5.25 this 3 numbers are:</p>
+<ul>
+<li>first number (2 in the example) is the major version</li>
+<li>second number (5 in the example) is the minor version</li>
+<li>third number (25 in the example) is the patch version</li>
+</ul>
+<p>Here what changes, guarantees, and breakage can happen in each specific version</p>
+<h2 id="major">Major</h2>
+<p>When a major is shipped the biggest set of changes can be done, but the kind of changes is still sort of limited, let's list them by categories:</p>
+<h3 id="apis">APIs</h3>
+<ul>
+<li>Any sort of new APIs can be add, with completely redefined behavior</li>
+<li>Deprecated APIs, that have been deprecated in the last hotfix of the previous major+minor can be removed, if an APIs
+has never been deprecated it cannot be removed, this allow users to smouthly update to the next major, the guaraantee is
+if using the last hotfix, there are not usages of deprecated methods, it should be possible to just update to the new major without
+the requirement of code changes</li>
+<li>New deprecation of APIs are allowed</li>
+</ul>
+<h3 id="sql">SQL</h3>
+<ul>
+<li>Any sort of new SQL syntax can be add, whit new complete behaviour</li>
+<li>Some syntax or functions can be removed, if been deprecated in the documentation of the previous major/minor</li>
+<li>Behaviour of query and functions should be constant, alternative functions can be provided for behaviour evolution</li>
+</ul>
+<h3 id="protocols">Protocols</h3>
+<ul>
+<li>Any sort of new protocol massages and concept can be add trough a versioning of the protocol</li>
+<li>The protocol version older than the previous major may be removed, old the protocol versions of the previous major need to be supported</li>
+</ul>
+<h3 id="disc">Disc</h3>
+<ul>
+<li>Any new disc structure can be add, with new complete behaviour</li>
+<li>All disc structure of the previous major version can be open and operated, so a new major should allow to operate databases created with a previous major</li>
+<li>Should be possible to migrate or port databases created with a older version of the database.</li>
+</ul>
+<h1 id="minor">Minor</h1>
+<h3 id="apis-1">APIs</h3>
+<ul>
+<li>New APis can be add for additional behaviour as far they do not break existing APIs</li>
+<li>No APIs can be removed</li>
+<li>APIs can be deprecated for remove in the next major</li>
+</ul>
+<h3 id="sql-1">SQL</h3>
+<ul>
+<li>New syntax or function can be add</li>
+<li>No remove of functions or syntax</li>
+<li>Deprecation can be done trough docs</li>
+</ul>
+<h3 id="protocols-1">Protocols</h3>
+<ul>
+<li>New messages may be add for additional functionalities</li>
+<li>No message or message behaviour for previous protocol version can be removed</li>
+</ul>
+<h3 id="disc-1">Disc</h3>
+<ul>
+<li>New Disk data structure can be add</li>
+<li>fuctionalities for migrate(upgrade) between data structures can be add</li>
+<li>No disc format can be removed</li>
+</ul>
+<h2 id="patch">Patch</h2>
+<h3 id="apis-2">APIs</h3>
+<ul>
+<li>New minor APIs can be add, driven by user issues/bug</li>
+<li>No removing of APIs allowed</li>
+<li>Deprecation of APIs allowed, better if linked to an alternative API</li>
+</ul>
+<h3 id="sql-2">SQL</h3>
+<ul>
+<li>new minor syntax and function are allowed if driven by user issues/bug</li>
+<li>no removing of syntax or function allowed</li>
+<li>deprecation allowed with replacement function</li>
+</ul>
+<h3 id="protocols-2">Protocols</h3>
+<ul>
+<li>new messages/functions allowed if driven by user issue/bug</li>
+<li>no removing of any existing messages or protocols allowed</li>
+</ul>
+<h3 id="disk">Disk</h3>
+<ul>
+<li>new data structure allowed if driven by user issue/bug</li>
+<li>no removing of disc structure allowed.</li>
+<li>new data migration functionalities allowed</li>
+</ul>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://orientdb.dev">OrientDB.dev</a>
+            <a rel="me" href="https://fosstodon.org/@orientdb">Mastodon</a>
+            <a href="https://matrix.to/#/#orientdb:matrix.org">Matrix Chat</a>
+        </small>
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Extractors - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-12-11 SAM -->
+<h1 id="etl---extractors"><a class="header" href="#etl---extractors">ETL - Extractors</a></h1>
+<p>When OrientDB executes the ETL module, extractor components handle data extraction from source.  They are the first part of the ETL process. The ETL module in OrientDB supports the following extractors:</p>
+<ul>
+<li><a href="#row-extractor">Row</a></li>
+<li><a href="#csv-extractor">CSV</a></li>
+<li><a href="#jdbc-extractor">JDBC</a></li>
+<li><a href="#json-extractor">JSON</a></li>
+<li><a href="#xml-extractor">XML</a></li>
+</ul>
+<h2 id="row-extractor"><a class="header" href="#row-extractor">Row Extractor</a></h2>
+<p>When the ETL module runs with a Row Extractor, it extracts content row by row.  It outputs a string array class.</p>
+<ul>
+<li>Component name: <code>row</code></li>
+<li>Output Class: <code>[ string ]</code></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th style="text-align: center">Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"multiLine"</code></td><td>Defines whether the process supports multiline.  Useful with CSV's supporting linefeed inside of string.</td><td>boolean</td><td style="text-align: center"></td><td><code>true</code></td></tr>
+<tr><td><code>"linefeed"</code></td><td>Defines the linefeed to use in the event of multiline processing.</td><td>string</td><td style="text-align: center"></td><td><code>\r\n</code></td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>The <code>"multiLine"</code> and <code>"linefeed"</code> parameters were introduced in version 2.0.9.</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Use the row extractor with its default configuration:</p>
+<pre><code class="language-json">{ 
+   "row": {} 
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="csv-extractor"><a class="header" href="#csv-extractor">CSV Extractor</a></h2>
+<p>When the ETL module runs the CSV Extractor, it parses a file formatted to <a href="https://commons.apache.org/proper/commons-csv">Apache Commons CSV</a> and extracts the data into OrientDB.  This component was introduced in version 2.1.4 and is unavailable in older releases of OrientDB.</p>
+<ul>
+<li>Component name: <code>csv</code></li>
+<li>Output class: <code>[ ODocument ]</code></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"separator"</code></td><td>Defines the column separator.</td><td>char</td><td></td><td><code>,</code></td></tr>
+<tr><td><code>"columnsOnFirstLine"</code></td><td>Defines whether the first line contains column descriptors.</td><td>boolean</td><td></td><td><code>true</code></td></tr>
+<tr><td><code>"columns"</code></td><td>Defines array for names and (optionally) types to write.</td><td>string array</td><td></td><td></td></tr>
+<tr><td><code>"nullValue"</code></td><td>Defines the null value in the file.</td><td>string</td><td></td><td><code>NULL</code></td></tr>
+<tr><td><code>"dateFormat"</code></td><td>Defines the format to use in parsing dates from file.</td><td>string</td><td></td><td><code>yyyy-MM-dd</code></td></tr>
+<tr><td><code>"dateTimeFormat"</code></td><td>Defines the format to use in parsing dates with time from file.</td><td>string</td><td></td><td><code>yyyy-MM-dd HH:mm</code></td></tr>
+<tr><td><code>"quote"</code></td><td>Defines string character delimiter.</td><td>char</td><td></td><td><code>"</code></td></tr>
+<tr><td><code>"skipFrom"</code></td><td>Defines the line number you want to skip from.</td><td>integer</td><td></td><td></td></tr>
+<tr><td><code>"skipTo"</code></td><td>Defines the line number you want to skip to.</td><td>integer</td><td></td><td></td></tr>
+<tr><td><code>"ignoreEmptyLines"</code></td><td>Defines whether it should ignore empty lines.</td><td>boolean</td><td></td><td><code>false</code></td></tr>
+<tr><td><code>"ignoreMissingColumns"</code></td><td>Defines whether it should ignore empty columns.</td><td>boolean</td><td></td><td><code>false</code></td></tr>
+<tr><td><code>"predefinedFormat"</code></td><td>Defines the CSV format you want to use.</td><td>string</td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>
+<p>For the <code>"columns"</code> parameter, specify the type by postfixing it to the value.  Specifying types guarantees better performance.</p>
+</li>
+<li>
+<p>For the <code>"predefinedFormat"</code> parameter, the available formats are: <code>Default</code>, <code>Excel</code>, <code>MySQL</code>, <code>RFC4180</code>, <code>TDF</code>.</p>
+</li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Extract lines from CSV to the <code>ODocument</code> class, using commas as the separator, considering <code>NULL</code> as the null value and skipping rows two through four:</p>
+<pre><code class="language-json">{ "csv": 
+    {  "separator": ",", 
+       "nullValue": "NULL",
+       "skipFrom": 1, 
+       "skipTo": 3 
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>Extract lines from a CSV exported from MySQL:</p>
+<pre><code class="language-json">{ "csv": 
+    {  "predefinedFormat": "MySQL"}
+}
+</code></pre>
+</li>
+<li>
+<p>Extract lines from a CSV with the default formatting, using <code>N/A</code> as the null value and a custom date format:</p>
+<pre><code class="language-json">{ "csv": 
+    {  "predefinedFormat": "Default",
+       "nullValue" : "N/A",
+       "dateFormat" : "dd-MM-yyyy",
+       "dateTimeFormat" : "dd-MM-yyyy HH:mm"
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>Extract lines from a CSV with the default formatting, using <code>N/A</code> as the null value, a custom date format, a custom dateTime format and columns type mapping :</p>
+<pre><code class="language-json">{ "csv": 
+    {  "predefinedFormat": "DEFAULT",
+       "nullValue" : "N/A",
+       "dateFormat" : "dd-MM-yyyy",
+       "dateTimeFormat" : "dd-MM-yyyy HH:mm",
+       "columns": ["name:string","createdAt:date","updatedAt:dateTime"]
+    }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="jdbc-extractor"><a class="header" href="#jdbc-extractor">JDBC Extractor</a></h2>
+<p>When the ETL module runs the JDBC Extractor, it can access any database management system that supports the <a href="http://en.wikipedia.org/wiki/JDBC_driver">JDBC</a> driver.</p>
+<p>In order for the ETL component to connect to the source database, put the source database's JDBC driver in the classpath, or in the <code>$ORIENTDB_HOME/lib</code> directory.</p>
+<ul>
+<li>Component name: <code>jdbc</code></li>
+<li>Output class: <code>[ ODocument ]</code></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"driver"</code></td><td>Defines the JDBC Driver class.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"url"</code></td><td>Defines the JDBC URL to connect to.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"userName"</code></td><td>Defines the username to use on the source database.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"userPassword"</code></td><td>Defines the user password to use on the source database.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"query"</code></td><td>Defines the query to extract the record you want to import.</td><td>string</td><td>yes</td><td></td></tr>
+<tr><td><code>"queryCount"</code></td><td>Defines query that returns the count of the fetched records, (used to provide a correct progress indicator).</td><td>string</td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Extract the contents of the <code>client</code> table on the MySQL database <code>test</code> at localhost:</p>
+<pre><code class="language-json">{ "jdbc": {
+    "driver": "com.mysql.jdbc.Driver",
+    "url": "jdbc:mysql://localhost/test",
+    "userName": "root",
+    "userPassword": "my_mysql_passwd",
+    "query": "SELECT * FROM client"
+  }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="json-extractor"><a class="header" href="#json-extractor">JSON Extractor</a></h2>
+<p>When the ETL module runs with a JSON Extractor, it extracts data by parsing JSON objects.  If the data has more than one JSON items, you must enclose the in <code>[]</code> brackets.</p>
+<ul>
+<li>Component name: <code>json</code></li>
+<li>Output class: <code>[ ODocument ]</code></li>
+</ul>
+<!-- #### Syntax
+| Parameter | Description | Type | Mandatory | Default value |
+|-----------|-------------|------|-----------|-----------| -->
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>Extract data from a JSON file.</p>
+<pre><code class="language-json">{ "json": {} }
+</code></pre>
+</li>
+</ul>
+<h2 id="xml-extractor"><a class="header" href="#xml-extractor">XML Extractor</a></h2>
+<p>When the ETL module runs with the XML extractor, it extracts data by parsing XML elements.  This feature was introduced in version 2.2.</p>
+<ul>
+<li>Component name: <code>xml</code></li>
+<li>Output class: <code>[ ODocument ]</code></li>
+</ul>
+<p><strong>Syntax</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Mandatory</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"rootNode"</code></td><td>Defines the root node to extract in the XML.  By default, it builds from the root element in the file.</td><td>string</td><td></td><td></td></tr>
+<tr><td><code>"tagsAsAttribute"</code></td><td>Defines an array of elements, where child elements are considered as attributes of the document and the attribute values as the text within the element.</td><td>string array</td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Extract data from an XML file, where the XML file reads as:</p>
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;a&gt;
+  &lt;b&gt;
+  	&lt;c name='Ferrari' color='red'&gt;ignore&lt;/c&gt;
+  	&lt;c name='Maserati' color='black'/&gt;
+  &lt;/b&gt;
+&lt;/a&gt;
+</code></pre>
+<p>While the OrientDB-ETL configuration file reads as:</p>
+<pre><code class="language-json">{ "source": 
+  { "file": 
+    { "path": "src/test/resources/simple.xml" } 
+  }, 
+  "extractor" : 
+    { "xml": {} }, 
+    "loader": 
+      { "test": {} } 
+}
+</code></pre>
+<p>This extracts the data as:</p>
+<pre><code class="language-json">{
+  "a": {
+    "b": {
+      "c": [
+        {
+          "color": "red",
+          "name": "Ferrari"
+        },
+        {
+          "color": "black",
+          "name": "Maserati"
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Extract a collection from XML, where the XML file reads as:</p>
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;CATALOG&gt;
+    &lt;CD&gt;
+        &lt;TITLE&gt;Empire Burlesque&lt;/TITLE&gt;
+        &lt;ARTIST&gt;Bob Dylan&lt;/ARTIST&gt;
+        &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
+        &lt;COMPANY&gt;Columbia&lt;/COMPANY&gt;
+        &lt;PRICE&gt;10.90&lt;/PRICE&gt;
+        &lt;YEAR&gt;1985&lt;/YEAR&gt;
+    &lt;/CD&gt;
+    &lt;CD&gt;
+        &lt;TITLE&gt;Hide your heart&lt;/TITLE&gt;
+        &lt;ARTIST&gt;Bonnie Tyler&lt;/ARTIST&gt;
+        &lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;
+        &lt;COMPANY&gt;CBS Records&lt;/COMPANY&gt;
+        &lt;PRICE&gt;9.90&lt;/PRICE&gt;
+        &lt;YEAR&gt;1988&lt;/YEAR&gt;
+    &lt;/CD&gt;
+    &lt;CD&gt;
+        &lt;TITLE&gt;Greatest Hits&lt;/TITLE&gt;
+        &lt;ARTIST&gt;Dolly Parton&lt;/ARTIST&gt;
+        &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
+        &lt;COMPANY&gt;RCA&lt;/COMPANY&gt;
+        &lt;PRICE&gt;9.90&lt;/PRICE&gt;
+        &lt;YEAR&gt;1982&lt;/YEAR&gt;
+    &lt;/CD&gt;
+&lt;/CATALOG&gt;
+</code></pre>
+<p>While the OrientDB-ETL configuration file reads:</p>
+<pre><code class="language-json">{ "source": 
+  { "file": 
+    { "path": "src/test/resources/music.xml" } 
+  }, "extractor" : 
+    { "xml": 
+      { "rootNode": "CATALOG.CD", 
+  	  "tagsAsAttribute": ["CATALOG.CD"] 
+  	} 
+    }, 
+    "loader": { "test": {} } 
+}
+</code></pre>
+<p>This extracts the data as:</p>
+<pre><code class="language-json">{
+  "TITLE": "Empire Burlesque",
+  "ARTIST": "Bob Dylan",
+  "COUNTRY": "USA",
+  "COMPANY": "Columbia",
+  "PRICE": "10.90",
+  "YEAR": "1985"
+}
+{
+  "TITLE": "Hide your heart",
+  "ARTIST": "Bonnie Tyler",
+  "COUNTRY": "UK",
+  "COMPANY": "CBS Records",
+  "PRICE": "9.90",
+  "YEAR": "1988"
+}
+{
+  "TITLE": "Greatest Hits",
+  "ARTIST": "Dolly Parton",
+  "COUNTRY": "USA",
+  "COMPANY": "RCA",
+  "PRICE": "9.90",
+  "YEAR": "1982"
+}
+</code></pre>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../etl/Source.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../etl/Transformer.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../etl/Source.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../etl/Transformer.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

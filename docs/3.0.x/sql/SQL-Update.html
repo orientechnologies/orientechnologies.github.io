@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Update - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sql---update"><a class="header" href="#sql---update">SQL - <code>UPDATE</code></a></h1>
+<p>Update one or more records in the current database.  Remember: OrientDB can work in schema-less mode, so you can create any field on-the-fly.  Furthermore, the command also supports extensions to work on collections.</p>
+<p><strong>Syntax</strong>:</p>
+<pre><code class="language-sql">UPDATE &lt;class&gt;|CLUSTER:&lt;cluster&gt;|&lt;recordID&gt;
+  [SET|REMOVE &lt;field-name&gt; = &lt;field-value&gt;[,]*]|[CONTENT|MERGE &lt;JSON&gt;]
+  [UPSERT]
+  [RETURN &lt;returning&gt; [&lt;returning-expression&gt;]]
+  [WHERE &lt;conditions&gt;]
+  [LOCK default|record]
+  [LIMIT &lt;max-records&gt;] [TIMEOUT &lt;timeout&gt;]
+</code></pre>
+<ul>
+<li>
+<p><strong><code>SET</code></strong> Defines the fields to update.</p>
+</li>
+<li>
+<p><strong><code>REMOVE</code></strong> Removes an item in collection and map fields.</p>
+</li>
+<li>
+<p><strong><code>CONTENT</code></strong> Replaces the record content with a JSON document.</p>
+</li>
+<li>
+<p><strong><code>MERGE</code></strong> Merges the record content with a JSON document.</p>
+</li>
+<li>
+<p><strong><code>LOCK</code></strong> Specifies how to lock the record between the load and update.  You can use one of the following lock strategies:</p>
+<ul>
+<li><code>DEFAULT</code> No lock.  Use in the event of concurrent updates, the MVCC throws an exception.</li>
+<li><code>RECORD</code> Locks the record during the update.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>UPSERT</code></strong> Updates a record if it exists or inserts a new record if it doesn't.  This avoids the need to execute two commands, (one for each condition, inserting and updating).</p>
+<p><code>UPSERT</code> requires a <a href="SQL-Where.html"><code>WHERE</code></a> clause and a class target.  There are further limitations on <code>UPSERT</code>, explained below.</p>
+</li>
+<li>
+<p><strong><code>RETURN</code></strong> Specifies an expression to return instead of the record and what to do with the result-set returned by the expression.  The available return operators are:</p>
+<ul>
+<li><code>COUNT</code> Returns the number of updated records.  This is the default return operator.</li>
+<li><code>BEFORE</code> Returns the records before the update.</li>
+<li><code>AFTER</code> Return the records after the update.</li>
+</ul>
+</li>
+<li>
+<p><a href="SQL-Where.html"><code>WHERE</code></a></p>
+</li>
+<li>
+<p><code>LIMIT</code> Defines the maximum number of records to update.</p>
+</li>
+<li>
+<p><code>TIMEOUT</code> Defines the time you want to allow the update run before it times out.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong>: The <a href="../datamodeling/Concepts.html#record-id">Record ID</a> must have a <code>#</code> prefix.  For instance, <code>#12:3</code>.</p>
+</blockquote>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>
+<p>Update to change the value of a field:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Profile SET nick = 'Luca' WHERE nick IS NULL</code>
+
+Updated 2 record(s) in 0.008000 sec(s).
+</pre>
+</li>
+<li>
+<p>Update to remove a field from all records:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Profile REMOVE nick</code>
+</pre>
+</li>
+<li>
+<p>Update to remove a value from a collection, if you know the exact value that you want to remove:</p>
+<p>Remove an element from a link list or set:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Account REMOVE address = #12:0</code>
+</pre>
+<p>Remove an element from a list or set of strings:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Account REMOVE addresses = 'Foo'</code>
+</pre>
+</li>
+<li>
+<p>Update to remove a value, filtering on value attributes.</p>
+<p>Remove addresses based in the city of Rome:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Account REMOVE addresses = addresses[city = 'Rome']</code>
+</pre>
+</li>
+<li>
+<p>Update to remove a value, filtering based on position in the collection.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Account REMOVE addresses = addresses[1]</code>
+</pre>
+<p>This remove the second element from a list, (position numbers start from <code>0</code>, so <code>addresses[1]</code> is the second elelment).</p>
+</li>
+<li>
+<p>Update to remove a value from a map</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Account REMOVE addresses = 'Luca'</code>
+</pre>
+</li>
+<li>
+<p>Update an embedded document.  The <a href="SQL-Update.html"><code>UPDATE</code></a> command can take JSON as a value to update.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Account SET address={ "street": "Melrose Avenue", "city": { 
+          "name": "Beverly Hills" } }</code>
+
+</pre>
+</li>
+<li>
+<p>Update the first twenty records that satisfy a condition:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Profile SET nick = 'Luca' WHERE nick IS NULL LIMIT 20</code>
+</pre>
+</li>
+<li>
+<p>Update a record or insert if it doesn't already exist:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Profile SET nick = 'Luca' UPSERT WHERE nick = 'Luca'</code>
+</pre>
+</li>
+<li>
+<p>Updates using the <code>RETURN</code> keyword:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE ♯7:0 SET gender='male' RETURN AFTER @rid</code>
+orientdb> <code class="lang-sql userinput">UPDATE ♯7:0 SET gender='male' RETURN AFTER @version</code>
+orientdb> <code class="lang-sql userinput">UPDATE ♯7:0 SET gender='male' RETURN AFTER @this</code>
+orientdb> <code class="lang-sql userinput">UPDATE ♯7:0 SET gender='male' RETURN AFTER $current.exclude(
+          "really_big_field")</code>
+</pre>
+</li>
+</ul>
+<p>In the event that a single field is returned, OrientDB wraps the result-set in a record storing the value in the field <code>result</code>.  This avoids introducing a new serialization, as there is no primitive values collection serialization in the binary protocol.  Additionally, it provides useful fields like <code>version</code> and <code>rid</code> from the original record in corresponding fields.  The new syntax allows for optimization of client-server network traffic.</p>
+<p>For more information on SQL syntax, see <a href="SQL-Query.html"><code>SELECT</code></a>.</p>
+<h2 id="limitations-of-the-upsert-clause"><a class="header" href="#limitations-of-the-upsert-clause">Limitations of the <code>UPSERT</code> Clause</a></h2>
+<p>The <code>UPSERT</code> clause only guarantees atomicity when you use a <code>UNIQUE</code> index and perform the look-up on the index through the <a href="SQL-Where.html"><code>WHERE</code></a> condition.</p>
+<pre>
+orientdb> <code class="lang-sql userinput">UPDATE Client SET id = 23 UPSERT WHERE id = 23</code>
+</pre>
+<p>Here, you must have a unique index on <code>Client.id</code> to guarantee uniqueness on concurrent operations.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sql/SQL-Truncate-Record.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/SQL-Update-Edge.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sql/SQL-Truncate-Record.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/SQL-Update-Edge.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

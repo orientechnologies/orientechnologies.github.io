@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Data Centers - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="data-centers"><a class="header" href="#data-centers">Data Centers</a></h1>
+<p>Starting from <a href="http://orientdb.com/orientdb-enterprise">OrientDB Enterprise Edition</a> v2.2.4, you can define how your servers are deployed in multiple <strong>Data Centers</strong>.</p>
+<p><img src="../images/studio-data-centers.png" alt="Studio-Data-Centers" /></p>
+<p>All you need is using the tag <code>"dataCenters"</code> in your <a href="Distributed-Configuration.html#default-distributed-db-configjson"><code>default-distributed-config.json</code></a> configuration file. This is the format:</p>
+<pre><code class="language-json">  "dataCenters": {
+    "&lt;data-center1-name&gt;": {
+      "writeQuorum": "&lt;data-center1-quorum&gt;",
+      "servers": [ "&lt;data-center1-server1&gt;", "&lt;data-center1-server2&gt;", "&lt;data-center1-serverN&gt;" ]
+    },
+    "&lt;data-center2-name&gt;": {
+      "writeQuorum": "&lt;data-center2-quorum&gt;",
+      "servers": [ "&lt;data-center2-server1&gt;", "&lt;data-center2-server2&gt;", "&lt;data-center2-serverN&gt;" ]
+    },
+  },
+</code></pre>
+<p>NOTE: <em>This feature is available only in the <a href="http://orientdb.com/orientdb-enterprise">OrientDB Enterprise Edition</a>. If you are interested in a commercial license look at <a href="http://orientdb.com/support">OrientDB Subscription Packages</a></em>.</p>
+<p>Example:</p>
+<pre><code class="language-json">  "dataCenters": {
+    "usa": {
+      "writeQuorum": "majority",
+      "servers": [ "&lt;austin&gt;", "&lt;paloalto&gt;", "&lt;newyork&gt;" ]
+    },
+    "europe": {
+      "writeQuorum": "majority",
+      "servers": [ "&lt;rome&gt;", "&lt;dublin&gt;", "&lt;london&gt;" ]
+    },
+    "asia": {
+      "writeQuorum": "majority",
+      "servers": [ "&lt;tokio&gt;", "&lt;singapore&gt;", "&lt;hongkong&gt;" ]
+    }
+  },
+</code></pre>
+<p><img src="http://orientdb.com/wp-content/uploads/2016/07/orientdb-dc1.png" alt="DC" /></p>
+<h2 id="write-quorum"><a class="header" href="#write-quorum">Write Quorum</a></h2>
+<p>The most common reason why defining data centers is a good idea is the possibility of defining the consistency at data center level. A typical scenario is having a synchronous replication between the servers in the same data center where the coordinator server is located and then propagate changes to the other data centers in asynchronous way. In this way you can avoid the cost of the latency of the replication to the servers located on different data centers. In order to activate this mode, set the global <code>"writeQuorum": "localDataCenter"</code> and then specify a writeQuorum per data center.</p>
+<p>For example, if a write operation is executed by a server where its data center's write quorum setting is <code>majority</code>, then the used quorum will be <code>majority</code> between only the servers located in the same data center.</p>
+<p>Example about the configuration of 2 data centers, "rome" and "austin", with rispectively 3 and 2 servers.</p>
+<pre><code class="language-json">{
+  "autoDeploy": true,
+  "readQuorum": 1,
+  "writeQuorum": "localDataCenter",
+  "readYourWrites": true,
+  "dataCenters": {
+    "rome": {
+      "writeQuorum": "majority",
+      "servers": [ "europe-0", "europe-1", "europe-2" ]
+    },
+    "austin": {
+      "writeQuorum": "majority",
+      "servers": [ "usa-0", "usa-1" ]
+    }
+  },
+  "servers": { "*": "master" },
+  "clusters": {
+    "internal": {},
+    "*": { "servers": [ "&lt;NEW_NODE&gt;" ] }
+  }
+}
+</code></pre>
+<p>If a write operation is executed on the server "europe-0", the quorum used will be <code>majority</code>, but only between the servers locates in the same data center: namely "europe-0" (the coordinator), "europe-1" and "europe-2". Since the coordinator writes in the database before to distribute the operation, the write operation succeed as soon as at least one between the "europe-1" and "europe-2" servers provide the same result as with "europe-0". The rest of the replication will be executed in background in asycnhronous way.</p>
+<h2 id="consistency"><a class="header" href="#consistency">Consistency</a></h2>
+<p>Since multiple data centers can have a local quorum, it is possible having an <strong>Eventual Consistency</strong> between them. It's always suggested to keep the number of servers odd, so you can, eventually, always be consistent. Example of 2 data centers with equal number of servers:</p>
+<pre><code class="language-json">  "dataCenters": {
+    "rome": {
+      "writeQuorum": "all",
+      "servers": [ "europe-0", "europe-1", "europe-2" ]
+    },
+    "austin": {
+      "writeQuorum": "all",
+      "servers": [ "usa-0", "usa-1", "usa-2" ]
+    }
+</code></pre>
+<p>In this case if an UPDATE operation is executed by the server "usa-0" (the coordinator), it will reach the quorum only if <code>all</code> the servers in the "austin" data center provide the same result. Let's say the result for all these 2 servers was <code>5</code> (in the UPDATE operation the result is the updated version of the record). But what happens if all the other 3 servers in "rome" return the version <code>6</code>? You have no majority in this case (3 against 3), so the coordinator cannot establish who is the winner. The database become inconsistent.</p>
+<p>In order to automatically manage conflicts, the suggested configuration is always to keep an <strong>odd number</strong> of servers if you have or not data centers.</p>
+<h2 id="conflict-resolution-policy"><a class="header" href="#conflict-resolution-policy">Conflict Resolution Policy</a></h2>
+<p>In <a href="http://orientdb.com/orientdb-enterprise">OrientDB Enterprise Edition</a> the additional <code>dc</code> <a href="Distributed-Architecture.html#conflict-resolution-policy">Conflict Resolution Strategy</a> is supported to let to a configured data center to always win in case of conflict. To use this strategy in the conflict resolution chain, append <code>dc</code> at the chain by overwriting the global setting <code>distributed.conflictResolverRepairerChain</code>. Example:</p>
+<p><code>-Ddistributed.conflictResolverRepairerChain=majority,content,version,dc{winner:asia}</code></p>
+<p>Note the configuration passed in curly brackets <code>{winner:asia}</code> containing the name of the data center that will be the winner in case no winner has been found in the chain.</p>
+<h2 id="client-reconnection"><a class="header" href="#client-reconnection">Client Reconnection</a></h2>
+<p>Starting from OrientDB v2.2.25, when a client has lost its connection to the server, it's able to transparently reconnect to another server in the same Data Center of the server where it was connected. If no other server is available for the same Data Center, then it will try to reconnect to a server in another Data Center and, one by one, will try until one server is reachable. If no servers are reachable, then a connection error is thrown. You can change this strategy by forcing the reconnection to be only against the same Data Center. In this case, if no servers are available in the same Data Center, a connection error is thrown. This is the setting:</p>
+<pre><code>-Dnetwork.retry.strategy=same-dc
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../distributed/Distributed-Sharding.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../misc/Troubleshooting.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../distributed/Distributed-Sharding.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../misc/Troubleshooting.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

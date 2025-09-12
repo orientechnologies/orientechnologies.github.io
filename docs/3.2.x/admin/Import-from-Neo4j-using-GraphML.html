@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Import from Neo4j using GraphML - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><img src="../images/warning.png" alt="" /></td><td>This is a legacy strategy to migrate from Neo4j. The new strategy is to migrate using the <a href="../neo4j-to-orientdb-importer/README.html">Neo4j to OrientDB Importer</a>.</td></tr>
+</tbody></table>
+</div>
+<h1 id="import-from-neo4j-using-graphml"><a class="header" href="#import-from-neo4j-using-graphml">Import from Neo4j using GraphML</a></h1>
+<p>This section describes the process of importing data from Neo4j to OrientDB using GraphML. For general information on the possible Neo4j to OrientDB migration strategies, please refer to the <a href="Import-from-Neo4j-into-OrientDB.html">Import from Neo4j</a> section.</p>
+<p>Neo4j can export in GraphML, an XML-based file format for graphs. Given that OrientDB can read GraphML, you can use this file format to import data from Neo4j into OrientDB, using the Console or the Java API.</p>
+<p><strong>Note:</strong></p>
+<blockquote>
+<p>For large and complex datasets, the preferred way to migrate from Neo4j is using the <a href="../neo4j-to-orientdb-importer/README.html">Neo4j to OrientDB Importer</a>.</p>
+</blockquote>
+<blockquote>
+<p>Neo4j and Cypher are registered trademark of Neo Technology, Inc.</p>
+</blockquote>
+<h2 id="exporting-graphml"><a class="header" href="#exporting-graphml">Exporting GraphML</a></h2>
+<p>In order to export data from Neo4j into GraphML, you need to install the <a href="https://github.com/jexp/neo4j-shell-tools">Neo4j Shell Tools</a> plugin.  Once you have this package installed, you can use the <code>export-graphml</code> utility to export the database.</p>
+<ol>
+<li>
+<p>Change into the Neo4j home directory:</p>
+<pre>
+$ <code class="lang-sql userinput">cd /path/to/neo4j-community-2.3.2</code>
+</pre>
+</li>
+<li>
+<p>Download the Neo4j Shell Tools:</p>
+<pre>
+$ <code class="lang-sh userinput">curl http://dist.neo4j.org/jexp/shell/neo4j-shell-tools_2.3.2.zip \
+      -o neo4j-shell-tools.zip</code>
+</pre>
+</li>
+<li>
+<p>Unzip the <code>neo4j-shell-tools.zip</code> file into the <code>lib</code> directory:</p>
+<pre>
+$ <code class="lang-sh userinput">unzip neo4j-shell-tools.zip -d lib</code>
+</pre>
+</li>
+<li>
+<p>Restart the Neo4j Server.  In the event that it's not running, <code>start</code> it:</p>
+<pre>
+$ <code class="lang-sh userinput">./bin/neo4j restart</code>
+</pre>
+</li>
+<li>
+<p>Once you have Neo4j restarted with the Neo4j Shell Tools, launch the <a href="http://docs.neo4j.org/chunked/stable/shell.html">Neo4j Shell</a> tool, located in the <code>bin/</code> directory:</p>
+<pre>
+$ <code class="lang-sh userinput">./bin/neo4j-shell</code>
+Welcome to the Neo4j Shell! Enter 'help' for a list of commands
+NOTE: Remote Neo4j graph database service 'shell' at port 1337
+
+neo4j-sh (0)$
+</pre>
+</li>
+<li>
+<p>Export the database into GraphML:</p>
+<pre>
+neo4j-sh (0)$ <code class="lang-sh userinput">export-graphml -t -o /tmp/out.graphml</code>
+Wrote to GraphML-file /tmp/out.graphml 0. 100%: nodes = 302 rels = 834
+properties = 4221 time 59 sec total 59 sec
+</pre>
+</li>
+</ol>
+<p>This exports the database to the path <code>/tmp/out.graphml</code>.</p>
+<h2 id="importing-graphml"><a class="header" href="#importing-graphml">Importing GraphML</a></h2>
+<p>There are three methods available in importing the GraphML file into OrientDB: through the Console, through Gremlin or through the Java API.</p>
+<h3 id="importing-through-the-orientdb-console"><a class="header" href="#importing-through-the-orientdb-console">Importing through the OrientDB Console</a></h3>
+<p>For more recent versions of OrientDB, you can import data from GraphML through the OrientDB Console.  If you have version 2.0 or greater, this is the recommended method given that it can automatically translate the Neo4j labels into classes.</p>
+<ol>
+<li>
+<p>Log into the OrientDB Console.</p>
+<pre>
+$ <code class="lang-sh userinput">$ORIENTDB_HOME/bin/console.sh</code>
+</pre>
+</li>
+<li>
+<p>In OrientDB, create a database to receive the import:</p>
+<pre>
+orientdb> <code class="lang-sql userinput">CREATE DATABASE PLOCAL:/tmp/db/test</code>
+Creating database [plocal:/tmp/db/test] using the storage type [plocal]...
+Database created successfully.
+
+Current database is: plocal:/tmp/db/test
+</pre>
+</li>
+<li>
+<p>Import the data from the GraphML file:</p>
+<pre>
+orientdb {db=test}> <code class="lang-sql userinput">IMPORT DATABASE /tmp/out.graphml</code>
+
+Importing GRAPHML database database from /tmp/out.graphml...
+Transaction 8 has been committed in 12ms
+</pre>
+</li>
+</ol>
+<p>This imports the Neo4j database into OrientDB on the <code>test</code> database.</p>
+<h3 id="importing-through-the-gremlin-console"><a class="header" href="#importing-through-the-gremlin-console">Importing through the Gremlin Console</a></h3>
+<p>For older versions of OrientDB, you can import data from GraphML through the Gremlin Console.  If you have a version 1.7 or earlier, this is the method to use.  It is not recommended on more recent versions, given that it doesn't consider labels declared in Neo4j.  In this case, everything imports as the base vertex and edge classes, (that is, <code>V</code> and <code>E</code>).  This means that, after importing through Gremlin you need to refactor you graph elements to fit a more structured schema.</p>
+<p>To import the GraphML file into OrientDB, complete the following steps:</p>
+<ol>
+<li>
+<p>Launch the Gremlin Console:</p>
+<pre>
+$ <code class="lang-sh userinput">$ORIENTDB_HOME/bin/gremlin.sh</code>
+
+         \,,,/
+         (o o)
+-----oOOo-(_)-oOOo-----
+</pre>
+</li>
+<li>
+<p>From the Gremlin Console, create a new graph, specifying the path to your Graph database, (here <code>/tmp/db/test</code>):</p>
+<pre>
+gremlin> <code class="lang-js userinput">g = new OrientGraph("plocal:/tmp/db/test");</code>
+==>orientgraph[plocal:/db/test]
+</pre>
+</li>
+<li>
+<p>Load the GraphML file into the graph object (that is, <code>g</code>):</p>
+<pre>
+gremlin> <code class="lang-js userinput">g.loadGraphML("/tmp/out.graphml");</code>
+==>null
+</pre>
+</li>
+<li>
+<p>Exit the Gremlin Console:</p>
+<pre>
+gremlin> <code class="lang-js userinput">quit</code>
+</pre>
+</li>
+</ol>
+<p>This imports the GraphML file into your OrientDB database.</p>
+<h3 id="importing-through-the-java-api"><a class="header" href="#importing-through-the-java-api">Importing through the Java API</a></h3>
+<p>OrientDB Console calls the Java API.  Using the Java API directly allows you greater control over the import process.  For instance,</p>
+<pre><code class="language-java">new OGraphMLReader(new OrientGraph("plocal:/temp/bettergraph")).inputGraph("/temp/neo4j.graphml");
+</code></pre>
+<p>This line imports the GraphML file into OrientDB.</p>
+<h4 id="defining-custom-strategies"><a class="header" href="#defining-custom-strategies">Defining Custom Strategies</a></h4>
+<p>Beginning in version 2.1, OrientDB allows you to modify the import process through custom strategies for vertex and edge attributes.  It supports the following strategies:</p>
+<ul>
+<li><code>com.orientechnologies.orient.graph.graphml.OIgnoreGraphMLImportStrategy</code>
+Defines attributes to ignore.</li>
+<li><code>com.orientechnologies.orient.graph.graphml.ORenameGraphMLImportStrategy</code> Defines attributes to rename.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul>
+<li>
+<p>Ignore the vertex attribute <code>type</code>:</p>
+<pre><code class="language-java">new OGraphMLReader(new OrientGraph("plocal:/temp/bettergraph")).defineVertexAttributeStrategy("__type__", new OIgnoreGraphMLImportStrategy()).inputGraph("/temp/neo4j.graphml");
+</code></pre>
+</li>
+<li>
+<p>Ignore the edge attribute <code>weight</code>:</p>
+<pre><code class="language-java">new OGraphMLReader(new OrientGraph("plocal:/temp/bettergraph")).defineEdgeAttributeStrategy("weight", new OIgnoreGraphMLImportStrategy()).inputGraph("/temp/neo4j.graphml");
+</code></pre>
+</li>
+<li>
+<p>Rename the vertex attribute <code>type</code> in just <code>type</code>:</p>
+<pre><code class="language-java">new OGraphMLReader(new OrientGraph("plocal:/temp/bettergraph")).defineVertexAttributeStrategy("__type__", new ORenameGraphMLImportStrategy("type")).inputGraph("/temp/neo4j.graphml");
+</code></pre>
+</li>
+</ul>
+<h2 id="import-tips-and-tricks"><a class="header" href="#import-tips-and-tricks">Import Tips and Tricks</a></h2>
+<h3 id="dealing-with-memory-issues"><a class="header" href="#dealing-with-memory-issues">Dealing with Memory Issues</a></h3>
+<p>In the event that you experience memory issues while attempting to import from Neo4j, you might consider reducing the batch size.  By default, the batch size is set to <code>1000</code>.  Smaller value causes OrientDB to process the import in smaller units.</p>
+<ul>
+<li>
+<p>Import with adjusted batch size through the Console:</p>
+<pre>
+orientdb {db=test}> <code class="lang-sql userinput">IMPORT DATABASE /tmp/out.graphml batchSize=100</code>
+</pre>
+</li>
+<li>
+<p>Import with adjusted batch size through the Java API:</p>
+<pre><code class="language-java">new OGraphMLReader(new OrientGraph("plocal:/temp/bettergraph")).setBatchSize(100).inputGraph("/temp/neo4j.graphml");
+</code></pre>
+</li>
+</ul>
+<h3 id="storing-the-vertex-ids"><a class="header" href="#storing-the-vertex-ids">Storing the Vertex ID's</a></h3>
+<p>By default, OrientDB updates the import to use its own ID's for vertices.  If you want to preserve the original vertex ID's from Neo4j, use the <code>storeVertexIds</code> option.</p>
+<ul>
+<li>
+<p>Import with the original vertex ID's through the Console:</p>
+<pre>
+orientdb {db=test}> <code class="lang-sql userinput">IMPORT DATABASE /tmp/out.graphml storeVertexIds=true</code>
+</pre>
+</li>
+<li>
+<p>Import with the original vertex ID's through the Java API:</p>
+<pre><code class="language-java">new OGraphMLReader(new OrientGraph("plocal:/temp/bettergraph")).setStoreVertexIds(true).inputGraph("/temp/neo4j.graphml");
+</code></pre>
+</li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p>A complete example of a migration from Neo4j to OrientDB using the GraphML  method can be found in the section <a href="../gettingstarted/tutorials/Tutorial-Importing-the-Movie-Database-from-Neo4j.html">Tutorial: Importing the <em>movie</em> Database from Neo4j</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../admin/Import-from-Neo4j-into-OrientDB.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../admin/Monitoring.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../admin/Import-from-Neo4j-into-OrientDB.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../admin/Monitoring.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

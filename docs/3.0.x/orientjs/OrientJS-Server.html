@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Server API - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="orientjs-server-api"><a class="header" href="#orientjs-server-api">OrientJS Server API</a></h1>
+<p>With OrientJS installed on your system, you can now begin to develop applications around it.  In your code, this starts with initializing the client connection between your application and the OrientDB Server, which is managed through the OrientJS Server API.</p>
+<blockquote>
+<p>By convention, the variable on which you initialize the Server API is called <code>server</code>. This designation is arbitrary and used only for convenience.</p>
+</blockquote>
+<h2 id="initializing-the-server-api"><a class="header" href="#initializing-the-server-api">Initializing the Server API</a></h2>
+<p>In order to use the OrientDB with your Node.js application, you first need to initialize the Server API.  This provides your application with the tools it needs in interacting with the OrientDB server to find and access the necessary database objects.</p>
+<pre><code class="language-javascript">var OrientDB = require('orientjs');
+
+var server = OrientDB({
+   host:       'localhost',
+   port:       2424,
+   username:   'root',
+   password:   'root_passwd'
+});
+</code></pre>
+<p>Your application uses this code to initialize the <code>server</code> variable.  It then connects to OrientDB using <code>root</code> and <code>root_passwd</code> as the login credentials.</p>
+<p>When you're done with the server, you need to close it to free up system resources.</p>
+<pre><code class="language-javascript">server.close();
+</code></pre>
+<h3 id="using-tokens"><a class="header" href="#using-tokens">Using Tokens</a></h3>
+<p>OrientJS supports tokens through the <a href="../internals/Network-Binary-Protocol.html#token">Network Binary Protocol</a>.  To use it in your application, define the <code>useToken</code> configuration parameter when you initialize the server connection.</p>
+<p>For instance,</p>
+<pre><code class="language-javascript">var server = OrientDB({
+   host:     'localhost',
+   port:     2424,
+   username: 'root',
+   password: 'root_passwd',
+   useToken: true
+});
+</code></pre>
+<h3 id="using-distributed-databases"><a class="header" href="#using-distributed-databases">Using Distributed Databases</a></h3>
+<p>Beginning in version 2.1.11 of OrientJS, you can develop Node.js applications to use distributed database instances.  To do so, define the <code>servers</code> configuration parameter when you initialize the server connection.  OrientJS uses these as alternate hosts in the event that it encounters an error while connecting to the primary host.</p>
+<p>When using this method, the only requisite is that at least one of these servers must be online when the application attempts to establish its first connection.</p>
+<pre><code class="language-js">var server = OrientDB({
+   host:     '10.0.1.5',
+   port:     2424,
+   username: 'root',
+   password: 'root_passwd',
+   servers:  [{host: '10.0.1.5', port: 2425}]
+});
+
+var db = server.use({
+   name:     'GratefulDeadConcerts',
+   username: 'admin',
+   password: 'admin_passwd'
+});
+</code></pre>
+<p>The only prerequisite when executing this code is that at least one of the hosts, primary or secondary, be online at the time that it first runs.  Once it has established this initial connection, OrientJS keeps the list up to date with those servers in the cluster that are currently online.  It manages this through the push notifications that OrientDB sends to connected clients when changes occur in cluster membership.</p>
+<blockquote>
+<p><strong>NOTE</strong>: Distributed Database support in OrientJS remains experimental.  It is recommended that you don't use it in production.</p>
+</blockquote>
+<h2 id="working-with-server"><a class="header" href="#working-with-server">Working with Server</a></h2>
+<p>Once you have initialized the <code>server</code> variable in your application, you can use it to manage and otherwise work with the OrientDB Server, such as listing the current databases and creating new databases on the server.  It also provides methods to initialize the OrientJS <a href="OrientJS-Database.html">Database API</a> variables, which are covered in more detail elsewhere.</p>
+<h3 id="listing-databases"><a class="header" href="#listing-databases">Listing Databases</a></h3>
+<p>Using the Server API you can list the current databases on the Server using the <code>server.list()</code> method.  This returns a list object, which you can store as a variable and use elsewhere, or you can pass it to the <code>console.log()</code> function to print the number of databases available on the server.</p>
+<pre><code class="language-js">var dbs = server.list()
+   .then(
+      function(list){
+         console.log('Databases on Server:', list.length);
+      }
+   );
+</code></pre>
+<p>Here, the database list is set to the variable <code>dbs</code>.  It then uses the <code>.length</code> operator to find the number of entries in the list.  You might use the <code>server.list()</code> method in your application logic in determining whether you need to create a database before attempting to connect to one.</p>
+<h3 id="creating-databases"><a class="header" href="#creating-databases">Creating Databases</a></h3>
+<p>In the event that you need to create a database on OrientDB, you can do so through the Server API using the <code>server.create()</code> method.  Similar to <code>server.use()</code>, this method initializes an OrientJS <a href="OrientJS-Database.html">Database API</a> variable, which you can then use elsewhere to work with the specific databases on your server.</p>
+<pre><code class="language-js">var db = server.create({
+   name:    'BaseballStats',
+   type:    'graph',
+   storage: 'plocal'
+   })
+   .then(
+      function(create){
+         console.log('Created Database:', create.name);
+      }
+   );
+</code></pre>
+<p>Using this code creates a database for baseball statistics on the OrientDB Server. Within your application, it also initializes a Database API variable called <code>db</code>.  Then it logs a message about what it did to the console.</p>
+<h3 id="using-databases"><a class="header" href="#using-databases">Using Databases</a></h3>
+<p>In the event that the database already exists on your server, you can set an instance using the <code>server.use()</code> method.  Similar to <code>server.create()</code>, this method initializes an OrientJS <a href="OrientJS-Database.html">Database API</a> variable, which you can then use elsewhere to work with the specific databases on your server.</p>
+<pre><code class="language-js">var db = server.use('BaseballStats')
+console.log('Using Database:', db.name);
+   
+</code></pre>
+<p>Using this code initializes an instance of the <code>BaseballStats</code> database within your application called <code>db</code>.  You can now use this instance to work with that database.</p>
+<h3 id="closing-connections"><a class="header" href="#closing-connections">Closing Connections</a></h3>
+<p>When you're finished with the Server API, you need to close the client connection through the <code>server.close()</code> method.  When you call this method, OrientJS sends a message to OrientDB that it no longer needs these resources, allowing the Server itself to reallocate them to other processes.</p>
+<pre><code class="language-js">server.close()
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../orientjs/OrientJS-Legacy.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../orientjs/OrientJS-Database.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../orientjs/OrientJS-Legacy.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../orientjs/OrientJS-Database.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

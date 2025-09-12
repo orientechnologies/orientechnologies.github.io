@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OPlaceholder.html" title="com.orientechnologies.orient.core.db.record.OPlaceholder" alt="" coords="89,118,195,143"/>
+<area shape="rect" id="node1" href="./OPlaceholder.html" title="&lt;TABLE&gt;" alt="" coords="79,107,205,155"/>
+<area shape="rect" id="node2_1" href="./OIdentifiable.html" title="com.orientechnologies.orient.core.db.record.OIdentifiable" alt="" coords="16,11,119,53"/>
+<area shape="rect" id="node2" href="./OIdentifiable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,129,59"/>
+<area shape="rect" id="node3_2" href="../../serialization/OStreamable.html" title="com.orientechnologies.orient.core.serialization.OStreamable" alt="" coords="165,11,269,53"/>
+<area shape="rect" id="node3" href="../../serialization/OStreamable.html" title="&lt;TABLE&gt;" alt="" coords="154,5,279,59"/>
+</map>

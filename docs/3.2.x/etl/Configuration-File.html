@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Configuration - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- proofread 2015-12-11 SAM -->
+<h1 id="etl---configuration"><a class="header" href="#etl---configuration">ETL - Configuration</a></h1>
+<p>OrientDB manages configuration for the ETL module through a single JSON configuration file, called at execution.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-json">{
+  "config": {
+    &lt;name&gt;: &lt;value&gt;
+  },
+  "begin": [
+    { &lt;block-name&gt;: { &lt;configuration&gt; } }
+  ],
+  "source" : {
+    { &lt;source-name&gt;: { &lt;configuration&gt; } }
+  },
+  "extractor" : {
+    { &lt;extractor-name&gt;: { &lt;configuration&gt; } }
+  },
+  "transformers" : [
+    { &lt;transformer-name&gt;: { &lt;configuration&gt; } }
+  ],
+  "loader" : { &lt;loader-name&gt;: { &lt;configuration&gt; } },
+  "end": [
+   { &lt;block-name&gt;: { &lt;configuration&gt; } }
+  ]
+}
+</code></pre>
+<ul>
+<li><strong><code>"config"</code></strong> Manages all settings and context variables used by any component of the process.</li>
+<li><strong><code>"source"</code></strong> Manages the source data to process.</li>
+<li><strong><code>"begin"</code></strong> Defines a list of <a href="Block.html">blocks</a> to execute in order when the process begins.</li>
+<li><strong><code>"extractor"</code></strong> Manages the <a href="Extractor.html">extractor</a> settings.</li>
+<li><strong><code>"transformers"</code></strong> Defines a list of <a href="Transformer.html">transformers</a> to execute in the pipeline.</li>
+<li><strong><code>"loader"</code></strong> Manages the <a href="Loader.html">loader</a> settings.</li>
+<li><strong><code>"end"</code></strong> Defines a list of <a href="Block.html">blocks</a> to execute in order when the process finishes.</li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code class="language-json">{
+  "config": {
+    "log": "debug",
+    "fileDirectory": "/temp/databases/dbpedia_csv/",
+    "fileName": "Person.csv.gz"
+  },
+  "begin": [
+   { "let": { "name": "$filePath",  "value": "$fileDirectory.append( $fileName )"} },
+   { "let": { "name": "$className", "value": "$fileName.substring( 0, $fileName.indexOf(".") )"} }
+  ],
+  "source" : {
+    "file": { "path": "$filePath", "lock" : true }
+  },
+  "extractor" : {
+    "row": {}
+  },
+  "transformers" : [
+   { "csv": { "separator": ",", "nullValue": "NULL", "skipFrom": 1, "skipTo": 3 } },
+   { "merge": { "joinFieldName":"URI", "lookup":"V.URI" } },
+   { "vertex": { "class": "$className"} }
+  ],
+  "loader" : {
+    "orientdb": {
+      "dbURL": "plocal:/temp/databases/dbpedia",
+      "dbUser": "admin",
+      "dbPassword": "admin",
+      "dbAutoCreate": true,
+      "tx": false,
+      "batchCommit": 1000,
+      "dbType": "graph",
+      "indexes": [{"class":"V", "fields":["URI:string"], "type":"UNIQUE" }]
+    }
+  }
+}
+</code></pre>
+<h2 id="general-rules"><a class="header" href="#general-rules">General Rules</a></h2>
+<p>In developing a configuration file for ETL module processes, consider the following:</p>
+<ul>
+<li>
+<p>You can use context variables by prefixing them with the <code>$</code> sign.</p>
+</li>
+<li>
+<p>It assigns the <code>$input</code> context variable before each transformation.</p>
+</li>
+<li>
+<p>You can execute an expression in OrientDB SQL with the <code>={&lt;expression&gt;}</code> syntax.  For instance,</p>
+<pre><code class="language-json">"field": ={EVAL('3 * 5)}
+</code></pre>
+</li>
+</ul>
+<h3 id="conditional-execution"><a class="header" href="#conditional-execution">Conditional Execution</a></h3>
+<p>In conditional execution, OrientDB only runs executable blocks, such as <a href="Transformer.html">transformers</a> and <a href="Block.html">blocks</a>, when a condition is found true, such as with a <a href="../sql/SQL-Where.html"><code>WHERE</code></a> clause.</p>
+<p>For example,</p>
+<pre><code class="language-json">{ "let": {
+    "name": "path",
+    "value": "C:/Temp",
+    "if": "${os.name} = 'Windows'"
+  }
+},
+{ "let": {
+    "name": "path",
+    "value": "/tmp",
+    "if": "${os.name}.indexOf('nux')"
+  }
+}
+</code></pre>
+<h3 id="log-setting"><a class="header" href="#log-setting">Log setting</a></h3>
+<p>Most blocks, such <a href="Transformer.html">transformers</a> and <a href="Block.html">blocks</a>, support the <code>"log"</code> setting.  Logs take one of the following logging levels, (which are case-insensitive),: <code>NONE</code>, <code>ERROR</code>, <code>INFO</code>, <code>DEBUG</code>.  By default, it uses the <code>INFO</code> level.
+ETL uses the <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/logging/overview.html">Java util logging</a> and writes logs on the console and on a dedicated rolling file. A dedicated configuration file (<code>orientdb-etl-log.properties</code>) is present under the <code>config</code> directory of the OrientDB distribution.
+ETL logging levels are mapped to JUL levels:</p>
+<div class="table-wrapper"><table><thead><tr><th>ETL level</th><th>JUL level</th></tr></thead><tbody>
+<tr><td><code>"NONE"</code></td><td><code>"OFF"</code></td></tr>
+<tr><td><code>"INFO"</code></td><td><code>"INFO"</code></td></tr>
+<tr><td><code>"DEBUG"</code></td><td><code>"FINE"</code></td></tr>
+<tr><td><code>"ERROR"</code></td><td><code>"SEVERE"</code></td></tr>
+</tbody></table>
+</div>
+<p>Setting the log-level to <code>DEBUG</code> displays more information on execution.  It also slows down execution, so use it only for development and debugging purposes.</p>
+<pre><code class="language-json">{ "http": {
+    "url": "http://ip.jsontest.com/",
+    "method": "GET",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36"
+    },
+    "log": "DEBUG"
+  }
+}
+</code></pre>
+<h3 id="configuration-variables"><a class="header" href="#configuration-variables">Configuration Variables</a></h3>
+<p>The ETL module binds all values declared in the <code>"config"</code> block to the execution context and are accessible to ETL processing.  There are also some special variables used by the ETL process.</p>
+<div class="table-wrapper"><table><thead><tr><th>Variable</th><th>Description</th><th>Type</th><th>Default value</th></tr></thead><tbody>
+<tr><td><code>"log"</code></td><td>Defines the global logging level.  The accepted levels are: <code>NONE</code>, <code>ERROR</code>, <code>INFO</code>, and <code>DEBUG</code>. This parameter is useful to debug a ETL process or single component.</td><td>string</td><td><code>INFO</code></td></tr>
+<tr><td><code>"maxRetries"</code></td><td>Defines the maximum number of retries allowed, in the event that the loader raises an <code>ONeedRetryException</code>, for concurrent modification of the same record.</td><td>integer</td><td>10</td></tr>
+<tr><td><code>"parallel"</code></td><td>Defines whether the ETL module executes pipelines in parallel, using all available cores.</td><td>boolean</td><td><code>false</code></td></tr>
+<tr><td><code>"haltOnError"</code></td><td>Defines whether the ETL module halts the process when it encounters unmanageable errors.  When set to <code>false</code>, the process continues in the event of errors.  It reports the number of errors it encounters at the end of the import.  This feature was introduced in version 2.0.9.</td><td>boolean</td><td><code>true</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="split-configuration-on-multiple-files"><a class="header" href="#split-configuration-on-multiple-files">Split Configuration on Multiple Files</a></h3>
+<p>You can split the configuration into several files allowing for the composition of common parts such as paths, URL's and database references.</p>
+<p>For example, you might split the above configuration into two files: one with the input paths for <code>Person.csv</code> specifically, while the other would contain common configurations for the ETL module.</p>
+<pre>
+$ <code class="lang-sh userinput">cat personConfig.json</code>
+<code class="lang-json">
+{
+  "config": {
+    "log": "debug",
+    "fileDirectory": "/temp/databases/dbpedia_csv/",
+    "fileName": "Person.csv.gz"
+  }
+}</code>
+
+$ <code class="lang-sh userinput">cat commonConfig.json</code>
+<code class="lang-json">
+{
+  "begin": [
+   { "let": { "name": "$filePath",  "value": "$fileDirectory.append( $fileName )"} },
+   { "let": { "name": "$className", "value": "$fileName.substring( 0, $fileName.indexOf(".") )"} }
+  ],
+  "source" : {
+    "file": { "path": "$filePath", "lock" : true }
+  },
+  "extractor" : {
+    "row": {}
+  },
+  "transformers" : [
+   { "csv": { "separator": ",", "nullValue": "NULL", "skipFrom": 1, "skipTo": 3 } },
+   { "merge": { "joinFieldName":"URI", "lookup":"V.URI" } },
+   { "vertex": { "class": "$className"} }
+  ],
+  "loader" : {
+    "orientdb": {
+      "dbURL": "plocal:/temp/databases/dbpedia",
+      "dbUser": "admin",
+      "dbPassword": "admin",
+      "dbAutoCreate": true,
+      "tx": false,
+      "batchCommit": 1000,
+      "dbType": "graph",
+      "indexes": [{"class":"V", "fields":["URI:string"], "type":"UNIQUE" }]
+    }
+  }
+}</code>
+</pre>
+<p>Then, when you can call both configuration files when you run the ETL module:</p>
+<pre>
+$ <code class="lang-sh userinput">$ORIENTDB_HOME/bin/oetl.sh commonConfig.json personConfig.json</code>
+</pre>
+<h3 id="run-time-configuration"><a class="header" href="#run-time-configuration">Run-time configuration</a></h3>
+<p>In the configuration file for the ETL module, you can define variables that the module resolves at run-time by passing them as command-line options.  Values passed in this manner <em>override</em> the values defined in the <code>"config"</code> section, even when you use multiple configuration files.</p>
+<p>For instance, you might set the configuration variable in the file to <code>${databaseURL}</code>, then define it through the command-line using:</p>
+<pre>
+$ <code class="lang-sh userinput">$ORIENTDB_HOME/bin/oetl.sh config-dbpedia.json \
+      -databaseURL=plocal:/tmp/mydb</code>
+</pre>
+<p>In this case, the <code>databaseURL</code> parameter is set in the <code>"config"</code> section to <code>/tmp/mydb</code>, overriding any value given the file.</p>
+<pre><code class="language-json">{
+  "config": {
+    "log": "debug",
+    "fileDirectory": "/temp/databases/dbpedia_csv/",
+    "fileName": "Person.csv.gz"
+    "databaseUrl": "plocal:/temp/currentDb"
+  },
+  ...
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../etl/ETL-Introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../etl/Block.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../etl/ETL-Introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../etl/Block.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

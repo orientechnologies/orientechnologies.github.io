@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstract2pcTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OAbstract2pcTask" alt="" coords="119,17,255,42"/>
+<area shape="rect" id="node1" href="./OAbstract2pcTask.html" title="&lt;TABLE&gt;" alt="" coords="108,5,265,53"/>
+<area shape="rect" id="node4_1" href="./OTxTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OTxTask" alt="" coords="149,113,224,138"/>
+<area shape="rect" id="node4" href="./OTxTask.html" title="&lt;TABLE&gt;" alt="" coords="139,101,235,149"/>
+<area shape="rect" id="node2_2" href="./ORepairClusterTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ORepairClusterTask" alt="" coords="16,209,163,234"/>
+<area shape="rect" id="node2" href="./ORepairClusterTask.html" title="&lt;TABLE&gt;" alt="" coords="5,197,173,245"/>
+<area shape="rect" id="node3_3" href="./ORepairRecordsTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ORepairRecordsTask" alt="" coords="208,209,360,234"/>
+<area shape="rect" id="node3" href="./ORepairRecordsTask.html" title="&lt;TABLE&gt;" alt="" coords="197,197,371,245"/>
+</map>

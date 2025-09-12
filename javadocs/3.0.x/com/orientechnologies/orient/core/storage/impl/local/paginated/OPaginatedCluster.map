@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../OCluster.html" title="com.orientechnologies.orient.core.storage.OCluster" alt="" coords="16,11,109,53"/>
+<area shape="rect" id="node1" href="../../../OCluster.html" title="&lt;TABLE&gt;" alt="" coords="5,5,120,59"/>
+<area shape="rect" id="node2_1" href="./OPaginatedCluster.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.OPaginatedCluster" alt="" coords="78,118,218,143"/>
+<area shape="rect" id="node2" href="./OPaginatedCluster.html" title="&lt;TABLE&gt;" alt="" coords="67,107,229,155"/>
+<area shape="rect" id="node3_2" href="./base/ODurableComponent.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.base.ODurableComponent" alt="" coords="155,19,311,45"/>
+<area shape="rect" id="node3" href="./base/ODurableComponent.html" title="&lt;TABLE&gt;" alt="" coords="145,8,322,56"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractRecordReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" alt="" coords="268,113,496,138"/>
+<area shape="rect" id="node1" href="./OAbstractRecordReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="257,101,507,149"/>
+<area shape="rect" id="node3_1" href="../impl/task/OUpdateRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OUpdateRecordTask" alt="" coords="16,209,167,234"/>
+<area shape="rect" id="node3" href="../impl/task/OUpdateRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="5,197,177,245"/>
+<area shape="rect" id="node4_2" href="../impl/task/ODeleteRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.ODeleteRecordTask" alt="" coords="213,209,359,234"/>
+<area shape="rect" id="node4" href="../impl/task/ODeleteRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="202,197,370,245"/>
+<area shape="rect" id="node5_3" href="../impl/task/OCreateRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OCreateRecordTask" alt="" coords="405,209,551,234"/>
+<area shape="rect" id="node5" href="../impl/task/OCreateRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="394,197,562,245"/>
+<area shape="rect" id="node6_4" href="../impl/task/OAbstractReadRecordTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OAbstractReadRecordTask" alt="" coords="597,209,789,234"/>
+<area shape="rect" id="node6" href="../impl/task/OAbstractReadRecordTask.html" title="&lt;TABLE&gt;" alt="" coords="586,197,799,245"/>
+<area shape="rect" id="node2_5" href="./OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="291,17,473,42"/>
+<area shape="rect" id="node2" href="./OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="280,5,484,53"/>
+</map>

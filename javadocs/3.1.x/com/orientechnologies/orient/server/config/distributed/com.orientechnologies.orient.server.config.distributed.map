@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OServerDistributedGroupConfiguration.html" title="com.orientechnologies.orient.server.config.distributed.OServerDistributedGroupConfiguration" alt="" coords="16,17,285,42"/>
+<area shape="rect" id="node1" href="./OServerDistributedGroupConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="5,5,296,53"/>
+<area shape="rect" id="node2_1" href="./OServerDistributedNetworkMulticastConfiguration.html" title="com.orientechnologies.orient.server.config.distributed.OServerDistributedNetworkMulticastConfiguration" alt="" coords="331,17,677,42"/>
+<area shape="rect" id="node2" href="./OServerDistributedNetworkMulticastConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="321,5,687,53"/>
+<area shape="rect" id="node3_2" href="./OServerDistributedNetworkConfiguration.html" title="com.orientechnologies.orient.server.config.distributed.OServerDistributedNetworkConfiguration" alt="" coords="723,17,1008,42"/>
+<area shape="rect" id="node3" href="./OServerDistributedNetworkConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="712,5,1019,53"/>
+<area shape="rect" id="node4_3" href="./OServerDistributedConfiguration.html" title="com.orientechnologies.orient.server.config.distributed.OServerDistributedConfiguration" alt="" coords="1054,17,1285,42"/>
+<area shape="rect" id="node4" href="./OServerDistributedConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="1043,5,1295,53"/>
+</map>

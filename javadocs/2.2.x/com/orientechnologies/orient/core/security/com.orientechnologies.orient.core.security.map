@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSecuritySystem.html" title="com.orientechnologies.orient.core.security.OSecuritySystem" alt="" coords="16,11,148,53"/>
+<area shape="rect" id="node1" href="./OSecuritySystem.html" title="&lt;TABLE&gt;" alt="" coords="5,5,159,59"/>
+<area shape="rect" id="node2_1" href="./OSecurityManager.html" title="com.orientechnologies.orient.core.security.OSecurityManager" alt="" coords="193,19,333,45"/>
+<area shape="rect" id="node2" href="./OSecurityManager.html" title="&lt;TABLE&gt;" alt="" coords="183,8,344,56"/>
+<area shape="rect" id="node3_2" href="./OInvalidPasswordException.html" title="com.orientechnologies.orient.core.security.OInvalidPasswordException" alt="" coords="379,19,577,45"/>
+<area shape="rect" id="node3" href="./OInvalidPasswordException.html" title="&lt;TABLE&gt;" alt="" coords="368,8,588,56"/>
+<area shape="rect" id="node4_3" href="./OCredentialInterceptor.html" title="com.orientechnologies.orient.core.security.OCredentialInterceptor" alt="" coords="623,11,791,53"/>
+<area shape="rect" id="node4" href="./OCredentialInterceptor.html" title="&lt;TABLE&gt;" alt="" coords="613,5,802,59"/>
+<area shape="rect" id="node9_4" href="./ODefaultCI.html" title="com.orientechnologies.orient.core.security.ODefaultCI" alt="" coords="662,118,753,143"/>
+<area shape="rect" id="node9" href="./ODefaultCI.html" title="&lt;TABLE&gt;" alt="" coords="651,107,763,155"/>
+<area shape="rect" id="node5_5" href="./OSecuritySharedFactory.html" title="com.orientechnologies.orient.core.security.OSecuritySharedFactory" alt="" coords="815,118,989,143"/>
+<area shape="rect" id="node5" href="./OSecuritySharedFactory.html" title="&lt;TABLE&gt;" alt="" coords="804,107,1000,155"/>
+<area shape="rect" id="node6_6" href="./OSecurityFactory.html" title="com.orientechnologies.orient.core.security.OSecurityFactory" alt="" coords="837,11,967,53"/>
+<area shape="rect" id="node6" href="./OSecurityFactory.html" title="&lt;TABLE&gt;" alt="" coords="827,5,977,59"/>
+<area shape="rect" id="node7_7" href="./OSecuritySystemException.html" title="com.orientechnologies.orient.core.security.OSecuritySystemException" alt="" coords="1012,19,1208,45"/>
+<area shape="rect" id="node7" href="./OSecuritySystemException.html" title="&lt;TABLE&gt;" alt="" coords="1001,8,1219,56"/>
+<area shape="rect" id="node8_8" href="./OAuditingOperation.html" title="com.orientechnologies.orient.core.security.OAuditingOperation" alt="" coords="1253,11,1401,53"/>
+<area shape="rect" id="node8" href="./OAuditingOperation.html" title="&lt;TABLE&gt;" alt="" coords="1243,5,1412,59"/>
+</map>

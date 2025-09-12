@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../ORecordSerializer.html" title="com.orientechnologies.orient.core.serialization.serializer.record.ORecordSerializer" alt="" coords="79,11,215,53"/>
+<area shape="rect" id="node1" href="../ORecordSerializer.html" title="&lt;TABLE&gt;" alt="" coords="69,5,226,59"/>
+<area shape="rect" id="node3_1" href="./ORecordSerializerNetworkV37.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerNetworkV37" alt="" coords="39,118,255,143"/>
+<area shape="rect" id="node3" href="./ORecordSerializerNetworkV37.html" title="&lt;TABLE&gt;" alt="" coords="29,107,266,155"/>
+<area shape="rect" id="node2_2" href="./ORecordSerializerNetworkDistributed.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerNetworkDistributed" alt="" coords="16,214,279,239"/>
+<area shape="rect" id="node2" href="./ORecordSerializerNetworkDistributed.html" title="&lt;TABLE&gt;" alt="" coords="5,203,289,251"/>
+</map>

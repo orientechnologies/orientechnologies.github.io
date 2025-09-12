@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Running SQL statements Java - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="java-query-api"><a class="header" href="#java-query-api">Java Query API</a></h1>
+<p><strong>(since v 3.0)</strong></p>
+<h3 id="querying-the-database-in-sql"><a class="header" href="#querying-the-database-in-sql">Querying the database in SQL</a></h3>
+<p>ODatabaseSession provides some methods interact with the database via SQL statements and scripts:</p>
+<pre><code class="language-java">  OResultSet query(String query, Object... positionalParams)
+  OResultSet query(String query, Map namedParams);
+
+  OResultSet command(String query, Object... positionalParams);
+  OResultSet command(String query, Map namedParams);
+  
+  OResultSet execute(String language, String script, Object... positionalParams);
+  OResultSet execute(String language, String script, Map namedParams);
+</code></pre>
+<p><code>query()</code> methods are intended to execute idempotent statements only (eg. SELECT, MATCH, TRAVERSE).</p>
+<p><code>command()</code> methods can execute any type of statements, idempotent (SELECT, MATCH...), non idempotent (INSERT, UPDATE, DELETE...) and
+DDL (CREATE CLASS, CREATE PROPERTY...)</p>
+<h3 id="sample-usage"><a class="header" href="#sample-usage">Sample usage</a></h3>
+<p>The typical usage can be described with an example</p>
+<pre><code class="language-java">ODatabaseSession db;
+...
+String statement = "SELECT FROM V WHERE name = ? and surname = ?";
+OResultSet rs = db.query(statement, "John", "Smith");
+while(rs.hasNext()){
+  OResult row = rs.next();
+  Date birthDate = row.getProperty("birthDate");
+  ...
+}
+rs.close();
+
+</code></pre>
+<h3 id="query-parameters"><a class="header" href="#query-parameters">Query parameters</a></h3>
+<p>Building SQL statements as a string concatenation is universally recognized as a dangerous practice.</p>
+<p>See an example:</p>
+<pre><code class="language-java">String name = ...
+String stm = "SELECT FROM V WHERE name = '"+name+"'";
+OResultSet rs = db.query(statement);
+</code></pre>
+<p>Apart from being hard to read, this query could also lead to SQL injection, based on the value of the <code>name</code> variable.</p>
+<p>OrientDB allows to avoid string concatenation for parameter values, using named or positional parameters.</p>
+<h4 id="named-parameters"><a class="header" href="#named-parameters">Named Parameters</a></h4>
+<p>A named parameter is defined as an identifier preceded by a colon, eg. <code>:parameter1</code></p>
+<p>An example is following:</p>
+<pre><code class="language-java">String stm = "SELECT FROM V WHERE name = :name and surname = :surname";
+</code></pre>
+<p>The named parameters have to passed to the query API (<code>command()</code> or <code>query()</code>) as a <code>Map&lt;String, Object&gt;</code>, where the key is the
+parameter name (without the colon) and the value is the parameter value, eg.</p>
+<pre><code class="language-java">Map&lt;String, Object&gt; params = new HashMap&lt;&gt;();
+params.put("name", "John");
+params.put("surname", "Smith");
+
+String stm = "SELECT FROM V WHERE name = :name and surname = :surname";
+OResultSet rs = db.query(stm, params);
+</code></pre>
+<p>The same named parameter can be used multiple times in the same statement, eg. the following is valid:</p>
+<pre><code class="language-java">Map&lt;String, Object&gt; params = new HashMap&lt;&gt;();
+params.put("name", "John");
+
+String stm = "SELECT FROM V WHERE name = :name and surname = :name";
+OResultSet rs = db.query(stm, params);
+</code></pre>
+<h4 id="positional-parameters"><a class="header" href="#positional-parameters">Positional Parameters</a></h4>
+<p>A positional parameter is identified by a <code>?</code>, eg.</p>
+<pre><code class="language-java">String stm = "SELECT FROM V WHERE name = ? and surname = ?";
+</code></pre>
+<p>Positional parameters are passed to the query API as an <code>Object[]</code> or simply as java varArgs, eg.</p>
+<pre><code class="language-java">String stm = "SELECT FROM V WHERE name = ? and surname = ?";
+OResultSet rs = db.query(stm, "John", "Smith");
+</code></pre>
+<p>The order of the parameters is defined as the exact order as they appear in the string.
+If you have subqueries, the order of the parameters is still defined by the order in the string, eg.</p>
+<pre><code class="language-java">String stm = "SELECT FROM V WHERE name = ? and city in (SELECT FROM CITY WHERE cityName = ?) and surname = ?";
+OResultSet rs = db.query(stm, "John", "London", "Smith");
+</code></pre>
+<p>In this query the first parameter refers to <code>name = ?</code>, the second one refers to <code>cityName = ?</code> and the third one refers to
+<code>surname = ?</code></p>
+<h3 id="oresult"><a class="header" href="#oresult">OResult</a></h3>
+<p>The <a href="ref/OResult.html"><code>OResult</code></a> interface represents a row in the result-set.</p>
+<p>An <a href="ref/OResult.html"><code>OResult</code></a> instance can represent an element with an identity (a document, a vertex or an edge) or a projection.</p>
+<p>The content (the properties) of an OResult can be retrieved using <code>getProperty(String)</code>. <a href="ref/OResult.html"><code>OResult</code></a> also provides a <code>getPropertyNames()</code> method that returns all the property names in current row.</p>
+<p>You can extract a persistent entity from an <a href="ref/OResult.html"><code>OResult</code></a> (in case it actually represents a vertex, an edge or a document) using the following methods</p>
+<pre><code class="language-java">Optional&lt;OElement&gt; getElement()
+Optional&lt;OVertex&gt; getVertex()
+Optional&lt;OEdge&gt; getEdge()
+</code></pre>
+<p>All these methods return a Java Optional that will be empty if the OResult does not represent the specified type.</p>
+<p>You can also transform any <a href="ref/OResult.html"><code>OResult</code></a> in an <a href="ref/OElement.html"><code>OElement</code></a> invoking</p>
+<pre><code class="language-java">OElement toElement()
+</code></pre>
+<p>There is an important difference between <code>getElement()</code> and <code>toElement()</code>:</p>
+<ul>
+<li><code>getElement()</code> returns a non-empty <code>Optional&lt;OElement&gt;</code> only if the <a href="ref/OResult.html"><code>OResult</code></a> represents a persistent entity</li>
+<li><code>toElement()</code> acts the same as <code>getElement()</code> (apart from the Optional) when the result of <code>getElement()</code> is not empty. In case it's not true, it returns a new (not yet persisted) <a href="ref/OElement.html"><code>OElement</code></a> with the same properties as the <a href="ref/OResult.html"><code>OResult</code></a>.</li>
+</ul>
+<p>You can safely use <a href="ref/OElement.html"><code>OElement</code></a>, <a href="ref/OVertex.html"><code>OVertex</code></a> and <a href="ref/OEdge.html"><code>OEdge</code></a> instances to update data, as long as you have an open database connection, that is,</p>
+<pre><code class="language-java">ODatabaseSession db;
+...
+String statement = "SELECT FROM V WHERE name = ? and surname = ?";
+OResultSet rs = db.query(statement, "John", "Smith");
+while(rs.hasNext()){
+  rs.next().getVertex().ifPresent(x-&gt;{
+                   x.setProperty("age", 40);
+                   x.save();
+                 });
+}
+rs.close();
+</code></pre>
+<h3 id="streaming-api"><a class="header" href="#streaming-api">Streaming API</a></h3>
+<p><a href="ref/OResultSet.html"><code>OResultSet</code></a> provides an API to convert it to a Java 8 stream:</p>
+<pre><code>Stream&lt;OResult&gt; stream() 
+Stream&lt;OElement&gt; elementStream()
+Stream&lt;OVertex&gt; vertexStream()
+Stream&lt;OEdge&gt; edgeStream()
+</code></pre>
+<p>IMPORTANT: please consider that the resulting streams <strong>consume</strong> the <a href="ref/OResultSet.html"><code>OResultSet</code></a>.</p>
+<p><code>elementStream()</code>, <code>vertexStream()</code> and <code>edgeStream()</code> filter the stream returning only
+the elements for which the corresponding <code>isElement/Vertex/Edge()</code> returns true;</p>
+<p>Sample usage:</p>
+<pre><code class="language-java">ODatabaseSession db;
+...
+String statement = "SELECT FROM V WHERE name = ? and surname = ?";
+OResultSet rs = db.query(statement, "John", "Smith");
+rs.stream().forEach(x -&gt; System.out.println(x.getProperty("age")));
+rs.close();
+</code></pre>
+<h3 id="closing-the-oresultset"><a class="header" href="#closing-the-oresultset">Closing the OResultSet</a></h3>
+<p><a href="ref/OResultSet.html"><code>OResultSet</code></a> is implemented as a paginated structure, that holds some iterators open during the iteration.  This is true both in remote and in embedded usage.</p>
+<p>You should always invoke <code>OResultSet.close()</code> at the end of the execution, to free resources.</p>
+<p><a href="ref/OResultSet.html"><code>OResultSet</code></a> instances are automatically closed when you close the ODatabase that returned them.</p>
+<p>It is important to always close result sets, even when they are converted to streams (after the stream is consumed).</p>
+<p><a href="ref/OResultSet.html"><code>OResultSet</code></a> implements <code>java.lang.AutoCloseable</code>, so you can use it in a <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> block:</p>
+<pre><code class="language-java">try(OResultSet rs = db.query("SELECT FROM Foo");) {
+   while(rs.hasNext()){
+      OResult row = rs.next();
+      ...
+   }
+}
+</code></pre>
+<h3 id="batch-scripts"><a class="header" href="#batch-scripts">Batch Scripts</a></h3>
+<p>The <code>db.execute()</code> API is intended to execute scripts (SQL by default, but it can be extended to other languages - like Gremlin - with external plugins).</p>
+<p>Here is an example on how to run a SQL script from Java API:</p>
+<pre><code class="language-java">ODatabaseSession db;
+...
+String script = 
+"BEGIN;"+
+"LET $a = CREATE VERTEX V SET name = 'a';"+
+"LET $b = CREATE VERTEX V SET name = 'b';"+
+"LET $edge = CREATE EDGE E from $a to $b;"+
+"COMMIT;"+
+"RETURN $edge;";
+
+OResultSet rs = db.execute("sql", script);
+while(rs.hasNext()){
+  OResult row = rs.next();
+  ...
+}
+rs.close();
+
+</code></pre>
+<blockquote>
+<p>IMPORTANT: the semicolon (<code>;</code>) at the end of each SQL statement is <strong>mandatory</strong></p>
+</blockquote>
+<blockquote>
+<p>IMPORTANT: if you are migrating from previous versions, please consider that until v 2.2 the newline was a valid delimiter for SQL statements in a script (the semicolon was not mandatory); in v 3.0 a single statement in a script can be split on multiple lines.</p>
+</blockquote>
+<h3 id="legacy-api"><a class="header" href="#legacy-api">Legacy API</a></h3>
+<p>The legacy API is still there, but the methods are deprecated. It will be removed in
+next versions.  It is available only in the <code>ODatabaseDocumentTx</code> implementation, with the following methods</p>
+<pre><code class="language-java">@deprecated
+public &lt;RET extends OCommandRequest&gt; RET command(OCommandRequest iCommand)
+@deprecated
+public &lt;RET extends List&lt;?&gt;&gt; RET query(OQuery&lt;?&gt; iCommand, Object... iArgs)
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Java-MultiModel-Data-API.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Java-Schema-Api.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Java-MultiModel-Data-API.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Java-Schema-Api.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

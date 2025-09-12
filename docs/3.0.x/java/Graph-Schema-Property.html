@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Property - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="graph-database-properties"><a class="header" href="#graph-database-properties">Graph Database Properties</a></h1>
+<p>Fields in classes are called properties.  In this guide, you can consider properties synonymous with fields.</p>
+<h2 id="working-with-properties"><a class="header" href="#working-with-properties">Working with Properties</a></h2>
+<p>In order to use properties in your application, you first need to create the class and set an instance.  Once you have the class set, you can begin to work with properties on that class.</p>
+<h3 id="creating-properties"><a class="header" href="#creating-properties">Creating Properties</a></h3>
+<p>You can define properties for that class.  For instance,</p>
+<pre><code class="language-java">// Retrieve Vertex
+OrientVertexType accountVertex = graph.getVertexType("Account");
+
+// Create Properties
+accountVertex.createProperty("id", OType.INTEGER);
+accountVertex.createProperty("birthDate", OType.DATE);
+</code></pre>
+<p>Bear in mind, each field must belong to a <a href="../general/Types.html">Type</a>.</p>
+<h3 id="dropping-properties"><a class="header" href="#dropping-properties">Dropping Properties</a></h3>
+<p>To drop a persistent class property, use the <a href="ref/OClass/dropProperty.html"><code>OClass.dropProperty()</code></a> method.  For instance,</p>
+<pre><code class="language-java">accountVertex.dropProperty("name");
+</code></pre>
+<p>This drops the property <code>name</code>.  OrientDB does not remove dropped properties from the record unless you delete them explicitly using the SQL <a href="../sql/SQL-Update.html"><code>UPDATE</code></a> command with the <code>REMOVE</code> clause.</p>
+<pre><code class="language-java">// Drop the Property
+accountVertex.dropProperty("name");
+
+// Remove the Records
+database.command(new OCommandSQL("UPDATE Account REMOVE name").execute();
+</code></pre>
+<h2 id="using-constraints"><a class="header" href="#using-constraints">Using Constraints</a></h2>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><img src="../images/warning.png" alt="" /></td><td>Using constraints with a distributed database may cause unexpected results.  Some operations execute in two steps: create and update, such as when creating an edge and then updating the vertex.  Constraints like <code>MANDATORY</code> and <code>NOTNULL</code> against fields would fail on distributed databases during the creation phase.</td></tr>
+</tbody></table>
+</div>
+<p>OrientDB supports a number of constraints for each field:</p>
+<div class="table-wrapper"><table><thead><tr><th>Constraint</th><th>Method</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>Minimum Value</strong></td><td><code>setMin()</code></td><td>Defines the minimum value.  Property accepts strings and also works on date ranges.</td></tr>
+<tr><td><strong>Maximum Value</strong></td><td><code>setMax()</code></td><td>Defines the maximum value.  Property accepts strings and also works on date ranges.</td></tr>
+<tr><td><strong>Mandatory</strong></td><td><code>setMandatory()</code></td><td>Defines whether the property must be specified.</td></tr>
+<tr><td><strong>Read Only</strong></td><td><code>setReadonly()</code></td><td>Defines whether you can update the property after creating the record.</td></tr>
+<tr><td><strong>Not Null</strong></td><td><code>setNotNull()</code></td><td>Defines whether the property accepts null values.</td></tr>
+<tr><td><strong>Unique</strong></td><td></td><td>Defines whether the property must be unique.</td></tr>
+<tr><td><strong>Regex</strong></td><td></td><td>Defines whether the property must satisfy a Regular Expressions value.</td></tr>
+<tr><td><strong>Ordered</strong></td><td><code>setOrdered()</code></td><td>Defines whether the edge list must be ordered, ensuring that a <code>List</code> is not used in place of a <code>Set</code>.</td></tr>
+</tbody></table>
+</div>
+<p>For example,</p>
+<pre><code class="language-java">// Create Unique Nickname
+profile.createProperty("nick", OType.STRING).setMin("3").setMax("30")
+	.setMandatory(true).setNotNull(true);
+profile.createIndex("nickIdx", OClass.INDEX_TYPE.UNIQUE, "nick");
+
+// Create User Properties
+profile.createProperty("name", OType.STRING).setMin("3").setMax("30");
+profile.createProperty("surname", OType.STRING).setMin("3").setMax("30");
+profile.createProperty("registeredOn", OType.DATE).setMin("2010-01-01 00:00:00");
+profile.createProperty("lastAccessOn", OType.DATE).setMin("2010-01-01 00:00:00");
+</code></pre>
+<h3 id="indexes-as-constraints"><a class="header" href="#indexes-as-constraints">Indexes as Constraints</a></h3>
+<p>In order to set the property value to unique, use the <code>UNIQUE</code> index as a constraint by passing a <code>Parameter</code> object with the key <code>type</code>.  For instance,</p>
+<pre><code class="language-java">graph.createKeyIndex("id", Vertex.class, new Parameter("type", "UNIQUE"));
+</code></pre>
+<p>OrientDB applies this constraint to all vertex and subclass instances.  To specify an index against a custom type, use the <code>class</code> parameter.</p>
+<pre><code class="language-java">graph.createKeyIndex("name", Vertex.class, new Parameter("class", "Member"));
+</code></pre>
+<p>You can also define a unique index against a custom type:</p>
+<pre><code class="language-java">graph.createKeyIndex("id", Vertex.class, new Parameter("type", "UNIQUE"), 
+	new Parameter("class", "Member"));
+</code></pre>
+<p>You can then retrieve a vertex or an edge by key prefixing the class name to the field.  For instance, using the about <code>Member.name</code> in place of only <code>name</code>, which allows you to use the index created against the filed <code>name</code> in the class <code>Member</code>.</p>
+<pre><code class="language-java">for( Vertex v : graph.getVertices("Member.name", "Jay")) {
+	System.out.println("Found vertex: " + v)
+}
+</code></pre>
+<p>If the class name is not passed, then it uses <code>V</code> for the vertices and <code>E</code> for edges.</p>
+<pre><code class="language-java">graph.getVertices("name", "Jay");
+graph.getEdges("age", 20);
+</code></pre>
+<blockquote>
+<p>For more information, see</p>
+<ul>
+<li><a href="../indexing/Indexes.html">Indexes</a></li>
+<li><a href="Graph-Schema.html">Graph Schema</a></li>
+<li><a href="Graph-Database-Tinkerpop.html">Graph Database</a></li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Graph-Schema-Class.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Partitioned-Graphs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Graph-Schema-Class.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Partitioned-Graphs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

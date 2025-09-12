@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Projections - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="sql-projections"><a class="header" href="#sql-projections">SQL Projections</a></h2>
+<p>A projection is a value that is returned by a query statement (SELECT, MATCH).</p>
+<p>Eg. the following query</p>
+<pre><code class="language-sql">SELECT name as firstName, age * 12 as ageInMonths, out("Friend") from Person where surname = 'Smith'
+</code></pre>
+<p>has three projections:</p>
+<ul>
+<li><code>name as firstName</code></li>
+<li><code>age * 12 as ageInMonths</code></li>
+<li><code>out("Friend")</code></li>
+</ul>
+<h3 id="syntax"><a class="header" href="#syntax">Syntax</a></h3>
+<p><strong>A projection</strong> has the following syntax:</p>
+<p><code>&lt;expression&gt; [&lt;nestedProjection&gt;] [ AS &lt;alias&gt; ]</code></p>
+<ul>
+<li><code>&lt;expression&gt;</code> is an expression (see <a href="SQL-Syntax.html">SQL Syntax</a>) that represents the way to calculate the value of the single projection</li>
+<li><code>&lt;alias&gt;</code> is the Identifier (see <a href="SQL-Syntax.html">SQL Syntax</a>) representing the field name used to return the value in the result set</li>
+</ul>
+<p>A projection block has the following syntax:</p>
+<p><code>[DISTINCT] &lt;projection&gt; [, &lt;projection&gt; ]*</code></p>
+<ul>
+<li><code>DISTINCT</code>: removes duplicates from the result-set</li>
+</ul>
+<p><em>IMPORTANT - the old <code>distinct()</code> function (used in OrientDB &lt;=2.x) is no longer supported</em></p>
+<h3 id="query-result"><a class="header" href="#query-result">Query result</a></h3>
+<p>By default, a query returns a different result-set based on the projections it has:</p>
+<ul>
+<li><strong><code>*</code> alone</strong>: The result set is made of records as they arrive from the target, with the original @rid and @class attributes (if any)</li>
+<li><strong><code>*</code> plus other projections</strong>: records of the original target, merged with the other projection values, with @rid, @class and @version of the original record.</li>
+<li><strong>no projections</strong>: same behavior as <code>*</code></li>
+<li><strong><code>expand(&lt;projection&gt;)</code></strong>: The result set is made of the records returned by the projection, expanded (if the projection result is a link or a colleciton of links) and unwinded (if the projection result is a collection). Nothing in all the other cases.</li>
+<li><strong>one or more projections</strong>: temporary records (with temporary @rid and no @class). Projections that represent links are returned as simple @rid values, unless differently specified in the fetchplan.</li>
+</ul>
+<p><em>IMPORTANT - projection values can be overwritten in the final result, the overwrite happens from left to right</em></p>
+<p>eg.</p>
+<pre><code class="language-sql">SELECT 1 as a, 2 as a 
+</code></pre>
+<p>will return <code>[{"a":2}]</code></p>
+<p>eg.</p>
+<p>Having the record <code>{"@class":"Foo", "name":"bar", "@rid":"#12:0", "@version": 2}</code></p>
+<pre><code class="language-sql">SELECT *, "hey" as name from Foo
+</code></pre>
+<p>will return <code>[{"@class":"Foo", "@rid":"#12:0", "@version": 2, "name":"hey"}]</code></p>
+<pre><code class="language-sql">SELECT  "hey" as name, * from Foo
+</code></pre>
+<p>will return <code>[{"@class":"Foo", "@rid":"#12:0", "@version": 2, "name":"bar"}]</code></p>
+<blockquote>
+<p>ATTENTION: when saving back a record with a valid rid, you will overwrite the existing record! So pay attention
+when using <code>*</code> together with other projections</p>
+</blockquote>
+<blockquote>
+<p>IMPORTANT - the result of the query can be further unwound using the UNWIND operator</p>
+</blockquote>
+<blockquote>
+<p>IMPORTANT: <code>expand()</code> cannot be used together with <code>GROUP BY</code></p>
+</blockquote>
+<h3 id="aliases"><a class="header" href="#aliases">Aliases</a></h3>
+<p>The alias is the field name that a projection will have in the result-set.</p>
+<p>An alias can be implicit, if declared with the <code>AS</code> keyword, eg.</p>
+<pre><code class="language-sql">SELECT name + " " + surname as full_name from Person
+
+result:
+[{"full_name":"John Smith"}]
+</code></pre>
+<p>An alias can be implicit, when no <code>AS</code> is defined, eg.</p>
+<pre><code class="language-sql">SELECT name from Person
+
+result:
+[{"name":"John"}]
+</code></pre>
+<p>An implicit alias is calculated based on how the projection is written. By default, OrientDB uses the plain String representation of the projection as alias.</p>
+<pre><code>SELECT 1+2 as sum
+
+result:
+[{"sum": 3}] 
+</code></pre>
+<pre><code>SELECT parent.name+" "+parent.surname as full_name from Node
+
+result:
+[{"full_name": "John Smith"}] 
+</code></pre>
+<p>The String representation of a projection is the exact representation of the projection string, without spaces before and after dots and brackets, no spaces before commans, a single space before and after operators.</p>
+<p>eg.</p>
+<pre><code>SELECT 1+2 
+
+result:
+[{"1 + 2": 3}] /* see the space before and after the + sign */
+</code></pre>
+<pre><code>SELECT parent.name+" "+parent.surname from Node
+
+result:
+[{"parent.name + \" \" + parent.nurname": "John Smith"}] 
+</code></pre>
+<pre><code>SELECT items[4] from Node
+
+result:
+[{"items[4]": "John Smith"}] 
+</code></pre>
+<h3 id="nested-projections"><a class="header" href="#nested-projections">Nested projections</a></h3>
+<p>(since v 3.0 M2)</p>
+<h4 id="syntax-1"><a class="header" href="#syntax-1">Syntax:</a></h4>
+<p><code>":{" ( * | (["!"] &lt;identifier&gt; ["*"] (&lt;comma&gt; ["!"] &lt;identifier&gt; ["*"])* ) ) "}"</code></p>
+<p>A projection can refer to a link or to a collection of links, eg. a LINKLIST or a LINKSET.
+In some cases you can be interested in the expanded object intead of the RID.</p>
+<p>Let's clarify this with an example. This is our dataset:</p>
+<div class="table-wrapper"><table><thead><tr><th>@rid</th><th>name</th><th>surname</th><th>parent</th></tr></thead><tbody>
+<tr><td>#12:0</td><td>foo</td><td>fooz</td><td></td></tr>
+<tr><td>#12:1</td><td>bar</td><td>barz</td><td>#12:0</td></tr>
+<tr><td>#12:2</td><td>baz</td><td>bazz</td><td>#12:1</td></tr>
+</tbody></table>
+</div>
+<p>Given this query:</p>
+<pre><code class="language-SQL">SELECT name, parent FROM TheClass WHERE name = 'baz'
+</code></pre>
+<p>The result is</p>
+<pre><code>{ 
+   "name": "baz",
+   "parent": #12:1
+}
+</code></pre>
+<p>Now suppose you want to expand the link and retrieve some properties of the linked object.
+You can do it explicitly do it with other projections:</p>
+<pre><code class="language-SQL">SELECT name, parent.name FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "parent.name": "bar"
+}
+</code></pre>
+<p>but this will force you to list them one by one, and it's not always possible, especially when you don't know all their names.</p>
+<p>Another alternative is to use nested projections, eg.</p>
+<pre><code class="language-SQL">SELECT name, parent:{name} FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "parent": {
+      "name": "bar"
+   }
+}
+</code></pre>
+<p>or with multiple attributes</p>
+<pre><code class="language-SQL">SELECT name, parent:{name, surname} FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "parent": {
+      "name": "bar"
+      "surname": "barz"      
+   }
+}
+</code></pre>
+<p>or using a wildcard</p>
+<pre><code class="language-SQL">SELECT name, parent:{*} FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "parent": {
+      "name": "bar"
+      "surname": "barz"      
+      "parent": #12:0
+   }
+}
+</code></pre>
+<p>You can also use the <code>!</code> exclude syntax to define which attributes you want to <em>exclude</em> from the nested projection:</p>
+<pre><code class="language-SQL">SELECT name, parent:{!surname} FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "parent": {
+      "name": "bar"
+      "parent": #12:0
+   }
+}
+</code></pre>
+<p>You can also use a wildcard on the right of property names, to specify the inclusion of attributes that start with a prefix, eg.</p>
+<pre><code class="language-SQL">SELECT name, parent:{surna*} FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "parent": {
+      "surname": "barz"      
+   }
+}
+</code></pre>
+<p>or their exclusion</p>
+<pre><code class="language-SQL">SELECT name, parent:{!surna*} FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "parent": {
+      "name": "bar",      
+      "parent": #12:0
+   }
+}
+</code></pre>
+<p>Nested projection syntax allows for multiple level depth expressions, eg. you can go three levels deep as follows:</p>
+<pre><code>SELECT name, parent:{name, surname, parent:{name, surname}} FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "parent": {
+      "name": "bar"
+      "surname": "barz"      
+      "parent": {
+         "name": "foo"
+         "surname": "fooz"      
+      }   
+   }
+}
+</code></pre>
+<p>You can also use expressions and aliases in nested projections:</p>
+<pre><code>SELECT name, parent.parent:{name, surname} as grandparent FROM TheClass WHERE name = 'baz'
+</code></pre>
+<pre><code>{ 
+   "name": "baz",
+   "grandparent": {
+      "name": "foo"
+      "surname": "fooz"      
+   }   
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../sql/SQL-Syntax.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../sql/SQL-Commands.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../sql/SQL-Syntax.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../sql/SQL-Commands.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Setup a Distributed Database - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="setting-up-a-distributed-graph-database"><a class="header" href="#setting-up-a-distributed-graph-database">Setting up a Distributed Graph Database</a></h1>
+<p>In addition to the standard deployment architecture, where it runs as a single, standalone database instance, you can also deploy OrientDB using <a href="../Distributed-Architecture.html">Distributed Architecture</a>.  In this environment, it shares the database across multiple server instances.</p>
+<h2 id="launching-distributed-server-cluster"><a class="header" href="#launching-distributed-server-cluster">Launching Distributed Server Cluster</a></h2>
+<p>There are two ways to share a database across multiple server nodes:</p>
+<ul>
+<li>
+<p>Prior to startup, copy the specific database directory, under <code>$ORIENTDB_HOME/database</code> to all servers.</p>
+</li>
+<li>
+<p>Keep the database on the first running server node, then start every other server node.  Under the default configurations, OrientDB automatically shares the database with the new servers that join.</p>
+</li>
+</ul>
+<p>This tutorial assumes that you want to start a distributed database using the second method.</p>
+<p><em>NOTE: When you run in distributed mode, OrientDB needs more RAM. The minimum is 2GB of heap, but we suggest to use at least 4GB of heap memory. To change the heap modify the Java memory settings in the file <code>bin/dserver.sh</code> (or dserver.bat on Windows).</em></p>
+<h3 id="starting-the-first-server-node"><a class="header" href="#starting-the-first-server-node">Starting the First Server Node</a></h3>
+<p>Unlike the standard standalone deployment of OrientDB, there is a different script that you need to use when launching a distributed server instance.  Instead of <code>server.sh</code>, you use <code>dserver.sh</code>.  In the case of Windows, use <code>dserver.bat</code>.  Whichever you need, you can find it in the <code>bin</code> of your installation directory.</p>
+<pre>
+$ <code class="lang-sh userinput">./bin/dserver.sh</code>
+</pre>
+<p>Bear in mind that OrientDB uses the same <code>orientdb-server-config.xml</code> configuration file, regardless of whether it's running as a server or distributed server.  For more information, see <a href="../../distributed/Distributed-Configuration.html">Distributed Configuration</a>.</p>
+<p>The first time you start OrientDB as a distributed server, it generates the following output:</p>
+<pre><code>+---------------------------------------------------------------+
+|         WARNING: FIRST DISTRIBUTED RUN CONFIGURATION          |
++---------------------------------------------------------------+
+| This is the first time that the server is running as          |
+| distributed. Please type the name you want to assign to the   |
+| current server node.                                          |
+|                                                               |
+| To avoid this message set the environment variable or JVM     |
+| setting ORIENTDB_NODE_NAME to the server node name to use.    |
++---------------------------------------------------------------+
+
+Node name [BLANK=auto generate it]:
+</code></pre>
+<p>You need to give the node a name here.  OrientDB stores it in the <code>nodeName</code> parameter of <code>OHazelcastPlugin</code>.  It adds the variable to your <code>orientdb-server-config.xml</code> configuration file.</p>
+<h4 id="distributed-startup-process"><a class="header" href="#distributed-startup-process">Distributed Startup Process</a></h4>
+<p>When OrientDB starts as a distributed server instance, it loads all databases in the <code>database</code> directory and configures them to run in distributed mode.  For this reason, the first load, OrientDB copies the default distributed configuration, (that is, the <code>default-distributed-db-config.json</code> configuration file), into each database's directory, renaming it <code>distributed-config.json</code>.  On subsequent starts, each database uses this file instead of the default configuration file.  Since the shape of the cluster changes every time nodes join or leave, the configuration is kept up to date by each distributed server instance.</p>
+<p>For more information on working with the <code>default-distributed-db-config.json</code> configuration file, see <a href="../../distributed/Distributed-Configuration.html">Distributed Configuration</a>.</p>
+<h3 id="starting-additional-server-nodes"><a class="header" href="#starting-additional-server-nodes">Starting Additional Server Nodes</a></h3>
+<p>When you have the first server node running, you can begin to start the other server nodes.  Each server requires the same Hazelcast credentials in order to join the same cluster.  You can define these in the <code>hazelcast.xml</code> configuration file.</p>
+<p>The fastest way to initialize multiple server nodes is to copy the OrientDB installation directory from the first node to each of the subsequent nodes.  For instance,</p>
+<pre>
+$ <code class="lang-sh userinput">scp user@ip_address $ORIENTDB_HOME</code>
+</pre>
+<p>This copies both the databases and their configuration files onto the new distributed server node.</p>
+<blockquote>
+<p>Bear in mind, if you run multiple server instances on the same host, such as when testing, you need to change the port entry in the <code>hazelcast.xml</code> configuration file.</p>
+</blockquote>
+<p>For the other server nodes in the cluster, use the same <code>dserver.sh</code> command as you used in starting the first node.  When the other server nodes come online, they begin to establish network connectivity with each other.  Monitoring the logs, you can see where they establish connections from messages such as this:</p>
+<pre>
+WARN [node1384014656983] added new node id=Member [192.168.1.179]:2435 name=null
+     [OHazelcastPlugin]
+INFO [192.168.1.179]:2434 [orientdb] Re-partitioning cluster data... Migration
+	 queue size: 135 [PartitionService]
+INFO [192.168.1.179]:2434 [orientdb] All migration tasks has been completed,
+	 queues are empty. [PartitionService]
+INFO [node1384014656983] added node configuration id=Member [192.168.1.179]:2435
+     name=node1384015873680, now 2 nodes are configured [OHazelcastPlugin]
+INFO [node1384014656983] update configuration db=GratefulDeadConcerts
+     from=node1384015873680 [OHazelcastPlugin]
+INFO updated distributed configuration for database: GratefulDeadConcerts:
+----------
+<code class="lang-json">{
+   "replication": true,
+   "autoDeploy": true,
+   "hotAlignment": true,
+   "resyncEvery": 15,
+   "clusters": {
+      "internal": {
+         "replication": false
+      },
+      "index": {
+         "replication": false
+      },
+      "*": {
+         "replication": true,
+         "readQuorum": 1,
+         "writeQuorum": 2,
+         "failureAvailableNodesLessQuorum": false,
+         "readYourWrites": true,
+		 "partitioning":{
+            "strategy": "round-robin",
+            "default":0,
+            "partitions": ["<NEW_NODE>","node1383734730415","node1384015873680"]("<NEW_NODE>","node1383734730415","node1384015873680".md)
+         }
+      }
+   },
+   "version": 1
+}</code>
+---------- [OHazelcastPlugin]
+WARN [node1383734730415]->[node1384015873680] deploying database
+     GratefulDeadConcerts...[ODeployDatabaseTask]
+WARN [node1383734730415]->[node1384015873680] sending the compressed database
+     GratefulDeadConcerts over the network, total 339,66Kb [ODeployDatabaseTask]
+</pre>
+<p>In the example, two server nodes were started on the same machine.  It has an IP address of 10.37.129.2, but is using OrientDB on two different ports: 2434 and 2435, where the current is called <code>this</code>.  The remainder of the log is relative to the distribution of the database to the second server.</p>
+<p>On the second server node output, OrientDB dumps messages like this:</p>
+<pre><code>WARN [node1384015873680]&lt;-[node1383734730415] installing database
+     GratefulDeadConcerts in databases/GratefulDeadConcerts... [OHazelcastPlugin]
+WARN [node1384015873680] installed database GratefulDeadConcerts in
+     databases/GratefulDeadConcerts, setting it online... [OHazelcastPlugin]
+WARN [node1384015873680] database GratefulDeadConcerts is online [OHazelcastPlugin]
+WARN [node1384015873680] updated node status to 'ONLINE' [OHazelcastPlugin]
+INFO OrientDB Server v1.6.1-SNAPSHOT is active. [OServer]
+</code></pre>
+<p>What these messages mean is that the database <code>GratefulDeadConcerts</code> was correctly installed from the first node, that is <code>node1383734730415</code> through the network.</p>
+<h2 id="migrating-from-standalone-server-to-a-cluster"><a class="header" href="#migrating-from-standalone-server-to-a-cluster">Migrating from standalone server to a cluster</a></h2>
+<p>If you have a standalone instance of OrientDB and you want to move to a cluster you should follow these steps:</p>
+<ul>
+<li>Install OrientDB on all the servers of the cluster and configure it (according to the sections above)</li>
+<li>Stop the standalone server</li>
+<li>Copy the specific database directories under <code>$ORIENTDB_HOME/database</code> to all the servers of the cluster</li>
+<li>Start all the servers in the cluster using the script <code>dserver.sh</code> (or  <code>dserver.bat</code> if on Windows)</li>
+</ul>
+<p>If the standalone server will be part of the cluster, you can use the existing installation of OrientDB; you don't need to copy the database directories since they're already in place and you just have to start it before all the other servers with <code>dserver.sh</code>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../gettingstarted/Tutorial-Using-schema-with-graphs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../gettingstarted/tutorials/Tutorial-Working-with-distributed-graph-database.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../gettingstarted/Tutorial-Using-schema-with-graphs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../gettingstarted/tutorials/Tutorial-Working-with-distributed-graph-database.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

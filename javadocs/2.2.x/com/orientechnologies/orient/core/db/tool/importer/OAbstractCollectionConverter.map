@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OListConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OListConverter" alt="" coords="16,214,132,239"/>
+<area shape="rect" id="node1" href="./OListConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,203,143,251"/>
+<area shape="rect" id="node2_1" href="./OMapConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OMapConverter" alt="" coords="177,214,299,239"/>
+<area shape="rect" id="node2" href="./OMapConverter.html" title="&lt;TABLE&gt;" alt="" coords="167,203,309,251"/>
+<area shape="rect" id="node3_2" href="./OSetConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OSetConverter" alt="" coords="345,214,459,239"/>
+<area shape="rect" id="node3" href="./OSetConverter.html" title="&lt;TABLE&gt;" alt="" coords="334,203,470,251"/>
+<area shape="rect" id="node4_3" href="./OValuesConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OValuesConverter" alt="" coords="236,11,403,53"/>
+<area shape="rect" id="node4" href="./OValuesConverter.html" title="&lt;TABLE&gt;" alt="" coords="225,5,413,59"/>
+<area shape="rect" id="node6_4" href="./OAbstractCollectionConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.OAbstractCollectionConverter" alt="" coords="198,118,441,143"/>
+<area shape="rect" id="node6" href="./OAbstractCollectionConverter.html" title="&lt;TABLE&gt;" alt="" coords="187,107,451,155"/>
+<area shape="rect" id="node5_5" href="./ORidBagConverter.html" title="com.orientechnologies.orient.core.db.tool.importer.ORidBagConverter" alt="" coords="505,214,645,239"/>
+<area shape="rect" id="node5" href="./ORidBagConverter.html" title="&lt;TABLE&gt;" alt="" coords="495,203,656,251"/>
+</map>

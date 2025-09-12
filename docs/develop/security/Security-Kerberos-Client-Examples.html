@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Kerberos Example - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="orientdb-kerberos-client-examples"><a class="header" href="#orientdb-kerberos-client-examples">OrientDB Kerberos Client Examples</a></h1>
+<p>The Java API client is dependent on the <em>KRB5_CONFIG</em> and <em>KRB5CCNAME</em> environment variables being set.  Alternatively, you can pass them to the Java program via <code>-Dclient.krb5.config=…</code> and <code>-Dclient.krb5.ccname=…</code>, respectively.  You can also set them in your Java client program by calling <code>System.setProperty("client.krb5.config", "…./krb5.conf")</code>.</p>
+<p>If a keytab is preferred, the <em>KRB5_CLIENT_KTNAME</em> environment variable may be set with the path to the keytab.  Alternatively, you may pass the keytab path as the system property <em>client.krb5.ktname</em>.</p>
+<p>What enables the Kerberos client support is a system property called <em>client.credentialinterceptor</em>.  This must be set with the full package name to the Kerberos credential interceptor, as such:</p>
+<p><code>java -Dclient.credentialinterceptor=com.orientechnologies.orient.core.security.kerberos.OKerberosCredentialInterceptor</code></p>
+<p>or</p>
+<p><code>System.setProperty("client.credentialinterceptor", "com.orientechnologies.orient.core.security.kerberos.OKerberosCredentialInterceptor");</code></p>
+<p>In either case, this system property must be set to enable the Java client Kerberos support.</p>
+<p>To use the client, you must specify the principal in the <em>username</em> field.  The <em>password</em> field may also specify the SPN to use to retrieve the service ticket, but if left as an empty string, then the SPN will be generated from the host portion of the URL as such: "OrientDB/" + host.</p>
+<p>The principal must either exist as a server user or must exist as an OUser record in the database to be accessed.</p>
+<h2 id="java-api-examples"><a class="header" href="#java-api-examples">Java API Examples</a></h2>
+<p>The following is an example of how to use the OServerAdmin interface to send commands directly to the server:</p>
+<pre><code>String url = "remote:server1.ad.somedomain.com:2424";
+String pri = "OrientDBClient@AD.SOMEDOMAIN.COM";
+String spn = "OrientDB/db1.somedomain.com";
+
+OrientDB orientDB = new OrientDB(url, pri, spn, OrientDBConfig.defaultConfig());
+orientDB.create("TestDB", ODatabaseType.PLOCAL);
+orientDB.close();
+</code></pre>
+<p>The next example shows how to open an existing OrientDB database from the Java client API:</p>
+<pre><code>String url = "remote:server1.ad.somedomain.com:2424";
+String pri = "OrientDBClient@AD.SOMEDOMAIN.COM";
+String spn = "OrientDB/db1.somedomain.com";
+
+OrientDB orientDB = new OrientDB(url, OrientDBConfig.defaultConfig());
+ODatabaseSession db = orientDB.open("TestDB", pri, spn, ODatabaseType.PLOCAL);
+db.close();
+orientDB.close();
+</code></pre>
+<h2 id="jdbc-client"><a class="header" href="#jdbc-client">JDBC Client</a></h2>
+<p>The JDBC client support is very similar to the native OrientDB Java client.  Make sure the <em>KRB5_CONFIG</em> and <em>KRB5CCNAME</em> environment variables (or system properties) are set accordingly and then set the <em>client.credentialinterceptor</em> system property and specify the URL, principal, and SPN appropriately:</p>
+<pre><code>System.setProperty("client.credentialinterceptor", "com.orientechnologies.orient.core.security.kerberos.OKerberosCredentialInterceptor");
+
+String url = "remote:server1.ad.somedomain.com:2424/TestDB";
+String pri = "OrientDBClient@AD.SOMEDOMAIN.COM";
+String spn = "OrientDB/db1.somedomain.com";
+
+Class.forName("com.orientechnologies.orient.jdbc.OrientJdbcDriver");
+
+Properties info = new Properties();
+info.put("user", pri);
+info.put("password", spn);
+
+Connection conn = (OrientJdbcConnection) DriverManager.getConnection(url, info);
+
+Statement stmt = conn.createStatement();
+
+ResultSet rs = stmt.executeQuery("select from MyClass");
+</code></pre>
+<h2 id="orientdb-console"><a class="header" href="#orientdb-console">OrientDB Console</a></h2>
+<p>To enable Kerberos in the OrientDB console, you'll need to modify the console.sh (or console.bat) script.</p>
+<p>Simply add the credential interceptor system property to ORIENTDB_SETTINGS as such:</p>
+<pre><code>ORIENTDB_SETTINGS="-Dclient.credentialinterceptor=com.orientechnologies.orient.core.security.kerberos.OKerberosCredentialInterceptor"
+</code></pre>
+<p>Here's an example of connecting to the previously used URL, principal, and SPN:</p>
+<pre><code>connect remote:server1.ad.somedomain.com:2424 OrientDBClient@AD.SOMEDOMAIN.COM OrientDB/db1.somedomain.com
+</code></pre>
+<p>Here's another example, this time creating a remote plocal database on remote server:</p>
+<pre><code>create database remote:server1.ad.somedomain.com:2424/NewDB OrientDBClient@AD.SOMEDOMAIN.COM OrientDB/db1.somedomain.com plocal
+</code></pre>
+<p>Lastly, this final example with the console shows connecting to the NewDB database that we just created:</p>
+<pre><code>connect remote:server1.ad.somedomain.com:2424/NewDB OrientDBClient@AD.SOMEDOMAIN.COM OrientDB/db1.somedomain.com
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../security/Security-Config.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../security/Security-New-Security-Features-Code-Changes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../security/Security-Config.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../security/Security-New-Security-Features-Code-Changes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Binary Data - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="binary-data"><a class="header" href="#binary-data">Binary Data</a></h1>
+<p>OrientDB natively handles binary data, namely BLOB.</p>
+<h1 id="techniques"><a class="header" href="#techniques">Techniques</a></h1>
+<h2 id="store-on-file-system-and-save-the-path-in-the-document"><a class="header" href="#store-on-file-system-and-save-the-path-in-the-document">Store on file system and save the path in the document</a></h2>
+<p>This is the simpler way to handle binary data: store them to the file system and just keep the path to retrieve them.</p>
+<p>Example:</p>
+<pre><code class="language-java">ODocument doc = database.newInstance("MyClass");
+doc.field("binary", "/usr/local/orientdb/binary/test.pdf");
+database.save(doc);
+</code></pre>
+<p>Pros:</p>
+<ul>
+<li>Easy to write</li>
+<li>100% delegated to the File System</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Binary data can't be automatically distributed using the OrientDB cluster</li>
+</ul>
+<h2 id="store-it-as-a-document-field"><a class="header" href="#store-it-as-a-document-field">Store it as a Document field</a></h2>
+<p>ODocument class is able to manage binary data in form of <code>byte[]</code> (byte array). Example:</p>
+<pre><code class="language-java">ODocument doc = database.newInstance("MyClass");
+doc.field("binary", "Binary data".getBytes());
+database.save(doc);
+</code></pre>
+<p>This is the easiest way to keep the binary data inside the database, but it's not really efficient on large BLOB because the binary content is serialized in Base64. This means a waste of space (33% more) and a run-time cost in marshalling/unmarshalling.</p>
+<p>Also be aware that once the binary data reaches a certain size (10 MB in some recent testing), the database's performance can decrease significantly. If this occurs, the solution is to use the <code>ORecordBytes</code> solution described below.</p>
+<p>Pros:</p>
+<ul>
+<li>Easy to write</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Waste of space +33%</li>
+<li>Run-time cost of marshalling/unmarshalling</li>
+<li>Significant performance decrease once the binary reaches a certain large size</li>
+</ul>
+<h2 id="store-it-with-orecordbytes"><a class="header" href="#store-it-with-orecordbytes">Store it with ORecordBytes</a></h2>
+<p>The <code>ORecordBytes</code> class is a record implementation able to store binary content without conversions (see above). This is the faster way to handle binary data with OrientDB but needs a separate record to handle it. This technique also offers the highest performance when storing and retrieving large binary data records.</p>
+<p>Example:</p>
+<pre><code class="language-java">OBlob record = database.newBlob("Binary data".getBytes());
+database.save(record);
+</code></pre>
+<p>Since this is a separate record, the best way to reference it is to link it to a Document record. Example:</p>
+<pre><code class="language-java">OBlob record = database.newBlob("Binary data".getBytes());
+ODocument doc = new ODocument();
+doc.field("id", 12345);
+doc.field("binary", record);
+database.save(doc);
+</code></pre>
+<p>In this way you can access to the binary data by traversing the <code>binary</code> field of the parent's document record.</p>
+<pre><code class="language-java">OBlob record = doc.field("binary");
+byte[] content = record.toStream();
+</code></pre>
+<p><code>ORecordBytes</code> class can work with Java Streams:</p>
+<pre><code class="language-java">OBlob record = database.newBlob();
+record.fromInputStream(in);
+record.toOutputStream(out);
+</code></pre>
+<p>Pros:</p>
+<ul>
+<li>Fast and compact solution</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Slightly complex management</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th><img src="../images/warning.png" alt="NOTE" /></th><th style="text-align: left">While running in distributed mode ORecordBytes is not supported yet. See https://github.com/orientechnologies/orientdb/issues/3762 for more information.</th></tr></thead><tbody>
+</tbody></table>
+</div>
+<h2 id="large-content-split-in-multiple-orecordbytes"><a class="header" href="#large-content-split-in-multiple-orecordbytes">Large content: split in multiple ORecordBytes</a></h2>
+<p>OrientDB can store up to 2Gb as record content. But there are other limitations on network buffers and file sizes you should tune to reach the 2GB barrier.</p>
+<p>However managing big chunks of binary data means having big <code>byte[]</code> structures in RAM and this could cause a Out Of Memory of the JVM. Many users reported that splitting the binary data in chunks is the best solution.</p>
+<p>Continuing from the last example we could handle not a single reference against one <code>ORecordBytes</code> record but multiple references. A One-To-Many relationship. For this purpose the <code>LINKLIST</code> type fits perfectly because maintains the order.</p>
+<p>To avoid OrientDB caches in memory large records use the massive insert intent and keep in the collection the <a href="../datamodeling/Concepts.html#record-id">RID</a>, not the entire records.</p>
+<p>Example to store in OrientDB the file content:</p>
+<pre><code class="language-java">database.declareIntent( new OIntentMassiveInsert() );
+
+List&lt;ORID&gt; chunks = new ArrayList&lt;ORID&gt;();
+InputStream in = new BufferedInputStream( new FileInputStream( file ) );
+while ( in.available() &gt; 0 ) {
+  final ORecordBytes chunk = new ORecordBytes();
+
+  // READ REMAINING DATA, BUT NOT MORE THAN 8K
+  chunk.fromInputStream( in, 8192 );
+
+  // SAVE THE CHUNK TO GET THE REFERENCE (IDENTITY) AND FREE FROM THE MEMORY
+  database.save( chunk );
+
+  // SAVE ITS REFERENCE INTO THE COLLECTION
+  chunks.add( chunk.getIdentity() );
+}
+
+// SAVE THE COLLECTION OF REFERENCES IN A NEW DOCUMENT
+ODocument record = new ODocument();
+record.field( "data", chunks );
+database.save( record );
+
+database.declareIntent( null );
+</code></pre>
+<p>Example to read back the file content:</p>
+<pre><code class="language-java">record.setLazyLoad(false);
+for (OIdentifiable id : (List&lt;OIdentifiable&gt;) record.field("data")) {
+    ORecordBytes chunk = (ORecordBytes) id.getRecord();
+    chunk.toOutputStream(out);
+    chunk.unload();
+}
+</code></pre>
+<p>Pros:</p>
+<ul>
+<li>Fastest and compact solution</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>More complex management</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th><img src="../images/warning.png" alt="NOTE" /></th><th style="text-align: left">While running in distributed mode ORecordBytes is not supported yet. See https://github.com/orientechnologies/orientdb/issues/3762 for more information.</th></tr></thead><tbody>
+</tbody></table>
+</div>
+<h1 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h1>
+<p>What to use?</p>
+<ul>
+<li>Have you short binary data? Store them as document's field</li>
+<li>Do you want the maximum of performance and better use of the space? Store it with <code>ORecordBytes</code></li>
+<li>Have you large binary objects? Store it with <code>ORecordBytes</code> but split the content in multiple records</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Graph-Consistency.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/JPA-Configuration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Graph-Consistency.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/JPA-Configuration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

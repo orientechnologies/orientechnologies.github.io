@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Console Commands - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="console-commands"><a class="header" href="#console-commands">Console Commands</a></h1>
+<p>OrientDB implements a number of SQL statements and commands that are available through the Console. In the event that you need information while working in the console, you can access it using either the <code>HELP</code> or <code>?</code> command.</p>
+<div class="table-wrapper"><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="Console-Command-Backup.html"><code>BACKUP DATABASE</code></a></td><td>Backup a database</td></tr>
+<tr><td><a href="Console-Command-Browse-Class.html"><code>BROWSE CLASS</code></a></td><td>Browses all the records of a class</td></tr>
+<tr><td><a href="Console-Command-Browse-Cluster.html"><code>BROWSE CLUSTER</code></a></td><td>Browses all the records of a cluster</td></tr>
+<tr><td><a href="Console-Command-Classes.html"><code>CLASSES</code></a></td><td>Displays all the configured classes</td></tr>
+<tr><td><a href="Console-Command-Cluster-Status.html"><code>CLUSTER STATUS</code></a></td><td>Displays the status of distributed cluster of servers</td></tr>
+<tr><td><a href="Console-Command-Clusters.html"><code>CLUSTERS</code></a></td><td>Displays all the configured clusters</td></tr>
+<tr><td><a href="Console-Command-Config.html"><code>CONFIG</code></a></td><td>Displays the configuration where the opened database is located (local or remote)</td></tr>
+<tr><td><a href="Console-Command-Config-Get.html"><code>CONFIG GET</code></a></td><td>Returns a configuration value</td></tr>
+<tr><td><a href="Console-Command-Config-Set.html"><code>CONFIG SET</code></a></td><td>Set a configuration value</td></tr>
+<tr><td><a href="Console-Command-Connect.html"><code>CONNECT</code></a></td><td>Connects to a database (deprecated see OPEN)</td></tr>
+<tr><td><a href="Console-Command-Connect-Env.html"><code>CONNECT ENV</code></a></td><td>Connects to an OrientDB server/environment</td></tr>
+<tr><td><a href="Console-Command-Create-Database.html"><code>CREATE DATABASE</code></a></td><td>Creates a new database</td></tr>
+<tr><td><a href="Console-Command-Declare-Intent.html"><code>DECLARE INTENT</code></a></td><td>Declares an intent</td></tr>
+<tr><td><a href="Console-Command-Dictionary-Keys.html"><code>DICTIONARY KEYS</code></a></td><td>Displays all the keys in the database dictionary</td></tr>
+<tr><td><a href="Console-Command-Dictionary-Get.html"><code>DICTIONARY GET</code></a></td><td>Lookups for a record using the dictionary. If found set it as the current record</td></tr>
+<tr><td><a href="Console-Command-Dictionary-Put.html"><code>DICTIONARY PUT</code></a></td><td>Inserts or modify an entry in the database dictionary. The entry is composed by key=String, value=record-id</td></tr>
+<tr><td><a href="Console-Command-Dictionary-Remove.html"><code>DICTIONARY REMOVE</code></a></td><td>Removes the association in the dictionary</td></tr>
+<tr><td><a href="Console-Command-Disconnect.html"><code>DISCONNECT</code></a></td><td>Disconnects from the current database</td></tr>
+<tr><td><a href="Console-Command-Display-Record.html"><code>DISPLAY RECORD</code></a></td><td>Displays current record's attributes</td></tr>
+<tr><td><a href="Console-Command-Display-Raw-Record.html"><code>DISPLAY RAW RECORD</code></a></td><td>Displays current record's raw format</td></tr>
+<tr><td><a href="Console-Command-Drop-Database.html"><code>DROP DATABASE</code></a></td><td>Drop a database</td></tr>
+<tr><td><a href="Console-Command-Export.html"><code>EXPORT DATABASE</code></a></td><td>Exports a database</td></tr>
+<tr><td><a href="Console-Command-Export-Record.html"><code>EXPORT RECORD</code></a></td><td>Exports a record in any of the supported format (i.e. json)</td></tr>
+<tr><td><a href="Console-Command-Freeze-Db.html"><code>FREEZE DATABASE</code></a></td><td>Freezes the database locking all the changes. Use this to raw backup. Once frozen it uses the <a href="Console-Command-Release-Db.html"><code>RELEASE DATABASE</code></a> to release it</td></tr>
+<tr><td><a href="Console-Command-Get.html"><code>GET</code></a></td><td>Returns the value of a property</td></tr>
+<tr><td><a href="Console-Command-Import.html"><code>IMPORT DATABASE</code></a></td><td>Imports a database previously exported</td></tr>
+<tr><td><a href="Console-Command-Indexes.html"><code>INDEXES</code></a></td><td>Displays information about indexes</td></tr>
+<tr><td><a href="Console-Command-Info.html"><code>INFO</code></a></td><td>Displays information about current status</td></tr>
+<tr><td><a href="Console-Command-Info-Class.html"><code>INFO CLASS</code></a></td><td>Displays information about a class</td></tr>
+<tr><td><a href="../js/Javascript-Command.html#via-console"><code>JS</code></a></td><td>Executes a Javascript in the console</td></tr>
+<tr><td><a href="../js/Javascript-Command.html#via-console"><code>JSS</code></a></td><td>Executes a Javascript in the server</td></tr>
+<tr><td><a href="Console-Command-List-Databases.html"><code>LIST DATABASES</code></a></td><td>List the available databases</td></tr>
+<tr><td><a href="Console-Command-List-Connections.html"><code>LIST CONNECTIONS</code></a></td><td>List the available connections</td></tr>
+<tr><td><a href="Console-Command-Load-Record.html"><code>LOAD RECORD</code></a></td><td>Loads a record in memory and set it as the current one</td></tr>
+<tr><td><a href="Console-Command-Load-Script.html"><code>LOAD SCRIPT</code></a></td><td>Loads and executes a sql script</td></tr>
+<tr><td><a href="Console-Command-Open.html"><code>OPEN</code></a></td><td>Opens a database connection on the currently connected server/environment (see CONNECT ENV)</td></tr>
+<tr><td><a href="Console-Command-Profiler.html"><code>PROFILER</code></a></td><td>Controls the <a href="../tuning/Profiler.html">Profiler</a></td></tr>
+<tr><td><a href="Console-Command-Properties.html"><code>PROPERTIES</code></a></td><td>Returns all the configured properties</td></tr>
+<tr><td><code>pwd</code></td><td>Display current path</td></tr>
+<tr><td><a href="Console-Command-Release-Db.html"><code>RELEASE DATABASE</code></a></td><td>Releases a <a href="Console-Command-Freeze-Db.html">Console Freeze Database</a> database</td></tr>
+<tr><td><a href="Console-Command-Reload-Record.html"><code>RELOAD RECORD</code></a></td><td>Reloads a record in memory and set it as the current one</td></tr>
+<tr><td><code>RELOAD SCHEMA</code></td><td>Reloads the schema</td></tr>
+<tr><td><a href="Console-Command-Restore.html"><code>RESTORE DATABASE</code></a></td><td>Restore a database</td></tr>
+<tr><td><a href="Console-Command-Set.html"><code>SET</code></a></td><td>Changes the value of a property</td></tr>
+<tr><td><code>HELP</code></td><td>Prints this help</td></tr>
+<tr><td><code>EXIT</code></td><td>Closes the console</td></tr>
+<tr><td><a href="../sql/SQL-Commands.html">SQL Commands</a></td><td></td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../console/Console-Modes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../console/Console-Command-Backup.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../console/Console-Modes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../console/Console-Command-Backup.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Binding - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="object-binding"><a class="header" href="#object-binding">Object Binding</a></h1>
+<p>The ObjectDatabase implementation makes things easier for the Java developer since the binding between Objects to Records is transparent.</p>
+<h2 id="how-it-works"><a class="header" href="#how-it-works">How it works?</a></h2>
+<p>OrientDB uses Java reflection and <a href="http://www.javassist.org/">Javassist</a> Proxy to bound POJOs to Records directly. Those proxied instances take care about the synchronization between the POJO and the underlying record. Every time you invoke a setter method against the POJO, the value is early bound into the record. Every time you call a getter method the value is retrieved from the record if the POJO's field value is null. Lazy loading works in this way too.</p>
+<p>So the Object Database class works as wrapper of the underlying <a href="Document-Database.html">Document-Database</a>.</p>
+<blockquote>
+<p><strong>NOTE</strong>: In case a non-proxied object is found it will be serialized, proxied and bounded to a corresponding Record.</p>
+</blockquote>
+<h1 id="requirements"><a class="header" href="#requirements">Requirements</a></h1>
+<h2 id="declare-persistent-classes"><a class="header" href="#declare-persistent-classes">Declare persistent classes</a></h2>
+<p>Before to use persistent POJOs OrientDB needs to know which classes are persistent (between thousands in your classpath) by registering the persistent packages and/or classes. Example:</p>
+<pre><code class="language-java">database.getEntityManager().registerEntityClasses("com.orientechnologies.orient.test.domain");
+</code></pre>
+<p>This must be done only right after the database is created or opened.</p>
+<h2 id="naming-conventions"><a class="header" href="#naming-conventions">Naming conventions</a></h2>
+<p>OrientDB follows some naming conventions to avoid writing tons of configuration files but just applying the rule "Convention over Configuration". Below those used:</p>
+<ol>
+<li>Java classes will be bound to persistent classes defined in the OrientDB schema with the same name. In OrientDB class names are case insensitive. The Java class name is taken without the full package. For example registering the class <code>Account</code> in the package <code>com.orientechnologies.demo</code>, the expected persistent class will be "Account" and not the entire <code>com.orientechnologies.demo.Account</code>. This means that class names, in the database, are always unique and can't exist two class with the same name even if declared in different packages.</li>
+<li>Java class's attributes will be bound to the fields with the same name in the persistent classes. Field names are case sensitive.</li>
+</ol>
+<h2 id="empty-constructor"><a class="header" href="#empty-constructor">Empty constructor</a></h2>
+<p>All the Java classes must have an empty constructor to let to OrientDB to create instances.</p>
+<h2 id="getters-and-setters"><a class="header" href="#getters-and-setters">Getters and Setters</a></h2>
+<p>All your classes must have <a href="http://en.wikipedia.org/wiki/Mutator_method#Java_example">getters and setters</a> of every field that needs to be persistent in order to let to OrientDB to manage proxy operations.
+<a href="http://en.wikipedia.org/wiki/Mutator_method#Java_example">Getters and Setters</a> also need to be named same as the declaring field:
+Example:</p>
+<pre><code class="language-java">public class Test {
+
+  private String textField;
+  private int intField;
+
+  public String getTextField() {
+    return textField;
+  }
+
+  public void setTextField( String iTextField ) {
+    textField = iTextField;
+  }
+
+  // THIS DECLARATION WON'T WORK, ORIENTDB WON'T BE ABLE TO RECOGNIZE THE REAL FIELD NAME
+  public int getInt(){
+    return intField;
+  }
+
+  // THIS DECLARATION WON'T WORK, ORIENTDB WON'T BE ABLE TO RECOGNIZE THE REAL FIELD NAME
+  public void setInt(int iInt){
+    intField = iInt;
+  }
+}
+</code></pre>
+<h2 id="collections-and-maps"><a class="header" href="#collections-and-maps">Collections and Maps</a></h2>
+<p>To avoid ClassCastException when the Java classes have Collections and Maps, the interface must be used rather than the Java implementation. The classic mistake is to define in a persistent class the types ArrayList, HashSet, HashMap instead of List, Set and Map.</p>
+<p>Example:</p>
+<pre><code class="language-java">public class MyClass{
+   // CORRECT
+   protected List&lt;MyElement&gt; correctList;
+
+   // WRONG: WILL THROW A ClassCastException
+   protected ArrayList&lt;MyElement&gt; wrongList;
+
+   // CORRECT
+   protected Set&lt;MyElement&gt; correctSet;
+
+   // WRONG: WILL THROW A ClassCastException
+   protected TreeSet&lt;MyElement&gt; wrongSet;
+
+   // CORRECT
+   protected Map&lt;String,MyElement&gt; correctMap;
+
+   // WRONG: WILL THROW A ClassCastException
+   protected HashMap&lt;String,MyElement&gt; wrongMap;
+}
+</code></pre>
+<h1 id="pojo-binding"><a class="header" href="#pojo-binding">POJO binding</a></h1>
+<p>OrientDB manages all the POJO attributes in persistent way during read/write from/to the record, except for the fields those:</p>
+<ul>
+<li>have the <em>transient</em> modifier</li>
+<li>have the <em>static</em> modifier,</li>
+<li>haven't getters and setters</li>
+<li>are set with anonymous class types.</li>
+</ul>
+<p>OrientDB uses the Java reflection to discovery the POJO classes. This is made only once during the registration of the domain classes.</p>
+<h2 id="default-binding"><a class="header" href="#default-binding">Default binding</a></h2>
+<p>This is the default. It tries to use the getter and setter methods for the field if they exist, otherwise goes in RAW mode (see below). The convention for the getter is the same as Java: <code>get&lt;field-name&gt;</code> where field-name is capitalized. The same is for setter but with 'set' as prefix instead of 'get': <code>set&lt;field-name&gt;</code>. If the getter or setter is missing, then the raw binding will be used.</p>
+<p>Example:
+Field '<code>String name</code>' -&gt; <code>getName()</code> and <code>setName(String)</code></p>
+<h2 id="custom-binding"><a class="header" href="#custom-binding">Custom binding</a></h2>
+<p>Since v1.2 Orient provides the possibility of custom binding extending the OObjectMethodFilter class and registering it to the wanted class.</p>
+<ul>
+<li>The custom implementation must provide the <code>public boolean isHandled(Method m)</code> to let Orient know what methods will be managed by the ProxyHandler and what methods won't.</li>
+<li>The custom implementation must provide the <code>public String getFieldName(Method m)</code> to let orient know how to parse a field name starting from the accessing method name.
+In the case those two methods are not provided the <a href="#default-binding">default binding</a> will be used</li>
+</ul>
+<p>The custom MethodFilter can be registered by calling <code>OObjectEntityEnhancer.getInstance().registerClassMethodFilter(Class&lt;?&gt;, customMethodFilter);</code></p>
+<p>Domain class example:</p>
+<pre><code class="language-java">public class CustomMethodFilterTestClass {
+
+  protected String standardField;
+
+  protected String UPPERCASEFIELD;
+
+  protected String transientNotDefinedField;
+
+  // GETTERS AND SETTERS
+  ...
+
+}
+</code></pre>
+<p>Method filter example:</p>
+<pre><code class="language-java"> public class CustomMethodFilter extends OObjectMethodFilter {
+    @Override
+    public boolean isHandled(Method m) {
+      if (m.getName().contains("UPPERCASE")) {
+        return true;
+      } else if (m.getName().contains("Transient")) {
+        return false;
+      }
+      return super.isHandled(m);
+    }
+
+    @Override
+    public String getFieldName(Method m) {
+      if (m.getName().startsWith("get")) {
+        if (m.getName().contains("UPPERCASE")) {
+          return "UPPERCASEFIELD";
+        }
+        return getFieldName(m.getName(), "get");
+      } else if (m.getName().startsWith("set")) {
+        if (m.getName().contains("UPPERCASE")) {
+          return "UPPERCASEFIELD";
+        }
+        return getFieldName(m.getName(), "set");
+      } else
+        return getFieldName(m.getName(), "is");
+    }
+  }
+</code></pre>
+<p>Method filter registration example:</p>
+<pre><code class="language-java">OObjectEntityEnhancer.getInstance().registerClassMethodFilter(CustomMethodFilterTestClass.class, new CustomMethodFilter());
+</code></pre>
+<h1 id="read-a-pojo"><a class="header" href="#read-a-pojo">Read a POJO</a></h1>
+<p>You can read a POJO from the database in two ways:</p>
+<ul>
+<li>by calling the method <code>load(ORID)</code></li>
+<li>by executing a query <code>query(q)</code></li>
+</ul>
+<p>When OrientDB loads the record, it creates a new POJO by calling the empty constructor and filling all the fields available in the source record. If a field is present only in the record and not in the POJO class, then it will be ignored. Even when the POJO is updated, any fields in the record that are not available in the POJO class will be untouched.</p>
+<h1 id="save-a-pojo"><a class="header" href="#save-a-pojo">Save a POJO</a></h1>
+<p>You can save a POJO to the database by calling the method <code>save(pojo)</code>. If the POJO is already a proxied instance, then the database will just save the record bounded to it. In case the object is not proxied the database will serialize it and save the corresponded record: <strong>In this case the object MUST be reassinged with the one returned by the database</strong></p>
+<h1 id="fetching-strategies"><a class="header" href="#fetching-strategies">Fetching strategies</a></h1>
+<p>Starting from release 0.9.20, OrientDB supports <a href="Fetching-Strategies.html">Fetching-Strategies</a> by using the <strong>Fetch Plans</strong>. Fetch Plans are used to customize how OrientDB must load linked records. The ODatabaseObjectTx uses the Fetch Plan also to determine how to bind the linked records to the POJO by building an object tree.</p>
+<h1 id="custom-types"><a class="header" href="#custom-types">Custom types</a></h1>
+<p>To let OrientDB use not supported types use the custom types. They MUST BE registered before domain classes registration, if not all custom type fields will be treated as domain classes.
+In case of registering a custom type that is already register as a domain class said class will be removed.</p>
+<p><strong>Important: java.lang classes cannot be managed this way</strong></p>
+<p>Example to manage an enumeration as custom type:</p>
+<p><strong>Enum declaration</strong></p>
+<pre><code class="language-java">public enum SecurityRole {
+	ADMIN("administrador"), LOGIN("login");
+	private String	id;
+
+	private SecurityRole(String id) {
+		this.id = id;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return id;
+	}
+
+	public static SecurityRole getByName(String name) {
+		if (ADMIN.name().equals(name)) {
+			return ADMIN;
+		} else if (LOGIN.name().equals(name)) {
+			return LOGIN;
+		}
+		return null;
+	}
+
+	public static SecurityRole[] toArray() {
+		return new SecurityRole[] { ADMIN, LOGIN };
+	}
+}
+</code></pre>
+<p><strong>Custom type management</strong></p>
+<pre><code class="language-java">  OObjectSerializerContext serializerContext = new OObjectSerializerContext();
+  serializerContext.bind(new OObjectSerializer&lt;SecurityRole, String&gt;() {
+
+    public Object serializeFieldValue(Class&lt;?&gt; type, SecurityRole role) {
+      return role.name();
+    }
+
+    public Object unserializeFieldValue(Class&lt;?&gt; type, String str) {
+      return SecurityRole.getByName(str);
+    }
+  });
+
+  OObjectSerializerHelper.bindSerializerContext(null, serializerContext);
+
+// NOW YOU CAN REGISTER YOUR DOMAIN CLASSES
+database.getEntityManager().registerEntityClass(User.class);
+</code></pre>
+<p>OrientDB will use that custom serializer to marshall and unmarshall special types.</p>
+<h1 id="odatabaseobjecttx-old-deprecated-implementation"><a class="header" href="#odatabaseobjecttx-old-deprecated-implementation">ODatabaseObjectTx (old deprecated implementation)</a></h1>
+<p><em>Available since v1.0rc9</em></p>
+<p>The ObjectDatabase implementation makes things easier for the Java developer since the binding between Objects to Records is transparent.</p>
+<h2 id="how-it-works-1"><a class="header" href="#how-it-works-1">How it works?</a></h2>
+<p>OrientDB uses Java reflection and doesn't require that the POJO is enhanced in order to use it according to the <a href="http://java.sun.com/jdo">JDO standard</a> and doesn't use Proxies as do many <a href="http://java.sun.com/developer/technicalArticles/J2EE/jpa">JPA</a> implementations such as <a href="http://www.hibernate.org">Hibernate</a>. So how can you work with plain POJOs?</p>
+<p>OrientDB works in two ways:</p>
+<ul>
+<li>Connected mode</li>
+<li>Detached mode</li>
+</ul>
+<h3 id="connected-mode"><a class="header" href="#connected-mode">Connected mode</a></h3>
+<p>The ODatabaseObjectTx implementation is the gateway between the developer and OrientDB. ODatabaseObjectTx keeps track of the relationship between the POJO and the Record.</p>
+<p>Each POJO that's read from the database is created and tracked by ODatabaseObjectTx.  If you change the POJO and call the <code>ODatabaseObjectTx.save(pojo)</code> method, OrientDB recognizes the POJO bound with the underlying record and, before saving it, will copy the POJO attributes to the loaded record.</p>
+<p>This works with POJOs that belong to the same instance. For example:</p>
+<pre><code class="language-java">ODatabaseObjectTx db = new ODatabaseObjectTx("remote:localhost/demo");
+db.open("admin", "admin");
+
+try{
+  List&lt;Customer&gt; result = db.query( new OSQLSynchQuery&lt;Customer&gt;(db, "select from customer") );
+  for( Customer c : result ){
+    c.setAge( 100 );
+    db.save( c ); // &lt;- AT THIS POINT THE POJO WILL BE RECOGNIZED AS KNOWN BECAUSE IS
+                 // ALWAYS LOADED WITH THIS DB INSTANCE
+  }
+
+} finally {
+  db.close;
+}
+</code></pre>
+<p>When the <code>db.save( c )</code> is called, the ODatabaseObjectTx instance already knows about it because has been retrieved by using a query through the same instance.</p>
+<h3 id="detached-mode"><a class="header" href="#detached-mode">Detached mode</a></h3>
+<p>In a typical Front-End application you need to load objects, display them to the user, capture the changes and save them back to the database. Usually this is implemented by using a database pool in order to avoid leaving a database instance open for the entire life cycle of the user session.</p>
+<p>The database pool manages a configurable number of database instances. These instances are recycled for all database operations, so the list of connected POJOs is cleared at every release of the database pool instance. This is why the database instance doesn't know the POJO used by the application and in this mode if you save a previously loaded POJO it will appear as a NEW one and is therefore created as new instance in the database with a new <a href="../datamodeling/Concepts.html#record-id">RecordID</a>.</p>
+<p>This is why OrientDB needs to store the record information inside the POJO itself. This is retrieved when the POJO is saved so it is known if the POJO already has own identity (has been previously loaded) or not (it's new).</p>
+<p>To save the <a href="../datamodeling/Concepts.html#record-id">Record Identity</a> you can use the <a href="http://java.sun.com/developer/technicalArticles/J2EE/jpa">JPA</a> <strong><a href="http://download.oracle.com/javaee/5/api/javax/persistence/Id.html">@Id</a></strong> annotation above the property interested. You can declare it as:</p>
+<ul>
+<li><strong>Object</strong>, the suggested, in this case OrientDB will store the ORecordId instance</li>
+<li><strong>String</strong>, in this case OrientDB will store the string representation of the ORecordId</li>
+<li><strong>Long</strong>, in this case OrientDB will store the right part of the <a href="../datamodeling/Concepts.html#record-id">RecordID</a>. This works only if you've a schema for the class. The left side will be rebuilt at save time by getting the class id.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-java">public class Customer{
+  @Id
+  private Object id; // DON'T CREATE GETTER/SETTER FOR IT TO PREVENT THE CHANGING BY THE USER APPLICATION,
+                  // UNLESS IT'S NEEDED
+
+  private String name;
+  private String surname;
+
+  public String getName(){
+    return name;
+  }
+  public void setName(String name){
+    this.name = name;
+  }
+
+  public String getSurname(){
+    return name;
+  }
+  public void setSurname(String surname){
+    this.surname = surname;
+  }
+}
+</code></pre>
+<p>OrientDB will save the <a href="../datamodeling/Concepts.html#record-id">Record Identity</a> in the <strong>id</strong> property even if getter/setter methods are not created.</p>
+<p>If you work with transactions you also need to store the Record Version in the POJO to allow MVCC. Use the <a href="http://java.sun.com/developer/technicalArticles/J2EE/jpa">JPA</a> <strong><a href="http://download.oracle.com/javaee/5/api/javax/persistence/Version.html">@Version</a></strong> annotation above the property interested. You can declare it as:</p>
+<ul>
+<li><strong>java.lang.Object</strong> (suggested) - a <strong>com.orientechnologies.orient.core.version.OSimpleVersion</strong> is used</li>
+<li><strong>java.lang.Long</strong></li>
+<li><strong>java.lang.String</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-java">public class Customer{
+  @Id
+  private Object id; // DON'T CREATE GETTER/SETTER FOR IT TO PREVENT THE CHANGING BY THE USER APPLICATION,
+                  // UNLESS IT'S NEEDED
+
+  @Version
+  private Object version; // DON'T CREATE GETTER/SETTER FOR IT TO PREVENT THE CHANGING BY THE USER APPLICATION,
+                       // UNLESS IT'S NEEDED
+
+  private String name;
+  private String surname;
+
+  public String getName(){
+    return name;
+  }
+  public void setName(String name){
+    this.name = name;
+  }
+
+  public String getSurname(){
+    return name;
+  }
+  public void setSurname(String surname){
+    this.surname = surname;
+  }
+}
+</code></pre>
+<h3 id="save-mode"><a class="header" href="#save-mode">Save Mode</a></h3>
+<p>Since OrientDB doesn't know what object is changed in a tree of connected objects, by default it saves all the objects. This could be very expensive for big trees. This is the reason why you can control manually what is changed or not via a setting in the ODatabaseObjectTx instance:</p>
+<pre><code class="language-java">db.setSaveOnlyDirty(true);
+</code></pre>
+<p>or by setting a global parameter (see <a href="../admin/Configuration.html">Parameters</a>):</p>
+<pre><code class="language-java">OGlobalConfiguration.OBJECT_SAVE_ONLY_DIRTY.setValue(true);
+</code></pre>
+<p>To track what object is dirty use:</p>
+<pre><code class="language-java">db.setDirty(pojo);
+</code></pre>
+<p>To unset the dirty status of an object use:</p>
+<pre><code class="language-java">db.unsetDirty(pojo);
+</code></pre>
+<p>Dirty mode doesn't affect in memory state of POJOs, so if you change an object without marking it as dirty, OrientDB doesn't know that the object is changed. Furthermore if you load the same changed object using the same database instance, the modified object is returned.</p>
+<h2 id="requirements-1"><a class="header" href="#requirements-1">Requirements</a></h2>
+<h2 id="declare-persistent-classes-1"><a class="header" href="#declare-persistent-classes-1">Declare persistent classes</a></h2>
+<p>In order to know which classes are persistent (between thousands in your classpath), you need to tell OrientDB. Using the Java API is:</p>
+<pre><code class="language-java">database.getEntityManager().registerEntityClasses("com.orientechnologies.orient.test.domain");
+</code></pre>
+<p>OrientDB saves only the final part of the class name without the package. For example if you're using the class <code>Account</code> in the package <code>com.orientechnologies.demo</code>, the persistent class will be only "Account" and not the entire <code>com.orientechnologies.demo.Account</code>. This means that class names, in the database, are always unique and can't exist two class with the same name even if declared in different packages.</p>
+<h3 id="empty-constructor-1"><a class="header" href="#empty-constructor-1">Empty constructor</a></h3>
+<p>All your classes must have an empty constructor to let to OrientDB to create instances.</p>
+<h2 id="pojo-binding-1"><a class="header" href="#pojo-binding-1">POJO binding</a></h2>
+<p>All the POJO attributes will be read/stored from/into the record except for fields with the <em>transient</em> modifier. OrientDB uses Java reflection but the discovery of POJO classes is made only the first time at startup. Java Reflection information is inspected only the first time to speed up the access to the fields/methods.</p>
+<p>There are 2 kinds of binding:</p>
+<ul>
+<li>Default binding and</li>
+<li>Raw binding</li>
+</ul>
+<h3 id="default-binding-1"><a class="header" href="#default-binding-1">Default binding</a></h3>
+<p>This is the default. It tries to use the getter and setter methods for the field if they exist, otherwise goes in RAW mode (see below). The convention for the getter is the same as Java: <code>get&lt;field-name&gt;</code> where field-name is capitalized. The same is for setter but with 'set' as prefix instead of 'get': <code>set&lt;field-name&gt;</code>. If the getter or setter is missing, then the raw binding will be used.</p>
+<p>Example:
+Field '<code>String name</code>' -&gt; <code>getName()</code> and <code>setName(String)</code></p>
+<h2 id="raw-binding"><a class="header" href="#raw-binding">Raw binding</a></h2>
+<p>This mode acts at raw level by accessing the field directly. If the field signature is <strong>private</strong> or <strong>protected</strong>, then the accessibility will be forced. This works generally in all the scenarios except where a custom SecurityManager is defined that denies the change to the accessibility of the field.</p>
+<p>To force this behaviour, use the <a href="http://java.sun.com/developer/technicalArticles/J2EE/jpa">JPA 2</a> <strong><a href="http://download.oracle.com/javaee/6/api/javax/persistence/AccessType.html">@AccessType</a></strong> annotation above the relevant property. For example:</p>
+<pre><code class="language-java">public class Customer{
+  @AccessType(FIELD)
+  private String name;
+
+  private String surname;
+
+  public String getSurname(){
+    return name;
+  }
+  public void setSurname(String surname){
+    this.surname = surname;
+  }
+}
+</code></pre>
+<h2 id="read-a-pojo-1"><a class="header" href="#read-a-pojo-1">Read a POJO</a></h2>
+<p>You can read a POJO from the database in two ways:</p>
+<ul>
+<li>by calling the method <code>load(ORID)</code></li>
+<li>by executing a query <code>query(q)</code></li>
+</ul>
+<p>When OrientDB loads the record, it creates a new POJO by calling the empty constructor and filling all the fields available in the source record. If a field is present only in the record and not in the POJO class, then it will be ignored. Even when the POJO is updated, any fields in the record that are not available in the POJO class will be untouched.</p>
+<h3 id="callbacks"><a class="header" href="#callbacks">Callbacks</a></h3>
+<p>You can define some methods in the POJO class that are called as callbacks before the record is read:</p>
+<ul>
+<li><a href="https://github.com/orientechnologies/orientdb/blob/2.2.x/core/src/main/java/com/orientechnologies/orient/core/annotation/OBeforeDeserialization.java">@OBeforeDeserialization</a> called just BEFORE unmarshalling the object from the source record</li>
+<li><a href="https://github.com/orientechnologies/orientdb/blob/2.2.x/core/src/main/java/com/orientechnologies/orient/core/annotation/OAfterDeserialization.java">@OAfterDeserialization</a> called just AFTER unmarshalling the object from the source record</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-java">public class Account{
+  private String name;
+  transient private String status;
+
+  @OAfterDeserialization
+  public void init(){
+    status = "Loaded";
+  }
+}
+</code></pre>
+<p>Callbacks are useful to initialize transient fields.</p>
+<h2 id="save-a-pojo-1"><a class="header" href="#save-a-pojo-1">Save a POJO</a></h2>
+<p>You can save a POJO to the database by calling the method <code>save(pojo)</code>. If the POJO is already known to the ODatabaseObjectTx instance, then it updates the underlying record by copying all the POJO attributes to the records (omitting those with <em>transient</em> modifier).</p>
+<h3 id="callbacks-1"><a class="header" href="#callbacks-1">Callbacks</a></h3>
+<p>You can define in the POJO class some methods called as callback before the record is written:</p>
+<ul>
+<li><a href="https://github.com/orientechnologies/orientdb/blob/2.2.x/core/src/main/java/com/orientechnologies/orient/core/annotation/OBeforeSerialization.java">@OBeforeSerialization</a> called just BEFORE marshalling the object to the record</li>
+<li><a href="https://github.com/orientechnologies/orientdb/blob/2.2.x/core/src/main/java/com/orientechnologies/orient/core/annotation/OAfterSerialization.java">@OAfterSerialization</a> called just AFTER marshalling the object to the record</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-java">public class Account{
+  private String name;
+  transient private Socket s;
+
+  @OAfterSerialization
+  public void free(){
+    s.close();
+  }
+}
+</code></pre>
+<p>Callbacks are useful to free transient resources.</p>
+<p>== Fetching strategies =v</p>
+<p>Starting from release 0.9.20, OrientDB supports <a href="Fetching-Strategies.html">Fetching-Strategies</a> by using the <strong>Fetch Plans</strong>. Fetch Plans are used to customize how OrientDB must load linked records. The ODatabaseObjectTx uses the Fetch Plan also to determine how to bind the linked records to the POJO by building an object tree.</p>
+<h2 id="custom-types-1"><a class="header" href="#custom-types-1">Custom types</a></h2>
+<p>To let OrientDB use not supported types use the custom types. Register them before to register domain classes. Example to manage a BigInteger (that it's not natively supported):</p>
+<pre><code class="language-java">OObjectSerializerContext serializerContext = new OObjectSerializerContext();
+serializerContext.bind(new OObjectSerializer&lt;BigInteger, Integer&gt;() {
+
+  public Integer serializeFieldValue(Class&lt;?&gt; itype,  BigInteger iFieldValue) {
+    return iFieldValue.intValue();
+  }
+
+  public  BigInteger unserializeFieldValue(Class&lt;?&gt; itype,  Integer iFieldValue) {
+    return new  BigInteger(iFieldValue);
+  }
+
+});
+OObjectSerializerHelper.bindSerializerContext(null, serializerContext);
+
+// NOW YOU CAN REGISTER YOUR DOMAIN CLASSES
+database.getEntityManager().registerEntityClass(Customer.class);
+</code></pre>
+<p>OrientDB will use that custom serializer to marshall and unmarshall special types.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java/Object-DB-Schema.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../java/Java-Traverse.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java/Object-DB-Schema.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../java/Java-Traverse.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

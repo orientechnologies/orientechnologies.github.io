@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Java (Native) Hooks - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="native-java-hooks"><a class="header" href="#native-java-hooks">(Native) Java Hooks</a></h1>
+<p>Java Hooks are the fastest <a href="../internals/Hook.html">hooks</a>. Write a Java Hook if you need the best performance on execution. Look at <a href="../internals/Hook.html">Hooks</a> for more information.</p>
+<h3 id="the-orecordhook-interface"><a class="header" href="#the-orecordhook-interface">The ORecordHook interface</a></h3>
+<p>A hook is an implementation of the interface <a href="https://github.com/orientechnologies/orientdb/blob/develop/core/src/main/java/com/orientechnologies/orient/core/hook/ORecordHook.java">ORecordHook</a>:</p>
+<pre><code class="language-java">public interface ORecordHook {
+  public enum TYPE {
+    ANY,
+    BEFORE_CREATE, BEFORE_READ, BEFORE_UPDATE, BEFORE_DELETE,
+    AFTER_CREATE, AFTER_READ, AFTER_UPDATE, AFTER_DELETE
+  };
+
+  public void onTrigger(TYPE iType, ORecord&lt;?&gt; iRecord);
+}
+</code></pre>
+<h3 id="the-orecordhookabstract-abstract-class"><a class="header" href="#the-orecordhookabstract-abstract-class">The ORecordHookAbstract abstract class</a></h3>
+<p>OrientDB comes with an abstract implementation of the <a href="https://github.com/orientechnologies/orientdb/blob/develop/core/src/main/java/com/orientechnologies/orient/core/hook/ORecordHook.java">ORecordHook</a> interface called <a href="https://github.com/orientechnologies/orientdb/blob/develop/core/src/main/java/com/orientechnologies/orient/core/hook/ORecordHookAbstract.java">ORecordHookAbstract.java</a>. It switches the callback event, calling separate methods for each one:</p>
+<pre><code class="language-java">public abstract class ORecordHookAbstract implements ORecordHook {
+  public void onRecordBeforeCreate(ORecord&lt;?&gt; iRecord){}
+  public void onRecordAfterCreate(ORecord&lt;?&gt; iRecord){}
+  public void onRecordBeforeRead(ORecord&lt;?&gt; iRecord){}
+  public void onRecordAfterRead(ORecord&lt;?&gt; iRecord){}
+  public void onRecordBeforeUpdate(ORecord&lt;?&gt; iRecord){}
+  public void onRecordAfterUpdate(ORecord&lt;?&gt; iRecord){}
+  public void onRecordBeforeDelete(ORecord&lt;?&gt; iRecord){}
+  public void onRecordAfterDelete(ORecord&lt;?&gt; iRecord){}
+  ...
+}
+</code></pre>
+<h3 id="the-odocumenthookabstract-abstract-class"><a class="header" href="#the-odocumenthookabstract-abstract-class">The ODocumentHookAbstract abstract class</a></h3>
+<p>When you want to catch an event from a Document only, the best way to create a hook is to extend the <code>ODocumentHookAbstract</code> abstract class. You can specify what classes you're interested in. In this way the callbacks will be called only on documents of the specified classes. Classes are polymorphic so filtering works against specified classes and all sub-classes.</p>
+<p>You can specify only the class you're interested or the classes you want to exclude. Example to include only the <code>Client</code> and <code>Provider</code> classes:</p>
+<pre><code class="language-java">public class MyHook extends ODocumentHookAbstract {
+  public MyHook(ODatabaseDocument database){
+     super(database);
+  }
+  
+  public MyHook() {
+    setIncludeClasses("Client", "Provider");
+  }
+}
+</code></pre>
+<p>Example to get called for all the changes on documents of any class but <code>Log</code>:</p>
+<pre><code class="language-java">public class MyHook extends ODocumentHookAbstract {
+  public MyHook(ODatabaseDocument database){
+     super(database);
+  }
+  
+  public MyHook() {
+    setExcludeClasses("Log");
+  }
+}
+</code></pre>
+<h3 id="access-to-the-modified-fields"><a class="header" href="#access-to-the-modified-fields">Access to the modified fields</a></h3>
+<p>In Hook methods you can access dirty fields and the original values. Example:</p>
+<pre><code class="language-java">for( String field : document.getDirtyFields() ) {
+  Object originalValue = document.getOriginalValue( field );
+  ...
+}
+</code></pre>
+<h3 id="self-registration"><a class="header" href="#self-registration">Self registration</a></h3>
+<p>Hooks can be installed on certain database instances, but in most cases you'll need to register it for each instance. To do this programmatically you can intercept the <code>onOpen()</code> and <code>onCreate()</code> callbacks from OrientDB to install hooks. All you need is to implement the <code>ODatabaseLifecycleListener</code> interface. Example:</p>
+<pre><code class="language-java">public class MyHook extends ODocumentHookAbstract implements ODatabaseLifecycleListener {
+  public MyHook(ODatabaseDocument database){
+     super(database);
+  }
+  
+  public MyHook() {
+    // REGISTER MYSELF AS LISTENER TO THE DATABASE LIFECYCLE
+    Orient.instance().addDbLifecycleListener(this);
+  }
+  ...
+  @Override
+  public void onOpen(final ODatabase iDatabase) {
+    // REGISTER THE HOOK
+    ((ODatabaseComplex&lt;?&gt;)iDatabase).registerHook(this);
+  }
+
+  @Override
+  public void onCreate(final ODatabase iDatabase) {
+    // REGISTER THE HOOK
+    ((ODatabaseComplex&lt;?&gt;)iDatabase).registerHook(this);
+  }
+
+  @Override
+  public void onClose(final ODatabase iDatabase) {
+    // REGISTER THE HOOK
+    ((ODatabaseComplex&lt;?&gt;)iDatabase).unregisterHook(this);
+  }
+  ...
+  public RESULT onRecordBeforeCreate(final ODocument iDocument) {
+    // DO SOMETHING BEFORE THE DOCUMENT IS CREATED
+    ...
+  }
+  ...
+}
+</code></pre>
+<h3 id="hook-example"><a class="header" href="#hook-example">Hook example</a></h3>
+<p>In this example the events <code>before-create</code> and <code>after-delete</code> are called during the <code>save()</code> of the <code>Profile</code> object where:</p>
+<ul>
+<li><code>before-create</code> is used to check custom validation rules</li>
+<li><code>after-delete</code> is used to maintain the references valid</li>
+</ul>
+<pre><code class="language-java">public class HookTest extends ORecordHookAbstract {
+
+  /**
+   * Custom validation rules
+   */
+  @Override
+  public void onRecordBeforeCreate(ORecord&lt;?&gt; iRecord){
+    if( iRecord instanceof ODocument ){
+      ODocument doc = (ODocument) iRecord;
+      Integer age = doc .field( "age" );
+      if( age != null &amp;&amp; age &gt; 130 )
+        throw new OValidationException("Invalid age");
+    }
+  }
+
+  /**
+   * On deletion removes the reference back.
+   */
+  @Override
+  public void onRecordAfterDelete(ORecord&lt;?&gt; iRecord){
+    if( iRecord instanceof ODocument ){
+      ODocument doc = (ODocument) iRecord;
+
+      Set&lt;OIdentifiable&gt; friends = doc.field( "friends" );
+      if( friends != null ){
+        for( OIdentifiable friend : friends ){
+          Set&lt;OIdentifiable&gt; otherFriends = ((ODocument)friend.getRecord()).field("friends");
+          if( friends != null )
+            friends.remove( iRecord );
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>For more information take a look to the <a href="https://github.com/orientechnologies/orientdb/blob/develop/tests/src/test/java/com/orientechnologies/orient/test/database/auto/HookTest.java">HookTest.java</a> source code.</p>
+<h3 id="install-server-side-hooks"><a class="header" href="#install-server-side-hooks">Install server-side hooks</a></h3>
+<p>To let a hook be executed in the Server space you have to register it in the server <code>orientdb-server-config.xml</code> configuration file.</p>
+<h4 id="write-your-hook"><a class="header" href="#write-your-hook">Write your hook</a></h4>
+<p>Example of a hook to execute custom validation rules:</p>
+<pre><code class="language-java">public class CustomValidationRules implements ORecordHook{
+  /**
+   * Apply custom validation rules
+   */
+  public boolean onTrigger(final TYPE iType, final ORecord&lt;?&gt; iRecord) {
+    if( iRecord instanceof ODocument ){
+      ODocument doc = (ODocument) iRecord;
+
+      switch( iType ){
+        case BEFORE_CREATE:
+        case BEFORE_UPDATE: {
+          if( doc.getClassName().equals("Customer") ){
+            Integer age = doc .field( "age" );
+            if( age != null &amp;&amp; age &gt; 130 )
+              throw new OValidationException("Invalid age");
+          }
+          break;
+        }
+
+        case BEFORE_DELETE: {
+          if( doc.getClassName().equals("Customer") ){
+            final ODatabaseRecord db = ODatabaseRecordThreadLocal.INSTANCE.get();
+            if( !db.getUser().getName().equals( "admin" ) )
+              throw new OSecurityException("Only admin can delete customers");
+          }
+          break;
+        }
+    }
+  }
+}
+</code></pre>
+<h4 id="deploy-the-hook"><a class="header" href="#deploy-the-hook">Deploy the hook</a></h4>
+<p>Once implemented create a <code>.jar</code> file containing your class and put it under the <code>$ORIENTDB_HOME/lib</code> directory.</p>
+<h4 id="register-it-in-the-server-configuration"><a class="header" href="#register-it-in-the-server-configuration">Register it in the server configuration</a></h4>
+<p>Change the <code>orientdb-server-config.xml</code> file adding your hook inside the <code>&lt;hooks&gt;</code> tag. The position can be one of following values <code>FIRST</code>, <code>EARLY</code>, <code>REGULAR</code>, <code>LATE</code>, <code>LAST</code>:</p>
+<pre><code class="language-xml">&lt;orient-server&gt;
+   
+  &lt;hooks&gt;
+    &lt;hook class="org.orientdb.test.MyHook" position="REGULAR"/&gt;
+  &lt;hooks&gt;
+</code></pre>
+<h4 id="configurable-hooks"><a class="header" href="#configurable-hooks">Configurable hooks</a></h4>
+<p>If your hook must be configurable with external parameters write the parameters in the <code>orientdb-server-config.xml</code> file:</p>
+<pre><code class="language-xml">&lt;hook class="org.orientdb.test.MyHook" position="REGULAR"&gt;
+    &lt;parameters&gt;
+        &lt;parameter name="userCanDelete" value="admin" /&gt;
+    &lt;/parameters&gt;
+&lt;/hook&gt;
+</code></pre>
+<p>And in your Java class implement the config() method to read the parameter:</p>
+<pre><code class="language-java">private String userCanDelete;
+...
+public void config(OServer oServer, OServerParameterConfiguration[] iParams) {
+  for (OServerParameterConfiguration param : iParams) {
+    if (param.name.equalsIgnoreCase("userCanDelete")) {
+      userCanDelete = param.value;
+    }
+  }
+}
+...
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../internals/Dynamic-Hooks.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../internals/DB-Server.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../internals/Dynamic-Hooks.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../internals/DB-Server.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

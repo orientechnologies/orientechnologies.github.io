@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./TestFactory.html" title="com.orientechnologies.orient.test.TestFactory" alt="" coords="16,11,139,53"/>
+<area shape="rect" id="node1" href="./TestFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,5,149,59"/>
+<area shape="rect" id="node2_1" href="./CompositeException.html" title="com.orientechnologies.orient.test.CompositeException" alt="" coords="185,19,338,45"/>
+<area shape="rect" id="node2" href="./CompositeException.html" title="&lt;TABLE&gt;" alt="" coords="174,8,349,56"/>
+<area shape="rect" id="node3_2" href="./ConcurrentTestHelper.html" title="com.orientechnologies.orient.test.ConcurrentTestHelper" alt="" coords="384,19,573,45"/>
+<area shape="rect" id="node3" href="./ConcurrentTestHelper.html" title="&lt;TABLE&gt;" alt="" coords="373,8,584,56"/>
+<area shape="rect" id="node4_3" href="./TestBuilder.html" title="com.orientechnologies.orient.test.TestBuilder" alt="" coords="618,19,739,45"/>
+<area shape="rect" id="node4" href="./TestBuilder.html" title="&lt;TABLE&gt;" alt="" coords="607,8,750,56"/>
+</map>

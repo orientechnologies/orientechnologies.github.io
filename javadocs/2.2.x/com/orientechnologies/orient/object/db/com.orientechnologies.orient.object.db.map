@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OObjectLazyListIterator.html" title="com.orientechnologies.orient.object.db.OObjectLazyListIterator" alt="" coords="16,17,243,42"/>
+<area shape="rect" id="node1" href="./OObjectLazyListIterator.html" title="&lt;TABLE&gt;" alt="" coords="5,5,253,53"/>
+<area shape="rect" id="node2_1" href="./OObjectLazySet.html" title="com.orientechnologies.orient.object.db.OObjectLazySet" alt="" coords="288,17,464,42"/>
+<area shape="rect" id="node2" href="./OObjectLazySet.html" title="&lt;TABLE&gt;" alt="" coords="277,5,475,53"/>
+<area shape="rect" id="node3_2" href="./OObjectNotManagedException.html" title="com.orientechnologies.orient.object.db.OObjectNotManagedException" alt="" coords="509,17,728,42"/>
+<area shape="rect" id="node3" href="./OObjectNotManagedException.html" title="&lt;TABLE&gt;" alt="" coords="499,5,739,53"/>
+<area shape="rect" id="node4_3" href="./OObjectDatabasePool.html" title="com.orientechnologies.orient.object.db.OObjectDatabasePool" alt="" coords="774,17,935,42"/>
+<area shape="rect" id="node4" href="./OObjectDatabasePool.html" title="&lt;TABLE&gt;" alt="" coords="763,5,946,53"/>
+<area shape="rect" id="node5_4" href="./OObjectLazyMap.html" title="com.orientechnologies.orient.object.db.OObjectLazyMap" alt="" coords="981,17,1165,42"/>
+<area shape="rect" id="node5" href="./OObjectLazyMap.html" title="&lt;TABLE&gt;" alt="" coords="971,5,1176,53"/>
+<area shape="rect" id="node6_5" href="./OCommandSQLPojoWrapper.html" title="com.orientechnologies.orient.object.db.OCommandSQLPojoWrapper" alt="" coords="1211,17,1415,42"/>
+<area shape="rect" id="node6" href="./OCommandSQLPojoWrapper.html" title="&lt;TABLE&gt;" alt="" coords="1201,5,1426,53"/>
+<area shape="rect" id="node7_6" href="./OObjectNotDetachedException.html" title="com.orientechnologies.orient.object.db.OObjectNotDetachedException" alt="" coords="1461,17,1681,42"/>
+<area shape="rect" id="node7" href="./OObjectNotDetachedException.html" title="&lt;TABLE&gt;" alt="" coords="1450,5,1691,53"/>
+<area shape="rect" id="node8_7" href="./OLazyCollectionUtil.html" title="com.orientechnologies.orient.object.db.OLazyCollectionUtil" alt="" coords="1726,17,1874,42"/>
+<area shape="rect" id="node8" href="./OLazyCollectionUtil.html" title="&lt;TABLE&gt;" alt="" coords="1715,5,1885,53"/>
+<area shape="rect" id="node9_8" href="./OObjectDatabaseTx.html" title="com.orientechnologies.orient.object.db.OObjectDatabaseTx" alt="" coords="1947,113,2096,138"/>
+<area shape="rect" id="node9" href="./OObjectDatabaseTx.html" title="&lt;TABLE&gt;" alt="" coords="1936,101,2107,149"/>
+<area shape="rect" id="node11_9" href="./OObjectDatabaseTxPooled.html" title="com.orientechnologies.orient.object.db.OObjectDatabaseTxPooled" alt="" coords="1925,209,2118,234"/>
+<area shape="rect" id="node11" href="./OObjectDatabaseTxPooled.html" title="&lt;TABLE&gt;" alt="" coords="1914,197,2129,245"/>
+<area shape="rect" id="node10_10" href="./OObjectLazyList.html" title="com.orientechnologies.orient.object.db.OObjectLazyList" alt="" coords="2168,17,2347,42"/>
+<area shape="rect" id="node10" href="./OObjectLazyList.html" title="&lt;TABLE&gt;" alt="" coords="2157,5,2357,53"/>
+<area shape="rect" id="node12_11" href="./OObjectLazyIterator.html" title="com.orientechnologies.orient.object.db.OObjectLazyIterator" alt="" coords="2391,17,2595,42"/>
+<area shape="rect" id="node12" href="./OObjectLazyIterator.html" title="&lt;TABLE&gt;" alt="" coords="2381,5,2606,53"/>
+<area shape="rect" id="node13_12" href="./ODatabasePojoAbstract.html" title="com.orientechnologies.orient.object.db.ODatabasePojoAbstract" alt="" coords="1919,17,2123,42"/>
+<area shape="rect" id="node13" href="./ODatabasePojoAbstract.html" title="&lt;TABLE&gt;" alt="" coords="1909,5,2134,53"/>
+</map>

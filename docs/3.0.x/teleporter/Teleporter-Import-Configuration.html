@@ -1,0 +1,654 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Import Configuration - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="import-configuration"><a class="header" href="#import-configuration">Import Configuration</a></h1>
+<p>It's possible to specify an import configuration by writing down a <strong>configuration file in JSON format</strong> and passing its location to Teleporter through the argument <code>-conf</code>:</p>
+<pre><code>./oteleporter.sh -jdriver &lt;jdbc-driver&gt; -jurl &lt;jdbc-url&gt; -juser &lt;username&gt; 
+                -jpasswd &lt;password&gt; -ourl &lt;orientdb-url&gt; [-s &lt;strategy&gt;]
+                [-nr &lt;name-resolver&gt;] [-v &lt;verbose-level&gt;] 
+                ([-include &lt;table-names&gt;] | [-exclude &lt;table-names&gt;]) 
+                [-inheritance &lt;orm-technology&gt;:&lt;ORM-file-url&gt;] 
+                [-conf &lt;configuration-file-location&gt;]
+
+
+</code></pre>
+<p>For example if you want enrich your migration from Postgresql with a configuration file <code>migration-config.json</code> located in the <code>/tmp</code> folder you can type:</p>
+<pre><code>./oteleporter.sh -jdriver postgresql -jurl jdbc:postgresql://localhost:5432/testdb 
+                -juser username -jpasswd password -ourl plocal:$ORIENTDB_HOME/databases/testdb 
+                -conf /tmp/migration-config.json
+
+</code></pre>
+<p>After the first migration, the graph database will be built and the configuration you passed as argument to Teleporter <strong>will be copied into the database</strong> folder in a path like that:</p>
+<pre><code>$ORIENDB_HOME/databases/testdb/teleporter-config/migration-config.json
+</code></pre>
+<p>In the following executions the new configuration in your database will be processed automatically, making coherent and simpler the synchronization procedure. If you want change any setting you can modify directly that file.<br />
+In fact Teleporter, at execution time, <strong>sequentially looks for</strong>:</p>
+<ol>
+<li>the configuration file <code>migration-config.json</code> in the database directory <strong>$ORIENDB_HOME/databases/testdb/teleporter-config/</strong></li>
+<li>if no config file will be found, then a <strong>potential input config</strong> will be considered</li>
+<li>if no config file was passed as argument the <strong>migration will be performed without any configuration</strong></li>
+</ol>
+<h2 id="relationship-configuration"><a class="header" href="#relationship-configuration">Relationship configuration</a></h2>
+<p>The configuration allows you to <strong>manage the relationships of your database domain</strong>.<br />
+To comprehend the importance of this feature we have to consider that Teleporter builds the schema in OrientDB and carries out the migration starting from the source DB schema: <strong>Vertices and Edges are built starting from Entities (tables) and Relationships (foreign keys)</strong> which are inferred from your database metadata.<br />
+Therefore if you didn't defined some constraints, such as foreign keys between the tables on which you usually perform join operations, you will lose this kind of info during the importing process.<br />
+To be clear <strong>if no foreign keys are declared in the schema, you will not have any edges in your final Graph Database</strong>.</p>
+<p>So if some constraints are not defined in your schema for performance reasons, submitting a configuration file is essential in order to obtain a complete graph model and perform a good and effective migration to OrientDB.</p>
+<p>You can do that by <strong>enriching the basic mapping</strong> of Teleporter between the <strong>E-R model and the Graph Model</strong> to customize your importing. You can add new relationships or modify info about relationships already defined in your database schema, interacting directly on the domains-mapping carried out by Teleporter.<br />
+Each Relationship expressed in your schema through a foreign key will be transformed into an Edge class in the graph model according to automatic choices that implicate:</p>
+<ul>
+<li>the <strong>name</strong> of the Edge</li>
+<li>the <strong>direction</strong> of the Edge</li>
+<li>the <strong>properties</strong> of the Edge</li>
+<li>the <strong>type</strong> of each property and potential constraints (mandatory, readOnly, notNull)</li>
+</ul>
+<p>So you can intervene in this mapping and make your personal choices.</p>
+<p>Let's start to analyse the syntax in order to examine the two main actions you can manage during the migration:</p>
+<ul>
+<li><strong>adding relationships</strong> not declared in your schema</li>
+<li><strong>modifying relationships</strong> present in your schema</li>
+</ul>
+<p>###Adding Relationships</p>
+<p>The JSON syntax of the <strong>configuration file</strong> will appear very intuitive if you bear in mind that it <strong>reflects the mapping between the E-R model and the Graph Model</strong>.<br />
+Let's consider the configuration below:</p>
+<pre><code>{
+	"edges": [{
+		"WorksAtProject": {
+			"mapping": {
+				"fromTable": "EMPLOYEE",
+				"fromColumns": ["PROJECT"],
+				"toTable": "PROJECT",
+				"toColumns": ["ID"],
+				"direction": "direct"
+			},
+			"properties": {
+				"updatedOn": {
+					"type": "DATE",
+					"mandatory": true,
+					"readOnly": false,
+					"notNull": false
+				}
+			}
+		}
+	}]
+}
+</code></pre>
+<p>We are defining all the edges we want to map through the key <code>edges</code> which contains an array of elements. Each element in the array is an <strong>Edge class definition containing the mapping with a Relationship</strong> in the relational model.<br />
+Let's suppose we have two entities "Employee" and "Project" in our database with a logical Relationship between them: starting from an Employee you can navigate the Projects he's working at.</p>
+<pre><code>		  EMPLOYEE                                                     PROJECT
+	      (Foreign Table)                                              (Parent Table)
+ ________________________________________________                _____________________________________
+|       |              |             |           |              |       |         |                   |
+|  ID   |  FIRST_NAME  |  LAST_NAME  |  PROJECT  |              |  ID   |  TITLE  |  PROJECT_MANAGER  |
+|_______|______________|_____________|___________|              |_______|_________|___________________|
+|       |              |             |           |              |       |         |                   |
+|       |              |             |           |              |       |         |                   |
+|_______|______________|_____________|___________|              |_______|_________|___________________|
+
+
+</code></pre>
+<p>Without a foreign key definition we lose this Relationship and we obtain a graph model without the correspondent Edge class; consequently no edges between vertices of class "Employee" and vertices of class "Project" will be present.</p>
+<p>&lt;img: tables without FK -- graph model wihtout edge class -- graph without edges&gt;</p>
+<p>Through this mapping we can <strong>overcome the lack of a foreign key</strong> and recover the lost info.<br />
+Let's take a look closer to the <strong>edge mapping</strong>:</p>
+<pre><code>{
+	"WorksAtProject": {
+		"mapping": {
+			"fromTable": "EMPLOYEE",
+			"fromColumns": ["PROJECT"],
+			"toTable": "PROJECT",
+			"toColumns": ["ID"],
+			"direction": "direct"
+		},
+		"properties": {
+			"updatedOn": {
+				"type": "DATE",
+				"mandatory": true,
+				"readOnly": false,
+				"notNull": false
+			}
+		}
+	}
+}
+</code></pre>
+<p>We are mapping the Edge class "WorksAtProject" with a Relationship with cardinality 1-N between "Employee" and "Project" on the basis of 4 essential values:</p>
+<ul>
+<li><strong>fromTable</strong>: the foreign entity that imports the primary key of the parent table. In the example it's the "EMPLOYEE" table.</li>
+<li><strong>fromColumns</strong>: the attributes involved in the foreign key. In the example it's the "PROJECT" column in the "EMPLOYEE" table.</li>
+<li><strong>toTable</strong>: the parent entity whose primary key is imported by the foreign table. In the example it's the "PROJECT" table.</li>
+<li><strong>toColumns</strong>: the attributes involved in the primary key imported. In the example it's the "ID" column in the "PROJECT" table.</li>
+</ul>
+<p>As this Relationship is not declared in your database, it will be added and the correspondent Edge will be built according to the other info you can set.</p>
+<p>With the key <code>direction</code> you can express the direction of the edges between the vertices. You can set this argument with two different values:</p>
+<ul>
+<li><strong>direct</strong>: the edge will reflect the direction of the relationship.</li>
+<li><strong>inverse</strong>: the edge will have opposite direction respect to the relationship.</li>
+</ul>
+<p>So if we define in the configuration file a relationship as follows:</p>
+<pre><code>"WorksAtProject": {
+		"mapping": {
+			"fromTable": "EMPLOYEE",
+			"fromColumns": ["PROJECT"],
+			"toTable": "PROJECT",
+			"toColumns": ["ID"],
+			"direction": "direct"
+		},
+ 		...
+}
+</code></pre>
+<p>a new Relationship will be added</p>
+<pre><code>EMPLOYEE -----------------------------&gt; PROJECT
+	   fromTable    =  EMPOYEE
+	   toTable      =  PROJECT
+	   fromColumns  =  [PROJECT]
+	   TOColumns    =  [ID]
+</code></pre>
+<p>and choosing "direct" direction, or don't declaring anything about that, we will obtain an Edge like that:</p>
+<pre><code>Employee ----[WorksAtProject]----&gt; Project
+</code></pre>
+<p>Suppose we want have the <strong>inverse logical navigation</strong> in the graph database that we could not express in the relational model.<br />
+Here is the configuration we must use:</p>
+<pre><code>		"HasCommittedEmployee": {
+			"mapping": {
+				"fromTable": "EMPLOYEE",
+				"fromColumns": ["PROJECT"],
+				"toTable": "PROJECT",
+				"toColumns": ["ID"],
+				"direction": "inverse"
+			},
+			...
+		}
+</code></pre>
+<p>In this case the <strong>same relationship</strong> of the previous example will be built</p>
+<pre><code>EMPLOYEE -----------------------------&gt; PROJECT
+	   fromTable    =  EMPOYEE
+	   toTable      =  PROJECT
+	   fromColumns  =  [PROJECT]
+	   TOColumns    =  [ID]
+</code></pre>
+<p>but the correspondent <strong>Edge will have inverse direction</strong></p>
+<pre><code>Employee &lt;----[???]----- Project
+</code></pre>
+<p>and for this reason we have changed the name of the Edge in "HasCommittedEmployee" so that the name of the class makes sense:</p>
+<pre><code>Employee &lt;----[HasCommittedEmployee]----- Project
+</code></pre>
+<p><strong>Remember: direction refers to edges in the graph, not to relationships in your database.</strong> Relationships must be always coherent with the structure of the tables.</p>
+<p>As you can see it's possible to <strong>define additional properties</strong> for the final edge:</p>
+<pre><code>{
+	"WorksAtProject": {
+		"mapping": {
+			"fromTable": "EMPLOYEE",
+			"fromColumns": ["PROJECT"],
+			"toTable": "PROJECT",
+			"toColumns": ["ID"],
+			"direction": "direct"
+		},
+		"properties": {
+			"updatedOn": {
+				"type": "DATE",
+				"mandatory": true,
+				"readOnly": false,
+				"notNull": false
+			}
+		}
+	}
+}
+
+</code></pre>
+<p>In the example above we added a property named <code>updatedOn</code> of type OType.DATE to our Edge class.<br />
+For each new defined property you can declare the following values:</p>
+<ul>
+<li><strong>type</strong>: it's the OrientDB type. This value is mandatory, if not declared the property is not added to the Edge.</li>
+<li><strong>mandatory</strong>: adds the mandatory constraint to the property and applies to it the specified value (true or false).</li>
+<li><strong>readOnly</strong>: adds the readOnly constraint to the property and applies to it the specified value (true or false).</li>
+<li><strong>notNull</strong>: adds the notNull constraint to the property and applies to it the specified value (true or false).</li>
+</ul>
+<p>By omitting a constraint or setting it to false you will have the same result: the constraint is not considered for the specific property.</p>
+<p>###Modifying existent Relationships</p>
+<p>If the relationship you are mapping is already present in your database, it will be overridden with the parameters you defined in the configuration.<br />
+In this way you can <strong>change the name and the direction of the Edge class correspondent to a relationship already present</strong> in the database schema.<br />
+Let's suppose we have a foreign key between "Employee" and "Project":</p>
+<pre><code>		  EMPLOYEE                                                          PROJECT
+	      (Foreign Table)                                                   (Parent Table)
+ ________________________________________________                    _____________________________________
+|       |              |             |           |        R         |       |         |                   |
+|  ID   |  FIRST_NAME  |  LAST_NAME  |  PROJECT  |   -----------&gt;   |  ID   |  TITLE  |  PROJECT_MANAGER  |
+|_______|______________|_____________|___________|                  |_______|_________|___________________|
+|       |              |             |           |                  |       |         |                   |
+|       |              |             |           |                  |       |         |                   |
+|_______|______________|_____________|___________|                  |_______|_________|___________________|
+
+
+</code></pre>
+<p>In this case through the automated mapping of Teleporter we will obtain the following graph model:</p>
+<p>&lt;graph-model with edge hasProject + graph&gt;</p>
+<pre><code>Employee ----[HasProject]----&gt; Project
+</code></pre>
+<p>In case we want reach a different result from the migration we can <strong>change the attributes of the relationship</strong> declaring them in the mapping.<br />
+Teleporter will <strong>recognize the relationship</strong> you want override on the basis of the values:</p>
+<ul>
+<li><strong>fromTable</strong></li>
+<li><strong>fromColumns</strong></li>
+<li><strong>toTable</strong></li>
+<li><strong>toColumns</strong></li>
+</ul>
+<p><strong>These values must to be coherent with the direction of the foreign key representing the above-mentioned Relationship. Otherwise Teleporter will interpret the relationship as a new one</strong>.<br />
+So if for example we want override the Edge built starting from the relationship</p>
+<pre><code>EMPLOYEE -----------------------------&gt; PROJECT
+	   fromTable    =  EMPOYEE
+	   toTable      =  PROJECT
+	   fromColumns  =  [PROJECT]
+	   TOColumns    =  [ID]
+</code></pre>
+<p>but we define the mapping as follows:</p>
+<pre><code>	"WorksAtProject": {
+		"mapping": {
+			"fromTable": "PROJECT",
+			"fromColumns": ["ID"],
+			"toTable": "EMPLOYEE",
+			"toColumns": ["PROJECT"],
+			"direction": "direct"
+		},
+		...
+	}
+</code></pre>
+<p>as result we will obtain the adding of a second relationship with inverted direction between the two tables:</p>
+<pre><code>PROJECT -----------------------------&gt; EMPLOYEE
+	   fromTable    =  PROJECT
+	   toTable      =  EMPLOYEE
+	   fromColumns  =  [ID]
+	   TOColumns    =  [PROJECT]
+</code></pre>
+<p>So in the graph model we will have two Edge classes (the second one is totally wrong):</p>
+<pre><code>Employee ----[HasProject]-------&gt; Project
+Employee &lt;---[WorksAtProject]---- Project
+</code></pre>
+<p>So remember to <strong>be coherent with the underlying physical schema</strong> during the mapping definition:</p>
+<p>Mapping:</p>
+<pre><code>	"WorksAtProject": {
+		"mapping": {
+			"fromTable": "EMPLOYEE",
+			"fromColumns": ["PROJECT"],
+			"toTable": "PROJECT",
+			"toColumns": ["ID"],
+			"direction": "direct"
+		},
+		...
+	}
+</code></pre>
+<p>Relationship in the E-R model:</p>
+<pre><code>EMPLOYEE -----------------------------&gt; PROJECT
+	   fromTable    =  EMPOYEE
+	   toTable      =  PROJECT
+	   fromColumns  =  [PROJECT]
+	   TOColumns    =  [ID]
+</code></pre>
+<p>Resulting Graph Model:</p>
+<pre><code>Employee ----[WorksAtProject]-------&gt; Project
+</code></pre>
+<p>If you want <strong>change the direction of the Edge</strong> you can exploit the option <code>direction</code> as described in the previous paragraph:</p>
+<pre><code>	"HasCommittedEmployee": {
+		"mapping": {
+			"fromTable": "EMPLOYEE",
+			"fromColumns": ["PROJECT"],
+			"toTable": "PROJECT",
+			"toColumns": ["ID"],
+			"direction": "inverse"
+		}
+	}
+</code></pre>
+<p>Relationship in the E-R model:</p>
+<pre><code>EMPLOYEE -----------------------------&gt; PROJECT
+	   fromTable    =  EMPOYEE
+	   toTable      =  PROJECT
+	   fromColumns  =  [PROJECT]
+	   TOColumns    =  [ID]
+</code></pre>
+<p>Resulting Graph Model:</p>
+<pre><code>Project ----[HasCommittedEmployee]-------&gt; Employee
+</code></pre>
+<p>You can also <strong>add properties</strong> to the Edge class using the syntax already defined in the previous paragraph:</p>
+<pre><code>{
+	"WorksAtProject": {
+		"mapping": {
+			"fromTable": "EMPLOYEE",
+			"fromColumns": ["PROJECT"],
+			"toTable": "PROJECT",
+			"toColumns": ["ID"],
+			"direction": "direct"
+		},
+		"properties": {
+			"updatedOn": {
+				"type": "DATE",
+				"mandatory": true,
+				"readOnly": false,
+				"notNull": false
+			}
+		}
+	}
+}
+</code></pre>
+<p>In the example above we added a properties with name "updatedOn" of type OType.DATE to our Edge class and we set only the constraint mandatory.</p>
+<p>###Configuring aggregation strategy</p>
+<p>Teleporter offers two importing strategies as described in the <a href="Teleporter-Execution-Strategies.html">Execution strategies</a> page:</p>
+<ul>
+<li><strong>naive</strong> strategy: no aggregations are executed</li>
+<li><strong>naive-aggregate</strong> strategy: aggregations can be executed</li>
+</ul>
+<p>The aggregation is performed on join tables of dimension equals to 2 (other join tables are ignored), that is to say those tables which allow joins only between two tables.<br />
+Each candidate join table is converted into an appropriate Edge class, and each field not involved in any relationship with other tables (hence not involved in any foreign key in the source database schema) is aggregated in the properties of the new built Edge.</p>
+<p>If no foreign keys are defined for a specific join table the aggregation will not be performed and no edges will represent the N-N relationship.<br />
+Through the configuration you can overcome this limit and kill two birds with one stone: in fact you can <strong>declare the two relationships with the external tables and define the mapping with an Aggregator-Edge in one shot</strong>.</p>
+<p>Let's suppose we have a N-N relationship between two tables "Film" and "Actor" without foreign keys defined in the schema.</p>
+<pre><code>                 ACTOR                                    ACTOR_FILM                                FILM
+                                                         (Join Table)
+ ____________________________________        ____________________________________        ______________________________
+|       |              |             |      |            |           |           |      |       |         |            |
+|  ID   |  FIRST_NAME  |  LAST_NAME  |      |  ACTOR_ID  |  FILM_ID  |  PAYMENT  |      |  ID   |  TITLE  |  CATEGORY  |   
+|_______|______________|_____________|      |____________|___________|___________|      |_______|_________|____________|
+|       |              |             |      |            |           |           |      |       |         |            |
+|       |              |             |      |            |           |           |      |       |         |            |
+|_______|______________|_____________|      |____________|___________|___________|      |_______|_________|____________|
+
+
+</code></pre>
+<p>We want obtain an aggregated structure as follows:</p>
+<pre><code>Actor ----[Performs]-------&gt; Film
+</code></pre>
+<p>In this case we have to use this syntax:</p>
+<pre><code>{
+	"Performs": {
+		"mapping": {
+			"fromTable": "ACTOR",
+			"fromColumns": ["ID"],
+			"toTable": "FILM",
+			"toColumns": ["ID"],
+			"joinTable": {
+				"tableName": "ACTOR_FILM",
+				"fromColumns": ["ACTOR_ID"],
+				"toColumns": ["FILM_ID"]
+			},
+			"direction": "direct"
+		},
+		"properties": {
+		 ...
+		}
+	}
+}
+</code></pre>
+<p>We can implicitly define the <strong>direction</strong> of the Edge by choosing:</p>
+<ul>
+<li>the <strong>from-table</strong></li>
+<li>the <strong>to-table</strong></li>
+</ul>
+<p>In our example we decided to express the relationship between Actors and Films through a "Performs" Edge starting from Actor vertices and ending into Film vertices.</p>
+<p>Once again we can exploit the semantics of the <code>direction</code> key to reverse the final edge:</p>
+<pre><code>{
+	"HasActor": {
+		"mapping": {
+			"fromTable": "ACTOR",
+			"fromColumns": ["ID"],
+			"toTable": "FILM",
+			"toColumns": ["ID"],
+			"joinTable": {
+				"tableName": "ACTOR_FILM",
+				"fromColumns": ["ACTOR_ID"],
+				"toColumns": ["FILM_ID"]
+			},
+			"direction": "inverse"
+		},
+		"properties": {
+
+		}
+	}
+}
+</code></pre>
+<p>In this way we can have the following schema:</p>
+<pre><code>Film ------[HasActor]------&gt; Actor
+```	
+
+When you are taking advantage of this aggregating feature you have to define an **additional field** `join table` as shown in the example.
+
+</code></pre>
+<pre><code>"joinTable": {
+	"tableName": "ACTOR_FILM",
+	"fromColumns": ["ACTOR_ID"],
+	"toColumns": ["FILM_ID"]
+}
+</code></pre>
+<pre><code>
+In this field you have to specify:
+
+- **tableName**: the name of the join table which will be aggregated into the declared Edge.
+- **fromColumns**: the columns of the join table involved in the relationship with the "from-table".
+- **toColumns**: the columns of the join table involved in the relationship with the "to-table".
+
+**This info is essential** for Teleporter to infer all the single relationships between the records of the two external tables "ACTOR" and "FILM" and to build all the edges coherently, so if you don't declare any of these fields an **exception** will be thrown.
+
+Remember that this syntax offers a shortcut to configure relationships and aggregation choices, thus **you can use it only when you are executing the aggregation strategy**.  
+Performing your migration with a naive strategy using this syntax makes no sense, and here again an exception will be thrown.
+
+
+
+
+
+
+
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../teleporter/Teleporter-Table-Per-Concrete-Class-Inheritance.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../etl/ETL-Introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../teleporter/Teleporter-Table-Per-Concrete-Class-Inheritance.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../etl/ETL-Introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

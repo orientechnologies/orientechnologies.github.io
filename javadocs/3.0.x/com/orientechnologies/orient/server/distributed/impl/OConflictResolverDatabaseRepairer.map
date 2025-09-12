@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../ODistributedDatabaseRepairer.html" title="com.orientechnologies.orient.server.distributed.ODistributedDatabaseRepairer" alt="" coords="33,11,251,53"/>
+<area shape="rect" id="node1" href="../ODistributedDatabaseRepairer.html" title="&lt;TABLE&gt;" alt="" coords="22,5,262,59"/>
+<area shape="rect" id="node2_1" href="./OConflictResolverDatabaseRepairer.html" title="com.orientechnologies.orient.server.distributed.impl.OConflictResolverDatabaseRepairer" alt="" coords="16,118,268,143"/>
+<area shape="rect" id="node2" href="./OConflictResolverDatabaseRepairer.html" title="&lt;TABLE&gt;" alt="" coords="5,107,279,155"/>
+</map>

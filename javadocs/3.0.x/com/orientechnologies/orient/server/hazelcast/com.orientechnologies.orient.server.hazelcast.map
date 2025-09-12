@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OHazelcastPlugin.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastPlugin" alt="" coords="16,17,149,42"/>
+<area shape="rect" id="node1" href="./OHazelcastPlugin.html" title="&lt;TABLE&gt;" alt="" coords="5,5,160,53"/>
+<area shape="rect" id="node2_1" href="./OHazelcastDistributedMap.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastDistributedMap" alt="" coords="195,17,389,42"/>
+<area shape="rect" id="node2" href="./OHazelcastDistributedMap.html" title="&lt;TABLE&gt;" alt="" coords="185,5,399,53"/>
+<area shape="rect" id="node3_2" href="./OHazelcastMergeStrategy.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastMergeStrategy" alt="" coords="435,17,624,42"/>
+<area shape="rect" id="node3" href="./OHazelcastMergeStrategy.html" title="&lt;TABLE&gt;" alt="" coords="424,5,635,53"/>
+</map>

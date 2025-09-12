@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Install as Service on Windows - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="install-as-a-service-on-windows"><a class="header" href="#install-as-a-service-on-windows">Install as a Service on Windows</a></h1>
+<p>OrientDB is a Java server application. As most server applications, they have to perform several tasks, before being able to shut down the Virtual Machine process, hence they need a portable way to be notified of the imminent Virtual Machine shutdown.
+At the moment, the only way to properly shut down an OrientDB server instance (not embedded) is to execute the <em>shutdown.bat</em> (or <em>shutdown.sh</em>) script shipped with the OrientDB distribution, but it's up to the user to take care of this. This implies that the server instance isn't  stopped correctly, when the computer on which it is deployed, is shut down without executing the above script.</p>
+<h2 id="apache-commons-daemon"><a class="header" href="#apache-commons-daemon">Apache Commons Daemon</a></h2>
+<p><a href="http://commons.apache.org/daemon/">Apache Commons Daemon</a> is a set of applications and API enabling Java server application to run as native non interactive server applications under Unix and Windows. In Unix, server applications running in the background are called <em>daemons</em> and are controlled by the operating system with a set of specified <em>signals</em>. Under Windows, such programs are called services and are controlled by appropriate calls to specific functions defined in the application binary. Although the ways of dealing with running daemons or services are different, in both cases the operating system can notify a server application of its imminent shutdown, and the underlying application has the ability to perform certain tasks, before its process of execution is destroyed. Wrapping OrientDB as a <em>Unix daemon</em> or as a <em>Windows service</em> enables the management of this server application lifecycle through the mechanisms provided natively by both Unix and Windows operating systems.</p>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<p>This tutorial is focused on Windows, so you have to download <em>procrun</em>. <a href="http://commons.apache.org/daemon/procrun.html">Procrun</a> is a set of applications, which allow Windows users to wrap (mostly) Java applications (e.g. Tomcat) as a Windows service. The service can be set to automatically start, when the machine boots and will continue to run with no user logged onto the machine.</p>
+<ol>
+<li>Point you browser to the <a href="http://commons.apache.org/daemon/download_daemon.cgi">Apache Commons Daemon download page</a>.</li>
+<li>Click on <strong>Browse native binaries download area...</strong>: you will see the index <strong>commons/daemon/binaries/</strong> (even if the title in the page reports <strong>Index of dist/commons</strong>).</li>
+<li>Click on <strong>windows</strong>. Now you can see the index of <strong>commons/daemon/binaries/windows</strong>.</li>
+<li>Click on <strong>commons-daemon-1.0.7-bin-windows.zip</strong>. The download starts.</li>
+<li>Unzip the file in a directory of your choice.
+The content of the archive is depicted below:</li>
+</ol>
+<pre><code>commons-daemon-1.0.7-bin-windows
+|
+\---amd64
+    |
+    \---prunsrv.exe
+|
+\---ia64
+    |
+    \---prunsrv.exe
+|
+\---LICENCE.txt
+|
+\---NOTICE.txt
+|
+\---prunmgr.exe
+|
+\---prunsrv.exe
+|
+\---RELEASE-NOTES.txt
+</code></pre>
+<p>If version 1.0.15 is not listed, check <a href="https://archive.apache.org/dist/commons/daemon/binaries/windows/">Apache Commons Daemon Windows download page</a> directly.</p>
+<p><strong>prunmgr</strong> is a GUI application for monitoring and configuring Windows services wrapped with procrun. <strong>prunsrv</strong> is a service application for running applications as services. It can convert any application (not just Java applications) to run as a service. The directory <strong>amd64</strong> contains a version of <strong>prunsrv</strong> for x86-64 machines while the directory <strong>ia64</strong> contains a version of <strong>prunsrv</strong> for Itanium 64 machines.</p>
+<p>Once you downloaded the applications, you have to put them in a folder under the OrientDB installation folder.</p>
+<ol>
+<li>Go to the OrientDB folder, in the following referred as <em>%ORIENTDB_HOME%</em></li>
+<li>Create a new directory and name it <strong>service</strong></li>
+<li>Copy there the appropriate versions of <strong>prunsrv</strong> according to the architecture of your machine and <strong>prunmgr</strong>.</li>
+</ol>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
+<p>In this section, we will show how to wrap OrientDB as a Windows Service.
+In order to wrap OrientDB as a service, you have to execute a short script that uses the prunsrv application to configure a Windows Service.</p>
+<p>Before defining the Windows Service, you have to rename <strong>prunsrv</strong> and <strong>prunmgr</strong> according to the name of the service. Both applications require the name of the service to manage and monitor as parameter but you can avoid it by naming them with the name of the service. In this case, rename them respectively <strong>OrientDBGraph</strong> and <strong>OrientDBGraphw</strong> as <em>OrientDBGraph</em> is the name of the service that you are going to configure with the script below. If you want to use a difference service name, you have to rename both application respectively <strong>myservicename</strong> and <strong>myservicenamew</strong> (for example, if you are wrapping OrientDB and the name of the service is <em>OrientDB</em>, you could rename <em>prunsrv</em> as <em>OrientDB</em> and <em>prunmgr</em> as <em>OrientDBw</em>).
+After that, create the file <strong>%ORIENTDB_HOME%\service\installService.bat</strong> with the content depicted below:</p>
+<pre><code>:: OrientDB Windows Service Installation
+@echo off
+rem Remove surrounding quotes from the first parameter
+set str=%~1
+rem Check JVM DLL location parameter
+if "%str%" == "" goto missingJVM
+set JVM_DLL=%str%
+rem Remove surrounding quotes from the second parameter
+set str=%~2
+rem Check OrientDB Home location parameter
+if "%str%" == "" goto missingOrientDBHome
+set ORIENTDB_HOME=%str%
+
+set CONFIG_FILE=%ORIENTDB_HOME%/config/orientdb-server-config.xml
+set LOG_FILE=%ORIENTDB_HOME%/config/orientdb-server-log.properties
+set LOG_CONSOLE_LEVEL=info
+set LOG_FILE_LEVEL=fine
+set WWW_PATH=%ORIENTDB_HOME%/www
+set ORIENTDB_ENCODING=UTF8
+set ORIENTDB_SETTINGS=-Dprofiler.enabled=true -Dcache.level1.enabled=false -Dcache.level2.strategy=1
+set JAVA_OPTS_SCRIPT=-XX:+HeapDumpOnOutOfMemoryError
+
+rem Install service
+OrientDBGraphX.X.X.exe //IS --DisplayName="OrientDB GraphEd X.X.X" ^
+--Description="OrientDB Graph Edition, aka GraphEd, contains OrientDB server integrated with the latest release of the TinkerPop Open Source technology stack supporting property graph data model." ^
+--StartClass=com.orientechnologies.orient.server.OServerMain --StopClass=com.orientechnologies.orient.server.OServerShutdownMain ^
+--Classpath="%ORIENTDB_HOME%\lib\*" --JvmOptions=-Dfile.encoding=%ORIENTDB_ENCODING%;-Djava.util.logging.config.file="%LOG_FILE%";-Dorientdb.config.file="%CONFIG_FILE%";-Dorientdb.www.path="%WWW_PATH%";-Dlog.console.level=%LOG_CONSOLE_LEVEL%;-Dlog.file.level=%LOG_FILE_LEVEL%;-Dorientdb.build.number="@BUILD@";-DORIENTDB_HOME="%ORIENTDB_HOME%" ^
+--StartMode=jvm --StartPath="%ORIENTDB_HOME%\bin" --StopMode=jvm --StopPath="%ORIENTDB_HOME%\bin" --Jvm="%JVM_DLL%" --LogPath="%ORIENTDB_HOME%\log" --Startup=auto
+
+EXIT /B
+
+:missingJVM
+echo Insert the JVM DLL location
+goto printUsage
+
+:missingOrientDBHome
+echo Insert the OrientDB Home
+goto printUsage
+
+:printUsage
+echo usage:
+echo     installService JVM_DLL_location OrientDB_Home
+EXIT /B
+</code></pre>
+<p>The script requires two input parameters:</p>
+<ol>
+<li>The location of jvm.dll, for example <em>C:\Program Files\Java\jdk1.6.0_26\jre\bin\server\jvm.dll</em></li>
+<li>The location of the OrientDB installation folder, for example <em>D:\orientdb-graphed-1.0rc5</em></li>
+</ol>
+<p>The service is actually installed when executing <strong>OrientDBGraph.exe</strong> (originally prunsrv) with the appropriate set of command line arguments and parameters.
+The command line argument <strong>//IS</strong> states that the execution of that application will result in a service installation.
+Below there is the table with the command line parameters used in the above script.</p>
+<table><tbody>
+  <tr><th>Parameter name</th><th>Description</th><th>Source</th></tr>
+  <tr><td>--DisplayName</td><td>The name displayed in the Windows Services Management Console</td><td>Custom</td></tr>
+  <tr><td>--Description</td><td>The description displayed in the Windows Services Management Console</td><td>Custom</td></tr>
+  <tr><td>--StartClass</td><td>Class that contains the startup method (= the method to be called to start the application). The default method to be called is the <code>main</code> method</td><td>The class invoked in the */bin/server.bat* script</td></tr>
+  <tr><td>--StopClass</td><td>Class that will be used when receiving a Stop service signal. The default method to be called is the <code>main</code> method</td><td>The class invoked in the */bin/shutdown.bat* script</td></tr>
+  <tr><td>--Classpath</td><td>Set the Java classpath</td><td>The value of the <code>-cp</code> parameter specified in the _%ORIENTDB_HOME%\bin\server.bat_ script</td></tr>
+  <tr><td>--JvmOptions</td><td>List of options to be passed to the JVM separated using either # or ; characters</td><td>The list of options in the form of -D or -X specified in the _%ORIENTDB_HOME%\bin\server.bat_ script and the definition of the ORIENTDB_HOME system property</td></tr>
+  <tr><td>--StartMode</td><td>Specify how to start the process. In this case, it will start Java in-process and not as a separate image</td><td>Based on Apache Tomcat configuration</td></tr>
+  <tr><td>--StartPath</td><td>Working path for the StartClass</td><td>_%ORIENTDB_HOME%\bin_</td></tr>
+  <tr><td>--StopMode</td><td>The same as --StartMode</td><td>Based on Apache Tomcat configuration</td></tr>
+  <tr><td>--StopPath</td><td>Working path for the StopClass</td><td>_%ORIENTDB_HOME%\bin_</td></tr>
+  <tr><td>--Jvm</td><td>Which *jvm.dll* to use: the default one or the one located in the specified full path</td><td>The first input parameter of this script. Ensure that you insert the location of the Java HotSpot Server VM as a full path. We will use the server version for both start and stop.</td></tr>
+  <tr><td>--LogPath</td><td>Path used by prunsrv for logging</td><td>The default location of the Apache Commons Daemon log</td></tr>
+  <tr><td>--Startup</td><td>States if the service should start at machine start up or manually</td><td>auto</td></tr>
+</tbody></table>
+For a complete reference to all available parameters and arguments for prunsrv and prunmgr, visit the [Procrun page](http://commons.apache.org/daemon/procrun.html).
+<p>In order to install the service:</p>
+<ol>
+<li>Open the Windows command shell</li>
+<li>Go to <em>%ORIENTDB_HOME%\service</em>, for example typing in the shell <code>&gt; cd D:\orientdb-graphed-1.0rc5\service</code></li>
+<li>Execute the <em>installService.bat</em> specifying the <em>jvm.dll</em> location and the OrientDB Home as full paths, for example typing in the shell <code>&gt; installService.bat "C:\Program Files\Java\jdk1.6.0_26\jre\bin\server\jvm.dll" D:\orientdb-graphed-1.0rc5</code></li>
+<li>Open the Windows Services Management Console - from the taskbar, click on <em>Start</em>, <em>Control Panel</em>, <em>Administrative Tools</em> and then <em>Service</em> - and check the existance of a service with the same name specified as value of the <code>--DisplayName</code> parameter (in this case <strong>OrientDB GraphEd 1.0rc5</strong>). You can also use <em>%ORIENTDB_HOME%\service\OrientDBGraphw.exe</em> to manage and monitor the <em>OrientDBGraph</em> service.</li>
+</ol>
+<p>Example (in the <code>service</code> directroy) start and stop the service:</p>
+<pre><code>:start
+OrientDBGraph.exe //ES
+:stop
+OrientDBGraph.exe //SS
+</code></pre>
+<p>Note that you need to start the OrientDB server once manually via <code>server.bat</code> in %ORIENTDB_HOME%\bin once, before starting the service.</p>
+<h3 id="other-resources"><a class="header" href="#other-resources">Other resources</a></h3>
+<p>To learn more about how to install OrientDB on specific environment please follow the guide below:</p>
+<ul>
+<li><a href="http://famvdploeg.com/blog/2013/01/setting-up-an-orientdb-server-on-ubuntu/">Install on Linux Ubuntu</a></li>
+<li><a href="http://team.ops4j.org/wiki/display/ORIENT/Installation+on+JBoss+AS">Install on JBoss AS</a></li>
+<li><a href="http://team.ops4j.org/wiki/display/ORIENT/Installation+on+GlassFish">Install on GlassFish</a></li>
+<li><a href="https://www.digitalocean.com/community/articles/how-to-install-and-use-orientdb-on-an-ubuntu-12-04-vps">Install on Ubuntu 12.04 VPS (DigitalOcean)</a></li>
+<li><a href="Unix-Service.html">Install as service on Unix, Linux and MacOSX</a></li>
+<li><a href="Windows-Service.html">Install as service on Windows</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../admin/Unix-Service.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../admin/Docker-Home.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../admin/Unix-Service.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../admin/Docker-Home.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

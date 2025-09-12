@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Home - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="orientdb-manual---version-400"><a class="header" href="#orientdb-manual---version-400">OrientDB Manual - version 4.0.0</a></h1>
+<p><img src="_cover_small.png" alt="image" /></p>
+<p>Welcome to <strong>OrientDB</strong> - the first Multi-Model Open Source NoSQL DBMS that brings together the power of graphs and the flexibility of documents into one scalable high-performance operational database.</p>
+<h1 id="orientdb-v-400-is-our-latest-ga"><a class="header" href="#orientdb-v-400-is-our-latest-ga">OrientDB v 4.0.0 is our latest GA</a></h1>
+<h2 id="quick-navigation"><a class="header" href="#quick-navigation">Quick Navigation</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Getting Started</th><th>Main Topics</th><th>Developers</th></tr></thead><tbody>
+<tr><td><a href="introduction/README.html">Introduction to OrientDB</a></td><td><a href="datamodeling/Concepts.html">Basic Concepts</a></td><td><a href="sql/README.html">SQL</a></td></tr>
+<tr><td><a href="gettingstarted/Tutorial-Installation.html">Installation</a></td><td><a href="general/Types.html">Supported Data Types</a></td><td><a href="gremlin/Gremlin.html">Gremlin</a></td></tr>
+<tr><td><a href="gettingstarted/Tutorial-Working-with-graphs.html">First Steps</a></td><td><a href="general/Inheritance.html">Inheritance</a></td><td><a href="misc/OrientDB-REST.html">HTTP API</a></td></tr>
+<tr><td><a href="misc/Troubleshooting.html">Troubleshooting</a></td><td><a href="security/Security.html">Security</a></td><td><a href="java/Java-API.html">Java API</a></td></tr>
+<tr><td><a href="ee/Enterprise-Edition.html">Enterprise Edition</a></td><td><a href="indexing/Indexes.html">Indexes</a></td><td><a href="orientjs/OrientJS.html">NodeJS</a></td></tr>
+<tr><td><a href="security/OrientDB-Security-Guide.html">Security Guide</a></td><td><a href="internals/Transactions.html">ACID Transactions</a></td><td><a href="https://github.com/orientechnologies/PhpOrient">PHP</a></td></tr>
+<tr><td></td><td><a href="admin/Functions.html">Functions</a></td><td><a href="https://github.com/orientechnologies/pyorient">Python</a></td></tr>
+<tr><td></td><td><a href="internals/Caching.html">Caching Levels</a></td><td><a href="https://github.com/orientechnologies/OrientDB-NET.binary">.NET</a></td></tr>
+<tr><td></td><td><a href="legacy/Use-Cases.html">Common Use Cases</a></td><td><a href="apis-and-drivers/README.html">Other Drivers</a></td></tr>
+<tr><td></td><td></td><td><a href="internals/Network-Binary-Protocol.html">Network Binary Protocol</a></td></tr>
+<tr><td></td><td></td><td><a href="http://www.orientechnologies.com/javadoc/latest/">Javadocs</a></td></tr>
+</tbody></table>
+</div>
+<h3 id="operations"><a class="header" href="#operations">Operations</a></h3>
+<ul>
+<li><a href="gettingstarted/Tutorial-Installation.html">Installation</a></li>
+<li><a href="plugins/Plugins.html">3rd party Plugins</a></li>
+<li><a href="release/Upgrade.html">Upgrade</a></li>
+<li><a href="admin/Configuration.html">Configuration</a></li>
+<li><a href="distributed/Distributed-Architecture.html">Distributed Architecture</a> (replication, sharding and high-availability)</li>
+<li><a href="tuning/Performance-Tuning.html">Performance Tuning</a></li>
+<li><a href="etl/ETL-Introduction.html">ETL to Import any kind of data into OrientDB</a></li>
+<li><a href="admin/Import-From-RDBMS.html">Import from Relational DB</a></li>
+<li><a href="admin/Backup-and-Restore.html">Backup and Restore</a></li>
+<li><a href="admin/Export-and-Import.html">Export and Import</a></li>
+</ul>
+<h3 id="quick-references"><a class="header" href="#quick-references">Quick References</a></h3>
+<ul>
+<li><a href="console/README.html">Console</a></li>
+<li><a href="studio/README.html">Studio</a> web tool</li>
+<li><a href="internals/DB-Server.html">OrientDB Server</a></li>
+<li><a href="internals/Network-Binary-Protocol.html">Network-Binary-Protocol</a></li>
+<li><a href="plugins/Gephi.html">Gephi Graph Analysis Visual tool</a></li>
+<li><a href="plugins/Rexster.html">Rexster Support and configuration</a></li>
+<li><a href="http://helios.orientechnologies.com/">Continuous integration</a></li>
+</ul>
+<h3 id="resources"><a class="header" href="#resources">Resources</a></h3>
+<ul>
+<li><a href="https://orientdb.com/active-user-community">User Group</a> - Have question, troubles, problems?</li>
+<li><a href="http://webchat.freenode.net/?channels=orientdb">#orientdb IRC channel on freenode</a></li>
+<li><a href="https://orientdb.com/support">Professional Support</a></li>
+<li><a href="https://orientdb.com/training">Training</a> - Training and classes.</li>
+<li><a href="https://orientdb.com/event">Events</a> - Follow OrientDB at the next event!</li>
+<li><a href="https://orientdb.com/team/">Team</a> - Meet the team behind OrientDB</li>
+<li><a href="misc/Contribute-to-OrientDB.html">Contribute</a> - Contribute to the project.</li>
+<li><a href="https://orientdb.com/customers">Who is using OrientDB?</a> - Clients using OrientDB in production.</li>
+</ul>
+<h2 id="questions-or-need-help"><a class="header" href="#questions-or-need-help">Questions or Need Help?</a></h2>
+<p>Check out our <a href="misc/Get-in-Touch.html">Get in Touch</a> page for different ways of getting in touch with us.</p>
+<h2 id="past-releases"><a class="header" href="#past-releases">Past Releases</a></h2>
+<ul>
+<li><a href="/docs/3.0.x/">v3.1.x</a></li>
+</ul>
+<blockquote>
+<p>Every effort has been made to ensure the accuracy of this manual. However, OrientDB, LTD. makes no warranties with respect to this documentation and disclaims any implied warranties of merchantability and fitness for a particular purpose. The information in this document is subject to change without notice.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="introduction/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="introduction/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

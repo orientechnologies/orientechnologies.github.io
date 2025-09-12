@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>RidBag - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="ridbag"><a class="header" href="#ridbag">RidBag</a></h1>
+<p><strong>RidBag</strong> is a data structure that manages multiple RIDs. It is a collection without an order that could contain duplication. Actually the bag (or multi-set) is similar to set, but could hold several instances of the same object.</p>
+<p><strong>RidBag</strong> is designed to efficiently manage edges in graph database, however it could be used directly in document level.</p>
+<p><strong>Why it doesn't implement java java.util.Collection</strong></p>
+<p>The first goal of RidBag is to be able efficiently manage billions of entries. In the same time it should be possible to use such collection in the remote. The main restriction of such case is amount of data that should be sent over the network.</p>
+<p>Some of the methods of <code>java.util.Collection</code> is really hard to efficiently implement for such case, when most of them are not required for relationship management.</p>
+<h2 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h2>
+<p>RidBag has 2 modes:</p>
+<ul>
+<li><strong>Embedded</strong> - has list-like representation and serialize its content right in document</li>
+<li><strong>Tree-based</strong> - uses external tree-based data structure to manages its content. Has some overhead over embedded one, but much more efficient for many records.</li>
+</ul>
+<p>By default newly created RidBags are embedded and they are automatically converted to tree-based after reaching a threshold.
+The automatic conversion in opposite direction is disabled by default due to an issues in remote mode. However you can use it if you are using OrientDB embedded and don't use remote connections.</p>
+<p>The conversion is <strong>always</strong> done on server and never on client. Firstly it allows to avoid a lot of issues related to simultaneous conversions. Secondly it allows to simplify the clients.</p>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
+<p>RidBag could be configured with OGlobalConfiguration.</p>
+<ul>
+<li><code>RID_BAG_EMBEDDED_TO_SBTREEBONSAI_THRESHOLD</code> (<code>ridBag.embeddedToSbtreeBonsaiThreshold</code>) - The threshold of LINKBAG conversion to sbtree-based implementation. <em>Default value: 40</em>.</li>
+<li><code>RID_BAG_SBTREEBONSAI_TO_EMBEDDED_THRESHOLD</code> (<code>ridBag.sbtreeBonsaiToEmbeddedToThreshold</code>) - The threshold of LINKBAG conversion to embedded implementation. <em>Disabled by default</em>.</li>
+</ul>
+<p>Setting <code>RID_BAG_EMBEDDED_TO_SBTREEBONSAI_THRESHOLD</code> to <code>-1</code> forces using of sbtree-based RidBag. Look at <a href="../general/Concurrency.html#concurrency-when-adding-edges">Concurrency on adding edges</a> to know more about impact on graphs of this setting.</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><img src="../images/warning.png" alt="NOTE" /></td><td><em>NOTE: While running in distributed mode SBTrees are not supported. If using a distributed database then you must set <code>ridBag.embeddedToSbtreeBonsaiThreshold=Integer.MAX\_VALUE</code> to avoid replication errors.</em></td></tr>
+</tbody></table>
+</div>
+<h2 id="interaction-with-remote-clients"><a class="header" href="#interaction-with-remote-clients">Interaction with remote clients</a></h2>
+<blockquote>
+<p>NOTE: This topic is rather for contributors or driver developers. OrientDB users don't have to care about bag internals.</p>
+</blockquote>
+<p>As been said rid bag could be represented in two ways: <em>embedded</em> and <em>tree-based</em>. The first implementation serializes its entries right into stream of its owner. The second one serializes only a special pointer to an external data structure.</p>
+<p>In the same time the server could automatically convert the bag from embedded to tree-based during save/commit. So client should be aware of such conversion because it can hold an instance of rid bag.</p>
+<p>To "listen" for such changes client should assign a temporary collection id to bag.</p>
+<p>The flow of save/commit commands:</p>
+<pre><code> Client                                                         Server
+   |                                                              |
+   V                                                              |
+  /---------\      Record content [that contain bag with uuid]        |
+ |           |-------------------------------------------------------&gt;|
+ |   Send    |                                                        | Convert to tree
+ |  command  |                                                        | and save to disk
+ | to server |   Response with changes (A new collection pointer)     |
+ |           |&lt;-------------------------------------------------------/
+  \---------/        the target of new identity assignment
+   |                  identified by temporary id
+   |
+   V
+ /-----------------------------\
+ | Update a collection pointer |
+ | to be able perform actions  |
+ | with remote tree            |
+ \-----------------------------/
+</code></pre>
+<h2 id="serialization"><a class="header" href="#serialization">Serialization.</a></h2>
+<blockquote>
+<p>NOTE: This topic is rather for contributors or driver developers. OrietnDB users don't have to care about bag serialization</p>
+</blockquote>
+<p>Save and load operations are performed during save/load of owner of RidBag. Other operations are performed separately and have its own commands in binary protocol.</p>
+<p>To get definitive syntax of each network command see <a href="Network-Binary-Protocol.html">Network Binary Protocol</a></p>
+<h3 id="serialization-during-save-and-load"><a class="header" href="#serialization-during-save-and-load">Serialization during save and load</a></h3>
+<p>The bag is serialized in a binary format. If it is serialized into document by CSV serializer it's encoded with base64.</p>
+<p>The format is following:</p>
+<pre><code>(config:byte)[(temp_id:uuid:optional)](content.md)
+</code></pre>
+<p>The first byte is reserved for configuration. The bits of config byte define the further structure of binary stream:</p>
+<ol>
+<li>1st: 1 if bag is embedded. 0 if tree-based.</li>
+<li>2nd: 1 if uuid is assigned, 0 otherwise. Used to prevent storing of UUID to disk.</li>
+</ol>
+<p>If bag is embedded content has following</p>
+<pre><code>(size:int)(link:rid)*
+</code></pre>
+<p>If bag is tree based it doesn't serialize the content it serialize just a <strong>collection pointer</strong> that points where the tree structure is saved:</p>
+<pre><code>(collectionPointer)(size:int)(changes)
+</code></pre>
+<p>See also <a href="#serialization-of-collection-pointer">serialization of collection pointer</a> and <a href="#serialization-of-rid-bag-changes">rid bag changes</a></p>
+<p>The cached size value is also saved to stream. It don't have to be recalculated in most cases.</p>
+<p>The <em>changes</em> part is used by client to send changes to server. In all other cases <em>size</em> of cahnges is 0</p>
+<h3 id="size-of-rid-bag"><a class="header" href="#size-of-rid-bag">Size of rid bag</a></h3>
+<p>Calculation of size for embedded rid bag is straight forward. But what about tree-based bag.</p>
+<p>The issue there that we probably have some changes on client that have not been send to the server. On the other hand we probably have billions of records in bag on server. So we can't just calculate size on server because we don't know how to apply changes readjust that size regarding to changes on client. And in the same time calculation of size on client is inefficient because we had to iterate over big amount of records over the network.</p>
+<p>That's why following approach is used:</p>
+<ul>
+<li>Client ask server for RidBag size and provide client changes</li>
+<li>Server apply changes in memory to calculate size, but doesn't save them to bag.</li>
+<li>New entries (documents that have never been saved) are not sent to server for recalculation, and the size is adjusted on client. New entries doesn't have an identity yet, but rid bag works only with identities. So to prevent miscalculation it is easier to add the count of not saved entries to calculated bag size on client.</li>
+</ul>
+<h4 id="request_ridbag_get_size-network-command"><a class="header" href="#request_ridbag_get_size-network-command">REQUEST_RIDBAG_GET_SIZE network command</a></h4>
+<p><strong>Request:</strong></p>
+<pre><code>(treePointer:collectionPointer)(changes)
+</code></pre>
+<p>See also <a href="#serialization-of-collection-pointer">serialization of collection pointer</a> and <a href="#serialization-of-rid-bag-changes">rid bag changes</a></p>
+<p><strong>Response:</strong></p>
+<pre><code>(size:int)
+</code></pre>
+<h3 id="iteration-over-tree-based-ridbag"><a class="header" href="#iteration-over-tree-based-ridbag">Iteration over tree-based RidBag</a></h3>
+<p>Iteration over tree-based RidBag could be implemented with <strong>REQUEST_SBTREE_BONSAI_GET_ENTRIES_MAJOR</strong> and <strong>REQUEST_SBTREE_BONSAI_FIRST_KEY</strong>.</p>
+<p>Server doesn't know anything about client changes. So iterator implementation should apply changes to the result before returning result to the user.</p>
+<p>The algorithm of fetching records from server is following:</p>
+<ol>
+<li>Get the <em>first key</em> from SB-tree.</li>
+<li>Fetch portion of data with <em>getEtriesMajor</em> operation.</li>
+<li>Repeat <strong>step 2</strong> while <em>getEtriesMajor</em> returns any result.</li>
+</ol>
+<h3 id="serialization-of-rid-bag-changes"><a class="header" href="#serialization-of-rid-bag-changes">Serialization of rid bag changes</a></h3>
+<pre><code>(changesSize:int)[(link:rid)(changeType:byte)(value:int)]*
+</code></pre>
+<p>changes could be 2 types:</p>
+<ul>
+<li><strong>Diff</strong> - value defines how the number of entries is changed for specific link.</li>
+<li><strong>Absolute</strong> - sets the number of entries of specified link. The number defined by value field.</li>
+</ul>
+<h3 id="serialization-of-collection-pointer"><a class="header" href="#serialization-of-collection-pointer">Serialization of collection pointer</a></h3>
+<pre><code>(fileId:long)(pageIndex:long)(pageOffset:int)
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../internals/Limits.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../internals/Custom-Index-Engine.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../internals/Limits.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../internals/Custom-Index-Engine.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

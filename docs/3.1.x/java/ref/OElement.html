@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>OElement - OrientDB</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="OrientDB documentation">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OrientDB</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>search:
+keywords: ['java', 'OElement', 'document', 'vertex', 'edge']</h2>
+<h1 id="java-api---oelement"><a class="header" href="#java-api---oelement">Java API - OElement</a></h1>
+<p>This class provides a standard interface for handling documents, vertices and edges.</p>
+<h2 id="managing-elements"><a class="header" href="#managing-elements">Managing Elements</a></h2>
+<p>When using OrientDB as a Document database, this class represents a document record.  When using OrientDB as a Graph database, this is the superclass to the <a href="OVertex.html"><code>OVertex</code></a> and <a href="OEdge.html"><code>OEdge</code></a> classes, which represent vertices and edges in the database.</p>
+<blockquote>
+<p><strong>NOTE</strong>: In older versions of OrientDB, documents were represented using the <code>ODocument</code> class.  While this class is still around and is the primary implementation of <code>OElement</code>, it is recommended that you do not use it directly.  Instead, moving forward use <code>OElement</code> for your documents.</p>
+</blockquote>
+<p>This class is available at <code>com.orientechnologies.orient.core.record</code>.  To import it, use the following line where necessary:</p>
+<pre><code class="language-java">import com.orientechnologies.orient.core.record.OElement;
+</code></pre>
+<p>Once you've imported the class to your application, you can use it to build particular instances in your code.</p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p>In order to create a new instance of this class, it is recommended that you use either <a href="ODatabaseDocument/newInstance.html"><code>newInstance()</code></a> or <a href="ODatabaseDocument/newElement.html"><code>newElement()</code></a> methods on the <a href="ODatabaseDocument.html"><code>ODatabaseDocument</code></a> class interface.  This allows you to operate on the given record and easily save it back to the database when you're ready.</p>
+<p>For instance, imagine you have a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"><code>Map</code></a> of variables containing a address book, where the key is the person's name and the value their email address, both as <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>string</code></a> values.  You might use a method like this to transfer that data into OrientDB documents.</p>
+<pre><code class="language-java">// INITIALIZE GLOBAL VARIABLES
+private ODatabaseDocument db;
+...
+
+// ADD ENTRIES TO ADDRESSBOOK DATABASE
+public void initAddressBook(Map&lt;String, String&gt; addressBook){
+
+   // Loop Over Map
+   for (Map.Entry&lt;String, String&gt; entry : addressBook.entrySet()){
+
+      // Initialize Variables
+	  String name = entry.getKey();
+	  String email = entry.getKey();
+
+	  // Create Person 
+	  OElement person = db.newElement("Person");
+	  person.setProperty("name", name);
+	  person.setProperty("email", email);
+	  
+	  // Make Person Persistent
+	  person.save();
+
+   }
+}
+</code></pre>
+<h2 id="methods"><a class="header" href="#methods">Methods</a></h2>
+<p>Once you've created or initialized an <code>OElement</code> instance, you can begin to call methods on the instance to further define and read data from the record.</p>
+<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Return Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="OElement/asEdge.html"><strong><code>asEdge()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html"><code>Optional</code></a><a href="OEdge.html"><code>&lt;OEdge&gt;</code></a></td><td>Returns record as an edge</td></tr>
+<tr><td><a href="OElement/asVertex.html"><strong><code>asVertex()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html"><code>Optional</code></a><a href="OVertex.html"><code>&lt;OVertex&gt;</code></a></td><td>Returns record as a vertex</td></tr>
+<tr><td><a href="OElement/getProperty.html"><strong><code>getProperty()</code></strong></a></td><td><code>&lt;RET&gt; RET</code></td><td>Retrieves record data by property name</td></tr>
+<tr><td><a href="OElement/getPropertyNames.html"><strong><code>getPropertyNames()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html"><code>Set</code></a><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>&lt;String&gt;</code></a></td><td>Retrieves defined property names</td></tr>
+<tr><td><a href="OElement/getSchemaType.html"><strong><code>getSchemaType()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html"><code>Optional</code></a><a href="OClass.html"><code>&lt;OClass&gt;</code></a></td><td>Retrieves the type of the current element, (that is, class in the schema, if any)</td></tr>
+<tr><td><a href="OElement/isEdge.html"><strong><code>isEdge()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html"><code>Boolean</code></a></td><td>Determines whether record is an edge</td></tr>
+<tr><td><a href="OElement/isVertex.html"><strong><code>isVertex()</code></strong></a></td><td><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html"><code>Boolean</code></a></td><td>Determines whether record is a vertex</td></tr>
+<tr><td><a href="OElement/removeProperty.html"><strong><code>removeProperty()</code></strong></a></td><td><code>&lt;RET&gt; RET</code></td><td>Removes a property from the record</td></tr>
+<tr><td><a href="#saving-elements"><strong><code>save()</code></strong></a></td><td><code>&lt;RET extends ORecord&gt; RET</code></td><td>Saves changes to OrientDB record</td></tr>
+<tr><td><a href="OElement/setProperty.html"><strong><code>setProperty()</code></strong></a></td><td><code>void</code></td><td>Sets data on record property</td></tr>
+</tbody></table>
+</div>
+<h3 id="saving-elements"><a class="header" href="#saving-elements">Saving Elements</a></h3>
+<p>When you create or retrieve an <code>OElement</code> instance, you create a snapshot of the record.  Any changes you make to the record remain in your application.  In order to make these changes persistent on the database, you need to call the <code>save()</code> method on the element.  For instance,</p>
+<pre><code class="language-java">// GLOBAL VARIABLES
+private ODatabaseDocument db;
+
+// CREATE NEW RECORD
+public void newRecord(String name, String email){
+
+   // Initialize Document
+   OElement person = db.newElement("Person");
+   person.setProperty("name", name);
+   person.setProeprty("email", email);
+
+   // Add Person to Database
+   person.save();
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../java/ref/OEdge/isLightweight.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../java/ref/OElement/asEdge.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../java/ref/OEdge/isLightweight.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../java/ref/OElement/asEdge.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+        
+        <img referrerpolicy="unsafe-url" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
