@@ -11,8 +11,6 @@ The third quarter of this year also passed, here it is an update on what happene
 
 ## Development
 
-### Done 
-
 On the development side there have been steady progress on various areas of OrientDB, mostly around distributed, deprecated
 APIs, Studio, and script engine, lets got through the details
 
