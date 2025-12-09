@@ -89,7 +89,7 @@ main() {
     mv orientdb-book/ ../public/docs/develop/
 
     cd ../
-    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
+    export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/
 
     mkdir -p public/javadocs/
     git clone https://github.com/orientechnologies/orientdb.git orientdb
