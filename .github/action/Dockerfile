@@ -11,7 +11,7 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget git openjdk-17-jdk java-common maven
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget git openjdk-21-jdk java-common maven
 
 RUN git clone https://github.com/getzola/zola.git zola
 
@@ -19,7 +19,7 @@ RUN cd zola && git checkout v0.19.2 && cargo install --path . --locked
 
 RUN cd ..
 
-RUN cargo install mdbook --locked --version="^0.4" && cargo install mdbook-variables --locked --version="^0.2"
+RUN cargo install mdbook --locked --version="^0.5" && cargo install mdbook-variables --locked --version="^0.4"
 
 COPY .github/action/entrypoint.sh /entrypoint.sh
 
