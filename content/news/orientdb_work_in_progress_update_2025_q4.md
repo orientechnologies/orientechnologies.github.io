@@ -42,7 +42,7 @@ In the maintenance side have been shipped 4 patch releases in the last 3 months,
 to the development version where applicable.
 
 ## Operations
-The documentation generation on the website was update to the last mdbook that provide a nicer layout and a better more complete TOC.
+The documentation generation on the website was update to the last mdbook that provide a nicer layout and a better more complete index.
 
 ## Future
 The work on the development side for the next quarter will focus on making the new distributed implementation stable and enabled by default, as soon as this is 
