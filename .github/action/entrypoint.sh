@@ -98,7 +98,7 @@ main() {
     echo "building javadocs for 3.2.x"    
     git checkout `cat ../LAST_STABLE`
     mvn clean javadoc:aggregate
-    mv target/site/apidocs/ ../public/javadocs/3.2.x/
+    mv target/reports/apidocs/ ../public/javadocs/3.2.x/
 
     echo "building javadocs for develop"    
     git checkout develop 
