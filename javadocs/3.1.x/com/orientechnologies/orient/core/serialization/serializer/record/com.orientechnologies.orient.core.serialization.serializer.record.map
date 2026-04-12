@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORecordSerializer.html" title="com.orientechnologies.orient.core.serialization.serializer.record.ORecordSerializer" alt="" coords="30,11,166,53"/>
+<area shape="rect" id="node1" href="./ORecordSerializer.html" title="&lt;TABLE&gt;" alt="" coords="19,5,177,59"/>
+<area shape="rect" id="node5_1" href="./ORecordSerializerRaw.html" title="com.orientechnologies.orient.core.serialization.serializer.record.ORecordSerializerRaw" alt="" coords="16,118,180,143"/>
+<area shape="rect" id="node5" href="./ORecordSerializerRaw.html" title="&lt;TABLE&gt;" alt="" coords="5,107,191,155"/>
+<area shape="rect" id="node2_2" href="./ORecordSerializerFactory.html" title="com.orientechnologies.orient.core.serialization.serializer.record.ORecordSerializerFactory" alt="" coords="212,19,395,45"/>
+<area shape="rect" id="node2" href="./ORecordSerializerFactory.html" title="&lt;TABLE&gt;" alt="" coords="201,8,405,56"/>
+<area shape="rect" id="node3_3" href="./OSerializationThreadLocal.html" title="com.orientechnologies.orient.core.serialization.serializer.record.OSerializationThreadLocal" alt="" coords="441,19,630,45"/>
+<area shape="rect" id="node3" href="./OSerializationThreadLocal.html" title="&lt;TABLE&gt;" alt="" coords="430,8,641,56"/>
+<area shape="rect" id="node4_4" href="./ORecordSaveThreadLocal.html" title="com.orientechnologies.orient.core.serialization.serializer.record.ORecordSaveThreadLocal" alt="" coords="676,19,861,45"/>
+<area shape="rect" id="node4" href="./ORecordSaveThreadLocal.html" title="&lt;TABLE&gt;" alt="" coords="665,8,872,56"/>
+</map>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OrientDB work in progress update 2025 Q4 |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon-orientdb.png">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #212127;
+        /* Primary theme text color */
+        --primary-text-color: #ee521b;
+        /* Primary theme link color */
+        --primary-link-color: #ee521b;
+        /* Secondary color: the background body color */
+        --secondary-color: #ffffff;
+        --secondary-text-color: #212127;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #ee521b;
+    }
+    .logo img {
+        width:auto !important;
+    }
+    .nav-item:hover {
+        color:#ffffff !important;
+    }
+</style>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://orientdb.dev/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;">
+    <div class="logo">
+        <img src="https://orientdb.dev/logo.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;downloads&#x2F;">Download</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;documentation&#x2F;">Docs</a>
+        
+    
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;getting-started&#x2F;">Getting Started</a>
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;support&#x2F;">Support</a>
+        
+    
+    
+        
+        <a class="nav-item subtitle-text" href="&#x2F;news&#x2F;">News</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        <div class="content text">
+            
+<div class="heading-text">OrientDB work in progress update 2025 Q4</div>
+2026-01-08
+<p>The forth quarter of 2025 also passed, closing the year, here it is an update on what happened in OrientDB last three months, will follow also
+another post with an update of what happen the whole year on OrientDB, but let's see this quarter</p>
+<h2 id="development">Development</h2>
+<p>On the development side there have been steady progress on various areas of OrientDB, mostly around distributed, studio, storage, and query engine,
+as well some meaning-full dependency updates, some of the changes also were done by external contributors and ported to OrientDB, but lets got through the details</p>
+<h5 id="distributed">Distributed</h5>
+<p>The bulk of the work in this quarter was around the distributed module, with big progress in the implementation of topology management, re-implementing
+the handling of the databases topology, and the flows for create, join and drop of databases, with as well the integration in the engine itself,
+reaching the level where already many integration tests run successfully with the new topology management, the work is not yet done though
+more work will be done to reach the level where all the current passing integration tests will pass. One other important part was also
+the porting to develop of a Ridbag fix for distributed done on the stable version</p>
+<h5 id="studio">Studio</h5>
+<p>More minor updates of deps where done in the studio, with relative code fixes, as follows up for the work on the previous quarter.</p>
+<h4 id="sql-engine">SQL Engine</h4>
+<p>Some work was done for optimize the query parsing and query execution, this was also triggered of some fixes done in the stable version.</p>
+<h4 id="storage">Storage</h4>
+<p>With the evolution of OrientDB some internal abstraction layers were broken, in the specific the Storage interface, now the biggest refactor to return to
+an isolated storage implementation has been done, there are still bits here and there to correct, but the bulk of the work is done.</p>
+<h4 id="dependencies">Dependencies</h4>
+<p>The most important dependency update was on gremlin that was upgraded from 3.7 to 3.8 with relative fixes, with the aim
+of ship OrientDB with the latest stable gremlin implementation, other minor dependencies were also updated, with notably the replacement of
+the lz4 not maintained library with a fork now maintained (external contributors helped on this).</p>
+<h2 id="maintenance">Maintenance</h2>
+<p>In the maintenance side have been shipped 4 patch releases in the last 3 months, with multiple fixes done by the core team and by external contributors. The relative fixes have been also ported
+to the development version where applicable.</p>
+<h2 id="operations">Operations</h2>
+<p>The documentation generation on the website was update to the last mdbook that provide a nicer layout and a better more complete index.</p>
+<h2 id="future">Future</h2>
+<p>The work on the development side for the next quarter will focus on making the new distributed implementation stable and enabled by default, as soon as this is
+done will proceed with a bit of work on modernizing the configuration handling and starting to prepare packages for the first beta release.</p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://orientdb.dev">OrientDB.dev</a>
+            <a rel="me" href="https://fosstodon.org/@orientdb">Mastodon</a>
+            <a href="https://matrix.to/#/#orientdb:matrix.org">Matrix Chat</a>
+        </small>
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

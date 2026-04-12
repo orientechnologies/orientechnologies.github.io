@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../orient/core/storage/impl/local/OFreezableStorageComponent.html" title="com.orientechnologies.orient.core.storage.impl.local.OFreezableStorageComponent" alt="" coords="77,11,294,53"/>
+<area shape="rect" id="node1" href="../../orient/core/storage/impl/local/OFreezableStorageComponent.html" title="&lt;TABLE&gt;" alt="" coords="66,5,305,59"/>
+<area shape="rect" id="node5_1" href="./OLuceneIndexEngine.html" title="com.orientechnologies.lucene.engine.OLuceneIndexEngine" alt="" coords="211,112,367,155"/>
+<area shape="rect" id="node5" href="./OLuceneIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="201,107,378,160"/>
+<area shape="rect" id="node2_2" href="../../orient/core/index/engine/OIndexEngine.html" title="com.orientechnologies.orient.core.index.engine.OIndexEngine" alt="" coords="340,11,449,53"/>
+<area shape="rect" id="node2" href="../../orient/core/index/engine/OIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="329,5,460,59"/>
+<area shape="rect" id="node3_3" href="../../spatial/engine/OLuceneSpatialIndexEngineDelegator.html" title="com.orientechnologies.spatial.engine.OLuceneSpatialIndexEngineDelegator" alt="" coords="16,219,280,245"/>
+<area shape="rect" id="node3" href="../../spatial/engine/OLuceneSpatialIndexEngineDelegator.html" title="&lt;TABLE&gt;" alt="" coords="5,208,291,256"/>
+<area shape="rect" id="node4_4" href="./OLuceneIndexEngineAbstract.html" title="com.orientechnologies.lucene.engine.OLuceneIndexEngineAbstract" alt="" coords="326,219,535,245"/>
+<area shape="rect" id="node4" href="./OLuceneIndexEngineAbstract.html" title="&lt;TABLE&gt;" alt="" coords="315,208,546,256"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../../common/concur/resource/OCloseable.html" title="com.orientechnologies.common.concur.resource.OCloseable" alt="" coords="16,11,109,53"/>
+<area shape="rect" id="node1" href="../../../../common/concur/resource/OCloseable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,120,59"/>
+<area shape="rect" id="node5_1" href="./OSchemaShared.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" alt="" coords="407,118,534,143"/>
+<area shape="rect" id="node5" href="./OSchemaShared.html" title="&lt;TABLE&gt;" alt="" coords="397,107,545,155"/>
+<area shape="rect" id="node2_2" href="../../OOrientShutdownListener.html" title="com.orientechnologies.orient.core.OOrientShutdownListener" alt="" coords="155,11,341,53"/>
+<area shape="rect" id="node2" href="../../OOrientShutdownListener.html" title="&lt;TABLE&gt;" alt="" coords="145,5,351,59"/>
+<area shape="rect" id="node3_3" href="../../OOrientStartupListener.html" title="com.orientechnologies.orient.core.OOrientStartupListener" alt="" coords="387,11,555,53"/>
+<area shape="rect" id="node3" href="../../OOrientStartupListener.html" title="&lt;TABLE&gt;" alt="" coords="376,5,565,59"/>
+<area shape="rect" id="node4_4" href="./OSchema.html" title="com.orientechnologies.orient.core.metadata.schema.OSchema" alt="" coords="600,11,693,53"/>
+<area shape="rect" id="node4" href="./OSchema.html" title="&lt;TABLE&gt;" alt="" coords="589,5,704,59"/>
+<area shape="rect" id="node6_5" href="../../type/ODocumentWrapperNoClass.html" title="com.orientechnologies.orient.core.type.ODocumentWrapperNoClass" alt="" coords="739,19,943,45"/>
+<area shape="rect" id="node6" href="../../type/ODocumentWrapperNoClass.html" title="&lt;TABLE&gt;" alt="" coords="729,8,954,56"/>
+</map>

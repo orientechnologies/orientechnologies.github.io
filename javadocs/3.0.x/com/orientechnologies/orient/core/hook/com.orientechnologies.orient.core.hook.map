@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODocumentHookAbstract.html" title="com.orientechnologies.orient.core.hook.ODocumentHookAbstract" alt="" coords="16,118,200,143"/>
+<area shape="rect" id="node1" href="./ODocumentHookAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,107,211,155"/>
+<area shape="rect" id="node2_1" href="./ORecordHook.html" title="com.orientechnologies.orient.core.hook.ORecordHook" alt="" coords="163,11,271,53"/>
+<area shape="rect" id="node2" href="./ORecordHook.html" title="&lt;TABLE&gt;" alt="" coords="153,5,282,59"/>
+<area shape="rect" id="node8_2" href="./ORecordHookAbstract.html" title="com.orientechnologies.orient.core.hook.ORecordHookAbstract" alt="" coords="245,118,408,143"/>
+<area shape="rect" id="node8" href="./ORecordHookAbstract.html" title="&lt;TABLE&gt;" alt="" coords="235,107,419,155"/>
+<area shape="rect" id="node3_3" href="./ORecordHook.DISTRIBUTED_EXECUTION_MODE.html" title="com.orientechnologies.orient.core.hook.ORecordHook.DISTRIBUTED_EXECUTION_MODE" alt="" coords="317,11,555,53"/>
+<area shape="rect" id="node3" href="./ORecordHook.DISTRIBUTED_EXECUTION_MODE.html" title="&lt;TABLE&gt;" alt="" coords="307,5,565,59"/>
+<area shape="rect" id="node4_4" href="./ORecordHook.HOOK_POSITION.html" title="com.orientechnologies.orient.core.hook.ORecordHook.HOOK_POSITION" alt="" coords="600,11,728,53"/>
+<area shape="rect" id="node4" href="./ORecordHook.HOOK_POSITION.html" title="&lt;TABLE&gt;" alt="" coords="589,5,739,59"/>
+<area shape="rect" id="node5_5" href="./ORecordHook.TYPE.html" title="com.orientechnologies.orient.core.hook.ORecordHook.TYPE" alt="" coords="774,11,893,53"/>
+<area shape="rect" id="node5" href="./ORecordHook.TYPE.html" title="&lt;TABLE&gt;" alt="" coords="763,5,903,59"/>
+<area shape="rect" id="node6_6" href="./ORecordHook.RESULT.html" title="com.orientechnologies.orient.core.hook.ORecordHook.RESULT" alt="" coords="938,11,1057,53"/>
+<area shape="rect" id="node6" href="./ORecordHook.RESULT.html" title="&lt;TABLE&gt;" alt="" coords="927,5,1067,59"/>
+<area shape="rect" id="node7_7" href="./ORecordHook.SCOPE.html" title="com.orientechnologies.orient.core.hook.ORecordHook.SCOPE" alt="" coords="1102,11,1221,53"/>
+<area shape="rect" id="node7" href="./ORecordHook.SCOPE.html" title="&lt;TABLE&gt;" alt="" coords="1091,5,1231,59"/>
+</map>

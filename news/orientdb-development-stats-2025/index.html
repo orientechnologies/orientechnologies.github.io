@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OrientDB development statistics of 2025 |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon-orientdb.png">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #212127;
+        /* Primary theme text color */
+        --primary-text-color: #ee521b;
+        /* Primary theme link color */
+        --primary-link-color: #ee521b;
+        /* Secondary color: the background body color */
+        --secondary-color: #ffffff;
+        --secondary-text-color: #212127;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #ee521b;
+    }
+    .logo img {
+        width:auto !important;
+    }
+    .nav-item:hover {
+        color:#ffffff !important;
+    }
+</style>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://orientdb.dev/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https:&#x2F;&#x2F;orientdb.dev&#x2F;">
+    <div class="logo">
+        <img src="https://orientdb.dev/logo.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;downloads&#x2F;">Download</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;documentation&#x2F;">Docs</a>
+        
+    
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;getting-started&#x2F;">Getting Started</a>
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https:&#x2F;&#x2F;orientdb.dev&#x2F;support&#x2F;">Support</a>
+        
+    
+    
+        
+        <a class="nav-item subtitle-text" href="&#x2F;news&#x2F;">News</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        <div class="content text">
+            
+<div class="heading-text">OrientDB development statistics of 2025</div>
+2026-01-14
+<p>2025 year is finished, so I think is a good time to give out some overall update with some stats on what happen on
+OrientDB last year, most of the work happen on the main repository on a couple of branches, the develop
+branch is where the new development is happening, and the 3.2.x branch is where the fixes of the stable release are done.</p>
+<h2 id="development">Development</h2>
+<p>In terms of development the work has been steady on almost all fronts, in the specific
+removing deprecated APIs and implementations, like legacy <code>ODatabaseDocumentTx</code>, re-designing the query engine planning and execution,
+with the result of avoiding some exponential parsing and memory allocation, isolating the storage implementation from the rest of the engine making
+sure that concurrency and parallelism are handled correctly, re-designing the distributed topology management to improve stability for
+nodes join, restart, disconnection, and in general work on many sides trying to achieve an overall improvement of stability.<br />
+All this work has been done mostly on
+the development branch, excluding some minor patches that have been ported to 3.2.x, so no user has benefited from them,
+as well all these improvements are not yet battle tested (there is no test like production), so user reachability will be the target of this year with hopefully
+some first beta releases and if all goes right a stable 4.0 release.</p>
+<p>More details on the improvements happened this year can be read in the quarter updates, check them out:</p>
+<p><a href="https://orientdb.dev/news/orientdb-work-in-progress-update-2025-q1/">OrientDB Work In Progress Update Q1</a><br />
+<a href="https://orientdb.dev/news/orientdb-work-in-progress-update-2025-q2/">OrientDB Work In Progress Update Q2</a><br />
+<a href="https://orientdb.dev/news/orientdb-work-in-progress-update-2025-q3/">OrientDB Work In Progress Update Q3</a><br />
+<a href="https://orientdb.dev/news/orientdb-work-in-progress-update-2025-q4/">OrientDB Work In Progress Update Q4</a></p>
+<p>This is also a good time to check again the backlog status that was defined <a href="/news/status-and-backlog/">in a previous post</a> and
+mark the latest status:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Remove legacy query engine APIs</li>
+<li><input disabled="" type="checkbox"/>
+Remove legacy document store APIs<br />
+Partial, most of the legacy API uses have been removed remain just some minor uses and the APIs itself</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Remove legacy database APIs<br />
+ODatabaseDocumentTx have been removed, remain some old interfaces and minor API, but can be considered done</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Fix major issues in query engine and query performance improvement</li>
+<li><input disabled="" type="checkbox"/>
+Transactional DDLs</li>
+<li><input disabled="" type="checkbox"/>
+In memory database backup &amp; restore</li>
+<li><input disabled="" type="checkbox"/>
+Support for distributed "in memory" databases</li>
+<li><input disabled="" type="checkbox"/>
+Split distributed transaction log from WAL</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Remove of TP2(aka blueprints) APIs from code</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Include of TP3(aka gremlin) APIs in main repository</li>
+<li><input disabled="" type="checkbox"/>
+Rewrite distributed node discovery</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Introduce proper consensus based algorithm for distributed topology management</li>
+<li><input disabled="" type="checkbox"/>
+New minimum java versions as 17, with migrations with the next major<br />
+Java 17 is already the minimum version and newer coding features are used, is still missing some automatic migration
+to newer java features of the codebase</li>
+<li><input disabled="" type="checkbox"/>
+Lucene integration improvements
+Work has been done in the storage engine to allow a tighter integration, but the integration
+itself is not done</li>
+<li><input disabled="" type="checkbox"/>
+Review of data types trying to remove redundant one potentially adding new types</li>
+<li><input disabled="" type="checkbox"/>
+Add &amp; Complete server commands</li>
+<li><input disabled="" type="checkbox"/>
+Review the console to integrate server commands</li>
+<li><input disabled="" type="checkbox"/>
+Introduce a third party http server</li>
+<li><input disabled="" type="checkbox"/>
+Review and improve non java clients</li>
+<li><input disabled="" type="checkbox"/>
+Review and upgrades in studio dependencies<br />
+Partial updates are done, a lot more need to be done, it cannot be considered done</li>
+<li><input disabled="" type="checkbox"/>
+Review metrics, maybe integration of OpenTelemetry</li>
+</ul>
+<p>More or less a third of the backlog is done, and the most API breaking changes are done, so as said before this
+is a level to start to wrap up and produce a 4.0 beta release soonish, not all the work on this backlog need to be done for the final release.</p>
+<h2 id="maintenance">Maintenance</h2>
+<p>The maintenance continued as usual providing support to users and clients in the last year, with the release of 12 patch releases, improving
+OrientDB in various areas like query engine, distributed, import export, ecc. This work will continue on this year, with hopefully
+starting to shift the maintenance to a new version for the end of the year.</p>
+<h2 id="code-statistics">Code Statistics</h2>
+<h3 id="develop-branch">Develop Branch</h3>
+<p>Commits: <strong>644</strong><br />
+Commits Authors (excluding bots): <strong>4</strong></p>
+<p>Diffs from first and last commit of the year:<br />
+1669 files changed, 40435 insertions(+), 45194 deletions(-)</p>
+<p>The changes this year are less than last year, but last year included also the porting of external modules to the main repository,
+that did the biggest part of that changes</p>
+<h3 id="3-2-x-branch">3.2.x branch</h3>
+<p>Commits: <strong>126</strong><br />
+Commits Authors (excluding bots): <strong>4</strong></p>
+<p>Diffs from first and last commit of the year:<br />
+122 files changed, 7024 insertions(+), 7247 deletions(-)</p>
+<h2 id="other-activities">Other Activities</h2>
+<h3 id="issues-prs">Issues &amp; PRs</h3>
+<p>In terms of other activities in 2025 year have been opened 63 new issues and have been resolved 21 issues, also have been 15 Pull Requests (excluding bots) of
+which 14 have been merged/closed</p>
+<h3 id="website">Website</h3>
+<p>The website was revamped with a more updated documentation with more modern tools online, with now the <a href="/documentation/">documentation</a> section where is possible
+to find the last version of the docs.</p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://orientdb.dev">OrientDB.dev</a>
+            <a rel="me" href="https://fosstodon.org/@orientdb">Mastodon</a>
+            <a href="https://matrix.to/#/#orientdb:matrix.org">Matrix Chat</a>
+        </small>
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

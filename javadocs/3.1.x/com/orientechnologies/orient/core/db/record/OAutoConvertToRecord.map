@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../../common/collection/OMultiCollectionIterator.html" title="com.orientechnologies.common.collection.OMultiCollectionIterator" alt="" coords="16,121,221,146"/>
+<area shape="rect" id="node1" href="../../../../common/collection/OMultiCollectionIterator.html" title="&lt;TABLE&gt;" alt="" coords="5,109,232,157"/>
+<area shape="rect" id="node2_1" href="./ORecordLazyMultiValue.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" alt="" coords="267,112,440,155"/>
+<area shape="rect" id="node2" href="./ORecordLazyMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="256,107,451,160"/>
+<area shape="rect" id="node3_2" href="./OAutoConvertToRecord.html" title="com.orientechnologies.orient.core.db.record.OAutoConvertToRecord" alt="" coords="269,11,438,53"/>
+<area shape="rect" id="node3" href="./OAutoConvertToRecord.html" title="&lt;TABLE&gt;" alt="" coords="258,5,449,59"/>
+<area shape="rect" id="node4_3" href="../../iterator/OLazyWrapperIterator.html" title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" alt="" coords="485,121,677,146"/>
+<area shape="rect" id="node4" href="../../iterator/OLazyWrapperIterator.html" title="&lt;TABLE&gt;" alt="" coords="475,109,688,157"/>
+</map>

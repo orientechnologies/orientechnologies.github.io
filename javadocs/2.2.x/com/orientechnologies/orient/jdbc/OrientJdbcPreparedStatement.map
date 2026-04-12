@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OrientJdbcPreparedStatement.html" title="com.orientechnologies.orient.jdbc.OrientJdbcPreparedStatement" alt="" coords="85,118,297,143"/>
+<area shape="rect" id="node1" href="./OrientJdbcPreparedStatement.html" title="&lt;TABLE&gt;" alt="" coords="74,107,307,155"/>
+<area shape="rect" id="node2_1" href="./OrientJdbcStatement.html" title="com.orientechnologies.orient.jdbc.OrientJdbcStatement" alt="" coords="16,19,171,45"/>
+<area shape="rect" id="node2" href="./OrientJdbcStatement.html" title="&lt;TABLE&gt;" alt="" coords="5,8,181,56"/>
+<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/java/sql/PreparedStatement.html" title="java.sql.PreparedStatement" alt="" coords="217,11,362,53"/>
+<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/java/sql/PreparedStatement.html" title="&lt;TABLE&gt;" alt="" coords="206,5,373,59"/>
+</map>

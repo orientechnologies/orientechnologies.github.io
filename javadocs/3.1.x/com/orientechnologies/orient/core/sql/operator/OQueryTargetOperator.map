@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OQueryOperator.html" title="com.orientechnologies.orient.core.sql.operator.OQueryOperator" alt="" coords="506,17,631,42"/>
+<area shape="rect" id="node1" href="./OQueryOperator.html" title="&lt;TABLE&gt;" alt="" coords="495,5,642,53"/>
+<area shape="rect" id="node2_1" href="./OQueryTargetOperator.html" title="com.orientechnologies.orient.core.sql.operator.OQueryTargetOperator" alt="" coords="485,113,652,138"/>
+<area shape="rect" id="node2" href="./OQueryTargetOperator.html" title="&lt;TABLE&gt;" alt="" coords="475,101,663,149"/>
+<area shape="rect" id="node3_2" href="./OQueryOperatorContainsText.html" title="com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsText" alt="" coords="16,209,225,234"/>
+<area shape="rect" id="node3" href="./OQueryOperatorContainsText.html" title="&lt;TABLE&gt;" alt="" coords="5,197,236,245"/>
+<area shape="rect" id="node4_3" href="../../../../spatial/operator/OLuceneNearOperator.html" title="com.orientechnologies.spatial.operator.OLuceneNearOperator" alt="" coords="271,209,435,234"/>
+<area shape="rect" id="node4" href="../../../../spatial/operator/OLuceneNearOperator.html" title="&lt;TABLE&gt;" alt="" coords="260,197,445,245"/>
+<area shape="rect" id="node5_4" href="../../../../spatial/operator/OLuceneSpatialOperator.html" title="com.orientechnologies.spatial.operator.OLuceneSpatialOperator" alt="" coords="480,209,657,234"/>
+<area shape="rect" id="node5" href="../../../../spatial/operator/OLuceneSpatialOperator.html" title="&lt;TABLE&gt;" alt="" coords="469,197,668,245"/>
+<area shape="rect" id="node6_5" href="../../../../spatial/operator/OLuceneWithinOperator.html" title="com.orientechnologies.spatial.operator.OLuceneWithinOperator" alt="" coords="703,209,877,234"/>
+<area shape="rect" id="node6" href="../../../../spatial/operator/OLuceneWithinOperator.html" title="&lt;TABLE&gt;" alt="" coords="692,197,888,245"/>
+<area shape="rect" id="node7_6" href="../../../../lucene/operator/OLuceneTextOperator.html" title="com.orientechnologies.lucene.operator.OLuceneTextOperator" alt="" coords="923,209,1083,234"/>
+<area shape="rect" id="node7" href="../../../../lucene/operator/OLuceneTextOperator.html" title="&lt;TABLE&gt;" alt="" coords="913,197,1094,245"/>
+</map>
