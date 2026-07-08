@@ -13,11 +13,11 @@ We are over the second quarter of the year and here we are with a new update
 
 In this quarter there have been a lot of development around the distributed module, almost all the use cases that relied on Hazelcast
 have been re-implemented using the new topology structures, so we are on the path to remove the requirement of Hazelcast dependency,
-together with this more test and integration test where fixed, and at the current state all the basic test cases are passing and
+together with this more test and integration test were fixed, and at the current state all the basic test cases are passing and
 two third of existing integration tests are passing as well, the only use case not completely re-implemented yet is 
 the initial discovery of the network.
 
-In this quarter was merged as well a branch that add experimental support to backup and restore of in memory databases, the current 
+In this quarter was also merged branch that add experimental support to backup and restore of in memory databases, the current 
 implementation works only in blocking mode, and do not support for now the Lucene indexes, this is the first step to support
 in memory only databases with the distributed flow. 
 
@@ -29,4 +29,5 @@ also fixes in date type handling, and some security fixes in the remote protocol
 ### Future
 
 In the next quarter will try to finalize the distributed implementations, well will try to review the configuration of OrientDB
-that has been historically quite java centric and not too user-friendly and improve the server and database admin query engine.
+that has been historically quite java centric and not too user-friendly and improve the server and database admin query engine, also
+will continue improving testing and make sure old integration test pass.
