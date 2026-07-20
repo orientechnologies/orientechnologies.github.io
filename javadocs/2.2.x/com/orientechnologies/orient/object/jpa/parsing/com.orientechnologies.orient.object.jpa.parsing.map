@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./PersistenceXml.html" title="com.orientechnologies.orient.object.jpa.parsing.PersistenceXml" alt="" coords="16,11,136,53"/>
+<area shape="rect" id="node1" href="./PersistenceXml.html" title="&lt;TABLE&gt;" alt="" coords="5,5,147,59"/>
+<area shape="rect" id="node2_1" href="./PersistenceXmlUtil.html" title="com.orientechnologies.orient.object.jpa.parsing.PersistenceXmlUtil" alt="" coords="181,19,325,45"/>
+<area shape="rect" id="node2" href="./PersistenceXmlUtil.html" title="&lt;TABLE&gt;" alt="" coords="171,8,336,56"/>
+<area shape="rect" id="node3_2" href="./JPAVersion.html" title="com.orientechnologies.orient.object.jpa.parsing.JPAVersion" alt="" coords="371,11,490,53"/>
+<area shape="rect" id="node3" href="./JPAVersion.html" title="&lt;TABLE&gt;" alt="" coords="361,5,501,59"/>
+<area shape="rect" id="node4_3" href="./JPAHandler.html" title="com.orientechnologies.orient.object.jpa.parsing.JPAHandler" alt="" coords="536,19,627,45"/>
+<area shape="rect" id="node4" href="./JPAHandler.html" title="&lt;TABLE&gt;" alt="" coords="525,8,637,56"/>
+</map>

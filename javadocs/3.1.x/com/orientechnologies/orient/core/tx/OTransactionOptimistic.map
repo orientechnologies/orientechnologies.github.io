@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../db/document/OTransactionOptimisticClient.html" title="com.orientechnologies.orient.core.db.document.OTransactionOptimisticClient" alt="" coords="16,209,224,234"/>
+<area shape="rect" id="node1" href="../db/document/OTransactionOptimisticClient.html" title="&lt;TABLE&gt;" alt="" coords="5,197,235,245"/>
+<area shape="rect" id="node2_1" href="./OTransactionOptimistic.html" title="com.orientechnologies.orient.core.tx.OTransactionOptimistic" alt="" coords="419,113,589,138"/>
+<area shape="rect" id="node2" href="./OTransactionOptimistic.html" title="&lt;TABLE&gt;" alt="" coords="408,101,600,149"/>
+<area shape="rect" id="node4_2" href="../../server/tx/OTransactionOptimisticServer.html" title="com.orientechnologies.orient.server.tx.OTransactionOptimisticServer" alt="" coords="270,209,482,234"/>
+<area shape="rect" id="node4" href="../../server/tx/OTransactionOptimisticServer.html" title="&lt;TABLE&gt;" alt="" coords="259,197,493,245"/>
+<area shape="rect" id="node5_3" href="../../server/tx/OTransactionOptimisticProxy.html" title="com.orientechnologies.orient.server.tx.OTransactionOptimisticProxy" alt="" coords="528,209,736,234"/>
+<area shape="rect" id="node5" href="../../server/tx/OTransactionOptimisticProxy.html" title="&lt;TABLE&gt;" alt="" coords="517,197,747,245"/>
+<area shape="rect" id="node6_4" href="../../server/distributed/impl/OTransactionOptimisticDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.OTransactionOptimisticDistributed" alt="" coords="781,209,1024,234"/>
+<area shape="rect" id="node6" href="../../server/distributed/impl/OTransactionOptimisticDistributed.html" title="&lt;TABLE&gt;" alt="" coords="771,197,1035,245"/>
+<area shape="rect" id="node3_5" href="./OTransactionRealAbstract.html" title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract" alt="" coords="410,17,598,42"/>
+<area shape="rect" id="node3" href="./OTransactionRealAbstract.html" title="&lt;TABLE&gt;" alt="" coords="399,5,609,53"/>
+</map>

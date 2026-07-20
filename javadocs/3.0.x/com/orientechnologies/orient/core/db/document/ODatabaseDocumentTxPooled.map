@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../ODatabasePooled.html" title="com.orientechnologies.orient.core.db.ODatabasePooled" alt="" coords="16,11,152,53"/>
+<area shape="rect" id="node1" href="../ODatabasePooled.html" title="&lt;TABLE&gt;" alt="" coords="5,5,163,59"/>
+<area shape="rect" id="node2_1" href="./ODatabaseDocumentTxPooled.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTxPooled" alt="" coords="75,118,293,143"/>
+<area shape="rect" id="node2" href="./ODatabaseDocumentTxPooled.html" title="&lt;TABLE&gt;" alt="" coords="64,107,304,155"/>
+<area shape="rect" id="node3_2" href="./ODatabaseDocumentTx.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx" alt="" coords="198,19,373,45"/>
+<area shape="rect" id="node3" href="./ODatabaseDocumentTx.html" title="&lt;TABLE&gt;" alt="" coords="187,8,383,56"/>
+</map>

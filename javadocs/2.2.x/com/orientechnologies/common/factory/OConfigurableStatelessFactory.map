@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OConfigurableStatelessFactory.html" title="com.orientechnologies.common.factory.OConfigurableStatelessFactory" alt="" coords="138,17,405,42"/>
+<area shape="rect" id="node1" href="./OConfigurableStatelessFactory.html" title="&lt;TABLE&gt;" alt="" coords="127,5,415,53"/>
+<area shape="rect" id="node2_1" href="../../orient/core/conflict/ORecordConflictStrategyFactory.html" title="com.orientechnologies.orient.core.conflict.ORecordConflictStrategyFactory" alt="" coords="16,113,241,138"/>
+<area shape="rect" id="node2" href="../../orient/core/conflict/ORecordConflictStrategyFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,101,252,149"/>
+<area shape="rect" id="node3_2" href="../../orient/server/distributed/conflict/ODistributedConflictResolverFactory.html" title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory" alt="" coords="287,113,541,138"/>
+<area shape="rect" id="node3" href="../../orient/server/distributed/conflict/ODistributedConflictResolverFactory.html" title="&lt;TABLE&gt;" alt="" coords="276,101,552,149"/>
+</map>

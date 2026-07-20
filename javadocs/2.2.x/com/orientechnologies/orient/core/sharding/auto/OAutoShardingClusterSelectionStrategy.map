@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../metadata/schema/clusterselection/OClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" alt="" coords="59,11,250,53"/>
+<area shape="rect" id="node1" href="../../metadata/schema/clusterselection/OClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="49,5,261,59"/>
+<area shape="rect" id="node2_1" href="./OAutoShardingClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy" alt="" coords="16,118,293,143"/>
+<area shape="rect" id="node2" href="./OAutoShardingClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="5,107,304,155"/>
+</map>

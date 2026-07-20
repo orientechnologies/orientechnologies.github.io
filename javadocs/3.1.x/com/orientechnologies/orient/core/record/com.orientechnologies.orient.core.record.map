@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORecordFactoryManager.html" title="com.orientechnologies.orient.core.record.ORecordFactoryManager" alt="" coords="16,19,195,45"/>
+<area shape="rect" id="node1" href="./ORecordFactoryManager.html" title="&lt;TABLE&gt;" alt="" coords="5,8,205,56"/>
+<area shape="rect" id="node2_1" href="./ORecordFactoryManager.ORecordFactory.html" title="com.orientechnologies.orient.core.record.ORecordFactoryManager.ORecordFactory" alt="" coords="239,11,361,53"/>
+<area shape="rect" id="node2" href="./ORecordFactoryManager.ORecordFactory.html" title="&lt;TABLE&gt;" alt="" coords="229,5,371,59"/>
+<area shape="rect" id="node3_2" href="./ORecordVersionHelper.html" title="com.orientechnologies.orient.core.record.ORecordVersionHelper" alt="" coords="407,19,572,45"/>
+<area shape="rect" id="node3" href="./ORecordVersionHelper.html" title="&lt;TABLE&gt;" alt="" coords="396,8,583,56"/>
+<area shape="rect" id="node4_3" href="./ODirection.html" title="com.orientechnologies.orient.core.record.ODirection" alt="" coords="618,11,737,53"/>
+<area shape="rect" id="node4" href="./ODirection.html" title="&lt;TABLE&gt;" alt="" coords="607,5,747,59"/>
+<area shape="rect" id="node5_4" href="./OEdge.html" title="com.orientechnologies.orient.core.record.OEdge" alt="" coords="791,213,884,256"/>
+<area shape="rect" id="node5" href="./OEdge.html" title="&lt;TABLE&gt;" alt="" coords="780,208,895,261"/>
+<area shape="rect" id="node6_5" href="./ORecordSchemaAware.html" title="com.orientechnologies.orient.core.record.ORecordSchemaAware" alt="" coords="921,11,1089,53"/>
+<area shape="rect" id="node6" href="./ORecordSchemaAware.html" title="&lt;TABLE&gt;" alt="" coords="911,5,1100,59"/>
+<area shape="rect" id="node7_6" href="./OIdentityChangeListener.html" title="com.orientechnologies.orient.core.record.OIdentityChangeListener" alt="" coords="1135,11,1315,53"/>
+<area shape="rect" id="node7" href="./OIdentityChangeListener.html" title="&lt;TABLE&gt;" alt="" coords="1125,5,1326,59"/>
+<area shape="rect" id="node8_7" href="./ORecordInternal.html" title="com.orientechnologies.orient.core.record.ORecordInternal" alt="" coords="1361,19,1485,45"/>
+<area shape="rect" id="node8" href="./ORecordInternal.html" title="&lt;TABLE&gt;" alt="" coords="1350,8,1495,56"/>
+<area shape="rect" id="node9_8" href="./OVertex.html" title="com.orientechnologies.orient.core.record.OVertex" alt="" coords="929,213,1023,256"/>
+<area shape="rect" id="node9" href="./OVertex.html" title="&lt;TABLE&gt;" alt="" coords="919,208,1033,261"/>
+<area shape="rect" id="node10_9" href="./ORecordAbstract.html" title="com.orientechnologies.orient.core.record.ORecordAbstract" alt="" coords="687,121,815,146"/>
+<area shape="rect" id="node10" href="./ORecordAbstract.html" title="&lt;TABLE&gt;" alt="" coords="676,109,825,157"/>
+<area shape="rect" id="node11_10" href="./ORecordListener.html" title="com.orientechnologies.orient.core.record.ORecordListener" alt="" coords="1530,11,1657,53"/>
+<area shape="rect" id="node11" href="./ORecordListener.html" title="&lt;TABLE&gt;" alt="" coords="1519,5,1667,59"/>
+<area shape="rect" id="node12_11" href="./ORecordListener.EVENT.html" title="com.orientechnologies.orient.core.record.ORecordListener.EVENT" alt="" coords="1702,11,1821,53"/>
+<area shape="rect" id="node12" href="./ORecordListener.EVENT.html" title="&lt;TABLE&gt;" alt="" coords="1691,5,1831,59"/>
+<area shape="rect" id="node13_12" href="./ORecordStringable.html" title="com.orientechnologies.orient.core.record.ORecordStringable" alt="" coords="1866,11,2006,53"/>
+<area shape="rect" id="node13" href="./ORecordStringable.html" title="&lt;TABLE&gt;" alt="" coords="1855,5,2017,59"/>
+<area shape="rect" id="node14_13" href="./ORecord.html" title="com.orientechnologies.orient.core.record.ORecord" alt="" coords="783,11,876,53"/>
+<area shape="rect" id="node14" href="./ORecord.html" title="&lt;TABLE&gt;" alt="" coords="772,5,887,59"/>
+<area shape="rect" id="node15_14" href="./OElement.html" title="com.orientechnologies.orient.core.record.OElement" alt="" coords="860,112,953,155"/>
+<area shape="rect" id="node15" href="./OElement.html" title="&lt;TABLE&gt;" alt="" coords="849,107,964,160"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseIsOldException.html" title="com.orientechnologies.orient.server.distributed.task.ODatabaseIsOldException" alt="" coords="16,19,204,45"/>
+<area shape="rect" id="node1" href="./ODatabaseIsOldException.html" title="&lt;TABLE&gt;" alt="" coords="5,8,215,56"/>
+<area shape="rect" id="node2_1" href="./ODistributedKeyLockedException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedKeyLockedException" alt="" coords="250,19,485,45"/>
+<area shape="rect" id="node2" href="./ODistributedKeyLockedException.html" title="&lt;TABLE&gt;" alt="" coords="239,8,495,56"/>
+<area shape="rect" id="node3_2" href="./OAbstractCommandTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractCommandTask" alt="" coords="495,310,675,335"/>
+<area shape="rect" id="node3" href="./OAbstractCommandTask.html" title="&lt;TABLE&gt;" alt="" coords="484,299,685,347"/>
+<area shape="rect" id="node4_3" href="./ORemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.ORemoteTask" alt="" coords="530,11,639,53"/>
+<area shape="rect" id="node4" href="./ORemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="519,5,650,59"/>
+<area shape="rect" id="node7_4" href="./OAbstractRemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRemoteTask" alt="" coords="503,118,667,143"/>
+<area shape="rect" id="node7" href="./OAbstractRemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="492,107,677,155"/>
+<area shape="rect" id="node5_5" href="./ORemoteTask.RESULT_STRATEGY.html" title="com.orientechnologies.orient.server.distributed.task.ORemoteTask.RESULT_STRATEGY" alt="" coords="685,11,828,53"/>
+<area shape="rect" id="node5" href="./ORemoteTask.RESULT_STRATEGY.html" title="&lt;TABLE&gt;" alt="" coords="675,5,839,59"/>
+<area shape="rect" id="node6_6" href="./ODistributedOperationException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedOperationException" alt="" coords="874,19,1103,45"/>
+<area shape="rect" id="node6" href="./ODistributedOperationException.html" title="&lt;TABLE&gt;" alt="" coords="863,8,1114,56"/>
+<area shape="rect" id="node9_7" href="./ODistributedLockException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedLockException" alt="" coords="891,118,1087,143"/>
+<area shape="rect" id="node9" href="./ODistributedLockException.html" title="&lt;TABLE&gt;" alt="" coords="880,107,1097,155"/>
+<area shape="rect" id="node11_8" href="./OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="493,214,676,239"/>
+<area shape="rect" id="node11" href="./OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="483,203,687,251"/>
+<area shape="rect" id="node8_9" href="./ODistributedDatabaseDeltaSyncException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedDatabaseDeltaSyncException" alt="" coords="1149,19,1442,45"/>
+<area shape="rect" id="node8" href="./ODistributedDatabaseDeltaSyncException.html" title="&lt;TABLE&gt;" alt="" coords="1138,8,1453,56"/>
+<area shape="rect" id="node10_10" href="./ODistributedRecordLockedException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedRecordLockedException" alt="" coords="1487,19,1743,45"/>
+<area shape="rect" id="node10" href="./ODistributedRecordLockedException.html" title="&lt;TABLE&gt;" alt="" coords="1477,8,1754,56"/>
+</map>

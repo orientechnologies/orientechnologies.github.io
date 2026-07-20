@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractETLComponent.html" title="com.orientechnologies.orient.etl.OAbstractETLComponent" alt="" coords="457,118,638,143"/>
+<area shape="rect" id="node1" href="./OAbstractETLComponent.html" title="&lt;TABLE&gt;" alt="" coords="446,107,649,155"/>
+<area shape="rect" id="node2_1" href="./OAbstractETLPipelineComponent.html" title="com.orientechnologies.orient.etl.OAbstractETLPipelineComponent" alt="" coords="16,214,249,239"/>
+<area shape="rect" id="node2" href="./OAbstractETLPipelineComponent.html" title="&lt;TABLE&gt;" alt="" coords="5,203,260,251"/>
+<area shape="rect" id="node4_2" href="./extractor/OAbstractExtractor.html" title="com.orientechnologies.orient.etl.extractor.OAbstractExtractor" alt="" coords="295,214,437,239"/>
+<area shape="rect" id="node4" href="./extractor/OAbstractExtractor.html" title="&lt;TABLE&gt;" alt="" coords="284,203,448,251"/>
+<area shape="rect" id="node5_3" href="./loader/OAbstractLoader.html" title="com.orientechnologies.orient.etl.loader.OAbstractLoader" alt="" coords="483,214,611,239"/>
+<area shape="rect" id="node5" href="./loader/OAbstractLoader.html" title="&lt;TABLE&gt;" alt="" coords="473,203,622,251"/>
+<area shape="rect" id="node6_4" href="./source/OAbstractSource.html" title="com.orientechnologies.orient.etl.source.OAbstractSource" alt="" coords="657,214,785,239"/>
+<area shape="rect" id="node6" href="./source/OAbstractSource.html" title="&lt;TABLE&gt;" alt="" coords="646,203,795,251"/>
+<area shape="rect" id="node7_5" href="./block/OAbstractBlock.html" title="com.orientechnologies.orient.etl.block.OAbstractBlock" alt="" coords="830,214,950,239"/>
+<area shape="rect" id="node7" href="./block/OAbstractBlock.html" title="&lt;TABLE&gt;" alt="" coords="819,203,961,251"/>
+<area shape="rect" id="node3_6" href="./OETLComponent.html" title="com.orientechnologies.orient.etl.OETLComponent" alt="" coords="483,11,611,53"/>
+<area shape="rect" id="node3" href="./OETLComponent.html" title="&lt;TABLE&gt;" alt="" coords="473,5,622,59"/>
+</map>

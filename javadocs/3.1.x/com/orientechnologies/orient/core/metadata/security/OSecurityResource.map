@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSecurityResourceAll.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResourceAll" alt="" coords="16,113,176,138"/>
+<area shape="rect" id="node1" href="./OSecurityResourceAll.html" title="&lt;TABLE&gt;" alt="" coords="5,101,187,149"/>
+<area shape="rect" id="node2_1" href="./OSecurityResourceCluster.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResourceCluster" alt="" coords="222,113,410,138"/>
+<area shape="rect" id="node2" href="./OSecurityResourceCluster.html" title="&lt;TABLE&gt;" alt="" coords="211,101,421,149"/>
+<area shape="rect" id="node3_2" href="./OSecurityResourceSchema.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResourceSchema" alt="" coords="456,113,651,138"/>
+<area shape="rect" id="node3" href="./OSecurityResourceSchema.html" title="&lt;TABLE&gt;" alt="" coords="445,101,661,149"/>
+<area shape="rect" id="node4_3" href="./OSecurityResourceFunction.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResourceFunction" alt="" coords="696,113,893,138"/>
+<area shape="rect" id="node4" href="./OSecurityResourceFunction.html" title="&lt;TABLE&gt;" alt="" coords="685,101,904,149"/>
+<area shape="rect" id="node5_4" href="./OSecurityResourceClass.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResourceClass" alt="" coords="939,113,1117,138"/>
+<area shape="rect" id="node5" href="./OSecurityResourceClass.html" title="&lt;TABLE&gt;" alt="" coords="929,101,1127,149"/>
+<area shape="rect" id="node6_5" href="./OSecurityResourceDatabaseOp.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResourceDatabaseOp" alt="" coords="1162,113,1385,138"/>
+<area shape="rect" id="node6" href="./OSecurityResourceDatabaseOp.html" title="&lt;TABLE&gt;" alt="" coords="1151,101,1395,149"/>
+<area shape="rect" id="node7_6" href="./OSecurityResourceProperty.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResourceProperty" alt="" coords="1431,113,1628,138"/>
+<area shape="rect" id="node7" href="./OSecurityResourceProperty.html" title="&lt;TABLE&gt;" alt="" coords="1420,101,1639,149"/>
+<area shape="rect" id="node8_7" href="./OSecurityResourceServerOp.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResourceServerOp" alt="" coords="1673,113,1876,138"/>
+<area shape="rect" id="node8" href="./OSecurityResourceServerOp.html" title="&lt;TABLE&gt;" alt="" coords="1663,101,1887,149"/>
+<area shape="rect" id="node9_8" href="./OSecurityResource.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityResource" alt="" coords="839,17,982,42"/>
+<area shape="rect" id="node9" href="./OSecurityResource.html" title="&lt;TABLE&gt;" alt="" coords="829,5,993,53"/>
+</map>

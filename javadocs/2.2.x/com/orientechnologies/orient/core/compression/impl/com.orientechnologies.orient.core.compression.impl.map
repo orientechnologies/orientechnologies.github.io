@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractCompression.html" title="com.orientechnologies.orient.core.compression.impl.OAbstractCompression" alt="" coords="289,17,457,42"/>
+<area shape="rect" id="node1" href="./OAbstractCompression.html" title="&lt;TABLE&gt;" alt="" coords="278,5,467,53"/>
+<area shape="rect" id="node3_1" href="./OGZIPCompression.html" title="com.orientechnologies.orient.core.compression.impl.OGZIPCompression" alt="" coords="16,113,161,138"/>
+<area shape="rect" id="node3" href="./OGZIPCompression.html" title="&lt;TABLE&gt;" alt="" coords="5,101,172,149"/>
+<area shape="rect" id="node4_2" href="./OZIPCompression.html" title="com.orientechnologies.orient.core.compression.impl.OZIPCompression" alt="" coords="207,113,343,138"/>
+<area shape="rect" id="node4" href="./OZIPCompression.html" title="&lt;TABLE&gt;" alt="" coords="197,101,354,149"/>
+<area shape="rect" id="node5_3" href="./ONothingCompression.html" title="com.orientechnologies.orient.core.compression.impl.ONothingCompression" alt="" coords="389,113,554,138"/>
+<area shape="rect" id="node5" href="./ONothingCompression.html" title="&lt;TABLE&gt;" alt="" coords="378,101,565,149"/>
+<area shape="rect" id="node7_4" href="./OSnappyCompression.html" title="com.orientechnologies.orient.core.compression.impl.OSnappyCompression" alt="" coords="599,113,762,138"/>
+<area shape="rect" id="node7" href="./OSnappyCompression.html" title="&lt;TABLE&gt;" alt="" coords="589,101,773,149"/>
+<area shape="rect" id="node2_5" href="./OHighZIPCompression.html" title="com.orientechnologies.orient.core.compression.impl.OHighZIPCompression" alt="" coords="87,209,253,234"/>
+<area shape="rect" id="node2" href="./OHighZIPCompression.html" title="&lt;TABLE&gt;" alt="" coords="77,197,263,245"/>
+<area shape="rect" id="node8_6" href="./OLowZIPCompression.html" title="com.orientechnologies.orient.core.compression.impl.OLowZIPCompression" alt="" coords="299,209,460,234"/>
+<area shape="rect" id="node8" href="./OLowZIPCompression.html" title="&lt;TABLE&gt;" alt="" coords="288,197,471,245"/>
+<area shape="rect" id="node6_7" href="./OZIPCompressionUtil.html" title="com.orientechnologies.orient.core.compression.impl.OZIPCompressionUtil" alt="" coords="503,17,661,42"/>
+<area shape="rect" id="node6" href="./OZIPCompressionUtil.html" title="&lt;TABLE&gt;" alt="" coords="492,5,672,53"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseInternal.html" title="com.orientechnologies.orient.core.db.ODatabaseInternal" alt="" coords="16,213,188,256"/>
+<area shape="rect" id="node1" href="./ODatabaseInternal.html" title="&lt;TABLE&gt;" alt="" coords="5,208,199,261"/>
+<area shape="rect" id="node2_1" href="./ODatabase.html" title="com.orientechnologies.orient.core.db.ODatabase" alt="" coords="252,112,373,155"/>
+<area shape="rect" id="node2" href="./ODatabase.html" title="&lt;TABLE&gt;" alt="" coords="241,107,384,160"/>
+<area shape="rect" id="node3_2" href="./document/ODatabaseDocument.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocument" alt="" coords="233,213,392,256"/>
+<area shape="rect" id="node3" href="./document/ODatabaseDocument.html" title="&lt;TABLE&gt;" alt="" coords="223,208,403,261"/>
+<area shape="rect" id="node5_3" href="./object/ODatabaseObject.html" title="com.orientechnologies.orient.core.db.object.ODatabaseObject" alt="" coords="438,213,571,256"/>
+<area shape="rect" id="node5" href="./object/ODatabaseObject.html" title="&lt;TABLE&gt;" alt="" coords="427,208,582,261"/>
+<area shape="rect" id="node4_4" href="../util/OBackupable.html" title="com.orientechnologies.orient.core.util.OBackupable" alt="" coords="189,11,293,53"/>
+<area shape="rect" id="node4" href="../util/OBackupable.html" title="&lt;TABLE&gt;" alt="" coords="178,5,303,59"/>
+<area shape="rect" id="node6_5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Closeable.html" title="java.io.Closeable" alt="" coords="338,11,431,53"/>
+<area shape="rect" id="node6" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Closeable.html" title="&lt;TABLE&gt;" alt="" coords="327,5,442,59"/>
+</map>

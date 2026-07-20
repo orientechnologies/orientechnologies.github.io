@@ -1,0 +1,34 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSQLFunctionIndexKeySize.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIndexKeySize" alt="" coords="16,17,212,42"/>
+<area shape="rect" id="node1" href="./OSQLFunctionIndexKeySize.html" title="&lt;TABLE&gt;" alt="" coords="5,5,223,53"/>
+<area shape="rect" id="node2_1" href="./OSQLFunctionStrcmpci.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionStrcmpci" alt="" coords="257,17,424,42"/>
+<area shape="rect" id="node2" href="./OSQLFunctionStrcmpci.html" title="&lt;TABLE&gt;" alt="" coords="247,5,435,53"/>
+<area shape="rect" id="node3_2" href="./OSQLFunctionEncode.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionEncode" alt="" coords="469,17,625,42"/>
+<area shape="rect" id="node3" href="./OSQLFunctionEncode.html" title="&lt;TABLE&gt;" alt="" coords="459,5,636,53"/>
+<area shape="rect" id="node4_3" href="./OSQLFunctionSysdate.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionSysdate" alt="" coords="671,17,832,42"/>
+<area shape="rect" id="node4" href="./OSQLFunctionSysdate.html" title="&lt;TABLE&gt;" alt="" coords="660,5,843,53"/>
+<area shape="rect" id="node5_4" href="./OSQLFunctionDate.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDate" alt="" coords="877,17,1017,42"/>
+<area shape="rect" id="node5" href="./OSQLFunctionDate.html" title="&lt;TABLE&gt;" alt="" coords="867,5,1028,53"/>
+<area shape="rect" id="node6_5" href="./OSQLFunctionIfNull.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIfNull" alt="" coords="1063,17,1207,42"/>
+<area shape="rect" id="node6" href="./OSQLFunctionIfNull.html" title="&lt;TABLE&gt;" alt="" coords="1053,5,1218,53"/>
+<area shape="rect" id="node7_6" href="./OSQLStaticReflectiveFunction.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLStaticReflectiveFunction" alt="" coords="1253,17,1465,42"/>
+<area shape="rect" id="node7" href="./OSQLStaticReflectiveFunction.html" title="&lt;TABLE&gt;" alt="" coords="1243,5,1476,53"/>
+<area shape="rect" id="node8_7" href="./OSQLMethodInclude.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodInclude" alt="" coords="1511,17,1661,42"/>
+<area shape="rect" id="node8" href="./OSQLMethodInclude.html" title="&lt;TABLE&gt;" alt="" coords="1500,5,1672,53"/>
+<area shape="rect" id="node9_8" href="./OSQLFunctionIf.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionIf" alt="" coords="1707,17,1825,42"/>
+<area shape="rect" id="node9" href="./OSQLFunctionIf.html" title="&lt;TABLE&gt;" alt="" coords="1696,5,1836,53"/>
+<area shape="rect" id="node10_9" href="./OSQLFunctionCoalesce.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCoalesce" alt="" coords="1871,17,2039,42"/>
+<area shape="rect" id="node10" href="./OSQLFunctionCoalesce.html" title="&lt;TABLE&gt;" alt="" coords="1861,5,2050,53"/>
+<area shape="rect" id="node11_10" href="./OSQLFunctionDecode.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionDecode" alt="" coords="2085,17,2244,42"/>
+<area shape="rect" id="node11" href="./OSQLFunctionDecode.html" title="&lt;TABLE&gt;" alt="" coords="2075,5,2255,53"/>
+<area shape="rect" id="node12_11" href="./OSQLFunctionUUID.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionUUID" alt="" coords="2290,17,2434,42"/>
+<area shape="rect" id="node12" href="./OSQLFunctionUUID.html" title="&lt;TABLE&gt;" alt="" coords="2279,5,2445,53"/>
+<area shape="rect" id="node13_12" href="./OSQLFunctionCount.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionCount" alt="" coords="2480,17,2628,42"/>
+<area shape="rect" id="node13" href="./OSQLFunctionCount.html" title="&lt;TABLE&gt;" alt="" coords="2469,5,2639,53"/>
+<area shape="rect" id="node14_13" href="./OSQLMethodExclude.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLMethodExclude" alt="" coords="2674,17,2829,42"/>
+<area shape="rect" id="node14" href="./OSQLMethodExclude.html" title="&lt;TABLE&gt;" alt="" coords="2663,5,2839,53"/>
+<area shape="rect" id="node15_14" href="./OSQLFunctionThrowCME.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionThrowCME" alt="" coords="2874,17,3053,42"/>
+<area shape="rect" id="node15" href="./OSQLFunctionThrowCME.html" title="&lt;TABLE&gt;" alt="" coords="2863,5,3063,53"/>
+<area shape="rect" id="node16_15" href="./OSQLFunctionFormat.html" title="com.orientechnologies.orient.core.sql.functions.misc.OSQLFunctionFormat" alt="" coords="3099,17,3255,42"/>
+<area shape="rect" id="node16" href="./OSQLFunctionFormat.html" title="&lt;TABLE&gt;" alt="" coords="3088,5,3265,53"/>
+</map>

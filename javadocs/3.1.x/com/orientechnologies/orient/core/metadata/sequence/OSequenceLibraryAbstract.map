@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../db/record/OProxedResource.html" title="com.orientechnologies.orient.core.db.record.OProxedResource" alt="" coords="16,19,180,45"/>
+<area shape="rect" id="node1" href="../../db/record/OProxedResource.html" title="&lt;TABLE&gt;" alt="" coords="5,8,191,56"/>
+<area shape="rect" id="node2_1" href="./OSequenceLibraryAbstract.html" title="com.orientechnologies.orient.core.metadata.sequence.OSequenceLibraryAbstract" alt="" coords="99,118,291,143"/>
+<area shape="rect" id="node2" href="./OSequenceLibraryAbstract.html" title="&lt;TABLE&gt;" alt="" coords="89,107,302,155"/>
+<area shape="rect" id="node3_2" href="./OSequenceLibraryProxy.html" title="com.orientechnologies.orient.core.metadata.sequence.OSequenceLibraryProxy" alt="" coords="108,214,283,239"/>
+<area shape="rect" id="node3" href="./OSequenceLibraryProxy.html" title="&lt;TABLE&gt;" alt="" coords="97,203,293,251"/>
+<area shape="rect" id="node4_3" href="./OSequenceLibrary.html" title="com.orientechnologies.orient.core.metadata.sequence.OSequenceLibrary" alt="" coords="225,11,363,53"/>
+<area shape="rect" id="node4" href="./OSequenceLibrary.html" title="&lt;TABLE&gt;" alt="" coords="215,5,373,59"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OBaseParser.html" title="com.orientechnologies.common.parser.OBaseParser" alt="" coords="265,17,367,42"/>
+<area shape="rect" id="node1" href="./OBaseParser.html" title="&lt;TABLE&gt;" alt="" coords="254,5,378,53"/>
+<area shape="rect" id="node2_1" href="../../orient/core/command/OCommandExecutorAbstract.html" title="com.orientechnologies.orient.core.command.OCommandExecutorAbstract" alt="" coords="16,113,224,138"/>
+<area shape="rect" id="node2" href="../../orient/core/command/OCommandExecutorAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,101,235,149"/>
+<area shape="rect" id="node3_2" href="../../orient/core/sql/filter/OSQLTarget.html" title="com.orientechnologies.orient.core.sql.filter.OSQLTarget" alt="" coords="269,113,363,138"/>
+<area shape="rect" id="node3" href="../../orient/core/sql/filter/OSQLTarget.html" title="&lt;TABLE&gt;" alt="" coords="259,101,373,149"/>
+<area shape="rect" id="node4_3" href="../../orient/core/sql/filter/OSQLPredicate.html" title="com.orientechnologies.orient.core.sql.filter.OSQLPredicate" alt="" coords="409,113,525,138"/>
+<area shape="rect" id="node4" href="../../orient/core/sql/filter/OSQLPredicate.html" title="&lt;TABLE&gt;" alt="" coords="398,101,535,149"/>
+</map>

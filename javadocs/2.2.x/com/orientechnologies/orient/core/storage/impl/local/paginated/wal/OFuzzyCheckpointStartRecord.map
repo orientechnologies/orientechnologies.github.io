@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractCheckPointStartRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractCheckPointStartRecord" alt="" coords="16,17,248,42"/>
+<area shape="rect" id="node1" href="./OAbstractCheckPointStartRecord.html" title="&lt;TABLE&gt;" alt="" coords="5,5,259,53"/>
+<area shape="rect" id="node2_1" href="./OFuzzyCheckpointStartRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OFuzzyCheckpointStartRecord" alt="" coords="24,113,240,138"/>
+<area shape="rect" id="node2" href="./OFuzzyCheckpointStartRecord.html" title="&lt;TABLE&gt;" alt="" coords="13,101,251,149"/>
+</map>

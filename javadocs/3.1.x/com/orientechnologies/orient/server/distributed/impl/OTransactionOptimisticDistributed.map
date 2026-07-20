@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../core/tx/OTransactionOptimistic.html" title="com.orientechnologies.orient.core.tx.OTransactionOptimistic" alt="" coords="52,17,223,42"/>
+<area shape="rect" id="node1" href="../../../core/tx/OTransactionOptimistic.html" title="&lt;TABLE&gt;" alt="" coords="41,5,233,53"/>
+<area shape="rect" id="node2_1" href="./OTransactionOptimisticDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.OTransactionOptimisticDistributed" alt="" coords="16,113,259,138"/>
+<area shape="rect" id="node2" href="./OTransactionOptimisticDistributed.html" title="&lt;TABLE&gt;" alt="" coords="5,101,269,149"/>
+</map>

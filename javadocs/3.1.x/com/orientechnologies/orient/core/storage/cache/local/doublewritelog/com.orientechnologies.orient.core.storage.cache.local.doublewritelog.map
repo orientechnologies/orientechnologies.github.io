@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./DoubleWriteLog.html" title="com.orientechnologies.orient.core.storage.cache.local.doublewritelog.DoubleWriteLog" alt="" coords="121,11,245,53"/>
+<area shape="rect" id="node1" href="./DoubleWriteLog.html" title="&lt;TABLE&gt;" alt="" coords="111,5,256,59"/>
+<area shape="rect" id="node2_1" href="./DoubleWriteLogGL.html" title="com.orientechnologies.orient.core.storage.cache.local.doublewritelog.DoubleWriteLogGL" alt="" coords="16,118,156,143"/>
+<area shape="rect" id="node2" href="./DoubleWriteLogGL.html" title="&lt;TABLE&gt;" alt="" coords="5,107,167,155"/>
+<area shape="rect" id="node3_2" href="./DoubleWriteLogNoOP.html" title="com.orientechnologies.orient.core.storage.cache.local.doublewritelog.DoubleWriteLogNoOP" alt="" coords="202,118,362,143"/>
+<area shape="rect" id="node3" href="./DoubleWriteLogNoOP.html" title="&lt;TABLE&gt;" alt="" coords="191,107,373,155"/>
+</map>

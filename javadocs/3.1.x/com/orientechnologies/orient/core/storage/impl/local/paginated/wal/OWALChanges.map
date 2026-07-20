@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OWALChangesTree.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALChangesTree" alt="" coords="16,118,156,143"/>
+<area shape="rect" id="node1" href="./OWALChangesTree.html" title="&lt;TABLE&gt;" alt="" coords="5,107,167,155"/>
+<area shape="rect" id="node2_1" href="./OWALChanges.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALChanges" alt="" coords="135,11,248,53"/>
+<area shape="rect" id="node2" href="./OWALChanges.html" title="&lt;TABLE&gt;" alt="" coords="124,5,259,59"/>
+<area shape="rect" id="node3_2" href="./OWALPageChangesPortion.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALPageChangesPortion" alt="" coords="201,118,392,143"/>
+<area shape="rect" id="node3" href="./OWALPageChangesPortion.html" title="&lt;TABLE&gt;" alt="" coords="191,107,403,155"/>
+</map>

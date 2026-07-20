@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OLuceneTxChanges.html" title="com.orientechnologies.lucene.tx.OLuceneTxChanges" alt="" coords="168,11,316,53"/>
+<area shape="rect" id="node1" href="./OLuceneTxChanges.html" title="&lt;TABLE&gt;" alt="" coords="157,5,327,59"/>
+<area shape="rect" id="node3_1" href="./OLuceneTxChangesAbstract.html" title="com.orientechnologies.lucene.tx.OLuceneTxChangesAbstract" alt="" coords="141,118,343,143"/>
+<area shape="rect" id="node3" href="./OLuceneTxChangesAbstract.html" title="&lt;TABLE&gt;" alt="" coords="131,107,353,155"/>
+<area shape="rect" id="node2_2" href="./OLuceneTxChangesMultiRid.html" title="com.orientechnologies.lucene.tx.OLuceneTxChangesMultiRid" alt="" coords="16,214,217,239"/>
+<area shape="rect" id="node2" href="./OLuceneTxChangesMultiRid.html" title="&lt;TABLE&gt;" alt="" coords="5,203,228,251"/>
+<area shape="rect" id="node4_3" href="./OLuceneTxChangesSingleRid.html" title="com.orientechnologies.lucene.tx.OLuceneTxChangesSingleRid" alt="" coords="263,214,471,239"/>
+<area shape="rect" id="node4" href="./OLuceneTxChangesSingleRid.html" title="&lt;TABLE&gt;" alt="" coords="253,203,482,251"/>
+</map>

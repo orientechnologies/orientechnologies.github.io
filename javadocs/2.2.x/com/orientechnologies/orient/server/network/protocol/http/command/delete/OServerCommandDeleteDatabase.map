@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OServerCommandAuthenticatedServerAbstract.html" title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedServerAbstract" alt="" coords="16,17,341,42"/>
+<area shape="rect" id="node1" href="../OServerCommandAuthenticatedServerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,5,352,53"/>
+<area shape="rect" id="node2_1" href="./OServerCommandDeleteDatabase.html" title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDatabase" alt="" coords="57,113,301,138"/>
+<area shape="rect" id="node2" href="./OServerCommandDeleteDatabase.html" title="&lt;TABLE&gt;" alt="" coords="46,101,311,149"/>
+</map>

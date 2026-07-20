@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAccess.html" title="com.orientechnologies.orient.core.annotation.OAccess" alt="" coords="16,19,91,45"/>
+<area shape="rect" id="node1" href="./OAccess.html" title="&lt;TABLE&gt;" alt="" coords="5,8,101,56"/>
+<area shape="rect" id="node2_1" href="./OAccess.OAccessType.html" title="com.orientechnologies.orient.core.annotation.OAccess.OAccessType" alt="" coords="137,11,255,53"/>
+<area shape="rect" id="node2" href="./OAccess.OAccessType.html" title="&lt;TABLE&gt;" alt="" coords="126,5,266,59"/>
+<area shape="rect" id="node3_2" href="./OBeforeSerialization.html" title="com.orientechnologies.orient.core.annotation.OBeforeSerialization" alt="" coords="301,19,454,45"/>
+<area shape="rect" id="node3" href="./OBeforeSerialization.html" title="&lt;TABLE&gt;" alt="" coords="290,8,465,56"/>
+<area shape="rect" id="node4_3" href="./OBeforeDeserialization.html" title="com.orientechnologies.orient.core.annotation.OBeforeDeserialization" alt="" coords="500,19,671,45"/>
+<area shape="rect" id="node4" href="./OBeforeDeserialization.html" title="&lt;TABLE&gt;" alt="" coords="489,8,681,56"/>
+<area shape="rect" id="node5_4" href="./OId.html" title="com.orientechnologies.orient.core.annotation.OId" alt="" coords="721,19,762,45"/>
+<area shape="rect" id="node5" href="./OId.html" title="&lt;TABLE&gt;" alt="" coords="705,8,777,56"/>
+<area shape="rect" id="node6_5" href="./ODocumentInstance.html" title="com.orientechnologies.orient.core.annotation.ODocumentInstance" alt="" coords="812,19,964,45"/>
+<area shape="rect" id="node6" href="./ODocumentInstance.html" title="&lt;TABLE&gt;" alt="" coords="801,8,975,56"/>
+<area shape="rect" id="node7_6" href="./OVersion.html" title="com.orientechnologies.orient.core.annotation.OVersion" alt="" coords="1009,19,1087,45"/>
+<area shape="rect" id="node7" href="./OVersion.html" title="&lt;TABLE&gt;" alt="" coords="999,8,1097,56"/>
+<area shape="rect" id="node8_7" href="./OAfterDeserialization.html" title="com.orientechnologies.orient.core.annotation.OAfterDeserialization" alt="" coords="1132,19,1292,45"/>
+<area shape="rect" id="node8" href="./OAfterDeserialization.html" title="&lt;TABLE&gt;" alt="" coords="1121,8,1303,56"/>
+<area shape="rect" id="node9_8" href="./OAfterSerialization.html" title="com.orientechnologies.orient.core.annotation.OAfterSerialization" alt="" coords="1338,19,1481,45"/>
+<area shape="rect" id="node9" href="./OAfterSerialization.html" title="&lt;TABLE&gt;" alt="" coords="1327,8,1491,56"/>
+</map>

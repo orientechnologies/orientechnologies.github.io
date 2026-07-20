@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractIndexDefinitionMultiValue.html" title="com.orientechnologies.orient.core.index.OAbstractIndexDefinitionMultiValue" alt="" coords="263,118,515,143"/>
+<area shape="rect" id="node1" href="./OAbstractIndexDefinitionMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="252,107,525,155"/>
+<area shape="rect" id="node2_1" href="./OPropertyMapIndexDefinition.html" title="com.orientechnologies.orient.core.index.OPropertyMapIndexDefinition" alt="" coords="16,214,228,239"/>
+<area shape="rect" id="node2" href="./OPropertyMapIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="5,203,239,251"/>
+<area shape="rect" id="node4_2" href="./OPropertyRidBagIndexDefinition.html" title="com.orientechnologies.orient.core.index.OPropertyRidBagIndexDefinition" alt="" coords="274,214,503,239"/>
+<area shape="rect" id="node4" href="./OPropertyRidBagIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="263,203,514,251"/>
+<area shape="rect" id="node6_3" href="./OPropertyListIndexDefinition.html" title="com.orientechnologies.orient.core.index.OPropertyListIndexDefinition" alt="" coords="549,214,756,239"/>
+<area shape="rect" id="node6" href="./OPropertyListIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="539,203,767,251"/>
+<area shape="rect" id="node3_4" href="./OPropertyIndexDefinition.html" title="com.orientechnologies.orient.core.index.OPropertyIndexDefinition" alt="" coords="179,19,363,45"/>
+<area shape="rect" id="node3" href="./OPropertyIndexDefinition.html" title="&lt;TABLE&gt;" alt="" coords="169,8,374,56"/>
+<area shape="rect" id="node5_5" href="./OIndexDefinitionMultiValue.html" title="com.orientechnologies.orient.core.index.OIndexDefinitionMultiValue" alt="" coords="409,11,606,53"/>
+<area shape="rect" id="node5" href="./OIndexDefinitionMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="398,5,617,59"/>
+</map>

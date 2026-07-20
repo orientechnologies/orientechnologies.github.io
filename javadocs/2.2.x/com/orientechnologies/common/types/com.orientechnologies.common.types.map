@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORef.html" title="com.orientechnologies.common.types.ORef" alt="" coords="16,17,97,42"/>
+<area shape="rect" id="node1" href="./ORef.html" title="&lt;TABLE&gt;" alt="" coords="5,5,108,53"/>
+<area shape="rect" id="node2_1" href="./OBinary.html" title="com.orientechnologies.common.types.OBinary" alt="" coords="143,17,215,42"/>
+<area shape="rect" id="node2" href="./OBinary.html" title="&lt;TABLE&gt;" alt="" coords="133,5,226,53"/>
+<area shape="rect" id="node3_2" href="./OModifiableLong.html" title="com.orientechnologies.common.types.OModifiableLong" alt="" coords="261,17,389,42"/>
+<area shape="rect" id="node3" href="./OModifiableLong.html" title="&lt;TABLE&gt;" alt="" coords="250,5,399,53"/>
+<area shape="rect" id="node4_3" href="./OModifiableBoolean.html" title="com.orientechnologies.common.types.OModifiableBoolean" alt="" coords="435,17,585,42"/>
+<area shape="rect" id="node4" href="./OModifiableBoolean.html" title="&lt;TABLE&gt;" alt="" coords="424,5,596,53"/>
+<area shape="rect" id="node5_4" href="./OModifiableInteger.html" title="com.orientechnologies.common.types.OModifiableInteger" alt="" coords="631,17,775,42"/>
+<area shape="rect" id="node5" href="./OModifiableInteger.html" title="&lt;TABLE&gt;" alt="" coords="621,5,786,53"/>
+</map>

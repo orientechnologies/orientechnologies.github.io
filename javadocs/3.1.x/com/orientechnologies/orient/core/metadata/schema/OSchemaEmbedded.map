@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSchemaShared.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" alt="" coords="29,17,156,42"/>
+<area shape="rect" id="node1" href="./OSchemaShared.html" title="&lt;TABLE&gt;" alt="" coords="19,5,167,53"/>
+<area shape="rect" id="node2_1" href="./OSchemaEmbedded.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaEmbedded" alt="" coords="17,113,168,138"/>
+<area shape="rect" id="node2" href="./OSchemaEmbedded.html" title="&lt;TABLE&gt;" alt="" coords="7,101,179,149"/>
+<area shape="rect" id="node3_2" href="../../../server/distributed/impl/metadata/OSchemaDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.metadata.OSchemaDistributed" alt="" coords="16,209,169,234"/>
+<area shape="rect" id="node3" href="../../../server/distributed/impl/metadata/OSchemaDistributed.html" title="&lt;TABLE&gt;" alt="" coords="5,197,180,245"/>
+</map>

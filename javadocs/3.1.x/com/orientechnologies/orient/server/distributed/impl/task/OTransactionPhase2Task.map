@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../task/OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="16,19,199,45"/>
+<area shape="rect" id="node1" href="../../task/OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="5,8,209,56"/>
+<area shape="rect" id="node2_1" href="./OTransactionPhase2Task.html" title="com.orientechnologies.orient.server.distributed.impl.task.OTransactionPhase2Task" alt="" coords="117,118,297,143"/>
+<area shape="rect" id="node2" href="./OTransactionPhase2Task.html" title="&lt;TABLE&gt;" alt="" coords="107,107,308,155"/>
+<area shape="rect" id="node3_2" href="./OLockKeySource.html" title="com.orientechnologies.orient.server.distributed.impl.task.OLockKeySource" alt="" coords="245,11,373,53"/>
+<area shape="rect" id="node3" href="./OLockKeySource.html" title="&lt;TABLE&gt;" alt="" coords="234,5,383,59"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./get/OServerCommandGetIndex.html" title="com.orientechnologies.orient.server.network.protocol.http.command.get.OServerCommandGetIndex" alt="" coords="16,209,213,234"/>
+<area shape="rect" id="node1" href="./get/OServerCommandGetIndex.html" title="&lt;TABLE&gt;" alt="" coords="5,197,224,245"/>
+<area shape="rect" id="node2_1" href="./OServerCommandDocumentAbstract.html" title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandDocumentAbstract" alt="" coords="1030,113,1290,138"/>
+<area shape="rect" id="node2" href="./OServerCommandDocumentAbstract.html" title="&lt;TABLE&gt;" alt="" coords="1019,101,1301,149"/>
+<area shape="rect" id="node4_2" href="./put/OServerCommandPutIndex.html" title="com.orientechnologies.orient.server.network.protocol.http.command.put.OServerCommandPutIndex" alt="" coords="259,209,455,234"/>
+<area shape="rect" id="node4" href="./put/OServerCommandPutIndex.html" title="&lt;TABLE&gt;" alt="" coords="249,197,466,245"/>
+<area shape="rect" id="node5_3" href="./put/OServerCommandPutDocument.html" title="com.orientechnologies.orient.server.network.protocol.http.command.put.OServerCommandPutDocument" alt="" coords="501,209,728,234"/>
+<area shape="rect" id="node5" href="./put/OServerCommandPutDocument.html" title="&lt;TABLE&gt;" alt="" coords="491,197,739,245"/>
+<area shape="rect" id="node6_4" href="./patch/OServerCommandPatchDocument.html" title="com.orientechnologies.orient.server.network.protocol.http.command.patch.OServerCommandPatchDocument" alt="" coords="773,209,1013,234"/>
+<area shape="rect" id="node6" href="./patch/OServerCommandPatchDocument.html" title="&lt;TABLE&gt;" alt="" coords="763,197,1024,245"/>
+<area shape="rect" id="node7_5" href="./post/OServerCommandPostBatch.html" title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostBatch" alt="" coords="1058,209,1262,234"/>
+<area shape="rect" id="node7" href="./post/OServerCommandPostBatch.html" title="&lt;TABLE&gt;" alt="" coords="1047,197,1273,245"/>
+<area shape="rect" id="node8_6" href="./post/OServerCommandPostDocument.html" title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostDocument" alt="" coords="1307,209,1541,234"/>
+<area shape="rect" id="node8" href="./post/OServerCommandPostDocument.html" title="&lt;TABLE&gt;" alt="" coords="1297,197,1551,245"/>
+<area shape="rect" id="node9_7" href="./post/OServerCommandPostImportRecords.html" title="com.orientechnologies.orient.server.network.protocol.http.command.post.OServerCommandPostImportRecords" alt="" coords="1587,209,1848,234"/>
+<area shape="rect" id="node9" href="./post/OServerCommandPostImportRecords.html" title="&lt;TABLE&gt;" alt="" coords="1576,197,1859,245"/>
+<area shape="rect" id="node10_8" href="./delete/OServerCommandDeleteIndex.html" title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteIndex" alt="" coords="1894,209,2111,234"/>
+<area shape="rect" id="node10" href="./delete/OServerCommandDeleteIndex.html" title="&lt;TABLE&gt;" alt="" coords="1883,197,2122,245"/>
+<area shape="rect" id="node11_9" href="./delete/OServerCommandDeleteDocument.html" title="com.orientechnologies.orient.server.network.protocol.http.command.delete.OServerCommandDeleteDocument" alt="" coords="2157,209,2405,234"/>
+<area shape="rect" id="node11" href="./delete/OServerCommandDeleteDocument.html" title="&lt;TABLE&gt;" alt="" coords="2147,197,2416,245"/>
+<area shape="rect" id="node3_10" href="./OServerCommandAuthenticatedDbAbstract.html" title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthenticatedDbAbstract" alt="" coords="1009,17,1311,42"/>
+<area shape="rect" id="node3" href="./OServerCommandAuthenticatedDbAbstract.html" title="&lt;TABLE&gt;" alt="" coords="999,5,1321,53"/>
+</map>

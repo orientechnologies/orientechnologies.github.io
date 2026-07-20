@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OCheckWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OCheckWorkload" alt="" coords="16,208,147,251"/>
+<area shape="rect" id="node1" href="./OCheckWorkload.html" title="&lt;TABLE&gt;" alt="" coords="5,203,157,256"/>
+<area shape="rect" id="node2_1" href="./OCRUDWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OCRUDWorkload" alt="" coords="120,315,248,341"/>
+<area shape="rect" id="node2" href="./OCRUDWorkload.html" title="&lt;TABLE&gt;" alt="" coords="109,304,259,352"/>
+<area shape="rect" id="node3_2" href="./OBaseWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload" alt="" coords="226,118,350,143"/>
+<area shape="rect" id="node3" href="./OBaseWorkload.html" title="&lt;TABLE&gt;" alt="" coords="215,107,361,155"/>
+<area shape="rect" id="node6_3" href="./OBaseDocumentWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OBaseDocumentWorkload" alt="" coords="193,217,383,242"/>
+<area shape="rect" id="node6" href="./OBaseDocumentWorkload.html" title="&lt;TABLE&gt;" alt="" coords="182,205,394,253"/>
+<area shape="rect" id="node4_4" href="./OBaseWorkload.OBaseWorkLoadContext.html" title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OBaseWorkLoadContext" alt="" coords="381,19,558,45"/>
+<area shape="rect" id="node4" href="./OBaseWorkload.OBaseWorkLoadContext.html" title="&lt;TABLE&gt;" alt="" coords="370,8,569,56"/>
+<area shape="rect" id="node7_5" href="./OBaseDocumentWorkload.OWorkLoadContext.html" title="com.orientechnologies.orient.stresstest.workload.OBaseDocumentWorkload.OWorkLoadContext" alt="" coords="397,118,541,143"/>
+<area shape="rect" id="node7" href="./OBaseDocumentWorkload.OWorkLoadContext.html" title="&lt;TABLE&gt;" alt="" coords="387,107,552,155"/>
+<area shape="rect" id="node5_6" href="./OBaseWorkload.OWorkLoadResult.html" title="com.orientechnologies.orient.stresstest.workload.OBaseWorkload.OWorkLoadResult" alt="" coords="603,19,738,45"/>
+<area shape="rect" id="node5" href="./OBaseWorkload.OWorkLoadResult.html" title="&lt;TABLE&gt;" alt="" coords="593,8,749,56"/>
+<area shape="rect" id="node8_7" href="./OWorkload.html" title="com.orientechnologies.orient.stresstest.workload.OWorkload" alt="" coords="241,11,335,53"/>
+<area shape="rect" id="node8" href="./OWorkload.html" title="&lt;TABLE&gt;" alt="" coords="231,5,345,59"/>
+<area shape="rect" id="node9_8" href="./OWorkloadFactory.html" title="com.orientechnologies.orient.stresstest.workload.OWorkloadFactory" alt="" coords="783,19,921,45"/>
+<area shape="rect" id="node9" href="./OWorkloadFactory.html" title="&lt;TABLE&gt;" alt="" coords="773,8,931,56"/>
+</map>

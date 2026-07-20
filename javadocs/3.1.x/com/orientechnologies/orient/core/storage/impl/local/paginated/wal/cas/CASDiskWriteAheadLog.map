@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OWriteAheadLog.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWriteAheadLog" alt="" coords="39,11,167,53"/>
+<area shape="rect" id="node1" href="../OWriteAheadLog.html" title="&lt;TABLE&gt;" alt="" coords="28,5,177,59"/>
+<area shape="rect" id="node2_1" href="./CASDiskWriteAheadLog.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.cas.CASDiskWriteAheadLog" alt="" coords="16,118,189,143"/>
+<area shape="rect" id="node2" href="./CASDiskWriteAheadLog.html" title="&lt;TABLE&gt;" alt="" coords="5,107,200,155"/>
+</map>

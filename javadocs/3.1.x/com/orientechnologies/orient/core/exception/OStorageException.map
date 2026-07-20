@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OPageIsBrokenException.html" title="com.orientechnologies.orient.core.exception.OPageIsBrokenException" alt="" coords="16,209,196,234"/>
+<area shape="rect" id="node1" href="./OPageIsBrokenException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,207,245"/>
+<area shape="rect" id="node2_1" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="813,17,937,42"/>
+<area shape="rect" id="node2" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="803,5,948,53"/>
+<area shape="rect" id="node6_2" href="./OStorageException.html" title="com.orientechnologies.orient.core.exception.OStorageException" alt="" coords="803,113,947,138"/>
+<area shape="rect" id="node6" href="./OStorageException.html" title="&lt;TABLE&gt;" alt="" coords="793,101,958,149"/>
+<area shape="rect" id="node3_3" href="./OClusterDoesNotExistException.html" title="com.orientechnologies.orient.core.exception.OClusterDoesNotExistException" alt="" coords="241,209,469,234"/>
+<area shape="rect" id="node3" href="./OClusterDoesNotExistException.html" title="&lt;TABLE&gt;" alt="" coords="231,197,480,245"/>
+<area shape="rect" id="node4_4" href="./OInvalidInstanceIdException.html" title="com.orientechnologies.orient.core.exception.OInvalidInstanceIdException" alt="" coords="515,209,719,234"/>
+<area shape="rect" id="node4" href="./OInvalidInstanceIdException.html" title="&lt;TABLE&gt;" alt="" coords="504,197,729,245"/>
+<area shape="rect" id="node5_5" href="./EncryptionKeyAbsentException.html" title="com.orientechnologies.orient.core.exception.EncryptionKeyAbsentException" alt="" coords="765,209,986,234"/>
+<area shape="rect" id="node5" href="./EncryptionKeyAbsentException.html" title="&lt;TABLE&gt;" alt="" coords="754,197,997,245"/>
+<area shape="rect" id="node7_6" href="./OStorageExistsException.html" title="com.orientechnologies.orient.core.exception.OStorageExistsException" alt="" coords="1032,209,1215,234"/>
+<area shape="rect" id="node7" href="./OStorageExistsException.html" title="&lt;TABLE&gt;" alt="" coords="1021,197,1225,245"/>
+<area shape="rect" id="node8_7" href="./OStorageDoesNotExistException.html" title="com.orientechnologies.orient.core.exception.OStorageDoesNotExistException" alt="" coords="1261,209,1493,234"/>
+<area shape="rect" id="node8" href="./OStorageDoesNotExistException.html" title="&lt;TABLE&gt;" alt="" coords="1250,197,1503,245"/>
+<area shape="rect" id="node9_8" href="./OLowDiskSpaceException.html" title="com.orientechnologies.orient.core.exception.OLowDiskSpaceException" alt="" coords="1539,209,1727,234"/>
+<area shape="rect" id="node9" href="./OLowDiskSpaceException.html" title="&lt;TABLE&gt;" alt="" coords="1528,197,1737,245"/>
+</map>

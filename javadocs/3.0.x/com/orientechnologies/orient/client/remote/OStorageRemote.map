@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../core/storage/OStorageProxy.html" title="com.orientechnologies.orient.core.storage.OStorageProxy" alt="" coords="16,11,132,53"/>
+<area shape="rect" id="node1" href="../../core/storage/OStorageProxy.html" title="&lt;TABLE&gt;" alt="" coords="5,5,143,59"/>
+<area shape="rect" id="node3_1" href="./OStorageRemote.html" title="com.orientechnologies.orient.client.remote.OStorageRemote" alt="" coords="179,118,310,143"/>
+<area shape="rect" id="node3" href="./OStorageRemote.html" title="&lt;TABLE&gt;" alt="" coords="169,107,321,155"/>
+<area shape="rect" id="node2_2" href="../../core/storage/OStorageAbstract.html" title="com.orientechnologies.orient.core.storage.OStorageAbstract" alt="" coords="178,19,311,45"/>
+<area shape="rect" id="node2" href="../../core/storage/OStorageAbstract.html" title="&lt;TABLE&gt;" alt="" coords="167,8,322,56"/>
+<area shape="rect" id="node4_3" href="./ORemotePushHandler.html" title="com.orientechnologies.orient.client.remote.ORemotePushHandler" alt="" coords="357,11,519,53"/>
+<area shape="rect" id="node4" href="./ORemotePushHandler.html" title="&lt;TABLE&gt;" alt="" coords="346,5,530,59"/>
+</map>

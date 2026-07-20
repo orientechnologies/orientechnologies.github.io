@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSecurityRole.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityRole" alt="" coords="16,11,128,53"/>
+<area shape="rect" id="node1" href="./OSecurityRole.html" title="&lt;TABLE&gt;" alt="" coords="5,5,139,59"/>
+<area shape="rect" id="node4_1" href="./ORole.html" title="com.orientechnologies.orient.core.metadata.security.ORole" alt="" coords="113,118,172,143"/>
+<area shape="rect" id="node4" href="./ORole.html" title="&lt;TABLE&gt;" alt="" coords="103,107,183,155"/>
+<area shape="rect" id="node2_2" href="./OSystemRole.html" title="com.orientechnologies.orient.core.metadata.security.OSystemRole" alt="" coords="89,214,197,239"/>
+<area shape="rect" id="node2" href="./OSystemRole.html" title="&lt;TABLE&gt;" alt="" coords="78,203,207,251"/>
+<area shape="rect" id="node3_3" href="./OIdentity.html" title="com.orientechnologies.orient.core.metadata.security.OIdentity" alt="" coords="173,19,253,45"/>
+<area shape="rect" id="node3" href="./OIdentity.html" title="&lt;TABLE&gt;" alt="" coords="163,8,264,56"/>
+</map>

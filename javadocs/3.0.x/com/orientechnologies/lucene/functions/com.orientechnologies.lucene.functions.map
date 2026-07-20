@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OLuceneSearchMoreLikeThisFunction.html" title="com.orientechnologies.lucene.functions.OLuceneSearchMoreLikeThisFunction" alt="" coords="16,17,276,42"/>
+<area shape="rect" id="node1" href="./OLuceneSearchMoreLikeThisFunction.html" title="&lt;TABLE&gt;" alt="" coords="5,5,287,53"/>
+<area shape="rect" id="node2_1" href="./OLuceneFunctionsFactory.html" title="com.orientechnologies.lucene.functions.OLuceneFunctionsFactory" alt="" coords="322,17,506,42"/>
+<area shape="rect" id="node2" href="./OLuceneFunctionsFactory.html" title="&lt;TABLE&gt;" alt="" coords="311,5,517,53"/>
+<area shape="rect" id="node3_2" href="./OLuceneSearchOnClassFunction.html" title="com.orientechnologies.lucene.functions.OLuceneSearchOnClassFunction" alt="" coords="281,113,509,138"/>
+<area shape="rect" id="node3" href="./OLuceneSearchOnClassFunction.html" title="&lt;TABLE&gt;" alt="" coords="271,101,520,149"/>
+<area shape="rect" id="node4_3" href="./OLuceneSearchOnIndexFunction.html" title="com.orientechnologies.lucene.functions.OLuceneSearchOnIndexFunction" alt="" coords="555,113,783,138"/>
+<area shape="rect" id="node4" href="./OLuceneSearchOnIndexFunction.html" title="&lt;TABLE&gt;" alt="" coords="544,101,793,149"/>
+<area shape="rect" id="node5_4" href="./OLuceneFunctionsUtils.html" title="com.orientechnologies.lucene.functions.OLuceneFunctionsUtils" alt="" coords="831,17,999,42"/>
+<area shape="rect" id="node5" href="./OLuceneFunctionsUtils.html" title="&lt;TABLE&gt;" alt="" coords="821,5,1010,53"/>
+<area shape="rect" id="node6_5" href="./OLuceneSearchFunctionTemplate.html" title="com.orientechnologies.lucene.functions.OLuceneSearchFunctionTemplate" alt="" coords="551,17,786,42"/>
+<area shape="rect" id="node6" href="./OLuceneSearchFunctionTemplate.html" title="&lt;TABLE&gt;" alt="" coords="541,5,797,53"/>
+<area shape="rect" id="node7_6" href="./OLuceneSearchOnFieldsFunction.html" title="com.orientechnologies.lucene.functions.OLuceneSearchOnFieldsFunction" alt="" coords="828,113,1059,138"/>
+<area shape="rect" id="node7" href="./OLuceneSearchOnFieldsFunction.html" title="&lt;TABLE&gt;" alt="" coords="817,101,1069,149"/>
+</map>
