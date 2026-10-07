@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OObjectSerializerContext.html" title="com.orientechnologies.orient.object.serialization.OObjectSerializerContext" alt="" coords="99,19,283,45"/>
+<area shape="rect" id="node1" href="./OObjectSerializerContext.html" title="&lt;TABLE&gt;" alt="" coords="89,8,294,56"/>
+<area shape="rect" id="node2_1" href="./OObjectCustomSerializerList.html" title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerList" alt="" coords="16,118,276,143"/>
+<area shape="rect" id="node2" href="./OObjectCustomSerializerList.html" title="&lt;TABLE&gt;" alt="" coords="5,107,287,155"/>
+<area shape="rect" id="node3_2" href="./OObjectCustomSerializerSet.html" title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerSet" alt="" coords="321,118,579,143"/>
+<area shape="rect" id="node3" href="./OObjectCustomSerializerSet.html" title="&lt;TABLE&gt;" alt="" coords="311,107,589,155"/>
+<area shape="rect" id="node4_3" href="./OObjectLazyCustomSerializer.html" title="com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer" alt="" coords="329,11,571,53"/>
+<area shape="rect" id="node4" href="./OObjectLazyCustomSerializer.html" title="&lt;TABLE&gt;" alt="" coords="318,5,582,59"/>
+<area shape="rect" id="node6_4" href="./OObjectCustomSerializerMap.html" title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap" alt="" coords="625,118,889,143"/>
+<area shape="rect" id="node6" href="./OObjectCustomSerializerMap.html" title="&lt;TABLE&gt;" alt="" coords="614,107,899,155"/>
+<area shape="rect" id="node5_5" href="./OObjectSerializerHelper.html" title="com.orientechnologies.orient.object.serialization.OObjectSerializerHelper" alt="" coords="617,19,793,45"/>
+<area shape="rect" id="node5" href="./OObjectSerializerHelper.html" title="&lt;TABLE&gt;" alt="" coords="606,8,803,56"/>
+<area shape="rect" id="node7_6" href="./OObjectCustomSerializerIterator.html" title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerIterator" alt="" coords="839,19,1123,45"/>
+<area shape="rect" id="node7" href="./OObjectCustomSerializerIterator.html" title="&lt;TABLE&gt;" alt="" coords="828,8,1133,56"/>
+<area shape="rect" id="node8_7" href="./OObjectSerializationThreadLocal.html" title="com.orientechnologies.orient.object.serialization.OObjectSerializationThreadLocal" alt="" coords="1169,19,1401,45"/>
+<area shape="rect" id="node8" href="./OObjectSerializationThreadLocal.html" title="&lt;TABLE&gt;" alt="" coords="1158,8,1411,56"/>
+</map>

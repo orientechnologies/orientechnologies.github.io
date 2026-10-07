@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../core/sql/functions/math/OSQLFunctionMathAbstract.html" title="com.orientechnologies.orient.core.sql.functions.math.OSQLFunctionMathAbstract" alt="" coords="64,17,260,42"/>
+<area shape="rect" id="node1" href="../../../core/sql/functions/math/OSQLFunctionMathAbstract.html" title="&lt;TABLE&gt;" alt="" coords="53,5,271,53"/>
+<area shape="rect" id="node3_1" href="./OSQLFunctionHeuristicPathFinderAbstract.html" title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionHeuristicPathFinderAbstract" alt="" coords="16,113,308,138"/>
+<area shape="rect" id="node3" href="./OSQLFunctionHeuristicPathFinderAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,101,319,149"/>
+<area shape="rect" id="node2_2" href="./OSQLFunctionAstar.html" title="com.orientechnologies.orient.graph.sql.functions.OSQLFunctionAstar" alt="" coords="90,209,234,234"/>
+<area shape="rect" id="node2" href="./OSQLFunctionAstar.html" title="&lt;TABLE&gt;" alt="" coords="79,197,245,245"/>
+</map>

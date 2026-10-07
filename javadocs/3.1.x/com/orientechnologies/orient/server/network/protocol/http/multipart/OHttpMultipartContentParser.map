@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OHttpMultipartDatabaseImportContentParser.html" title="com.orientechnologies.orient.server.network.protocol.http.multipart.OHttpMultipartDatabaseImportContentParser" alt="" coords="16,118,328,143"/>
+<area shape="rect" id="node1" href="./OHttpMultipartDatabaseImportContentParser.html" title="&lt;TABLE&gt;" alt="" coords="5,107,339,155"/>
+<area shape="rect" id="node2_1" href="./OHttpMultipartFileToRecordContentParser.html" title="com.orientechnologies.orient.server.network.protocol.http.multipart.OHttpMultipartFileToRecordContentParser" alt="" coords="374,118,663,143"/>
+<area shape="rect" id="node2" href="./OHttpMultipartFileToRecordContentParser.html" title="&lt;TABLE&gt;" alt="" coords="363,107,674,155"/>
+<area shape="rect" id="node3_2" href="./OHttpMultipartContentParser.html" title="com.orientechnologies.orient.server.network.protocol.http.multipart.OHttpMultipartContentParser" alt="" coords="563,11,800,53"/>
+<area shape="rect" id="node3" href="./OHttpMultipartContentParser.html" title="&lt;TABLE&gt;" alt="" coords="552,5,811,59"/>
+<area shape="rect" id="node4_3" href="./OHttpMultipartFileToDiskContentParser.html" title="com.orientechnologies.orient.server.network.protocol.http.multipart.OHttpMultipartFileToDiskContentParser" alt="" coords="709,118,982,143"/>
+<area shape="rect" id="node4" href="./OHttpMultipartFileToDiskContentParser.html" title="&lt;TABLE&gt;" alt="" coords="698,107,993,155"/>
+<area shape="rect" id="node5_4" href="./OHttpMultipartContentBaseParser.html" title="com.orientechnologies.orient.server.network.protocol.http.multipart.OHttpMultipartContentBaseParser" alt="" coords="1028,118,1268,143"/>
+<area shape="rect" id="node5" href="./OHttpMultipartContentBaseParser.html" title="&lt;TABLE&gt;" alt="" coords="1017,107,1279,155"/>
+</map>

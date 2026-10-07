@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OrientDB work in progress update 2026 Q3 |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon-orientdb.png">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #212127;
+        /* Primary theme text color */
+        --primary-text-color: #ee521b;
+        /* Primary theme link color */
+        --primary-link-color: #ee521b;
+        /* Secondary color: the background body color */
+        --secondary-color: #ffffff;
+        --secondary-text-color: #212127;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #ee521b;
+    }
+    .logo img {
+        width:auto !important;
+    }
+    .nav-item:hover {
+        color:#ffffff !important;
+    }
+</style>
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://orientdb.dev/juice.css">
+    
+    
+</head>
+
+<body>
+    
+
+
+<header class="box-shadow">
+    
+
+<a href="https://orientdb.dev/">
+    <div class="logo">
+        <img src="https://orientdb.dev/logo.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+        
+            <a class="nav-item subtitle-text" href="https://orientdb.dev/documentation/">Docs</a>
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https://orientdb.dev/downloads/">Download</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https://orientdb.dev/getting-started/">Getting Started</a>
+        
+    
+        
+    
+        
+            <a class="nav-item subtitle-text" href="https://orientdb.dev/support/">Support</a>
+        
+    
+        
+    
+    
+        
+        <a class="nav-item subtitle-text" href="/news/">News</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        <div class="content text">
+            
+<div class="heading-text">OrientDB work in progress update 2026 Q3</div>
+2026-10-07
+<p>Third quarter of 2026 is passed and here is a new update of what happened in OrientDB</p>
+<h3 id="development">Development</h3>
+<p>This quarter saw development work in multiple areas:</p>
+<p>For first testing of the distributed implementation has been a continuous work in the last quarter, with improvements in sync and recover from out of sync situations,
+also the consolidation of the distributed protocol and additional unit tests to cover conceptual flows, on the specific of existing distributed integration test the range of passing test cases is still around two thirds.</p>
+<p>A lot of work it also happened around how OrientDB is configured, as last stable, OrientDB is configured with multiple files with different formats(xml,json,properties) also is possible
+to pass properties as environment variables trough configuration files or directly trough code, work has happened and is going on to rationalize all of this,
+reducing the number of files, trying to use a more modern formats and make the configuration more user friendly.</p>
+<p>Another area of improvement is server/context administration, a new java API has been defined to open a administration session, that can be used to create/list/drop databases, and manage server users, roles, nodes ecc,
+also new SQL commands have been implemented to handle manipulation of server users and roles, more may be implemented in future.</p>
+<p>Some work also started on the packaging, the source code of packages has been refactored, and in the long run we will have a bigger set of packages to support
+different use cases and environments.</p>
+<h3 id="maintenance">Maintenance</h3>
+<p>There have been some sizeable work in 3.2.x with 4 patch releases, mostly around the query engine, and the usual dependency updates,
+we have seen an increased of LLM generated report of various quality with some of them related to security issue that have been promptly handled, so if you are holding back on your
+updates please update to the most recent version of OrientDB has security fixes!</p>
+<h3 id="future">Future</h3>
+<p>The next months we will try to consolidate the new configuration format, this is one of the most important part missing for the next 4.0, and after this is consolidated it may
+be possible to start to produce some first beta packages, as usual work will continue on testing the distributed implementation and improvements in remote, query engine, and other areas,
+including as well porting of fixes from 3.2.x.</p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://orientdb.dev">OrientDB.dev</a>
+            <a rel="me" href="https://fosstodon.org/@orientdb">Mastodon</a>
+            <a href="https://matrix.to/#/#orientdb:matrix.org">Matrix Chat</a>
+        </small>
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://tglman.org/OrientDB/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    </footer>
+    
+</body>
+<script>
+    function highlightNav(heading) {
+        let pathname = location.pathname;
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+        document.querySelector(".toc a[href$='" + pathname + "#" + heading + "']").classList.add("active");
+    }
+
+    let currentHeading = "";
+    window.onscroll = function () {
+        let h = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+        let elementArr = [];
+
+        h.forEach(item => {
+            if (item.id !== "") {
+                elementArr[item.id] = item.getBoundingClientRect().top;
+            }
+        });
+        elementArr.sort();
+        for (let key in elementArr) {
+            if (!elementArr.hasOwnProperty(key)) {
+                continue;
+            }
+            if (elementArr[key] > 0 && elementArr[key] < 300) {
+                if (currentHeading !== key) {
+                    highlightNav(key);
+                    currentHeading = key;
+                }
+                break;
+            }
+        }
+    }
+</script>
+
+</html>

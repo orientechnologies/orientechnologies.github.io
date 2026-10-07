@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAbstractLoader.html" title="com.orientechnologies.orient.etl.loader.OAbstractLoader" alt="" coords="174,118,302,143"/>
+<area shape="rect" id="node1" href="./OAbstractLoader.html" title="&lt;TABLE&gt;" alt="" coords="163,107,313,155"/>
+<area shape="rect" id="node3_1" href="./OOrientDBLoader.html" title="com.orientechnologies.orient.etl.loader.OOrientDBLoader" alt="" coords="16,214,148,239"/>
+<area shape="rect" id="node3" href="./OOrientDBLoader.html" title="&lt;TABLE&gt;" alt="" coords="5,203,159,251"/>
+<area shape="rect" id="node5_2" href="./OStreamLoader.html" title="com.orientechnologies.orient.etl.loader.OStreamLoader" alt="" coords="194,214,314,239"/>
+<area shape="rect" id="node5" href="./OStreamLoader.html" title="&lt;TABLE&gt;" alt="" coords="183,203,325,251"/>
+<area shape="rect" id="node8_3" href="./OOutputLoader.html" title="com.orientechnologies.orient.etl.loader.OOutputLoader" alt="" coords="359,214,477,239"/>
+<area shape="rect" id="node8" href="./OOutputLoader.html" title="&lt;TABLE&gt;" alt="" coords="349,203,487,251"/>
+<area shape="rect" id="node2_4" href="./OLoader.html" title="com.orientechnologies.orient.etl.loader.OLoader" alt="" coords="121,11,214,53"/>
+<area shape="rect" id="node2" href="./OLoader.html" title="&lt;TABLE&gt;" alt="" coords="110,5,225,59"/>
+<area shape="rect" id="node4_5" href="./OOrientDBLoader.DB_TYPE.html" title="com.orientechnologies.orient.etl.loader.OOrientDBLoader.DB_TYPE" alt="" coords="260,11,379,53"/>
+<area shape="rect" id="node4" href="./OOrientDBLoader.DB_TYPE.html" title="&lt;TABLE&gt;" alt="" coords="249,5,389,59"/>
+<area shape="rect" id="node6_6" href="./OStreamLoader.Listener.html" title="com.orientechnologies.orient.etl.loader.OStreamLoader.Listener" alt="" coords="425,11,518,53"/>
+<area shape="rect" id="node6" href="./OStreamLoader.Listener.html" title="&lt;TABLE&gt;" alt="" coords="414,5,529,59"/>
+<area shape="rect" id="node7_7" href="./OLoaderException.html" title="com.orientechnologies.orient.etl.loader.OLoaderException" alt="" coords="564,19,701,45"/>
+<area shape="rect" id="node7" href="./OLoaderException.html" title="&lt;TABLE&gt;" alt="" coords="553,8,712,56"/>
+</map>

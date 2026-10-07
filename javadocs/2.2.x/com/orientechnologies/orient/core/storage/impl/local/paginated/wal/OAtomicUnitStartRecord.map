@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OOperationUnitRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord" alt="" coords="23,17,188,42"/>
+<area shape="rect" id="node1" href="./OOperationUnitRecord.html" title="&lt;TABLE&gt;" alt="" coords="12,5,199,53"/>
+<area shape="rect" id="node2_1" href="./OAtomicUnitStartRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitStartRecord" alt="" coords="16,113,195,138"/>
+<area shape="rect" id="node2" href="./OAtomicUnitStartRecord.html" title="&lt;TABLE&gt;" alt="" coords="5,101,205,149"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseLifecycleListenerAbstract.html" title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListenerAbstract" alt="" coords="16,118,272,143"/>
+<area shape="rect" id="node1" href="./ODatabaseLifecycleListenerAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,107,283,155"/>
+<area shape="rect" id="node2_1" href="./ODatabaseLifecycleListener.html" title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListener" alt="" coords="719,11,921,53"/>
+<area shape="rect" id="node2" href="./ODatabaseLifecycleListener.html" title="&lt;TABLE&gt;" alt="" coords="709,5,931,59"/>
+<area shape="rect" id="node3_2" href="../../server/plugin/livequery/OLiveQueryPlugin.html" title="com.orientechnologies.orient.server.plugin.livequery.OLiveQueryPlugin" alt="" coords="317,118,453,143"/>
+<area shape="rect" id="node3" href="../../server/plugin/livequery/OLiveQueryPlugin.html" title="&lt;TABLE&gt;" alt="" coords="307,107,464,155"/>
+<area shape="rect" id="node4_3" href="../../server/handler/OConfigurableHooksManager.html" title="com.orientechnologies.orient.server.handler.OConfigurableHooksManager" alt="" coords="499,118,709,143"/>
+<area shape="rect" id="node4" href="../../server/handler/OConfigurableHooksManager.html" title="&lt;TABLE&gt;" alt="" coords="489,107,719,155"/>
+<area shape="rect" id="node5_4" href="../../../security/auditing/ODefaultAuditing.html" title="com.orientechnologies.security.auditing.ODefaultAuditing" alt="" coords="754,118,886,143"/>
+<area shape="rect" id="node5" href="../../../security/auditing/ODefaultAuditing.html" title="&lt;TABLE&gt;" alt="" coords="743,107,897,155"/>
+<area shape="rect" id="node6_5" href="../../server/distributed/impl/ODistributedAbstractPlugin.html" title="com.orientechnologies.orient.server.distributed.impl.ODistributedAbstractPlugin" alt="" coords="931,118,1127,143"/>
+<area shape="rect" id="node6" href="../../server/distributed/impl/ODistributedAbstractPlugin.html" title="&lt;TABLE&gt;" alt="" coords="921,107,1138,155"/>
+<area shape="rect" id="node7_6" href="../../../spatial/OLuceneSpatialIndexFactory.html" title="com.orientechnologies.spatial.OLuceneSpatialIndexFactory" alt="" coords="1173,118,1377,143"/>
+<area shape="rect" id="node7" href="../../../spatial/OLuceneSpatialIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="1162,107,1387,155"/>
+<area shape="rect" id="node8_7" href="../../../lucene/OLuceneIndexFactory.html" title="com.orientechnologies.lucene.OLuceneIndexFactory" alt="" coords="1422,118,1581,143"/>
+<area shape="rect" id="node8" href="../../../lucene/OLuceneIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="1411,107,1591,155"/>
+</map>

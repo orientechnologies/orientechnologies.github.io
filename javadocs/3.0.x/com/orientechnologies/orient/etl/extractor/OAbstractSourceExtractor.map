@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OJsonExtractor.html" title="com.orientechnologies.orient.etl.extractor.OJsonExtractor" alt="" coords="16,209,132,234"/>
+<area shape="rect" id="node1" href="./OJsonExtractor.html" title="&lt;TABLE&gt;" alt="" coords="5,197,143,245"/>
+<area shape="rect" id="node2_1" href="./OCSVExtractor.html" title="com.orientechnologies.orient.etl.extractor.OCSVExtractor" alt="" coords="178,209,293,234"/>
+<area shape="rect" id="node2" href="./OCSVExtractor.html" title="&lt;TABLE&gt;" alt="" coords="167,197,303,245"/>
+<area shape="rect" id="node3_2" href="./OAbstractSourceExtractor.html" title="com.orientechnologies.orient.etl.extractor.OAbstractSourceExtractor" alt="" coords="222,113,409,138"/>
+<area shape="rect" id="node3" href="./OAbstractSourceExtractor.html" title="&lt;TABLE&gt;" alt="" coords="211,101,419,149"/>
+<area shape="rect" id="node4_3" href="./ORowExtractor.html" title="com.orientechnologies.orient.etl.extractor.ORowExtractor" alt="" coords="339,209,455,234"/>
+<area shape="rect" id="node4" href="./ORowExtractor.html" title="&lt;TABLE&gt;" alt="" coords="328,197,465,245"/>
+<area shape="rect" id="node6_4" href="./OXmlExtractor.html" title="com.orientechnologies.orient.etl.extractor.OXmlExtractor" alt="" coords="501,209,615,234"/>
+<area shape="rect" id="node6" href="./OXmlExtractor.html" title="&lt;TABLE&gt;" alt="" coords="490,197,626,245"/>
+<area shape="rect" id="node5_5" href="./OAbstractExtractor.html" title="com.orientechnologies.orient.etl.extractor.OAbstractExtractor" alt="" coords="244,17,387,42"/>
+<area shape="rect" id="node5" href="./OAbstractExtractor.html" title="&lt;TABLE&gt;" alt="" coords="233,5,397,53"/>
+</map>

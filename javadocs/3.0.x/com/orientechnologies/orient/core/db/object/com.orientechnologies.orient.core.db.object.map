@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OLazyObjectListInterface.html" title="com.orientechnologies.orient.core.db.object.OLazyObjectListInterface" alt="" coords="16,11,252,53"/>
+<area shape="rect" id="node1" href="./OLazyObjectListInterface.html" title="&lt;TABLE&gt;" alt="" coords="5,5,263,59"/>
+<area shape="rect" id="node2_1" href="./ODatabaseObject.html" title="com.orientechnologies.orient.core.db.object.ODatabaseObject" alt="" coords="298,11,431,53"/>
+<area shape="rect" id="node2" href="./ODatabaseObject.html" title="&lt;TABLE&gt;" alt="" coords="287,5,442,59"/>
+<area shape="rect" id="node3_2" href="./OLazyObjectSetInterface.html" title="com.orientechnologies.orient.core.db.object.OLazyObjectSetInterface" alt="" coords="477,11,687,53"/>
+<area shape="rect" id="node3" href="./OLazyObjectSetInterface.html" title="&lt;TABLE&gt;" alt="" coords="466,5,698,59"/>
+<area shape="rect" id="node4_3" href="./OLazyObjectMapInterface.html" title="com.orientechnologies.orient.core.db.object.OLazyObjectMapInterface" alt="" coords="733,11,975,53"/>
+<area shape="rect" id="node4" href="./OLazyObjectMapInterface.html" title="&lt;TABLE&gt;" alt="" coords="723,5,985,59"/>
+<area shape="rect" id="node5_4" href="./OObjectLazyMultivalueElement.html" title="com.orientechnologies.orient.core.db.object.OObjectLazyMultivalueElement" alt="" coords="1020,11,1275,53"/>
+<area shape="rect" id="node5" href="./OObjectLazyMultivalueElement.html" title="&lt;TABLE&gt;" alt="" coords="1009,5,1285,59"/>
+</map>

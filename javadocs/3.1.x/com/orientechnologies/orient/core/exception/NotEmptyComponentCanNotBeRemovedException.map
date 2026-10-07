@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../common/exception/OException.html" title="com.orientechnologies.common.exception.OException" alt="" coords="59,19,153,45"/>
+<area shape="rect" id="node1" href="../../../common/exception/OException.html" title="&lt;TABLE&gt;" alt="" coords="49,8,163,56"/>
+<area shape="rect" id="node3_1" href="./NotEmptyComponentCanNotBeRemovedException.html" title="com.orientechnologies.orient.core.exception.NotEmptyComponentCanNotBeRemovedException" alt="" coords="16,118,367,143"/>
+<area shape="rect" id="node3" href="./NotEmptyComponentCanNotBeRemovedException.html" title="&lt;TABLE&gt;" alt="" coords="5,107,377,155"/>
+<area shape="rect" id="node2_2" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="199,11,357,53"/>
+<area shape="rect" id="node2" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="188,5,368,59"/>
+</map>

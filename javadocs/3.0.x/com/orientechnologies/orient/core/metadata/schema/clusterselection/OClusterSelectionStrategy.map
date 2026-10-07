@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OBalancedClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OBalancedClusterSelectionStrategy" alt="" coords="16,118,267,143"/>
+<area shape="rect" id="node1" href="./OBalancedClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="5,107,277,155"/>
+<area shape="rect" id="node2_1" href="./ODefaultClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.ODefaultClusterSelectionStrategy" alt="" coords="311,118,550,143"/>
+<area shape="rect" id="node2" href="./ODefaultClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="301,107,561,155"/>
+<area shape="rect" id="node3_2" href="./ORoundRobinClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.ORoundRobinClusterSelectionStrategy" alt="" coords="595,118,863,143"/>
+<area shape="rect" id="node3" href="./ORoundRobinClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="585,107,874,155"/>
+<area shape="rect" id="node4_3" href="./OClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" alt="" coords="485,11,675,53"/>
+<area shape="rect" id="node4" href="./OClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="474,5,686,59"/>
+<area shape="rect" id="node5_4" href="../../../sharding/auto/OAutoShardingClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy" alt="" coords="909,118,1187,143"/>
+<area shape="rect" id="node5" href="../../../sharding/auto/OAutoShardingClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="899,107,1197,155"/>
+</map>

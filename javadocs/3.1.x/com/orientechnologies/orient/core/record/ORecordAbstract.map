@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORecordAbstract.html" title="com.orientechnologies.orient.core.record.ORecordAbstract" alt="" coords="149,118,277,143"/>
+<area shape="rect" id="node1" href="./ORecordAbstract.html" title="&lt;TABLE&gt;" alt="" coords="139,107,288,155"/>
+<area shape="rect" id="node3_1" href="./impl/ODocument.html" title="com.orientechnologies.orient.core.record.impl.ODocument" alt="" coords="16,214,112,239"/>
+<area shape="rect" id="node3" href="./impl/ODocument.html" title="&lt;TABLE&gt;" alt="" coords="5,203,123,251"/>
+<area shape="rect" id="node4_2" href="./impl/ORecordBytes.html" title="com.orientechnologies.orient.core.record.impl.ORecordBytes" alt="" coords="157,214,269,239"/>
+<area shape="rect" id="node4" href="./impl/ORecordBytes.html" title="&lt;TABLE&gt;" alt="" coords="147,203,280,251"/>
+<area shape="rect" id="node5_3" href="./impl/ORecordFlat.html" title="com.orientechnologies.orient.core.record.impl.ORecordFlat" alt="" coords="315,214,415,239"/>
+<area shape="rect" id="node5" href="./impl/ORecordFlat.html" title="&lt;TABLE&gt;" alt="" coords="305,203,426,251"/>
+<area shape="rect" id="node2_4" href="./ORecord.html" title="com.orientechnologies.orient.core.record.ORecord" alt="" coords="167,11,260,53"/>
+<area shape="rect" id="node2" href="./ORecord.html" title="&lt;TABLE&gt;" alt="" coords="156,5,271,59"/>
+</map>

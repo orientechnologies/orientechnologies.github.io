@@ -1,0 +1,34 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OTransactionRecordIndexOperation.html" title="com.orientechnologies.orient.core.tx.OTransactionRecordIndexOperation" alt="" coords="16,19,264,45"/>
+<area shape="rect" id="node1" href="./OTransactionRecordIndexOperation.html" title="&lt;TABLE&gt;" alt="" coords="5,8,275,56"/>
+<area shape="rect" id="node2_1" href="./OTransactionIndexChanges.html" title="com.orientechnologies.orient.core.tx.OTransactionIndexChanges" alt="" coords="310,19,506,45"/>
+<area shape="rect" id="node2" href="./OTransactionIndexChanges.html" title="&lt;TABLE&gt;" alt="" coords="299,8,517,56"/>
+<area shape="rect" id="node3_2" href="./OTransactionIndexChanges.OPERATION.html" title="com.orientechnologies.orient.core.tx.OTransactionIndexChanges.OPERATION" alt="" coords="551,11,670,53"/>
+<area shape="rect" id="node3" href="./OTransactionIndexChanges.OPERATION.html" title="&lt;TABLE&gt;" alt="" coords="541,5,681,59"/>
+<area shape="rect" id="node4_3" href="./OTransactionNoTx.html" title="com.orientechnologies.orient.core.tx.OTransactionNoTx" alt="" coords="703,219,841,245"/>
+<area shape="rect" id="node4" href="./OTransactionNoTx.html" title="&lt;TABLE&gt;" alt="" coords="693,208,851,256"/>
+<area shape="rect" id="node5_4" href="./OTransactionAbstract.html" title="com.orientechnologies.orient.core.tx.OTransactionAbstract" alt="" coords="689,121,847,146"/>
+<area shape="rect" id="node5" href="./OTransactionAbstract.html" title="&lt;TABLE&gt;" alt="" coords="678,109,858,157"/>
+<area shape="rect" id="node16_5" href="./OTransactionRealAbstract.html" title="com.orientechnologies.orient.core.tx.OTransactionRealAbstract" alt="" coords="470,219,658,245"/>
+<area shape="rect" id="node16" href="./OTransactionRealAbstract.html" title="&lt;TABLE&gt;" alt="" coords="459,208,669,256"/>
+<area shape="rect" id="node6_6" href="./ORollbackException.html" title="com.orientechnologies.orient.core.tx.ORollbackException" alt="" coords="865,19,1015,45"/>
+<area shape="rect" id="node6" href="./ORollbackException.html" title="&lt;TABLE&gt;" alt="" coords="855,8,1025,56"/>
+<area shape="rect" id="node7_7" href="./OTransactionIndexChangesPerKey.html" title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey" alt="" coords="1060,19,1300,45"/>
+<area shape="rect" id="node7" href="./OTransactionIndexChangesPerKey.html" title="&lt;TABLE&gt;" alt="" coords="1049,8,1311,56"/>
+<area shape="rect" id="node8_8" href="./OTransactionIndexChangesPerKey.OTransactionIndexEntry.html" title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.OTransactionIndexEntry" alt="" coords="1345,19,1519,45"/>
+<area shape="rect" id="node8" href="./OTransactionIndexChangesPerKey.OTransactionIndexEntry.html" title="&lt;TABLE&gt;" alt="" coords="1335,8,1529,56"/>
+<area shape="rect" id="node9_9" href="./OTransactionIndexChangesPerKey.Interpretation.html" title="com.orientechnologies.orient.core.tx.OTransactionIndexChangesPerKey.Interpretation" alt="" coords="1565,11,1683,53"/>
+<area shape="rect" id="node9" href="./OTransactionIndexChangesPerKey.Interpretation.html" title="&lt;TABLE&gt;" alt="" coords="1554,5,1694,59"/>
+<area shape="rect" id="node10_10" href="./OTransactionInternal.html" title="com.orientechnologies.orient.core.tx.OTransactionInternal" alt="" coords="487,112,641,155"/>
+<area shape="rect" id="node10" href="./OTransactionInternal.html" title="&lt;TABLE&gt;" alt="" coords="477,107,651,160"/>
+<area shape="rect" id="node11_11" href="./OTransaction.html" title="com.orientechnologies.orient.core.tx.OTransaction" alt="" coords="716,11,820,53"/>
+<area shape="rect" id="node11" href="./OTransaction.html" title="&lt;TABLE&gt;" alt="" coords="705,5,831,59"/>
+<area shape="rect" id="node12_12" href="./OTransaction.TXTYPE.html" title="com.orientechnologies.orient.core.tx.OTransaction.TXTYPE" alt="" coords="1729,11,1847,53"/>
+<area shape="rect" id="node12" href="./OTransaction.TXTYPE.html" title="&lt;TABLE&gt;" alt="" coords="1718,5,1858,59"/>
+<area shape="rect" id="node13_13" href="./OTransaction.TXSTATUS.html" title="com.orientechnologies.orient.core.tx.OTransaction.TXSTATUS" alt="" coords="1893,11,2011,53"/>
+<area shape="rect" id="node13" href="./OTransaction.TXSTATUS.html" title="&lt;TABLE&gt;" alt="" coords="1882,5,2022,59"/>
+<area shape="rect" id="node14_14" href="./OTransaction.ISOLATION_LEVEL.html" title="com.orientechnologies.orient.core.tx.OTransaction.ISOLATION_LEVEL" alt="" coords="2057,11,2193,53"/>
+<area shape="rect" id="node14" href="./OTransaction.ISOLATION_LEVEL.html" title="&lt;TABLE&gt;" alt="" coords="2047,5,2204,59"/>
+<area shape="rect" id="node15_15" href="./OTransactionOptimistic.html" title="com.orientechnologies.orient.core.tx.OTransactionOptimistic" alt="" coords="479,315,649,341"/>
+<area shape="rect" id="node15" href="./OTransactionOptimistic.html" title="&lt;TABLE&gt;" alt="" coords="468,304,660,352"/>
+</map>

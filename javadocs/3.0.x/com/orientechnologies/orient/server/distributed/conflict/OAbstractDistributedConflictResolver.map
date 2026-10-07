@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OQuorumDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OQuorumDistributedConflictResolver" alt="" coords="16,214,276,239"/>
+<area shape="rect" id="node1" href="./OQuorumDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="5,203,287,251"/>
+<area shape="rect" id="node2_1" href="./OContentDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OContentDistributedConflictResolver" alt="" coords="322,214,581,239"/>
+<area shape="rect" id="node2" href="./OContentDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="311,203,591,251"/>
+<area shape="rect" id="node3_2" href="./OAbstractDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" alt="" coords="471,118,733,143"/>
+<area shape="rect" id="node3" href="./OAbstractDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="460,107,744,155"/>
+<area shape="rect" id="node5_3" href="./OVersionDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver" alt="" coords="626,214,882,239"/>
+<area shape="rect" id="node5" href="./OVersionDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="615,203,893,251"/>
+<area shape="rect" id="node6_4" href="./OMajorityDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" alt="" coords="927,214,1189,239"/>
+<area shape="rect" id="node6" href="./OMajorityDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="917,203,1199,251"/>
+<area shape="rect" id="node4_5" href="./ODistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver" alt="" coords="498,11,706,53"/>
+<area shape="rect" id="node4" href="./ODistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="487,5,717,59"/>
+</map>

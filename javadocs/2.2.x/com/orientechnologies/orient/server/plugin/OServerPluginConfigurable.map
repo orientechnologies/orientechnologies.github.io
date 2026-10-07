@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OServerPluginConfigurable.html" title="com.orientechnologies.orient.server.plugin.OServerPluginConfigurable" alt="" coords="51,11,244,53"/>
+<area shape="rect" id="node1" href="./OServerPluginConfigurable.html" title="&lt;TABLE&gt;" alt="" coords="40,5,255,59"/>
+<area shape="rect" id="node2_1" href="./mail/OMailPlugin.html" title="com.orientechnologies.orient.server.plugin.mail.OMailPlugin" alt="" coords="16,118,113,143"/>
+<area shape="rect" id="node2" href="./mail/OMailPlugin.html" title="&lt;TABLE&gt;" alt="" coords="5,107,124,155"/>
+<area shape="rect" id="node3_2" href="../handler/OAutomaticBackup.html" title="com.orientechnologies.orient.server.handler.OAutomaticBackup" alt="" coords="158,118,302,143"/>
+<area shape="rect" id="node3" href="../handler/OAutomaticBackup.html" title="&lt;TABLE&gt;" alt="" coords="147,107,313,155"/>
+</map>

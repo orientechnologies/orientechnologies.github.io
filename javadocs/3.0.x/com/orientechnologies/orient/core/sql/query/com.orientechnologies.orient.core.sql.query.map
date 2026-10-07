@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OLiveResultListener.html" title="com.orientechnologies.orient.core.sql.query.OLiveResultListener" alt="" coords="33,11,183,53"/>
+<area shape="rect" id="node1" href="./OLiveResultListener.html" title="&lt;TABLE&gt;" alt="" coords="23,5,193,59"/>
+<area shape="rect" id="node7_1" href="./OLocalLiveResultListener.html" title="com.orientechnologies.orient.core.sql.query.OLocalLiveResultListener" alt="" coords="16,118,200,143"/>
+<area shape="rect" id="node7" href="./OLocalLiveResultListener.html" title="&lt;TABLE&gt;" alt="" coords="5,107,211,155"/>
+<area shape="rect" id="node2_2" href="./OLiveLegacyResultSet.html" title="com.orientechnologies.orient.core.sql.query.OLiveLegacyResultSet" alt="" coords="268,214,463,239"/>
+<area shape="rect" id="node2" href="./OLiveLegacyResultSet.html" title="&lt;TABLE&gt;" alt="" coords="257,203,473,251"/>
+<area shape="rect" id="node3_3" href="./OConcurrentLegacyResultSet.html" title="com.orientechnologies.orient.core.sql.query.OConcurrentLegacyResultSet" alt="" coords="246,118,485,143"/>
+<area shape="rect" id="node3" href="./OConcurrentLegacyResultSet.html" title="&lt;TABLE&gt;" alt="" coords="235,107,495,155"/>
+<area shape="rect" id="node4_4" href="./OSQLQuery.html" title="com.orientechnologies.orient.core.sql.query.OSQLQuery" alt="" coords="935,19,1059,45"/>
+<area shape="rect" id="node4" href="./OSQLQuery.html" title="&lt;TABLE&gt;" alt="" coords="925,8,1070,56"/>
+<area shape="rect" id="node6_5" href="./OSQLNonBlockingQuery.html" title="com.orientechnologies.orient.core.sql.query.OSQLNonBlockingQuery" alt="" coords="777,118,983,143"/>
+<area shape="rect" id="node6" href="./OSQLNonBlockingQuery.html" title="&lt;TABLE&gt;" alt="" coords="767,107,993,155"/>
+<area shape="rect" id="node11_6" href="./OSQLAsynchQuery.html" title="com.orientechnologies.orient.core.sql.query.OSQLAsynchQuery" alt="" coords="1029,118,1201,143"/>
+<area shape="rect" id="node11" href="./OSQLAsynchQuery.html" title="&lt;TABLE&gt;" alt="" coords="1018,107,1211,155"/>
+<area shape="rect" id="node5_7" href="./OLiveQuery.html" title="com.orientechnologies.orient.core.sql.query.OLiveQuery" alt="" coords="1052,310,1177,335"/>
+<area shape="rect" id="node5" href="./OLiveQuery.html" title="&lt;TABLE&gt;" alt="" coords="1041,299,1188,347"/>
+<area shape="rect" id="node8_8" href="./OLegacyResultSet.html" title="com.orientechnologies.orient.core.sql.query.OLegacyResultSet" alt="" coords="413,11,581,53"/>
+<area shape="rect" id="node8" href="./OLegacyResultSet.html" title="&lt;TABLE&gt;" alt="" coords="403,5,592,59"/>
+<area shape="rect" id="node9_9" href="./OBasicLegacyResultSet.html" title="com.orientechnologies.orient.core.sql.query.OBasicLegacyResultSet" alt="" coords="529,118,732,143"/>
+<area shape="rect" id="node9" href="./OBasicLegacyResultSet.html" title="&lt;TABLE&gt;" alt="" coords="519,107,743,155"/>
+<area shape="rect" id="node10_10" href="./OSQLSynchQuery.html" title="com.orientechnologies.orient.core.sql.query.OSQLSynchQuery" alt="" coords="1033,214,1196,239"/>
+<area shape="rect" id="node10" href="./OSQLSynchQuery.html" title="&lt;TABLE&gt;" alt="" coords="1023,203,1207,251"/>
+</map>

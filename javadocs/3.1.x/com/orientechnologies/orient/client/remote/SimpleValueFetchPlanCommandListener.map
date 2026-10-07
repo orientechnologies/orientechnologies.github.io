@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../core/command/OCommandResultListener.html" title="com.orientechnologies.orient.core.command.OCommandResultListener" alt="" coords="63,11,252,53"/>
+<area shape="rect" id="node1" href="../../core/command/OCommandResultListener.html" title="&lt;TABLE&gt;" alt="" coords="52,5,263,59"/>
+<area shape="rect" id="node2_1" href="./SimpleValueFetchPlanCommandListener.html" title="com.orientechnologies.orient.client.remote.SimpleValueFetchPlanCommandListener" alt="" coords="16,112,299,155"/>
+<area shape="rect" id="node2" href="./SimpleValueFetchPlanCommandListener.html" title="&lt;TABLE&gt;" alt="" coords="5,107,309,160"/>
+<area shape="rect" id="node3_2" href="../../server/network/protocol/binary/OAbstractCommandResultListener.html" title="com.orientechnologies.orient.server.network.protocol.binary.OAbstractCommandResultListener" alt="" coords="35,219,279,245"/>
+<area shape="rect" id="node3" href="../../server/network/protocol/binary/OAbstractCommandResultListener.html" title="&lt;TABLE&gt;" alt="" coords="25,208,290,256"/>
+</map>

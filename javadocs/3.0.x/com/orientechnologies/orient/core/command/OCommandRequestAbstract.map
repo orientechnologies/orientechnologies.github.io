@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OCommandRequestInternal.html" title="com.orientechnologies.orient.core.command.OCommandRequestInternal" alt="" coords="35,11,235,53"/>
+<area shape="rect" id="node1" href="./OCommandRequestInternal.html" title="&lt;TABLE&gt;" alt="" coords="25,5,246,59"/>
+<area shape="rect" id="node2_1" href="./OCommandRequestAbstract.html" title="com.orientechnologies.orient.core.command.OCommandRequestAbstract" alt="" coords="148,118,352,143"/>
+<area shape="rect" id="node2" href="./OCommandRequestAbstract.html" title="&lt;TABLE&gt;" alt="" coords="137,107,363,155"/>
+<area shape="rect" id="node4_2" href="./OCommandRequestTextAbstract.html" title="com.orientechnologies.orient.core.command.OCommandRequestTextAbstract" alt="" coords="16,214,247,239"/>
+<area shape="rect" id="node4" href="./OCommandRequestTextAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,203,257,251"/>
+<area shape="rect" id="node5_3" href="../query/OQueryAbstract.html" title="com.orientechnologies.orient.core.query.OQueryAbstract" alt="" coords="293,214,445,239"/>
+<area shape="rect" id="node5" href="../query/OQueryAbstract.html" title="&lt;TABLE&gt;" alt="" coords="282,203,455,251"/>
+<area shape="rect" id="node3_4" href="./ODistributedCommand.html" title="com.orientechnologies.orient.core.command.ODistributedCommand" alt="" coords="281,11,449,53"/>
+<area shape="rect" id="node3" href="./ODistributedCommand.html" title="&lt;TABLE&gt;" alt="" coords="270,5,459,59"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OOperationUnitBodyRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" alt="" coords="16,209,215,234"/>
+<area shape="rect" id="node1" href="./OOperationUnitBodyRecord.html" title="&lt;TABLE&gt;" alt="" coords="5,197,225,245"/>
+<area shape="rect" id="node2_1" href="./OOperationUnitRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitRecord" alt="" coords="150,113,315,138"/>
+<area shape="rect" id="node2" href="./OOperationUnitRecord.html" title="&lt;TABLE&gt;" alt="" coords="139,101,326,149"/>
+<area shape="rect" id="node4_2" href="./OAtomicUnitStartRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitStartRecord" alt="" coords="261,209,439,234"/>
+<area shape="rect" id="node4" href="./OAtomicUnitStartRecord.html" title="&lt;TABLE&gt;" alt="" coords="250,197,450,245"/>
+<area shape="rect" id="node3_3" href="./OAbstractWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord" alt="" coords="154,17,311,42"/>
+<area shape="rect" id="node3" href="./OAbstractWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="143,5,322,53"/>
+</map>

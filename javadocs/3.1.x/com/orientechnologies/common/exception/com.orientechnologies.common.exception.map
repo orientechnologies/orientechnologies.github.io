@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODirectMemoryAllocationFailedException.html" title="com.orientechnologies.common.exception.ODirectMemoryAllocationFailedException" alt="" coords="16,214,305,239"/>
+<area shape="rect" id="node1" href="./ODirectMemoryAllocationFailedException.html" title="&lt;TABLE&gt;" alt="" coords="5,203,316,251"/>
+<area shape="rect" id="node2_1" href="./OInvalidBinaryChunkException.html" title="com.orientechnologies.common.exception.OInvalidBinaryChunkException" alt="" coords="253,19,473,45"/>
+<area shape="rect" id="node2" href="./OInvalidBinaryChunkException.html" title="&lt;TABLE&gt;" alt="" coords="243,8,484,56"/>
+<area shape="rect" id="node3_2" href="./OException.html" title="com.orientechnologies.common.exception.OException" alt="" coords="114,19,207,45"/>
+<area shape="rect" id="node3" href="./OException.html" title="&lt;TABLE&gt;" alt="" coords="103,8,218,56"/>
+<area shape="rect" id="node4_3" href="./OSystemException.html" title="com.orientechnologies.common.exception.OSystemException" alt="" coords="89,118,232,143"/>
+<area shape="rect" id="node4" href="./OSystemException.html" title="&lt;TABLE&gt;" alt="" coords="79,107,243,155"/>
+<area shape="rect" id="node5_4" href="./OErrorCode.html" title="com.orientechnologies.common.exception.OErrorCode" alt="" coords="519,11,637,53"/>
+<area shape="rect" id="node5" href="./OErrorCode.html" title="&lt;TABLE&gt;" alt="" coords="508,5,648,59"/>
+<area shape="rect" id="node6_5" href="./OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="683,11,841,53"/>
+<area shape="rect" id="node6" href="./OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="672,5,852,59"/>
+<area shape="rect" id="node7_6" href="./OErrorCategory.html" title="com.orientechnologies.common.exception.OErrorCategory" alt="" coords="887,11,1007,53"/>
+<area shape="rect" id="node7" href="./OErrorCategory.html" title="&lt;TABLE&gt;" alt="" coords="877,5,1018,59"/>
+</map>

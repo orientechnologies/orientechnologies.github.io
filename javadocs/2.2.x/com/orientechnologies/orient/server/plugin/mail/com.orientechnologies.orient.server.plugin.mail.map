@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSMTPAuthenticator.html" title="com.orientechnologies.orient.server.plugin.mail.OSMTPAuthenticator" alt="" coords="16,17,168,42"/>
+<area shape="rect" id="node1" href="./OSMTPAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="5,5,179,53"/>
+<area shape="rect" id="node2_1" href="./OMailProfile.html" title="com.orientechnologies.orient.server.plugin.mail.OMailProfile" alt="" coords="213,17,312,42"/>
+<area shape="rect" id="node2" href="./OMailProfile.html" title="&lt;TABLE&gt;" alt="" coords="203,5,323,53"/>
+<area shape="rect" id="node3_2" href="./OMailPlugin.html" title="com.orientechnologies.orient.server.plugin.mail.OMailPlugin" alt="" coords="358,17,455,42"/>
+<area shape="rect" id="node3" href="./OMailPlugin.html" title="&lt;TABLE&gt;" alt="" coords="347,5,466,53"/>
+</map>

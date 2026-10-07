@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OETLAbstractComponent.html" title="com.orientechnologies.orient.etl.OETLAbstractComponent" alt="" coords="16,19,197,45"/>
+<area shape="rect" id="node1" href="../OETLAbstractComponent.html" title="&lt;TABLE&gt;" alt="" coords="5,8,208,56"/>
+<area shape="rect" id="node2_1" href="./OETLAbstractLoader.html" title="com.orientechnologies.orient.etl.loader.OETLAbstractLoader" alt="" coords="61,118,211,143"/>
+<area shape="rect" id="node2" href="./OETLAbstractLoader.html" title="&lt;TABLE&gt;" alt="" coords="50,107,222,155"/>
+<area shape="rect" id="node4_2" href="./OETLOrientDBLoader.html" title="com.orientechnologies.orient.etl.loader.OETLOrientDBLoader" alt="" coords="213,214,369,239"/>
+<area shape="rect" id="node4" href="./OETLOrientDBLoader.html" title="&lt;TABLE&gt;" alt="" coords="202,203,379,251"/>
+<area shape="rect" id="node5_3" href="./OETLOutputLoader.html" title="com.orientechnologies.orient.etl.loader.OETLOutputLoader" alt="" coords="27,214,167,239"/>
+<area shape="rect" id="node5" href="./OETLOutputLoader.html" title="&lt;TABLE&gt;" alt="" coords="17,203,178,251"/>
+<area shape="rect" id="node3_4" href="./OETLLoader.html" title="com.orientechnologies.orient.etl.loader.OETLLoader" alt="" coords="243,11,339,53"/>
+<area shape="rect" id="node3" href="./OETLLoader.html" title="&lt;TABLE&gt;" alt="" coords="232,5,349,59"/>
+</map>

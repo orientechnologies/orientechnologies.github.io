@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OLocalKeySource.html" title="com.orientechnologies.orient.server.distributed.impl.OLocalKeySource" alt="" coords="16,118,148,143"/>
+<area shape="rect" id="node1" href="../OLocalKeySource.html" title="&lt;TABLE&gt;" alt="" coords="5,107,159,155"/>
+<area shape="rect" id="node2_1" href="./OTransactionPhase2Task.html" title="com.orientechnologies.orient.server.distributed.impl.task.OTransactionPhase2Task" alt="" coords="193,118,373,143"/>
+<area shape="rect" id="node2" href="./OTransactionPhase2Task.html" title="&lt;TABLE&gt;" alt="" coords="183,107,384,155"/>
+<area shape="rect" id="node3_2" href="./OTransactionPhase1Task.html" title="com.orientechnologies.orient.server.distributed.impl.task.OTransactionPhase1Task" alt="" coords="419,118,599,143"/>
+<area shape="rect" id="node3" href="./OTransactionPhase1Task.html" title="&lt;TABLE&gt;" alt="" coords="408,107,609,155"/>
+<area shape="rect" id="node4_3" href="./OLockKeySource.html" title="com.orientechnologies.orient.server.distributed.impl.task.OLockKeySource" alt="" coords="219,11,347,53"/>
+<area shape="rect" id="node4" href="./OLockKeySource.html" title="&lt;TABLE&gt;" alt="" coords="209,5,358,59"/>
+</map>

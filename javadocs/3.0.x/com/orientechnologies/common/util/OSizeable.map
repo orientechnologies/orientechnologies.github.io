@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../collection/OCollection.html" title="com.orientechnologies.common.collection.OCollection" alt="" coords="16,112,140,155"/>
+<area shape="rect" id="node1" href="../collection/OCollection.html" title="&lt;TABLE&gt;" alt="" coords="5,107,151,160"/>
+<area shape="rect" id="node2_1" href="../collection/OMultiCollectionIterator.html" title="com.orientechnologies.common.collection.OMultiCollectionIterator" alt="" coords="186,121,391,146"/>
+<area shape="rect" id="node2" href="../collection/OMultiCollectionIterator.html" title="&lt;TABLE&gt;" alt="" coords="175,109,402,157"/>
+<area shape="rect" id="node3_2" href="./OSizeable.html" title="com.orientechnologies.common.util.OSizeable" alt="" coords="693,11,786,53"/>
+<area shape="rect" id="node3" href="./OSizeable.html" title="&lt;TABLE&gt;" alt="" coords="682,5,797,59"/>
+<area shape="rect" id="node4_3" href="../../orient/core/db/record/ORecordLazyMultiValue.html" title="com.orientechnologies.orient.core.db.record.ORecordLazyMultiValue" alt="" coords="437,112,610,155"/>
+<area shape="rect" id="node4" href="../../orient/core/db/record/ORecordLazyMultiValue.html" title="&lt;TABLE&gt;" alt="" coords="426,107,621,160"/>
+<area shape="rect" id="node5_4" href="../../orient/core/record/impl/OEdgeToVertexIterable.html" title="com.orientechnologies.orient.core.record.impl.OEdgeToVertexIterable" alt="" coords="655,121,823,146"/>
+<area shape="rect" id="node5" href="../../orient/core/record/impl/OEdgeToVertexIterable.html" title="&lt;TABLE&gt;" alt="" coords="645,109,834,157"/>
+<area shape="rect" id="node6_5" href="../../orient/core/index/OIndexCursorSingleValue.html" title="com.orientechnologies.orient.core.index.OIndexCursorSingleValue" alt="" coords="869,121,1053,146"/>
+<area shape="rect" id="node6" href="../../orient/core/index/OIndexCursorSingleValue.html" title="&lt;TABLE&gt;" alt="" coords="858,109,1063,157"/>
+<area shape="rect" id="node7_6" href="../../orient/core/index/OIndexCursorCollectionValue.html" title="com.orientechnologies.orient.core.index.OIndexCursorCollectionValue" alt="" coords="1098,121,1306,146"/>
+<area shape="rect" id="node7" href="../../orient/core/index/OIndexCursorCollectionValue.html" title="&lt;TABLE&gt;" alt="" coords="1087,109,1317,157"/>
+<area shape="rect" id="node8_7" href="../../orient/core/iterator/OLazyWrapperIterator.html" title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" alt="" coords="1351,121,1543,146"/>
+<area shape="rect" id="node8" href="../../orient/core/iterator/OLazyWrapperIterator.html" title="&lt;TABLE&gt;" alt="" coords="1341,109,1554,157"/>
+</map>

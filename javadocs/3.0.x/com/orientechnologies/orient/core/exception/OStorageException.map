@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OPageIsBrokenException.html" title="com.orientechnologies.orient.core.exception.OPageIsBrokenException" alt="" coords="16,209,196,234"/>
+<area shape="rect" id="node1" href="./OPageIsBrokenException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,207,245"/>
+<area shape="rect" id="node2_1" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="504,17,628,42"/>
+<area shape="rect" id="node2" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="493,5,639,53"/>
+<area shape="rect" id="node5_2" href="./OStorageException.html" title="com.orientechnologies.orient.core.exception.OStorageException" alt="" coords="494,113,638,138"/>
+<area shape="rect" id="node5" href="./OStorageException.html" title="&lt;TABLE&gt;" alt="" coords="483,101,649,149"/>
+<area shape="rect" id="node3_3" href="./OInvalidInstanceIdException.html" title="com.orientechnologies.orient.core.exception.OInvalidInstanceIdException" alt="" coords="241,209,445,234"/>
+<area shape="rect" id="node3" href="./OInvalidInstanceIdException.html" title="&lt;TABLE&gt;" alt="" coords="231,197,456,245"/>
+<area shape="rect" id="node4_4" href="./OJVMErrorException.html" title="com.orientechnologies.orient.core.exception.OJVMErrorException" alt="" coords="491,209,641,234"/>
+<area shape="rect" id="node4" href="./OJVMErrorException.html" title="&lt;TABLE&gt;" alt="" coords="481,197,651,245"/>
+<area shape="rect" id="node6_5" href="./OStorageExistsException.html" title="com.orientechnologies.orient.core.exception.OStorageExistsException" alt="" coords="687,209,869,234"/>
+<area shape="rect" id="node6" href="./OStorageExistsException.html" title="&lt;TABLE&gt;" alt="" coords="676,197,880,245"/>
+<area shape="rect" id="node7_6" href="./OLowDiskSpaceException.html" title="com.orientechnologies.orient.core.exception.OLowDiskSpaceException" alt="" coords="915,209,1103,234"/>
+<area shape="rect" id="node7" href="./OLowDiskSpaceException.html" title="&lt;TABLE&gt;" alt="" coords="904,197,1113,245"/>
+</map>

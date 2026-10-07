@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../OOrientShutdownListener.html" title="com.orientechnologies.orient.core.OOrientShutdownListener" alt="" coords="16,11,201,53"/>
+<area shape="rect" id="node1" href="../../../OOrientShutdownListener.html" title="&lt;TABLE&gt;" alt="" coords="5,5,212,59"/>
+<area shape="rect" id="node6_1" href="./OAbstractPaginatedStorage.html" title="com.orientechnologies.orient.core.storage.impl.local.OAbstractPaginatedStorage" alt="" coords="723,118,921,143"/>
+<area shape="rect" id="node6" href="./OAbstractPaginatedStorage.html" title="&lt;TABLE&gt;" alt="" coords="712,107,932,155"/>
+<area shape="rect" id="node2_2" href="../../../OOrientStartupListener.html" title="com.orientechnologies.orient.core.OOrientStartupListener" alt="" coords="247,11,415,53"/>
+<area shape="rect" id="node2" href="../../../OOrientStartupListener.html" title="&lt;TABLE&gt;" alt="" coords="237,5,426,59"/>
+<area shape="rect" id="node3_3" href="../../OIdentifiableStorage.html" title="com.orientechnologies.orient.core.storage.OIdentifiableStorage" alt="" coords="461,11,613,53"/>
+<area shape="rect" id="node3" href="../../OIdentifiableStorage.html" title="&lt;TABLE&gt;" alt="" coords="450,5,623,59"/>
+<area shape="rect" id="node4_4" href="../../OStorageAbstract.html" title="com.orientechnologies.orient.core.storage.OStorageAbstract" alt="" coords="658,19,791,45"/>
+<area shape="rect" id="node4" href="../../OStorageAbstract.html" title="&lt;TABLE&gt;" alt="" coords="647,8,802,56"/>
+<area shape="rect" id="node5_5" href="./OPageIsBrokenListener.html" title="com.orientechnologies.orient.core.storage.impl.local.OPageIsBrokenListener" alt="" coords="837,11,1005,53"/>
+<area shape="rect" id="node5" href="./OPageIsBrokenListener.html" title="&lt;TABLE&gt;" alt="" coords="826,5,1015,59"/>
+<area shape="rect" id="node9_6" href="./paginated/OLocalPaginatedStorage.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.OLocalPaginatedStorage" alt="" coords="624,214,801,239"/>
+<area shape="rect" id="node9" href="./paginated/OLocalPaginatedStorage.html" title="&lt;TABLE&gt;" alt="" coords="613,203,812,251"/>
+<area shape="rect" id="node10_7" href="../memory/ODirectMemoryStorage.html" title="com.orientechnologies.orient.core.storage.impl.memory.ODirectMemoryStorage" alt="" coords="847,214,1019,239"/>
+<area shape="rect" id="node10" href="../memory/ODirectMemoryStorage.html" title="&lt;TABLE&gt;" alt="" coords="836,203,1029,251"/>
+<area shape="rect" id="node7_8" href="./OFullCheckpointRequestListener.html" title="com.orientechnologies.orient.core.storage.impl.local.OFullCheckpointRequestListener" alt="" coords="1051,11,1281,53"/>
+<area shape="rect" id="node7" href="./OFullCheckpointRequestListener.html" title="&lt;TABLE&gt;" alt="" coords="1040,5,1292,59"/>
+<area shape="rect" id="node8_9" href="./OLowDiskSpaceListener.html" title="com.orientechnologies.orient.core.storage.impl.local.OLowDiskSpaceListener" alt="" coords="1327,11,1503,53"/>
+<area shape="rect" id="node8" href="./OLowDiskSpaceListener.html" title="&lt;TABLE&gt;" alt="" coords="1317,5,1514,59"/>
+<area shape="rect" id="node11_10" href="../../cache/local/OBackgroundExceptionListener.html" title="com.orientechnologies.orient.core.storage.cache.local.OBackgroundExceptionListener" alt="" coords="1549,11,1772,53"/>
+<area shape="rect" id="node11" href="../../cache/local/OBackgroundExceptionListener.html" title="&lt;TABLE&gt;" alt="" coords="1539,5,1783,59"/>
+</map>

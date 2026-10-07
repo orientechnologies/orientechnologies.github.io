@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseInternal.html" title="com.orientechnologies.orient.core.db.ODatabaseInternal" alt="" coords="16,11,188,53"/>
+<area shape="rect" id="node1" href="./ODatabaseInternal.html" title="&lt;TABLE&gt;" alt="" coords="5,5,199,59"/>
+<area shape="rect" id="node2_1" href="./ODatabaseDocumentInternal.html" title="com.orientechnologies.orient.core.db.ODatabaseDocumentInternal" alt="" coords="103,112,311,155"/>
+<area shape="rect" id="node2" href="./ODatabaseDocumentInternal.html" title="&lt;TABLE&gt;" alt="" coords="93,107,322,160"/>
+<area shape="rect" id="node3_2" href="./document/ODatabaseDocumentTx.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx" alt="" coords="120,219,295,245"/>
+<area shape="rect" id="node3" href="./document/ODatabaseDocumentTx.html" title="&lt;TABLE&gt;" alt="" coords="109,208,305,256"/>
+<area shape="rect" id="node4_3" href="./document/ODatabaseDocument.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocument" alt="" coords="233,11,392,53"/>
+<area shape="rect" id="node4" href="./document/ODatabaseDocument.html" title="&lt;TABLE&gt;" alt="" coords="223,5,403,59"/>
+</map>

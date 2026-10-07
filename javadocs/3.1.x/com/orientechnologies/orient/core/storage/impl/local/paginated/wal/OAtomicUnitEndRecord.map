@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAtomicUnitEndRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAtomicUnitEndRecord" alt="" coords="57,113,229,138"/>
+<area shape="rect" id="node1" href="./OAtomicUnitEndRecord.html" title="&lt;TABLE&gt;" alt="" coords="47,101,240,149"/>
+<area shape="rect" id="node3_1" href="./AtomicUnitEndRecordWithPageLSNs.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.AtomicUnitEndRecordWithPageLSNs" alt="" coords="16,209,271,234"/>
+<area shape="rect" id="node3" href="./AtomicUnitEndRecordWithPageLSNs.html" title="&lt;TABLE&gt;" alt="" coords="5,197,281,245"/>
+<area shape="rect" id="node2_2" href="./OOperationUnitBodyRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OOperationUnitBodyRecord" alt="" coords="44,17,243,42"/>
+<area shape="rect" id="node2" href="./OOperationUnitBodyRecord.html" title="&lt;TABLE&gt;" alt="" coords="33,5,253,53"/>
+</map>

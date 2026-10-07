@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OBackgroundDelta.html" title="com.orientechnologies.orient.core.storage.impl.local.OBackgroundDelta" alt="" coords="16,118,157,143"/>
+<area shape="rect" id="node1" href="./OBackgroundDelta.html" title="&lt;TABLE&gt;" alt="" coords="5,107,168,155"/>
+<area shape="rect" id="node2_1" href="./OSyncSource.html" title="com.orientechnologies.orient.core.storage.impl.local.OSyncSource" alt="" coords="131,11,235,53"/>
+<area shape="rect" id="node2" href="./OSyncSource.html" title="&lt;TABLE&gt;" alt="" coords="120,5,245,59"/>
+<area shape="rect" id="node3_2" href="../../../../server/distributed/impl/task/OBackgroundBackup.html" title="com.orientechnologies.orient.server.distributed.impl.task.OBackgroundBackup" alt="" coords="203,118,357,143"/>
+<area shape="rect" id="node3" href="../../../../server/distributed/impl/task/OBackgroundBackup.html" title="&lt;TABLE&gt;" alt="" coords="193,107,367,155"/>
+</map>

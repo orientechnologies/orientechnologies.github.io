@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../common/concur/resource/OSharedContainer.html" title="com.orientechnologies.common.concur.resource.OSharedContainer" alt="" coords="30,11,167,53"/>
+<area shape="rect" id="node1" href="../../../common/concur/resource/OSharedContainer.html" title="&lt;TABLE&gt;" alt="" coords="19,5,178,59"/>
+<area shape="rect" id="node3_1" href="./OStorageAbstract.html" title="com.orientechnologies.orient.core.storage.OStorageAbstract" alt="" coords="16,222,149,247"/>
+<area shape="rect" id="node3" href="./OStorageAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,211,160,259"/>
+<area shape="rect" id="node5_2" href="./OStorage.html" title="com.orientechnologies.orient.core.storage.OStorage" alt="" coords="224,112,317,155"/>
+<area shape="rect" id="node5" href="./OStorage.html" title="&lt;TABLE&gt;" alt="" coords="213,107,328,160"/>
+<area shape="rect" id="node2_3" href="./OIdentifiableStorage.html" title="com.orientechnologies.orient.core.storage.OIdentifiableStorage" alt="" coords="195,213,347,256"/>
+<area shape="rect" id="node2" href="./OIdentifiableStorage.html" title="&lt;TABLE&gt;" alt="" coords="184,208,357,261"/>
+<area shape="rect" id="node4_4" href="./OStorageProxy.html" title="com.orientechnologies.orient.core.storage.OStorageProxy" alt="" coords="393,213,509,256"/>
+<area shape="rect" id="node4" href="./OStorageProxy.html" title="&lt;TABLE&gt;" alt="" coords="382,208,519,261"/>
+<area shape="rect" id="node7_5" href="../../server/distributed/impl/ODistributedStorage.html" title="com.orientechnologies.orient.server.distributed.impl.ODistributedStorage" alt="" coords="555,222,707,247"/>
+<area shape="rect" id="node7" href="../../server/distributed/impl/ODistributedStorage.html" title="&lt;TABLE&gt;" alt="" coords="544,211,717,259"/>
+<area shape="rect" id="node6_6" href="../util/OBackupable.html" title="com.orientechnologies.orient.core.util.OBackupable" alt="" coords="219,11,323,53"/>
+<area shape="rect" id="node6" href="../util/OBackupable.html" title="&lt;TABLE&gt;" alt="" coords="208,5,333,59"/>
+</map>
