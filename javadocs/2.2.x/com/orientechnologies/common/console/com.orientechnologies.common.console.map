@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODefaultConsoleReader.html" title="com.orientechnologies.common.console.ODefaultConsoleReader" alt="" coords="16,118,192,143"/>
+<area shape="rect" id="node1" href="./ODefaultConsoleReader.html" title="&lt;TABLE&gt;" alt="" coords="5,107,203,155"/>
+<area shape="rect" id="node2_1" href="./OCommandStream.html" title="com.orientechnologies.common.console.OCommandStream" alt="" coords="563,11,707,53"/>
+<area shape="rect" id="node2" href="./OCommandStream.html" title="&lt;TABLE&gt;" alt="" coords="552,5,717,59"/>
+<area shape="rect" id="node3_2" href="./OScannerCommandStream.html" title="com.orientechnologies.common.console.OScannerCommandStream" alt="" coords="423,118,619,143"/>
+<area shape="rect" id="node3" href="./OScannerCommandStream.html" title="&lt;TABLE&gt;" alt="" coords="413,107,630,155"/>
+<area shape="rect" id="node8_3" href="./ODFACommandStream.html" title="com.orientechnologies.common.console.ODFACommandStream" alt="" coords="665,118,833,143"/>
+<area shape="rect" id="node8" href="./ODFACommandStream.html" title="&lt;TABLE&gt;" alt="" coords="655,107,844,155"/>
+<area shape="rect" id="node4_4" href="./OConsoleReader.html" title="com.orientechnologies.common.console.OConsoleReader" alt="" coords="143,11,271,53"/>
+<area shape="rect" id="node4" href="./OConsoleReader.html" title="&lt;TABLE&gt;" alt="" coords="132,5,281,59"/>
+<area shape="rect" id="node9_5" href="./TTYConsoleReader.html" title="com.orientechnologies.common.console.TTYConsoleReader" alt="" coords="238,118,378,143"/>
+<area shape="rect" id="node9" href="./TTYConsoleReader.html" title="&lt;TABLE&gt;" alt="" coords="227,107,389,155"/>
+<area shape="rect" id="node5_6" href="./OConsoleCommandCollection.html" title="com.orientechnologies.common.console.OConsoleCommandCollection" alt="" coords="752,19,965,45"/>
+<area shape="rect" id="node5" href="./OConsoleCommandCollection.html" title="&lt;TABLE&gt;" alt="" coords="741,8,976,56"/>
+<area shape="rect" id="node6_7" href="./OConsoleApplication.html" title="com.orientechnologies.common.console.OConsoleApplication" alt="" coords="1011,19,1165,45"/>
+<area shape="rect" id="node6" href="./OConsoleApplication.html" title="&lt;TABLE&gt;" alt="" coords="1000,8,1176,56"/>
+<area shape="rect" id="node7_8" href="./OConsoleApplication.RESULT.html" title="com.orientechnologies.common.console.OConsoleApplication.RESULT" alt="" coords="1211,11,1330,53"/>
+<area shape="rect" id="node7" href="./OConsoleApplication.RESULT.html" title="&lt;TABLE&gt;" alt="" coords="1201,5,1341,59"/>
+</map>

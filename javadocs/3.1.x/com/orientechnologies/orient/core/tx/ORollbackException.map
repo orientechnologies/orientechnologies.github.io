@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../exception/OTransactionException.html" title="com.orientechnologies.orient.core.exception.OTransactionException" alt="" coords="16,17,184,42"/>
+<area shape="rect" id="node1" href="../exception/OTransactionException.html" title="&lt;TABLE&gt;" alt="" coords="5,5,195,53"/>
+<area shape="rect" id="node2_1" href="./ORollbackException.html" title="com.orientechnologies.orient.core.tx.ORollbackException" alt="" coords="25,113,175,138"/>
+<area shape="rect" id="node2" href="./ORollbackException.html" title="&lt;TABLE&gt;" alt="" coords="15,101,185,149"/>
+</map>

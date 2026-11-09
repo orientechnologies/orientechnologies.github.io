@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OInsertExecutionPlanner.html" title="com.orientechnologies.orient.core.sql.executor.OInsertExecutionPlanner" alt="" coords="40,17,219,42"/>
+<area shape="rect" id="node1" href="./OInsertExecutionPlanner.html" title="&lt;TABLE&gt;" alt="" coords="29,5,229,53"/>
+<area shape="rect" id="node2_1" href="./OCreateVertexExecutionPlanner.html" title="com.orientechnologies.orient.core.sql.executor.OCreateVertexExecutionPlanner" alt="" coords="16,113,243,138"/>
+<area shape="rect" id="node2" href="./OCreateVertexExecutionPlanner.html" title="&lt;TABLE&gt;" alt="" coords="5,101,253,149"/>
+</map>

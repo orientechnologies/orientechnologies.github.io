@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../storage/index/hashindex/local/OHashIndexFactory.html" title="com.orientechnologies.orient.core.storage.index.hashindex.local.OHashIndexFactory" alt="" coords="16,118,161,143"/>
+<area shape="rect" id="node1" href="../storage/index/hashindex/local/OHashIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,107,172,155"/>
+<area shape="rect" id="node2_1" href="../sharding/auto/OAutoShardingIndexFactory.html" title="com.orientechnologies.orient.core.sharding.auto.OAutoShardingIndexFactory" alt="" coords="207,118,407,143"/>
+<area shape="rect" id="node2" href="../sharding/auto/OAutoShardingIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="197,107,418,155"/>
+<area shape="rect" id="node3_2" href="./OIndexFactory.html" title="com.orientechnologies.orient.core.index.OIndexFactory" alt="" coords="477,11,589,53"/>
+<area shape="rect" id="node3" href="./OIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="466,5,599,59"/>
+<area shape="rect" id="node4_3" href="./ODefaultIndexFactory.html" title="com.orientechnologies.orient.core.index.ODefaultIndexFactory" alt="" coords="453,118,613,143"/>
+<area shape="rect" id="node4" href="./ODefaultIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="442,107,623,155"/>
+<area shape="rect" id="node5_4" href="../../../spatial/OLuceneSpatialIndexFactory.html" title="com.orientechnologies.spatial.OLuceneSpatialIndexFactory" alt="" coords="659,118,863,143"/>
+<area shape="rect" id="node5" href="../../../spatial/OLuceneSpatialIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="648,107,873,155"/>
+<area shape="rect" id="node6_5" href="../../../lucene/OLuceneIndexFactory.html" title="com.orientechnologies.lucene.OLuceneIndexFactory" alt="" coords="908,118,1067,143"/>
+<area shape="rect" id="node6" href="../../../lucene/OLuceneIndexFactory.html" title="&lt;TABLE&gt;" alt="" coords="897,107,1077,155"/>
+</map>

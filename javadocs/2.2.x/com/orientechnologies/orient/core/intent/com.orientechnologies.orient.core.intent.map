@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OIntentNoCache.html" title="com.orientechnologies.orient.core.intent.OIntentNoCache" alt="" coords="16,118,141,143"/>
+<area shape="rect" id="node1" href="./OIntentNoCache.html" title="&lt;TABLE&gt;" alt="" coords="5,107,152,155"/>
+<area shape="rect" id="node2_1" href="./OIntent.html" title="com.orientechnologies.orient.core.intent.OIntent" alt="" coords="220,11,313,53"/>
+<area shape="rect" id="node2" href="./OIntent.html" title="&lt;TABLE&gt;" alt="" coords="209,5,324,59"/>
+<area shape="rect" id="node3_2" href="./OIntentMassiveInsert.html" title="com.orientechnologies.orient.core.intent.OIntentMassiveInsert" alt="" coords="187,118,346,143"/>
+<area shape="rect" id="node3" href="./OIntentMassiveInsert.html" title="&lt;TABLE&gt;" alt="" coords="177,107,357,155"/>
+<area shape="rect" id="node4_3" href="./OIntentMassiveRead.html" title="com.orientechnologies.orient.core.intent.OIntentMassiveRead" alt="" coords="392,118,547,143"/>
+<area shape="rect" id="node4" href="./OIntentMassiveRead.html" title="&lt;TABLE&gt;" alt="" coords="381,107,557,155"/>
+</map>

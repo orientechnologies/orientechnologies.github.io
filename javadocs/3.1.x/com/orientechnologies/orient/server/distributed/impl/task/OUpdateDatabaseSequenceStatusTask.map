@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../task/OAbstractRemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRemoteTask" alt="" coords="70,17,234,42"/>
+<area shape="rect" id="node1" href="../../task/OAbstractRemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="59,5,245,53"/>
+<area shape="rect" id="node2_1" href="./OUpdateDatabaseSequenceStatusTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OUpdateDatabaseSequenceStatusTask" alt="" coords="16,113,288,138"/>
+<area shape="rect" id="node2" href="./OUpdateDatabaseSequenceStatusTask.html" title="&lt;TABLE&gt;" alt="" coords="5,101,299,149"/>
+</map>

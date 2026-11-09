@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../storage/impl/local/paginated/atomicoperations/ONestedRollbackException.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.atomicoperations.ONestedRollbackException" alt="" coords="16,209,212,234"/>
+<area shape="rect" id="node1" href="../storage/impl/local/paginated/atomicoperations/ONestedRollbackException.html" title="&lt;TABLE&gt;" alt="" coords="5,197,223,245"/>
+<area shape="rect" id="node2_1" href="./OTransactionException.html" title="com.orientechnologies.orient.core.exception.OTransactionException" alt="" coords="283,113,451,138"/>
+<area shape="rect" id="node2" href="./OTransactionException.html" title="&lt;TABLE&gt;" alt="" coords="273,101,462,149"/>
+<area shape="rect" id="node4_2" href="./OTransactionBlockedException.html" title="com.orientechnologies.orient.core.exception.OTransactionBlockedException" alt="" coords="258,209,477,234"/>
+<area shape="rect" id="node4" href="./OTransactionBlockedException.html" title="&lt;TABLE&gt;" alt="" coords="247,197,487,245"/>
+<area shape="rect" id="node5_3" href="../tx/ORollbackException.html" title="com.orientechnologies.orient.core.tx.ORollbackException" alt="" coords="522,209,671,234"/>
+<area shape="rect" id="node5" href="../tx/ORollbackException.html" title="&lt;TABLE&gt;" alt="" coords="511,197,682,245"/>
+<area shape="rect" id="node3_4" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="305,17,429,42"/>
+<area shape="rect" id="node3" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="295,5,440,53"/>
+</map>

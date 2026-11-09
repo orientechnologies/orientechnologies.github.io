@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../common/concur/resource/OSharedResourceAdaptiveExternal.html" title="com.orientechnologies.common.concur.resource.OSharedResourceAdaptiveExternal" alt="" coords="35,19,281,45"/>
+<area shape="rect" id="node1" href="../../common/concur/resource/OSharedResourceAdaptiveExternal.html" title="&lt;TABLE&gt;" alt="" coords="24,8,292,56"/>
+<area shape="rect" id="node3_1" href="./OLuceneIndexEngineAbstract.html" title="com.orientechnologies.lucene.engine.OLuceneIndexEngineAbstract" alt="" coords="176,118,385,143"/>
+<area shape="rect" id="node3" href="./OLuceneIndexEngineAbstract.html" title="&lt;TABLE&gt;" alt="" coords="165,107,396,155"/>
+<area shape="rect" id="node2_2" href="../../spatial/engine/OLuceneSpatialIndexEngineAbstract.html" title="com.orientechnologies.spatial.engine.OLuceneSpatialIndexEngineAbstract" alt="" coords="16,214,271,239"/>
+<area shape="rect" id="node2" href="../../spatial/engine/OLuceneSpatialIndexEngineAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,203,281,251"/>
+<area shape="rect" id="node4_3" href="./OLuceneFullTextIndexEngine.html" title="com.orientechnologies.lucene.engine.OLuceneFullTextIndexEngine" alt="" coords="317,214,522,239"/>
+<area shape="rect" id="node4" href="./OLuceneFullTextIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="306,203,533,251"/>
+<area shape="rect" id="node5_4" href="./OLuceneIndexEngine.html" title="com.orientechnologies.lucene.engine.OLuceneIndexEngine" alt="" coords="327,11,483,53"/>
+<area shape="rect" id="node5" href="./OLuceneIndexEngine.html" title="&lt;TABLE&gt;" alt="" coords="316,5,493,59"/>
+</map>

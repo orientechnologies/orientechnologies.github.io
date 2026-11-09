@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODefaultPasswordAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.ODefaultPasswordAuthenticator" alt="" coords="16,17,243,42"/>
+<area shape="rect" id="node1" href="./ODefaultPasswordAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="5,5,253,53"/>
+<area shape="rect" id="node2_1" href="./OSystemUserAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.OSystemUserAuthenticator" alt="" coords="289,17,485,42"/>
+<area shape="rect" id="node2" href="./OSystemUserAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="278,5,495,53"/>
+<area shape="rect" id="node3_2" href="./OServerConfigAuthenticator.html" title="com.orientechnologies.orient.server.security.authenticator.OServerConfigAuthenticator" alt="" coords="531,17,731,42"/>
+<area shape="rect" id="node3" href="./OServerConfigAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="520,5,741,53"/>
+</map>

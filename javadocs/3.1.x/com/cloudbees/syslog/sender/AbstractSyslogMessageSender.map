@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./SyslogMessageSender.html" title="com.cloudbees.syslog.sender.SyslogMessageSender" alt="" coords="144,11,309,53"/>
+<area shape="rect" id="node1" href="./SyslogMessageSender.html" title="&lt;TABLE&gt;" alt="" coords="133,5,320,59"/>
+<area shape="rect" id="node4_1" href="./AbstractSyslogMessageSender.html" title="com.cloudbees.syslog.sender.AbstractSyslogMessageSender" alt="" coords="117,118,337,143"/>
+<area shape="rect" id="node4" href="./AbstractSyslogMessageSender.html" title="&lt;TABLE&gt;" alt="" coords="106,107,347,155"/>
+<area shape="rect" id="node2_2" href="./TcpSyslogMessageSender.html" title="com.cloudbees.syslog.sender.TcpSyslogMessageSender" alt="" coords="16,214,203,239"/>
+<area shape="rect" id="node2" href="./TcpSyslogMessageSender.html" title="&lt;TABLE&gt;" alt="" coords="5,203,213,251"/>
+<area shape="rect" id="node3_3" href="./UdpSyslogMessageSender.html" title="com.cloudbees.syslog.sender.UdpSyslogMessageSender" alt="" coords="248,214,440,239"/>
+<area shape="rect" id="node3" href="./UdpSyslogMessageSender.html" title="&lt;TABLE&gt;" alt="" coords="237,203,451,251"/>
+</map>

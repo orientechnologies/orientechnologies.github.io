@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../task/OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="16,17,199,42"/>
+<area shape="rect" id="node1" href="../../task/OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="5,5,209,53"/>
+<area shape="rect" id="node2_1" href="./OSyncClusterTask.html" title="com.orientechnologies.orient.server.distributed.impl.task.OSyncClusterTask" alt="" coords="39,113,175,138"/>
+<area shape="rect" id="node2" href="./OSyncClusterTask.html" title="&lt;TABLE&gt;" alt="" coords="29,101,186,149"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OClassDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.metadata.OClassDistributed" alt="" coords="16,17,152,42"/>
+<area shape="rect" id="node1" href="./OClassDistributed.html" title="&lt;TABLE&gt;" alt="" coords="5,5,163,53"/>
+<area shape="rect" id="node2_1" href="./OSharedContextDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.metadata.OSharedContextDistributed" alt="" coords="197,17,395,42"/>
+<area shape="rect" id="node2" href="./OSharedContextDistributed.html" title="&lt;TABLE&gt;" alt="" coords="187,5,405,53"/>
+<area shape="rect" id="node3_2" href="./OIndexManagerDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.metadata.OIndexManagerDistributed" alt="" coords="440,17,635,42"/>
+<area shape="rect" id="node3" href="./OIndexManagerDistributed.html" title="&lt;TABLE&gt;" alt="" coords="429,5,645,53"/>
+<area shape="rect" id="node4_3" href="./OPropertyDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.metadata.OPropertyDistributed" alt="" coords="681,17,837,42"/>
+<area shape="rect" id="node4" href="./OPropertyDistributed.html" title="&lt;TABLE&gt;" alt="" coords="670,5,847,53"/>
+<area shape="rect" id="node5_4" href="./OSchemaDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.metadata.OSchemaDistributed" alt="" coords="882,17,1035,42"/>
+<area shape="rect" id="node5" href="./OSchemaDistributed.html" title="&lt;TABLE&gt;" alt="" coords="871,5,1046,53"/>
+<area shape="rect" id="node6_5" href="./OTransactionContext.html" title="com.orientechnologies.orient.server.distributed.impl.metadata.OTransactionContext" alt="" coords="1081,17,1236,42"/>
+<area shape="rect" id="node6" href="./OTransactionContext.html" title="&lt;TABLE&gt;" alt="" coords="1071,5,1247,53"/>
+</map>

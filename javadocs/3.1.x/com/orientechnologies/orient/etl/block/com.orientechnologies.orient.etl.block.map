@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OETLLetBlock.html" title="com.orientechnologies.orient.etl.block.OETLLetBlock" alt="" coords="16,214,124,239"/>
+<area shape="rect" id="node1" href="./OETLLetBlock.html" title="&lt;TABLE&gt;" alt="" coords="5,203,135,251"/>
+<area shape="rect" id="node2_1" href="./OETLBlock.html" title="com.orientechnologies.orient.etl.block.OETLBlock" alt="" coords="193,11,286,53"/>
+<area shape="rect" id="node2" href="./OETLBlock.html" title="&lt;TABLE&gt;" alt="" coords="182,5,297,59"/>
+<area shape="rect" id="node3_2" href="./OETLAbstractBlock.html" title="com.orientechnologies.orient.etl.block.OETLAbstractBlock" alt="" coords="168,118,311,143"/>
+<area shape="rect" id="node3" href="./OETLAbstractBlock.html" title="&lt;TABLE&gt;" alt="" coords="157,107,321,155"/>
+<area shape="rect" id="node4_3" href="./OETLConsoleBlock.html" title="com.orientechnologies.orient.etl.block.OETLConsoleBlock" alt="" coords="169,214,309,239"/>
+<area shape="rect" id="node4" href="./OETLConsoleBlock.html" title="&lt;TABLE&gt;" alt="" coords="159,203,320,251"/>
+<area shape="rect" id="node5_4" href="./OETLCodeBlock.html" title="com.orientechnologies.orient.etl.block.OETLCodeBlock" alt="" coords="355,214,476,239"/>
+<area shape="rect" id="node5" href="./OETLCodeBlock.html" title="&lt;TABLE&gt;" alt="" coords="344,203,487,251"/>
+</map>

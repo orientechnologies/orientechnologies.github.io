@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OMultiCollectionIterator.html" title="com.orientechnologies.common.collection.OMultiCollectionIterator" alt="" coords="411,118,616,143"/>
+<area shape="rect" id="node1" href="./OMultiCollectionIterator.html" title="&lt;TABLE&gt;" alt="" coords="400,107,627,155"/>
+<area shape="rect" id="node2_1" href="../util/OSupportsContains.html" title="com.orientechnologies.common.util.OSupportsContains" alt="" coords="16,11,189,53"/>
+<area shape="rect" id="node2" href="../util/OSupportsContains.html" title="&lt;TABLE&gt;" alt="" coords="5,5,200,59"/>
+<area shape="rect" id="node3_2" href="../util/OSizeable.html" title="com.orientechnologies.common.util.OSizeable" alt="" coords="235,11,328,53"/>
+<area shape="rect" id="node3" href="../util/OSizeable.html" title="&lt;TABLE&gt;" alt="" coords="224,5,339,59"/>
+<area shape="rect" id="node4_3" href="../util/OResettable.html" title="com.orientechnologies.common.util.OResettable" alt="" coords="374,11,474,53"/>
+<area shape="rect" id="node4" href="../util/OResettable.html" title="&lt;TABLE&gt;" alt="" coords="363,5,485,59"/>
+<area shape="rect" id="node5_4" href="../../orient/core/db/record/OAutoConvertToRecord.html" title="com.orientechnologies.orient.core.db.record.OAutoConvertToRecord" alt="" coords="519,11,689,53"/>
+<area shape="rect" id="node5" href="../../orient/core/db/record/OAutoConvertToRecord.html" title="&lt;TABLE&gt;" alt="" coords="509,5,699,59"/>
+<area shape="rect" id="node6_5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="java.util.Iterator" alt="" coords="734,11,831,53"/>
+<area shape="rect" id="node6" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="&lt;TABLE&gt;" alt="" coords="723,5,842,59"/>
+<area shape="rect" id="node7_6" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="java.lang.Iterable" alt="" coords="877,11,977,53"/>
+<area shape="rect" id="node7" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="&lt;TABLE&gt;" alt="" coords="866,5,987,59"/>
+</map>

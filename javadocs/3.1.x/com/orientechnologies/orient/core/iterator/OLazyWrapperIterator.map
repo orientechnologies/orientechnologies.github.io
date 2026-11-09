@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../common/util/OSizeable.html" title="com.orientechnologies.common.util.OSizeable" alt="" coords="16,11,109,53"/>
+<area shape="rect" id="node1" href="../../../common/util/OSizeable.html" title="&lt;TABLE&gt;" alt="" coords="5,5,120,59"/>
+<area shape="rect" id="node5_1" href="./OLazyWrapperIterator.html" title="com.orientechnologies.orient.core.iterator.OLazyWrapperIterator" alt="" coords="289,118,481,143"/>
+<area shape="rect" id="node5" href="./OLazyWrapperIterator.html" title="&lt;TABLE&gt;" alt="" coords="279,107,492,155"/>
+<area shape="rect" id="node2_2" href="../../../common/util/OResettable.html" title="com.orientechnologies.common.util.OResettable" alt="" coords="155,11,255,53"/>
+<area shape="rect" id="node2" href="../../../common/util/OResettable.html" title="&lt;TABLE&gt;" alt="" coords="145,5,266,59"/>
+<area shape="rect" id="node3_3" href="../db/record/OAutoConvertToRecord.html" title="com.orientechnologies.orient.core.db.record.OAutoConvertToRecord" alt="" coords="301,11,470,53"/>
+<area shape="rect" id="node3" href="../db/record/OAutoConvertToRecord.html" title="&lt;TABLE&gt;" alt="" coords="290,5,481,59"/>
+<area shape="rect" id="node4_4" href="../record/impl/OEdgeIterator.html" title="com.orientechnologies.orient.core.record.impl.OEdgeIterator" alt="" coords="160,214,269,239"/>
+<area shape="rect" id="node4" href="../record/impl/OEdgeIterator.html" title="&lt;TABLE&gt;" alt="" coords="149,203,280,251"/>
+<area shape="rect" id="node6_5" href="../../../../tinkerpop/blueprints/impls/orient/OrientEdgeIterator.html" title="com.tinkerpop.blueprints.impls.orient.OrientEdgeIterator" alt="" coords="315,214,455,239"/>
+<area shape="rect" id="node6" href="../../../../tinkerpop/blueprints/impls/orient/OrientEdgeIterator.html" title="&lt;TABLE&gt;" alt="" coords="305,203,466,251"/>
+<area shape="rect" id="node7_6" href="../../../../tinkerpop/blueprints/impls/orient/OrientVertexIterator.html" title="com.tinkerpop.blueprints.impls.orient.OrientVertexIterator" alt="" coords="501,214,651,239"/>
+<area shape="rect" id="node7" href="../../../../tinkerpop/blueprints/impls/orient/OrientVertexIterator.html" title="&lt;TABLE&gt;" alt="" coords="491,203,661,251"/>
+<area shape="rect" id="node8_7" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="java.util.Iterator" alt="" coords="515,11,613,53"/>
+<area shape="rect" id="node8" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="&lt;TABLE&gt;" alt="" coords="505,5,623,59"/>
+<area shape="rect" id="node9_8" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="java.lang.Iterable" alt="" coords="658,11,758,53"/>
+<area shape="rect" id="node9" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="&lt;TABLE&gt;" alt="" coords="647,5,769,59"/>
+</map>

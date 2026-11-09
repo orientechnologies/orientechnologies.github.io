@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../core/command/script/OScriptInjection.html" title="com.orientechnologies.orient.core.command.script.OScriptInjection" alt="" coords="16,11,139,53"/>
+<area shape="rect" id="node1" href="../../core/command/script/OScriptInjection.html" title="&lt;TABLE&gt;" alt="" coords="5,5,149,59"/>
+<area shape="rect" id="node3_1" href="./OGraphServerHandler.html" title="com.orientechnologies.orient.graph.handler.OGraphServerHandler" alt="" coords="91,118,253,143"/>
+<area shape="rect" id="node3" href="./OGraphServerHandler.html" title="&lt;TABLE&gt;" alt="" coords="81,107,263,155"/>
+<area shape="rect" id="node2_2" href="../../server/plugin/OServerPluginAbstract.html" title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" alt="" coords="184,19,349,45"/>
+<area shape="rect" id="node2" href="../../server/plugin/OServerPluginAbstract.html" title="&lt;TABLE&gt;" alt="" coords="173,8,360,56"/>
+</map>

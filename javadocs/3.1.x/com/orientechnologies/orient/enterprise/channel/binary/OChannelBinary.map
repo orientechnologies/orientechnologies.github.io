@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OChannel.html" title="com.orientechnologies.orient.enterprise.channel.OChannel" alt="" coords="126,19,209,45"/>
+<area shape="rect" id="node1" href="../OChannel.html" title="&lt;TABLE&gt;" alt="" coords="115,8,219,56"/>
+<area shape="rect" id="node3_1" href="./OChannelBinary.html" title="com.orientechnologies.orient.enterprise.channel.binary.OChannelBinary" alt="" coords="271,118,395,143"/>
+<area shape="rect" id="node3" href="./OChannelBinary.html" title="&lt;TABLE&gt;" alt="" coords="260,107,405,155"/>
+<area shape="rect" id="node2_2" href="./OChannelDataOutput.html" title="com.orientechnologies.orient.enterprise.channel.binary.OChannelDataOutput" alt="" coords="254,11,411,53"/>
+<area shape="rect" id="node2" href="./OChannelDataOutput.html" title="&lt;TABLE&gt;" alt="" coords="243,5,422,59"/>
+<area shape="rect" id="node4_3" href="./OChannelBinaryServer.html" title="com.orientechnologies.orient.enterprise.channel.binary.OChannelBinaryServer" alt="" coords="16,214,183,239"/>
+<area shape="rect" id="node4" href="./OChannelBinaryServer.html" title="&lt;TABLE&gt;" alt="" coords="5,203,193,251"/>
+<area shape="rect" id="node6_4" href="../../../client/binary/OChannelBinaryAsynchClient.html" title="com.orientechnologies.orient.client.binary.OChannelBinaryAsynchClient" alt="" coords="228,214,437,239"/>
+<area shape="rect" id="node6" href="../../../client/binary/OChannelBinaryAsynchClient.html" title="&lt;TABLE&gt;" alt="" coords="217,203,448,251"/>
+<area shape="rect" id="node7_5" href="../../../client/binary/OChannelBinaryClientAbstract.html" title="com.orientechnologies.orient.client.binary.OChannelBinaryClientAbstract" alt="" coords="483,214,699,239"/>
+<area shape="rect" id="node7" href="../../../client/binary/OChannelBinaryClientAbstract.html" title="&lt;TABLE&gt;" alt="" coords="473,203,710,251"/>
+<area shape="rect" id="node5_6" href="./OChannelDataInput.html" title="com.orientechnologies.orient.enterprise.channel.binary.OChannelDataInput" alt="" coords="457,11,603,53"/>
+<area shape="rect" id="node5" href="./OChannelDataInput.html" title="&lt;TABLE&gt;" alt="" coords="446,5,614,59"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OWALRecord" alt="" coords="47,11,150,53"/>
+<area shape="rect" id="node1" href="../OWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="37,5,161,59"/>
+<area shape="rect" id="node3_1" href="./OWriteableWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.cas.OWriteableWALRecord" alt="" coords="16,112,181,155"/>
+<area shape="rect" id="node3" href="./OWriteableWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="5,107,192,160"/>
+<area shape="rect" id="node2_2" href="../OAbstractWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.OAbstractWALRecord" alt="" coords="20,219,177,245"/>
+<area shape="rect" id="node2" href="../OAbstractWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="9,208,188,256"/>
+</map>

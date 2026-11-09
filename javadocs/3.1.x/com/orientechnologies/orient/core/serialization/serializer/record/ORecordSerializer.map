@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ORecordSerializer.html" title="com.orientechnologies.orient.core.serialization.serializer.record.ORecordSerializer" alt="" coords="475,11,611,53"/>
+<area shape="rect" id="node1" href="./ORecordSerializer.html" title="&lt;TABLE&gt;" alt="" coords="465,5,622,59"/>
+<area shape="rect" id="node2_1" href="./ORecordSerializerRaw.html" title="com.orientechnologies.orient.core.serialization.serializer.record.ORecordSerializerRaw" alt="" coords="16,118,180,143"/>
+<area shape="rect" id="node2" href="./ORecordSerializerRaw.html" title="&lt;TABLE&gt;" alt="" coords="5,107,191,155"/>
+<area shape="rect" id="node3_2" href="./binary/ORecordSerializerBinary.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerBinary" alt="" coords="225,118,403,143"/>
+<area shape="rect" id="node3" href="./binary/ORecordSerializerBinary.html" title="&lt;TABLE&gt;" alt="" coords="215,107,413,155"/>
+<area shape="rect" id="node4_3" href="./binary/ORecordSerializerNetwork.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerNetwork" alt="" coords="448,118,639,143"/>
+<area shape="rect" id="node4" href="./binary/ORecordSerializerNetwork.html" title="&lt;TABLE&gt;" alt="" coords="437,107,649,155"/>
+<area shape="rect" id="node5_4" href="./binary/ORecordSerializerNetworkV37.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerNetworkV37" alt="" coords="683,118,899,143"/>
+<area shape="rect" id="node5" href="./binary/ORecordSerializerNetworkV37.html" title="&lt;TABLE&gt;" alt="" coords="673,107,910,155"/>
+<area shape="rect" id="node6_5" href="./string/ORecordSerializerStringAbstract.html" title="com.orientechnologies.orient.core.serialization.serializer.record.string.ORecordSerializerStringAbstract" alt="" coords="944,118,1172,143"/>
+<area shape="rect" id="node6" href="./string/ORecordSerializerStringAbstract.html" title="&lt;TABLE&gt;" alt="" coords="933,107,1183,155"/>
+</map>

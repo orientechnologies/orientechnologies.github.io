@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../util/OService.html" title="com.orientechnologies.common.util.OService" alt="" coords="98,11,191,53"/>
+<area shape="rect" id="node1" href="../util/OService.html" title="&lt;TABLE&gt;" alt="" coords="87,5,202,59"/>
+<area shape="rect" id="node2_1" href="./OSoftThread.html" title="com.orientechnologies.common.thread.OSoftThread" alt="" coords="156,118,256,143"/>
+<area shape="rect" id="node2" href="./OSoftThread.html" title="&lt;TABLE&gt;" alt="" coords="145,107,267,155"/>
+<area shape="rect" id="node3_2" href="../../orient/stresstest/OConsoleProgressWriter.html" title="com.orientechnologies.orient.stresstest.OConsoleProgressWriter" alt="" coords="16,214,193,239"/>
+<area shape="rect" id="node3" href="../../orient/stresstest/OConsoleProgressWriter.html" title="&lt;TABLE&gt;" alt="" coords="5,203,204,251"/>
+<area shape="rect" id="node4_3" href="../../orient/server/network/protocol/ONetworkProtocol.html" title="com.orientechnologies.orient.server.network.protocol.ONetworkProtocol" alt="" coords="239,214,376,239"/>
+<area shape="rect" id="node4" href="../../orient/server/network/protocol/ONetworkProtocol.html" title="&lt;TABLE&gt;" alt="" coords="228,203,387,251"/>
+<area shape="rect" id="node5_4" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html" title="java.lang.Thread" alt="" coords="237,19,301,45"/>
+<area shape="rect" id="node5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html" title="&lt;TABLE&gt;" alt="" coords="226,8,311,56"/>
+</map>

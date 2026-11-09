@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OProxedResource.html" title="com.orientechnologies.orient.core.db.record.OProxedResource" alt="" coords="592,17,756,42"/>
+<area shape="rect" id="node1" href="./OProxedResource.html" title="&lt;TABLE&gt;" alt="" coords="581,5,767,53"/>
+<area shape="rect" id="node2_1" href="../../metadata/sequence/OSequenceLibraryProxy.html" title="com.orientechnologies.orient.core.metadata.sequence.OSequenceLibraryProxy" alt="" coords="16,113,191,138"/>
+<area shape="rect" id="node2" href="../../metadata/sequence/OSequenceLibraryProxy.html" title="&lt;TABLE&gt;" alt="" coords="5,101,201,149"/>
+<area shape="rect" id="node3_2" href="../../metadata/security/OSecurityProxy.html" title="com.orientechnologies.orient.core.metadata.security.OSecurityProxy" alt="" coords="237,113,357,138"/>
+<area shape="rect" id="node3" href="../../metadata/security/OSecurityProxy.html" title="&lt;TABLE&gt;" alt="" coords="226,101,367,149"/>
+<area shape="rect" id="node4_3" href="../../metadata/function/OFunctionLibraryProxy.html" title="com.orientechnologies.orient.core.metadata.function.OFunctionLibraryProxy" alt="" coords="403,113,569,138"/>
+<area shape="rect" id="node4" href="../../metadata/function/OFunctionLibraryProxy.html" title="&lt;TABLE&gt;" alt="" coords="392,101,580,149"/>
+<area shape="rect" id="node5_4" href="../../metadata/schema/OSchemaProxy.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaProxy" alt="" coords="615,113,733,138"/>
+<area shape="rect" id="node5" href="../../metadata/schema/OSchemaProxy.html" title="&lt;TABLE&gt;" alt="" coords="604,101,744,149"/>
+<area shape="rect" id="node6_5" href="../../schedule/OSchedulerProxy.html" title="com.orientechnologies.orient.core.schedule.OSchedulerProxy" alt="" coords="779,113,910,138"/>
+<area shape="rect" id="node6" href="../../schedule/OSchedulerProxy.html" title="&lt;TABLE&gt;" alt="" coords="769,101,921,149"/>
+<area shape="rect" id="node7_6" href="../../security/symmetrickey/OSymmetricKeySecurity.html" title="com.orientechnologies.orient.core.security.symmetrickey.OSymmetricKeySecurity" alt="" coords="956,113,1133,138"/>
+<area shape="rect" id="node7" href="../../security/symmetrickey/OSymmetricKeySecurity.html" title="&lt;TABLE&gt;" alt="" coords="945,101,1144,149"/>
+<area shape="rect" id="node8_7" href="../../index/OIndexManagerProxy.html" title="com.orientechnologies.orient.core.index.OIndexManagerProxy" alt="" coords="1179,113,1339,138"/>
+<area shape="rect" id="node8" href="../../index/OIndexManagerProxy.html" title="&lt;TABLE&gt;" alt="" coords="1169,101,1350,149"/>
+</map>

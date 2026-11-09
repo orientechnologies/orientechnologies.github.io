@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../core/db/ODatabaseLifecycleListener.html" title="com.orientechnologies.orient.core.db.ODatabaseLifecycleListener" alt="" coords="16,11,217,53"/>
+<area shape="rect" id="node1" href="../../../core/db/ODatabaseLifecycleListener.html" title="&lt;TABLE&gt;" alt="" coords="5,5,228,59"/>
+<area shape="rect" id="node6_1" href="./ODistributedAbstractPlugin.html" title="com.orientechnologies.orient.server.distributed.impl.ODistributedAbstractPlugin" alt="" coords="373,118,569,143"/>
+<area shape="rect" id="node6" href="./ODistributedAbstractPlugin.html" title="&lt;TABLE&gt;" alt="" coords="363,107,580,155"/>
+<area shape="rect" id="node2_2" href="../../../core/command/OCommandOutputListener.html" title="com.orientechnologies.orient.core.command.OCommandOutputListener" alt="" coords="263,11,455,53"/>
+<area shape="rect" id="node2" href="../../../core/command/OCommandOutputListener.html" title="&lt;TABLE&gt;" alt="" coords="253,5,466,59"/>
+<area shape="rect" id="node3_3" href="../../plugin/OServerPluginAbstract.html" title="com.orientechnologies.orient.server.plugin.OServerPluginAbstract" alt="" coords="501,19,666,45"/>
+<area shape="rect" id="node3" href="../../plugin/OServerPluginAbstract.html" title="&lt;TABLE&gt;" alt="" coords="490,8,677,56"/>
+<area shape="rect" id="node4_4" href="../ODistributedServerManager.html" title="com.orientechnologies.orient.server.distributed.ODistributedServerManager" alt="" coords="711,11,911,53"/>
+<area shape="rect" id="node4" href="../ODistributedServerManager.html" title="&lt;TABLE&gt;" alt="" coords="701,5,922,59"/>
+<area shape="rect" id="node5_5" href="../../hazelcast/OHazelcastPlugin.html" title="com.orientechnologies.orient.server.hazelcast.OHazelcastPlugin" alt="" coords="405,214,538,239"/>
+<area shape="rect" id="node5" href="../../hazelcast/OHazelcastPlugin.html" title="&lt;TABLE&gt;" alt="" coords="394,203,549,251"/>
+</map>

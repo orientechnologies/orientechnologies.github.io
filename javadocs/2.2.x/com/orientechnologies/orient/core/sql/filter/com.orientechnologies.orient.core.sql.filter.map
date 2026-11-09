@@ -1,0 +1,30 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSQLFilterItemFieldAll.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItemFieldAll" alt="" coords="16,310,181,335"/>
+<area shape="rect" id="node1" href="./OSQLFilterItemFieldAll.html" title="&lt;TABLE&gt;" alt="" coords="5,299,192,347"/>
+<area shape="rect" id="node2_1" href="./OSQLTarget.html" title="com.orientechnologies.orient.core.sql.filter.OSQLTarget" alt="" coords="671,19,764,45"/>
+<area shape="rect" id="node2" href="./OSQLTarget.html" title="&lt;TABLE&gt;" alt="" coords="660,8,775,56"/>
+<area shape="rect" id="node3_2" href="./OFilterOptimizer.html" title="com.orientechnologies.orient.core.sql.filter.OFilterOptimizer" alt="" coords="810,19,937,45"/>
+<area shape="rect" id="node3" href="./OFilterOptimizer.html" title="&lt;TABLE&gt;" alt="" coords="799,8,947,56"/>
+<area shape="rect" id="node4_3" href="./OSQLFilter.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilter" alt="" coords="996,118,1084,143"/>
+<area shape="rect" id="node4" href="./OSQLFilter.html" title="&lt;TABLE&gt;" alt="" coords="985,107,1095,155"/>
+<area shape="rect" id="node5_4" href="./OSQLFilterItemFieldMultiAbstract.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItemFieldMultiAbstract" alt="" coords="87,214,324,239"/>
+<area shape="rect" id="node5" href="./OSQLFilterItemFieldMultiAbstract.html" title="&lt;TABLE&gt;" alt="" coords="76,203,335,251"/>
+<area shape="rect" id="node11_5" href="./OSQLFilterItemFieldAny.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItemFieldAny" alt="" coords="227,310,400,335"/>
+<area shape="rect" id="node11" href="./OSQLFilterItemFieldAny.html" title="&lt;TABLE&gt;" alt="" coords="216,299,411,347"/>
+<area shape="rect" id="node6_6" href="./OSQLFilterCondition.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterCondition" alt="" coords="1144,19,1293,45"/>
+<area shape="rect" id="node6" href="./OSQLFilterCondition.html" title="&lt;TABLE&gt;" alt="" coords="1133,8,1304,56"/>
+<area shape="rect" id="node7_7" href="./OSQLFilterItem.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItem" alt="" coords="508,11,625,53"/>
+<area shape="rect" id="node7" href="./OSQLFilterItem.html" title="&lt;TABLE&gt;" alt="" coords="497,5,636,59"/>
+<area shape="rect" id="node8_8" href="./OSQLFilterItemAbstract.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItemAbstract" alt="" coords="369,118,541,143"/>
+<area shape="rect" id="node8" href="./OSQLFilterItemAbstract.html" title="&lt;TABLE&gt;" alt="" coords="358,107,551,155"/>
+<area shape="rect" id="node10_9" href="./OSQLFilterItemParameter.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItemParameter" alt="" coords="587,118,771,143"/>
+<area shape="rect" id="node10" href="./OSQLFilterItemParameter.html" title="&lt;TABLE&gt;" alt="" coords="576,107,781,155"/>
+<area shape="rect" id="node9_10" href="./OSQLFilterItemVariable.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItemVariable" alt="" coords="369,214,540,239"/>
+<area shape="rect" id="node9" href="./OSQLFilterItemVariable.html" title="&lt;TABLE&gt;" alt="" coords="359,203,551,251"/>
+<area shape="rect" id="node13_11" href="./OSQLFilterItemField.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItemField" alt="" coords="586,214,734,239"/>
+<area shape="rect" id="node13" href="./OSQLFilterItemField.html" title="&lt;TABLE&gt;" alt="" coords="575,203,745,251"/>
+<area shape="rect" id="node12_12" href="./OSQLPredicate.html" title="com.orientechnologies.orient.core.sql.filter.OSQLPredicate" alt="" coords="982,19,1098,45"/>
+<area shape="rect" id="node12" href="./OSQLPredicate.html" title="&lt;TABLE&gt;" alt="" coords="971,8,1109,56"/>
+<area shape="rect" id="node14_13" href="./OSQLFilterItemField.FieldChain.html" title="com.orientechnologies.orient.core.sql.filter.OSQLFilterItemField.FieldChain" alt="" coords="1339,19,1427,45"/>
+<area shape="rect" id="node14" href="./OSQLFilterItemField.FieldChain.html" title="&lt;TABLE&gt;" alt="" coords="1328,8,1437,56"/>
+</map>

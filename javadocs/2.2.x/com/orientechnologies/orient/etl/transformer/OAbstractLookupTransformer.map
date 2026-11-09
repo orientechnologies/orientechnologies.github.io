@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OLinkTransformer.html" title="com.orientechnologies.orient.etl.transformer.OLinkTransformer" alt="" coords="16,209,151,234"/>
+<area shape="rect" id="node1" href="./OLinkTransformer.html" title="&lt;TABLE&gt;" alt="" coords="5,197,161,245"/>
+<area shape="rect" id="node2_1" href="./OEdgeTransformer.html" title="com.orientechnologies.orient.etl.transformer.OEdgeTransformer" alt="" coords="196,209,336,234"/>
+<area shape="rect" id="node2" href="./OEdgeTransformer.html" title="&lt;TABLE&gt;" alt="" coords="185,197,347,245"/>
+<area shape="rect" id="node3_2" href="./OAbstractTransformer.html" title="com.orientechnologies.orient.etl.transformer.OAbstractTransformer" alt="" coords="185,17,347,42"/>
+<area shape="rect" id="node3" href="./OAbstractTransformer.html" title="&lt;TABLE&gt;" alt="" coords="174,5,358,53"/>
+<area shape="rect" id="node4_3" href="./OAbstractLookupTransformer.html" title="com.orientechnologies.orient.etl.transformer.OAbstractLookupTransformer" alt="" coords="161,113,371,138"/>
+<area shape="rect" id="node4" href="./OAbstractLookupTransformer.html" title="&lt;TABLE&gt;" alt="" coords="151,101,381,149"/>
+<area shape="rect" id="node5_4" href="./OMergeTransformer.html" title="com.orientechnologies.orient.etl.transformer.OMergeTransformer" alt="" coords="381,209,529,234"/>
+<area shape="rect" id="node5" href="./OMergeTransformer.html" title="&lt;TABLE&gt;" alt="" coords="371,197,540,245"/>
+</map>

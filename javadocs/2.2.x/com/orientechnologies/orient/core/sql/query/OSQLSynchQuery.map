@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../command/OCommandResultListener.html" title="com.orientechnologies.orient.core.command.OCommandResultListener" alt="" coords="16,11,205,53"/>
+<area shape="rect" id="node1" href="../../command/OCommandResultListener.html" title="&lt;TABLE&gt;" alt="" coords="5,5,216,59"/>
+<area shape="rect" id="node2_1" href="./OSQLSynchQuery.html" title="com.orientechnologies.orient.core.sql.query.OSQLSynchQuery" alt="" coords="256,118,419,143"/>
+<area shape="rect" id="node2" href="./OSQLSynchQuery.html" title="&lt;TABLE&gt;" alt="" coords="245,107,429,155"/>
+<area shape="rect" id="node3_2" href="./OLiveQuery.html" title="com.orientechnologies.orient.core.sql.query.OLiveQuery" alt="" coords="275,214,400,239"/>
+<area shape="rect" id="node3" href="./OLiveQuery.html" title="&lt;TABLE&gt;" alt="" coords="264,203,411,251"/>
+<area shape="rect" id="node4_3" href="./OSQLAsynchQuery.html" title="com.orientechnologies.orient.core.sql.query.OSQLAsynchQuery" alt="" coords="251,19,423,45"/>
+<area shape="rect" id="node4" href="./OSQLAsynchQuery.html" title="&lt;TABLE&gt;" alt="" coords="241,8,434,56"/>
+<area shape="rect" id="node5_4" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="java.lang.Iterable" alt="" coords="469,11,569,53"/>
+<area shape="rect" id="node5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Iterable.html" title="&lt;TABLE&gt;" alt="" coords="458,5,579,59"/>
+</map>

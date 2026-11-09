@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OLazyIteratorListWrapper.html" title="com.orientechnologies.common.collection.OLazyIteratorListWrapper" alt="" coords="16,219,232,245"/>
+<area shape="rect" id="node1" href="./OLazyIteratorListWrapper.html" title="&lt;TABLE&gt;" alt="" coords="5,208,243,256"/>
+<area shape="rect" id="node2_1" href="./OLazyIterator.html" title="com.orientechnologies.common.collection.OLazyIterator" alt="" coords="285,112,422,155"/>
+<area shape="rect" id="node2" href="./OLazyIterator.html" title="&lt;TABLE&gt;" alt="" coords="274,107,433,160"/>
+<area shape="rect" id="node3_2" href="../../orient/core/db/record/OLazyRecordIterator.html" title="com.orientechnologies.orient.core.db.record.OLazyRecordIterator" alt="" coords="277,219,429,245"/>
+<area shape="rect" id="node3" href="../../orient/core/db/record/OLazyRecordIterator.html" title="&lt;TABLE&gt;" alt="" coords="267,208,440,256"/>
+<area shape="rect" id="node4_3" href="../../orient/core/db/record/OLazyRecordMultiIterator.html" title="com.orientechnologies.orient.core.db.record.OLazyRecordMultiIterator" alt="" coords="475,219,661,245"/>
+<area shape="rect" id="node4" href="../../orient/core/db/record/OLazyRecordMultiIterator.html" title="&lt;TABLE&gt;" alt="" coords="465,208,671,256"/>
+<area shape="rect" id="node5_4" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="java.util.Iterator" alt="" coords="305,11,402,53"/>
+<area shape="rect" id="node5" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Iterator.html" title="&lt;TABLE&gt;" alt="" coords="294,5,413,59"/>
+</map>

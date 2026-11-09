@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../core/db/object/OObjectLazyMultivalueElement.html" title="com.orientechnologies.orient.core.db.object.OObjectLazyMultivalueElement" alt="" coords="323,11,577,53"/>
+<area shape="rect" id="node1" href="../../core/db/object/OObjectLazyMultivalueElement.html" title="&lt;TABLE&gt;" alt="" coords="312,5,588,59"/>
+<area shape="rect" id="node4_1" href="./OObjectLazyCustomSerializer.html" title="com.orientechnologies.orient.object.serialization.OObjectLazyCustomSerializer" alt="" coords="329,112,571,155"/>
+<area shape="rect" id="node4" href="./OObjectLazyCustomSerializer.html" title="&lt;TABLE&gt;" alt="" coords="318,107,582,160"/>
+<area shape="rect" id="node2_2" href="./OObjectCustomSerializerList.html" title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerList" alt="" coords="16,219,276,245"/>
+<area shape="rect" id="node2" href="./OObjectCustomSerializerList.html" title="&lt;TABLE&gt;" alt="" coords="5,208,287,256"/>
+<area shape="rect" id="node3_3" href="./OObjectCustomSerializerSet.html" title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerSet" alt="" coords="321,219,579,245"/>
+<area shape="rect" id="node3" href="./OObjectCustomSerializerSet.html" title="&lt;TABLE&gt;" alt="" coords="311,208,589,256"/>
+<area shape="rect" id="node5_4" href="./OObjectCustomSerializerMap.html" title="com.orientechnologies.orient.object.serialization.OObjectCustomSerializerMap" alt="" coords="625,219,889,245"/>
+<area shape="rect" id="node5" href="./OObjectCustomSerializerMap.html" title="&lt;TABLE&gt;" alt="" coords="614,208,899,256"/>
+</map>

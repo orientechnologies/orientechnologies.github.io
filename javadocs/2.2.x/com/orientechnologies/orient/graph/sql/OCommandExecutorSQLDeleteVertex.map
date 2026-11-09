@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../core/command/OCommandDistributedReplicateRequest.html" title="com.orientechnologies.orient.core.command.OCommandDistributedReplicateRequest" alt="" coords="16,11,299,53"/>
+<area shape="rect" id="node1" href="../../core/command/OCommandDistributedReplicateRequest.html" title="&lt;TABLE&gt;" alt="" coords="5,5,309,59"/>
+<area shape="rect" id="node4_1" href="./OCommandExecutorSQLDeleteVertex.html" title="com.orientechnologies.orient.graph.sql.OCommandExecutorSQLDeleteVertex" alt="" coords="307,118,570,143"/>
+<area shape="rect" id="node4" href="./OCommandExecutorSQLDeleteVertex.html" title="&lt;TABLE&gt;" alt="" coords="297,107,581,155"/>
+<area shape="rect" id="node2_2" href="../../core/command/OCommandResultListener.html" title="com.orientechnologies.orient.core.command.OCommandResultListener" alt="" coords="344,11,533,53"/>
+<area shape="rect" id="node2" href="../../core/command/OCommandResultListener.html" title="&lt;TABLE&gt;" alt="" coords="333,5,544,59"/>
+<area shape="rect" id="node3_3" href="../../core/sql/OCommandExecutorSQLAbstract.html" title="com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract" alt="" coords="579,19,811,45"/>
+<area shape="rect" id="node3" href="../../core/sql/OCommandExecutorSQLAbstract.html" title="&lt;TABLE&gt;" alt="" coords="568,8,821,56"/>
+</map>

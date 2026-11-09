@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSessionStoragePerformanceStatistic.WALCountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.WALCountersHolder" alt="" coords="16,118,164,143"/>
+<area shape="rect" id="node1" href="./OSessionStoragePerformanceStatistic.WALCountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="5,107,175,155"/>
+<area shape="rect" id="node2_1" href="./OSessionStoragePerformanceStatistic.StorageCountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.StorageCountersHolder" alt="" coords="210,118,381,143"/>
+<area shape="rect" id="node2" href="./OSessionStoragePerformanceStatistic.StorageCountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="199,107,391,155"/>
+<area shape="rect" id="node3_2" href="./OSessionStoragePerformanceStatistic.WritCacheCountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.WritCacheCountersHolder" alt="" coords="427,118,615,143"/>
+<area shape="rect" id="node3" href="./OSessionStoragePerformanceStatistic.WritCacheCountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="416,107,625,155"/>
+<area shape="rect" id="node4_3" href="./OSessionStoragePerformanceStatistic.PerformanceCountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.PerformanceCountersHolder" alt="" coords="660,118,864,143"/>
+<area shape="rect" id="node4" href="./OSessionStoragePerformanceStatistic.PerformanceCountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="649,107,875,155"/>
+<area shape="rect" id="node5_4" href="./OSessionStoragePerformanceStatistic.CountersHolder.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OSessionStoragePerformanceStatistic.CountersHolder" alt="" coords="251,11,563,53"/>
+<area shape="rect" id="node5" href="./OSessionStoragePerformanceStatistic.CountersHolder.html" title="&lt;TABLE&gt;" alt="" coords="241,5,574,59"/>
+</map>

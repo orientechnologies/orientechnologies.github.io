@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OQuorumDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OQuorumDistributedConflictResolver" alt="" coords="16,214,276,239"/>
+<area shape="rect" id="node1" href="./OQuorumDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="5,203,287,251"/>
+<area shape="rect" id="node2_1" href="./OContentDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OContentDistributedConflictResolver" alt="" coords="322,214,581,239"/>
+<area shape="rect" id="node2" href="./OContentDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="311,203,591,251"/>
+<area shape="rect" id="node3_2" href="./OAbstractDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OAbstractDistributedConflictResolver" alt="" coords="471,118,733,143"/>
+<area shape="rect" id="node3" href="./OAbstractDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="460,107,744,155"/>
+<area shape="rect" id="node7_3" href="./OVersionDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OVersionDistributedConflictResolver" alt="" coords="626,214,882,239"/>
+<area shape="rect" id="node7" href="./OVersionDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="615,203,893,251"/>
+<area shape="rect" id="node9_4" href="./OMajorityDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.OMajorityDistributedConflictResolver" alt="" coords="927,214,1189,239"/>
+<area shape="rect" id="node9" href="./OMajorityDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="917,203,1199,251"/>
+<area shape="rect" id="node4_5" href="./ODistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver" alt="" coords="498,11,706,53"/>
+<area shape="rect" id="node4" href="./ODistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="487,5,717,59"/>
+<area shape="rect" id="node5_6" href="./ODistributedConflictResolver.OConflictResult.html" title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolver.OConflictResult" alt="" coords="751,19,871,45"/>
+<area shape="rect" id="node5" href="./ODistributedConflictResolver.OConflictResult.html" title="&lt;TABLE&gt;" alt="" coords="741,8,882,56"/>
+<area shape="rect" id="node6_7" href="./ODCDistributedConflictResolver.html" title="com.orientechnologies.orient.server.distributed.conflict.ODCDistributedConflictResolver" alt="" coords="945,310,1171,335"/>
+<area shape="rect" id="node6" href="./ODCDistributedConflictResolver.html" title="&lt;TABLE&gt;" alt="" coords="934,299,1182,347"/>
+<area shape="rect" id="node8_8" href="./ODistributedConflictResolverFactory.html" title="com.orientechnologies.orient.server.distributed.conflict.ODistributedConflictResolverFactory" alt="" coords="917,19,1172,45"/>
+<area shape="rect" id="node8" href="./ODistributedConflictResolverFactory.html" title="&lt;TABLE&gt;" alt="" coords="907,8,1183,56"/>
+</map>

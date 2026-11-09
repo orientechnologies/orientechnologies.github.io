@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../ODatabaseDocumentEmbeddedPooled.html" title="com.orientechnologies.orient.core.db.ODatabaseDocumentEmbeddedPooled" alt="" coords="16,214,288,239"/>
+<area shape="rect" id="node1" href="../ODatabaseDocumentEmbeddedPooled.html" title="&lt;TABLE&gt;" alt="" coords="5,203,299,251"/>
+<area shape="rect" id="node2_1" href="./ODatabaseDocumentAbstract.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentAbstract" alt="" coords="74,19,286,45"/>
+<area shape="rect" id="node2" href="./ODatabaseDocumentAbstract.html" title="&lt;TABLE&gt;" alt="" coords="63,8,297,56"/>
+<area shape="rect" id="node3_2" href="./ODatabaseDocumentEmbedded.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentEmbedded" alt="" coords="186,118,414,143"/>
+<area shape="rect" id="node3" href="./ODatabaseDocumentEmbedded.html" title="&lt;TABLE&gt;" alt="" coords="175,107,425,155"/>
+<area shape="rect" id="node5_3" href="../../../server/distributed/impl/ODatabaseDocumentDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.ODatabaseDocumentDistributed" alt="" coords="334,214,565,239"/>
+<area shape="rect" id="node5" href="../../../server/distributed/impl/ODatabaseDocumentDistributed.html" title="&lt;TABLE&gt;" alt="" coords="323,203,575,251"/>
+<area shape="rect" id="node4_4" href="./OQueryLifecycleListener.html" title="com.orientechnologies.orient.core.db.document.OQueryLifecycleListener" alt="" coords="332,11,511,53"/>
+<area shape="rect" id="node4" href="./OQueryLifecycleListener.html" title="&lt;TABLE&gt;" alt="" coords="321,5,521,59"/>
+</map>

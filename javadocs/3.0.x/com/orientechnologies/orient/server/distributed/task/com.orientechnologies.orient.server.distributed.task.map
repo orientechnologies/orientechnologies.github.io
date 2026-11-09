@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseIsOldException.html" title="com.orientechnologies.orient.server.distributed.task.ODatabaseIsOldException" alt="" coords="16,19,204,45"/>
+<area shape="rect" id="node1" href="./ODatabaseIsOldException.html" title="&lt;TABLE&gt;" alt="" coords="5,8,215,56"/>
+<area shape="rect" id="node2_1" href="./ODistributedKeyLockedException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedKeyLockedException" alt="" coords="250,19,485,45"/>
+<area shape="rect" id="node2" href="./ODistributedKeyLockedException.html" title="&lt;TABLE&gt;" alt="" coords="239,8,495,56"/>
+<area shape="rect" id="node3_2" href="./OAbstractCommandTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractCommandTask" alt="" coords="371,310,551,335"/>
+<area shape="rect" id="node3" href="./OAbstractCommandTask.html" title="&lt;TABLE&gt;" alt="" coords="360,299,561,347"/>
+<area shape="rect" id="node4_3" href="./ORemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.ORemoteTask" alt="" coords="530,11,639,53"/>
+<area shape="rect" id="node4" href="./ORemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="519,5,650,59"/>
+<area shape="rect" id="node8_4" href="./OAbstractRemoteTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRemoteTask" alt="" coords="503,118,667,143"/>
+<area shape="rect" id="node8" href="./OAbstractRemoteTask.html" title="&lt;TABLE&gt;" alt="" coords="492,107,677,155"/>
+<area shape="rect" id="node5_5" href="./ORemoteTask.RESULT_STRATEGY.html" title="com.orientechnologies.orient.server.distributed.task.ORemoteTask.RESULT_STRATEGY" alt="" coords="685,11,828,53"/>
+<area shape="rect" id="node5" href="./ORemoteTask.RESULT_STRATEGY.html" title="&lt;TABLE&gt;" alt="" coords="675,5,839,59"/>
+<area shape="rect" id="node6_6" href="./OPossibleDuplicatedRecordException.html" title="com.orientechnologies.orient.server.distributed.task.OPossibleDuplicatedRecordException" alt="" coords="873,19,1136,45"/>
+<area shape="rect" id="node6" href="./OPossibleDuplicatedRecordException.html" title="&lt;TABLE&gt;" alt="" coords="863,8,1147,56"/>
+<area shape="rect" id="node7_7" href="./ODistributedOperationException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedOperationException" alt="" coords="1182,19,1411,45"/>
+<area shape="rect" id="node7" href="./ODistributedOperationException.html" title="&lt;TABLE&gt;" alt="" coords="1171,8,1422,56"/>
+<area shape="rect" id="node10_8" href="./ODistributedLockException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedLockException" alt="" coords="1199,118,1395,143"/>
+<area shape="rect" id="node10" href="./ODistributedLockException.html" title="&lt;TABLE&gt;" alt="" coords="1188,107,1405,155"/>
+<area shape="rect" id="node12_9" href="./OAbstractReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractReplicatedTask" alt="" coords="493,214,676,239"/>
+<area shape="rect" id="node12" href="./OAbstractReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="483,203,687,251"/>
+<area shape="rect" id="node9_10" href="./ODistributedDatabaseDeltaSyncException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedDatabaseDeltaSyncException" alt="" coords="1457,19,1750,45"/>
+<area shape="rect" id="node9" href="./ODistributedDatabaseDeltaSyncException.html" title="&lt;TABLE&gt;" alt="" coords="1446,8,1761,56"/>
+<area shape="rect" id="node11_11" href="./ODistributedRecordLockedException.html" title="com.orientechnologies.orient.server.distributed.task.ODistributedRecordLockedException" alt="" coords="1795,19,2051,45"/>
+<area shape="rect" id="node11" href="./ODistributedRecordLockedException.html" title="&lt;TABLE&gt;" alt="" coords="1785,8,2062,56"/>
+<area shape="rect" id="node13_12" href="./OAbstractRecordReplicatedTask.html" title="com.orientechnologies.orient.server.distributed.task.OAbstractRecordReplicatedTask" alt="" coords="596,310,824,335"/>
+<area shape="rect" id="node13" href="./OAbstractRecordReplicatedTask.html" title="&lt;TABLE&gt;" alt="" coords="585,299,835,347"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAutoMergeRecordConflictStrategy.html" title="com.orientechnologies.orient.core.conflict.OAutoMergeRecordConflictStrategy" alt="" coords="16,214,265,239"/>
+<area shape="rect" id="node1" href="./OAutoMergeRecordConflictStrategy.html" title="&lt;TABLE&gt;" alt="" coords="5,203,276,251"/>
+<area shape="rect" id="node2_1" href="./OContentRecordConflictStrategy.html" title="com.orientechnologies.orient.core.conflict.OContentRecordConflictStrategy" alt="" coords="311,214,541,239"/>
+<area shape="rect" id="node2" href="./OContentRecordConflictStrategy.html" title="&lt;TABLE&gt;" alt="" coords="301,203,551,251"/>
+<area shape="rect" id="node3_2" href="./ORecordConflictStrategyFactory.html" title="com.orientechnologies.orient.core.conflict.ORecordConflictStrategyFactory" alt="" coords="417,19,643,45"/>
+<area shape="rect" id="node3" href="./ORecordConflictStrategyFactory.html" title="&lt;TABLE&gt;" alt="" coords="407,8,653,56"/>
+<area shape="rect" id="node4_3" href="./OVersionRecordConflictStrategy.html" title="com.orientechnologies.orient.core.conflict.OVersionRecordConflictStrategy" alt="" coords="170,118,397,143"/>
+<area shape="rect" id="node4" href="./OVersionRecordConflictStrategy.html" title="&lt;TABLE&gt;" alt="" coords="159,107,407,155"/>
+<area shape="rect" id="node5_4" href="./ORecordConflictStrategy.html" title="com.orientechnologies.orient.core.conflict.ORecordConflictStrategy" alt="" coords="194,11,373,53"/>
+<area shape="rect" id="node5" href="./ORecordConflictStrategy.html" title="&lt;TABLE&gt;" alt="" coords="183,5,383,59"/>
+</map>

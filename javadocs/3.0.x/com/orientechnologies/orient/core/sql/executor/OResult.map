@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OResult.html" title="com.orientechnologies.orient.core.sql.executor.OResult" alt="" coords="109,11,203,53"/>
+<area shape="rect" id="node1" href="./OResult.html" title="&lt;TABLE&gt;" alt="" coords="99,5,213,59"/>
+<area shape="rect" id="node2_1" href="./OResultInternal.html" title="com.orientechnologies.orient.core.sql.executor.OResultInternal" alt="" coords="16,118,136,143"/>
+<area shape="rect" id="node2" href="./OResultInternal.html" title="&lt;TABLE&gt;" alt="" coords="5,107,147,155"/>
+<area shape="rect" id="node3_2" href="../../serialization/serializer/record/binary/OResultBinary.html" title="com.orientechnologies.orient.core.serialization.serializer.record.binary.OResultBinary" alt="" coords="181,118,293,143"/>
+<area shape="rect" id="node3" href="../../serialization/serializer/record/binary/OResultBinary.html" title="&lt;TABLE&gt;" alt="" coords="171,107,304,155"/>
+</map>

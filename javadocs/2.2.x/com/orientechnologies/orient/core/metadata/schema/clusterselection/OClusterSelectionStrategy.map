@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODefaultClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.ODefaultClusterSelectionStrategy" alt="" coords="16,118,255,143"/>
+<area shape="rect" id="node1" href="./ODefaultClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="5,107,265,155"/>
+<area shape="rect" id="node2_1" href="./ORoundRobinClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.ORoundRobinClusterSelectionStrategy" alt="" coords="300,118,568,143"/>
+<area shape="rect" id="node2" href="./ORoundRobinClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="289,107,579,155"/>
+<area shape="rect" id="node3_2" href="./OBalancedClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OBalancedClusterSelectionStrategy" alt="" coords="614,118,865,143"/>
+<area shape="rect" id="node3" href="./OBalancedClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="603,107,875,155"/>
+<area shape="rect" id="node4_3" href="./OClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.metadata.schema.clusterselection.OClusterSelectionStrategy" alt="" coords="644,11,835,53"/>
+<area shape="rect" id="node4" href="./OClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="633,5,845,59"/>
+<area shape="rect" id="node5_4" href="../../../sharding/auto/OAutoShardingClusterSelectionStrategy.html" title="com.orientechnologies.orient.core.sharding.auto.OAutoShardingClusterSelectionStrategy" alt="" coords="910,118,1187,143"/>
+<area shape="rect" id="node5" href="../../../sharding/auto/OAutoShardingClusterSelectionStrategy.html" title="&lt;TABLE&gt;" alt="" coords="899,107,1198,155"/>
+<area shape="rect" id="node6_5" href="../../../../server/distributed/impl/OLocalClusterWrapperStrategy.html" title="com.orientechnologies.orient.server.distributed.impl.OLocalClusterWrapperStrategy" alt="" coords="1233,118,1453,143"/>
+<area shape="rect" id="node6" href="../../../../server/distributed/impl/OLocalClusterWrapperStrategy.html" title="&lt;TABLE&gt;" alt="" coords="1223,107,1464,155"/>
+</map>

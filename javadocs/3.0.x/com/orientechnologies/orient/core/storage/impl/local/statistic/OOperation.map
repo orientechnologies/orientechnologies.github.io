@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OOperation.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OOperation" alt="" coords="378,17,471,42"/>
+<area shape="rect" id="node1" href="./OOperation.html" title="&lt;TABLE&gt;" alt="" coords="367,5,482,53"/>
+<area shape="rect" id="node2_1" href="./OClusterCountersHolder.CreateRecordOperation.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder.CreateRecordOperation" alt="" coords="16,113,188,138"/>
+<area shape="rect" id="node2" href="./OClusterCountersHolder.CreateRecordOperation.html" title="&lt;TABLE&gt;" alt="" coords="5,101,199,149"/>
+<area shape="rect" id="node3_2" href="./OClusterCountersHolder.UpdateRecordOperation.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder.UpdateRecordOperation" alt="" coords="234,113,410,138"/>
+<area shape="rect" id="node3" href="./OClusterCountersHolder.UpdateRecordOperation.html" title="&lt;TABLE&gt;" alt="" coords="223,101,421,149"/>
+<area shape="rect" id="node4_3" href="./OClusterCountersHolder.DeleteRecordPages.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder.DeleteRecordPages" alt="" coords="456,113,601,138"/>
+<area shape="rect" id="node4" href="./OClusterCountersHolder.DeleteRecordPages.html" title="&lt;TABLE&gt;" alt="" coords="445,101,612,149"/>
+<area shape="rect" id="node5_4" href="./OClusterCountersHolder.ReadRecordPages.html" title="com.orientechnologies.orient.core.storage.impl.local.statistic.OClusterCountersHolder.ReadRecordPages" alt="" coords="647,113,783,138"/>
+<area shape="rect" id="node5" href="./OClusterCountersHolder.ReadRecordPages.html" title="&lt;TABLE&gt;" alt="" coords="637,101,794,149"/>
+</map>

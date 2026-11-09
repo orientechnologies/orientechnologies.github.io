@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../common/exception/OHighLevelException.html" title="com.orientechnologies.common.exception.OHighLevelException" alt="" coords="808,11,967,53"/>
+<area shape="rect" id="node1" href="../../../common/exception/OHighLevelException.html" title="&lt;TABLE&gt;" alt="" coords="797,5,977,59"/>
+<area shape="rect" id="node4_1" href="./OSecurityException.html" title="com.orientechnologies.orient.core.exception.OSecurityException" alt="" coords="605,118,751,143"/>
+<area shape="rect" id="node4" href="./OSecurityException.html" title="&lt;TABLE&gt;" alt="" coords="594,107,762,155"/>
+<area shape="rect" id="node5_2" href="./OSecurityAccessException.html" title="com.orientechnologies.orient.core.exception.OSecurityAccessException" alt="" coords="815,214,1007,239"/>
+<area shape="rect" id="node5" href="./OSecurityAccessException.html" title="&lt;TABLE&gt;" alt="" coords="805,203,1018,251"/>
+<area shape="rect" id="node2_3" href="../security/OInvalidPasswordException.html" title="com.orientechnologies.orient.core.security.OInvalidPasswordException" alt="" coords="16,214,215,239"/>
+<area shape="rect" id="node2" href="../security/OInvalidPasswordException.html" title="&lt;TABLE&gt;" alt="" coords="5,203,225,251"/>
+<area shape="rect" id="node3_4" href="./OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="616,19,740,45"/>
+<area shape="rect" id="node3" href="./OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="605,8,751,56"/>
+<area shape="rect" id="node6_5" href="./OInvalidStorageEncryptionKeyException.html" title="com.orientechnologies.orient.core.exception.OInvalidStorageEncryptionKeyException" alt="" coords="261,214,541,239"/>
+<area shape="rect" id="node6" href="./OInvalidStorageEncryptionKeyException.html" title="&lt;TABLE&gt;" alt="" coords="250,203,551,251"/>
+<area shape="rect" id="node7_6" href="../../enterprise/channel/binary/OTokenSecurityException.html" title="com.orientechnologies.orient.enterprise.channel.binary.OTokenSecurityException" alt="" coords="586,214,770,239"/>
+<area shape="rect" id="node7" href="../../enterprise/channel/binary/OTokenSecurityException.html" title="&lt;TABLE&gt;" alt="" coords="575,203,781,251"/>
+</map>

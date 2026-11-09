@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./CASWALPage.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.common.CASWALPage" alt="" coords="16,19,120,45"/>
+<area shape="rect" id="node1" href="./CASWALPage.html" title="&lt;TABLE&gt;" alt="" coords="5,8,131,56"/>
+<area shape="rect" id="node2_1" href="./MilestoneWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.common.MilestoneWALRecord" alt="" coords="166,19,322,45"/>
+<area shape="rect" id="node2" href="./MilestoneWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="155,8,333,56"/>
+<area shape="rect" id="node3_2" href="./OperationIdLSN.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.common.OperationIdLSN" alt="" coords="368,19,488,45"/>
+<area shape="rect" id="node3" href="./OperationIdLSN.html" title="&lt;TABLE&gt;" alt="" coords="357,8,499,56"/>
+<area shape="rect" id="node4_3" href="./EmptyWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.common.EmptyWALRecord" alt="" coords="534,19,669,45"/>
+<area shape="rect" id="node4" href="./EmptyWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="523,8,679,56"/>
+<area shape="rect" id="node5_4" href="./StartWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.common.StartWALRecord" alt="" coords="714,19,838,45"/>
+<area shape="rect" id="node5" href="./StartWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="703,8,849,56"/>
+<area shape="rect" id="node6_5" href="./WriteableWALRecord.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.common.WriteableWALRecord" alt="" coords="883,11,1039,53"/>
+<area shape="rect" id="node6" href="./WriteableWALRecord.html" title="&lt;TABLE&gt;" alt="" coords="873,5,1050,59"/>
+<area shape="rect" id="node7_6" href="./SegmentOverflowListener.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.common.SegmentOverflowListener" alt="" coords="1085,11,1273,53"/>
+<area shape="rect" id="node7" href="./SegmentOverflowListener.html" title="&lt;TABLE&gt;" alt="" coords="1074,5,1283,59"/>
+</map>

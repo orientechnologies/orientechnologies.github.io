@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAuditingService.html" title="com.orientechnologies.orient.server.security.OAuditingService" alt="" coords="16,112,148,155"/>
+<area shape="rect" id="node1" href="./OAuditingService.html" title="&lt;TABLE&gt;" alt="" coords="5,107,159,160"/>
+<area shape="rect" id="node2_1" href="./OSecurityComponent.html" title="com.orientechnologies.orient.server.security.OSecurityComponent" alt="" coords="291,11,449,53"/>
+<area shape="rect" id="node2" href="./OSecurityComponent.html" title="&lt;TABLE&gt;" alt="" coords="281,5,459,59"/>
+<area shape="rect" id="node3_2" href="./OPasswordValidator.html" title="com.orientechnologies.orient.server.security.OPasswordValidator" alt="" coords="193,112,341,155"/>
+<area shape="rect" id="node3" href="./OPasswordValidator.html" title="&lt;TABLE&gt;" alt="" coords="183,107,352,160"/>
+<area shape="rect" id="node4_3" href="./OSecurityAuthenticator.html" title="com.orientechnologies.orient.server.security.OSecurityAuthenticator" alt="" coords="387,112,558,155"/>
+<area shape="rect" id="node4" href="./OSecurityAuthenticator.html" title="&lt;TABLE&gt;" alt="" coords="377,107,569,160"/>
+<area shape="rect" id="node5_4" href="../../../security/ldap/OLDAPImporter.html" title="com.orientechnologies.security.ldap.OLDAPImporter" alt="" coords="603,121,723,146"/>
+<area shape="rect" id="node5" href="../../../security/ldap/OLDAPImporter.html" title="&lt;TABLE&gt;" alt="" coords="593,109,734,157"/>
+</map>

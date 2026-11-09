@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ODatabaseDocumentInternal.html" title="com.orientechnologies.orient.core.db.ODatabaseDocumentInternal" alt="" coords="137,112,345,155"/>
+<area shape="rect" id="node1" href="./ODatabaseDocumentInternal.html" title="&lt;TABLE&gt;" alt="" coords="126,107,355,160"/>
+<area shape="rect" id="node4_1" href="./document/ODatabaseDocumentAbstract.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentAbstract" alt="" coords="16,219,228,245"/>
+<area shape="rect" id="node4" href="./document/ODatabaseDocumentAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,208,239,256"/>
+<area shape="rect" id="node5_2" href="./document/ODatabaseDocumentTx.html" title="com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx" alt="" coords="273,219,448,245"/>
+<area shape="rect" id="node5" href="./document/ODatabaseDocumentTx.html" title="&lt;TABLE&gt;" alt="" coords="263,208,459,256"/>
+<area shape="rect" id="node2_3" href="./ODatabaseSession.html" title="com.orientechnologies.orient.core.db.ODatabaseSession" alt="" coords="69,11,210,53"/>
+<area shape="rect" id="node2" href="./ODatabaseSession.html" title="&lt;TABLE&gt;" alt="" coords="58,5,221,59"/>
+<area shape="rect" id="node3_4" href="./ODatabaseInternal.html" title="com.orientechnologies.orient.core.db.ODatabaseInternal" alt="" coords="256,11,428,53"/>
+<area shape="rect" id="node3" href="./ODatabaseInternal.html" title="&lt;TABLE&gt;" alt="" coords="245,5,439,59"/>
+</map>

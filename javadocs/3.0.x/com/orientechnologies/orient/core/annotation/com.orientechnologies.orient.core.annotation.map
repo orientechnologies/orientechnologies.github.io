@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OAccess.html" title="com.orientechnologies.orient.core.annotation.OAccess" alt="" coords="16,19,91,45"/>
+<area shape="rect" id="node1" href="./OAccess.html" title="&lt;TABLE&gt;" alt="" coords="5,8,101,56"/>
+<area shape="rect" id="node2_1" href="./OAccess.OAccessType.html" title="com.orientechnologies.orient.core.annotation.OAccess.OAccessType" alt="" coords="137,11,255,53"/>
+<area shape="rect" id="node2" href="./OAccess.OAccessType.html" title="&lt;TABLE&gt;" alt="" coords="126,5,266,59"/>
+<area shape="rect" id="node3_2" href="./OId.html" title="com.orientechnologies.orient.core.annotation.OId" alt="" coords="306,19,347,45"/>
+<area shape="rect" id="node3" href="./OId.html" title="&lt;TABLE&gt;" alt="" coords="291,8,363,56"/>
+<area shape="rect" id="node4_3" href="./OBeforeDeserialization.html" title="com.orientechnologies.orient.core.annotation.OBeforeDeserialization" alt="" coords="397,19,568,45"/>
+<area shape="rect" id="node4" href="./OBeforeDeserialization.html" title="&lt;TABLE&gt;" alt="" coords="387,8,579,56"/>
+<area shape="rect" id="node5_4" href="./OVersion.html" title="com.orientechnologies.orient.core.annotation.OVersion" alt="" coords="613,19,691,45"/>
+<area shape="rect" id="node5" href="./OVersion.html" title="&lt;TABLE&gt;" alt="" coords="603,8,701,56"/>
+<area shape="rect" id="node6_5" href="./OAfterSerialization.html" title="com.orientechnologies.orient.core.annotation.OAfterSerialization" alt="" coords="737,19,879,45"/>
+<area shape="rect" id="node6" href="./OAfterSerialization.html" title="&lt;TABLE&gt;" alt="" coords="726,8,890,56"/>
+<area shape="rect" id="node7_6" href="./OAfterDeserialization.html" title="com.orientechnologies.orient.core.annotation.OAfterDeserialization" alt="" coords="925,19,1085,45"/>
+<area shape="rect" id="node7" href="./OAfterDeserialization.html" title="&lt;TABLE&gt;" alt="" coords="915,8,1096,56"/>
+<area shape="rect" id="node8_7" href="./OBeforeSerialization.html" title="com.orientechnologies.orient.core.annotation.OBeforeSerialization" alt="" coords="1131,19,1285,45"/>
+<area shape="rect" id="node8" href="./OBeforeSerialization.html" title="&lt;TABLE&gt;" alt="" coords="1121,8,1295,56"/>
+<area shape="rect" id="node9_8" href="./ODocumentInstance.html" title="com.orientechnologies.orient.core.annotation.ODocumentInstance" alt="" coords="1331,19,1483,45"/>
+<area shape="rect" id="node9" href="./ODocumentInstance.html" title="&lt;TABLE&gt;" alt="" coords="1320,8,1493,56"/>
+</map>

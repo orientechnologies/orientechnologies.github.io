@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../core/storage/OStorageAbstract.html" title="com.orientechnologies.orient.core.storage.OStorageAbstract" alt="" coords="16,19,149,45"/>
+<area shape="rect" id="node1" href="../../core/storage/OStorageAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,8,160,56"/>
+<area shape="rect" id="node3_1" href="./OStorageRemote.html" title="com.orientechnologies.orient.client.remote.OStorageRemote" alt="" coords="103,118,233,143"/>
+<area shape="rect" id="node3" href="./OStorageRemote.html" title="&lt;TABLE&gt;" alt="" coords="92,107,244,155"/>
+<area shape="rect" id="node2_2" href="../../core/storage/OStorageProxy.html" title="com.orientechnologies.orient.core.storage.OStorageProxy" alt="" coords="195,11,311,53"/>
+<area shape="rect" id="node2" href="../../core/storage/OStorageProxy.html" title="&lt;TABLE&gt;" alt="" coords="185,5,322,59"/>
+</map>

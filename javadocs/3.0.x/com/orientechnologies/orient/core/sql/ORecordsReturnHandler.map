@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OReturnHandler.html" title="com.orientechnologies.orient.core.sql.OReturnHandler" alt="" coords="207,11,331,53"/>
+<area shape="rect" id="node1" href="./OReturnHandler.html" title="&lt;TABLE&gt;" alt="" coords="196,5,341,59"/>
+<area shape="rect" id="node3_1" href="./ORecordsReturnHandler.html" title="com.orientechnologies.orient.core.sql.ORecordsReturnHandler" alt="" coords="181,118,357,143"/>
+<area shape="rect" id="node3" href="./ORecordsReturnHandler.html" title="&lt;TABLE&gt;" alt="" coords="170,107,367,155"/>
+<area shape="rect" id="node2_2" href="./OUpdatedRecordsReturnHandler.html" title="com.orientechnologies.orient.core.sql.OUpdatedRecordsReturnHandler" alt="" coords="16,214,247,239"/>
+<area shape="rect" id="node2" href="./OUpdatedRecordsReturnHandler.html" title="&lt;TABLE&gt;" alt="" coords="5,203,257,251"/>
+<area shape="rect" id="node4_3" href="./OOriginalRecordsReturnHandler.html" title="com.orientechnologies.orient.core.sql.OOriginalRecordsReturnHandler" alt="" coords="293,214,519,239"/>
+<area shape="rect" id="node4" href="./OOriginalRecordsReturnHandler.html" title="&lt;TABLE&gt;" alt="" coords="282,203,530,251"/>
+</map>

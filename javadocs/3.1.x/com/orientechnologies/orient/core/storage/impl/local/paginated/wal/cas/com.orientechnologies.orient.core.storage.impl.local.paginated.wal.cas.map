@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OWALFile.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.cas.OWALFile" alt="" coords="36,11,129,53"/>
+<area shape="rect" id="node1" href="./OWALFile.html" title="&lt;TABLE&gt;" alt="" coords="25,5,140,59"/>
+<area shape="rect" id="node2_1" href="./OWALChannelFile.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.cas.OWALChannelFile" alt="" coords="16,118,149,143"/>
+<area shape="rect" id="node2" href="./OWALChannelFile.html" title="&lt;TABLE&gt;" alt="" coords="5,107,160,155"/>
+<area shape="rect" id="node3_2" href="./CASDiskWriteAheadLog.html" title="com.orientechnologies.orient.core.storage.impl.local.paginated.wal.cas.CASDiskWriteAheadLog" alt="" coords="175,19,348,45"/>
+<area shape="rect" id="node3" href="./CASDiskWriteAheadLog.html" title="&lt;TABLE&gt;" alt="" coords="164,8,359,56"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OLuceneIndex.html" title="com.orientechnologies.lucene.OLuceneIndex" alt="" coords="41,11,153,53"/>
+<area shape="rect" id="node1" href="../OLuceneIndex.html" title="&lt;TABLE&gt;" alt="" coords="30,5,163,59"/>
+<area shape="rect" id="node2_1" href="./OLuceneFullTextIndex.html" title="com.orientechnologies.lucene.index.OLuceneFullTextIndex" alt="" coords="16,214,177,239"/>
+<area shape="rect" id="node2" href="./OLuceneFullTextIndex.html" title="&lt;TABLE&gt;" alt="" coords="5,203,188,251"/>
+<area shape="rect" id="node3_2" href="./OLuceneIndexNotUnique.html" title="com.orientechnologies.lucene.index.OLuceneIndexNotUnique" alt="" coords="76,118,256,143"/>
+<area shape="rect" id="node3" href="./OLuceneIndexNotUnique.html" title="&lt;TABLE&gt;" alt="" coords="65,107,267,155"/>
+</map>

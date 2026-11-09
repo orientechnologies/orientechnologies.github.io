@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OServerCommandAuthProxy.html" title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAuthProxy" alt="" coords="33,209,239,234"/>
+<area shape="rect" id="node1" href="./OServerCommandAuthProxy.html" title="&lt;TABLE&gt;" alt="" coords="23,197,249,245"/>
+<area shape="rect" id="node2_1" href="./OServerCommandPatternAbstract.html" title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandPatternAbstract" alt="" coords="16,113,256,138"/>
+<area shape="rect" id="node2" href="./OServerCommandPatternAbstract.html" title="&lt;TABLE&gt;" alt="" coords="5,101,267,149"/>
+<area shape="rect" id="node3_2" href="./OServerCommandAbstract.html" title="com.orientechnologies.orient.server.network.protocol.http.command.OServerCommandAbstract" alt="" coords="40,17,232,42"/>
+<area shape="rect" id="node3" href="./OServerCommandAbstract.html" title="&lt;TABLE&gt;" alt="" coords="29,5,243,53"/>
+</map>

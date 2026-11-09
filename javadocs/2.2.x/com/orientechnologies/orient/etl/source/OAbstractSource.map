@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../OAbstractETLComponent.html" title="com.orientechnologies.orient.etl.OAbstractETLComponent" alt="" coords="124,19,305,45"/>
+<area shape="rect" id="node1" href="../OAbstractETLComponent.html" title="&lt;TABLE&gt;" alt="" coords="113,8,316,56"/>
+<area shape="rect" id="node2_1" href="./OAbstractSource.html" title="com.orientechnologies.orient.etl.source.OAbstractSource" alt="" coords="241,118,369,143"/>
+<area shape="rect" id="node2" href="./OAbstractSource.html" title="&lt;TABLE&gt;" alt="" coords="231,107,380,155"/>
+<area shape="rect" id="node3_2" href="./OHttpSource.html" title="com.orientechnologies.orient.etl.source.OHttpSource" alt="" coords="16,214,117,239"/>
+<area shape="rect" id="node3" href="./OHttpSource.html" title="&lt;TABLE&gt;" alt="" coords="5,203,128,251"/>
+<area shape="rect" id="node4_3" href="./OContentSource.html" title="com.orientechnologies.orient.etl.source.OContentSource" alt="" coords="163,214,287,239"/>
+<area shape="rect" id="node4" href="./OContentSource.html" title="&lt;TABLE&gt;" alt="" coords="153,203,298,251"/>
+<area shape="rect" id="node5_4" href="./OInputSource.html" title="com.orientechnologies.orient.etl.source.OInputSource" alt="" coords="333,214,440,239"/>
+<area shape="rect" id="node5" href="./OInputSource.html" title="&lt;TABLE&gt;" alt="" coords="323,203,451,251"/>
+<area shape="rect" id="node7_5" href="./OFileSource.html" title="com.orientechnologies.orient.etl.source.OFileSource" alt="" coords="485,214,581,239"/>
+<area shape="rect" id="node7" href="./OFileSource.html" title="&lt;TABLE&gt;" alt="" coords="475,203,592,251"/>
+<area shape="rect" id="node6_6" href="./OSource.html" title="com.orientechnologies.orient.etl.source.OSource" alt="" coords="351,11,444,53"/>
+<area shape="rect" id="node6" href="./OSource.html" title="&lt;TABLE&gt;" alt="" coords="340,5,455,59"/>
+</map>

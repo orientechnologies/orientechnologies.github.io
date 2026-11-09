@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OCommandSQLParsingException.html" title="com.orientechnologies.orient.core.sql.OCommandSQLParsingException" alt="" coords="16,113,248,138"/>
+<area shape="rect" id="node1" href="./OCommandSQLParsingException.html" title="&lt;TABLE&gt;" alt="" coords="5,101,259,149"/>
+<area shape="rect" id="node3_1" href="../exception/OQueryParsingException.html" title="com.orientechnologies.orient.core.exception.OQueryParsingException" alt="" coords="42,209,222,234"/>
+<area shape="rect" id="node3" href="../exception/OQueryParsingException.html" title="&lt;TABLE&gt;" alt="" coords="31,197,233,245"/>
+<area shape="rect" id="node2_2" href="../exception/OCoreException.html" title="com.orientechnologies.orient.core.exception.OCoreException" alt="" coords="70,17,194,42"/>
+<area shape="rect" id="node2" href="../exception/OCoreException.html" title="&lt;TABLE&gt;" alt="" coords="59,5,205,53"/>
+</map>

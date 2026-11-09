@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSharedContext.html" title="com.orientechnologies.orient.core.db.OSharedContext" alt="" coords="52,17,177,42"/>
+<area shape="rect" id="node1" href="./OSharedContext.html" title="&lt;TABLE&gt;" alt="" coords="41,5,188,53"/>
+<area shape="rect" id="node2_1" href="./OSharedContextEmbedded.html" title="com.orientechnologies.orient.core.db.OSharedContextEmbedded" alt="" coords="17,113,212,138"/>
+<area shape="rect" id="node2" href="./OSharedContextEmbedded.html" title="&lt;TABLE&gt;" alt="" coords="7,101,223,149"/>
+<area shape="rect" id="node3_2" href="../../server/distributed/impl/metadata/OSharedContextDistributed.html" title="com.orientechnologies.orient.server.distributed.impl.metadata.OSharedContextDistributed" alt="" coords="16,209,213,234"/>
+<area shape="rect" id="node3" href="../../server/distributed/impl/metadata/OSharedContextDistributed.html" title="&lt;TABLE&gt;" alt="" coords="5,197,224,245"/>
+</map>

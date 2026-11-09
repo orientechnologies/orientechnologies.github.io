@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./OSchema.html" title="com.orientechnologies.orient.core.metadata.schema.OSchema" alt="" coords="315,11,408,53"/>
+<area shape="rect" id="node1" href="./OSchema.html" title="&lt;TABLE&gt;" alt="" coords="304,5,419,59"/>
+<area shape="rect" id="node2_1" href="./OImmutableSchema.html" title="com.orientechnologies.orient.core.metadata.schema.OImmutableSchema" alt="" coords="16,118,168,143"/>
+<area shape="rect" id="node2" href="./OImmutableSchema.html" title="&lt;TABLE&gt;" alt="" coords="5,107,179,155"/>
+<area shape="rect" id="node3_2" href="./OSchemaShared.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaShared" alt="" coords="214,118,341,143"/>
+<area shape="rect" id="node3" href="./OSchemaShared.html" title="&lt;TABLE&gt;" alt="" coords="203,107,351,155"/>
+<area shape="rect" id="node4_3" href="./OSchemaProxy.html" title="com.orientechnologies.orient.core.metadata.schema.OSchemaProxy" alt="" coords="386,118,505,143"/>
+<area shape="rect" id="node4" href="./OSchemaProxy.html" title="&lt;TABLE&gt;" alt="" coords="375,107,515,155"/>
+<area shape="rect" id="node5_4" href="../../../object/metadata/schema/OSchemaProxyObject.html" title="com.orientechnologies.orient.object.metadata.schema.OSchemaProxyObject" alt="" coords="551,118,711,143"/>
+<area shape="rect" id="node5" href="../../../object/metadata/schema/OSchemaProxyObject.html" title="&lt;TABLE&gt;" alt="" coords="540,107,721,155"/>
+</map>
